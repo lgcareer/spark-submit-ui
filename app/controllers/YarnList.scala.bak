@@ -1,0 +1,11 @@
+package controllers
+
+import play.api._
+import play.api.mvc._
+
+object YarnList extends Controller with Secured {
+
+  def blank = IsAuthenticated { username => implicit request =>
+        Ok(views.html.yarnlist())   
+}
+}
