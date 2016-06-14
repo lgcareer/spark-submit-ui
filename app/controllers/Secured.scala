@@ -1,6 +1,7 @@
 package controllers
 
 import play.api.mvc._
+import play.equals
 
 /**
  * Provide security features
