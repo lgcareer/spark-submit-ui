@@ -16,7 +16,6 @@ object SparkSql extends Controller with Secured {
   val sqlForm:Form[SqlModel] = Form{
     mapping(
         "sql" -> text)(SqlModel.apply)(SqlModel.unapply)
-
   }
 
   def sqlpage = IsAuthenticated { username => implicit request =>
@@ -43,7 +42,7 @@ object SparkSql extends Controller with Secured {
       }
             Ok(views.html.index())
         }
-        )
+      )
   }
 
 }

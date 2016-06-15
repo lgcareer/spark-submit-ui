@@ -1,10 +1,10 @@
 package models
 
-import play.api.db._
+import play.api.db
 import play.api.Play.current
-
 import anorm._
 import anorm.SqlParser._
+import play.api.db.DB
 
 case class User(email: String, name: String, password: String)
 
@@ -25,7 +25,7 @@ object User {
    * Retrieve a User from email.
    */
   def findByEmail(email: String): Option[User] = {
-    DB.withConnection { implicit connection =>
+    play.api.db.DB.withConnection { implicit connection =>
       SQL("select * from user where email = {email}").on(
         'email -> email).as(User.simple.singleOpt)
     }
@@ -35,7 +35,7 @@ object User {
    * Retrieve all users.
    */
   def findAll: Seq[User] = {
-    DB.withConnection { implicit connection =>
+    play.api.db.DB.withConnection { implicit connection =>
       SQL("select * from user").as(User.simple *)
     }
   }
@@ -44,7 +44,8 @@ object User {
    * Authenticate a User.
    */
   def authenticate(email: String, password: String): Option[User] = {
-    DB.withConnection { implicit connection =>
+
+    play.api.db.DB.withConnection { implicit connection =>
       SQL(
         """
          select * from user where 
@@ -55,11 +56,17 @@ object User {
     }
   }
 
+
+
+  def verifying(email:String,name:String,password:String, repassword:String): Option[User] ={
+      null
+  }
+
   /**
    * Create a User.
    */
   def create(user: User): User = {
-    DB.withConnection { implicit connection =>
+    play.api.db.DB.withConnection { implicit connection =>
       SQL(
         """
           insert into user values (

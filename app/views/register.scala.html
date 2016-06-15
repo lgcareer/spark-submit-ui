@@ -1,16 +1,27 @@
-@(userForm: Form[(String,String,String,String)])
+@(form: Form[(String,String,String,String)])
 
-<!DOCTYPE html>
-<html>
-<body>
-<h1> Registration </h1>
-@helper.form(routes.Authentication.register) {
-@helper.inputText(userForm("email"))
-@helper.inputText(userForm("name"))
-@helper.inputPassword(userForm("password"))
-@helper.inputPassword(userForm("repassword"))
-<input type="submit">
+@plain("Neptune Login"){
+<div class="login-logo"><img src="@routes.Assets.at("images/favicon.png")" alt=""/></div>
+<h2 class="form-heading"><font color="#FBFBFB">注册 Neptune Data Platform</font></h2>
+<div class="app-cam">
+
+    @helper.form(routes.Authentication.verifying){
+    @form.globalError.map { error =>
+    <p class="error">
+        <font color="red">错误的用户名或密码</font>
+    </p>
+    }
+
+    <input type="text" name="email" class="text" value="@form("email").value" placeholder="请输入邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入邮箱';}">
+    <input type="text" name="name" class="text" value="@form("name").value" placeholder="请输入姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入姓名';}">
+    <input type="password" name="password"  placeholder="请输入密码" onfocus="this.value = '' onblur="if (this.value == '') {this.value = '请输入密码';}">
+    <input type="password" name="repassword"  placeholder="请再次确认密码" onfocus="this.value = '' onblur="if (this.value == '') {this.value = '请再次输入密码';}">
+    <div class="submit">
+        <input type="submit" id="loginbutton" value="注册">
+    </div>
+    }
+</div>
+<div class="copy_layout login">
+    <p><font color="#FBFBFB">Copyright &copy; 2016.Sina DSP All rights reserved.More Infomation 新浪微博 </font></p>
+</div>
 }
-</body>
-</html>
-
