@@ -1,7 +1,6 @@
 package controllers
 
 import play.api.mvc._
-import play.equals
 
 /**
  * Provide security features
@@ -19,6 +18,8 @@ trait Secured {
   private def onUnauthorized(request: RequestHeader) = {
     Results.Redirect(routes.Authentication.login)
   }
+
+
 
   /**
    * Action for authenticated users.

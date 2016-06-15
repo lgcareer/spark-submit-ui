@@ -1,0 +1,16 @@
+@(userForm: Form[(String,String,String,String)])
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1> Registration </h1>
+@helper.form(routes.Authentication.register) {
+@helper.inputText(userForm("email"))
+@helper.inputText(userForm("name"))
+@helper.inputPassword(userForm("password"))
+@helper.inputPassword(userForm("repassword"))
+<input type="submit">
+}
+</body>
+</html>
+
