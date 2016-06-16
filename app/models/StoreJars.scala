@@ -15,7 +15,7 @@ case class JarModel (
 
 object  StoreJars {
     def insertJarToDb (jarFile: JarModel) = {
-        DB.withConnection{ implicit connection =>
+        play.api.db.DB.withConnection{ implicit connection =>
 
             SQL("""insert into applocation (user,applocation) values ({user},{applocation})""").on(
                 'user -> jarFile.username,
