@@ -96,7 +96,7 @@ object Authentication extends Controller {
     * @return
     */
   def validateName(name: String) :Boolean= {
-    val regex: Regex = ("""^[\u4E00-\u9FA5A-Za-z][\u4E00-\u9FA5A-Za-z0-9]+$""").r
+    val regex: Regex = ("""^[A-Za-z][A-Za-z0-9]+$""").r
     regex.findAllIn(name).hasNext
   }
 

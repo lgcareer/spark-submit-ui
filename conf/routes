@@ -7,6 +7,8 @@ GET     /                           controllers.Application.index
 GET     /login                      controllers.Authentication.login
 POST    /login                      controllers.Authentication.authenticate
 GET     /logout                     controllers.Authentication.logout
+GET     /registration                   controllers.Authentication.registration
+POST     /registration                   controllers.Authentication.verifying
 
 # Spark Jar
 GET     /sparkjar                     controllers.SparkJar.uploadpage
