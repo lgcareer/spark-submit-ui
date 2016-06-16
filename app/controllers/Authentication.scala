@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils
 
 import scala.util.matching.Regex
 
-object Authentication extends Controller {
+object Authentication  extends Controller {
 
   val loginForm = Form(
     tuple(
@@ -66,15 +66,13 @@ object Authentication extends Controller {
   def verifying = Action { implicit request =>
     registForm.bindFromRequest.fold(
       formWithErrors => {
-        //formWithErrors.errors.map(x=> Logger.info(x.message))
-        formWithErrors.hasErrors
+        formWithErrors.errors.map(x=> Logger.info(x.message))
         formWithErrors.globalError.map(x=> Logger.info(x.message))
         BadRequest(views.html.register(formWithErrors))
       },
       registration => {
         val user:User= models.User.verifying(registration = registration)
-         //Redirect(routes.Application.home(id))
-          Ok("用户注册成功:"+user.email)
+        Ok("用户注册成功:"+user.email)
       }
     )
   }

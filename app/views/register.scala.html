@@ -7,7 +7,6 @@
 
 
     @helper.form(routes.Authentication.verifying){
-
     <input type="text" name="email" class="text" value="@form("email").value" placeholder="请输入邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入邮箱';}">
     @if(form.hasErrors && !form.error("email").isEmpty){
     <p class="error"><font color="red">@form.error("email").get.message</font></p>
@@ -32,6 +31,14 @@
     <div class="submit">
         <input type="submit" id="loginbutton" value="注册">
     </div>
+
+    <ul class="new">
+        <li class="new_left">
+            <a href="/login"><font color="#FBFBFB"> 已有账号? 登录</font></a>
+        </li>
+        <div class="clearfix"></div>
+    </ul>
+
     }
 </div class="app-cam">
 <div class="copy_layout login">
