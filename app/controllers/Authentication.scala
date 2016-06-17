@@ -1,12 +1,19 @@
 package controllers
 
+
+import models.Mail._
 import play.api._
 import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
 import models.{Registration, User}
 import org.apache.commons.lang3.StringUtils
+import org.apache.commons.mail.{DefaultAuthenticator, Email, SimpleEmail}
+import play.api.libs.json.{JsValue, Json}
+import play.libs.F.Tuple
 
+import scala.concurrent.Future
+import scala.language.postfixOps
 import scala.util.matching.Regex
 
 object Authentication  extends Controller {
@@ -72,7 +79,8 @@ object Authentication  extends Controller {
       },
       registration => {
         val user:User= models.User.verifying(registration = registration)
-        Ok("用户注册成功:"+user.email)
+        implicit val clusterListWrites = Json.writes[User]
+        Redirect("/mail?user="+Json.toJson(user).toString)
       }
     )
   }
@@ -106,6 +114,46 @@ object Authentication  extends Controller {
     */
   def validatePassword(registration:Registration): Boolean ={
     StringUtils.equals(registration.password,registration.repassword)
+  }
+
+
+  /**
+    * 发送邮件验证
+    * @return
+    */
+  def sendEmail(user:String): String ={
+    val jsValue: JsValue = Json.parse(user)
+    val email: Option[String] = jsValue.\("email").asOpt[String]
+    val name: Option[String] = jsValue.\("name").asOpt[String]
+    val password: Option[String] = jsValue.\("password").asOpt[String]
+    if (!email.isEmpty && ! name.isEmpty&& ! password.isEmpty)
+        RegisterWithEmail.sendHtmlMail(User(email.get,name.get,password.get))
+    else "发送邮件失败,请检查注册信息"
+  }
+
+
+
+  import play.api.libs.concurrent.Execution.Implicits.defaultContext
+
+  def mail(user:String) = Action.async {
+    val future: Future[String] = scala.concurrent.Future { sendEmail(user) }
+    future.map(i => Ok("Got result: " + i))
+  }
+
+
+  /**
+    * 验证激活
+    * @param email
+    * @param validateCode
+    * @return
+    */
+  def verifyingmail(email:String,validateCode:String)=Action{
+    RegisterWithEmail.activateUser((email,validateCode)) match {
+      case  e : EmailExecption =>  BadRequest(views.html.registed(e.unapply(e)))
+      case  v : VerifyException => BadRequest(views.html.registed(v.unapply(v)))
+      case  f : Failure => BadRequest(views.html.registed(f.unapply(f)))
+      case  s : Success => Ok(email+" 激活成功 "+validateCode)
+    }
   }
 
 

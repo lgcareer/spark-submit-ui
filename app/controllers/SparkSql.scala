@@ -36,7 +36,7 @@ object SparkSql extends Controller with Secured {
         override def run(){
         println("start execute sql")
         val argus = Array(sqldata.sql)
-        utils.ExecuteSql.main(argus)
+        models.utils.ExecuteSql.main(argus)
         println("end execute sql")
     }
       }

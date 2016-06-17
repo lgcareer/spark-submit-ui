@@ -67,6 +67,25 @@ object User {
   }
 
 
+  def findByStatusByEmail(email: String): Int = {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select status from user where email = {email}").on(
+        'email -> email).as(SqlParser.scalar[Int].single)
+    }
+  }
+
+
+  def updateStatus(email:String): Int ={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+          update  user set status=1 where email={email}
+        """).on(
+        'email -> email
+        ).executeUpdate()
+    }
+  }
+
   /**
    * Create a User.
    */
@@ -75,7 +94,7 @@ object User {
       SQL(
         """
           insert into user values (
-            {email}, {name}, {password}
+            {email}, {name}, {password},0
           )
         """).on(
           'email -> user.email,

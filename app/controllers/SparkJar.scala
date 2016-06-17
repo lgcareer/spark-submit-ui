@@ -77,7 +77,7 @@ object SparkJar extends Controller with Secured {
             class ThreadDemo(filename:String) extends Runnable{
               override def run(){
                 println("start execute jar")
-                utils.Execute.main(arguments)
+                models.utils.Execute.main(arguments)
                 println("end execute jar")
               }
             }

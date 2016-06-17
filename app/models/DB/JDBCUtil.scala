@@ -37,7 +37,7 @@ object JDBCUtil {
         arr += MetriJson
       }
     } catch {
-      case e => e.printStackTrace
+      case e:Exception => e.printStackTrace
     }
     connection.close()
     arr

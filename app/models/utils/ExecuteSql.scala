@@ -1,4 +1,4 @@
-package utils
+package models.utils
 
 import scala.sys.process._
 import java.io._

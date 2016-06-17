@@ -1,4 +1,4 @@
-package utils
+package models.utils
 
 import scala.collection.mutable.ArrayBuffer
 import scala.sys.process._
