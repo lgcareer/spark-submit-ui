@@ -27,7 +27,8 @@ trait DashboardMetrics {
         }
       }
       catch {
-        case e => e.printStackTrace
+        case e :Exception
+         => e.printStackTrace
       }
       connection.close()
     }

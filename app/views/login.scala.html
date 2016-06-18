@@ -11,7 +11,13 @@
            <font color="red">错误的用户名或密码</font>
         </p>
     }
-    
+
+
+    @if(form.hasErrors && !form.error("email").isEmpty){
+    <p class="error"><font color="red">@form.error("email").get.message</font></p>
+    }
+
+
     @flash.get("success").map { message =>
         <p class="success">
            <font color="red"> @message</font>

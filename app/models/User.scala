@@ -49,6 +49,18 @@ object User {
     }
   }
 
+  def isActivate(email: String): Option[User] ={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+         select * from user where
+         email = {email} and status = 1
+        """).on(
+        'email -> email
+        ).as(User.simple.singleOpt)
+    }
+  }
+
 
 
   def verifying(registration : Registration): User={

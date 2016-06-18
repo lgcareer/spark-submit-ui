@@ -20,7 +20,7 @@ object Authentication  extends Controller {
 
   val loginForm = Form(
     tuple(
-      "email" -> text,
+      "email" -> text.verifying("用户还未激活",User.isActivate(_).isDefined),
       "password" -> text
     ) verifying ("Invalid email or password", result => result match {
         case (email, password) => User.authenticate(email, password).isDefined
@@ -52,6 +52,7 @@ object Authentication  extends Controller {
       user => Redirect(routes.Application.index()).withSession("email" -> user._1)
     )
   }
+
 
 
   val registForm = Form(
@@ -102,7 +103,7 @@ object Authentication  extends Controller {
     * @return
     */
   def validateName(name: String) :Boolean= {
-    val regex: Regex = ("""^[A-Za-z][A-Za-z0-9]+$""").r
+    val regex: Regex = ("""^[A-Za-z0-9]+$""").r
     regex.findAllIn(name).hasNext
   }
 

@@ -1,6 +1,5 @@
 package models.Mail
 
-import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -8,8 +7,6 @@ import models.User
 import models.utils.MD5Utils
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.mail.{DefaultAuthenticator, HtmlEmail, SimpleEmail}
-import play.api.Logger
-import play.libs.F.Tuple
 
 /**
   * Created by liangkai on 16/6/16.
@@ -25,11 +22,11 @@ object RegisterWithEmail {
 
       def textMail(): String ={
           val email = new SimpleEmail()
-          email.setHostName("smtp.163.com")
-          email.setSmtpPort(465)
-          email.setAuthenticator(new DefaultAuthenticator("kingekinge@163.com", "zhang66261123"))
+          email.setHostName("smtp.sina.com")
+          email.setSmtpPort(25)
+          email.setAuthenticator(new DefaultAuthenticator("server_noreplay@sina.com", "adminadmin"))
           email.setSSLOnConnect(true)
-          email.setFrom("kingekinge@163.com")
+          email.setFrom("server_noreplay@sina.com")
           email.setSubject("NEPTUNE DATA PLATFORM注册激活")
           email.setMsg("This is a test mail ... :-)")
           email.addTo("444517160@qq.com")
@@ -38,17 +35,16 @@ object RegisterWithEmail {
 
     /**
     * 发送Html邮件
- *
     * @return
     */
   def sendHtmlMail(user:User):String={
       // Create the email message
       val email = new HtmlEmail()
-      email.setHostName("smtp.163.com")
-      email.setSmtpPort(465)
-      email.setAuthenticator(new DefaultAuthenticator("kingekinge@163.com", "zhang66261123"))
+      email.setHostName("smtp.sina.com")
+      email.setSmtpPort(25)
+      email.setAuthenticator(new DefaultAuthenticator("server_noreplay@sina.com", "adminadmin"))
       email.setSSLOnConnect(true)
-      email.setFrom("kingekinge@163.com", "新浪微博")
+      email.setFrom("server_noreplay@sina.com", "新浪微博")
       email.setSubject("NEPTUNE DATA PLATFORM注册激活")
        email.setHtmlMsg(makeEmail(user.email,MD5Utils.encode2hex(user.email)))
        email.setCharset("UTF-8")
