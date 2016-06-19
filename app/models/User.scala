@@ -9,7 +9,7 @@ import play.api.db.DB
 
 case class User(email: String, name: String, password: String)
 case class Registration(email:String,name:String,password:String,repassword:String)
-
+case class Verify(email:String,captcha:String,name:String)
 
 object User {
 
@@ -62,7 +62,6 @@ object User {
   }
 
 
-
   def verifying(registration : Registration): User={
       val newUser = models.User(registration.email,registration.name,registration.password)
       create(newUser)
@@ -75,6 +74,13 @@ object User {
     play.api.db.DB.withConnection { implicit connection =>
       SQL("select * from user where email = {email}").on(
         'email -> email).as(User.simple.singleOpt)
+    }
+  }
+
+  def findNameByEmail(email: String): String= {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select name from user where email = {email}").on(
+        'email -> email).as(SqlParser.scalar[String].single)
     }
   }
 
@@ -95,6 +101,19 @@ object User {
         """).on(
         'email -> email
         ).executeUpdate()
+    }
+  }
+
+
+  def updatePWD(email:String,password:String): Int={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+         update  user set password={password} where
+         email = {email}
+        """).on(
+        'email -> email,
+        'password -> password).executeUpdate()
     }
   }
 

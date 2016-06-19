@@ -1,4 +1,4 @@
-@(form: Form[(String,String)])(implicit flash: Flash)
+@(form: Form[(String,String)])
 
 
 @plain("密码找回"){
@@ -12,31 +12,22 @@
      }
      </script>
 
-    @helper.form(routes.Authentication.authenticate){
-    @form.globalError.map { error =>
-    <p class="error">
-        <font color="red">错误的用户名或密码</font>
-    </p>
-    }
+    @helper.form(routes.Authentication.resetpwd){
 
-
+    <input type="text" name="email" id="email" class="text" value="@form("email").value" placeholder="注册邮箱"  onblur="if (this.value == '') {this.value = '注册邮箱';}">
     @if(form.hasErrors && !form.error("email").isEmpty){
     <p class="error"><font color="red">@form.error("email").get.message</font></p>
     }
 
-
-    @flash.get("success").map { message =>
-    <p class="success">
-        <font color="red"> @message</font>
-    </p>
-    }
-
-    <input type="text" name="email" id="email" class="text" value="@form("email").value" placeholder="注册邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '注册邮箱';}">
     <div>
-    <input type="text"   name="captcha" class="text" placeholder="验证码"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '验证码';}">
+    <input type="text"   name="captcha" class="text" placeholder="验证码"   onblur="if (this.value == '') {this.value = '验证码';}">
     <img src="/captcha" id="captcha" onclick="refresh(this)"></div >
-
     <div class="submit">
+        @if(form.hasErrors && !form.error("captcha").isEmpty){
+        <p class="error"><font color="red">@form.error("captcha").get.message</font></p>
+        }
+
+
         <input type="submit" id="loginbutton" value="发送重置密码邮件">
     </div>
     <ul class="new">

@@ -9,11 +9,9 @@ import play.api._
 import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
-import models.{Registration, User}
+import models.{Registration, User, Verify}
 import org.apache.commons.lang3.StringUtils
-import org.apache.commons.mail.{DefaultAuthenticator, Email, SimpleEmail}
-import play.api.libs.json.{JsValue, Json}
-import play.libs.F.Tuple
+import play.api.libs.json.{JsObject, JsPath, JsValue, Json}
 
 import scala.concurrent.Future
 import scala.language.postfixOps
@@ -59,7 +57,6 @@ object Authentication  extends Controller {
   }
 
 
-
   val registForm = Form(
     mapping(
       "email" ->nonEmptyText.verifying("邮箱格式验证错误",validateEmail(_)).verifying("邮箱已存在",!models.User.findByEmail(_).isDefined),
@@ -86,7 +83,7 @@ object Authentication  extends Controller {
       registration => {
         val user:User= models.User.verifying(registration = registration)
         implicit val clusterListWrites = Json.writes[User]
-        Redirect("/mail?user="+Json.toJson(user).toString)
+        Redirect("/mail?user="+Json.stringify(Json.toJson(user)))
       }
     )
   }
@@ -94,7 +91,8 @@ object Authentication  extends Controller {
 
   /**
     * 验证邮箱
-     * @param email
+    *
+    * @param email
     * @return
     */
   def validateEmail(email: String) :Boolean= {
@@ -104,6 +102,7 @@ object Authentication  extends Controller {
 
   /**
     * 验证用户名
+    *
     * @param name
     * @return
     */
@@ -114,6 +113,7 @@ object Authentication  extends Controller {
 
   /**
     * 验证密码
+    *
     * @param password
     * @param repassword
     * @return
@@ -125,16 +125,21 @@ object Authentication  extends Controller {
 
   /**
     * 发送邮件验证
+    *
     * @return
     */
   def sendEmail(user:String): String ={
     val jsValue: JsValue = Json.parse(user)
     val email: Option[String] = jsValue.\("email").asOpt[String]
+    val captcha: Option[String] = jsValue.\("captcha").asOpt[String]
     val name: Option[String] = jsValue.\("name").asOpt[String]
     val password: Option[String] = jsValue.\("password").asOpt[String]
-    if (!email.isEmpty && ! name.isEmpty&& ! password.isEmpty)
-        RegisterWithEmail.sendHtmlMail(User(email.get,name.get,password.get))
-    else "发送邮件失败,请检查注册信息"
+    if (email.isDefined)
+      if(captcha.isDefined)
+        Email.sendHtmlMail(Verify(email.getOrElse(null),captcha.getOrElse(null),name.getOrElse(null)))
+      else
+        Email.sendHtmlMail(User(email.getOrElse(null),name.getOrElse(null),password.getOrElse(null)))
+      else "发送邮件失败,请检查注册信息"
   }
 
 
@@ -149,12 +154,13 @@ object Authentication  extends Controller {
 
   /**
     * 验证激活
+    *
     * @param email
     * @param validateCode
     * @return
     */
-  def verifyingmail(email:String,validateCode:String)=Action{
-    RegisterWithEmail.activateUser((email,validateCode)) match {
+  def verifyingmail(email:String,validateCode:String) = Action{
+    Email.activateUser((email,validateCode)) match {
       case  e : EmailExecption =>  BadRequest(views.html.registed(e.unapply(e)))
       case  v : VerifyException => BadRequest(views.html.registed(v.unapply(v)))
       case  f : Failure => BadRequest(views.html.registed(f.unapply(f)))
@@ -162,32 +168,98 @@ object Authentication  extends Controller {
     }
   }
 
-  val findPasswordForm = Form(
-    tuple(
-      "email" -> text.verifying("用户还未激活",User.isActivate(_).isDefined),
-      "password" -> text
-    ) verifying ("Invalid email or password", result => result match {
-      case (email, password) => User.authenticate(email, password).isDefined
-    })
-  )
+
+  /**
+    * 验证验证码
+ *
+    * @param captcha
+    * @return
+    */
+  def verifyCaptcha(captcha1:String,captcha2:String):Boolean={
+    StringUtils.equalsIgnoreCase(captcha1,captcha2)
+  }
 
 
 
-  def findpassword=Action{
+  def findpwd=Action{
     implicit request =>
-      Ok(views.html.findpassword(findPasswordForm))
+      Ok(views.html.findpwd(findPasswordForm))
   }
 
   def captcha =Action{
     implicit request =>
-    //生成随机字串
     val verifyCode = CaptchaUtils.generateVerifyCode(4);
-      System.out.println(verifyCode)
+      Logger.info(verifyCode)
+      threadLocal.set(verifyCode)
       val outputImage: Array[Byte] = CaptchaUtils.outputImage(134, 52, verifyCode)
       Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").withSession("captcha"-> verifyCode)
         .as("image/jpeg")
-
   }
 
+  private val threadLocal: ThreadLocal[String] = new ThreadLocal[String]
+  val findPasswordForm = Form(
+    tuple(
+      "email" -> text.verifying("用户不存在,请检查输入邮箱", models.User.findByEmail(_).isDefined).verifying("用户还未激活",User.isActivate(_).isDefined),
+      "captcha" -> text.verifying("验证码错误",x=>{
+        verifyCaptcha(x,threadLocal.get())
+      })
+    )
+  )
+
+  /**
+    * 发送重置密码
+    */
+  def resetpwd = Action { implicit request =>
+    findPasswordForm.bindFromRequest.fold(
+      formWithErrors => {
+        formWithErrors.errors.map(x=> Logger.info(x.message))
+        formWithErrors.globalError.map(x=> Logger.info(x.message))
+        BadRequest(views.html.findpwd(formWithErrors))
+      },
+      user => {
+        Logger.info("输入验证码=>"+user._2)
+        val f_name: String = models.User.findNameByEmail(user._1)
+        val name:String =if(StringUtils.isEmpty(f_name)) user._1  else f_name
+        val jsObject: JsObject = Json.obj("email"->user._1,"captcha"->user._2,"name"->name)
+        Redirect("/mail?user="+Json.stringify(jsObject)).withSession("findpwd"->user._1)
+      }
+    )
+  }
+
+
+  val setPasswordForm = Form(
+    tuple(
+      "password" -> nonEmptyText,
+      "repassword" -> nonEmptyText) verifying ("两次密码不一致", result => result match {
+      case (password, repassword) => StringUtils.equals(password,repassword)
+    })
+  )
+
+  def setpwd(email:String,pwdToken:String)=Action{
+    Email.activatePWD((email,pwdToken)) match {
+      case  e : EmailExecption =>  NotFound
+      case  v : VerifyException => NotFound
+      case  f : Failure => NotFound
+      case  s : Success => Ok(views.html.setpwd(setPasswordForm))
+    }
+  }
+
+  /**
+    * 发送重置密码
+    */
+  def updatepwd = Action { implicit request =>
+    setPasswordForm.bindFromRequest.fold(
+      formWithErrors => {
+        formWithErrors.errors.map(x=> Logger.info(x.message))
+        formWithErrors.globalError.map(x=> Logger.info(x.message))
+        BadRequest(views.html.setpwd(formWithErrors))
+      },
+      user => {
+        val email: String = request.session.get("findpwd").getOrElse(null)
+         models.User.updatePWD(email,user._2)
+        Ok(email+"修改密码成功")
+      }
+    )
+  }
 
 }
