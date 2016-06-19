@@ -1,7 +1,10 @@
 package controllers
 
 
+import java.io.{ByteArrayOutputStream, OutputStream}
+
 import models.Mail._
+import models.utils.CaptchaUtils
 import play.api._
 import play.api.mvc._
 import play.api.data._
@@ -26,6 +29,8 @@ object Authentication  extends Controller {
         case (email, password) => User.authenticate(email, password).isDefined
     })
   )
+
+
 
   /**
    * Login page.
@@ -155,6 +160,33 @@ object Authentication  extends Controller {
       case  f : Failure => BadRequest(views.html.registed(f.unapply(f)))
       case  s : Success => Ok(email+" 激活成功 "+validateCode)
     }
+  }
+
+  val findPasswordForm = Form(
+    tuple(
+      "email" -> text.verifying("用户还未激活",User.isActivate(_).isDefined),
+      "password" -> text
+    ) verifying ("Invalid email or password", result => result match {
+      case (email, password) => User.authenticate(email, password).isDefined
+    })
+  )
+
+
+
+  def findpassword=Action{
+    implicit request =>
+      Ok(views.html.findpassword(findPasswordForm))
+  }
+
+  def captcha =Action{
+    implicit request =>
+    //生成随机字串
+    val verifyCode = CaptchaUtils.generateVerifyCode(4);
+      System.out.println(verifyCode)
+      val outputImage: Array[Byte] = CaptchaUtils.outputImage(134, 52, verifyCode)
+      Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").withSession("captcha"-> verifyCode)
+        .as("image/jpeg")
+
   }
 
 

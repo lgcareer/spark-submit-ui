@@ -46,7 +46,7 @@ object RegisterWithEmail {
       email.setSSLOnConnect(true)
       email.setFrom("server_noreplay@sina.com", "新浪微博")
       email.setSubject("NEPTUNE DATA PLATFORM注册激活")
-       email.setHtmlMsg(makeEmail(user.email,MD5Utils.encode2hex(user.email)))
+       email.setHtmlMsg(makeEmail(user))
        email.setCharset("UTF-8")
        email.setTextMsg("激活邮件")
        email.addTo(user.email)
@@ -54,7 +54,8 @@ object RegisterWithEmail {
       "发送邮件成功,请检查邮件"
     }
 
-    def makeEmail(email:String,validateCode:String): String ={
+    def makeEmail(user: User): String ={
+      val validateCode=MD5Utils.encode2hex(user.email)
         ///邮件的内容
 //        val sb=new StringBuffer("点击下面链接激活账号，48小时生效，否则重新注册账号，链接只能使用一次，请尽快激活！</br>")
 //        sb.append("<a href=\"http://localhost:9000/mail/verifyingmail?email=")
@@ -69,8 +70,8 @@ object RegisterWithEmail {
 //        sb.toString
 
       val time: String = dateFormat.format(new Date(System.currentTimeMillis()))
-      val title ="NEPTUNE（新浪微博大数据平台）"
-      val username=email
+      val email=user.email
+      val username=user.name
       val adminemail="jiazheng1@staff.weibo.com"
 
       "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
