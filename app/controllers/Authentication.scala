@@ -6,16 +6,17 @@ import java.io.{ByteArrayOutputStream, OutputStream}
 import models.Mail._
 import models.utils.CaptchaUtils
 import play.api._
-import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
 import models.{Registration, User, Verify}
 import org.apache.commons.lang3.StringUtils
 import play.api.libs.json.{JsObject, JsPath, JsValue, Json}
-
+import play.api.cache._
+import play.api.mvc._
 import scala.concurrent.Future
 import scala.language.postfixOps
 import scala.util.matching.Regex
+import play.api.Play.current
 
 object Authentication  extends Controller {
 
@@ -154,7 +155,6 @@ object Authentication  extends Controller {
 
   /**
     * 验证激活
-    *
     * @param email
     * @param validateCode
     * @return
@@ -171,14 +171,14 @@ object Authentication  extends Controller {
 
   /**
     * 验证验证码
- *
+    *
     * @param captcha
     * @return
     */
   def verifyCaptcha(captcha1:String,captcha2:String):Boolean={
+    Logger.info("输入:"+captcha1+"  生成:"+captcha2)
     StringUtils.equalsIgnoreCase(captcha1,captcha2)
   }
-
 
 
   def findpwd=Action{
@@ -190,19 +190,16 @@ object Authentication  extends Controller {
     implicit request =>
     val verifyCode = CaptchaUtils.generateVerifyCode(4);
       Logger.info(verifyCode)
-      threadLocal.remove()
-      threadLocal.set(verifyCode)
+      Cache.set("captcha",verifyCode)
       val outputImage: Array[Byte] = CaptchaUtils.outputImage(134, 52, verifyCode)
-      Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").withSession("captcha"-> verifyCode)
-        .as("image/jpeg")
+      Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").as("image/jpeg")
   }
 
-  private val threadLocal: ThreadLocal[String] = new ThreadLocal[String]
   val findPasswordForm = Form(
     tuple(
       "email" -> text.verifying("用户不存在,请检查输入邮箱", models.User.findByEmail(_).isDefined).verifying("用户还未激活",User.isActivate(_).isDefined),
       "captcha" -> text.verifying("验证码错误",x=>{
-        verifyCaptcha(x,threadLocal.get())
+        verifyCaptcha(x,Cache.getAs[String]("captcha").get)
       })
     )
   )
@@ -218,7 +215,6 @@ object Authentication  extends Controller {
         BadRequest(views.html.findpwd(formWithErrors))
       },
       user => {
-        Logger.info("输入验证码=>"+user._2)
         val f_name: String = models.User.findNameByEmail(user._1)
         val name:String =if(StringUtils.isEmpty(f_name)) user._1  else f_name
         val jsObject: JsObject = Json.obj("email"->user._1,"captcha"->user._2,"name"->name)

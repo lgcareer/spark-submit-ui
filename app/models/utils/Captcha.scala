@@ -15,8 +15,6 @@ import scala.util.Random
 class CaptchaUtils(width:Int=160 ,height:Int=40 ,codeCount:Int=5 ,lineCount:Int=150)
 object CaptchaUtils{
 
-
-  //使用到Algerian字体，系统里没有的话需要安装字体，字体只显示大写，去掉了1,0,i,o几个容易混淆的字符
     val VERIFY_CODES = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ"
     val random = new Random();
 
@@ -192,19 +190,5 @@ object CaptchaUtils{
 
     }
   }
-//
-//  def  main( args:Array[String]){
-//    val dir = new File("F:/verifies");
-//    val w = 200 val h = 80;
-//    for(i  <- 0 to 49){
-//      val verifyCode = generateVerifyCode(4);
-//      val file = new File(dir, verifyCode + ".jpg");
-//      outputImage(w, h, file, verifyCode);
-//    }
-//  }
-
-
-
-
 }
 

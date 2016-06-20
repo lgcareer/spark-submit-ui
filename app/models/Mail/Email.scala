@@ -7,6 +7,7 @@ import models.{User, Verify}
 import models.utils.MD5Utils
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.mail.{DefaultAuthenticator, HtmlEmail, SimpleEmail}
+import play.api.Logger
 
 /**
   * Created by liangkai on 16/6/16.
@@ -72,6 +73,7 @@ object Email {
        val validateCode=MD5Utils.encode2hex(verify.email)
        val email=verify.email
        val username=verify.name
+        val hostname="http://10.209.72.198:9000"
        "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
          " <meta charset=\"UTF-8\">\n  " +
          "  <title>注册结果</title>\n</head>\n<body>\n" +
@@ -81,7 +83,7 @@ object Email {
          " background-position: initial initial; background-repeat: initial initial;background:#fff;\">\n<tbody>\n<tr>\n<th valign=\"middle\" style=\"height: 25px; line-height: 25px; padding: 15px 35px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #C46200; background-color: #FEA138; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;\">\n<font face=\"微软雅黑\" size=\"5\" style=\"color: rgb(255, 255, 255); \">NEPTUNE（新浪微博大数据平台）</font>\n</th>\n</tr>\n<tr>\n<td>\n" +
          "<div style=\"padding:25px 35px 40px; background-color:#fff;\">\n" +
          "<h2 style=\"margin: 5px 0px; \"><font color=\"#333333\" style=\"line-height: 20px; \"><font style=\"line-height: 22px; \" size=\"4\">亲爱的:"+username+"</font></font></h2>\n<p>\n您收到这封邮件，是由于在NEPTUNE（新浪微博大数据平台）进行了新用户注册，或用户修改密码使用了这个邮箱地址。<br/>\n如果您并没有访问过NEPTUNE或没有进行上述操作，请忽略这封邮件，您不需要进行其他进一步的操作\n" +
-         "\n<p>您可以通过下面的链接重置您的密码:<br/>\n <a href=\"http://192.168.0.103:9000/mail/setpwd?email="+email+"&pwdToken="+validateCode+"\">http://192.168.0.103:9000/mail/setpwd?email="+email+"&pwdToken="+validateCode+"</a></p>\n<p align=\"right\"> 某官方团队</p>" +
+         "\n<p>您可以通过下面的链接重置您的密码:<br/>\n <a href="+hostname+"/mail/setpwd?email="+email+"&pwdToken="+validateCode+">"+hostname+"/mail/setpwd?email="+email+"&pwdToken="+validateCode+"</a></p>\n<p align=\"right\"> 某官方团队</p>" +
          "\n<p align=\"right\">"+time+"</p>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n\n\n</body>\n</html>"
      }
 
@@ -97,6 +99,7 @@ object Email {
       val email=user.email
       val username=user.name
       val adminemail="jiazheng1@staff.weibo.com"
+      val hostname="http://10.209.72.198:9000"
 
       "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
         " <meta charset=\"UTF-8\">\n  " +
@@ -107,7 +110,7 @@ object Email {
         " background-position: initial initial; background-repeat: initial initial;background:#fff;\">\n<tbody>\n<tr>\n<th valign=\"middle\" style=\"height: 25px; line-height: 25px; padding: 15px 35px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #C46200; background-color: #FEA138; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;\">\n<font face=\"微软雅黑\" size=\"5\" style=\"color: rgb(255, 255, 255); \">NEPTUNE（新浪微博大数据平台）</font>\n</th>\n</tr>\n<tr>\n<td>\n" +
         "<div style=\"padding:25px 35px 40px; background-color:#fff;\">\n" +
         "<h2 style=\"margin: 5px 0px; \"><font color=\"#333333\" style=\"line-height: 20px; \"><font style=\"line-height: 22px; \" size=\"4\">亲爱的:"+username+"</font></font></h2>\n<p>\n您收到这封邮件，是由于在NEPTUNE（新浪微博大数据平台）进行了新用户注册，或用户修改密码使用了这个邮箱地址。<br/>\n如果您并没有访问过NEPTUNE或没有进行上述操作，请忽略这封邮件，您不需要进行其他进一步的操作\n" +
-        "<p>\n\n<h2 style=\"margin: 5px 0px; \"><font color=\"#333333\" style=\"line-height: 20px; \"><font style=\"line-height: 22px; \" size=\"4\">账号激活说明</font></font></h2>\n<p>如果您是NEPTUNE的用户，我们需要对您的地址有效性进行校验\n您只需点击下面的连接即可激活您的账号<br/>\n <a href=\"http://192.168.0.103:9000/mail/verifyingmail?email="+email+"&validateCode="+validateCode+"\">http://192.168.0.103:9000/mail/verifyingmail?email="+email+"&validateCode="+validateCode+"</a></p>\n\n<p/>\n如果您有什么疑问可以联系管理员，Email: "+adminemail+"。</p>\n<p align=\"right\"> 某官方团队</p>" +
+        "<p>\n\n<h2 style=\"margin: 5px 0px; \"><font color=\"#333333\" style=\"line-height: 20px; \"><font style=\"line-height: 22px; \" size=\"4\">账号激活说明</font></font></h2>\n<p>如果您是NEPTUNE的用户，我们需要对您的地址有效性进行校验\n您只需点击下面的连接即可激活您的账号<br/>\n <a href="+hostname+"/mail/verifyingmail?email="+email+"&validateCode="+validateCode+">"+hostname+"/mail/verifyingmail?email="+email+"&validateCode="+validateCode+"</a></p>\n\n<p/>\n如果您有什么疑问可以联系管理员，Email: "+adminemail+"。</p>\n<p align=\"right\"> 某官方团队</p>" +
         "\n<p align=\"right\">"+time+"</p>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n\n\n</body>\n</html>"
 
     }
@@ -121,11 +124,12 @@ object Email {
   def activateUser : PartialFunction[(String,String),EmailStatus]={
       case user if User.findByEmail(user._1).isEmpty =>  EmailExecption("用户邮箱不存在")
       case user if User.findByStatusByEmail(user._1) !=0 =>  VerifyException("用户已激活,不需要重复激活")
-      case user if(StringUtils.equals(MD5Utils.encode2hex(User.findByEmail(user._1).get.email),user._2))
+      case user if (StringUtils.equals(MD5Utils.encode2hex(User.findByEmail(user._1).get.email),user._2))
         =>{
+            Logger.info(user._1+"####"+user._2)
           if(User.updateStatus(user._1)>0)  Success("激活成功") else  Failure("激活失败")
         }
-      case _ => Failure("激活失败")
+      case _ => Failure("激活失败,请检查注册信息")
     }
 
 
