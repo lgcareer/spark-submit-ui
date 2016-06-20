@@ -77,8 +77,6 @@ object Authentication  extends Controller {
   def verifying = Action { implicit request =>
     registForm.bindFromRequest.fold(
       formWithErrors => {
-        formWithErrors.errors.map(x=> Logger.info(x.message))
-        formWithErrors.globalError.map(x=> Logger.info(x.message))
         BadRequest(views.html.register(formWithErrors))
       },
       registration => {
