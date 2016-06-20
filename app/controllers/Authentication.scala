@@ -190,6 +190,7 @@ object Authentication  extends Controller {
     implicit request =>
     val verifyCode = CaptchaUtils.generateVerifyCode(4);
       Logger.info(verifyCode)
+      threadLocal.remove()
       threadLocal.set(verifyCode)
       val outputImage: Array[Byte] = CaptchaUtils.outputImage(134, 52, verifyCode)
       Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").withSession("captcha"-> verifyCode)
