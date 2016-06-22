@@ -5,7 +5,7 @@ import play.api.mvc._
 /**
  * Provide security features
  */
-trait Secured {
+trait Secured extends {
   
   /**
    * Retrieve the connected user's email

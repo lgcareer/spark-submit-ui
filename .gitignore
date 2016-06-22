@@ -25,6 +25,7 @@ src_managed/
 project/boot/
 .history
 .cache
+.idea
 ### Scala template
 *.class
 *.log
@@ -32,6 +33,7 @@ project/boot/
 # sbt specific
 .cache
 .history
+.idea
 .lib/
 dist/*
 target/

@@ -2082,6 +2082,25 @@ body#login{
   -moz-border-radius: 2px;
   -o-border-radius: 2px;
 }
+
+.app-cam input[name="captcha"] {
+  width: 50%;
+  padding: 15px;
+  color:#999;
+  font-size: 0.85em;
+  outline: none;
+  font-weight: 300;
+  border: none;
+  background:#222224;
+  margin:0 0 1em 0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+
+
 .app-cam input[type="submit"], .btn-success1{
   font-size: 14px;
   font-weight: 300 !important;
