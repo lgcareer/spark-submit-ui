@@ -74,6 +74,10 @@ object Authentication  extends Controller {
   }
 
 
+  /**
+    * 用户鉴权验证
+    * @return
+    */
   def verifying = Action { implicit request =>
     registForm.bindFromRequest.fold(
       formWithErrors => {
@@ -145,6 +149,11 @@ object Authentication  extends Controller {
 
   import play.api.libs.concurrent.Execution.Implicits.defaultContext
 
+  /**
+    * 发送邮件
+    * @param user
+    * @return
+    */
   def mail(user:String) = Action.async {
     val future: Future[String] = scala.concurrent.Future { sendEmail(user) }
     future.map(i => Ok("Got result: " + i))
@@ -179,17 +188,25 @@ object Authentication  extends Controller {
   }
 
 
+  /**
+    * 找回密码
+    * @return
+    */
   def findpwd=Action{
     implicit request =>
       Ok(views.html.findpwd(findPasswordForm))
   }
 
+  /**
+    * 验证码
+    * @return
+    */
   def captcha =Action{
     implicit request =>
     val verifyCode = CaptchaUtils.generateVerifyCode(4);
       Logger.info(verifyCode)
       Cache.set("captcha",verifyCode)
-      val outputImage: Array[Byte] = CaptchaUtils.outputImage(134, 52, verifyCode)
+      val outputImage: Array[Byte] = CaptchaUtils.outputImage(130, 52, verifyCode)
       Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").as("image/jpeg")
   }
 
@@ -204,6 +221,7 @@ object Authentication  extends Controller {
 
   /**
     * 发送重置密码
+    * @return
     */
   def resetpwd = Action { implicit request =>
     findPasswordForm.bindFromRequest.fold(
@@ -230,6 +248,12 @@ object Authentication  extends Controller {
     })
   )
 
+  /**
+    * 设置新密码
+    * @param email
+    * @param pwdToken
+    * @return
+    */
   def setpwd(email:String,pwdToken:String)=Action{
     Email.activatePWD((email,pwdToken)) match {
       case  e : EmailExecption =>  NotFound
@@ -239,8 +263,10 @@ object Authentication  extends Controller {
     }
   }
 
+
   /**
-    * 发送重置密码
+    * 更新密码
+    * @return
     */
   def updatepwd = Action { implicit request =>
     setPasswordForm.bindFromRequest.fold(

@@ -33,7 +33,6 @@ object SparkJar extends Controller with Secured {
     }
 
     def uploadpage = IsAuthenticated {username => implicit request =>
-
       Ok(views.html.upload())
 
     }

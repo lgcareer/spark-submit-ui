@@ -21,12 +21,12 @@
     <div>
     <input type="text"   name="captcha" class="text" placeholder="验证码"   onblur="if (this.value == '') {this.value = '验证码';}">
     <img src="/captcha" id="captcha" onclick="refresh(this)"></div >
+
+
     <div class="submit">
         @if(form.hasErrors && !form.error("captcha").isEmpty){
         <p class="error"><font color="red">@form.error("captcha").get.message</font></p>
         }
-
-
         <input type="submit" id="loginbutton" value="发送重置密码邮件">
     </div>
     <ul class="new">
