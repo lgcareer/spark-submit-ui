@@ -206,7 +206,7 @@ object Authentication  extends Controller {
     val verifyCode = CaptchaUtils.generateVerifyCode(4);
       Logger.info(verifyCode)
       Cache.set("captcha",verifyCode)
-      val outputImage: Array[Byte] = CaptchaUtils.outputImage(133, 52, verifyCode)
+      val outputImage: Array[Byte] = CaptchaUtils.outputImage(130, 52, verifyCode)
       Ok(outputImage).withHeaders("Pragma"->"No-cache","Cache-Control"->"no-cache","Expires"->"0").as("image/jpeg")
   }
 
