@@ -21,7 +21,7 @@ import play.api.libs.json.Json
 object SparkTotalinfo {
   def findAll(): String={
      DB.withConnection("test") { implicit connection =>
-      val findall = SQL("select * from spark_total_info limit 1")
+      val findall = SQL("select * from spark_total_info order by id desc limit 1")
       val result = findall().map(row =>
         row[String]("alive_workers") -> row[String]("cores")
          -> row[String]("memory") -> row[String]("applications")

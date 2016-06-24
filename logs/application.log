@@ -8537,3 +8537,12 @@ database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&chara
 2016-06-23 11:50:23,325 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+2016-06-23 18:28:28,370 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-23 18:28:28,600 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-23 18:28:28,602 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
