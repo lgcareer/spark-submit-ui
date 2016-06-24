@@ -141,11 +141,11 @@
 
             <div id = 'worklist' class="col-md-4 stats-info">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><b>Workers List</b></h4>
+                    <h1 class="panel-title"><b>Workers List</b></h1>
                 </div>
                 <div class="panel-body">
-                    <hr>
-                    spark://h136159.mars.grid.sina.com.cn:8080<div class="text-success pull-right">ALIVE</div>
+                    spark://h136159.mars.grid.sina.com.cn:8080
+                        <div class="text-success pull-right">Alive</div>
                     <table id='work_table'  class="table table-striped">
                         <thead>
                         <tr class="success">
@@ -338,7 +338,8 @@
                 dataType:"json",
                  success:function(data){
                   var sparkinfo = eval(data);
-                    var alive_workers = sparkinfo.alive_workers;
+                    var alive_worker = sparkinfo.alive_workers;
+                    var alive_workers = alive_worker +" "+"Workers"
                     var cores = sparkinfo.cores;
                     var memory = sparkinfo.memory;
                     var applications = sparkinfo.applications;

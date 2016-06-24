@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/Desktop/ficusspark/conf/routes
-// @HASH:082c74256632362181537e57f7a3520cb953fdcc
-// @DATE:Wed Jun 22 12:55:47 CST 2016
+// @HASH:50cbb2513e564fb397f853ffbf8508d88f13a0b9
+// @DATE:Fri Jun 24 10:13:13 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,7 +13,6 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:31
 // @LINE:28
 // @LINE:26
 // @LINE:25
@@ -179,24 +178,10 @@ def workerlist(): Call = {
     
 }
                           
-
-// @LINE:31
-class ReverseRace {
-    
-
-// @LINE:31
-def TestIndex(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "race")
-}
-                                                
-    
-}
-                          
 }
                   
 
 
-// @LINE:31
 // @LINE:28
 // @LINE:26
 // @LINE:25
@@ -442,29 +427,10 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
     
 }
               
-
-// @LINE:31
-class ReverseRace {
-    
-
-// @LINE:31
-def TestIndex : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Race.TestIndex",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "race"})
-      }
-   """
-)
-                        
-    
-}
-              
 }
         
 
 
-// @LINE:31
 // @LINE:28
 // @LINE:26
 // @LINE:25
@@ -626,19 +592,6 @@ def yarnInfo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:25
 def workerlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.YarnList.workerlist(), HandlerDef(this, "controllers.YarnList", "workerlist", Seq(), "GET", """""", _prefix + """workerlist""")
-)
-                      
-    
-}
-                          
-
-// @LINE:31
-class ReverseRace {
-    
-
-// @LINE:31
-def TestIndex(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Race.TestIndex(), HandlerDef(this, "controllers.Race", "TestIndex", Seq(), "GET", """TestIndex""", _prefix + """race""")
 )
                       
     

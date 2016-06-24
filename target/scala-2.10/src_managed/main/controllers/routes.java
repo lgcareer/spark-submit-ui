@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/Desktop/ficusspark/conf/routes
-// @HASH:082c74256632362181537e57f7a3520cb953fdcc
-// @DATE:Wed Jun 22 12:55:47 CST 2016
+// @HASH:50cbb2513e564fb397f853ffbf8508d88f13a0b9
+// @DATE:Fri Jun 24 10:13:13 CST 2016
 
 package controllers;
 
@@ -11,7 +11,6 @@ public static final controllers.ReverseSparkSql SparkSql = new controllers.Rever
 public static final controllers.ReverseSparkJar SparkJar = new controllers.ReverseSparkJar();
 public static final controllers.ReverseApplication Application = new controllers.ReverseApplication();
 public static final controllers.ReverseYarnList YarnList = new controllers.ReverseYarnList();
-public static final controllers.ReverseRace Race = new controllers.ReverseRace();
 public static class javascript {
 public static final controllers.javascript.ReverseAssets Assets = new controllers.javascript.ReverseAssets();
 public static final controllers.javascript.ReverseAuthentication Authentication = new controllers.javascript.ReverseAuthentication();
@@ -19,7 +18,6 @@ public static final controllers.javascript.ReverseSparkSql SparkSql = new contro
 public static final controllers.javascript.ReverseSparkJar SparkJar = new controllers.javascript.ReverseSparkJar();
 public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication();
 public static final controllers.javascript.ReverseYarnList YarnList = new controllers.javascript.ReverseYarnList();
-public static final controllers.javascript.ReverseRace Race = new controllers.javascript.ReverseRace();
 }
 public static class ref {
 public static final controllers.ref.ReverseAssets Assets = new controllers.ref.ReverseAssets();
@@ -28,7 +26,6 @@ public static final controllers.ref.ReverseSparkSql SparkSql = new controllers.r
 public static final controllers.ref.ReverseSparkJar SparkJar = new controllers.ref.ReverseSparkJar();
 public static final controllers.ref.ReverseApplication Application = new controllers.ref.ReverseApplication();
 public static final controllers.ref.ReverseYarnList YarnList = new controllers.ref.ReverseYarnList();
-public static final controllers.ref.ReverseRace Race = new controllers.ref.ReverseRace();
 }
 }
           

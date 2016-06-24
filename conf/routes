@@ -28,5 +28,4 @@ GET     /spark_info                 controllers.YarnList.spark_info
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 #TestIndex
-GET     /race                       controllers.Race.TestIndex()
 
