@@ -32,7 +32,7 @@ Seq[Any](format.raw/*1.28*/("""
                         <h3>执行参数</h3>
                         <div class="tab-content">
                             <div class="tab-pane active" id="horizontal-form">
-                            """),_display_(Seq[Any](/*12.30*/helper/*12.36*/.form(action=routes.SparkJar.executejar)/*12.76*/ {_display_(Seq[Any](format.raw/*12.78*/("""
+                            """),_display_(Seq[Any](/*12.30*/helper/*12.36*/.form(action=routes.SparkStream.streamExecute)/*12.82*/ {_display_(Seq[Any](format.raw/*12.84*/("""
                                 <div class="form-horizontal" >
 
                                     <div class="form-group mb-n">
@@ -111,10 +111,10 @@ Seq[Any](format.raw/*1.28*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Jun 21 12:18:17 CST 2016
+                    DATE: Fri Jun 24 17:27:41 CST 2016
                     SOURCE: /Users/manbu/Desktop/ficusspark/app/views/sparkjar.scala.html
-                    HASH: 88e64395d397961365353c829cea46ba7c76db60
-                    MATRIX: 571->1|674->29|688->36|772->40|874->27|901->103|937->105|978->138|1016->139|1308->395|1323->401|1372->441|1412->443|5681->4680|5834->4797|5867->4808|5953->4863
+                    HASH: 5411f2774205c5edf5ca4ad514ee02747cb8f2c6
+                    MATRIX: 571->1|674->29|688->36|772->40|874->27|901->103|937->105|978->138|1016->139|1308->395|1323->401|1378->447|1418->449|5687->4686|5840->4803|5873->4814|5959->4869
                     LINES: 19->1|21->2|21->2|23->2|26->1|27->4|28->5|28->5|28->5|35->12|35->12|35->12|35->12|90->67|97->74|97->74|101->78
                     -- GENERATED --
                 */

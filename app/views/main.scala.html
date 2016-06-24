@@ -58,9 +58,10 @@
         <li> <a href="@routes.Application.index"><i class="fa fa-dashboard fa-fw nav_icon"></i>仪表盘</a> </li>
         <li> <a href="#"><i class="fa fa-check-square-o nav_icon"></i>数据应用面板<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.SparkJar.uploadpage">spark-jar应用</a> </li>
+            <li> <a href="@routes.SparkJar.uploadpage">spark-jar应用</a></li>
             <li> <a href="@routes.SparkSql.sqlpage">spark-sql应用</a> </li>
-            <li> <a href="@routes.SparkStream.sparkstream">spark-stream应用</a> </li>
+            <li> <a href="@routes.SparkStream.stream">spark-stream基于HDFS的应用</a></li>
+            <li> <a href="@routes.SparkStream.stream">spark-stream基于Kafka的应用</a></li>
           </ul>
           <!-- /.nav-second-level --> 
         </li>
