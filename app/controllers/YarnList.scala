@@ -24,6 +24,12 @@ object YarnList extends Controller with Secured {
     val workerlist = Json.parse(workersJson)
     Ok(workerlist)
   }
+
+  def sparklist = IsAuthenticated { username => implicit request =>
+
+    Ok(views.html.sparklist.render())
+  }
+
   //从数据库获取数据发送到接口
   def spark_info = IsAuthenticated { username => implicit request =>
      import models.SparkTotalinfo

@@ -31,6 +31,7 @@ GET     /yarnInfo                   controllers.YarnList.yarnInfo
 GET     /yarnlist                   controllers.YarnList.yarnlist
 GET     /workerlist                 controllers.YarnList.workerlist
 GET     /spark_info                 controllers.YarnList.spark_info
+GET     /sparklist                  controllers.YarnList.sparklist
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 

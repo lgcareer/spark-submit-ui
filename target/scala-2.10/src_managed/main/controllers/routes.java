@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/Desktop/ficusspark/conf/routes
-// @HASH:8adb5cb1bbe592fe8bef6e906b5e153d5d6f4518
-// @DATE:Fri Jun 24 17:51:10 CST 2016
+// @HASH:50aed78bdb0424879ffde05464edd33c6e4e1ba3
+// @DATE:Wed Jun 29 16:40:14 CST 2016
 
 package controllers;
 

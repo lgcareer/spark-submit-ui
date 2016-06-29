@@ -52,7 +52,7 @@
               var head= "<table border='10' width='439'><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
                 var myobj=eval(data);
                 for (var p in myobj) {
-                    var datamid = eval(data[p]);
+                    var datamid = data[p];
                     for(var  x in datamid){
                         var mid = eval(data[p][x]);
                         for (var i = 0; i < mid.length; i++) {

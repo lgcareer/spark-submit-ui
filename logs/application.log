@@ -1,694 +1,630 @@
-2016-06-24 16:39:11,880 - [INFO] - from play in pool-4-thread-4 
+2016-06-27 11:17:54,717 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-06-24 16:40:15,716 - [INFO] - from play in play-internal-execution-context-1 
+2016-06-27 11:18:09,925 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 16:40:16,005 - [INFO] - from play in play-internal-execution-context-1 
+2016-06-27 11:18:10,160 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 16:40:16,102 - [INFO] - from play in play-internal-execution-context-1 
+2016-06-27 11:18:10,288 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-06-24 16:40:32,507 - [ERROR] - from play in play-akka.actor.default-dispatcher-8 
-Cannot invoke the action, eventually got an error: java.io.IOException: Path(/tmp/file/javax.inject-1.jar) exists but replace parameter is false
-
-2016-06-24 16:40:32,519 - [ERROR] - from application in play-akka.actor.default-dispatcher-8 
-
-
-! @70g23mbaj - Internal server error, for (POST) [/sparkjar] ->
-
-play.api.Application$$anon$1: Execution exception[[IOException: Path(/tmp/file/javax.inject-1.jar) exists but replace parameter is false]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.io.IOException: Path(/tmp/file/javax.inject-1.jar) exists but replace parameter is false
-	at scalax.file.Path$.fail(Path.scala:168) ~[scala-io-file_2.10.jar:0.4.2]
-	at scalax.file.Path.moveTo(Path.scala:1089) ~[scala-io-file_2.10.jar:0.4.2]
-	at play.api.libs.Files$.moveFile(Files.scala:76) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.Files$TemporaryFile.moveTo(Files.scala:30) ~[play_2.10.jar:2.2.6]
-	at controllers.SparkJar$$anonfun$upload$1$$anonfun$apply$3.apply(SparkJar.scala:46) ~[classes/:na]
-	at controllers.SparkJar$$anonfun$upload$1$$anonfun$apply$3.apply(SparkJar.scala:42) ~[classes/:na]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at controllers.SparkJar$$anonfun$upload$1.apply(SparkJar.scala:42) ~[classes/:na]
-	at controllers.SparkJar$$anonfun$upload$1.apply(SparkJar.scala:41) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-
-2016-06-24 16:41:40,541 - [ERROR] - from play in play-internal-execution-context-7 
-Cannot invoke the action, eventually got an error: java.io.IOException: Path(/tmp/file/tomcat-i18n-fr.jar) exists but replace parameter is false
-
-2016-06-24 16:41:40,543 - [ERROR] - from application in play-internal-execution-context-7 
-
-
-! @70g240816 - Internal server error, for (POST) [/strem] ->
-
-play.api.Application$$anon$1: Execution exception[[IOException: Path(/tmp/file/tomcat-i18n-fr.jar) exists but replace parameter is false]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.io.IOException: Path(/tmp/file/tomcat-i18n-fr.jar) exists but replace parameter is false
-	at scalax.file.Path$.fail(Path.scala:168) ~[scala-io-file_2.10.jar:0.4.2]
-	at scalax.file.Path.moveTo(Path.scala:1089) ~[scala-io-file_2.10.jar:0.4.2]
-	at play.api.libs.Files$.moveFile(Files.scala:76) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.Files$TemporaryFile.moveTo(Files.scala:30) ~[play_2.10.jar:2.2.6]
-	at controllers.SparkStream$$anonfun$upload$1$$anonfun$apply$3.apply(SparkStream.scala:18) ~[na:na]
-	at controllers.SparkStream$$anonfun$upload$1$$anonfun$apply$3.apply(SparkStream.scala:14) ~[na:na]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at controllers.SparkStream$$anonfun$upload$1.apply(SparkStream.scala:14) ~[na:na]
-	at controllers.SparkStream$$anonfun$upload$1.apply(SparkStream.scala:13) ~[na:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) ~[akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) ~[akka-actor_2.10.jar:2.2.0]
-	... 4 common frames omitted
-
-2016-06-24 16:46:50,524 - [ERROR] - from application in New I/O worker #13 
-
-
-! @70g24hofc - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value upload is not a member of controllers.ReverseSparkStream]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2016-06-24 16:46:54,221 - [ERROR] - from application in New I/O worker #14 
-
-
-! @70g24i41i - Internal server error, for (GET) [/executejar] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value upload is not a member of controllers.ReverseSparkStream]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2016-06-24 16:47:18,822 - [INFO] - from play in play-internal-execution-context-9 
+2016-06-29 16:35:33,208 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 16:47:19,058 - [INFO] - from play in play-internal-execution-context-9 
+2016-06-29 16:35:33,437 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 16:47:19,064 - [INFO] - from play in play-internal-execution-context-9 
+2016-06-29 16:35:33,444 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 16:47:29,184 - [ERROR] - from play in play-akka.actor.default-dispatcher-20 
-Cannot invoke the action, eventually got an error: java.io.IOException: Path(/tmp/file/log.jar) exists but replace parameter is false
-
-2016-06-24 16:47:29,188 - [ERROR] - from application in play-akka.actor.default-dispatcher-20 
-
-
-! @70g24k3kg - Internal server error, for (POST) [/stremupload] ->
-
-play.api.Application$$anon$1: Execution exception[[IOException: Path(/tmp/file/log.jar) exists but replace parameter is false]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.io.IOException: Path(/tmp/file/log.jar) exists but replace parameter is false
-	at scalax.file.Path$.fail(Path.scala:168) ~[scala-io-file_2.10.jar:0.4.2]
-	at scalax.file.Path.moveTo(Path.scala:1089) ~[scala-io-file_2.10.jar:0.4.2]
-	at play.api.libs.Files$.moveFile(Files.scala:76) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.Files$TemporaryFile.moveTo(Files.scala:30) ~[play_2.10.jar:2.2.6]
-	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:18) ~[classes/:na]
-	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:14) ~[classes/:na]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:14) ~[classes/:na]
-	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:13) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-
-2016-06-24 16:56:54,456 - [ERROR] - from application in New I/O worker #10 
-
-
-! @70g2607pi - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[Cannot write an instance of views.html.stream.type to HTTP response. Try to define a Writeable[views.html.stream.type]]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2016-06-24 16:56:54,964 - [ERROR] - from application in New I/O worker #11 
-
-
-! @70g2608j6 - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[Cannot write an instance of views.html.stream.type to HTTP response. Try to define a Writeable[views.html.stream.type]]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2016-06-24 16:57:02,265 - [ERROR] - from application in New I/O worker #11 
-
-
-! @70g260je1 - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value stream is not a member of object controllers.SparkStream]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2016-06-24 16:57:32,788 - [ERROR] - from application in New I/O worker #11 
-
-
-! @70g262ci0 - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[value sparkstream is not a member of controllers.ReverseSparkStream]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
-
-2016-06-24 16:58:00,742 - [INFO] - from play in play-internal-execution-context-10 
+2016-06-29 16:40:25,802 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 16:58:00,962 - [INFO] - from play in play-internal-execution-context-10 
+2016-06-29 16:40:27,525 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 16:58:00,967 - [INFO] - from play in play-internal-execution-context-10 
+2016-06-29 16:40:27,530 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 16:58:11,880 - [ERROR] - from play in play-akka.actor.default-dispatcher-36 
-Cannot invoke the action, eventually got an error: java.io.IOException: Path(/tmp/file/loga.jar) exists but replace parameter is false
-
-2016-06-24 16:58:11,883 - [ERROR] - from application in play-akka.actor.default-dispatcher-36 
-
-
-! @70g264idh - Internal server error, for (POST) [/stremupload] ->
-
-play.api.Application$$anon$1: Execution exception[[IOException: Path(/tmp/file/loga.jar) exists but replace parameter is false]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.io.IOException: Path(/tmp/file/loga.jar) exists but replace parameter is false
-	at scalax.file.Path$.fail(Path.scala:168) ~[scala-io-file_2.10.jar:0.4.2]
-	at scalax.file.Path.moveTo(Path.scala:1089) ~[scala-io-file_2.10.jar:0.4.2]
-	at play.api.libs.Files$.moveFile(Files.scala:76) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.Files$TemporaryFile.moveTo(Files.scala:30) ~[play_2.10.jar:2.2.6]
-	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:18) ~[classes/:na]
-	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:14) ~[classes/:na]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:14) ~[classes/:na]
-	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:13) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-
-2016-06-24 17:16:48,562 - [INFO] - from play in play-internal-execution-context-13 
+2016-06-29 16:50:53,805 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:16:48,785 - [INFO] - from play in play-internal-execution-context-13 
+2016-06-29 16:50:54,084 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:16:48,790 - [INFO] - from play in play-internal-execution-context-13 
+2016-06-29 16:50:54,088 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 17:17:37,868 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 16:52:17,928 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:17:38,074 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 16:52:18,149 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:17:38,079 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 16:52:18,153 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 17:24:24,835 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 17:06:05,286 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:24:25,064 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 17:06:05,482 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:24:25,069 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 17:06:05,486 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 17:27:45,739 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 17:08:31,530 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:27:45,977 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 17:08:31,734 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:27:45,982 - [INFO] - from play in play-internal-execution-context-14 
+2016-06-29 17:08:31,738 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 17:39:29,060 - [INFO] - from play in play-internal-execution-context-15 
+2016-06-29 17:15:15,129 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:39:29,341 - [INFO] - from play in play-internal-execution-context-15 
+2016-06-29 17:15:15,389 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:39:29,346 - [INFO] - from play in play-internal-execution-context-15 
+2016-06-29 17:15:15,394 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-06-24 17:39:39,028 - [ERROR] - from play in play-akka.actor.default-dispatcher-74 
-Cannot invoke the action, eventually got an error: java.io.IOException: Path(/tmp/file/ab.jar) exists but replace parameter is false
-
-2016-06-24 17:39:39,030 - [ERROR] - from application in play-akka.actor.default-dispatcher-74 
-
-
-! @70g2bg5j4 - Internal server error, for (POST) [/stremupload] ->
-
-play.api.Application$$anon$1: Execution exception[[IOException: Path(/tmp/file/ab.jar) exists but replace parameter is false]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
-Caused by: java.io.IOException: Path(/tmp/file/ab.jar) exists but replace parameter is false
-	at scalax.file.Path$.fail(Path.scala:168) ~[scala-io-file_2.10.jar:0.4.2]
-	at scalax.file.Path.moveTo(Path.scala:1089) ~[scala-io-file_2.10.jar:0.4.2]
-	at play.api.libs.Files$.moveFile(Files.scala:76) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.Files$TemporaryFile.moveTo(Files.scala:30) ~[play_2.10.jar:2.2.6]
-	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:46) ~[classes/:na]
-	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:42) ~[classes/:na]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:42) ~[classes/:na]
-	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:41) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
-	... 6 common frames omitted
-
-2016-06-24 17:44:36,169 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:16:36,323 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:44:36,396 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:16:36,580 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:44:36,402 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:16:36,584 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:44:56,910 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:19:57,029 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:44:57,148 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:19:57,250 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:44:57,153 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:19:57,255 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:45:18,766 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:22:53,642 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:45:19,210 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:22:53,931 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:45:19,216 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:22:53,936 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:48:17,777 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:27:20,474 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:48:18,081 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:27:20,688 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:48:18,085 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:27:20,692 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:49:13,119 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:27:55,762 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:49:13,373 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:27:56,002 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:49:13,377 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:27:56,007 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:51:15,201 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:28:52,037 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:51:15,430 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:28:52,264 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:51:15,434 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:28:52,267 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:58:14,932 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:30:35,507 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:58:15,251 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:30:35,738 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:58:15,255 - [INFO] - from play in play-internal-execution-context-17 
+2016-06-29 17:30:35,742 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 17:59:18,065 - [INFO] - from play in play-internal-execution-context-18 
+2016-06-29 17:32:14,726 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:59:18,307 - [INFO] - from play in play-internal-execution-context-18 
+2016-06-29 17:32:14,945 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 17:59:18,315 - [INFO] - from play in play-internal-execution-context-18 
+2016-06-29 17:32:14,952 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2016-06-24 18:01:54,418 - [INFO] - from play in play-internal-execution-context-18 
+2016-06-29 17:32:31,358 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 18:01:54,819 - [INFO] - from play in play-internal-execution-context-18 
+2016-06-29 17:32:31,575 - [INFO] - from play in play-internal-execution-context-5 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-06-24 18:01:54,824 - [INFO] - from play in play-internal-execution-context-18 
+2016-06-29 17:32:31,579 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:35:05,999 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:35:06,230 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:35:06,234 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:35:26,324 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:35:26,544 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:35:26,549 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:38:00,543 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:38:00,739 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:38:00,744 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:38:18,231 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:38:18,457 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:38:18,460 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:41:46,445 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:41:46,666 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:41:46,670 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:42:28,130 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:42:28,353 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:42:28,357 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:44:26,506 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:44:26,738 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:44:26,742 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:57:33,185 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:57:33,394 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:57:33,399 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:58:22,939 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:58:23,192 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:58:23,195 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:59:25,335 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:59:25,560 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:59:25,564 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 17:59:48,103 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:59:48,332 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 17:59:48,336 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:04:42,646 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:04:42,863 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:04:42,866 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:05:36,285 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:05:36,498 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:05:36,501 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:06:20,985 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:06:21,188 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:06:21,192 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:08:36,507 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:08:36,739 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:08:36,743 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:33:05,154 - [ERROR] - from application in New I/O worker #11 
+
+
+! @70hd1pfj2 - Internal server error, for (GET) [/sparklist] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[Not parsed?]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library.jar:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2016-06-29 18:33:06,366 - [ERROR] - from application in New I/O worker #11 
+
+
+! @70hd1pheg - Internal server error, for (GET) [/sparklist] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[Not parsed?]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library.jar:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2016-06-29 18:33:14,605 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:33:14,785 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:33:14,789 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:33:28,414 - [ERROR] - from application in New I/O worker #14 
+
+
+! @70hd20o4h - Internal server error, for (GET) [/sparklist] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library.jar:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2016-06-29 18:33:35,407 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:33:35,659 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:33:35,663 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:33:56,304 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:33:56,495 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:33:56,498 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:34:37,330 - [ERROR] - from application in New I/O worker #15 
+
+
+! @70hd24m38 - Internal server error, for (GET) [/sparklist] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[Not parsed?]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library.jar:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2016-06-29 18:34:51,503 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:34:51,721 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:34:51,725 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:35:11,510 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:35:11,708 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:35:11,711 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:37:48,652 - [ERROR] - from application in New I/O worker #13 
+
+
+! @70hd2fj3m - Internal server error, for (GET) [/sparklist] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library.jar:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2016-06-29 18:37:50,186 - [ERROR] - from application in New I/O worker #13 
+
+
+! @70hd2flan - Internal server error, for (GET) [/sparklist] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library.jar:na]
+	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2016-06-29 18:38:18,887 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:38:19,069 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:38:19,072 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:39:05,360 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:39:05,548 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:39:05,551 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:44:30,846 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:44:31,059 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:44:31,063 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:46:15,998 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:46:16,185 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:46:16,190 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:46:36,674 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:46:36,906 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:46:36,910 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:50:04,489 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:50:04,718 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:50:04,721 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:50:23,092 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:50:23,326 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:50:23,329 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 18:55:10,005 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:55:10,198 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 18:55:10,201 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 19:00:49,192 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:00:49,426 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:00:49,429 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 19:03:00,634 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:03:00,819 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:03:00,823 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 19:03:32,513 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:03:32,714 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:03:32,718 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 19:06:43,031 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:06:43,240 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:06:43,244 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 19:13:28,209 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:13:28,382 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 19:13:28,385 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-06-29 20:12:46,227 - [INFO] - from play in play-internal-execution-context-7 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 20:12:46,412 - [INFO] - from play in play-internal-execution-context-7 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-06-29 20:12:46,416 - [INFO] - from play in play-internal-execution-context-7 
 Application started (Dev)
 

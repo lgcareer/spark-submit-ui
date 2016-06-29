@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/Desktop/ficusspark/conf/routes
-// @HASH:8adb5cb1bbe592fe8bef6e906b5e153d5d6f4518
-// @DATE:Fri Jun 24 17:51:10 CST 2016
+// @HASH:50aed78bdb0424879ffde05464edd33c6e4e1ba3
+// @DATE:Wed Jun 29 16:40:14 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,7 +13,8 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
@@ -36,11 +37,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:35
+// @LINE:36
 class ReverseAssets {
     
 
-// @LINE:35
+// @LINE:36
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -191,6 +192,7 @@ def streamArgs(): Call = {
 }
                           
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
@@ -198,21 +200,27 @@ def streamArgs(): Call = {
 class ReverseYarnList {
     
 
-// @LINE:33
-def spark_info(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "spark_info")
-}
-                                                
-
 // @LINE:31
 def yarnlist(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
 }
                                                 
 
+// @LINE:33
+def spark_info(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "spark_info")
+}
+                                                
+
 // @LINE:30
 def yarnInfo(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
+}
+                                                
+
+// @LINE:34
+def sparklist(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "sparklist")
 }
                                                 
 
@@ -228,7 +236,8 @@ def workerlist(): Call = {
                   
 
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
@@ -251,11 +260,11 @@ def workerlist(): Call = {
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:35
+// @LINE:36
 class ReverseAssets {
     
 
-// @LINE:35
+// @LINE:36
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -491,23 +500,13 @@ def streamArgs : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
 class ReverseYarnList {
     
-
-// @LINE:33
-def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.YarnList.spark_info",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "spark_info"})
-      }
-   """
-)
-                        
 
 // @LINE:31
 def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -520,12 +519,34 @@ def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:33
+def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.YarnList.spark_info",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "spark_info"})
+      }
+   """
+)
+                        
+
 // @LINE:30
 def yarnInfo : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.YarnList.yarnInfo",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
+      }
+   """
+)
+                        
+
+// @LINE:34
+def sparklist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.YarnList.sparklist",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparklist"})
       }
    """
 )
@@ -548,7 +569,8 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:35
+// @LINE:36
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
@@ -572,11 +594,11 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:35
+// @LINE:36
 class ReverseAssets {
     
 
-// @LINE:35
+// @LINE:36
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -727,6 +749,7 @@ def streamArgs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
@@ -734,21 +757,27 @@ def streamArgs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 class ReverseYarnList {
     
 
-// @LINE:33
-def spark_info(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.YarnList.spark_info(), HandlerDef(this, "controllers.YarnList", "spark_info", Seq(), "GET", """""", _prefix + """spark_info""")
-)
-                      
-
 // @LINE:31
 def yarnlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.YarnList.yarnlist(), HandlerDef(this, "controllers.YarnList", "yarnlist", Seq(), "GET", """""", _prefix + """yarnlist""")
 )
                       
 
+// @LINE:33
+def spark_info(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.YarnList.spark_info(), HandlerDef(this, "controllers.YarnList", "spark_info", Seq(), "GET", """""", _prefix + """spark_info""")
+)
+                      
+
 // @LINE:30
 def yarnInfo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.YarnList.yarnInfo(), HandlerDef(this, "controllers.YarnList", "yarnInfo", Seq(), "GET", """Dashboard""", _prefix + """yarnInfo""")
+)
+                      
+
+// @LINE:34
+def sparklist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.YarnList.sparklist(), HandlerDef(this, "controllers.YarnList", "sparklist", Seq(), "GET", """""", _prefix + """sparklist""")
 )
                       
 
