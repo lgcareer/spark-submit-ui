@@ -19,3 +19,5 @@ resolvers ++= Seq(
   Resolver.sonatypeRepo("public")
 )
 
+
+
