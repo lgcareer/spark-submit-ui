@@ -1,8 +1,0 @@
-[0m[[33mwarn[0m] [0m/Users/manbu/Desktop/ficusspark/app/models/utils/DashboardMetrics.scala:30: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.[0m
-[0m[[33mwarn[0m] [0m        case e => e.printStackTrace[0m
-[0m[[33mwarn[0m] [0m             ^[0m
-[0m[[33mwarn[0m] [0m/Users/manbu/Desktop/ficusspark/app/models/utils/JDBCUtil.scala:36: This catches all Throwables. If this is really intended, use `case e : Throwable` to clear this warning.[0m
-[0m[[33mwarn[0m] [0m      case e => e.printStackTrace[0m
-[0m[[33mwarn[0m] [0m           ^[0m
-[0m[[33mwarn[0m] [0mthere were 3 feature warning(s); re-run with -feature for details[0m
-[0m[[33mwarn[0m] [0mthree warnings found[0m

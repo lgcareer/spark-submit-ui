@@ -53,7 +53,6 @@ object SparkStream extends Controller with Secured{
 
 
   def streamArgs = Action { implicit request =>
-
     Ok(views.html.streamArgs(executeForm))
 
   }

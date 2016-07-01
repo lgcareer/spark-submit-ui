@@ -4,16 +4,20 @@
     width:100%;
     background-color:rgb(100%,100%,90%);
     }
-</style>
-<style type='text/css'>
     #date{
     width:50%;
     }
-</style>
-<style type='text/css'>
     #sparkinfo{
     width:50%;
-    line-height:2.5;
+    line-height:1.2;
+    }
+    .col-md-6 {
+    width: 50%;
+    height: 20%;
+    }
+
+    .col_1_of_2.span_1_of_2 {
+    padding: 2px;
     }
 </style>
 <!----Calender -------->
@@ -70,37 +74,62 @@
                   <div class="box_1">
                       <div class="col-md-6 col_1_of_2 span_1_of_2">
                           <a class="tiles_info">
-                              <div class="tiles-head red1">
-                                  <div class="text-center">CPU CORES总数</div>
+                              <div class="tiles-head tw1">
+                                  <div class="text-center">Worker节点数</div>
                               </div>
-                              <div class="tiles-body red">36 Cores</div>
+                              <div class="tiles-body tw2" >
+                                      <h2 id="alive_workers"></h2>
+                              </div>
                           </a>
                       </div>
+                      <div class="col-md-6 col_1_of_2 span_1_of_2">
+                          <a class="tiles_info">
+                              <div class="tiles-head tw1">
+                                  <div class="text-center">Cores使用情况</div>
+                              </div>
+                              <div class="tiles-body tw2" >
+                                  <h2 id="cores"></h2>
+                              </div>
+                          </a>
+                      </div>
+
                       <div class="col-md-6 col_1_of_2 span_1_of_2">
                           <a class="tiles_info tiles_blue">
                               <div class="tiles-head tiles_blue1">
-                                  <div class="text-center">SLAVES 节点</div>
+                                  <div class="text-center">Spark内存使用情况</div>
                               </div>
-                              <div class="tiles-body blue1">3 Workers</div>
+                              <div class="tiles-body blue1" >
+                                  <h3 id="memory"></h3>
+                              </div>
                           </a>
                       </div>
-                      <div class="clearfix"> </div>
-                  </div>
-                  <div class="box_1">
+                      <div class="col-md-6 col_1_of_2 span_1_of_2">
+                              <a class="tiles_info tiles_blue">
+                                  <div class="tiles-head tiles_blue1">
+                                      <div class="text-center">应用程序运行情况</div>
+                                  </div>
+                                  <div class="tiles-body blue1" >
+                                  <h3 id="applications"></h3>
+                                  </div>
+                              </a>
+                      </div>
                       <div class="col-md-6 col_1_of_2 span_1_of_2">
                           <a class="tiles_info">
                               <div class="tiles-head fb1">
-                                  <div class="text-center">HA Master</div>
+                                  <div class="text-center">Drivers运行情况</div>
                               </div>
-                              <div class="tiles-body fb2">2 Master</div>
+                              <div class="tiles-body fb2" >
+                              <h3 id="drivers"></h3>
+                              </div>
                           </a>
                       </div>
                       <div class="col-md-6 col_1_of_2 span_1_of_2">
                           <a class="tiles_info tiles_blue">
-                              <div class="tiles-head tw1">
-                                  <div class="text-center">集群规模</div>
+                              <div class="tiles-head fb1">
+                                  <div class="text-center">HA Master状态</div>
                               </div>
-                              <div class="tiles-body tw2">6 Nodes</div>
+                              <div class="tiles-body fb1" id="status">
+                              </div>
                           </a>
                       </div>
                       <div class="clearfix"> </div>
@@ -114,11 +143,11 @@
 
             <div id = 'worklist' class="col-md-4 stats-info">
                 <div class="panel-heading">
-                    <h4 class="panel-title"><b>Workers List</b></h4>
+                    <h1 class="panel-title"><b>Workers List</b></h1>
                 </div>
                 <div class="panel-body">
-                    <hr>
-                    spark://h136159.mars.grid.sina.com.cn:8080<div class="text-success pull-right">ALIVE</div>
+                    spark://h136159.mars.grid.sina.com.cn:8080
+                        <div class="text-success pull-right">Alive</div>
                     <table id='work_table'  class="table table-striped">
                         <thead>
                         <tr class="success">
@@ -197,6 +226,7 @@
             });
             show_work();
             task_count();
+            cluster_info();
         });
         //任务类型判断
         function show_task(Obj){
@@ -297,9 +327,43 @@
                   $('#plain').html(plain_task);
                    }
             });
-            return return_list
+
         }
     </script>
+    <script>
+
+         //spark集群运行情况
+         function cluster_info(){
+              $.ajax({
+                type:"GET",
+                url:"/spark_info",
+                dataType:"json",
+                 success:function(data){
+                  var sparkinfo = eval(data);
+                    var alive_worker = sparkinfo.alive_workers;
+                    var alive_workers = alive_worker +" "+"Workers"
+                    var cores = sparkinfo.cores;
+                    var memory = sparkinfo.memory;
+                    var applications = sparkinfo.applications;
+                    var drivers = sparkinfo.drivers;
+                    var status = sparkinfo.status;
+
+                  $('#alive_workers').html(alive_workers);
+                  $('#cores').html(cores);
+                  $('#memory').html(memory);
+                  $('#applications').html(applications);
+                  $('#drivers').html(drivers);
+                  $('#status').html(status);
+
+
+                }
+              });
+
+         }
+
+
+    </script>
+
 }
 
 
