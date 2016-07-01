@@ -1,6 +1,6 @@
 // @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
-// @HASH:50aed78bdb0424879ffde05464edd33c6e4e1ba3
-// @DATE:Fri Jul 01 17:38:37 CST 2016
+// @HASH:5fc9c6262a404f85020d76a4ec941c73d9b701a6
+// @DATE:Fri Jul 01 18:17:09 CST 2016
 
 package controllers;
 

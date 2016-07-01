@@ -16,7 +16,6 @@ object SparkSql extends Controller with Secured {
   val sqlForm:Form[SqlModel] = Form{
     mapping(
         "sql" -> text)(SqlModel.apply)(SqlModel.unapply)
-
   }
 
   def sqlpage = IsAuthenticated { username => implicit request =>
@@ -37,12 +36,13 @@ object SparkSql extends Controller with Secured {
         override def run(){
         println("start execute sql")
         val argus = Array(sqldata.sql)
+        models.utils.ExecuteSql.main(argus)
         println("end execute sql")
     }
       }
             Ok(views.html.index())
         }
-        )
+      )
   }
 
 }

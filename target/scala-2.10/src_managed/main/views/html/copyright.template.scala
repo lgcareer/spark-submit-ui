@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="copy">
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jul 01 17:38:39 CST 2016
+                    DATE: Fri Jul 01 18:16:06 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/copyright.scala.html
                     HASH: 420e5de58ec3ac768c770b3f010f2e3d80fdc03b
                     MATRIX: 641->0

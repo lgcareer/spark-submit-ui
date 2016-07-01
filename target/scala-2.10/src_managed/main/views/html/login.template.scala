@@ -20,43 +20,53 @@ object login extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,
         _display_ {
 
 Seq[Any](format.raw/*1.54*/("""
-"""),_display_(Seq[Any](/*2.2*/plain("Neptune Login")/*2.24*/{_display_(Seq[Any](format.raw/*2.25*/("""
-<div class="login-logo"><img src=""""),_display_(Seq[Any](/*3.36*/routes/*3.42*/.Assets.at("images/favicon.png"))),format.raw/*3.74*/("""" alt=""/></div>
+
+"""),_display_(Seq[Any](/*3.2*/plain("Neptune Login")/*3.24*/{_display_(Seq[Any](format.raw/*3.25*/("""
+<div class="login-logo"><img src=""""),_display_(Seq[Any](/*4.36*/routes/*4.42*/.Assets.at("images/favicon.png"))),format.raw/*4.74*/("""" alt=""/></div>
 <h2 class="form-heading"><font color="#FBFBFB">欢迎登陆 Neptune Data Platform</font></h2>
 <div class="app-cam">
 
-  """),_display_(Seq[Any](/*7.4*/helper/*7.10*/.form(routes.Authentication.authenticate)/*7.51*/{_display_(Seq[Any](format.raw/*7.52*/("""
-    """),_display_(Seq[Any](/*8.6*/form/*8.10*/.globalError.map/*8.26*/ { error =>_display_(Seq[Any](format.raw/*8.37*/("""
+  """),_display_(Seq[Any](/*8.4*/helper/*8.10*/.form(routes.Authentication.authenticate)/*8.51*/{_display_(Seq[Any](format.raw/*8.52*/("""
+    """),_display_(Seq[Any](/*9.6*/form/*9.10*/.globalError.map/*9.26*/ { error =>_display_(Seq[Any](format.raw/*9.37*/("""
         <p class="error">
            <font color="red">错误的用户名或密码</font>
         </p>
-    """)))})),format.raw/*12.6*/("""
-    
-    """),_display_(Seq[Any](/*14.6*/flash/*14.11*/.get("success").map/*14.30*/ { message =>_display_(Seq[Any](format.raw/*14.43*/("""
-        <p class="success">
-           <font color="red"> """),_display_(Seq[Any](/*16.32*/message)),format.raw/*16.39*/("""</font>
-        </p>
+    """)))})),format.raw/*13.6*/("""
+
+
+    """),_display_(Seq[Any](/*16.6*/if(form.hasErrors && !form.error("email").isEmpty)/*16.56*/{_display_(Seq[Any](format.raw/*16.57*/("""
+    <p class="error"><font color="red">"""),_display_(Seq[Any](/*17.41*/form/*17.45*/.error("email").get.message)),format.raw/*17.72*/("""</font></p>
     """)))})),format.raw/*18.6*/("""
-    <input type="text" name="email" class="text" value=""""),_display_(Seq[Any](/*19.58*/form("email")/*19.71*/.value)),format.raw/*19.77*/("""" placeholder="E-mail Address" onfocus="this.value = '';" onblur="if (this.value == '') """),format.raw/*19.165*/("""{"""),format.raw/*19.166*/("""this.value = 'E-mail Address';"""),format.raw/*19.196*/("""}"""),format.raw/*19.197*/("""">
-    <input type="password" name="password" value="Password"  onfocus="this.value = '';" onblur="if (this.value == '') """),format.raw/*20.119*/("""{"""),format.raw/*20.120*/("""this.value = 'Password';"""),format.raw/*20.144*/("""}"""),format.raw/*20.145*/("""">
+
+
+    """),_display_(Seq[Any](/*21.6*/flash/*21.11*/.get("success").map/*21.30*/ { message =>_display_(Seq[Any](format.raw/*21.43*/("""
+        <p class="success">
+           <font color="red"> """),_display_(Seq[Any](/*23.32*/message)),format.raw/*23.39*/("""</font>
+        </p>
+    """)))})),format.raw/*25.6*/("""
+
+
+    <input type="text" name="email" class="text" value=""""),_display_(Seq[Any](/*28.58*/form("email")/*28.71*/.value)),format.raw/*28.77*/("""" placeholder="E-mail Address" onfocus="this.value = '';" onblur="if (this.value == '') """),format.raw/*28.165*/("""{"""),format.raw/*28.166*/("""this.value = 'E-mail Address';"""),format.raw/*28.196*/("""}"""),format.raw/*28.197*/("""">
+    <input type="password" name="password" value="Password"  onfocus="this.value = '';" onblur="if (this.value == '') """),format.raw/*29.119*/("""{"""),format.raw/*29.120*/("""this.value = 'Password';"""),format.raw/*29.144*/("""}"""),format.raw/*29.145*/("""">
     <div class="submit">
       <input type="submit" id="loginbutton" value="登陆">
     </div>
     <ul class="new">
       <li class="new_left">
-        <p><a href="#"><font color="#FBFBFB"> 忘记密码 ?</font></a></p>
+
+        <p><a href="/findpwd"><font color="#FBFBFB"> 忘记密码 ?</font></a></p>
       </li>
       <li class="new_right">
-        <p class="sign"><a href="register.html"><font color="#FBFBFB">没有帐号?</font></a></p>
+        <p class="sign"><a href="/registration"><font color="#FBFBFB">没有帐号?</font></a></p>
       </li>
       <div class="clearfix"></div>
     </ul>
-""")))})),format.raw/*33.2*/("""
+""")))})),format.raw/*43.2*/("""
 </div>
 <div class="copy_layout login">
   <p><font color="#FBFBFB">Copyright &copy; 2016.Sina DSP All rights reserved.More Infomation 新浪微博 </font></p>
 </div>
-""")))})),format.raw/*38.2*/("""
+""")))})),format.raw/*48.2*/("""
 """))}
     }
     
@@ -69,11 +79,11 @@ Seq[Any](format.raw/*1.54*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jul 01 17:38:39 CST 2016
+                    DATE: Fri Jul 01 18:46:40 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/login.scala.html
-                    HASH: a03183ce8c5689b73d75be7247a82add14b5387f
-                    MATRIX: 590->1|736->53|772->55|802->77|840->78|911->114|925->120|978->152|1141->281|1155->287|1204->328|1242->329|1282->335|1294->339|1318->355|1366->366|1488->457|1534->468|1548->473|1576->492|1627->505|1723->565|1752->572|1809->598|1903->656|1925->669|1953->675|2070->763|2100->764|2159->794|2189->795|2339->916|2369->917|2422->941|2452->942|2885->1344|3075->1503
-                    LINES: 19->1|22->1|23->2|23->2|23->2|24->3|24->3|24->3|28->7|28->7|28->7|28->7|29->8|29->8|29->8|29->8|33->12|35->14|35->14|35->14|35->14|37->16|37->16|39->18|40->19|40->19|40->19|40->19|40->19|40->19|40->19|41->20|41->20|41->20|41->20|54->33|59->38
+                    HASH: 8ac1ad89e677da19baee68388b79e52962c5c4b4
+                    MATRIX: 590->1|736->53|773->56|803->78|841->79|912->115|926->121|979->153|1142->282|1156->288|1205->329|1243->330|1283->336|1295->340|1319->356|1367->367|1489->458|1532->466|1591->516|1630->517|1707->558|1720->562|1769->589|1817->606|1860->614|1874->619|1902->638|1953->651|2049->711|2078->718|2135->744|2231->804|2253->817|2281->823|2398->911|2428->912|2487->942|2517->943|2667->1064|2697->1065|2750->1089|2780->1090|3221->1500|3411->1659
+                    LINES: 19->1|22->1|24->3|24->3|24->3|25->4|25->4|25->4|29->8|29->8|29->8|29->8|30->9|30->9|30->9|30->9|34->13|37->16|37->16|37->16|38->17|38->17|38->17|39->18|42->21|42->21|42->21|42->21|44->23|44->23|46->25|49->28|49->28|49->28|49->28|49->28|49->28|49->28|50->29|50->29|50->29|50->29|64->43|69->48
                     -- GENERATED --
                 */
             

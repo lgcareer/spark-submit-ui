@@ -6,8 +6,10 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
-  "mysql" % "mysql-connector-java" % "5.1.29"
-)     
+  "org.apache.commons" % "commons-email" % "1.4",
+  "mysql" % "mysql-connector-java" % "5.1.29",
+  "org.apache.spark" % "spark-core_2.10" % "1.4.1"
+)
 
 play.Project.playScalaSettings
 
@@ -18,6 +20,4 @@ resolvers ++= Seq(
   "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases",
   Resolver.sonatypeRepo("public")
 )
-
-
 

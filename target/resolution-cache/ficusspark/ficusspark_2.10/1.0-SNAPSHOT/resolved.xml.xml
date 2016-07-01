@@ -4,7 +4,7 @@
 		module="ficusspark_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160701173802"
+		publication="20160701183256"
 	>
 		<description>
 		ficusSpark
@@ -37,7 +37,9 @@
 		<dependency org="com.typesafe.play" name="play-jdbc_2.10" rev="2.2.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="anorm_2.10" rev="2.2.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.10" rev="2.2.6" conf="compile->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-email" rev="1.4" conf="compile->default(compile)"/>
 		<dependency org="mysql" name="mysql-connector-java" rev="5.1.29" conf="compile->default(compile)"/>
+		<dependency org="org.apache.spark" name="spark-core_2.10" rev="1.4.1" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.6" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.2.6" conf="docs->default(compile)"/>

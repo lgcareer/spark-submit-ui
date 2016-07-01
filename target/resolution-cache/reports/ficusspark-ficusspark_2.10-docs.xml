@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="docs"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160701173802"/>
+		date="20160701183256"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-docs_2.10">
 			<revision name="2.2.6" status="release" pubdate="20150422000248" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
@@ -233,7 +233,7 @@
 		<module organisation="com.ning" name="async-http-client">
 			<revision name="1.7.18" status="release" pubdate="20130703211130" resolver="public" artresolver="public" homepage="http://github.com/AsyncHttpClient/async-http-client" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="32">
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="23889" time="1233" location="/Users/liangkai1/.ivy2/cache/com.ning/async-http-client/ivy-1.7.18.xml" searched="true" original-local-location="/Users/liangkai1/.ivy2/cache/com.ning/async-http-client/ivy-1.7.18.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/ning/async-http-client/1.7.18/async-http-client-1.7.18.pom"/>
+				<metadata-artifact status="successful" details="" size="23889" time="827" location="/Users/liangkai1/.ivy2/cache/com.ning/async-http-client/ivy-1.7.18.xml" searched="true" original-local-location="/Users/liangkai1/.ivy2/cache/com.ning/async-http-client/ivy-1.7.18.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/ning/async-http-client/1.7.18/async-http-client-1.7.18.pom"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="1.7.18" rev-constraint-default="1.7.18" rev-constraint-dynamic="1.7.18" callerrev="2.2.6"/>
 				<artifacts>
 					<artifact name="async-http-client" type="jar" ext="jar" status="no" details="" size="500511" time="0" location="/Users/liangkai1/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.7.18.jar">
@@ -366,7 +366,7 @@
 		<module organisation="io.netty" name="netty">
 			<revision name="3.7.1.Final" status="release" pubdate="20140430211843" resolver="public" artresolver="public" homepage="http://netty.io/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master, master(compile)" position="22">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="26204" time="1356" location="/Users/liangkai1/.ivy2/cache/io.netty/netty/ivy-3.7.1.Final.xml" searched="true" original-local-location="/Users/liangkai1/.ivy2/cache/io.netty/netty/ivy-3.7.1.Final.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/io/netty/netty/3.7.1.Final/netty-3.7.1.Final.pom"/>
+				<metadata-artifact status="successful" details="" size="26204" time="1223" location="/Users/liangkai1/.ivy2/cache/io.netty/netty/ivy-3.7.1.Final.xml" searched="true" original-local-location="/Users/liangkai1/.ivy2/cache/io.netty/netty/ivy-3.7.1.Final.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/io/netty/netty/3.7.1.Final/netty-3.7.1.Final.pom"/>
 				<caller organisation="com.typesafe.netty" name="netty-http-pipelining" conf="compile, runtime" rev="3.6.3.Final" rev-constraint-default="3.6.3.Final" rev-constraint-dynamic="3.6.3.Final" callerrev="1.1.2"/>
 				<caller organisation="com.ning" name="async-http-client" conf="compile, runtime" rev="3.6.6.Final" rev-constraint-default="3.6.6.Final" rev-constraint-dynamic="3.6.6.Final" callerrev="1.7.18"/>
 				<caller organisation="com.typesafe.play" name="play_2.10" conf="compile, runtime" rev="3.7.1.Final" rev-constraint-default="3.7.1.Final" rev-constraint-dynamic="3.7.1.Final" callerrev="2.2.6"/>

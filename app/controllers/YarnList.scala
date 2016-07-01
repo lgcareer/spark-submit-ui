@@ -1,6 +1,9 @@
 package controllers
 
 
+import models._
+import modules.DashboardMetrics
+
 import play.api.mvc._
 import play.api.libs.json.Json
 
@@ -8,7 +11,9 @@ import play.api.libs.json.Json
 object YarnList extends Controller with Secured {
 
   def yarnInfo = IsAuthenticated { username => implicit request =>
+
     val indexSource = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/apps").mkString
+
     val json = Json.parse(indexSource)
 
     Ok(json)
@@ -38,5 +43,7 @@ object YarnList extends Controller with Secured {
     Ok(sparkinfo)
 
   }
+
+
 }
 

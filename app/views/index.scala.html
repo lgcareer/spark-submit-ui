@@ -303,11 +303,11 @@
                   var succ_task = 0;
                   var run_task = 0;
                   var fail_task = 0;
-		 var plain_task =0;
+     var plain_task =0;
                   for(var i=0;i<app.length;i++){
                       var finalStatus = app[i].finalStatus;
                       var state = app[i].state
-			 //计算完成的
+       //计算完成的
                       if(finalStatus == 'SUCCEEDED'){
                           succ_task += 1;
                       }
@@ -317,7 +317,7 @@
                       if(finalStatus == 'FAILED'){
                           fail_task += 1;
                       }
-		      if(state == 'ACCEPTED'){
+          if(state == 'ACCEPTED'){
                           plain_task += 1;
                       }
                   }
