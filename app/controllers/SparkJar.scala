@@ -1,12 +1,18 @@
 package controllers
 
+import java.util.concurrent.{ExecutorService, Executors}
+
 import play.api._
 import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
 import models._
+import org.apache.spark.deploy.{SparkSubmit, SparkSubmitUtils}
+import org.apache.spark.{SparkConf, SparkContext}
 import views._
-import java.util.concurrent.{Executors,ExecutorService}
+
+
+
 
 
 case  class  ExecuteModel(
@@ -20,6 +26,7 @@ case  class  ExecuteModel(
 
 object SparkJar extends Controller with Secured {
   val threadPool:ExecutorService = Executors.newFixedThreadPool(5)
+  play.api.libs.concurrent.Execution
   val executeForm:Form[ExecuteModel] = Form{
     mapping (
       "executeClass"->text,
@@ -34,7 +41,6 @@ object SparkJar extends Controller with Secured {
 
     def uploadpage = IsAuthenticated {username => implicit request =>
       Ok(views.html.upload())
-
     }
 
     def upload = Action(parse.multipartFormData) { implicit request =>
@@ -50,10 +56,9 @@ object SparkJar extends Controller with Secured {
       }
 
       def executejarpage = Action { implicit request =>
-
         Ok(views.html.sparkjar(executeForm))
-
       }
+
       def executejar = IsAuthenticated { username => implicit request =>
         val format = new java.text.SimpleDateFormat("yyyyMMddHHmmss")
         val current = format.format(new java.util.Date()).toString
@@ -88,11 +93,17 @@ object SparkJar extends Controller with Secured {
        //utils.Execute.main(arguments)
        //Ok(views.html.blank(arguments))
        Ok(views.html.index())
-     }
-     )
+     })
 
 }
-def errorpage = IsAuthenticated {username => implicit request =>
-  Ok(views.html.index())
-}
+    def errorpage = IsAuthenticated {username => implicit request =>
+      Ok(views.html.index())
+    }
+
+
+
+
+
+
+
 }

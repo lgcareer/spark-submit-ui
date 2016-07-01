@@ -9,7 +9,8 @@ libraryDependencies ++= Seq(
   anorm,
   cache,
   "org.apache.commons" % "commons-email" % "1.4",
-  "mysql" % "mysql-connector-java" % "5.1.29"
+  "mysql" % "mysql-connector-java" % "5.1.29",
+  "org.apache.spark" % "spark-core_2.10" % "1.4.1"
 )
 
 play.Project.playScalaSettings
