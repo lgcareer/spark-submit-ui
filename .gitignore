@@ -9,8 +9,6 @@ bin/
 /lib/
 /logs/
 /modules
-/project/target
-/target
 tmp/
 test-result
 server.pid
@@ -22,7 +20,7 @@ server.pid
 # Simple Build Tool
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
 
-target/
+
 lib_managed/
 src_managed/
 project/boot/
@@ -45,7 +43,6 @@ project/boot/
 >>>>>>> dev
 .lib/
 dist/*
-target/
 lib_managed/
 src_managed/
 project/boot/
@@ -63,8 +60,6 @@ bin/
 /lib/
 /logs/
 /modules
-/project/target
-/target
 tmp/
 test-result
 server.pid

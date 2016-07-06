@@ -1271,3 +1271,12 @@ Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 
+2016-07-06 15:33:49,303 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-06 15:33:49,590 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-06 15:33:49,602 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
