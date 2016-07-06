@@ -1,7 +1,13 @@
-New log file opened at Thu Jun 30 17:27:16 CST 2016 by 22842@manbu.local
-Taking next connection to: 62356
-New client attempting to connect on port: 62357-62356
-  Address = /10.209.73.150:62356
-This client on port 62357 has uuid 96175d5a-2d5c-4b28-b358-ed378dea9664 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-96175d5a-2d5c-4b28-b358-ed378dea9664
-Taking next connection to: 62356
+New log file opened at Tue Jul 05 17:51:06 CST 2016 by 26207@BJ-M-203554A.local
+Taking next connection to: 64372
+New client attempting to connect on port: 64373-64372
+  Address = /10.209.72.198:64372
+This client on port 64373 has uuid 07b62cb5-5bdc-4225-8dd3-45b261536d08 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-07b62cb5-5bdc-4225-8dd3-45b261536d08
+Taking next connection to: 64372
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 26207@BJ-M-203554A.local logs at Tue Jul 05 17:54:06 CST 2016, goodbye.

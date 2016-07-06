@@ -1,6 +1,8 @@
 package models.utils
 
-import scala.collection.mutable.ArrayBuffer
+import org.apache.spark.deploy.SparkSubmit
+import play.Logger
+
 import scala.sys.process._
 
 /**
@@ -11,9 +13,12 @@ object Execute {
     var stringbuffer = ""
     for(i <- 0 until args.length)
       stringbuffer += args(i) +" "
-    println("don....")
+
     stringbuffer = stringbuffer.substring(0,stringbuffer.length-1)
+    Logger.info(stringbuffer)
     val executeArgument = stringbuffer!
 
+
+   // SparkSubmit.main(args)
   }
 }

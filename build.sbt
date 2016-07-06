@@ -10,7 +10,6 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.29",
   "org.apache.spark" % "spark-core_2.10" % "1.4.1"
 )
-
 play.Project.playScalaSettings
 
 

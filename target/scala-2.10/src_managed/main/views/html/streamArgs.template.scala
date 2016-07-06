@@ -1,6 +1,7 @@
 
 package views.html
 
+import controllers.spark.ExecuteModel
 import play.templates._
 import play.templates.TemplateMagic._
 
@@ -32,7 +33,7 @@ Seq[Any](format.raw/*1.28*/("""
                         <h3>基于执行参数设置</h3>
                         <div class="tab-content">
                             <div class="tab-pane active" id="horizontal-form">
-                            """),_display_(Seq[Any](/*12.30*/helper/*12.36*/.form(action=routes.SparkJar.executejar)/*12.76*/ {_display_(Seq[Any](format.raw/*12.78*/("""
+                            """),_display_(Seq[Any](/*12.30*/helper/*12.36*/.form(action= controllers.spark.routes.SparkJar.executejar)/*12.95*/ {_display_(Seq[Any](format.raw/*12.97*/("""
                                 <div class="form-horizontal" >
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg" id="DataSource">--DataSource</label>
@@ -140,10 +141,10 @@ Seq[Any](format.raw/*1.28*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Jul 05 12:32:11 CST 2016
+                    DATE: Wed Jul 06 15:13:29 CST 2016
                     SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/streamArgs.scala.html
-                    HASH: aed0e3f8479b0394b4b606f96fbe042cee4c3c3a
-                    MATRIX: 573->1|676->29|690->36|774->40|876->27|903->103|939->105|980->138|1018->139|1314->399|1329->405|1378->445|1418->447|7785->6782|7942->6902|7976->6913|8058->6963
+                    HASH: a63fc6486c3f9de720e6a78ede6083128c494b26
+                    MATRIX: 573->1|676->29|690->36|774->40|876->27|903->103|939->105|980->138|1018->139|1314->399|1329->405|1397->464|1437->466|7804->6801|7961->6921|7995->6932|8077->6982
                     LINES: 19->1|21->2|21->2|23->2|26->1|27->4|28->5|28->5|28->5|35->12|35->12|35->12|35->12|113->90|123->100|123->100|130->107
                     -- GENERATED --
                 */

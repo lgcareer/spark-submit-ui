@@ -1,6 +1,7 @@
 
 package views.html
 
+import controllers.spark.SqlModel
 import play.templates._
 import play.templates.TemplateMagic._
 
@@ -25,7 +26,7 @@ Seq[Any](format.raw/*1.24*/("""
 <div class="graphs">
  <div class="xs">
    <h3>Neptune Spark Sql</h3>
-   """),_display_(Seq[Any](/*7.5*/helper/*7.11*/.form(action=routes.SparkSql.executesql)/*7.51*/{_display_(Seq[Any](format.raw/*7.52*/("""
+   """),_display_(Seq[Any](/*7.5*/helper/*7.11*/.form(action=controllers.spark.routes.SparkSql.executesql)/*7.69*/{_display_(Seq[Any](format.raw/*7.70*/("""
    <div class="tab-content">
     <div class="tab-pane active" id="horizontal-form">
         <div class="form-group">
@@ -66,10 +67,10 @@ Seq[Any](format.raw/*1.24*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Jul 05 12:32:11 CST 2016
+                    DATE: Wed Jul 06 15:13:29 CST 2016
                     SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/sparksql.scala.html
-                    HASH: 8badc0386630e24fd35d55645bbdac163d3ed9c4
-                    MATRIX: 567->1|683->23|719->25|752->50|790->51|826->53|863->69|971->143|985->149|1033->189|1071->190|1965->1049|1998->1060|2038->1069|2071->1071
+                    HASH: 2df34fc93d3d392ce4b9b945d83fcf680b4ecb2c
+                    MATRIX: 567->1|683->23|719->25|752->50|790->51|826->53|863->69|971->143|985->149|1051->207|1089->208|1983->1067|2016->1078|2056->1087|2089->1089
                     LINES: 19->1|22->1|23->2|23->2|23->2|24->3|24->3|28->7|28->7|28->7|28->7|52->31|52->31|54->33|55->34
                     -- GENERATED --
                 */

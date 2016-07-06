@@ -5,7 +5,7 @@
 <h2 class="form-heading"><font color="#FBFBFB">欢迎注册 Neptune Data Platform</font></h2>
 <div class="app-cam">
 
-    @helper.form(routes.Authentication.verifying){
+    @helper.form(controllers.auth.routes.Authentication.verifying){
     <input type="text" name="email" class="text" value="@form("email").value" placeholder="请输入邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入邮箱';}">
     @if(form.hasErrors && !form.error("email").isEmpty){
         @if(form.error("email").get.message.equals("error.required")){

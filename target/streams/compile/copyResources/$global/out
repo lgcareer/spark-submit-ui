@@ -1,5 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/Users/manbu/IdeaProjects/ficusspark/conf/application.conf,/Users/manbu/IdeaProjects/ficusspark/target/scala-2.10/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/Users/manbu/IdeaProjects/ficusspark/conf/evolutions,/Users/manbu/IdeaProjects/ficusspark/target/scala-2.10/classes/evolutions)[0m
-[0m[[0mdebug[0m] [0m	(/Users/manbu/IdeaProjects/ficusspark/conf/routes,/Users/manbu/IdeaProjects/ficusspark/target/scala-2.10/classes/routes)[0m
-[0m[[0mdebug[0m] [0m	(/Users/manbu/IdeaProjects/ficusspark/conf/evolutions/1.sql,/Users/manbu/IdeaProjects/ficusspark/target/scala-2.10/classes/evolutions/1.sql)[0m

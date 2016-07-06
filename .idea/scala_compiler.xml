@@ -6,7 +6,7 @@
       <option name="uncheckedWarnings" value="true" />
       <option name="featureWarnings" value="true" />
     </profile>
-    <profile name="SBT 2" modules="ficusspark">
+    <profile name="SBT 1" modules="fic,ficusspark">
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <parameters>

@@ -3,7 +3,7 @@ package models.Mail
 import java.text.SimpleDateFormat
 import java.util.Date
 
-import models.{User, Verify}
+import models.user.{User, Verify}
 import models.utils.MD5Utils
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.mail.{DefaultAuthenticator, HtmlEmail, SimpleEmail}
@@ -20,7 +20,6 @@ object Email {
       * @return
       */
     val sendTextMail =textMail _
-
       def textMail(): String ={
           val email = new SimpleEmail()
           email.setHostName("smtp.sina.com")

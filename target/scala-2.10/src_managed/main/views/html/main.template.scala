@@ -66,7 +66,7 @@ Seq[Any](format.raw/*1.57*/("""
         <li class="m_2"><a href="#"><i class="fa fa-usd"></i> Payments <span class="label label-default">0</span></a></li>
         <li class="m_2"><a href="#"><i class="fa fa-file"></i> 任务列表 <span class="label label-primary">0</span></a></li>
         <li class="divider"></li>
-        <li class="m_2"><a href=""""),_display_(Seq[Any](/*48.35*/routes/*48.41*/.Authentication.logout)),format.raw/*48.63*/(""""><i class="fa fa-lock"></i> 退出</a></li>
+        <li class="m_2"><a href=""""),_display_(Seq[Any](/*48.35*/controllers/*48.46*/.auth.routes.Authentication.logout)),format.raw/*48.80*/(""""><i class="fa fa-lock"></i> 退出</a></li>
       </ul>
     </li>
   </ul>
@@ -79,63 +79,62 @@ Seq[Any](format.raw/*1.57*/("""
         <li> <a href=""""),_display_(Seq[Any](/*58.24*/routes/*58.30*/.Application.index)),format.raw/*58.48*/(""""><i class="fa fa-dashboard fa-fw nav_icon"></i>仪表盘</a> </li>
         <li> <a href="#"><i class="fa fa-check-square-o nav_icon"></i>数据应用面板<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*61.28*/routes/*61.34*/.SparkJar.uploadpage)),format.raw/*61.54*/("""">spark-jar应用</a></li>
-            <li> <a href=""""),_display_(Seq[Any](/*62.28*/routes/*62.34*/.SparkSql.sqlpage)),format.raw/*62.51*/("""">spark-sql应用</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*63.28*/routes/*63.34*/.SparkStream.stream)),format.raw/*63.53*/("""">spark-stream基于HDFS的应用</a></li>
-            <li> <a href=""""),_display_(Seq[Any](/*64.28*/routes/*64.34*/.SparkStream.stream)),format.raw/*64.53*/("""">spark-stream基于Kafka的应用</a></li>
+            <li> <a href=""""),_display_(Seq[Any](/*61.28*/controllers/*61.39*/.spark.routes.SparkJar.uploadpage)),format.raw/*61.72*/("""">spark-jar应用</a></li>
+            <li> <a href=""""),_display_(Seq[Any](/*62.28*/controllers/*62.39*/.spark.routes.SparkSql.sqlpage)),format.raw/*62.69*/("""">spark-sql应用</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*63.28*/controllers/*63.39*/.spark.routes.SparkStream.stream)),format.raw/*63.71*/("""">spark-stream基于HDFS的应用</a></li>
+            <li> <a href=""""),_display_(Seq[Any](/*64.28*/controllers/*64.39*/.spark.routes.SparkStream.stream)),format.raw/*64.71*/("""">spark-stream基于Kafka的应用</a></li>
 
           </ul>
           <!-- /.nav-second-level --> 
         </li>
         <li> <a href="#"><i class="fa fa-table nav_icon"></i>App数据<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*71.28*/routes/*71.34*/.YarnList.yarnlist)),format.raw/*71.52*/("""">Yarn数据列表</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*72.28*/routes/*72.34*/.YarnList.sparklist)),format.raw/*72.53*/("""">Spark数据列表</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*71.28*/controllers/*71.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*71.71*/("""">Yarn数据列表</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*72.28*/controllers/*72.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*72.72*/("""">Spark数据列表</a> </li>
           </ul>
           <!-- /.nav-second-level --> 
         </li>
 
          <li> <a href="#"><i class="fa fa-table nav_icon"></i>任务调度<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*79.28*/routes/*79.34*/.YarnList.yarnlist)),format.raw/*79.52*/("""">OOZIE任务调度</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*80.28*/routes/*80.34*/.YarnList.yarnlist)),format.raw/*80.52*/("""">Spark任务调度</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*81.28*/routes/*81.34*/.YarnList.sparklist)),format.raw/*81.53*/("""">Yarn任务调度</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*79.28*/controllers/*79.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*79.71*/("""">OOZIE任务调度</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*80.28*/controllers/*80.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*80.71*/("""">Spark任务调度</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*81.28*/controllers/*81.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*81.72*/("""">Yarn任务调度</a> </li>
           </ul>
         </li>
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>监控和报警<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*87.28*/routes/*87.34*/.HomeController.streaming)),format.raw/*87.59*/("""">Streaming监控</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*88.28*/routes/*88.34*/.HomeController.jobs)),format.raw/*88.54*/("""">临时任务监控</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*89.28*/routes/*89.34*/.YarnList.sparklist)),format.raw/*89.53*/("""">调度监控</a> </li>
-          </ul>
+            <li> <a href=""""),_display_(Seq[Any](/*87.28*/controllers/*87.39*/.monitor.routes.MonitorController.streaming)),format.raw/*87.82*/("""">Streaming监控</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*88.28*/controllers/*88.39*/.monitor.routes.MonitorController.jobs)),format.raw/*88.77*/("""">临时任务监控</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*89.28*/controllers/*89.39*/.monitor.routes.MonitorController.jobs)),format.raw/*89.77*/("""">调度监控</a> </li>
+
         </li>
 
-               <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
+          </ul>
+                 <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*95.28*/routes/*95.34*/.YarnList.yarnlist)),format.raw/*95.52*/("""">磁盘空间报警</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*96.28*/routes/*96.34*/.YarnList.yarnlist)),format.raw/*96.52*/("""">内存相关报警</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*97.28*/routes/*97.34*/.YarnList.sparklist)),format.raw/*97.53*/("""">其他报警</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*96.28*/controllers/*96.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*96.71*/("""">磁盘空间报警</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*97.28*/controllers/*97.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*97.71*/("""">内存相关报警</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*98.28*/controllers/*98.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*98.72*/("""">其他报警</a> </li>
           </ul>
 
         <li> <a href="#"><i class="fa fa-table nav_icon"></i>用户管理<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*102.28*/routes/*102.34*/.YarnList.yarnlist)),format.raw/*102.52*/("""">用户统计</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*103.28*/routes/*103.34*/.YarnList.yarnlist)),format.raw/*103.52*/("""">添加用户</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*104.28*/routes/*104.34*/.YarnList.sparklist)),format.raw/*104.53*/("""">权限分配</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*103.28*/controllers/*103.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*103.71*/("""">用户统计</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*104.28*/controllers/*104.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*104.71*/("""">添加用户</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*105.28*/controllers/*105.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*105.72*/("""">权限分配</a> </li>
           </ul>
 
         </li>
 
-                <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
+           <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*111.28*/routes/*111.34*/.YarnList.yarnlist)),format.raw/*111.52*/("""">服务划分</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*112.28*/routes/*112.34*/.YarnList.yarnlist)),format.raw/*112.52*/("""">功能划分</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*112.28*/controllers/*112.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*112.71*/("""">服务划分</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*113.28*/controllers/*113.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*113.71*/("""">功能划分</a> </li>
           </ul>
 
         </li>
-
-          </ul>
           <!-- /.nav-second-level --> 
         </li>
       </ul>
@@ -145,11 +144,11 @@ Seq[Any](format.raw/*1.57*/("""
   <!-- /.navbar-static-side --> 
 </nav>
 <div id="page-wrapper">
-"""),_display_(Seq[Any](/*127.2*/content)),format.raw/*127.9*/("""
+"""),_display_(Seq[Any](/*126.2*/content)),format.raw/*126.9*/("""
 </div>
 <!-- /#wrapper --> 
 <!-- Bootstrap Core JavaScript --> 
-<script src=""""),_display_(Seq[Any](/*131.15*/routes/*131.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*131.63*/(""""></script>
+<script src=""""),_display_(Seq[Any](/*130.15*/routes/*130.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*130.63*/(""""></script>
 </body>
 </html>
 """))}
@@ -164,11 +163,11 @@ Seq[Any](format.raw/*1.57*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 12:19:45 CST 2016
+                    DATE: Wed Jul 06 15:24:52 CST 2016
                     SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/main.scala.html
-                    HASH: 8f5106a402bb183e1f07c20f734d02e39b99b54d
-                    MATRIX: 565->1|714->56|787->95|813->100|907->159|921->165|974->197|1151->340|1178->347|1284->425|1313->426|1370->454|1400->455|1460->486|1490->487|1542->510|1572->511|1660->563|1675->569|1740->612|1847->683|1862->689|1918->723|2024->793|2039->799|2096->834|2183->885|2198->891|2262->933|2348->983|2363->989|2424->1028|2502->1070|2517->1076|2575->1112|2683->1184|2698->1190|2762->1232|2824->1258|2839->1264|2896->1299|2984->1351|2999->1357|3055->1391|3117->1417|3132->1423|3191->1460|3713->1946|3728->1952|3765->1967|4010->2175|4026->2181|4081->2213|4976->3072|4991->3078|5035->3100|5296->3332|5326->3333|5380->3358|5410->3359|5623->3536|5638->3542|5678->3560|5958->3804|5973->3810|6015->3830|6101->3880|6116->3886|6155->3903|6242->3954|6257->3960|6298->3979|6394->4039|6409->4045|6450->4064|6762->4340|6777->4346|6817->4364|6901->4412|6916->4418|6957->4437|7257->4701|7272->4707|7312->4725|7397->4774|7412->4780|7452->4798|7537->4847|7552->4853|7593->4872|7856->5099|7871->5105|7918->5130|8005->5181|8020->5187|8062->5207|8144->5253|8159->5259|8200->5278|8464->5506|8479->5512|8519->5530|8601->5576|8616->5582|8656->5600|8738->5646|8753->5652|8794->5671|9036->5876|9052->5882|9093->5900|9174->5944|9190->5950|9231->5968|9312->6012|9328->6018|9370->6037|9637->6267|9653->6273|9694->6291|9775->6335|9791->6341|9832->6359|10116->6607|10145->6614|10260->6692|10276->6698|10341->6740
-                    LINES: 19->1|22->1|26->5|26->5|27->6|27->6|27->6|30->9|30->9|31->10|31->10|31->10|31->10|31->10|31->10|31->10|31->10|33->12|33->12|33->12|35->14|35->14|35->14|37->16|37->16|37->16|38->17|38->17|38->17|40->19|40->19|40->19|42->21|42->21|42->21|44->23|44->23|44->23|45->24|45->24|45->24|47->26|47->26|47->26|48->27|48->27|48->27|56->35|56->35|56->35|59->38|59->38|59->38|69->48|69->48|69->48|74->53|74->53|74->53|74->53|79->58|79->58|79->58|82->61|82->61|82->61|83->62|83->62|83->62|84->63|84->63|84->63|85->64|85->64|85->64|92->71|92->71|92->71|93->72|93->72|93->72|100->79|100->79|100->79|101->80|101->80|101->80|102->81|102->81|102->81|108->87|108->87|108->87|109->88|109->88|109->88|110->89|110->89|110->89|116->95|116->95|116->95|117->96|117->96|117->96|118->97|118->97|118->97|123->102|123->102|123->102|124->103|124->103|124->103|125->104|125->104|125->104|132->111|132->111|132->111|133->112|133->112|133->112|148->127|148->127|152->131|152->131|152->131
+                    HASH: 5fc8b188ed78f6a95e281003e570af75e4402981
+                    MATRIX: 565->1|714->56|787->95|813->100|907->159|921->165|974->197|1151->340|1178->347|1284->425|1313->426|1370->454|1400->455|1460->486|1490->487|1542->510|1572->511|1660->563|1675->569|1740->612|1847->683|1862->689|1918->723|2024->793|2039->799|2096->834|2183->885|2198->891|2262->933|2348->983|2363->989|2424->1028|2502->1070|2517->1076|2575->1112|2683->1184|2698->1190|2762->1232|2824->1258|2839->1264|2896->1299|2984->1351|2999->1357|3055->1391|3117->1417|3132->1423|3191->1460|3713->1946|3728->1952|3765->1967|4010->2175|4026->2181|4081->2213|4976->3072|4996->3083|5052->3117|5313->3349|5343->3350|5397->3375|5427->3376|5640->3553|5655->3559|5695->3577|5975->3821|5995->3832|6050->3865|6136->3915|6156->3926|6208->3956|6295->4007|6315->4018|6369->4050|6465->4110|6485->4121|6539->4153|6851->4429|6871->4440|6925->4472|7009->4520|7029->4531|7084->4564|7384->4828|7404->4839|7458->4871|7543->4920|7563->4931|7617->4963|7702->5012|7722->5023|7777->5056|8040->5283|8060->5294|8125->5337|8212->5388|8232->5399|8292->5437|8374->5483|8394->5494|8454->5532|8721->5763|8741->5774|8795->5806|8877->5852|8897->5863|8951->5895|9033->5941|9053->5952|9108->5985|9350->6190|9371->6201|9426->6233|9507->6277|9528->6288|9583->6320|9664->6364|9685->6375|9741->6408|10003->6633|10024->6644|10079->6676|10160->6720|10181->6731|10236->6763|10503->6994|10532->7001|10647->7079|10663->7085|10728->7127
+                    LINES: 19->1|22->1|26->5|26->5|27->6|27->6|27->6|30->9|30->9|31->10|31->10|31->10|31->10|31->10|31->10|31->10|31->10|33->12|33->12|33->12|35->14|35->14|35->14|37->16|37->16|37->16|38->17|38->17|38->17|40->19|40->19|40->19|42->21|42->21|42->21|44->23|44->23|44->23|45->24|45->24|45->24|47->26|47->26|47->26|48->27|48->27|48->27|56->35|56->35|56->35|59->38|59->38|59->38|69->48|69->48|69->48|74->53|74->53|74->53|74->53|79->58|79->58|79->58|82->61|82->61|82->61|83->62|83->62|83->62|84->63|84->63|84->63|85->64|85->64|85->64|92->71|92->71|92->71|93->72|93->72|93->72|100->79|100->79|100->79|101->80|101->80|101->80|102->81|102->81|102->81|108->87|108->87|108->87|109->88|109->88|109->88|110->89|110->89|110->89|117->96|117->96|117->96|118->97|118->97|118->97|119->98|119->98|119->98|124->103|124->103|124->103|125->104|125->104|125->104|126->105|126->105|126->105|133->112|133->112|133->112|134->113|134->113|134->113|147->126|147->126|151->130|151->130|151->130
                     -- GENERATED --
                 */
             

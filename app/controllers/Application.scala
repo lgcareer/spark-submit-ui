@@ -1,6 +1,6 @@
 package controllers
 
-import play.api._
+import controllers.auth.Secured
 import play.api.mvc._
 
 
