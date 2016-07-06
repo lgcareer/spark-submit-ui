@@ -1,6 +1,6 @@
-// @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
+// @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
 // @HASH:27b698fd2ab5b974ad9b3c6bb5fd86d6a0cec438
-// @DATE:Wed Jul 06 12:18:05 CST 2016
+// @DATE:Wed Jul 06 15:13:28 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

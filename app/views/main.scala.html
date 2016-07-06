@@ -84,13 +84,14 @@
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>监控和报警<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">Streaming监控</a> </li>
-            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">临时任务监控</a> </li>
-            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">调度监控</a> </li>
-          </ul>
+            <li> <a href="@controllers.monitor.routes.MonitorController.streaming">Streaming监控</a> </li>
+            <li> <a href="@controllers.monitor.routes.MonitorController.jobs">临时任务监控</a> </li>
+            <li> <a href="@controllers.monitor.routes.MonitorController.jobs">调度监控</a> </li>
+
         </li>
 
-               <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
+          </ul>
+                 <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
             <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">磁盘空间报警</a> </li>
             <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">内存相关报警</a> </li>
@@ -106,15 +107,13 @@
 
         </li>
 
-                <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
+           <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
             <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">服务划分</a> </li>
             <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">功能划分</a> </li>
           </ul>
 
         </li>
-
-          </ul>
           <!-- /.nav-second-level --> 
         </li>
       </ul>

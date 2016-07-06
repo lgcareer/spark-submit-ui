@@ -22,27 +22,26 @@ object MonitorController  extends Controller with Secured{
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-//  def index = Action {
-//    Ok(views.html.index("Your new application is ready."))
-//  }
+  //  def index = Action {
+  //    Ok(views.html.index("Your new application is ready."))
+  //  }
 
   def jobs=Action{
 
-      val url3 ="http://10.77.136.159:4040/jobs/json/"
+    val url3 ="http://10.77.136.159:4040/jobs/json/"
 
-
-       val timeFuture= WS.url(url3).get() map{
-          response => response.status match {
-            case  200 => Some{
-                        val timeline: String = (response.json \  "timeline").as[String]
-                        val active: String = (response.json \  "active").as[String]
-                        val completed: String = (response.json \  "completed").as[String]
-                        val failed: String = (response.json \  "failed").as[String]
-                        new JobUi(timeline,active,completed,failed)
-            }
-            case _ => None
-          }
+    val timeFuture= WS.url(url3).get() map{
+      response => response.status match {
+        case  200 => Some{
+          val timeline: String = (response.json \  "timeline").as[String]
+          val active: String = (response.json \  "active").as[String]
+          val completed: String = (response.json \  "completed").as[String]
+          val failed: String = (response.json \  "failed").as[String]
+          new JobUi(timeline,active,completed,failed)
         }
+        case _ => None
+      }
+    }
 
     val job = Await.result(timeFuture, 50 seconds).get
     Ok(views.html.jobs(job))
