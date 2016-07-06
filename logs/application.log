@@ -1573,3 +1573,13 @@ database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&chara
 2016-07-06 14:22:30,557 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+2016-07-06 14:53:00,125 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.ConnectException: Operation timed out.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-07-06 14:57:32,005 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.ConnectException: Operation timed out.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
