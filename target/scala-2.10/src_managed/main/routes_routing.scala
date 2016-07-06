@@ -1,6 +1,6 @@
 // @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
-// @HASH:3f9ddcc4cf8838281275e5f562f5e5a315bcd2d3
-// @DATE:Wed Jul 06 10:41:58 CST 2016
+// @HASH:3ab57eb4d38fbabaf8925a579a56666384e15f54
+// @DATE:Wed Jul 06 11:28:08 CST 2016
 
 
 import play.core._
@@ -45,71 +45,71 @@ private[this] lazy val controllers_auth_Authentication_logout3 = Route("GET", Pa
         
 
 // @LINE:12
-private[this] lazy val controllers_SparkJar_uploadpage4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
+private[this] lazy val controllers_spark_SparkJar_uploadpage4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
         
 
 // @LINE:13
-private[this] lazy val controllers_SparkJar_upload5 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
+private[this] lazy val controllers_spark_SparkJar_upload5 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
         
 
 // @LINE:14
-private[this] lazy val controllers_SparkJar_executejarpage6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
+private[this] lazy val controllers_spark_SparkJar_executejarpage6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
         
 
 // @LINE:15
-private[this] lazy val controllers_SparkJar_executejar7 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
+private[this] lazy val controllers_spark_SparkJar_executejar7 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
         
 
 // @LINE:16
-private[this] lazy val controllers_SparkJar_errorpage8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("errorpage"))))
+private[this] lazy val controllers_spark_SparkJar_errorpage8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("errorpage"))))
         
 
 // @LINE:19
-private[this] lazy val controllers_SparkStream_stream9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("stream"))))
+private[this] lazy val controllers_spark_SparkStream_stream9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("stream"))))
         
 
 // @LINE:20
-private[this] lazy val controllers_SparkStream_stremupload10 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("stremupload"))))
+private[this] lazy val controllers_spark_SparkStream_stremupload10 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("stremupload"))))
         
 
 // @LINE:21
-private[this] lazy val controllers_SparkStream_streamArgs11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("streamArgs"))))
+private[this] lazy val controllers_spark_SparkStream_streamArgs11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("streamArgs"))))
         
 
 // @LINE:22
-private[this] lazy val controllers_SparkStream_streamExecute12 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("streamExecute"))))
+private[this] lazy val controllers_spark_SparkStream_streamExecute12 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("streamExecute"))))
         
 
 // @LINE:23
-private[this] lazy val controllers_SparkStream_errorpage13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("errorpage"))))
+private[this] lazy val controllers_spark_SparkStream_errorpage13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("errorpage"))))
         
 
 // @LINE:26
-private[this] lazy val controllers_SparkSql_sqlpage14 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
+private[this] lazy val controllers_spark_SparkSql_sqlpage14 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
         
 
 // @LINE:27
-private[this] lazy val controllers_SparkSql_executesql15 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
+private[this] lazy val controllers_spark_SparkSql_executesql15 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
         
 
 // @LINE:30
-private[this] lazy val controllers_YarnList_yarnInfo16 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnInfo"))))
+private[this] lazy val controllers_hadoop_YarnList_yarnInfo16 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnInfo"))))
         
 
 // @LINE:31
-private[this] lazy val controllers_YarnList_yarnlist17 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnlist"))))
+private[this] lazy val controllers_hadoop_YarnList_yarnlist17 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnlist"))))
         
 
 // @LINE:32
-private[this] lazy val controllers_YarnList_workerlist18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("workerlist"))))
+private[this] lazy val controllers_hadoop_YarnList_workerlist18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("workerlist"))))
         
 
 // @LINE:33
-private[this] lazy val controllers_YarnList_spark_info19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("spark_info"))))
+private[this] lazy val controllers_hadoop_YarnList_spark_info19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("spark_info"))))
         
 
 // @LINE:34
-private[this] lazy val controllers_YarnList_sparklist20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparklist"))))
+private[this] lazy val controllers_hadoop_YarnList_sparklist20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparklist"))))
         
 
 // @LINE:36
@@ -153,49 +153,49 @@ private[this] lazy val controllers_auth_Authentication_updatepwd30 = Route("POST
         
 
 // @LINE:52
-private[this] lazy val controllers_SparkJar_uploadpage31 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
+private[this] lazy val controllers_spark_SparkJar_uploadpage31 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
         
 
 // @LINE:53
-private[this] lazy val controllers_SparkJar_upload32 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
+private[this] lazy val controllers_spark_SparkJar_upload32 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparkjar"))))
         
 
 // @LINE:54
-private[this] lazy val controllers_SparkJar_executejarpage33 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
+private[this] lazy val controllers_spark_SparkJar_executejarpage33 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
         
 
 // @LINE:55
-private[this] lazy val controllers_SparkJar_executejar34 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
+private[this] lazy val controllers_spark_SparkJar_executejar34 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executejar"))))
         
 
 // @LINE:56
-private[this] lazy val controllers_SparkJar_errorpage35 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("errorpage"))))
+private[this] lazy val controllers_spark_SparkJar_errorpage35 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("errorpage"))))
         
 
 // @LINE:61
-private[this] lazy val controllers_SparkSql_sqlpage36 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
+private[this] lazy val controllers_spark_SparkSql_sqlpage36 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
         
 
 // @LINE:62
-private[this] lazy val controllers_SparkSql_executesql37 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
+private[this] lazy val controllers_spark_SparkSql_executesql37 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sparksql"))))
         
 
 // @LINE:65
-private[this] lazy val controllers_YarnList_yarnInfo38 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnInfo"))))
+private[this] lazy val controllers_hadoop_YarnList_yarnInfo38 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnInfo"))))
         
 
 // @LINE:66
-private[this] lazy val controllers_YarnList_yarnlist39 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnlist"))))
+private[this] lazy val controllers_hadoop_YarnList_yarnlist39 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("yarnlist"))))
         
 
 // @LINE:67
-private[this] lazy val controllers_YarnList_workerlist40 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("workerlist"))))
+private[this] lazy val controllers_hadoop_YarnList_workerlist40 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("workerlist"))))
         
 
 // @LINE:69
 private[this] lazy val controllers_Assets_at41 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.auth.Authentication.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.auth.Authentication.authenticate"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.auth.Authentication.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stream""","""controllers.SparkStream.stream"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stremupload""","""controllers.SparkStream.stremupload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamArgs""","""controllers.SparkStream.streamArgs"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamExecute""","""controllers.SparkStream.streamExecute"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkStream.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """spark_info""","""controllers.YarnList.spark_info"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparklist""","""controllers.YarnList.sparklist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.auth.Authentication.registration"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.auth.Authentication.verifying"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail""","""controllers.auth.Authentication.mail(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/verifyingmail""","""controllers.auth.Authentication.verifyingmail(email:String, validateCode:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.auth.Authentication.findpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """captcha""","""controllers.auth.Authentication.captcha"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.auth.Authentication.resetpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/setpwd""","""controllers.auth.Authentication.setpwd(email:String, pwdToken:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updatepwd""","""controllers.auth.Authentication.updatepwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.auth.Authentication.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.auth.Authentication.authenticate"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.auth.Authentication.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.spark.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.spark.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.spark.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.spark.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.spark.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stream""","""controllers.spark.SparkStream.stream"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stremupload""","""controllers.spark.SparkStream.stremupload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamArgs""","""controllers.spark.SparkStream.streamArgs"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamExecute""","""controllers.spark.SparkStream.streamExecute"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.spark.SparkStream.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.spark.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.spark.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.hadoop.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.hadoop.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.hadoop.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """spark_info""","""controllers.hadoop.YarnList.spark_info"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparklist""","""controllers.hadoop.YarnList.sparklist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.auth.Authentication.registration"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.auth.Authentication.verifying"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail""","""controllers.auth.Authentication.mail(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/verifyingmail""","""controllers.auth.Authentication.verifyingmail(email:String, validateCode:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.auth.Authentication.findpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """captcha""","""controllers.auth.Authentication.captcha"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.auth.Authentication.resetpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/setpwd""","""controllers.auth.Authentication.setpwd(email:String, pwdToken:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updatepwd""","""controllers.auth.Authentication.updatepwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.spark.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.spark.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.spark.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.spark.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.spark.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.spark.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.spark.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.hadoop.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.hadoop.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.hadoop.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -236,137 +236,137 @@ case controllers_auth_Authentication_logout3(params) => {
         
 
 // @LINE:12
-case controllers_SparkJar_uploadpage4(params) => {
+case controllers_spark_SparkJar_uploadpage4(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.uploadpage, HandlerDef(this, "controllers.SparkJar", "uploadpage", Nil,"GET", """ Spark Jar""", Routes.prefix + """sparkjar"""))
+        invokeHandler(controllers.spark.SparkJar.uploadpage, HandlerDef(this, "controllers.spark.SparkJar", "uploadpage", Nil,"GET", """ Spark Jar""", Routes.prefix + """sparkjar"""))
    }
 }
         
 
 // @LINE:13
-case controllers_SparkJar_upload5(params) => {
+case controllers_spark_SparkJar_upload5(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.upload, HandlerDef(this, "controllers.SparkJar", "upload", Nil,"POST", """""", Routes.prefix + """sparkjar"""))
+        invokeHandler(controllers.spark.SparkJar.upload, HandlerDef(this, "controllers.spark.SparkJar", "upload", Nil,"POST", """""", Routes.prefix + """sparkjar"""))
    }
 }
         
 
 // @LINE:14
-case controllers_SparkJar_executejarpage6(params) => {
+case controllers_spark_SparkJar_executejarpage6(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.executejarpage, HandlerDef(this, "controllers.SparkJar", "executejarpage", Nil,"GET", """""", Routes.prefix + """executejar"""))
+        invokeHandler(controllers.spark.SparkJar.executejarpage, HandlerDef(this, "controllers.spark.SparkJar", "executejarpage", Nil,"GET", """""", Routes.prefix + """executejar"""))
    }
 }
         
 
 // @LINE:15
-case controllers_SparkJar_executejar7(params) => {
+case controllers_spark_SparkJar_executejar7(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.executejar, HandlerDef(this, "controllers.SparkJar", "executejar", Nil,"POST", """""", Routes.prefix + """executejar"""))
+        invokeHandler(controllers.spark.SparkJar.executejar, HandlerDef(this, "controllers.spark.SparkJar", "executejar", Nil,"POST", """""", Routes.prefix + """executejar"""))
    }
 }
         
 
 // @LINE:16
-case controllers_SparkJar_errorpage8(params) => {
+case controllers_spark_SparkJar_errorpage8(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.errorpage, HandlerDef(this, "controllers.SparkJar", "errorpage", Nil,"GET", """""", Routes.prefix + """errorpage"""))
+        invokeHandler(controllers.spark.SparkJar.errorpage, HandlerDef(this, "controllers.spark.SparkJar", "errorpage", Nil,"GET", """""", Routes.prefix + """errorpage"""))
    }
 }
         
 
 // @LINE:19
-case controllers_SparkStream_stream9(params) => {
+case controllers_spark_SparkStream_stream9(params) => {
    call { 
-        invokeHandler(controllers.SparkStream.stream, HandlerDef(this, "controllers.SparkStream", "stream", Nil,"GET", """ Spark Stream""", Routes.prefix + """stream"""))
+        invokeHandler(controllers.spark.SparkStream.stream, HandlerDef(this, "controllers.spark.SparkStream", "stream", Nil,"GET", """ Spark Stream""", Routes.prefix + """stream"""))
    }
 }
         
 
 // @LINE:20
-case controllers_SparkStream_stremupload10(params) => {
+case controllers_spark_SparkStream_stremupload10(params) => {
    call { 
-        invokeHandler(controllers.SparkStream.stremupload, HandlerDef(this, "controllers.SparkStream", "stremupload", Nil,"POST", """""", Routes.prefix + """stremupload"""))
+        invokeHandler(controllers.spark.SparkStream.stremupload, HandlerDef(this, "controllers.spark.SparkStream", "stremupload", Nil,"POST", """""", Routes.prefix + """stremupload"""))
    }
 }
         
 
 // @LINE:21
-case controllers_SparkStream_streamArgs11(params) => {
+case controllers_spark_SparkStream_streamArgs11(params) => {
    call { 
-        invokeHandler(controllers.SparkStream.streamArgs, HandlerDef(this, "controllers.SparkStream", "streamArgs", Nil,"GET", """""", Routes.prefix + """streamArgs"""))
+        invokeHandler(controllers.spark.SparkStream.streamArgs, HandlerDef(this, "controllers.spark.SparkStream", "streamArgs", Nil,"GET", """""", Routes.prefix + """streamArgs"""))
    }
 }
         
 
 // @LINE:22
-case controllers_SparkStream_streamExecute12(params) => {
+case controllers_spark_SparkStream_streamExecute12(params) => {
    call { 
-        invokeHandler(controllers.SparkStream.streamExecute, HandlerDef(this, "controllers.SparkStream", "streamExecute", Nil,"POST", """""", Routes.prefix + """streamExecute"""))
+        invokeHandler(controllers.spark.SparkStream.streamExecute, HandlerDef(this, "controllers.spark.SparkStream", "streamExecute", Nil,"POST", """""", Routes.prefix + """streamExecute"""))
    }
 }
         
 
 // @LINE:23
-case controllers_SparkStream_errorpage13(params) => {
+case controllers_spark_SparkStream_errorpage13(params) => {
    call { 
-        invokeHandler(controllers.SparkStream.errorpage, HandlerDef(this, "controllers.SparkStream", "errorpage", Nil,"GET", """""", Routes.prefix + """errorpage"""))
+        invokeHandler(controllers.spark.SparkStream.errorpage, HandlerDef(this, "controllers.spark.SparkStream", "errorpage", Nil,"GET", """""", Routes.prefix + """errorpage"""))
    }
 }
         
 
 // @LINE:26
-case controllers_SparkSql_sqlpage14(params) => {
+case controllers_spark_SparkSql_sqlpage14(params) => {
    call { 
-        invokeHandler(controllers.SparkSql.sqlpage, HandlerDef(this, "controllers.SparkSql", "sqlpage", Nil,"GET", """ Saprk Sql""", Routes.prefix + """sparksql"""))
+        invokeHandler(controllers.spark.SparkSql.sqlpage, HandlerDef(this, "controllers.spark.SparkSql", "sqlpage", Nil,"GET", """ Saprk Sql""", Routes.prefix + """sparksql"""))
    }
 }
         
 
 // @LINE:27
-case controllers_SparkSql_executesql15(params) => {
+case controllers_spark_SparkSql_executesql15(params) => {
    call { 
-        invokeHandler(controllers.SparkSql.executesql, HandlerDef(this, "controllers.SparkSql", "executesql", Nil,"POST", """""", Routes.prefix + """sparksql"""))
+        invokeHandler(controllers.spark.SparkSql.executesql, HandlerDef(this, "controllers.spark.SparkSql", "executesql", Nil,"POST", """""", Routes.prefix + """sparksql"""))
    }
 }
         
 
 // @LINE:30
-case controllers_YarnList_yarnInfo16(params) => {
+case controllers_hadoop_YarnList_yarnInfo16(params) => {
    call { 
-        invokeHandler(controllers.YarnList.yarnInfo, HandlerDef(this, "controllers.YarnList", "yarnInfo", Nil,"GET", """Dashboard""", Routes.prefix + """yarnInfo"""))
+        invokeHandler(controllers.hadoop.YarnList.yarnInfo, HandlerDef(this, "controllers.hadoop.YarnList", "yarnInfo", Nil,"GET", """Dashboard""", Routes.prefix + """yarnInfo"""))
    }
 }
         
 
 // @LINE:31
-case controllers_YarnList_yarnlist17(params) => {
+case controllers_hadoop_YarnList_yarnlist17(params) => {
    call { 
-        invokeHandler(controllers.YarnList.yarnlist, HandlerDef(this, "controllers.YarnList", "yarnlist", Nil,"GET", """""", Routes.prefix + """yarnlist"""))
+        invokeHandler(controllers.hadoop.YarnList.yarnlist, HandlerDef(this, "controllers.hadoop.YarnList", "yarnlist", Nil,"GET", """""", Routes.prefix + """yarnlist"""))
    }
 }
         
 
 // @LINE:32
-case controllers_YarnList_workerlist18(params) => {
+case controllers_hadoop_YarnList_workerlist18(params) => {
    call { 
-        invokeHandler(controllers.YarnList.workerlist, HandlerDef(this, "controllers.YarnList", "workerlist", Nil,"GET", """""", Routes.prefix + """workerlist"""))
+        invokeHandler(controllers.hadoop.YarnList.workerlist, HandlerDef(this, "controllers.hadoop.YarnList", "workerlist", Nil,"GET", """""", Routes.prefix + """workerlist"""))
    }
 }
         
 
 // @LINE:33
-case controllers_YarnList_spark_info19(params) => {
+case controllers_hadoop_YarnList_spark_info19(params) => {
    call { 
-        invokeHandler(controllers.YarnList.spark_info, HandlerDef(this, "controllers.YarnList", "spark_info", Nil,"GET", """""", Routes.prefix + """spark_info"""))
+        invokeHandler(controllers.hadoop.YarnList.spark_info, HandlerDef(this, "controllers.hadoop.YarnList", "spark_info", Nil,"GET", """""", Routes.prefix + """spark_info"""))
    }
 }
         
 
 // @LINE:34
-case controllers_YarnList_sparklist20(params) => {
+case controllers_hadoop_YarnList_sparklist20(params) => {
    call { 
-        invokeHandler(controllers.YarnList.sparklist, HandlerDef(this, "controllers.YarnList", "sparklist", Nil,"GET", """""", Routes.prefix + """sparklist"""))
+        invokeHandler(controllers.hadoop.YarnList.sparklist, HandlerDef(this, "controllers.hadoop.YarnList", "sparklist", Nil,"GET", """""", Routes.prefix + """sparklist"""))
    }
 }
         
@@ -452,81 +452,81 @@ case controllers_auth_Authentication_updatepwd30(params) => {
         
 
 // @LINE:52
-case controllers_SparkJar_uploadpage31(params) => {
+case controllers_spark_SparkJar_uploadpage31(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.uploadpage, HandlerDef(this, "controllers.SparkJar", "uploadpage", Nil,"GET", """ Spark Jar""", Routes.prefix + """sparkjar"""))
+        invokeHandler(controllers.spark.SparkJar.uploadpage, HandlerDef(this, "controllers.spark.SparkJar", "uploadpage", Nil,"GET", """ Spark Jar""", Routes.prefix + """sparkjar"""))
    }
 }
         
 
 // @LINE:53
-case controllers_SparkJar_upload32(params) => {
+case controllers_spark_SparkJar_upload32(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.upload, HandlerDef(this, "controllers.SparkJar", "upload", Nil,"POST", """""", Routes.prefix + """sparkjar"""))
+        invokeHandler(controllers.spark.SparkJar.upload, HandlerDef(this, "controllers.spark.SparkJar", "upload", Nil,"POST", """""", Routes.prefix + """sparkjar"""))
    }
 }
         
 
 // @LINE:54
-case controllers_SparkJar_executejarpage33(params) => {
+case controllers_spark_SparkJar_executejarpage33(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.executejarpage, HandlerDef(this, "controllers.SparkJar", "executejarpage", Nil,"GET", """""", Routes.prefix + """executejar"""))
+        invokeHandler(controllers.spark.SparkJar.executejarpage, HandlerDef(this, "controllers.spark.SparkJar", "executejarpage", Nil,"GET", """""", Routes.prefix + """executejar"""))
    }
 }
         
 
 // @LINE:55
-case controllers_SparkJar_executejar34(params) => {
+case controllers_spark_SparkJar_executejar34(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.executejar, HandlerDef(this, "controllers.SparkJar", "executejar", Nil,"POST", """""", Routes.prefix + """executejar"""))
+        invokeHandler(controllers.spark.SparkJar.executejar, HandlerDef(this, "controllers.spark.SparkJar", "executejar", Nil,"POST", """""", Routes.prefix + """executejar"""))
    }
 }
         
 
 // @LINE:56
-case controllers_SparkJar_errorpage35(params) => {
+case controllers_spark_SparkJar_errorpage35(params) => {
    call { 
-        invokeHandler(controllers.SparkJar.errorpage, HandlerDef(this, "controllers.SparkJar", "errorpage", Nil,"GET", """""", Routes.prefix + """errorpage"""))
+        invokeHandler(controllers.spark.SparkJar.errorpage, HandlerDef(this, "controllers.spark.SparkJar", "errorpage", Nil,"GET", """""", Routes.prefix + """errorpage"""))
    }
 }
         
 
 // @LINE:61
-case controllers_SparkSql_sqlpage36(params) => {
+case controllers_spark_SparkSql_sqlpage36(params) => {
    call { 
-        invokeHandler(controllers.SparkSql.sqlpage, HandlerDef(this, "controllers.SparkSql", "sqlpage", Nil,"GET", """ Saprk Sql""", Routes.prefix + """sparksql"""))
+        invokeHandler(controllers.spark.SparkSql.sqlpage, HandlerDef(this, "controllers.spark.SparkSql", "sqlpage", Nil,"GET", """ Saprk Sql""", Routes.prefix + """sparksql"""))
    }
 }
         
 
 // @LINE:62
-case controllers_SparkSql_executesql37(params) => {
+case controllers_spark_SparkSql_executesql37(params) => {
    call { 
-        invokeHandler(controllers.SparkSql.executesql, HandlerDef(this, "controllers.SparkSql", "executesql", Nil,"POST", """""", Routes.prefix + """sparksql"""))
+        invokeHandler(controllers.spark.SparkSql.executesql, HandlerDef(this, "controllers.spark.SparkSql", "executesql", Nil,"POST", """""", Routes.prefix + """sparksql"""))
    }
 }
         
 
 // @LINE:65
-case controllers_YarnList_yarnInfo38(params) => {
+case controllers_hadoop_YarnList_yarnInfo38(params) => {
    call { 
-        invokeHandler(controllers.YarnList.yarnInfo, HandlerDef(this, "controllers.YarnList", "yarnInfo", Nil,"GET", """Dashboard""", Routes.prefix + """yarnInfo"""))
+        invokeHandler(controllers.hadoop.YarnList.yarnInfo, HandlerDef(this, "controllers.hadoop.YarnList", "yarnInfo", Nil,"GET", """Dashboard""", Routes.prefix + """yarnInfo"""))
    }
 }
         
 
 // @LINE:66
-case controllers_YarnList_yarnlist39(params) => {
+case controllers_hadoop_YarnList_yarnlist39(params) => {
    call { 
-        invokeHandler(controllers.YarnList.yarnlist, HandlerDef(this, "controllers.YarnList", "yarnlist", Nil,"GET", """""", Routes.prefix + """yarnlist"""))
+        invokeHandler(controllers.hadoop.YarnList.yarnlist, HandlerDef(this, "controllers.hadoop.YarnList", "yarnlist", Nil,"GET", """""", Routes.prefix + """yarnlist"""))
    }
 }
         
 
 // @LINE:67
-case controllers_YarnList_workerlist40(params) => {
+case controllers_hadoop_YarnList_workerlist40(params) => {
    call { 
-        invokeHandler(controllers.YarnList.workerlist, HandlerDef(this, "controllers.YarnList", "workerlist", Nil,"GET", """""", Routes.prefix + """workerlist"""))
+        invokeHandler(controllers.hadoop.YarnList.workerlist, HandlerDef(this, "controllers.hadoop.YarnList", "workerlist", Nil,"GET", """""", Routes.prefix + """workerlist"""))
    }
 }
         

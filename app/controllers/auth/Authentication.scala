@@ -1,8 +1,9 @@
 package controllers.auth
 
 import models.Mail._
+import models.user.{Registration, User, Verify}
 import models.utils.CaptchaUtils
-import models.{Registration, User, Verify}
+import models.user._
 import org.apache.commons.lang3.StringUtils
 import play.api.Play.current
 import play.api._
@@ -56,7 +57,7 @@ object Authentication  extends Controller {
 
   val registForm = Form(
     mapping(
-      "email" ->nonEmptyText.verifying("邮箱格式验证错误",validateEmail(_)).verifying("邮箱已存在",!models.User.findByEmail(_).isDefined),
+      "email" ->nonEmptyText.verifying("邮箱格式验证错误",validateEmail(_)).verifying("邮箱已存在",!User.findByEmail(_).isDefined),
       "name"-> nonEmptyText.verifying("姓名含有非法字符",validateName(_)),
       "password" -> nonEmptyText,
       "repassword"->nonEmptyText
@@ -80,7 +81,7 @@ object Authentication  extends Controller {
         BadRequest(views.html.register(formWithErrors))
       },
       registration => {
-        val user:User= models.User.verifying(registration = registration)
+        val user:User= models.user.User.verifying(registration = registration)
         implicit val clusterListWrites = Json.writes[User]
         Redirect("/mail?user="+Json.stringify(Json.toJson(user)))
       }
@@ -208,7 +209,7 @@ object Authentication  extends Controller {
 
   val findPasswordForm = Form(
     tuple(
-      "email" -> text.verifying("用户不存在,请检查输入邮箱", models.User.findByEmail(_).isDefined).verifying("用户还未激活",User.isActivate(_).isDefined),
+      "email" -> text.verifying("用户不存在,请检查输入邮箱", User.findByEmail(_).isDefined).verifying("用户还未激活",User.isActivate(_).isDefined),
       "captcha" -> text.verifying("验证码错误",x=>{
         verifyCaptcha(x,Cache.getAs[String]("captcha").get)
       })
@@ -227,7 +228,7 @@ object Authentication  extends Controller {
         BadRequest(views.html.findpwd(formWithErrors))
       },
       user => {
-        val f_name: String = models.User.findNameByEmail(user._1)
+        val f_name: String = models.user.User.findNameByEmail(user._1)
         val name:String =if(StringUtils.isEmpty(f_name)) user._1  else f_name
         val jsObject: JsObject = Json.obj("email"->user._1,"captcha"->user._2,"name"->name)
         Redirect("/mail?user="+Json.stringify(jsObject)).withSession("findpwd"->user._1)
@@ -273,7 +274,7 @@ object Authentication  extends Controller {
       },
       user => {
         val email: String = request.session.get("findpwd").getOrElse(null)
-         models.User.updatePWD(email,user._2)
+         models.user.User.updatePWD(email,user._2)
         Ok(email+"修改密码成功")
       }
     )

@@ -58,58 +58,58 @@
         <li> <a href="@routes.Application.index"><i class="fa fa-dashboard fa-fw nav_icon"></i>仪表盘</a> </li>
         <li> <a href="#"><i class="fa fa-check-square-o nav_icon"></i>数据应用面板<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.SparkJar.uploadpage">spark-jar应用</a></li>
-            <li> <a href="@routes.SparkSql.sqlpage">spark-sql应用</a> </li>
-            <li> <a href="@routes.SparkStream.stream">spark-stream基于HDFS的应用</a></li>
-            <li> <a href="@routes.SparkStream.stream">spark-stream基于Kafka的应用</a></li>
+            <li> <a href="@controllers.spark.routes.SparkJar.uploadpage">spark-jar应用</a></li>
+            <li> <a href="@controllers.spark.routes.SparkSql.sqlpage">spark-sql应用</a> </li>
+            <li> <a href="@controllers.spark.routes.SparkStream.stream">spark-stream基于HDFS的应用</a></li>
+            <li> <a href="@controllers.spark.routes.SparkStream.stream">spark-stream基于Kafka的应用</a></li>
 
           </ul>
           <!-- /.nav-second-level --> 
         </li>
         <li> <a href="#"><i class="fa fa-table nav_icon"></i>App数据<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">Yarn数据列表</a> </li>
-            <li> <a href="@routes.YarnList.sparklist">Spark数据列表</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">Yarn数据列表</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">Spark数据列表</a> </li>
           </ul>
           <!-- /.nav-second-level --> 
         </li>
 
          <li> <a href="#"><i class="fa fa-table nav_icon"></i>任务调度<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">OOZIE任务调度</a> </li>
-            <li> <a href="@routes.YarnList.yarnlist">Spark任务调度</a> </li>
-            <li> <a href="@routes.YarnList.sparklist">Yarn任务调度</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">OOZIE任务调度</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">Spark任务调度</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">Yarn任务调度</a> </li>
           </ul>
         </li>
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>监控和报警<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">Streaming监控</a> </li>
-            <li> <a href="@routes.YarnList.yarnlist">临时任务监控</a> </li>
-            <li> <a href="@routes.YarnList.sparklist">调度监控</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">Streaming监控</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">临时任务监控</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">调度监控</a> </li>
           </ul>
         </li>
 
                <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">磁盘空间报警</a> </li>
-            <li> <a href="@routes.YarnList.yarnlist">内存相关报警</a> </li>
-            <li> <a href="@routes.YarnList.sparklist">其他报警</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">磁盘空间报警</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">内存相关报警</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">其他报警</a> </li>
           </ul>
 
         <li> <a href="#"><i class="fa fa-table nav_icon"></i>用户管理<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">用户统计</a> </li>
-            <li> <a href="@routes.YarnList.yarnlist">添加用户</a> </li>
-            <li> <a href="@routes.YarnList.sparklist">权限分配</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">用户统计</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">添加用户</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">权限分配</a> </li>
           </ul>
 
         </li>
 
                 <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">服务划分</a> </li>
-            <li> <a href="@routes.YarnList.yarnlist">功能划分</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">服务划分</a> </li>
+            <li> <a href="@controllers.hadoop.routes.YarnList.yarnlist">功能划分</a> </li>
           </ul>
 
         </li>

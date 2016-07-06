@@ -30,7 +30,7 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main("Neputune Spark-jar-uploadJar")/*1.38*/ 
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
     <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
   </div>
-"""),_display_(Seq[Any](/*12.2*/helper/*12.8*/.form(action = routes.SparkStream.stremupload, 'enctype -> "multipart/form-data")/*12.89*/ {_display_(Seq[Any](format.raw/*12.91*/("""
+"""),_display_(Seq[Any](/*12.2*/helper/*12.8*/.form(action = controllers.spark.routes.SparkStream.stremupload, 'enctype -> "multipart/form-data")/*12.107*/ {_display_(Seq[Any](format.raw/*12.109*/("""
   <div class="form-group">
     <label for="exampleInputFile">文件上传</label>
     <input type="file" name="file">
@@ -63,10 +63,10 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main("Neputune Spark-jar-uploadJar")/*1.38*/ 
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Jul 05 14:27:20 CST 2016
+                    DATE: Wed Jul 06 11:34:27 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/stream.scala.html
-                    HASH: 118311e70dfe996efe0d2aead5836c961c533dbb
-                    MATRIX: 647->1|691->37|730->39|766->41|809->63|1167->386|1181->392|1271->473|1311->475|1768->901|1820->918|1853->929|1893->938
+                    HASH: 4d0decb7b8f112bc8026d5d029d86c0084bddcc7
+                    MATRIX: 647->1|691->37|730->39|766->41|809->63|1167->386|1181->392|1290->491|1331->493|1788->919|1840->936|1873->947|1913->956
                     LINES: 22->1|22->1|22->1|23->2|23->2|33->12|33->12|33->12|33->12|47->26|51->30|51->30|53->32
                     -- GENERATED --
                 */

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
-// @HASH:3f9ddcc4cf8838281275e5f562f5e5a315bcd2d3
-// @DATE:Wed Jul 06 10:41:58 CST 2016
+// @HASH:3ab57eb4d38fbabaf8925a579a56666384e15f54
+// @DATE:Wed Jul 06 11:28:08 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -119,35 +119,88 @@ def login(): Call = {
 }
                   
 
-// @LINE:69
 // @LINE:67
 // @LINE:66
 // @LINE:65
-// @LINE:62
-// @LINE:61
-// @LINE:56
-// @LINE:55
-// @LINE:54
-// @LINE:53
-// @LINE:52
-// @LINE:36
 // @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
-// @LINE:27
-// @LINE:26
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
-// @LINE:12
+package controllers.hadoop {
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseYarnList {
+    
+
+// @LINE:66
+// @LINE:31
+def yarnlist(): Call = {
+   () match {
+// @LINE:31
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
+                                                        
+// @LINE:66
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
+                                                        
+   }
+}
+                                                
+
+// @LINE:33
+def spark_info(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "spark_info")
+}
+                                                
+
+// @LINE:65
+// @LINE:30
+def yarnInfo(): Call = {
+   () match {
+// @LINE:30
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
+                                                        
+// @LINE:65
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
+                                                        
+   }
+}
+                                                
+
+// @LINE:34
+def sparklist(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "sparklist")
+}
+                                                
+
+// @LINE:67
+// @LINE:32
+def workerlist(): Call = {
+   () match {
+// @LINE:32
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
+                                                        
+// @LINE:67
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
+                                                        
+   }
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:69
+// @LINE:36
 // @LINE:6
 package controllers {
 
@@ -173,38 +226,77 @@ case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + im
 }
                           
 
-// @LINE:62
-// @LINE:61
-// @LINE:27
-// @LINE:26
-class ReverseSparkSql {
+// @LINE:6
+class ReverseApplication {
     
 
+// @LINE:6
+def index(): Call = {
+   Call("GET", _prefix)
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:62
 // @LINE:61
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:27
 // @LINE:26
-def sqlpage(): Call = {
-   () match {
-// @LINE:26
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-// @LINE:61
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-   }
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+package controllers.spark {
+
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+class ReverseSparkStream {
+    
+
+// @LINE:23
+def errorpage(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "errorpage")
 }
                                                 
 
-// @LINE:62
-// @LINE:27
-def executesql(): Call = {
-   () match {
-// @LINE:27
-case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-// @LINE:62
-case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-   }
+// @LINE:22
+def streamExecute(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "streamExecute")
+}
+                                                
+
+// @LINE:20
+def stremupload(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "stremupload")
+}
+                                                
+
+// @LINE:19
+def stream(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "stream")
+}
+                                                
+
+// @LINE:21
+def streamArgs(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "streamArgs")
 }
                                                 
     
@@ -297,120 +389,36 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "executejar")
 }
                           
 
-// @LINE:6
-class ReverseApplication {
+// @LINE:62
+// @LINE:61
+// @LINE:27
+// @LINE:26
+class ReverseSparkSql {
     
 
-// @LINE:6
-def index(): Call = {
-   Call("GET", _prefix)
-}
-                                                
-    
-}
-                          
-
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-class ReverseSparkStream {
-    
-
-// @LINE:23
-def errorpage(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "errorpage")
-}
-                                                
-
-// @LINE:22
-def streamExecute(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "streamExecute")
-}
-                                                
-
-// @LINE:20
-def stremupload(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "stremupload")
-}
-                                                
-
-// @LINE:19
-def stream(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "stream")
-}
-                                                
-
-// @LINE:21
-def streamArgs(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "streamArgs")
-}
-                                                
-    
-}
-                          
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-class ReverseYarnList {
-    
-
-// @LINE:66
-// @LINE:31
-def yarnlist(): Call = {
+// @LINE:61
+// @LINE:26
+def sqlpage(): Call = {
    () match {
-// @LINE:31
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
+// @LINE:26
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "sparksql")
                                                         
-// @LINE:66
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
+// @LINE:61
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "sparksql")
                                                         
    }
 }
                                                 
 
-// @LINE:33
-def spark_info(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "spark_info")
-}
-                                                
-
-// @LINE:65
-// @LINE:30
-def yarnInfo(): Call = {
+// @LINE:62
+// @LINE:27
+def executesql(): Call = {
    () match {
-// @LINE:30
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
+// @LINE:27
+case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
                                                         
-// @LINE:65
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
-                                                        
-   }
-}
-                                                
-
-// @LINE:34
-def sparklist(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "sparklist")
-}
-                                                
-
-// @LINE:67
-// @LINE:32
-def workerlist(): Call = {
-   () match {
-// @LINE:32
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
-                                                        
-// @LINE:67
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
+// @LINE:62
+case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
                                                         
    }
 }
@@ -588,35 +596,107 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-// @LINE:69
 // @LINE:67
 // @LINE:66
 // @LINE:65
-// @LINE:62
-// @LINE:61
-// @LINE:56
-// @LINE:55
-// @LINE:54
-// @LINE:53
-// @LINE:52
-// @LINE:36
 // @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
-// @LINE:27
-// @LINE:26
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
-// @LINE:12
+package controllers.hadoop.javascript {
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseYarnList {
+    
+
+// @LINE:66
+// @LINE:31
+def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.yarnlist",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
+      }
+      }
+   """
+)
+                        
+
+// @LINE:33
+def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.spark_info",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "spark_info"})
+      }
+   """
+)
+                        
+
+// @LINE:65
+// @LINE:30
+def yarnInfo : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.yarnInfo",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
+      }
+      }
+   """
+)
+                        
+
+// @LINE:34
+def sparklist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.sparklist",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparklist"})
+      }
+   """
+)
+                        
+
+// @LINE:67
+// @LINE:32
+def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.workerlist",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
+      }
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:69
+// @LINE:36
 // @LINE:6
 package controllers.javascript {
 
@@ -645,42 +725,105 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:62
-// @LINE:61
-// @LINE:27
-// @LINE:26
-class ReverseSparkSql {
+// @LINE:6
+class ReverseApplication {
     
 
-// @LINE:61
-// @LINE:26
-def sqlpage : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkSql.sqlpage",
+// @LINE:6
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.index",
    """
       function() {
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
+      return _wA({method:"GET", url:"""" + _prefix + """"})
       }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
-      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:62
+// @LINE:61
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:27
+// @LINE:26
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+package controllers.spark.javascript {
+
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+class ReverseSparkStream {
+    
+
+// @LINE:23
+def errorpage : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkStream.errorpage",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "errorpage"})
       }
    """
 )
                         
 
-// @LINE:62
-// @LINE:27
-def executesql : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkSql.executesql",
+// @LINE:22
+def streamExecute : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkStream.streamExecute",
    """
       function() {
-      if (true) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "streamExecute"})
       }
-      if (true) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
+   """
+)
+                        
+
+// @LINE:20
+def stremupload : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkStream.stremupload",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "stremupload"})
       }
+   """
+)
+                        
+
+// @LINE:19
+def stream : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkStream.stream",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "stream"})
+      }
+   """
+)
+                        
+
+// @LINE:21
+def streamArgs : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkStream.streamArgs",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "streamArgs"})
       }
    """
 )
@@ -705,7 +848,7 @@ class ReverseSparkJar {
 // @LINE:53
 // @LINE:13
 def upload : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkJar.upload",
+   "controllers.spark.SparkJar.upload",
    """
       function() {
       if (true) {
@@ -722,7 +865,7 @@ def upload : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:55
 // @LINE:15
 def executejar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkJar.executejar",
+   "controllers.spark.SparkJar.executejar",
    """
       function() {
       if (true) {
@@ -739,7 +882,7 @@ def executejar : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:56
 // @LINE:16
 def errorpage : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkJar.errorpage",
+   "controllers.spark.SparkJar.errorpage",
    """
       function() {
       if (true) {
@@ -756,7 +899,7 @@ def errorpage : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:52
 // @LINE:12
 def uploadpage : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkJar.uploadpage",
+   "controllers.spark.SparkJar.uploadpage",
    """
       function() {
       if (true) {
@@ -773,7 +916,7 @@ def uploadpage : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:54
 // @LINE:14
 def executejarpage : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkJar.executejarpage",
+   "controllers.spark.SparkJar.executejarpage",
    """
       function() {
       if (true) {
@@ -790,168 +933,41 @@ def executejarpage : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:6
-class ReverseApplication {
+// @LINE:62
+// @LINE:61
+// @LINE:27
+// @LINE:26
+class ReverseSparkSql {
     
 
-// @LINE:6
-def index : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.index",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + """"})
-      }
-   """
-)
-                        
-    
-}
-              
-
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-class ReverseSparkStream {
-    
-
-// @LINE:23
-def errorpage : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkStream.errorpage",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "errorpage"})
-      }
-   """
-)
-                        
-
-// @LINE:22
-def streamExecute : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkStream.streamExecute",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "streamExecute"})
-      }
-   """
-)
-                        
-
-// @LINE:20
-def stremupload : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkStream.stremupload",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "stremupload"})
-      }
-   """
-)
-                        
-
-// @LINE:19
-def stream : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkStream.stream",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "stream"})
-      }
-   """
-)
-                        
-
-// @LINE:21
-def streamArgs : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.SparkStream.streamArgs",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "streamArgs"})
-      }
-   """
-)
-                        
-    
-}
-              
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-class ReverseYarnList {
-    
-
-// @LINE:66
-// @LINE:31
-def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.YarnList.yarnlist",
+// @LINE:61
+// @LINE:26
+def sqlpage : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkSql.sqlpage",
    """
       function() {
       if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
       }
       if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
       }
       }
    """
 )
                         
 
-// @LINE:33
-def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.YarnList.spark_info",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "spark_info"})
-      }
-   """
-)
-                        
-
-// @LINE:65
-// @LINE:30
-def yarnInfo : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.YarnList.yarnInfo",
+// @LINE:62
+// @LINE:27
+def executesql : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.spark.SparkSql.executesql",
    """
       function() {
       if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
       }
       if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
-      }
-      }
-   """
-)
-                        
-
-// @LINE:34
-def sparklist : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.YarnList.sparklist",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparklist"})
-      }
-   """
-)
-                        
-
-// @LINE:67
-// @LINE:32
-def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.YarnList.workerlist",
-   """
-      function() {
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
       }
       }
    """
@@ -1071,35 +1087,65 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
-// @LINE:69
 // @LINE:67
 // @LINE:66
 // @LINE:65
-// @LINE:62
-// @LINE:61
-// @LINE:56
-// @LINE:55
-// @LINE:54
-// @LINE:53
-// @LINE:52
-// @LINE:36
 // @LINE:34
 // @LINE:33
 // @LINE:32
 // @LINE:31
 // @LINE:30
-// @LINE:27
-// @LINE:26
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
-// @LINE:12
+package controllers.hadoop.ref {
+
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseYarnList {
+    
+
+// @LINE:31
+def yarnlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.yarnlist(), HandlerDef(this, "controllers.hadoop.YarnList", "yarnlist", Seq(), "GET", """""", _prefix + """yarnlist""")
+)
+                      
+
+// @LINE:33
+def spark_info(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.spark_info(), HandlerDef(this, "controllers.hadoop.YarnList", "spark_info", Seq(), "GET", """""", _prefix + """spark_info""")
+)
+                      
+
+// @LINE:30
+def yarnInfo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.yarnInfo(), HandlerDef(this, "controllers.hadoop.YarnList", "yarnInfo", Seq(), "GET", """Dashboard""", _prefix + """yarnInfo""")
+)
+                      
+
+// @LINE:34
+def sparklist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.sparklist(), HandlerDef(this, "controllers.hadoop.YarnList", "sparklist", Seq(), "GET", """""", _prefix + """sparklist""")
+)
+                      
+
+// @LINE:32
+def workerlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.workerlist(), HandlerDef(this, "controllers.hadoop.YarnList", "workerlist", Seq(), "GET", """""", _prefix + """workerlist""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:69
+// @LINE:36
 // @LINE:6
 package controllers.ref {
 
@@ -1118,22 +1164,78 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:62
-// @LINE:61
-// @LINE:27
-// @LINE:26
-class ReverseSparkSql {
+// @LINE:6
+class ReverseApplication {
     
 
+// @LINE:6
+def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:62
+// @LINE:61
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:27
 // @LINE:26
-def sqlpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkSql.sqlpage(), HandlerDef(this, "controllers.SparkSql", "sqlpage", Seq(), "GET", """ Saprk Sql""", _prefix + """sparksql""")
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+package controllers.spark.ref {
+
+
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+class ReverseSparkStream {
+    
+
+// @LINE:23
+def errorpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkStream.errorpage(), HandlerDef(this, "controllers.spark.SparkStream", "errorpage", Seq(), "GET", """""", _prefix + """errorpage""")
 )
                       
 
-// @LINE:27
-def executesql(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkSql.executesql(), HandlerDef(this, "controllers.SparkSql", "executesql", Seq(), "POST", """""", _prefix + """sparksql""")
+// @LINE:22
+def streamExecute(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkStream.streamExecute(), HandlerDef(this, "controllers.spark.SparkStream", "streamExecute", Seq(), "POST", """""", _prefix + """streamExecute""")
+)
+                      
+
+// @LINE:20
+def stremupload(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkStream.stremupload(), HandlerDef(this, "controllers.spark.SparkStream", "stremupload", Seq(), "POST", """""", _prefix + """stremupload""")
+)
+                      
+
+// @LINE:19
+def stream(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkStream.stream(), HandlerDef(this, "controllers.spark.SparkStream", "stream", Seq(), "GET", """ Spark Stream""", _prefix + """stream""")
+)
+                      
+
+// @LINE:21
+def streamArgs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkStream.streamArgs(), HandlerDef(this, "controllers.spark.SparkStream", "streamArgs", Seq(), "GET", """""", _prefix + """streamArgs""")
 )
                       
     
@@ -1155,129 +1257,53 @@ class ReverseSparkJar {
 
 // @LINE:13
 def upload(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkJar.upload(), HandlerDef(this, "controllers.SparkJar", "upload", Seq(), "POST", """""", _prefix + """sparkjar""")
+   controllers.spark.SparkJar.upload(), HandlerDef(this, "controllers.spark.SparkJar", "upload", Seq(), "POST", """""", _prefix + """sparkjar""")
 )
                       
 
 // @LINE:15
 def executejar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkJar.executejar(), HandlerDef(this, "controllers.SparkJar", "executejar", Seq(), "POST", """""", _prefix + """executejar""")
+   controllers.spark.SparkJar.executejar(), HandlerDef(this, "controllers.spark.SparkJar", "executejar", Seq(), "POST", """""", _prefix + """executejar""")
 )
                       
 
 // @LINE:16
 def errorpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkJar.errorpage(), HandlerDef(this, "controllers.SparkJar", "errorpage", Seq(), "GET", """""", _prefix + """errorpage""")
+   controllers.spark.SparkJar.errorpage(), HandlerDef(this, "controllers.spark.SparkJar", "errorpage", Seq(), "GET", """""", _prefix + """errorpage""")
 )
                       
 
 // @LINE:12
 def uploadpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkJar.uploadpage(), HandlerDef(this, "controllers.SparkJar", "uploadpage", Seq(), "GET", """ Spark Jar""", _prefix + """sparkjar""")
+   controllers.spark.SparkJar.uploadpage(), HandlerDef(this, "controllers.spark.SparkJar", "uploadpage", Seq(), "GET", """ Spark Jar""", _prefix + """sparkjar""")
 )
                       
 
 // @LINE:14
 def executejarpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkJar.executejarpage(), HandlerDef(this, "controllers.SparkJar", "executejarpage", Seq(), "GET", """""", _prefix + """executejar""")
+   controllers.spark.SparkJar.executejarpage(), HandlerDef(this, "controllers.spark.SparkJar", "executejarpage", Seq(), "GET", """""", _prefix + """executejar""")
 )
                       
     
 }
                           
 
-// @LINE:6
-class ReverseApplication {
+// @LINE:62
+// @LINE:61
+// @LINE:27
+// @LINE:26
+class ReverseSparkSql {
     
 
-// @LINE:6
-def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
-)
-                      
-    
-}
-                          
-
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-class ReverseSparkStream {
-    
-
-// @LINE:23
-def errorpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkStream.errorpage(), HandlerDef(this, "controllers.SparkStream", "errorpage", Seq(), "GET", """""", _prefix + """errorpage""")
+// @LINE:26
+def sqlpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkSql.sqlpage(), HandlerDef(this, "controllers.spark.SparkSql", "sqlpage", Seq(), "GET", """ Saprk Sql""", _prefix + """sparksql""")
 )
                       
 
-// @LINE:22
-def streamExecute(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkStream.streamExecute(), HandlerDef(this, "controllers.SparkStream", "streamExecute", Seq(), "POST", """""", _prefix + """streamExecute""")
-)
-                      
-
-// @LINE:20
-def stremupload(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkStream.stremupload(), HandlerDef(this, "controllers.SparkStream", "stremupload", Seq(), "POST", """""", _prefix + """stremupload""")
-)
-                      
-
-// @LINE:19
-def stream(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkStream.stream(), HandlerDef(this, "controllers.SparkStream", "stream", Seq(), "GET", """ Spark Stream""", _prefix + """stream""")
-)
-                      
-
-// @LINE:21
-def streamArgs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkStream.streamArgs(), HandlerDef(this, "controllers.SparkStream", "streamArgs", Seq(), "GET", """""", _prefix + """streamArgs""")
-)
-                      
-    
-}
-                          
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-class ReverseYarnList {
-    
-
-// @LINE:31
-def yarnlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.YarnList.yarnlist(), HandlerDef(this, "controllers.YarnList", "yarnlist", Seq(), "GET", """""", _prefix + """yarnlist""")
-)
-                      
-
-// @LINE:33
-def spark_info(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.YarnList.spark_info(), HandlerDef(this, "controllers.YarnList", "spark_info", Seq(), "GET", """""", _prefix + """spark_info""")
-)
-                      
-
-// @LINE:30
-def yarnInfo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.YarnList.yarnInfo(), HandlerDef(this, "controllers.YarnList", "yarnInfo", Seq(), "GET", """Dashboard""", _prefix + """yarnInfo""")
-)
-                      
-
-// @LINE:34
-def sparklist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.YarnList.sparklist(), HandlerDef(this, "controllers.YarnList", "sparklist", Seq(), "GET", """""", _prefix + """sparklist""")
-)
-                      
-
-// @LINE:32
-def workerlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.YarnList.workerlist(), HandlerDef(this, "controllers.YarnList", "workerlist", Seq(), "GET", """""", _prefix + """workerlist""")
+// @LINE:27
+def executesql(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.spark.SparkSql.executesql(), HandlerDef(this, "controllers.spark.SparkSql", "executesql", Seq(), "POST", """""", _prefix + """sparksql""")
 )
                       
     
