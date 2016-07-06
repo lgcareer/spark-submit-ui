@@ -35,10 +35,15 @@ object SparkStream extends Controller with Secured{
     )(ExecuteModel.apply)(ExecuteModel.unapply)
   }
 
+
   def stream = IsAuthenticated {username => implicit request =>
     Ok(views.html.stream())
   }
 
+  /**
+    * 上传jar
+    * @return
+    */
   def stremupload = Action(parse.multipartFormData) { implicit request =>
     request.body.file("file").map { picture =>
       import java.io.File
