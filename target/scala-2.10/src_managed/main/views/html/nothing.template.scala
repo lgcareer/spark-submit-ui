@@ -34,7 +34,7 @@ Seq[Any](format.raw/*1.15*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 11:28:09 CST 2016
+                    DATE: Wed Jul 06 12:18:06 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/nothing.scala.html
                     HASH: 55a8bdfb0d1fcc19b8c9c56534cfd9a573dfc3bc
                     MATRIX: 558->1|665->14|702->17|726->21

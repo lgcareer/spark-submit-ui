@@ -20,7 +20,6 @@ object Email {
       * @return
       */
     val sendTextMail =textMail _
-
       def textMail(): String ={
           val email = new SimpleEmail()
           email.setHostName("smtp.sina.com")

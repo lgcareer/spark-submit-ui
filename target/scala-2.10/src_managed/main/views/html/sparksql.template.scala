@@ -66,7 +66,7 @@ Seq[Any](format.raw/*1.24*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 11:34:27 CST 2016
+                    DATE: Wed Jul 06 12:18:06 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/sparksql.scala.html
                     HASH: 2df34fc93d3d392ce4b9b945d83fcf680b4ecb2c
                     MATRIX: 567->1|683->23|719->25|752->50|790->51|826->53|863->69|971->143|985->149|1051->207|1089->208|1983->1067|2016->1078|2056->1087|2089->1089

@@ -140,7 +140,7 @@ Seq[Any](format.raw/*1.28*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 11:34:27 CST 2016
+                    DATE: Wed Jul 06 12:18:06 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/streamArgs.scala.html
                     HASH: a63fc6486c3f9de720e6a78ede6083128c494b26
                     MATRIX: 573->1|676->29|690->36|774->40|876->27|903->103|939->105|980->138|1018->139|1314->399|1329->405|1397->464|1437->466|7804->6801|7961->6921|7995->6932|8077->6982

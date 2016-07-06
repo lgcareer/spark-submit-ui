@@ -1,6 +1,6 @@
 // @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
-// @HASH:3ab57eb4d38fbabaf8925a579a56666384e15f54
-// @DATE:Wed Jul 06 11:28:08 CST 2016
+// @HASH:27b698fd2ab5b974ad9b3c6bb5fd86d6a0cec438
+// @DATE:Wed Jul 06 12:18:05 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,104 +13,24 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:47
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
-// @LINE:40
-// @LINE:39
-// @LINE:9
-// @LINE:8
-// @LINE:7
-package controllers.auth {
+// @LINE:73
+// @LINE:72
+package controllers.monitor {
 
-// @LINE:47
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
-// @LINE:40
-// @LINE:39
-// @LINE:9
-// @LINE:8
-// @LINE:7
-class ReverseAuthentication {
+// @LINE:73
+// @LINE:72
+class ReverseMonitorController {
     
 
-// @LINE:47
-def updatepwd(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "updatepwd")
+// @LINE:72
+def jobs(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "jobs")
 }
                                                 
 
-// @LINE:44
-def captcha(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "captcha")
-}
-                                                
-
-// @LINE:41
-def mail(user:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "mail" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("user", user)))))
-}
-                                                
-
-// @LINE:43
-def findpwd(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "findpwd")
-}
-                                                
-
-// @LINE:42
-def verifyingmail(email:String, validateCode:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "mail/verifyingmail" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)), Some(implicitly[QueryStringBindable[String]].unbind("validateCode", validateCode)))))
-}
-                                                
-
-// @LINE:39
-def registration(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "registration")
-}
-                                                
-
-// @LINE:9
-def logout(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "logout")
-}
-                                                
-
-// @LINE:45
-def resetpwd(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "findpwd")
-}
-                                                
-
-// @LINE:40
-def verifying(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "registration")
-}
-                                                
-
-// @LINE:46
-def setpwd(email:String, pwdToken:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "mail/setpwd" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)), Some(implicitly[QueryStringBindable[String]].unbind("pwdToken", pwdToken)))))
-}
-                                                
-
-// @LINE:8
-def authenticate(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "login")
-}
-                                                
-
-// @LINE:7
-def login(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "login")
+// @LINE:73
+def streaming(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "streaming")
 }
                                                 
     
@@ -233,6 +153,112 @@ class ReverseApplication {
 // @LINE:6
 def index(): Call = {
    Call("GET", _prefix)
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:9
+// @LINE:8
+// @LINE:7
+package controllers.auth {
+
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:9
+// @LINE:8
+// @LINE:7
+class ReverseAuthentication {
+    
+
+// @LINE:47
+def updatepwd(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "updatepwd")
+}
+                                                
+
+// @LINE:44
+def captcha(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "captcha")
+}
+                                                
+
+// @LINE:41
+def mail(user:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "mail" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("user", user)))))
+}
+                                                
+
+// @LINE:43
+def findpwd(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "findpwd")
+}
+                                                
+
+// @LINE:42
+def verifyingmail(email:String, validateCode:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "mail/verifyingmail" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)), Some(implicitly[QueryStringBindable[String]].unbind("validateCode", validateCode)))))
+}
+                                                
+
+// @LINE:39
+def registration(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "registration")
+}
+                                                
+
+// @LINE:9
+def logout(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "logout")
+}
+                                                
+
+// @LINE:45
+def resetpwd(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "findpwd")
+}
+                                                
+
+// @LINE:40
+def verifying(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "registration")
+}
+                                                
+
+// @LINE:46
+def setpwd(email:String, pwdToken:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "mail/setpwd" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)), Some(implicitly[QueryStringBindable[String]].unbind("pwdToken", pwdToken)))))
+}
+                                                
+
+// @LINE:8
+def authenticate(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "login")
+}
+                                                
+
+// @LINE:7
+def login(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "login")
 }
                                                 
     
@@ -430,6 +456,191 @@ case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
                   
 
 
+// @LINE:73
+// @LINE:72
+package controllers.monitor.javascript {
+
+// @LINE:73
+// @LINE:72
+class ReverseMonitorController {
+    
+
+// @LINE:72
+def jobs : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.monitor.MonitorController.jobs",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jobs"})
+      }
+   """
+)
+                        
+
+// @LINE:73
+def streaming : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.monitor.MonitorController.streaming",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "streaming"})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+package controllers.hadoop.javascript {
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseYarnList {
+    
+
+// @LINE:66
+// @LINE:31
+def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.yarnlist",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
+      }
+      }
+   """
+)
+                        
+
+// @LINE:33
+def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.spark_info",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "spark_info"})
+      }
+   """
+)
+                        
+
+// @LINE:65
+// @LINE:30
+def yarnInfo : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.yarnInfo",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
+      }
+      }
+   """
+)
+                        
+
+// @LINE:34
+def sparklist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.sparklist",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparklist"})
+      }
+   """
+)
+                        
+
+// @LINE:67
+// @LINE:32
+def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.hadoop.YarnList.workerlist",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
+      }
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+// @LINE:69
+// @LINE:36
+// @LINE:6
+package controllers.javascript {
+
+// @LINE:69
+// @LINE:36
+class ReverseAssets {
+    
+
+// @LINE:69
+// @LINE:36
+def at : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Assets.at",
+   """
+      function(file) {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
+      }
+   """
+)
+                        
+    
+}
+              
+
+// @LINE:6
+class ReverseApplication {
+    
+
+// @LINE:6
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.index",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + """"})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
 // @LINE:47
 // @LINE:46
 // @LINE:45
@@ -586,155 +797,6 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
-      }
-   """
-)
-                        
-    
-}
-              
-}
-        
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-package controllers.hadoop.javascript {
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-class ReverseYarnList {
-    
-
-// @LINE:66
-// @LINE:31
-def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.hadoop.YarnList.yarnlist",
-   """
-      function() {
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnlist"})
-      }
-      }
-   """
-)
-                        
-
-// @LINE:33
-def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.hadoop.YarnList.spark_info",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "spark_info"})
-      }
-   """
-)
-                        
-
-// @LINE:65
-// @LINE:30
-def yarnInfo : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.hadoop.YarnList.yarnInfo",
-   """
-      function() {
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "yarnInfo"})
-      }
-      }
-   """
-)
-                        
-
-// @LINE:34
-def sparklist : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.hadoop.YarnList.sparklist",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparklist"})
-      }
-   """
-)
-                        
-
-// @LINE:67
-// @LINE:32
-def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.hadoop.YarnList.workerlist",
-   """
-      function() {
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "workerlist"})
-      }
-      }
-   """
-)
-                        
-    
-}
-              
-}
-        
-
-// @LINE:69
-// @LINE:36
-// @LINE:6
-package controllers.javascript {
-
-// @LINE:69
-// @LINE:36
-class ReverseAssets {
-    
-
-// @LINE:69
-// @LINE:36
-def at : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Assets.at",
-   """
-      function(file) {
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
-      }
-      }
-   """
-)
-                        
-    
-}
-              
-
-// @LINE:6
-class ReverseApplication {
-    
-
-// @LINE:6
-def index : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.index",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + """"})
       }
    """
 )
@@ -980,6 +1042,125 @@ def executesql : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:73
+// @LINE:72
+package controllers.monitor.ref {
+
+
+// @LINE:73
+// @LINE:72
+class ReverseMonitorController {
+    
+
+// @LINE:72
+def jobs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.monitor.MonitorController.jobs(), HandlerDef(this, "controllers.monitor.MonitorController", "jobs", Seq(), "GET", """""", _prefix + """jobs""")
+)
+                      
+
+// @LINE:73
+def streaming(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.monitor.MonitorController.streaming(), HandlerDef(this, "controllers.monitor.MonitorController", "streaming", Seq(), "GET", """""", _prefix + """streaming""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+package controllers.hadoop.ref {
+
+
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+class ReverseYarnList {
+    
+
+// @LINE:31
+def yarnlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.yarnlist(), HandlerDef(this, "controllers.hadoop.YarnList", "yarnlist", Seq(), "GET", """""", _prefix + """yarnlist""")
+)
+                      
+
+// @LINE:33
+def spark_info(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.spark_info(), HandlerDef(this, "controllers.hadoop.YarnList", "spark_info", Seq(), "GET", """""", _prefix + """spark_info""")
+)
+                      
+
+// @LINE:30
+def yarnInfo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.yarnInfo(), HandlerDef(this, "controllers.hadoop.YarnList", "yarnInfo", Seq(), "GET", """Dashboard""", _prefix + """yarnInfo""")
+)
+                      
+
+// @LINE:34
+def sparklist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.sparklist(), HandlerDef(this, "controllers.hadoop.YarnList", "sparklist", Seq(), "GET", """""", _prefix + """sparklist""")
+)
+                      
+
+// @LINE:32
+def workerlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.hadoop.YarnList.workerlist(), HandlerDef(this, "controllers.hadoop.YarnList", "workerlist", Seq(), "GET", """""", _prefix + """workerlist""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:69
+// @LINE:36
+// @LINE:6
+package controllers.ref {
+
+
+// @LINE:69
+// @LINE:36
+class ReverseAssets {
+    
+
+// @LINE:36
+def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
+)
+                      
+    
+}
+                          
+
+// @LINE:6
+class ReverseApplication {
+    
+
+// @LINE:6
+def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+    
+}
+                          
+}
+        
+
 // @LINE:47
 // @LINE:46
 // @LINE:45
@@ -1079,98 +1260,6 @@ def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:7
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.auth.Authentication.login(), HandlerDef(this, "controllers.auth.Authentication", "login", Seq(), "GET", """""", _prefix + """login""")
-)
-                      
-    
-}
-                          
-}
-        
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-package controllers.hadoop.ref {
-
-
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-class ReverseYarnList {
-    
-
-// @LINE:31
-def yarnlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.hadoop.YarnList.yarnlist(), HandlerDef(this, "controllers.hadoop.YarnList", "yarnlist", Seq(), "GET", """""", _prefix + """yarnlist""")
-)
-                      
-
-// @LINE:33
-def spark_info(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.hadoop.YarnList.spark_info(), HandlerDef(this, "controllers.hadoop.YarnList", "spark_info", Seq(), "GET", """""", _prefix + """spark_info""")
-)
-                      
-
-// @LINE:30
-def yarnInfo(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.hadoop.YarnList.yarnInfo(), HandlerDef(this, "controllers.hadoop.YarnList", "yarnInfo", Seq(), "GET", """Dashboard""", _prefix + """yarnInfo""")
-)
-                      
-
-// @LINE:34
-def sparklist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.hadoop.YarnList.sparklist(), HandlerDef(this, "controllers.hadoop.YarnList", "sparklist", Seq(), "GET", """""", _prefix + """sparklist""")
-)
-                      
-
-// @LINE:32
-def workerlist(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.hadoop.YarnList.workerlist(), HandlerDef(this, "controllers.hadoop.YarnList", "workerlist", Seq(), "GET", """""", _prefix + """workerlist""")
-)
-                      
-    
-}
-                          
-}
-        
-
-// @LINE:69
-// @LINE:36
-// @LINE:6
-package controllers.ref {
-
-
-// @LINE:69
-// @LINE:36
-class ReverseAssets {
-    
-
-// @LINE:36
-def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
-)
-                      
-    
-}
-                          
-
-// @LINE:6
-class ReverseApplication {
-    
-
-// @LINE:6
-def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
 )
                       
     

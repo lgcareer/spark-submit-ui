@@ -16,7 +16,6 @@ object YarnList extends Controller with Secured {
   }
 
   def yarnlist = IsAuthenticated { username => implicit request =>
-
     Ok(views.html.yarnlist.render())
   }
 

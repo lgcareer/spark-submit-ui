@@ -69,5 +69,9 @@ GET     /workerlist                   controllers.hadoop.YarnList.workerlist
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
+GET   /jobs                          controllers.monitor.MonitorController.jobs
+GET   /streaming                     controllers.monitor.MonitorController.streaming
+
+
 
 

@@ -3,7 +3,6 @@ package controllers.auth
 import models.Mail._
 import models.user.{Registration, User, Verify}
 import models.utils.CaptchaUtils
-import models.user._
 import org.apache.commons.lang3.StringUtils
 import play.api.Play.current
 import play.api._
@@ -39,7 +38,7 @@ object Authentication  extends Controller {
    * Logout and clean the session.
    */
   def logout = Action {
-    Redirect(routes.Authentication.login).withNewSession.flashing(
+    Redirect(controllers.auth.routes.Authentication.login).withNewSession.flashing(
       "success" -> "成功退出"
     )
   }

@@ -63,7 +63,7 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main("Neputune Spark-jar-uploadJar")/*1.38*/ 
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 11:34:27 CST 2016
+                    DATE: Wed Jul 06 12:18:06 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/stream.scala.html
                     HASH: 4d0decb7b8f112bc8026d5d029d86c0084bddcc7
                     MATRIX: 647->1|691->37|730->39|766->41|809->63|1167->386|1181->392|1290->491|1331->493|1788->919|1840->936|1873->947|1913->956
