@@ -1,6 +1,6 @@
-// @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
-// @HASH:5fc9c6262a404f85020d76a4ec941c73d9b701a6
-// @DATE:Tue Jul 05 12:32:10 CST 2016
+// @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
+// @HASH:3f9ddcc4cf8838281275e5f562f5e5a315bcd2d3
+// @DATE:Wed Jul 06 10:41:58 CST 2016
 
 
 import play.core._
@@ -33,15 +33,15 @@ private[this] lazy val controllers_Application_index0 = Route("GET", PathPattern
         
 
 // @LINE:7
-private[this] lazy val controllers_Authentication_login1 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_auth_Authentication_login1 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
         
 
 // @LINE:8
-private[this] lazy val controllers_Authentication_authenticate2 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_auth_Authentication_authenticate2 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
         
 
 // @LINE:9
-private[this] lazy val controllers_Authentication_logout3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
+private[this] lazy val controllers_auth_Authentication_logout3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("logout"))))
         
 
 // @LINE:12
@@ -117,39 +117,39 @@ private[this] lazy val controllers_Assets_at21 = Route("GET", PathPattern(List(S
         
 
 // @LINE:39
-private[this] lazy val controllers_Authentication_registration22 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("registration"))))
+private[this] lazy val controllers_auth_Authentication_registration22 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("registration"))))
         
 
 // @LINE:40
-private[this] lazy val controllers_Authentication_verifying23 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("registration"))))
+private[this] lazy val controllers_auth_Authentication_verifying23 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("registration"))))
         
 
 // @LINE:41
-private[this] lazy val controllers_Authentication_mail24 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mail"))))
+private[this] lazy val controllers_auth_Authentication_mail24 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mail"))))
         
 
 // @LINE:42
-private[this] lazy val controllers_Authentication_verifyingmail25 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mail/verifyingmail"))))
+private[this] lazy val controllers_auth_Authentication_verifyingmail25 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mail/verifyingmail"))))
         
 
 // @LINE:43
-private[this] lazy val controllers_Authentication_findpwd26 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("findpwd"))))
+private[this] lazy val controllers_auth_Authentication_findpwd26 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("findpwd"))))
         
 
 // @LINE:44
-private[this] lazy val controllers_Authentication_captcha27 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("captcha"))))
+private[this] lazy val controllers_auth_Authentication_captcha27 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("captcha"))))
         
 
 // @LINE:45
-private[this] lazy val controllers_Authentication_resetpwd28 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("findpwd"))))
+private[this] lazy val controllers_auth_Authentication_resetpwd28 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("findpwd"))))
         
 
 // @LINE:46
-private[this] lazy val controllers_Authentication_setpwd29 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mail/setpwd"))))
+private[this] lazy val controllers_auth_Authentication_setpwd29 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mail/setpwd"))))
         
 
 // @LINE:47
-private[this] lazy val controllers_Authentication_updatepwd30 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updatepwd"))))
+private[this] lazy val controllers_auth_Authentication_updatepwd30 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updatepwd"))))
         
 
 // @LINE:52
@@ -195,7 +195,7 @@ private[this] lazy val controllers_YarnList_workerlist40 = Route("GET", PathPatt
 // @LINE:69
 private[this] lazy val controllers_Assets_at41 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Authentication.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Authentication.authenticate"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Authentication.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stream""","""controllers.SparkStream.stream"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stremupload""","""controllers.SparkStream.stremupload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamArgs""","""controllers.SparkStream.streamArgs"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamExecute""","""controllers.SparkStream.streamExecute"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkStream.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """spark_info""","""controllers.YarnList.spark_info"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparklist""","""controllers.YarnList.sparklist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.Authentication.registration"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.Authentication.verifying"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail""","""controllers.Authentication.mail(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/verifyingmail""","""controllers.Authentication.verifyingmail(email:String, validateCode:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.Authentication.findpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """captcha""","""controllers.Authentication.captcha"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.Authentication.resetpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/setpwd""","""controllers.Authentication.setpwd(email:String, pwdToken:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updatepwd""","""controllers.Authentication.updatepwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.auth.Authentication.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.auth.Authentication.authenticate"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.auth.Authentication.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stream""","""controllers.SparkStream.stream"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stremupload""","""controllers.SparkStream.stremupload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamArgs""","""controllers.SparkStream.streamArgs"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamExecute""","""controllers.SparkStream.streamExecute"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkStream.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """spark_info""","""controllers.YarnList.spark_info"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparklist""","""controllers.YarnList.sparklist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.auth.Authentication.registration"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.auth.Authentication.verifying"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail""","""controllers.auth.Authentication.mail(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/verifyingmail""","""controllers.auth.Authentication.verifyingmail(email:String, validateCode:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.auth.Authentication.findpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """captcha""","""controllers.auth.Authentication.captcha"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.auth.Authentication.resetpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/setpwd""","""controllers.auth.Authentication.setpwd(email:String, pwdToken:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updatepwd""","""controllers.auth.Authentication.updatepwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -212,25 +212,25 @@ case controllers_Application_index0(params) => {
         
 
 // @LINE:7
-case controllers_Authentication_login1(params) => {
+case controllers_auth_Authentication_login1(params) => {
    call { 
-        invokeHandler(controllers.Authentication.login, HandlerDef(this, "controllers.Authentication", "login", Nil,"GET", """""", Routes.prefix + """login"""))
+        invokeHandler(controllers.auth.Authentication.login, HandlerDef(this, "controllers.auth.Authentication", "login", Nil,"GET", """""", Routes.prefix + """login"""))
    }
 }
         
 
 // @LINE:8
-case controllers_Authentication_authenticate2(params) => {
+case controllers_auth_Authentication_authenticate2(params) => {
    call { 
-        invokeHandler(controllers.Authentication.authenticate, HandlerDef(this, "controllers.Authentication", "authenticate", Nil,"POST", """""", Routes.prefix + """login"""))
+        invokeHandler(controllers.auth.Authentication.authenticate, HandlerDef(this, "controllers.auth.Authentication", "authenticate", Nil,"POST", """""", Routes.prefix + """login"""))
    }
 }
         
 
 // @LINE:9
-case controllers_Authentication_logout3(params) => {
+case controllers_auth_Authentication_logout3(params) => {
    call { 
-        invokeHandler(controllers.Authentication.logout, HandlerDef(this, "controllers.Authentication", "logout", Nil,"GET", """""", Routes.prefix + """logout"""))
+        invokeHandler(controllers.auth.Authentication.logout, HandlerDef(this, "controllers.auth.Authentication", "logout", Nil,"GET", """""", Routes.prefix + """logout"""))
    }
 }
         
@@ -380,73 +380,73 @@ case controllers_Assets_at21(params) => {
         
 
 // @LINE:39
-case controllers_Authentication_registration22(params) => {
+case controllers_auth_Authentication_registration22(params) => {
    call { 
-        invokeHandler(controllers.Authentication.registration, HandlerDef(this, "controllers.Authentication", "registration", Nil,"GET", """TestIndex""", Routes.prefix + """registration"""))
+        invokeHandler(controllers.auth.Authentication.registration, HandlerDef(this, "controllers.auth.Authentication", "registration", Nil,"GET", """TestIndex""", Routes.prefix + """registration"""))
    }
 }
         
 
 // @LINE:40
-case controllers_Authentication_verifying23(params) => {
+case controllers_auth_Authentication_verifying23(params) => {
    call { 
-        invokeHandler(controllers.Authentication.verifying, HandlerDef(this, "controllers.Authentication", "verifying", Nil,"POST", """""", Routes.prefix + """registration"""))
+        invokeHandler(controllers.auth.Authentication.verifying, HandlerDef(this, "controllers.auth.Authentication", "verifying", Nil,"POST", """""", Routes.prefix + """registration"""))
    }
 }
         
 
 // @LINE:41
-case controllers_Authentication_mail24(params) => {
+case controllers_auth_Authentication_mail24(params) => {
    call(params.fromQuery[String]("user", None)) { (user) =>
-        invokeHandler(controllers.Authentication.mail(user), HandlerDef(this, "controllers.Authentication", "mail", Seq(classOf[String]),"GET", """""", Routes.prefix + """mail"""))
+        invokeHandler(controllers.auth.Authentication.mail(user), HandlerDef(this, "controllers.auth.Authentication", "mail", Seq(classOf[String]),"GET", """""", Routes.prefix + """mail"""))
    }
 }
         
 
 // @LINE:42
-case controllers_Authentication_verifyingmail25(params) => {
+case controllers_auth_Authentication_verifyingmail25(params) => {
    call(params.fromQuery[String]("email", None), params.fromQuery[String]("validateCode", None)) { (email, validateCode) =>
-        invokeHandler(controllers.Authentication.verifyingmail(email, validateCode), HandlerDef(this, "controllers.Authentication", "verifyingmail", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """mail/verifyingmail"""))
+        invokeHandler(controllers.auth.Authentication.verifyingmail(email, validateCode), HandlerDef(this, "controllers.auth.Authentication", "verifyingmail", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """mail/verifyingmail"""))
    }
 }
         
 
 // @LINE:43
-case controllers_Authentication_findpwd26(params) => {
+case controllers_auth_Authentication_findpwd26(params) => {
    call { 
-        invokeHandler(controllers.Authentication.findpwd, HandlerDef(this, "controllers.Authentication", "findpwd", Nil,"GET", """""", Routes.prefix + """findpwd"""))
+        invokeHandler(controllers.auth.Authentication.findpwd, HandlerDef(this, "controllers.auth.Authentication", "findpwd", Nil,"GET", """""", Routes.prefix + """findpwd"""))
    }
 }
         
 
 // @LINE:44
-case controllers_Authentication_captcha27(params) => {
+case controllers_auth_Authentication_captcha27(params) => {
    call { 
-        invokeHandler(controllers.Authentication.captcha, HandlerDef(this, "controllers.Authentication", "captcha", Nil,"GET", """""", Routes.prefix + """captcha"""))
+        invokeHandler(controllers.auth.Authentication.captcha, HandlerDef(this, "controllers.auth.Authentication", "captcha", Nil,"GET", """""", Routes.prefix + """captcha"""))
    }
 }
         
 
 // @LINE:45
-case controllers_Authentication_resetpwd28(params) => {
+case controllers_auth_Authentication_resetpwd28(params) => {
    call { 
-        invokeHandler(controllers.Authentication.resetpwd, HandlerDef(this, "controllers.Authentication", "resetpwd", Nil,"POST", """""", Routes.prefix + """findpwd"""))
+        invokeHandler(controllers.auth.Authentication.resetpwd, HandlerDef(this, "controllers.auth.Authentication", "resetpwd", Nil,"POST", """""", Routes.prefix + """findpwd"""))
    }
 }
         
 
 // @LINE:46
-case controllers_Authentication_setpwd29(params) => {
+case controllers_auth_Authentication_setpwd29(params) => {
    call(params.fromQuery[String]("email", None), params.fromQuery[String]("pwdToken", None)) { (email, pwdToken) =>
-        invokeHandler(controllers.Authentication.setpwd(email, pwdToken), HandlerDef(this, "controllers.Authentication", "setpwd", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """mail/setpwd"""))
+        invokeHandler(controllers.auth.Authentication.setpwd(email, pwdToken), HandlerDef(this, "controllers.auth.Authentication", "setpwd", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """mail/setpwd"""))
    }
 }
         
 
 // @LINE:47
-case controllers_Authentication_updatepwd30(params) => {
+case controllers_auth_Authentication_updatepwd30(params) => {
    call { 
-        invokeHandler(controllers.Authentication.updatepwd, HandlerDef(this, "controllers.Authentication", "updatepwd", Nil,"POST", """""", Routes.prefix + """updatepwd"""))
+        invokeHandler(controllers.auth.Authentication.updatepwd, HandlerDef(this, "controllers.auth.Authentication", "updatepwd", Nil,"POST", """""", Routes.prefix + """updatepwd"""))
    }
 }
         

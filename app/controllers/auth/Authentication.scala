@@ -1,30 +1,20 @@
-package controllers
-
-import play.api._
-import play.api.mvc._
-import play.api.data._
-import play.api.data.Forms._
-import views._
-import models.User
-
-
-
-import java.io.{ByteArrayOutputStream, OutputStream}
+package controllers.auth
 
 import models.Mail._
 import models.utils.CaptchaUtils
-import play.api._
-import play.api.data._
-import play.api.data.Forms._
 import models.{Registration, User, Verify}
 import org.apache.commons.lang3.StringUtils
-import play.api.libs.json.{JsObject, JsPath, JsValue, Json}
+import play.api.Play.current
+import play.api._
 import play.api.cache._
+import play.api.data.Forms._
+import play.api.data._
+import play.api.libs.json.{JsObject, JsValue, Json}
 import play.api.mvc._
+
 import scala.concurrent.Future
 import scala.language.postfixOps
 import scala.util.matching.Regex
-import play.api.Play.current
 
 object Authentication  extends Controller {
 
@@ -59,7 +49,7 @@ object Authentication  extends Controller {
   def authenticate = Action { implicit request =>
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.login(formWithErrors)),
-      user => Redirect(routes.Application.index()).withSession("email" -> user._1)
+      user => Redirect(controllers.routes.Application.index()).withSession("email" -> user._1)
     )
   }
 

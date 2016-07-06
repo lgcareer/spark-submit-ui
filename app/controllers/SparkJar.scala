@@ -1,4 +1,4 @@
-package controllers
+package controllers.auth
 
 import java.util.concurrent.{ExecutorService, Executors}
 
@@ -8,7 +8,8 @@ import play.api.data._
 import play.api.data.Forms._
 import models._
 import views._
-import java.util.concurrent.{Executors,ExecutorService}
+import java.util.concurrent.{ExecutorService, Executors}
+
 import views._
 
 
@@ -40,6 +41,7 @@ object SparkJar extends Controller with Secured {
     }
 
     def uploadpage = IsAuthenticated {username => implicit request =>
+
       Ok(views.html.upload())
 
     }
@@ -49,7 +51,8 @@ object SparkJar extends Controller with Secured {
         import java.io.File
         val filename = picture.filename
         val contentType = picture.contentType
-        picture.ref.moveTo(new File(s"/tmp/file/$filename"))
+        picture.ref.moveTo(new File(s"/tmp/file/$filename"),true)
+
         Redirect(routes.SparkJar.executejar())
         }.getOrElse {
           Redirect(routes.SparkJar.errorpage())
@@ -74,7 +77,7 @@ object SparkJar extends Controller with Secured {
               "--driver-memory", argss.driverMemory,
               "--executor-memory", argss.executorMemory,
               "--executor-cores", argss.executorCores,
-              "--master", "yarn-cluster",
+              "--master  yarn-cluster",
               argss.jarLocation,
               argss.args1
               )

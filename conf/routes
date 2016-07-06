@@ -4,9 +4,9 @@
 
 # Home page
 GET     /                           controllers.Application.index
-GET     /login                      controllers.Authentication.login
-POST    /login                      controllers.Authentication.authenticate
-GET     /logout                     controllers.Authentication.logout
+GET     /login                      controllers.auth.Authentication.login
+POST    /login                      controllers.auth.Authentication.authenticate
+GET     /logout                     controllers.auth.Authentication.logout
 
 # Spark Jar
 GET     /sparkjar                   controllers.SparkJar.uploadpage
@@ -36,15 +36,15 @@ GET     /sparklist                  controllers.YarnList.sparklist
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 #TestIndex
-GET     /registration                controllers.Authentication.registration
-POST    /registration                controllers.Authentication.verifying
-GET     /mail                         controllers.Authentication.mail(user)
-GET     /mail/verifyingmail             controllers.Authentication.verifyingmail(email,validateCode)
-GET     /findpwd                   controllers.Authentication.findpwd
-GET    /captcha                          controllers.Authentication.captcha
-POST    /findpwd                  controllers.Authentication.resetpwd
-GET     /mail/setpwd                     controllers.Authentication.setpwd(email,pwdToken)
-POST   /updatepwd                   controllers.Authentication.updatepwd
+GET     /registration                controllers.auth.Authentication.registration
+POST    /registration                controllers.auth.Authentication.verifying
+GET     /mail                         controllers.auth.Authentication.mail(user)
+GET     /mail/verifyingmail             controllers.auth.Authentication.verifyingmail(email,validateCode)
+GET     /findpwd                   controllers.auth.Authentication.findpwd
+GET    /captcha                          controllers.auth.Authentication.captcha
+POST    /findpwd                  controllers.auth.Authentication.resetpwd
+GET     /mail/setpwd                     controllers.auth.Authentication.setpwd(email,pwdToken)
+POST   /updatepwd                   controllers.auth.Authentication.updatepwd
 
 
 

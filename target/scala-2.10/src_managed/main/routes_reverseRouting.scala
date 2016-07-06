@@ -1,6 +1,6 @@
-// @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
-// @HASH:5fc9c6262a404f85020d76a4ec941c73d9b701a6
-// @DATE:Tue Jul 05 12:32:10 CST 2016
+// @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
+// @HASH:3f9ddcc4cf8838281275e5f562f5e5a315bcd2d3
+// @DATE:Wed Jul 06 10:41:58 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,17 +13,6 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:69
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:62
-// @LINE:61
-// @LINE:56
-// @LINE:55
-// @LINE:54
-// @LINE:53
-// @LINE:52
 // @LINE:47
 // @LINE:46
 // @LINE:45
@@ -33,51 +22,10 @@ import Router.queryString
 // @LINE:41
 // @LINE:40
 // @LINE:39
-// @LINE:36
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-// @LINE:27
-// @LINE:26
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
-// @LINE:12
 // @LINE:9
 // @LINE:8
 // @LINE:7
-// @LINE:6
-package controllers {
-
-// @LINE:69
-// @LINE:36
-class ReverseAssets {
-    
-
-// @LINE:69
-// @LINE:36
-def at(file:String): Call = {
-   (file: @unchecked) match {
-// @LINE:36
-case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
-                                                        
-// @LINE:69
-case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
-                                                        
-   }
-}
-                                                
-    
-}
-                          
+package controllers.auth {
 
 // @LINE:47
 // @LINE:46
@@ -163,6 +111,62 @@ def authenticate(): Call = {
 // @LINE:7
 def login(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "login")
+}
+                                                
+    
+}
+                          
+}
+                  
+
+// @LINE:69
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:62
+// @LINE:61
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:36
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+// @LINE:27
+// @LINE:26
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+// @LINE:6
+package controllers {
+
+// @LINE:69
+// @LINE:36
+class ReverseAssets {
+    
+
+// @LINE:69
+// @LINE:36
+def at(file:String): Call = {
+   (file: @unchecked) match {
+// @LINE:36
+case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
+                                                        
+// @LINE:69
+case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
+                                                        
+   }
 }
                                                 
     
@@ -418,6 +422,172 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
                   
 
 
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:9
+// @LINE:8
+// @LINE:7
+package controllers.auth.javascript {
+
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:9
+// @LINE:8
+// @LINE:7
+class ReverseAuthentication {
+    
+
+// @LINE:47
+def updatepwd : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.updatepwd",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "updatepwd"})
+      }
+   """
+)
+                        
+
+// @LINE:44
+def captcha : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.captcha",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "captcha"})
+      }
+   """
+)
+                        
+
+// @LINE:41
+def mail : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.mail",
+   """
+      function(user) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mail" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("user", user)])})
+      }
+   """
+)
+                        
+
+// @LINE:43
+def findpwd : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.findpwd",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "findpwd"})
+      }
+   """
+)
+                        
+
+// @LINE:42
+def verifyingmail : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.verifyingmail",
+   """
+      function(email,validateCode) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mail/verifyingmail" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("validateCode", validateCode)])})
+      }
+   """
+)
+                        
+
+// @LINE:39
+def registration : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.registration",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "registration"})
+      }
+   """
+)
+                        
+
+// @LINE:9
+def logout : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.logout",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      }
+   """
+)
+                        
+
+// @LINE:45
+def resetpwd : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.resetpwd",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "findpwd"})
+      }
+   """
+)
+                        
+
+// @LINE:40
+def verifying : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.verifying",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "registration"})
+      }
+   """
+)
+                        
+
+// @LINE:46
+def setpwd : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.setpwd",
+   """
+      function(email,pwdToken) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mail/setpwd" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("pwdToken", pwdToken)])})
+      }
+   """
+)
+                        
+
+// @LINE:8
+def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.authenticate",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      }
+   """
+)
+                        
+
+// @LINE:7
+def login : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.auth.Authentication.login",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
 // @LINE:69
 // @LINE:67
 // @LINE:66
@@ -429,15 +599,6 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
 // @LINE:54
 // @LINE:53
 // @LINE:52
-// @LINE:47
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
-// @LINE:40
-// @LINE:39
 // @LINE:36
 // @LINE:34
 // @LINE:33
@@ -456,9 +617,6 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
 // @LINE:14
 // @LINE:13
 // @LINE:12
-// @LINE:9
-// @LINE:8
-// @LINE:7
 // @LINE:6
 package controllers.javascript {
 
@@ -479,156 +637,6 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
       if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
-      }
-   """
-)
-                        
-    
-}
-              
-
-// @LINE:47
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
-// @LINE:40
-// @LINE:39
-// @LINE:9
-// @LINE:8
-// @LINE:7
-class ReverseAuthentication {
-    
-
-// @LINE:47
-def updatepwd : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.updatepwd",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "updatepwd"})
-      }
-   """
-)
-                        
-
-// @LINE:44
-def captcha : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.captcha",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "captcha"})
-      }
-   """
-)
-                        
-
-// @LINE:41
-def mail : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.mail",
-   """
-      function(user) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mail" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("user", user)])})
-      }
-   """
-)
-                        
-
-// @LINE:43
-def findpwd : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.findpwd",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "findpwd"})
-      }
-   """
-)
-                        
-
-// @LINE:42
-def verifyingmail : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.verifyingmail",
-   """
-      function(email,validateCode) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mail/verifyingmail" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("validateCode", validateCode)])})
-      }
-   """
-)
-                        
-
-// @LINE:39
-def registration : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.registration",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "registration"})
-      }
-   """
-)
-                        
-
-// @LINE:9
-def logout : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.logout",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
-      }
-   """
-)
-                        
-
-// @LINE:45
-def resetpwd : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.resetpwd",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "findpwd"})
-      }
-   """
-)
-                        
-
-// @LINE:40
-def verifying : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.verifying",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "registration"})
-      }
-   """
-)
-                        
-
-// @LINE:46
-def setpwd : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.setpwd",
-   """
-      function(email,pwdToken) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "mail/setpwd" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("email", email), (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("pwdToken", pwdToken)])})
-      }
-   """
-)
-                        
-
-// @LINE:8
-def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.authenticate",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
-      }
-   """
-)
-                        
-
-// @LINE:7
-def login : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Authentication.login",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
       }
    """
 )
@@ -956,17 +964,6 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:69
-// @LINE:67
-// @LINE:66
-// @LINE:65
-// @LINE:62
-// @LINE:61
-// @LINE:56
-// @LINE:55
-// @LINE:54
-// @LINE:53
-// @LINE:52
 // @LINE:47
 // @LINE:46
 // @LINE:45
@@ -976,44 +973,11 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:41
 // @LINE:40
 // @LINE:39
-// @LINE:36
-// @LINE:34
-// @LINE:33
-// @LINE:32
-// @LINE:31
-// @LINE:30
-// @LINE:27
-// @LINE:26
-// @LINE:23
-// @LINE:22
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:16
-// @LINE:15
-// @LINE:14
-// @LINE:13
-// @LINE:12
 // @LINE:9
 // @LINE:8
 // @LINE:7
-// @LINE:6
-package controllers.ref {
+package controllers.auth.ref {
 
-
-// @LINE:69
-// @LINE:36
-class ReverseAssets {
-    
-
-// @LINE:36
-def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
-)
-                      
-    
-}
-                          
 
 // @LINE:47
 // @LINE:46
@@ -1032,73 +996,122 @@ class ReverseAuthentication {
 
 // @LINE:47
 def updatepwd(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.updatepwd(), HandlerDef(this, "controllers.Authentication", "updatepwd", Seq(), "POST", """""", _prefix + """updatepwd""")
+   controllers.auth.Authentication.updatepwd(), HandlerDef(this, "controllers.auth.Authentication", "updatepwd", Seq(), "POST", """""", _prefix + """updatepwd""")
 )
                       
 
 // @LINE:44
 def captcha(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.captcha(), HandlerDef(this, "controllers.Authentication", "captcha", Seq(), "GET", """""", _prefix + """captcha""")
+   controllers.auth.Authentication.captcha(), HandlerDef(this, "controllers.auth.Authentication", "captcha", Seq(), "GET", """""", _prefix + """captcha""")
 )
                       
 
 // @LINE:41
 def mail(user:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.mail(user), HandlerDef(this, "controllers.Authentication", "mail", Seq(classOf[String]), "GET", """""", _prefix + """mail""")
+   controllers.auth.Authentication.mail(user), HandlerDef(this, "controllers.auth.Authentication", "mail", Seq(classOf[String]), "GET", """""", _prefix + """mail""")
 )
                       
 
 // @LINE:43
 def findpwd(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.findpwd(), HandlerDef(this, "controllers.Authentication", "findpwd", Seq(), "GET", """""", _prefix + """findpwd""")
+   controllers.auth.Authentication.findpwd(), HandlerDef(this, "controllers.auth.Authentication", "findpwd", Seq(), "GET", """""", _prefix + """findpwd""")
 )
                       
 
 // @LINE:42
 def verifyingmail(email:String, validateCode:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.verifyingmail(email, validateCode), HandlerDef(this, "controllers.Authentication", "verifyingmail", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """mail/verifyingmail""")
+   controllers.auth.Authentication.verifyingmail(email, validateCode), HandlerDef(this, "controllers.auth.Authentication", "verifyingmail", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """mail/verifyingmail""")
 )
                       
 
 // @LINE:39
 def registration(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.registration(), HandlerDef(this, "controllers.Authentication", "registration", Seq(), "GET", """TestIndex""", _prefix + """registration""")
+   controllers.auth.Authentication.registration(), HandlerDef(this, "controllers.auth.Authentication", "registration", Seq(), "GET", """TestIndex""", _prefix + """registration""")
 )
                       
 
 // @LINE:9
 def logout(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.logout(), HandlerDef(this, "controllers.Authentication", "logout", Seq(), "GET", """""", _prefix + """logout""")
+   controllers.auth.Authentication.logout(), HandlerDef(this, "controllers.auth.Authentication", "logout", Seq(), "GET", """""", _prefix + """logout""")
 )
                       
 
 // @LINE:45
 def resetpwd(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.resetpwd(), HandlerDef(this, "controllers.Authentication", "resetpwd", Seq(), "POST", """""", _prefix + """findpwd""")
+   controllers.auth.Authentication.resetpwd(), HandlerDef(this, "controllers.auth.Authentication", "resetpwd", Seq(), "POST", """""", _prefix + """findpwd""")
 )
                       
 
 // @LINE:40
 def verifying(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.verifying(), HandlerDef(this, "controllers.Authentication", "verifying", Seq(), "POST", """""", _prefix + """registration""")
+   controllers.auth.Authentication.verifying(), HandlerDef(this, "controllers.auth.Authentication", "verifying", Seq(), "POST", """""", _prefix + """registration""")
 )
                       
 
 // @LINE:46
 def setpwd(email:String, pwdToken:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.setpwd(email, pwdToken), HandlerDef(this, "controllers.Authentication", "setpwd", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """mail/setpwd""")
+   controllers.auth.Authentication.setpwd(email, pwdToken), HandlerDef(this, "controllers.auth.Authentication", "setpwd", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """mail/setpwd""")
 )
                       
 
 // @LINE:8
 def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.authenticate(), HandlerDef(this, "controllers.Authentication", "authenticate", Seq(), "POST", """""", _prefix + """login""")
+   controllers.auth.Authentication.authenticate(), HandlerDef(this, "controllers.auth.Authentication", "authenticate", Seq(), "POST", """""", _prefix + """login""")
 )
                       
 
 // @LINE:7
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Authentication.login(), HandlerDef(this, "controllers.Authentication", "login", Seq(), "GET", """""", _prefix + """login""")
+   controllers.auth.Authentication.login(), HandlerDef(this, "controllers.auth.Authentication", "login", Seq(), "GET", """""", _prefix + """login""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:69
+// @LINE:67
+// @LINE:66
+// @LINE:65
+// @LINE:62
+// @LINE:61
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:36
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+// @LINE:27
+// @LINE:26
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
+// @LINE:15
+// @LINE:14
+// @LINE:13
+// @LINE:12
+// @LINE:6
+package controllers.ref {
+
+
+// @LINE:69
+// @LINE:36
+class ReverseAssets {
+    
+
+// @LINE:36
+def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
                       
     

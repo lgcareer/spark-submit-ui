@@ -6,7 +6,9 @@ import play.api.data._
 import play.api.data.Forms._
 import models._
 import views._
-import java.util.concurrent.{Executors,ExecutorService}
+import java.util.concurrent.{ExecutorService, Executors}
+
+import controllers.auth.Secured
 case class SqlModel (
     sql:String
 )

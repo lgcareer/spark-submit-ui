@@ -1,5 +1,6 @@
 package controllers
 
+import controllers.auth.Secured
 import play.api.mvc._
 import play.api.libs.json.Json
 
@@ -26,7 +27,6 @@ object YarnList extends Controller with Secured {
   }
 
   def sparklist = IsAuthenticated { username => implicit request =>
-
     Ok(views.html.sparklist.render())
   }
 

@@ -5,7 +5,7 @@
 <h2 class="form-heading"><font color="#FBFBFB">欢迎登陆 Neptune Data Platform</font></h2>
 <div class="app-cam">
 
-  @helper.form(routes.Authentication.authenticate){
+  @helper.form(controllers.auth.routes.Authentication.authenticate){
     @form.globalError.map { error =>
         <p class="error">
            <font color="red">错误的用户名或密码</font>

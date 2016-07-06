@@ -1,4 +1,4 @@
-package controllers
+package controllers.auth
 
 import play.api.mvc._
 
@@ -16,7 +16,7 @@ trait Secured extends {
    * Not authorized, forward to login
    */
   private def onUnauthorized(request: RequestHeader) = {
-    Results.Redirect(routes.Authentication.login)
+    Results.Redirect(controllers.auth.routes.Authentication.login)
   }
 
   /**

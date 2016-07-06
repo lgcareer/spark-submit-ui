@@ -1,7 +1,8 @@
 package controllers
 
-import java.util.concurrent.{Executors, ExecutorService}
+import java.util.concurrent.{ExecutorService, Executors}
 
+import controllers.auth.Secured
 import models.{JarModel, StoreJars}
 import play.api.data.Form
 import play.api.data.Forms._
