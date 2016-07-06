@@ -13,7 +13,7 @@ import scala.language.postfixOps
  * This controller creates an `Action` to handle HTTP requests to the
  * application's home page.
  */
-//@Singleton
+@Singleton
 object HomeController  extends Controller with Secured{
 
   /**
@@ -22,14 +22,10 @@ object HomeController  extends Controller with Secured{
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-//  def index = Action {
-//    Ok(views.html.index("Your new application is ready."))
-//  }
 
   def jobs=Action{
 
       val url3 ="http://10.77.136.159:4040/jobs/json/"
-
 
        val timeFuture= WS.url(url3).get() map{
           response => response.status match {
@@ -46,17 +42,13 @@ object HomeController  extends Controller with Secured{
 
     val job = Await.result(timeFuture, 50 seconds).get
     Ok(views.html.jobs(job))
-
-
   }
 
 
 
-  def streaming =Action {
-
+  def streaming = Action {
+    
     val url3 = "http://10.77.136.159:4040/streaming/json/"
-
-
     val timeFuture = WS.url(url3).get() map {
       response => response.status match {
         case 200 => Some {
@@ -71,8 +63,6 @@ object HomeController  extends Controller with Secured{
     Ok(views.html.streaming(job))
 
   }
-
-
 
 
 }
