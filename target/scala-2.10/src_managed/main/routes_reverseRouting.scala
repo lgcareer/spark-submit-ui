@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
-// @HASH:5fc9c6262a404f85020d76a4ec941c73d9b701a6
-// @DATE:Tue Jul 05 12:32:10 CST 2016
+// @HASH:1e09bcb38dac3c191c977dc86b4468ccfb18e7a7
+// @DATE:Wed Jul 06 10:57:34 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,6 +13,8 @@ import play.api.mvc._
 import Router.queryString
 
 
+// @LINE:73
+// @LINE:72
 // @LINE:69
 // @LINE:67
 // @LINE:66
@@ -293,6 +295,26 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "executejar")
 }
                           
 
+// @LINE:73
+// @LINE:72
+class ReverseHomeController {
+    
+
+// @LINE:72
+def jobs(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "jobs")
+}
+                                                
+
+// @LINE:73
+def streaming(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "streaming")
+}
+                                                
+    
+}
+                          
+
 // @LINE:6
 class ReverseApplication {
     
@@ -418,6 +440,8 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
                   
 
 
+// @LINE:73
+// @LINE:72
 // @LINE:69
 // @LINE:67
 // @LINE:66
@@ -782,6 +806,36 @@ def executejarpage : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:73
+// @LINE:72
+class ReverseHomeController {
+    
+
+// @LINE:72
+def jobs : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.HomeController.jobs",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jobs"})
+      }
+   """
+)
+                        
+
+// @LINE:73
+def streaming : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.HomeController.streaming",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "streaming"})
+      }
+   """
+)
+                        
+    
+}
+              
+
 // @LINE:6
 class ReverseApplication {
     
@@ -956,6 +1010,8 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:73
+// @LINE:72
 // @LINE:69
 // @LINE:67
 // @LINE:66
@@ -1167,6 +1223,26 @@ def uploadpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:14
 def executejarpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.SparkJar.executejarpage(), HandlerDef(this, "controllers.SparkJar", "executejarpage", Seq(), "GET", """""", _prefix + """executejar""")
+)
+                      
+    
+}
+                          
+
+// @LINE:73
+// @LINE:72
+class ReverseHomeController {
+    
+
+// @LINE:72
+def jobs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.HomeController.jobs(), HandlerDef(this, "controllers.HomeController", "jobs", Seq(), "GET", """""", _prefix + """jobs""")
+)
+                      
+
+// @LINE:73
+def streaming(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.HomeController.streaming(), HandlerDef(this, "controllers.HomeController", "streaming", Seq(), "GET", """""", _prefix + """streaming""")
 )
                       
     

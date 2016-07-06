@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160705123200"/>
+		date="20160706104125"/>
 	<dependencies>
 		<module organisation="org.codehaus.jackson" name="jackson-xc">
 			<revision name="1.8.8" status="release" pubdate="20120121092710" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="86">

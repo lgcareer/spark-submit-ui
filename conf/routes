@@ -69,5 +69,9 @@ GET     /workerlist                   controllers.YarnList.workerlist
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
+GET   /jobs                          controllers.HomeController.jobs
+GET   /streaming                     controllers.HomeController.streaming
+
+
 
 
