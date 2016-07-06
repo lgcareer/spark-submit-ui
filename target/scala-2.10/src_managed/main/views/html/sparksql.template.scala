@@ -1,13 +1,14 @@
 
 package views.html
 
+import controllers.spark.SqlModel
 import play.templates._
 import play.templates.TemplateMagic._
+
 import play.api.templates._
 import play.api.templates.PlayMagic._
 import models._
 import controllers._
-import controllers.spark.SqlModel
 import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
@@ -66,8 +67,8 @@ Seq[Any](format.raw/*1.24*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 15:28:15 CST 2016
-                    SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/sparksql.scala.html
+                    DATE: Wed Jul 06 15:38:07 CST 2016
+                    SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/sparksql.scala.html
                     HASH: 2df34fc93d3d392ce4b9b945d83fcf680b4ecb2c
                     MATRIX: 567->1|683->23|719->25|752->50|790->51|826->53|863->69|971->143|985->149|1051->207|1089->208|1983->1067|2016->1078|2056->1087|2089->1089
                     LINES: 19->1|22->1|23->2|23->2|23->2|24->3|24->3|28->7|28->7|28->7|28->7|52->31|52->31|54->33|55->34
