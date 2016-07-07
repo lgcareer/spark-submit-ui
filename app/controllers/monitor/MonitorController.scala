@@ -46,14 +46,12 @@ object MonitorController  extends Controller with Secured{
     val job = Await.result(timeFuture, 50 seconds).get
     Ok(views.html.jobs(job))
 
-
   }
-
-
 
   def streaming =Action {
 
     val url3 = "http://10.77.136.159:4040/streaming/json/"
+
 
     val timeFuture = WS.url(url3).get() map {
       response => response.status match {

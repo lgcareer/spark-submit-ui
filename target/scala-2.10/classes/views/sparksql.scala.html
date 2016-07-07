@@ -1,0 +1,35 @@
+@(form: Form[SqlModel])
+@main("Neptune Spark-sql"){
+@confirm("确定执行？")
+<div class="graphs">
+ <div class="xs">
+   <h3>Neptune Spark Sql</h3>
+   @helper.form(action=controllers.spark.routes.SparkSql.executesql){
+   <div class="tab-content">
+    <div class="tab-pane active" id="horizontal-form">
+        <div class="form-group">
+        <label for="txtarea1" class="col-sm-2 control-label">请输入要执行的SQL</label>
+          <div class="col-sm-8"><textarea name="sql" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="bs-example" data-example-id="form-validation-states">
+  </div>
+  
+  <div class="bs-example" data-example-id="form-validation-states-with-icons">
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <button class="btn-success btn" type="submit" onclick="getConfirmation();" >提交</button>
+            <button class="btn-inverse btn" type="reset" >重置</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+@copyright()
+</div>
+}
+}
+

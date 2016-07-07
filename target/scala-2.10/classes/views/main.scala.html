@@ -62,6 +62,7 @@
             <li> <a href="@controllers.spark.routes.SparkSql.sqlpage">spark-sql应用</a> </li>
             <li> <a href="@controllers.spark.routes.SparkStream.stream">spark-stream基于HDFS的应用</a></li>
             <li> <a href="@controllers.spark.routes.SparkStream.stream">spark-stream基于Kafka的应用</a></li>
+
           </ul>
           <!-- /.nav-second-level --> 
         </li>
@@ -85,9 +86,10 @@
           <ul class="nav nav-second-level">
             <li> <a href="@controllers.monitor.routes.MonitorController.streaming">Streaming监控</a> </li>
             <li> <a href="@controllers.monitor.routes.MonitorController.jobs">临时任务监控</a> </li>
-            <li> <a href="@controllers.hadoop.routes.YarnList.sparklist">调度监控</a> </li>
-           </ul>
+            <li> <a href="@controllers.monitor.routes.MonitorController.jobs">调度监控</a> </li>
            </li>
+
+          </ul>
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">

@@ -1,0 +1,32 @@
+@main("Neputune Spark-jar-uploadJar") {
+@confirm("确定上传jar文件吗？")
+<div class="graphs">
+<div class="xs">
+ <h3>Neptune Spark Stream</h3>
+
+ <div class="bs-example" data-example-id="form-validation-states-with-icons">
+
+    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+    <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+  </div>
+@helper.form(action = controllers.spark.routes.SparkStream.stremupload, 'enctype -> "multipart/form-data") {
+  <div class="form-group">
+    <label for="exampleInputFile">文件上传</label>
+    <input type="file" name="file">
+    <p class="help-block">请上传需要执行的jar文件！</p>
+  </div>
+  <div class="panel-footer">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <button class="btn-success btn" type="submit">提交</button>
+        <button class="btn-inverse btn" type="reset">重置</button>
+      </div>
+    </div>
+  </div>
+}
+
+</div>
+</div>
+@copyright()
+</div>
+}

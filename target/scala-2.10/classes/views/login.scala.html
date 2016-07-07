@@ -1,0 +1,48 @@
+@(form: Form[(String,String)])(implicit flash: Flash)
+
+@plain("Neptune Login"){
+<div class="login-logo"><img src="@routes.Assets.at("images/favicon.png")" alt=""/></div>
+<h2 class="form-heading"><font color="#FBFBFB">欢迎登陆 Neptune Data Platform</font></h2>
+<div class="app-cam">
+
+  @helper.form(controllers.auth.routes.Authentication.authenticate){
+    @form.globalError.map { error =>
+        <p class="error">
+           <font color="red">错误的用户名或密码</font>
+        </p>
+    }
+
+
+    @if(form.hasErrors && !form.error("email").isEmpty){
+    <p class="error"><font color="red">@form.error("email").get.message</font></p>
+    }
+
+
+    @flash.get("success").map { message =>
+        <p class="success">
+           <font color="red"> @message</font>
+        </p>
+    }
+
+
+    <input type="text" name="email" class="text" value="@form("email").value" placeholder="E-mail Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail Address';}">
+    <input type="password" name="password" value="Password"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+    <div class="submit">
+      <input type="submit" id="loginbutton" value="登陆">
+    </div>
+    <ul class="new">
+      <li class="new_left">
+
+        <p><a href="/findpwd"><font color="#FBFBFB"> 忘记密码 ?</font></a></p>
+      </li>
+      <li class="new_right">
+        <p class="sign"><a href="/registration"><font color="#FBFBFB">没有帐号?</font></a></p>
+      </li>
+      <div class="clearfix"></div>
+    </ul>
+}
+</div>
+<div class="copy_layout login">
+  <p><font color="#FBFBFB">Copyright &copy; 2016.Sina DSP All rights reserved.More Infomation 新浪微博 </font></p>
+</div>
+}
