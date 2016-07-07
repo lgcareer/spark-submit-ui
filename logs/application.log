@@ -1,21 +1,12 @@
-2016-07-07 18:25:12,599 - [INFO] - from play in pool-5-thread-3 
+2016-07-07 18:42:13,802 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-07-07 18:25:18,008 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-07 18:42:26,748 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-07-07 18:25:18,329 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-07 18:42:26,953 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-07-07 18:25:18,542 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-07-07 18:26:20,547 - [INFO] - from play in play-internal-execution-context-2 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-07-07 18:26:20,790 - [INFO] - from play in play-internal-execution-context-2 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-07-07 18:26:20,798 - [INFO] - from play in play-internal-execution-context-2 
+2016-07-07 18:42:27,045 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
