@@ -1,0 +1,14 @@
+@(result:Option[String])
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册结果</title>
+</head>
+<body>
+    @if(!result.isEmpty){
+     <p>@result.get</p>
+    }
+</body>
+</html>

@@ -1,0 +1,1911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fe5c0ad3-b0a8-4059-b719-2315aee55fbb" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$0125c630b49bc4e0cac1$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$0125c630b49bc4e0cac1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$6f9427ad8f356e65cf45$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$6f9427ad8f356e65cf45.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$7969b83bf6ff59596fad$$anonfun$$sbtdef$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$7969b83bf6ff59596fad$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$7969b83bf6ff59596fad.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$d85fc34039e1139656dd$$anonfun$$sbtdef$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$d85fc34039e1139656dd$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project/project/target/config-classes/$d85fc34039e1139656dd.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$23$$anonfun$apply$23.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$23.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$24$$anonfun$apply$24.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$24.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$25$$anonfun$apply$25.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$25.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$26$$anonfun$apply$26.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$26.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$27$$anonfun$apply$27.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$27.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$28$$anonfun$apply$28.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$28.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$29$$anonfun$apply$29.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$29.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$30.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$31$$anonfun$apply$31.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$31.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$32$$anonfun$apply$32.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$32.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$33$$anonfun$apply$33.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$33.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$34$$anonfun$apply$34.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$34.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$35$$anonfun$apply$35.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$35.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$36$$anonfun$apply$36.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$36.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$37$$anonfun$apply$37.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$37.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$38$$anonfun$apply$38.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$38.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$39$$anonfun$apply$39.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$39.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$40$$anonfun$apply$40.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$40.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$41$$anonfun$apply$41.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$41.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$42.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$43$$anonfun$apply$43.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$43.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$44$$anonfun$apply$44.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/Routes$$anonfun$routes$1$$anonfun$applyOrElse$44.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$10.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$11.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$12.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$13.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$14.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$17.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$18.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$19.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$20.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$21.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$22.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$23.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$24.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$authenticate$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$authenticate$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$authenticate$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$captcha$1$$anonfun$apply$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$captcha$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$findpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$login$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$logout$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$mail$1$$anonfun$16.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$mail$1$$anonfun$apply$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$mail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$registration$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1$$anonfun$apply$12.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1$$anonfun$apply$7$$anonfun$apply$10$$anonfun$apply$11.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1$$anonfun$apply$7$$anonfun$apply$10.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1$$anonfun$apply$7$$anonfun$apply$8$$anonfun$apply$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1$$anonfun$apply$7$$anonfun$apply$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1$$anonfun$apply$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$resetpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$sendEmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$sendEmail$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$sendEmail$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$sendEmail$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$sendEmail$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$sendEmail$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$setpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$13$$anonfun$apply$14$$anonfun$apply$15.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$13$$anonfun$apply$14.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$13$$anonfun$apply$16$$anonfun$apply$17.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$13$$anonfun$apply$16.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$13.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$18$$anonfun$25.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1$$anonfun$apply$18.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$updatepwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$verifyCaptcha$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$verifying$1$$anonfun$apply$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$verifying$1$$anonfun$apply$4$$anonfun$15.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$verifying$1$$anonfun$apply$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$verifying$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$$anonfun$verifyingmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Authentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ExecuteModel$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ExecuteModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/MonitorController$$anonfun$jobs$1$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/MonitorController$$anonfun$jobs$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/MonitorController$$anonfun$streaming$1$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/MonitorController$$anonfun$streaming$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/MonitorController$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/MonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ReverseAuthentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ReverseMonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ReverseSparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ReverseSparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ReverseSparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ReverseYarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Secured$$anonfun$IsAuthenticated$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Secured$$anonfun$IsAuthenticated$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Secured$$anonfun$IsAuthenticated$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Secured$class.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/Secured.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$errorpage$1$$anonfun$apply$9$$anonfun$apply$10.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$errorpage$1$$anonfun$apply$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$errorpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejar$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejar$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8$ThreadDemo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejar$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejar$1$$anonfun$apply$5$$anonfun$apply$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejar$1$$anonfun$apply$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejar$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$executejarpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$upload$1$$anonfun$apply$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$upload$1$$anonfun$apply$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$upload$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$uploadpage$1$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$uploadpage$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$$anonfun$uploadpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$6$ThreadDemo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$executesql$1$$anonfun$apply$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$executesql$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$sqlpage$1$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$sqlpage$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$$anonfun$sqlpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$errorpage$1$$anonfun$apply$9$$anonfun$apply$10.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$errorpage$1$$anonfun$apply$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$errorpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$stream$1$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$stream$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$stream$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamArgs$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamExecute$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamExecute$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8$ThreadDemo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamExecute$1$$anonfun$apply$5$$anonfun$apply$6$$anonfun$apply$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamExecute$1$$anonfun$apply$5$$anonfun$apply$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamExecute$1$$anonfun$apply$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$streamExecute$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$stremupload$1$$anonfun$apply$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$$anonfun$stremupload$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SqlModel$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/SqlModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/StreamModel$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/StreamModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$spark_info$1$$anonfun$apply$9$$anonfun$apply$10.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$spark_info$1$$anonfun$apply$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$spark_info$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$sparklist$1$$anonfun$apply$7$$anonfun$apply$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$sparklist$1$$anonfun$apply$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$sparklist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$workerlist$1$$anonfun$apply$5$$anonfun$apply$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$workerlist$1$$anonfun$apply$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$workerlist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$yarnInfo$1$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$yarnInfo$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$yarnInfo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$yarnlist$1$$anonfun$apply$3$$anonfun$apply$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$yarnlist$1$$anonfun$apply$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$$anonfun$yarnlist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/YarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/javascript/ReverseAuthentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/javascript/ReverseMonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/javascript/ReverseSparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/javascript/ReverseSparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/javascript/ReverseSparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/javascript/ReverseYarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$authenticate$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$captcha$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$findpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$login$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$logout$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$mail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$registration$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$resetpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$setpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$updatepwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$verifying$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication$$anonfun$verifyingmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseAuthentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseMonitorController$$anonfun$jobs$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseMonitorController$$anonfun$streaming$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseMonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkJar$$anonfun$errorpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkJar$$anonfun$executejar$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkJar$$anonfun$executejarpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkJar$$anonfun$upload$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkJar$$anonfun$uploadpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkSql$$anonfun$executesql$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkSql$$anonfun$sqlpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkStream$$anonfun$errorpage$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkStream$$anonfun$stream$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkStream$$anonfun$streamArgs$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkStream$$anonfun$streamExecute$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkStream$$anonfun$stremupload$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseSparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseYarnList$$anonfun$spark_info$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseYarnList$$anonfun$sparklist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseYarnList$$anonfun$workerlist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseYarnList$$anonfun$yarnInfo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseYarnList$$anonfun$yarnlist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/controllers/ref/ReverseYarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$generateVerifyCode$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$getRandomIntColor$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$getRandomRgb$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$outputImage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$outputImage$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$outputImage$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$outputImage$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$shearX$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$$anonfun$shearY$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/CaptchaUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Email$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Email$$anonfun$activatePWD$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Email$$anonfun$activateUser$1$$anonfun$applyOrElse$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Email$$anonfun$activateUser$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Email$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Email.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/EmailExecption$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/EmailExecption.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/EmailStatus.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Execute$$anonfun$main$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Execute$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Execute.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/ExecuteSql$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/ExecuteSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Failure$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Failure.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/JDBCUtil$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/JDBCUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/JarModel$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/JarModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/JobUi$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/JobUi.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/MD5Utils$$anonfun$encode2hex$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/MD5Utils$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/MD5Utils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Registration$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Registration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/SparkTotalinfo$$anonfun$findAll$1$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/SparkTotalinfo$$anonfun$findAll$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/SparkTotalinfo$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/SparkTotalinfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/SqlForm$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/SqlForm.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/StoreJars$$anonfun$insertJarToDb$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/StoreJars$$anonfun$insertJarToDb$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/StoreJars$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/StoreJars.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/StreamingUi$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/StreamingUi.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Success$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Success.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$authenticate$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$authenticate$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$create$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$findAll$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$findAll$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$findByEmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$findByStatusByEmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$findNameByEmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$isActivate$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$updatePWD$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$$anonfun$updateStatus$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Verify$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Verify.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/VerifyException$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/VerifyException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Yarnlist$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/Yarnlist.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/ActorMetrics.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/ActorStack$$anonfun$receive$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/ActorStack$class.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/ActorStack.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/AkkaTestUtils$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/AkkaTestUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/InstrumentedActor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/ProductionReaper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Reaper$$anonfun$wrappedReceive$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Reaper$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Reaper$Reaped$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Reaper$WatchMe$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Reaper$WatchMe.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Reaper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Slf4jLogging$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Slf4jLogging$$anonfun$receive$1$$anonfun$applyOrElse$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Slf4jLogging$$anonfun$receive$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Slf4jLogging$class.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/actor/Slf4jLogging.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/deploy/package$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/deploy/package.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/io/package$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/io/package.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/ui$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/models/ui.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/findpwd$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/findpwd$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/findpwd$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/findpwd.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/he$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/he$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/he.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/jobs$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/jobs$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/jobs.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/registed$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/registed$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/registed.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/register$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/register$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/register$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/register$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/register.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/setpwd$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/setpwd$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/setpwd$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/setpwd$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/setpwd.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/streaming$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/streaming$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/html/streaming.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$23$$anonfun$apply$23.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$23.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$24$$anonfun$apply$24.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$24.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$25$$anonfun$apply$25.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$25.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$26$$anonfun$apply$26.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$26.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$27$$anonfun$apply$27.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$27.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$28$$anonfun$apply$28.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$28.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$29$$anonfun$apply$29.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$29.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$30$$anonfun$apply$30.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$30.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$31$$anonfun$apply$31.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$31.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$32$$anonfun$apply$32.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$32.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$33$$anonfun$apply$33.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$33.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$34$$anonfun$apply$34.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$34.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$35$$anonfun$apply$35.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$35.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$36$$anonfun$apply$36.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$36.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$37$$anonfun$apply$37.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$37.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$38$$anonfun$apply$38.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$38.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$39$$anonfun$apply$39.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$39.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$40$$anonfun$apply$40.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$40.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$41$$anonfun$apply$41.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$41.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$42$$anonfun$apply$42.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$42.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$43$$anonfun$apply$43.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$43.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$44$$anonfun$apply$44.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/Routes$$anonfun$routes$1$$anonfun$applyOrElse$44.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ReverseAuthentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ReverseMonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ReverseSparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ReverseSparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ReverseSparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ReverseYarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/javascript/ReverseAuthentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/javascript/ReverseMonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/javascript/ReverseSparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/javascript/ReverseSparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/javascript/ReverseSparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/javascript/ReverseYarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$authenticate$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$captcha$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$findpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$login$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$logout$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$mail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$registration$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$resetpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$setpwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$updatepwd$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$verifying$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication$$anonfun$verifyingmail$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseAuthentication.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseMonitorController$$anonfun$jobs$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseMonitorController$$anonfun$streaming$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseMonitorController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkJar$$anonfun$errorpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkJar$$anonfun$executejar$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkJar$$anonfun$executejarpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkJar$$anonfun$upload$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkJar$$anonfun$uploadpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkJar.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkSql$$anonfun$executesql$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkSql$$anonfun$sqlpage$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkSql.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkStream$$anonfun$errorpage$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkStream$$anonfun$stream$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkStream$$anonfun$streamArgs$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkStream$$anonfun$streamExecute$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkStream$$anonfun$stremupload$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseSparkStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseYarnList$$anonfun$spark_info$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseYarnList$$anonfun$sparklist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseYarnList$$anonfun$workerlist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseYarnList$$anonfun$yarnInfo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseYarnList$$anonfun$yarnlist$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/ref/ReverseYarnList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/routes$javascript.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/routes$ref.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/controllers/routes.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/findpwd$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/findpwd$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/findpwd$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/findpwd.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/he$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/he$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/he.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/jobs$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/jobs$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/jobs.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/registed$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/registed$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/registed.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/register$$anonfun$apply$1$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/register$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/register$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/register$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/register.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/setpwd$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/setpwd$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/setpwd$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/setpwd$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/setpwd.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/streaming$$anonfun$f$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/streaming$.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes_managed/views/html/streaming.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$2$$anon$1$$anonfun$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$2$$anon$1$$anonfun$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$2$$anon$1$delayedInit$body.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$2$$anon$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$5$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$6.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$7$$anonfun$apply$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$7.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$8.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$$anonfun$9.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2$delayedInit$body.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3$$anon$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2$$anonfun$apply$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/ApplicationSpec.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec$$anonfun$1$$anonfun$apply$1$$anon$1$$anonfun$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec$$anonfun$1$$anonfun$apply$1$$anon$1$$anonfun$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec$$anonfun$1$$anonfun$apply$1$$anon$1$delayedInit$body.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec$$anonfun$1$$anonfun$apply$1$$anon$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec$$anonfun$1$$anonfun$apply$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec$$anonfun$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/test-classes/IntegrationSpec.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__aopalliance_aopalliance_1_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__asm_asm_3_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__cglib_cglib_nodep_2_1_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__ch_qos_logback_logback_classic_1_0_13_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__ch_qos_logback_logback_core_1_0_13_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_clearspring_analytics_stream_2_7_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_esotericsoftware_kryo_kryo_2_21_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_esotericsoftware_minlog_minlog_1_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_esotericsoftware_reflectasm_reflectasm_1_07_shaded_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_annotations_2_4_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_core_2_4_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_databind_2_4_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_fasterxml_jackson_module_jackson_module_scala_2_10_2_4_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_github_scala_incubator_io_scala_io_core_2_10_0_4_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_github_scala_incubator_io_scala_io_file_2_10_0_4_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_google_code_findbugs_jsr305_1_3_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_google_guava_guava_14_0_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_google_inject_guice_3_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_google_protobuf_protobuf_java_2_5_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_h2database_h2_1_3_172_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_jolbox_bonecp_0_8_0_RELEASE_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_jsuereth_scala_arm_2_10_1_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_ning_async_http_client_1_7_18_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_ning_compress_lzf_1_0_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_novocode_junit_interface_0_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_jersey_contribs_jersey_guice_1_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_jersey_jersey_core_1_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_jersey_jersey_json_1_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_jersey_jersey_server_1_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_jersey_jersey_test_framework_jersey_test_framework_grizzly2_1_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_mail_javax_mail_1_5_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_sun_xml_bind_jaxb_impl_2_2_3_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_thoughtworks_paranamer_paranamer_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_twitter_chill_2_10_0_5_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_twitter_chill_java_0_5_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_akka_akka_actor_2_10_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_akka_akka_slf4j_2_10_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_config_1_2_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_netty_netty_http_pipelining_1_1_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_anorm_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_cache_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_datacommons_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_exceptions_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_functional_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_iteratees_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_jdbc_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_json_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_test_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_sbt_link_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_templates_2_10_2_2_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_beanutils_commons_beanutils_1_7_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_beanutils_commons_beanutils_core_1_8_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_cli_commons_cli_1_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_codec_commons_codec_1_5_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_codec_commons_codec_1_7_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_collections_commons_collections_3_2_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_configuration_commons_configuration_1_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_digester_commons_digester_1_8_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_httpclient_commons_httpclient_3_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_io_commons_io_2_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_lang_commons_lang_2_5_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_logging_commons_logging_1_1_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__commons_net_commons_net_2_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_dropwizard_metrics_metrics_core_3_1_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_dropwizard_metrics_metrics_graphite_3_1_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_dropwizard_metrics_metrics_json_3_1_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_dropwizard_metrics_metrics_jvm_3_1_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_netty_netty_3_8_0_Final_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__io_netty_netty_all_4_0_23_Final_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__javax_activation_activation_1_1_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__javax_inject_javax_inject_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__javax_transaction_jta_1_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__javax_xml_bind_jaxb_api_2_2_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__jline_jline_0_9_94_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__joda_time_joda_time_2_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__junit_junit_4_11_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__log4j_log4j_1_2_17_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__mysql_mysql_connector_java_5_1_29_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_java_dev_jets3t_jets3t_0_7_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_java_dev_jna_jna_3_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_java_dev_jna_platform_3_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_jpountz_lz4_lz4_1_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_razorvine_pyrolite_4_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_sf_ehcache_ehcache_core_2_6_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_sf_py4j_py4j_0_8_2_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_sourceforge_cssparser_cssparser_0_9_9_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_sourceforge_htmlunit_htmlunit_2_12_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_sourceforge_htmlunit_htmlunit_core_js_2_12_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__net_sourceforge_nekohtml_nekohtml_1_9_18_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__oauth_signpost_signpost_commonshttp4_1_2_1_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__oauth_signpost_signpost_core_1_2_1_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_avro_avro_1_7_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_commons_commons_compress_1_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_commons_commons_email_1_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_commons_commons_exec_1_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_commons_commons_lang3_3_3_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_commons_commons_math3_3_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_commons_commons_math_2_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_curator_curator_client_2_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_curator_curator_framework_2_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_curator_curator_recipes_2_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_annotations_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_auth_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_client_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_common_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_hdfs_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_mapreduce_client_app_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_mapreduce_client_common_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_mapreduce_client_core_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_mapreduce_client_jobclient_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_mapreduce_client_shuffle_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_yarn_api_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_yarn_client_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_yarn_common_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_hadoop_hadoop_yarn_server_common_2_2_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_httpcomponents_httpclient_4_0_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_httpcomponents_httpclient_4_2_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_httpcomponents_httpcore_4_0_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_httpcomponents_httpcore_4_2_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_httpcomponents_httpmime_4_2_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_ivy_ivy_2_4_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_mesos_mesos_0_21_1_shaded_protobuf_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_spark_spark_core_2_10_1_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_spark_spark_launcher_2_10_1_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_spark_spark_network_common_2_10_1_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_spark_spark_network_shuffle_2_10_1_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_spark_spark_unsafe_2_10_1_4_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_zookeeper_zookeeper_3_4_5_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_codehaus_jackson_jackson_core_asl_1_8_8_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_codehaus_jackson_jackson_jaxrs_1_8_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_codehaus_jackson_jackson_xc_1_8_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_codehaus_jettison_jettison_1_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_easytesting_fest_assert_1_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_easytesting_fest_util_1_1_6_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_eclipse_jetty_jetty_http_8_1_9_v20130131_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_eclipse_jetty_jetty_io_8_1_9_v20130131_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_eclipse_jetty_jetty_util_8_1_9_v20130131_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_eclipse_jetty_jetty_websocket_8_1_9_v20130131_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_eclipse_jetty_orbit_javax_servlet_3_0_0_v201112011016_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_fluentlenium_fluentlenium_core_0_8_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_fluentlenium_fluentlenium_festassert_0_8_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_hamcrest_hamcrest_core_1_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_javassist_javassist_3_18_0_GA_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_joda_joda_convert_1_3_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json4s_json4s_ast_2_10_3_2_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json4s_json4s_core_2_10_3_2_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json4s_json4s_jackson_2_10_3_2_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_json_json_20080701_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_mortbay_jetty_jetty_util_6_1_26_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_objenesis_objenesis_1_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_roaringbitmap_RoaringBitmap_0_4_5_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_compiler_2_10_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_library_2_10_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scala_reflect_2_10_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_lang_scalap_2_10_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_stm_scala_stm_2_10_0_7_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scala_tools_testing_test_interface_0_5_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalaz_scalaz_concurrent_2_10_7_0_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalaz_scalaz_core_2_10_7_0_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_scalaz_scalaz_effect_2_10_7_0_2_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_android_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_api_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_chrome_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_firefox_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_htmlunit_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_ie_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_iphone_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_java_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_remote_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_safari_driver_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_seleniumhq_selenium_selenium_support_2_32_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_jcl_over_slf4j_1_7_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_jul_to_slf4j_1_7_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_slf4j_api_1_7_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_slf4j_log4j12_1_7_10_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_sonatype_sisu_inject_cglib_2_2_1_v20090111_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_spark_project_akka_akka_actor_2_10_2_3_4_spark_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_spark_project_akka_akka_remote_2_10_2_3_4_spark_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_spark_project_akka_akka_slf4j_2_10_2_3_4_spark_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_spark_project_protobuf_protobuf_java_2_5_0_spark_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_spark_project_spark_unused_1_0_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_specs2_specs2_2_10_2_1_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_tachyonproject_tachyon_0_6_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_tachyonproject_tachyon_client_0_6_4_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_tukaani_xz_1_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_uncommons_maths_uncommons_maths_1_2_2a_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_w3c_css_sac_1_3_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_webbitserver_webbit_0_4_14_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__org_xerial_snappy_snappy_java_1_1_1_7_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__oro_oro_2_0_8_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__stax_stax_api_1_0_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__tyrex_tyrex_1_0_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__xalan_serializer_2_7_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__xalan_xalan_2_7_1_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__xerces_xercesImpl_2_11_0_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__xml_apis_xml_apis_1_4_01_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/SBT__xmlenc_xmlenc_0_52_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/.history" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/default/ficusspark$sources_2.10/1.0-SNAPSHOT/resolved.xml.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/default/ficusspark$sources_2.10/1.0-SNAPSHOT/resolved.xml.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-compile-internal.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-compile.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-docs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-optional.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-plugin.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-provided.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-runtime-internal.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-runtime.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-scala-tool.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-sources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-test-internal.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark$sources_2.10-test.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/blank.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/confirm.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/copyright.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/error.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/errors/fzf.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/findpwd.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/index.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/jobs.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/login.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/main.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/nothing.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/plain.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/registed.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/register.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/setpwd.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/sparkjar.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/sparklist.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/sparksql.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/stream.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/streamArgs.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/streaming.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/upload.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/classes/views/yarnlist.scala.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/findpwd.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/he.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/jobs.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/registed.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/register.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/setpwd.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.10/src_managed/main/views/html/streaming.template.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/cache/ficusspark/global/copy-assets" afterPath="$PROJECT_DIR$/target/scala-2.10/cache/ficusspark/global/copy-assets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.10/output_dsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/ficusspark.iml" afterPath="$PROJECT_DIR$/.idea/modules/ficusspark.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/streaming.scala.html" afterPath="$PROJECT_DIR$/app/views/streaming.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/ficusspark_2.10/1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/resolution-cache/default/ficusspark_2.10/1.0-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/default/ficusspark_2.10/1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/default/ficusspark_2.10/1.0-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-compile-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-compile.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-docs.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-optional.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-plugin.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-pom.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-provided.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-runtime.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-scala-tool.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-sources.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-sources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-test-internal.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-test.xml" afterPath="$PROJECT_DIR$/target/resolution-cache/reports/default-ficusspark_2.10-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.10/cache/ficusspark/compile/play_instrumentation" afterPath="$PROJECT_DIR$/target/scala-2.10/cache/ficusspark/compile/play_instrumentation" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.10" />
+    </list>
+    <ignored path="ficusspark.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/project/project/target/" />
+    <ignored path="$PROJECT_DIR$/project/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state />
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ficusspark" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Authentication.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/auth/Authentication.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-493">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="YarnList.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/hadoop/YarnList.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="streaming.scala.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/streaming.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/views/streaming.scala.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1280" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hadoop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusSpark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ficusspark" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ficusspark" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="lastUpdateTimestamp" value="1467887016507" />
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="ficusSpark" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="ficusspark" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="ficusspark-build" />
+                <option name="path" value="$PROJECT_DIR$/project" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../json" value="1463034805000" />
+        <entry key="$PROJECT_DIR$/../play-example" value="1466571846000" />
+        <entry key="$PROJECT_DIR$/../play-ui" value="1466571846000" />
+        <entry key="$PROJECT_DIR$/../spark-jobserver-master" value="1466686616000" />
+        <entry key="$USER_HOME$/app/ficusspark" value="1467822192000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1280" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.4978701" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46839377" sideWeight="0.5170394" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46839377" sideWeight="0.48296058" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23748669" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49676898" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.49434572" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/streaming.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/Slf4jLogging.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/ActorMetrics.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/InstrumentedActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/AkkaTestUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/auth/Authentication.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Application.scala" />
+    <entry file="file://$PROJECT_DIR$/app/models/io/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/errors/fzf.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/io/SqlForm.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spark/SparkJar.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spark/SparkSql.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spark/SparkStream.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/io/SparkClusterInfo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Mail/RegisterExecption.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ui/UI.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user/User.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/utils/Captcha.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/utils/Execute.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/utils/ExecuteSql.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/utils/JDBCUtil.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/utils/MD5Utils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Mail/Email.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/io/StoreJars.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/auth/Secured.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/conf/routes" />
+    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/he.scala.html" />
+    <entry file="file://$PROJECT_DIR$/app/views/registed.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/register.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/routes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/io/Yarnlist.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jobs.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/plain.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/Reaper.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/deploy/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/AkkaTestUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/ActorStack.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/InstrumentedActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/Slf4jLogging.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/actor/ActorMetrics.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#22#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/.history">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/monitor/MonitorController.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/auth/Authentication.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/hadoop/YarnList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/streaming.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.10.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ficusspark</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>SBT: aopalliance:aopalliance:1.0:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
