@@ -1,4 +1,4 @@
-package models.utils
+package models
 
 import java.awt.geom.AffineTransform
 import java.awt._

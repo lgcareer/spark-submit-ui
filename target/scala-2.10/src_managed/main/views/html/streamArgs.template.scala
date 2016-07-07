@@ -1,7 +1,6 @@
 
 package views.html
 
-import controllers.spark.ExecuteModel
 import play.templates._
 import play.templates.TemplateMagic._
 
@@ -33,7 +32,7 @@ Seq[Any](format.raw/*1.28*/("""
                         <h3>基于执行参数设置</h3>
                         <div class="tab-content">
                             <div class="tab-pane active" id="horizontal-form">
-                            """),_display_(Seq[Any](/*12.30*/helper/*12.36*/.form(action= controllers.spark.routes.SparkJar.executejar)/*12.95*/ {_display_(Seq[Any](format.raw/*12.97*/("""
+                            """),_display_(Seq[Any](/*12.30*/helper/*12.36*/.form(action= routes.SparkJar.executejar)/*12.77*/ {_display_(Seq[Any](format.raw/*12.79*/("""
                                 <div class="form-horizontal" >
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg" id="DataSource">--DataSource</label>
@@ -141,10 +140,10 @@ Seq[Any](format.raw/*1.28*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Jul 06 15:38:07 CST 2016
-                    SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/streamArgs.scala.html
-                    HASH: a63fc6486c3f9de720e6a78ede6083128c494b26
-                    MATRIX: 573->1|676->29|690->36|774->40|876->27|903->103|939->105|980->138|1018->139|1314->399|1329->405|1397->464|1437->466|7804->6801|7961->6921|7995->6932|8077->6982
+                    DATE: Thu Jul 07 14:23:36 CST 2016
+                    SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/streamArgs.scala.html
+                    HASH: 2e5650511b7a773f405677529e059cdc003c74ae
+                    MATRIX: 573->1|676->29|690->36|774->40|876->27|903->103|939->105|980->138|1018->139|1314->399|1329->405|1379->446|1419->448|7786->6783|7943->6903|7977->6914|8059->6964
                     LINES: 19->1|21->2|21->2|23->2|26->1|27->4|28->5|28->5|28->5|35->12|35->12|35->12|35->12|113->90|123->100|123->100|130->107
                     -- GENERATED --
                 */

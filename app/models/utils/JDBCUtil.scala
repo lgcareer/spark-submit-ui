@@ -1,4 +1,4 @@
-package models.utils
+package models
 
 import java.sql.{Connection, DriverManager}
 import scala.collection.mutable.ArrayBuffer
@@ -33,7 +33,7 @@ object JDBCUtil {
         arr += MetriJson
       }
     } catch {
-      case e => e.printStackTrace
+      case e:Exception => e.printStackTrace
     }
     connection.close()
     arr

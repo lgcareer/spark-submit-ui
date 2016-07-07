@@ -1,4 +1,4 @@
-package models.utils
+package models
 
 import org.apache.spark.deploy.SparkSubmit
 import play.Logger

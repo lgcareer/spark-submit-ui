@@ -1,9 +1,8 @@
-package controllers.spark
+package controllers
 
 import java.util.concurrent.{ExecutorService, Executors}
 
-import controllers.auth.Secured
-import models.io.{JarModel, StoreJars}
+import models._
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.mvc.{Action, Controller}
@@ -50,9 +49,9 @@ object SparkStream extends Controller with Secured{
       val filename = picture.filename
       val contentType = picture.contentType
       picture.ref.moveTo(new File(s"/tmp/file/$filename"))
-      Redirect(controllers.spark.routes.SparkStream.streamArgs)
+      Redirect(routes.SparkStream.streamArgs)
     }.getOrElse {
-      Redirect(controllers.spark.routes.SparkJar.errorpage())
+      Redirect(routes.SparkJar.errorpage())
     }
   }
 

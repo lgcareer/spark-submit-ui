@@ -1,11 +1,8 @@
-package controllers.spark
+package controllers
 
 import java.util.concurrent.{ExecutorService, Executors}
 
-import controllers.auth.Secured
 import models._
-import models.io.{JarModel, StoreJars}
-import play.api._
 import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
@@ -51,9 +48,9 @@ object SparkJar extends Controller with Secured {
         val contentType = picture.contentType
         picture.ref.moveTo(new File(s"/tmp/file/$filename"),true)
 
-        Redirect(controllers.spark.routes.SparkJar.executejar())
+        Redirect(routes.SparkJar.executejar())
         }.getOrElse {
-          Redirect(controllers.spark.routes.SparkJar.errorpage())
+          Redirect(routes.SparkJar.errorpage())
         }
       }
 
@@ -78,13 +75,14 @@ object SparkJar extends Controller with Secured {
               "--master  yarn-cluster",
               argss.jarLocation,
               argss.args1
+
               )
             StoreJars.insertJarToDb(JarModel(username,argss.jarLocation))
             class ThreadDemo(filename:String) extends Runnable{
               override def run(){
                 println("start execute jar")
               //  models.utils.Execute.main(arguments)
-                models.utils.Execute.main(arguments)
+                Execute.main(arguments)
                 println("end execute jar")
               }
             }

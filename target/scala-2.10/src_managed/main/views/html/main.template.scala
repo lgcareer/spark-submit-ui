@@ -66,7 +66,7 @@ Seq[Any](format.raw/*1.57*/("""
         <li class="m_2"><a href="#"><i class="fa fa-usd"></i> Payments <span class="label label-default">0</span></a></li>
         <li class="m_2"><a href="#"><i class="fa fa-file"></i> 任务列表 <span class="label label-primary">0</span></a></li>
         <li class="divider"></li>
-        <li class="m_2"><a href=""""),_display_(Seq[Any](/*48.35*/controllers/*48.46*/.auth.routes.Authentication.logout)),format.raw/*48.80*/(""""><i class="fa fa-lock"></i> 退出</a></li>
+        <li class="m_2"><a href=""""),_display_(Seq[Any](/*48.35*/routes/*48.41*/.Authentication.logout)),format.raw/*48.63*/(""""><i class="fa fa-lock"></i> 退出</a></li>
       </ul>
     </li>
   </ul>
@@ -79,57 +79,57 @@ Seq[Any](format.raw/*1.57*/("""
         <li> <a href=""""),_display_(Seq[Any](/*58.24*/routes/*58.30*/.Application.index)),format.raw/*58.48*/(""""><i class="fa fa-dashboard fa-fw nav_icon"></i>仪表盘</a> </li>
         <li> <a href="#"><i class="fa fa-check-square-o nav_icon"></i>数据应用面板<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*61.28*/controllers/*61.39*/.spark.routes.SparkJar.uploadpage)),format.raw/*61.72*/("""">spark-jar应用</a></li>
-            <li> <a href=""""),_display_(Seq[Any](/*62.28*/controllers/*62.39*/.spark.routes.SparkSql.sqlpage)),format.raw/*62.69*/("""">spark-sql应用</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*63.28*/controllers/*63.39*/.spark.routes.SparkStream.stream)),format.raw/*63.71*/("""">spark-stream基于HDFS的应用</a></li>
-            <li> <a href=""""),_display_(Seq[Any](/*64.28*/controllers/*64.39*/.spark.routes.SparkStream.stream)),format.raw/*64.71*/("""">spark-stream基于Kafka的应用</a></li>
+            <li> <a href=""""),_display_(Seq[Any](/*61.28*/routes/*61.34*/.SparkJar.uploadpage)),format.raw/*61.54*/("""">spark-jar应用</a></li>
+            <li> <a href=""""),_display_(Seq[Any](/*62.28*/routes/*62.34*/.SparkSql.sqlpage)),format.raw/*62.51*/("""">spark-sql应用</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*63.28*/routes/*63.34*/.SparkStream.stream)),format.raw/*63.53*/("""">spark-stream基于HDFS的应用</a></li>
+            <li> <a href=""""),_display_(Seq[Any](/*64.28*/routes/*64.34*/.SparkStream.stream)),format.raw/*64.53*/("""">spark-stream基于Kafka的应用</a></li>
           </ul>
           <!-- /.nav-second-level --> 
         </li>
         <li> <a href="#"><i class="fa fa-table nav_icon"></i>App数据<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*70.28*/controllers/*70.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*70.71*/("""">Yarn数据列表</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*71.28*/controllers/*71.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*71.72*/("""">Spark数据列表</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*70.28*/routes/*70.34*/.YarnList.yarnlist)),format.raw/*70.52*/("""">Yarn数据列表</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*71.28*/routes/*71.34*/.YarnList.sparklist)),format.raw/*71.53*/("""">Spark数据列表</a> </li>
           </ul>
           <!-- /.nav-second-level --> 
         </li>
 
          <li> <a href="#"><i class="fa fa-table nav_icon"></i>任务调度<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*78.28*/controllers/*78.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*78.71*/("""">OOZIE任务调度</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*79.28*/controllers/*79.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*79.71*/("""">Spark任务调度</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*80.28*/controllers/*80.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*80.72*/("""">Yarn任务调度</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*78.28*/routes/*78.34*/.YarnList.yarnlist)),format.raw/*78.52*/("""">OOZIE任务调度</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*79.28*/routes/*79.34*/.YarnList.yarnlist)),format.raw/*79.52*/("""">Spark任务调度</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*80.28*/routes/*80.34*/.YarnList.sparklist)),format.raw/*80.53*/("""">Yarn任务调度</a> </li>
           </ul>
         </li>
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>监控和报警<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*86.28*/controllers/*86.39*/.monitor.routes.MonitorController.streaming)),format.raw/*86.82*/("""">Streaming监控</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*87.28*/controllers/*87.39*/.monitor.routes.MonitorController.jobs)),format.raw/*87.77*/("""">临时任务监控</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*88.28*/controllers/*88.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*88.72*/("""">调度监控</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*86.28*/routes/*86.34*/.MonitorController.streaming)),format.raw/*86.62*/("""">Streaming监控</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*87.28*/routes/*87.34*/.MonitorController.jobs)),format.raw/*87.57*/("""">临时任务监控</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*88.28*/routes/*88.34*/.YarnList.sparklist)),format.raw/*88.53*/("""">调度监控</a> </li>
            </ul>
            </li>
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>报警管理<span class="fa arrow"></span></a>
             <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*94.28*/controllers/*94.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*94.71*/("""">磁盘空间报警</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*95.28*/controllers/*95.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*95.71*/("""">内存相关报警</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*96.28*/controllers/*96.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*96.72*/("""">其他报警</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*94.28*/routes/*94.34*/.YarnList.yarnlist)),format.raw/*94.52*/("""">磁盘空间报警</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*95.28*/routes/*95.34*/.YarnList.yarnlist)),format.raw/*95.52*/("""">内存相关报警</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*96.28*/routes/*96.34*/.YarnList.sparklist)),format.raw/*96.53*/("""">其他报警</a> </li>
           </ul>
 
         <li> <a href="#"><i class="fa fa-table nav_icon"></i>用户管理<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*101.28*/controllers/*101.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*101.71*/("""">用户统计</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*102.28*/controllers/*102.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*102.71*/("""">添加用户</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*103.28*/controllers/*103.39*/.hadoop.routes.YarnList.sparklist)),format.raw/*103.72*/("""">权限分配</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*101.28*/routes/*101.34*/.YarnList.yarnlist)),format.raw/*101.52*/("""">用户统计</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*102.28*/routes/*102.34*/.YarnList.yarnlist)),format.raw/*102.52*/("""">添加用户</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*103.28*/routes/*103.34*/.YarnList.sparklist)),format.raw/*103.53*/("""">权限分配</a> </li>
           </ul>
 
         </li>
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href=""""),_display_(Seq[Any](/*110.28*/controllers/*110.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*110.71*/("""">服务划分</a> </li>
-            <li> <a href=""""),_display_(Seq[Any](/*111.28*/controllers/*111.39*/.hadoop.routes.YarnList.yarnlist)),format.raw/*111.71*/("""">功能划分</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*110.28*/routes/*110.34*/.YarnList.yarnlist)),format.raw/*110.52*/("""">服务划分</a> </li>
+            <li> <a href=""""),_display_(Seq[Any](/*111.28*/routes/*111.34*/.YarnList.yarnlist)),format.raw/*111.52*/("""">功能划分</a> </li>
           </ul>
 
         </li>
@@ -161,10 +161,10 @@ Seq[Any](format.raw/*1.57*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Jul 07 10:40:34 CST 2016
-                    SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/main.scala.html
-                    HASH: 3020c2f39ad1b44cdebfb6e8b7899de86ffa8b94
-                    MATRIX: 565->1|714->56|787->95|813->100|907->159|921->165|974->197|1151->340|1178->347|1284->425|1313->426|1370->454|1400->455|1460->486|1490->487|1542->510|1572->511|1660->563|1675->569|1740->612|1847->683|1862->689|1918->723|2024->793|2039->799|2096->834|2183->885|2198->891|2262->933|2348->983|2363->989|2424->1028|2502->1070|2517->1076|2575->1112|2683->1184|2698->1190|2762->1232|2824->1258|2839->1264|2896->1299|2984->1351|2999->1357|3055->1391|3117->1417|3132->1423|3191->1460|3713->1946|3728->1952|3765->1967|4010->2175|4026->2181|4081->2213|4976->3072|4996->3083|5052->3117|5313->3349|5343->3350|5397->3375|5427->3376|5640->3553|5655->3559|5695->3577|5975->3821|5995->3832|6050->3865|6136->3915|6156->3926|6208->3956|6295->4007|6315->4018|6369->4050|6465->4110|6485->4121|6539->4153|6850->4428|6870->4439|6924->4471|7008->4519|7028->4530|7083->4563|7383->4827|7403->4838|7457->4870|7542->4919|7562->4930|7616->4962|7701->5011|7721->5022|7776->5055|8039->5282|8059->5293|8124->5336|8211->5387|8231->5398|8291->5436|8373->5482|8393->5493|8448->5526|8712->5754|8732->5765|8786->5797|8868->5843|8888->5854|8942->5886|9024->5932|9044->5943|9099->5976|9341->6181|9362->6192|9417->6224|9498->6268|9519->6279|9574->6311|9655->6355|9676->6366|9732->6399|9994->6624|10015->6635|10070->6667|10151->6711|10172->6722|10227->6754|10494->6985|10523->6992|10638->7070|10654->7076|10719->7118
+                    DATE: Thu Jul 07 14:23:35 CST 2016
+                    SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/main.scala.html
+                    HASH: 198c5f1152e32e2308646b1fe7401cdf11a3c572
+                    MATRIX: 565->1|714->56|787->95|813->100|907->159|921->165|974->197|1151->340|1178->347|1284->425|1313->426|1370->454|1400->455|1460->486|1490->487|1542->510|1572->511|1660->563|1675->569|1740->612|1847->683|1862->689|1918->723|2024->793|2039->799|2096->834|2183->885|2198->891|2262->933|2348->983|2363->989|2424->1028|2502->1070|2517->1076|2575->1112|2683->1184|2698->1190|2762->1232|2824->1258|2839->1264|2896->1299|2984->1351|2999->1357|3055->1391|3117->1417|3132->1423|3191->1460|3713->1946|3728->1952|3765->1967|4010->2175|4026->2181|4081->2213|4976->3072|4991->3078|5035->3100|5296->3332|5326->3333|5380->3358|5410->3359|5623->3536|5638->3542|5678->3560|5958->3804|5973->3810|6015->3830|6101->3880|6116->3886|6155->3903|6242->3954|6257->3960|6298->3979|6394->4039|6409->4045|6450->4064|6761->4339|6776->4345|6816->4363|6900->4411|6915->4417|6956->4436|7256->4700|7271->4706|7311->4724|7396->4773|7411->4779|7451->4797|7536->4846|7551->4852|7592->4871|7855->5098|7870->5104|7920->5132|8007->5183|8022->5189|8067->5212|8149->5258|8164->5264|8205->5283|8469->5511|8484->5517|8524->5535|8606->5581|8621->5587|8661->5605|8743->5651|8758->5657|8799->5676|9041->5881|9057->5887|9098->5905|9179->5949|9195->5955|9236->5973|9317->6017|9333->6023|9375->6042|9637->6267|9653->6273|9694->6291|9775->6335|9791->6341|9832->6359|10099->6590|10128->6597|10243->6675|10259->6681|10324->6723
                     LINES: 19->1|22->1|26->5|26->5|27->6|27->6|27->6|30->9|30->9|31->10|31->10|31->10|31->10|31->10|31->10|31->10|31->10|33->12|33->12|33->12|35->14|35->14|35->14|37->16|37->16|37->16|38->17|38->17|38->17|40->19|40->19|40->19|42->21|42->21|42->21|44->23|44->23|44->23|45->24|45->24|45->24|47->26|47->26|47->26|48->27|48->27|48->27|56->35|56->35|56->35|59->38|59->38|59->38|69->48|69->48|69->48|74->53|74->53|74->53|74->53|79->58|79->58|79->58|82->61|82->61|82->61|83->62|83->62|83->62|84->63|84->63|84->63|85->64|85->64|85->64|91->70|91->70|91->70|92->71|92->71|92->71|99->78|99->78|99->78|100->79|100->79|100->79|101->80|101->80|101->80|107->86|107->86|107->86|108->87|108->87|108->87|109->88|109->88|109->88|115->94|115->94|115->94|116->95|116->95|116->95|117->96|117->96|117->96|122->101|122->101|122->101|123->102|123->102|123->102|124->103|124->103|124->103|131->110|131->110|131->110|132->111|132->111|132->111|145->124|145->124|149->128|149->128|149->128
                     -- GENERATED --
                 */

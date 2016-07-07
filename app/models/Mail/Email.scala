@@ -1,10 +1,9 @@
-package models.Mail
+package models
 
 import java.text.SimpleDateFormat
 import java.util.Date
 
-import models.user.{User, Verify}
-import models.utils.MD5Utils
+import models._
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.mail.{DefaultAuthenticator, HtmlEmail, SimpleEmail}
 import play.api.Logger

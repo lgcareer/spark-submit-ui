@@ -1,16 +1,12 @@
-package models.ui
+package models
 
 /**
-  * Created by liangkai1 on 16/6/30.
+  * Created by liangkai1 on 16/7/7.
   */
-class UI {
+ object ui {
 
 }
 
-object UI{
+case class JobUi(val timeline:String,val active:String,val completed:String,val failed:String)
 
-
-  case class JobUi(val timeline:String,val active:String,val completed:String,val failed:String)
-
-  case class StreamingUi(val statTable:String)
-}
+case class StreamingUi(val statTable:String)

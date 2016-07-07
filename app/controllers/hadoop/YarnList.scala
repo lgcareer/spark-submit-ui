@@ -1,6 +1,5 @@
-package controllers.hadoop
+package controllers
 
-import controllers.auth.Secured
 import play.api.libs.json.Json
 import play.api.mvc._
 
@@ -31,7 +30,7 @@ object YarnList extends Controller with Secured {
 
   //从数据库获取数据发送到接口
   def spark_info = IsAuthenticated { username => implicit request =>
-     import models.io.SparkTotalinfo
+     import models._
     //   val sparkinfo = SparkTotalinfo.findAll()
      val sparkinfo = Json.parse(SparkTotalinfo.findAll())
     Ok(sparkinfo)

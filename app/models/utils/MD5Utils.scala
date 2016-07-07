@@ -1,4 +1,4 @@
-package models.utils
+package models
 
 import java.io.UnsupportedEncodingException
 import java.security.{MessageDigest, NoSuchAlgorithmException}

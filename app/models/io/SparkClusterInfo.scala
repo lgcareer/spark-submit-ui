@@ -1,4 +1,4 @@
-package models.io
+package models
 
 import anorm._
 import play.api.Play.current

@@ -1,4 +1,4 @@
-package models.Mail
+package models
 
 /**
   * Created by liangkai1 on 16/6/17.

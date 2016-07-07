@@ -1,8 +1,7 @@
-package models.user
+package models
 
 import anorm.SqlParser._
 import anorm._
-import models.user
 import play.api.Play.current
 import play.api.db.DB
 
@@ -67,7 +66,7 @@ object User {
 
 
   def verifying(registration : Registration): User={
-      val newUser = user.User(registration.email, registration.name,registration.password)
+      val newUser = User(registration.email, registration.name,registration.password)
       create(newUser)
   }
 

@@ -1,7 +1,6 @@
-package controllers.monitor
+package controllers
 
-import controllers.auth.Secured
-import models.ui.UI.{JobUi, StreamingUi}
+import models._
 import play.api.libs.ws.WS
 import play.api.mvc._
 

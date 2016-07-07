@@ -1,8 +1,8 @@
-package controllers.spark
+package controllers
 
 import java.util.concurrent.{ExecutorService, Executors}
 
-import controllers.auth.Secured
+import models._
 import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
@@ -35,7 +35,7 @@ object SparkSql extends Controller with Secured {
         override def run(){
         println("start execute sql")
         val argus = Array(sqldata.sql)
-        models.utils.ExecuteSql.main(argus)
+        ExecuteSql.main(argus)
         println("end execute sql")
     }
       }

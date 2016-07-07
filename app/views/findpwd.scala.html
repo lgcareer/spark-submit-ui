@@ -12,7 +12,7 @@
      }
      </script>
 
-    @helper.form(controllers.auth.routes.Authentication.resetpwd){
+    @helper.form(routes.Authentication.resetpwd){
     <input type="text" name="email" id="email" class="text" value="@form("email").value" placeholder="注册邮箱"  onblur="if (this.value == '') {this.value = '注册邮箱';}">
     @if(form.hasErrors && !form.error("email").isEmpty){
     <p class="error"><font color="red">@form.error("email").get.message</font></p>

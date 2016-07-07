@@ -9,7 +9,7 @@
     <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
     <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
   </div>
-@helper.form(action =  controllers.spark.routes.SparkJar.upload, 'enctype -> "multipart/form-data") {
+@helper.form(action = routes.SparkJar.upload, 'enctype -> "multipart/form-data") {
   <div class="form-group">
     <label for="exampleInputFile">文件上载</label>
     <input type="file" name="file">

@@ -1,4 +1,4 @@
-package models.io
+package models
 
 /**
   * Created by manbu on 16/5/16.

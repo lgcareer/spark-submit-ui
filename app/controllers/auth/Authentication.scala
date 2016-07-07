@@ -1,8 +1,6 @@
-package controllers.auth
+package controllers
 
-import models.Mail._
-import models.user.{Registration, User, Verify}
-import models.utils.CaptchaUtils
+import models._
 import org.apache.commons.lang3.StringUtils
 import play.api.Play.current
 import play.api._
@@ -38,7 +36,7 @@ object Authentication  extends Controller {
    * Logout and clean the session.
    */
   def logout = Action {
-    Redirect(controllers.auth.routes.Authentication.login).withNewSession.flashing(
+    Redirect(routes.Authentication.login).withNewSession.flashing(
       "success" -> "成功退出"
     )
   }
@@ -49,7 +47,7 @@ object Authentication  extends Controller {
   def authenticate = Action { implicit request =>
     loginForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.login(formWithErrors)),
-      user => Redirect(controllers.routes.Application.index()).withSession("email" -> user._1)
+      user => Redirect(routes.Application.index()).withSession("email" -> user._1)
     )
   }
 
@@ -80,7 +78,7 @@ object Authentication  extends Controller {
         BadRequest(views.html.register(formWithErrors))
       },
       registration => {
-        val user:User= models.user.User.verifying(registration = registration)
+        val user:User= User.verifying(registration = registration)
         implicit val clusterListWrites = Json.writes[User]
         Redirect("/mail?user="+Json.stringify(Json.toJson(user)))
       }
@@ -227,10 +225,10 @@ object Authentication  extends Controller {
         BadRequest(views.html.findpwd(formWithErrors))
       },
       user => {
-        val f_name: String = models.user.User.findNameByEmail(user._1)
+        val f_name: String =User.findNameByEmail(user._1)
         val name:String =if(StringUtils.isEmpty(f_name)) user._1  else f_name
         val jsObject: JsObject = Json.obj("email"->user._1,"captcha"->user._2,"name"->name)
-        Redirect("/mail?user="+Json.stringify(jsObject)).withSession("findpwd"->user._1)
+        Redirect("/mail?user="+Json.stringify(jsObject))
       }
     )
   }
@@ -255,7 +253,7 @@ object Authentication  extends Controller {
       case  e : EmailExecption =>  NotFound
       case  v : VerifyException => NotFound
       case  f : Failure => NotFound
-      case  s : Success => Ok(views.html.setpwd(setPasswordForm))
+      case  s : Success => Ok(views.html.setpwd(setPasswordForm)).withSession("findpwd"->email)
     }
   }
 
@@ -273,7 +271,7 @@ object Authentication  extends Controller {
       },
       user => {
         val email: String = request.session.get("findpwd").getOrElse(null)
-         models.user.User.updatePWD(email,user._2)
+        User.updatePWD(email,user._2)
         Ok(email+"修改密码成功")
       }
     )
