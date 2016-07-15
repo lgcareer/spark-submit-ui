@@ -9,10 +9,7 @@ import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
 
-
 object SparkJar extends Controller with Secured {
-
-
   val executeForm:Form[ExecuteModel] = Form{
     mapping (
       "executeClass"->text,

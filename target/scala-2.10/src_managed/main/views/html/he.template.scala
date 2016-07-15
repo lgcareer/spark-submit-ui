@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jul 15 10:41:57 CST 2016
+                    DATE: Fri Jul 15 15:42:48 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/he.scala.html
                     HASH: f002fcfabd127664c8ea245b1fc780de384ce535
                     MATRIX: 634->0

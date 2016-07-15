@@ -115,7 +115,7 @@ Seq[Any](format.raw/*1.28*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jul 15 10:42:00 CST 2016
+                    DATE: Fri Jul 15 15:42:50 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/sparkjar.scala.html
                     HASH: 1966bbcfad00d9de38777bd71cbfd48e013fbf55
                     MATRIX: 571->1|674->29|688->36|772->40|874->27|901->103|943->111|985->145|1024->147|1285->372|1300->378|1351->420|1391->422|5267->4266|5389->4352|5422->4363|5490->4400
