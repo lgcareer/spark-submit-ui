@@ -1,12 +1,15 @@
-2016-07-15 15:43:53,073 - [INFO] - from play in pool-5-thread-3 
+2016-07-15 15:52:15,005 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-07-15 15:44:01,374 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-15 15:52:34,917 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-07-15 15:44:01,843 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-15 15:52:35,208 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-07-15 15:44:02,131 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-15 15:52:35,598 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
+
+2016-07-15 15:52:36,544 - [INFO] - from application in pool-15-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, )
 

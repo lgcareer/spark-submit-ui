@@ -1,6 +1,6 @@
 package models.deploy.process
 
-import com.sun.javafx.Logging
+import org.apache.spark.Logging
 
 
 /**
