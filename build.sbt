@@ -2,6 +2,8 @@ name := "ficusSpark"
 
 version := "1.0-SNAPSHOT"
 
+scalaVersion := "2.10.6"
+
 libraryDependencies ++= Seq(
   jdbc,
   anorm,
@@ -10,6 +12,7 @@ libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.29",
   "org.apache.spark" % "spark-core_2.10" % "1.4.1"
 )
+
 play.Project.playScalaSettings
 
 

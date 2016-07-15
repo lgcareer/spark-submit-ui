@@ -1,21 +1,354 @@
-2016-07-07 18:25:12,599 - [INFO] - from play in pool-5-thread-3 
+2016-07-15 11:35:33,181 - [INFO] - from play in pool-4-thread-4 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-07-07 18:25:18,008 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-15 11:35:38,886 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-07-07 18:25:18,329 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-15 11:35:39,305 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-07-07 18:25:18,542 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-15 11:35:39,425 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-07-07 18:26:20,547 - [INFO] - from play in play-internal-execution-context-2 
+2016-07-15 11:35:46,394 - [INFO] - from application in pool-16-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 11:43:58,473 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+GMRC
+
+2016-07-15 11:44:06,682 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+U9E4
+
+2016-07-15 11:44:07,200 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+9AU3
+
+2016-07-15 11:44:16,133 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
+输入:9au3  生成:9AU3
+
+2016-07-15 11:44:17,290 - [ERROR] - from application in play-akka.actor.default-dispatcher-22 
+
+
+! @70ln9ak98 - Internal server error, for (GET) [/mail?user=%7B%22email%22:%22kingekinge@163.com%22,%22captcha%22:%229au3%22,%22name%22:%22zlk%22%7D] ->
+
+play.api.Application$$anon$1: Execution exception[[EmailException: Sending the email to the following server failed : smtp.sina.com:465]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.sina.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1421) ~[commons-email-1.4.jar:1.4]
+	at org.apache.commons.mail.Email.send(Email.java:1448) ~[commons-email-1.4.jar:1.4]
+	at models.Email$.sendHtmlMail(Email.scala:59) ~[classes/:na]
+	at controllers.Authentication$.sendEmail(Authentication.scala:136) ~[classes/:na]
+	at controllers.Authentication$$anonfun$mail$1$$anonfun$16.apply(Authentication.scala:152) ~[classes/:na]
+	at controllers.Authentication$$anonfun$mail$1$$anonfun$16.apply(Authentication.scala:152) ~[classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+Caused by: javax.mail.MessagingException: Can't send command to SMTP host
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2259) ~[javax.mail-1.5.2.jar:1.5.2]
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2246) ~[javax.mail-1.5.2.jar:1.5.2]
+	at com.sun.mail.smtp.SMTPTransport.close(SMTPTransport.java:1287) ~[javax.mail-1.5.2.jar:1.5.2]
+	at javax.mail.Transport.send0(Transport.java:256) ~[javax.mail-1.5.2.jar:1.5.2]
+	at javax.mail.Transport.send(Transport.java:124) ~[javax.mail-1.5.2.jar:1.5.2]
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1411) ~[commons-email-1.4.jar:1.4]
+	... 13 common frames omitted
+Caused by: java.net.SocketException: Connection closed by remote host
+	at sun.security.ssl.SSLSocketImpl.checkWrite(SSLSocketImpl.java:1523) ~[na:1.8.0]
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71) ~[na:1.8.0]
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:128) ~[javax.mail-1.5.2.jar:1.5.2]
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82) ~[na:1.8.0]
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140) ~[na:1.8.0]
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2257) ~[javax.mail-1.5.2.jar:1.5.2]
+	... 18 common frames omitted
+
+2016-07-15 11:44:55,837 - [ERROR] - from application in play-akka.actor.default-dispatcher-16 
+
+
+! @70ln9cpa2 - Internal server error, for (GET) [/mail?user=%7B%22email%22:%22kingekinge@163.com%22,%22captcha%22:%229au3%22,%22name%22:%22zlk%22%7D] ->
+
+play.api.Application$$anon$1: Execution exception[[EmailException: Sending the email to the following server failed : smtp.sina.com:465]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.sina.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1421) ~[commons-email-1.4.jar:1.4]
+	at org.apache.commons.mail.Email.send(Email.java:1448) ~[commons-email-1.4.jar:1.4]
+	at models.Email$.sendHtmlMail(Email.scala:59) ~[classes/:na]
+	at controllers.Authentication$.sendEmail(Authentication.scala:136) ~[classes/:na]
+	at controllers.Authentication$$anonfun$mail$1$$anonfun$16.apply(Authentication.scala:152) ~[classes/:na]
+	at controllers.Authentication$$anonfun$mail$1$$anonfun$16.apply(Authentication.scala:152) ~[classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+Caused by: javax.mail.MessagingException: Can't send command to SMTP host
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2259) ~[javax.mail-1.5.2.jar:1.5.2]
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2246) ~[javax.mail-1.5.2.jar:1.5.2]
+	at com.sun.mail.smtp.SMTPTransport.close(SMTPTransport.java:1287) ~[javax.mail-1.5.2.jar:1.5.2]
+	at javax.mail.Transport.send0(Transport.java:256) ~[javax.mail-1.5.2.jar:1.5.2]
+	at javax.mail.Transport.send(Transport.java:124) ~[javax.mail-1.5.2.jar:1.5.2]
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1411) ~[commons-email-1.4.jar:1.4]
+	... 13 common frames omitted
+Caused by: java.net.SocketException: Connection closed by remote host
+	at sun.security.ssl.SSLSocketImpl.checkWrite(SSLSocketImpl.java:1523) ~[na:1.8.0]
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71) ~[na:1.8.0]
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:128) ~[javax.mail-1.5.2.jar:1.5.2]
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82) ~[na:1.8.0]
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140) ~[na:1.8.0]
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2257) ~[javax.mail-1.5.2.jar:1.5.2]
+	... 18 common frames omitted
+
+2016-07-15 11:45:02,543 - [ERROR] - from application in play-akka.actor.default-dispatcher-25 
+
+
+! @70ln9d980 - Internal server error, for (GET) [/mail?user=%7B%22email%22:%22kingekinge@163.com%22,%22captcha%22:%229au3%22,%22name%22:%22zlk%22%7D] ->
+
+play.api.Application$$anon$1: Execution exception[[EmailException: Sending the email to the following server failed : smtp.sina.com:465]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.processBatch$1(BatchingExecutor.scala:67) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:82) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.BatchingExecutor$Batch$$anonfun$run$1.apply(BatchingExecutor.scala:59) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.BatchingExecutor$Batch.run(BatchingExecutor.scala:58) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.sina.com:465
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1421) ~[commons-email-1.4.jar:1.4]
+	at org.apache.commons.mail.Email.send(Email.java:1448) ~[commons-email-1.4.jar:1.4]
+	at models.Email$.sendHtmlMail(Email.scala:59) ~[classes/:na]
+	at controllers.Authentication$.sendEmail(Authentication.scala:136) ~[classes/:na]
+	at controllers.Authentication$$anonfun$mail$1$$anonfun$16.apply(Authentication.scala:152) ~[classes/:na]
+	at controllers.Authentication$$anonfun$mail$1$$anonfun$16.apply(Authentication.scala:152) ~[classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+Caused by: javax.mail.MessagingException: Can't send command to SMTP host
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2259) ~[javax.mail-1.5.2.jar:1.5.2]
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2246) ~[javax.mail-1.5.2.jar:1.5.2]
+	at com.sun.mail.smtp.SMTPTransport.close(SMTPTransport.java:1287) ~[javax.mail-1.5.2.jar:1.5.2]
+	at javax.mail.Transport.send0(Transport.java:256) ~[javax.mail-1.5.2.jar:1.5.2]
+	at javax.mail.Transport.send(Transport.java:124) ~[javax.mail-1.5.2.jar:1.5.2]
+	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1411) ~[commons-email-1.4.jar:1.4]
+	... 13 common frames omitted
+Caused by: java.net.SocketException: Connection closed by remote host
+	at sun.security.ssl.SSLSocketImpl.checkWrite(SSLSocketImpl.java:1523) ~[na:1.8.0]
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:71) ~[na:1.8.0]
+	at com.sun.mail.util.TraceOutputStream.write(TraceOutputStream.java:128) ~[javax.mail-1.5.2.jar:1.5.2]
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82) ~[na:1.8.0]
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140) ~[na:1.8.0]
+	at com.sun.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2257) ~[javax.mail-1.5.2.jar:1.5.2]
+	... 18 common frames omitted
+
+2016-07-15 11:48:01,180 - [INFO] - from application in play-akka.actor.default-dispatcher-17 
+用户名=>kingekinge@163.com
+
+2016-07-15 11:48:09,293 - [INFO] - from application in pool-16-thread-2 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:25:14,569 - [INFO] - from play in play-internal-execution-context-3 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-07-07 18:26:20,790 - [INFO] - from play in play-internal-execution-context-2 
+2016-07-15 14:25:14,853 - [INFO] - from play in play-internal-execution-context-3 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-07-07 18:26:20,798 - [INFO] - from play in play-internal-execution-context-2 
+2016-07-15 14:25:14,862 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
+
+2016-07-15 14:25:45,192 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:25:45,430 - [INFO] - from play in play-internal-execution-context-3 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:25:45,436 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2016-07-15 14:26:32,151 - [INFO] - from application in pool-25-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:27:20,269 - [INFO] - from application in pool-25-thread-2 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:27:32,483 - [INFO] - from application in pool-25-thread-3 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:27:35,882 - [INFO] - from application in pool-25-thread-4 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:27:39,762 - [INFO] - from application in pool-25-thread-5 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:27:42,129 - [INFO] - from application in pool-25-thread-6 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:28:19,246 - [INFO] - from application in pool-25-thread-7 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:33:05,298 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:33:05,646 - [INFO] - from play in play-internal-execution-context-3 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:33:05,658 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2016-07-15 14:33:05,879 - [INFO] - from application in pool-30-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar)
+
+2016-07-15 14:34:54,662 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:34:54,903 - [INFO] - from play in play-internal-execution-context-3 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:34:54,913 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2016-07-15 14:34:55,000 - [INFO] - from application in pool-35-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, 100, 200, 300)
+
+2016-07-15 14:39:36,633 - [INFO] - from application in pool-35-thread-2 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 1G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, 100, 200, 300)
+
+2016-07-15 14:41:57,407 - [INFO] - from application in play-akka.actor.default-dispatcher-94 
+用户名=>kingekinge@163.com
+
+2016-07-15 14:42:15,099 - [INFO] - from application in pool-35-thread-3 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1, --driver-memory, 1, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, addax, ada, da, ad, ada)
+
+2016-07-15 14:42:15,621 - [ERROR] - from models.JobManagerActor in pool-35-thread-3 
+Got Throwable
+java.io.IOException: f
+	at models.JobManagerActor$$anonfun$getJobFuture$2.apply(JobManager.scala:166) [classes/:na]
+	at models.JobManagerActor$$anonfun$getJobFuture$2.apply(JobManager.scala:133) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-15 14:47:40,384 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:47:40,638 - [INFO] - from play in play-internal-execution-context-3 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:47:40,645 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2016-07-15 14:47:40,740 - [INFO] - from application in pool-40-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1, --driver-memory, 1, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, addax, ada, da, ad, ada)
+
+2016-07-15 14:47:41,188 - [ERROR] - from models.JobManagerActor in pool-40-thread-1 
+Got Throwable
+models.JobSubmitExecption: 任务提交异常
+	at models.JobManagerActor$$anonfun$getJobFuture$2.apply(JobManager.scala:151) [classes/:na]
+	at models.JobManagerActor$$anonfun$getJobFuture$2.apply(JobManager.scala:133) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-15 14:52:27,507 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:52:27,771 - [INFO] - from play in play-internal-execution-context-3 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-15 14:52:27,777 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2016-07-15 14:52:27,861 - [INFO] - from application in pool-45-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1, --driver-memory, 1, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, addax, ada, da, ad, ada)
+
+2016-07-15 14:52:28,438 - [ERROR] - from models.JobManagerActor in pool-45-thread-1 
+Got Throwable
+models.JobRunExecption: 任务运行异常
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:151) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:133) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
 
