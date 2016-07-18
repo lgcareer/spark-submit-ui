@@ -37,7 +37,7 @@ object SparkJar extends Controller with Secured {
             case JarStored(id) => Redirect(routes.SparkJar.executejar())
             case InvalidJar(error) => {
               Logger.info(error)
-              NotFound
+              BadRequest(error)
             }
             case _ => NotFound
           }

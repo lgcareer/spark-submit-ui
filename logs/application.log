@@ -35241,3 +35241,1904 @@ ArrayBuffer((F,94640), (G,94640), (C,189280), (V,189280), (X,283920), (B,283920)
 2016-07-18 14:05:07,411 - [INFO] - from application in Thread-134 
 16/07/18 14:05:07 INFO ShutdownHookManager: Deleting directory /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-9c3089a3-5648-466d-aabb-3cc0428336c4/httpd-502d5c07-c135-473a-9522-abd1a2072bc1
 
+2016-07-18 14:18:03,607 - [ERROR] - from application in play-akka.actor.default-dispatcher-208 
+
+
+! @70mjol2ii - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@26eec942; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@26eec942; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 14:18:27,753 - [ERROR] - from application in play-akka.actor.default-dispatcher-214 
+
+
+! @70mjomcbb - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@1c74e97b; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@1c74e97b; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 14:29:50,931 - [INFO] - from play in play-internal-execution-context-11 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-18 14:29:51,327 - [INFO] - from play in play-internal-execution-context-11 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-18 14:29:51,339 - [INFO] - from play in play-internal-execution-context-11 
+Application started (Dev)
+
+2016-07-18 14:33:51,906 - [INFO] - from play in play-internal-execution-context-11 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-18 14:33:52,347 - [INFO] - from play in play-internal-execution-context-11 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-18 14:33:52,351 - [INFO] - from play in play-internal-execution-context-11 
+Application started (Dev)
+
+2016-07-18 14:36:25,850 - [ERROR] - from play in play-akka.actor.default-dispatcher-242 
+Cannot invoke the action, eventually got an error: java.io.IOException: Path(/tmp/file/spark_2.10-1.0.jar) exists but replace parameter is false
+
+2016-07-18 14:36:25,857 - [ERROR] - from application in play-akka.actor.default-dispatcher-242 
+
+
+! @70mk15l6m - Internal server error, for (POST) [/stremupload] ->
+
+play.api.Application$$anon$1: Execution exception[[IOException: Path(/tmp/file/spark_2.10-1.0.jar) exists but replace parameter is false]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.io.IOException: Path(/tmp/file/spark_2.10-1.0.jar) exists but replace parameter is false
+	at scalax.file.Path$.fail(Path.scala:168) ~[scala-io-file_2.10-0.4.2.jar:0.4.2]
+	at scalax.file.Path.moveTo(Path.scala:1089) ~[scala-io-file_2.10-0.4.2.jar:0.4.2]
+	at play.api.libs.Files$.moveFile(Files.scala:76) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.Files$TemporaryFile.moveTo(Files.scala:30) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:51) ~[classes/:na]
+	at controllers.SparkStream$$anonfun$stremupload$1$$anonfun$apply$3.apply(SparkStream.scala:47) ~[classes/:na]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
+	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:47) ~[classes/:na]
+	at controllers.SparkStream$$anonfun$stremupload$1.apply(SparkStream.scala:46) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-07-18 14:37:02,318 - [INFO] - from play in play-internal-execution-context-11 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-18 14:37:02,699 - [INFO] - from play in play-internal-execution-context-11 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-18 14:37:02,706 - [INFO] - from play in play-internal-execution-context-11 
+Application started (Dev)
+
+2016-07-18 14:42:26,560 - [ERROR] - from application in play-akka.actor.default-dispatcher-252 
+
+
+! @70mk208m1 - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@4f011767; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@4f011767; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 14:59:01,158 - [ERROR] - from application in play-akka.actor.default-dispatcher-283 
+
+
+! @70mk44o3n - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@63c0543b; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@63c0543b; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 15:06:59,543 - [ERROR] - from application in play-akka.actor.default-dispatcher-329 
+
+
+! @70mk563l9 - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@42f3401b; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@42f3401b; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 15:07:08,390 - [INFO] - from application in play-akka.actor.default-dispatcher-334 
+用户名=>test
+
+2016-07-18 15:07:08,428 - [INFO] - from application in play-akka.actor.default-dispatcher-334 
+文件类型不正确
+
+2016-07-18 15:08:06,623 - [INFO] - from application in play-akka.actor.default-dispatcher-351 
+用户名=>test
+
+2016-07-18 15:09:12,453 - [ERROR] - from application in play-akka.actor.default-dispatcher-357 
+
+
+! @70mk5dib6 - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@4908bb5e; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@4908bb5e; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 15:09:17,113 - [ERROR] - from application in play-akka.actor.default-dispatcher-356 
+
+
+! @70mk5dp8d - Internal server error, for (GET) [/streaming] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@438e95ac; line: 1, column: 2]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@438e95ac; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:58) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-18 15:20:02,069 - [INFO] - from application in play-akka.actor.default-dispatcher-391 
+用户名=>kingekinge@163.com
+
+2016-07-18 15:20:06,764 - [INFO] - from application in pool-206-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, , --num-executors, , --executor-memory, , --driver-memory, , --executor-cores, , , )
+
+2016-07-18 15:20:07,775 - [INFO] - from application in Thread-143 
+java.lang.ClassNotFoundException: 
+
+2016-07-18 15:20:07,775 - [INFO] - from application in Thread-143 
+	at java.lang.Class.forName0(Native Method)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at java.lang.Class.forName(Class.java:340)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+
+2016-07-18 15:20:07,776 - [INFO] - from application in Thread-143 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-07-18 15:20:07,787 - [ERROR] - from models.JobManagerActor in pool-206-thread-1 
+Got Throwable
+models.JobRunExecption: java.lang.ClassNotFoundException: 
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:21:40,219 - [INFO] - from application in play-akka.actor.default-dispatcher-409 
+用户名=>kingekinge@163.com
+
+2016-07-18 15:21:51,569 - [INFO] - from application in pool-206-thread-2 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, , --num-executors, , --executor-memory, , --driver-memory, , --executor-cores, , , )
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+java.lang.ClassNotFoundException: 
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at java.lang.Class.forName0(Native Method)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at java.lang.Class.forName(Class.java:340)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+
+2016-07-18 15:21:52,336 - [INFO] - from application in Thread-148 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-07-18 15:21:52,343 - [ERROR] - from models.JobManagerActor in pool-206-thread-2 
+Got Throwable
+models.JobRunExecption: java.lang.ClassNotFoundException: 
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:21:59,450 - [INFO] - from application in pool-206-thread-3 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, , --num-executors, , --executor-memory, , --driver-memory, , --executor-cores, , , )
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+java.lang.ClassNotFoundException: 
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at java.lang.Class.forName0(Native Method)
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at java.lang.Class.forName(Class.java:340)
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+
+2016-07-18 15:22:00,149 - [INFO] - from application in Thread-150 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+
+2016-07-18 15:22:00,150 - [INFO] - from application in Thread-150 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-07-18 15:22:00,157 - [ERROR] - from models.JobManagerActor in pool-206-thread-3 
+Got Throwable
+models.JobRunExecption: java.lang.ClassNotFoundException: 
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:23:10,212 - [INFO] - from application in pool-206-thread-4 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1024, --driver-memory, 1024, --executor-cores, 1, , )
+
+2016-07-18 15:23:10,545 - [INFO] - from application in Thread-155 
+Error occurred during initialization of VM
+
+2016-07-18 15:23:10,545 - [INFO] - from application in Thread-155 
+Too small initial heap
+
+2016-07-18 15:23:10,547 - [ERROR] - from models.JobManagerActor in pool-206-thread-4 
+Got Throwable
+models.JobRunExecption: Error occurred during initialization of VM
+Too small initial heap
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:23:20,186 - [INFO] - from application in pool-206-thread-5 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1024, --driver-memory, 1024, --executor-cores, 1, , )
+
+2016-07-18 15:23:20,424 - [INFO] - from application in Thread-157 
+Error occurred during initialization of VM
+
+2016-07-18 15:23:20,424 - [INFO] - from application in Thread-157 
+Too small initial heap
+
+2016-07-18 15:23:20,426 - [ERROR] - from models.JobManagerActor in pool-206-thread-5 
+Got Throwable
+models.JobRunExecption: Error occurred during initialization of VM
+Too small initial heap
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:23:32,748 - [INFO] - from application in pool-206-thread-6 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1G, --driver-memory, 10G, --executor-cores, 1, , )
+
+2016-07-18 15:23:33,685 - [INFO] - from application in Thread-159 
+java.lang.ClassNotFoundException: main
+
+2016-07-18 15:23:33,686 - [INFO] - from application in Thread-159 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+
+2016-07-18 15:23:33,686 - [INFO] - from application in Thread-159 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+
+2016-07-18 15:23:33,686 - [INFO] - from application in Thread-159 
+	at java.security.AccessController.doPrivileged(Native Method)
+
+2016-07-18 15:23:33,686 - [INFO] - from application in Thread-159 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+
+2016-07-18 15:23:33,686 - [INFO] - from application in Thread-159 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at java.lang.Class.forName0(Native Method)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at java.lang.Class.forName(Class.java:340)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+
+2016-07-18 15:23:33,687 - [INFO] - from application in Thread-159 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-07-18 15:23:33,697 - [ERROR] - from models.JobManagerActor in pool-206-thread-6 
+Got Throwable
+models.JobRunExecption: java.lang.ClassNotFoundException: main
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:23:41,305 - [INFO] - from application in pool-206-thread-7 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1G, --driver-memory, 10G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, )
+
+2016-07-18 15:23:42,064 - [INFO] - from application in Thread-161 
+java.lang.ClassNotFoundException: main
+
+2016-07-18 15:23:42,064 - [INFO] - from application in Thread-161 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.security.AccessController.doPrivileged(Native Method)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.lang.Class.forName0(Native Method)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at java.lang.Class.forName(Class.java:340)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+
+2016-07-18 15:23:42,065 - [INFO] - from application in Thread-161 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+
+2016-07-18 15:23:42,066 - [INFO] - from application in Thread-161 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+
+2016-07-18 15:23:42,066 - [INFO] - from application in Thread-161 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-07-18 15:23:42,077 - [ERROR] - from models.JobManagerActor in pool-206-thread-7 
+Got Throwable
+models.JobRunExecption: java.lang.ClassNotFoundException: main
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:23:49,058 - [INFO] - from application in pool-206-thread-8 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, main, --num-executors, 1, --executor-memory, 1G, --driver-memory, 10G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, )
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+java.lang.ClassNotFoundException: main
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.security.AccessController.doPrivileged(Native Method)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.lang.Class.forName0(Native Method)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at java.lang.Class.forName(Class.java:340)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+
+2016-07-18 15:23:49,799 - [INFO] - from application in Thread-163 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-07-18 15:23:49,808 - [ERROR] - from models.JobManagerActor in pool-206-thread-8 
+Got Throwable
+models.JobRunExecption: java.lang.ClassNotFoundException: main
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:174)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:689)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:181)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:206)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:121)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:148) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:131) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-07-18 15:23:56,750 - [INFO] - from application in pool-206-thread-9 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, local, --class, mainq, --num-executors, 1, --executor-memory, 1G, --driver-memory, 10G, --executor-cores, 1, /Users/liangkai1/Desktop/spark_2.10-1.0.jar, )
+
+2016-07-18 15:23:57,495 - [INFO] - from application in Thread-165 
+
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+total 240
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+-rwxr-xr-x  1 liangkai1  staff    568  7 12 11:36 Global.scala
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  5 liangkai1  staff    170  7  7 14:32 app
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  2 liangkai1  staff     68  7 14 16:38 app-2.10
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+-rw-r--r--  1 liangkai1  staff    597  7 15 15:32 build.sbt
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  5 liangkai1  staff    170  7 12 14:37 conf
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+-rw-r--r--  1 liangkai1  staff    750  7 18 15:22 derby.log
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+-rw-r--r--  1 liangkai1  staff  42813  7  7 18:22 ficusSpark.ipr
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+-rw-r--r--  1 liangkai1  staff  59504  7  7 18:22 ficusSpark.iws
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  3 liangkai1  staff    102  7 18 10:58 logs
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+-rw-r--r--  1 liangkai1  staff     75  7  7 18:22 play
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  9 liangkai1  staff    306  7 15 15:40 project
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  6 liangkai1  staff    204  7  7 14:07 public
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  7 liangkai1  staff    238  7 15 16:08 target
+
+2016-07-18 15:23:57,522 - [INFO] - from application in Thread-165 
+drwxr-xr-x  5 liangkai1  staff    170  7 15 15:32 test
+
+2016-07-18 15:23:57,679 - [INFO] - from application in Thread-165 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+
+2016-07-18 15:23:57,683 - [INFO] - from application in Thread-165 
+16/07/18 15:23:57 INFO SparkContext: Running Spark version 1.6.1
+
+2016-07-18 15:23:58,055 - [INFO] - from application in Thread-165 
+16/07/18 15:23:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-07-18 15:23:58,196 - [INFO] - from application in Thread-165 
+16/07/18 15:23:58 INFO SecurityManager: Changing view acls to: liangkai1
+
+2016-07-18 15:23:58,197 - [INFO] - from application in Thread-165 
+16/07/18 15:23:58 INFO SecurityManager: Changing modify acls to: liangkai1
+
+2016-07-18 15:23:58,197 - [INFO] - from application in Thread-165 
+16/07/18 15:23:58 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(liangkai1); users with modify permissions: Set(liangkai1)
+
+2016-07-18 15:23:58,654 - [INFO] - from application in Thread-165 
+16/07/18 15:23:58 INFO Utils: Successfully started service 'sparkDriver' on port 51937.
+
+2016-07-18 15:23:59,023 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Slf4jLogger: Slf4jLogger started
+
+2016-07-18 15:23:59,064 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Remoting: Starting remoting
+
+2016-07-18 15:23:59,245 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@10.236.63.24:51938]
+
+2016-07-18 15:23:59,250 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 51938.
+
+2016-07-18 15:23:59,263 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO SparkEnv: Registering MapOutputTracker
+
+2016-07-18 15:23:59,278 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO SparkEnv: Registering BlockManagerMaster
+
+2016-07-18 15:23:59,295 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO DiskBlockManager: Created local directory at /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/blockmgr-1985d255-8b71-4442-be9b-e6c68067c803
+
+2016-07-18 15:23:59,319 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO MemoryStore: MemoryStore started with capacity 7.0 GB
+
+2016-07-18 15:23:59,405 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO SparkEnv: Registering OutputCommitCoordinator
+
+2016-07-18 15:23:59,640 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+
+2016-07-18 15:23:59,643 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO SparkUI: Started SparkUI at http://10.236.63.24:4040
+
+2016-07-18 15:23:59,670 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO HttpFileServer: HTTP File server directory is /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-5bf3e021-0ed3-488c-8894-78e540fba1d6/httpd-b8319d59-607a-43fb-a91f-deb4cf44c723
+
+2016-07-18 15:23:59,678 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO HttpServer: Starting HTTP Server
+
+2016-07-18 15:23:59,723 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Utils: Successfully started service 'HTTP file server' on port 51939.
+
+2016-07-18 15:23:59,758 - [INFO] - from application in play-akka.actor.default-dispatcher-415 
+任务提交成功
+
+2016-07-18 15:23:59,922 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Executor: Starting executor ID driver on host localhost
+
+2016-07-18 15:23:59,949 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 51940.
+
+2016-07-18 15:23:59,950 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO NettyBlockTransferService: Server created on 51940
+
+2016-07-18 15:23:59,951 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO BlockManagerMaster: Trying to register BlockManager
+
+2016-07-18 15:23:59,954 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO BlockManagerMasterEndpoint: Registering block manager localhost:51940 with 7.0 GB RAM, BlockManagerId(driver, localhost, 51940)
+
+2016-07-18 15:23:59,957 - [INFO] - from application in Thread-165 
+16/07/18 15:23:59 INFO BlockManagerMaster: Registered BlockManager
+
+2016-07-18 15:24:00,843 - [INFO] - from application in Thread-165 
+16/07/18 15:24:00 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 127.4 KB, free 127.4 KB)
+
+2016-07-18 15:24:00,890 - [INFO] - from application in Thread-165 
+16/07/18 15:24:00 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.9 KB, free 141.3 KB)
+
+2016-07-18 15:24:00,906 - [INFO] - from application in Thread-165 
+16/07/18 15:24:00 INFO SparkContext: Created broadcast 0 from textFile at main.scala:26
+
+2016-07-18 15:24:01,128 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO FileInputFormat: Total input paths to process : 1
+
+2016-07-18 15:24:01,298 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO SparkContext: Starting job: sortBy at main.scala:30
+
+2016-07-18 15:24:01,328 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Registering RDD 4 (map at main.scala:28)
+
+2016-07-18 15:24:01,331 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Got job 0 (sortBy at main.scala:30) with 8 output partitions
+
+2016-07-18 15:24:01,332 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Final stage: ResultStage 1 (sortBy at main.scala:30)
+
+2016-07-18 15:24:01,333 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+
+2016-07-18 15:24:01,336 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+
+2016-07-18 15:24:01,351 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[4] at map at main.scala:28), which has no missing parents
+
+2016-07-18 15:24:01,401 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.3 KB, free 145.7 KB)
+
+2016-07-18 15:24:01,404 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 148.1 KB)
+
+2016-07-18 15:24:01,407 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+
+2016-07-18 15:24:01,412 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[4] at map at main.scala:28)
+
+2016-07-18 15:24:01,415 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO TaskSchedulerImpl: Adding task set 0.0 with 8 tasks
+
+2016-07-18 15:24:01,467 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:01,471 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:01,479 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+
+2016-07-18 15:24:01,479 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+
+2016-07-18 15:24:01,490 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO Executor: Fetching http://10.236.63.24:51939/jars/spark_2.10-1.0.jar with timestamp 1468826639756
+
+2016-07-18 15:24:01,594 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO Utils: Fetching http://10.236.63.24:51939/jars/spark_2.10-1.0.jar to /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-5bf3e021-0ed3-488c-8894-78e540fba1d6/userFiles-be697c73-2322-4efa-8d7c-2c80f205c9ec/fetchFileTemp4774683933183644869.tmp
+
+2016-07-18 15:24:01,605 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO Executor: Adding file:/private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-5bf3e021-0ed3-488c-8894-78e540fba1d6/userFiles-be697c73-2322-4efa-8d7c-2c80f205c9ec/spark_2.10-1.0.jar to class loader
+
+2016-07-18 15:24:01,638 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:0+33554432
+
+2016-07-18 15:24:01,639 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:33554432+33554432
+
+2016-07-18 15:24:01,663 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+
+2016-07-18 15:24:01,663 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+
+2016-07-18 15:24:01,664 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+
+2016-07-18 15:24:01,664 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+
+2016-07-18 15:24:01,664 - [INFO] - from application in Thread-165 
+16/07/18 15:24:01 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+
+2016-07-18 15:24:10,957 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2260 bytes result sent to driver
+
+2016-07-18 15:24:10,974 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2260 bytes result sent to driver
+
+2016-07-18 15:24:10,975 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, partition 2,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:10,985 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, partition 3,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:10,986 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+
+2016-07-18 15:24:10,991 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 9546 ms on localhost (1/8)
+
+2016-07-18 15:24:10,992 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 9521 ms on localhost (2/8)
+
+2016-07-18 15:24:11,015 - [INFO] - from application in Thread-165 
+16/07/18 15:24:10 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+
+2016-07-18 15:24:11,026 - [INFO] - from application in Thread-165 
+16/07/18 15:24:11 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:100663296+33554432
+
+2016-07-18 15:24:11,070 - [INFO] - from application in Thread-165 
+16/07/18 15:24:11 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:67108864+33554432
+
+2016-07-18 15:24:16,183 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2260 bytes result sent to driver
+
+2016-07-18 15:24:16,185 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, partition 4,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:16,186 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 5209 ms on localhost (3/8)
+
+2016-07-18 15:24:16,187 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+
+2016-07-18 15:24:16,194 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:134217728+33554432
+
+2016-07-18 15:24:16,328 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2260 bytes result sent to driver
+
+2016-07-18 15:24:16,330 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, partition 5,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:16,331 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 5363 ms on localhost (4/8)
+
+2016-07-18 15:24:16,331 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+
+2016-07-18 15:24:16,334 - [INFO] - from application in Thread-165 
+16/07/18 15:24:16 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:167772160+33554432
+
+2016-07-18 15:24:20,853 - [INFO] - from application in Thread-165 
+16/07/18 15:24:20 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2260 bytes result sent to driver
+
+2016-07-18 15:24:20,855 - [INFO] - from application in Thread-165 
+16/07/18 15:24:20 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, partition 6,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:20,856 - [INFO] - from application in Thread-165 
+16/07/18 15:24:20 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 4671 ms on localhost (5/8)
+
+2016-07-18 15:24:20,859 - [INFO] - from application in Thread-165 
+16/07/18 15:24:20 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+
+2016-07-18 15:24:20,902 - [INFO] - from application in Thread-165 
+16/07/18 15:24:20 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:201326592+33554432
+
+2016-07-18 15:24:21,915 - [INFO] - from application in Thread-165 
+16/07/18 15:24:21 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2260 bytes result sent to driver
+
+2016-07-18 15:24:21,921 - [INFO] - from application in Thread-165 
+16/07/18 15:24:21 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, partition 7,PROCESS_LOCAL, 2190 bytes)
+
+2016-07-18 15:24:21,922 - [INFO] - from application in Thread-165 
+16/07/18 15:24:21 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 5592 ms on localhost (6/8)
+
+2016-07-18 15:24:21,925 - [INFO] - from application in Thread-165 
+16/07/18 15:24:21 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+
+2016-07-18 15:24:21,939 - [INFO] - from application in Thread-165 
+16/07/18 15:24:21 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:234881024+5599433
+
+2016-07-18 15:24:24,620 - [INFO] - from application in Thread-165 
+16/07/18 15:24:24 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2260 bytes result sent to driver
+
+2016-07-18 15:24:24,626 - [INFO] - from application in Thread-165 
+16/07/18 15:24:24 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 2708 ms on localhost (7/8)
+
+2016-07-18 15:24:27,544 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2260 bytes result sent to driver
+
+2016-07-18 15:24:27,548 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 6693 ms on localhost (8/8)
+
+2016-07-18 15:24:27,550 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+
+2016-07-18 15:24:27,550 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: ShuffleMapStage 0 (map at main.scala:28) finished in 26.124 s
+
+2016-07-18 15:24:27,551 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: looking for newly runnable stages
+
+2016-07-18 15:24:27,552 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: running: Set()
+
+2016-07-18 15:24:27,552 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: waiting: Set(ResultStage 1)
+
+2016-07-18 15:24:27,553 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: failed: Set()
+
+2016-07-18 15:24:27,558 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at sortBy at main.scala:30), which has no missing parents
+
+2016-07-18 15:24:27,567 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.5 KB, free 151.6 KB)
+
+2016-07-18 15:24:27,569 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.0 KB, free 153.7 KB)
+
+2016-07-18 15:24:27,572 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+
+2016-07-18 15:24:27,572 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at sortBy at main.scala:30)
+
+2016-07-18 15:24:27,572 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSchedulerImpl: Adding task set 1.0 with 8 tasks
+
+2016-07-18 15:24:27,580 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 8, localhost, partition 0,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,581 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 9, localhost, partition 1,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,582 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 1.0 in stage 1.0 (TID 9)
+
+2016-07-18 15:24:27,588 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 0.0 in stage 1.0 (TID 8)
+
+2016-07-18 15:24:27,598 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,600 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,600 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+
+2016-07-18 15:24:27,600 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+
+2016-07-18 15:24:27,640 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 1.0 in stage 1.0 (TID 9). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,640 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 10, localhost, partition 2,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,640 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 9) in 59 ms on localhost (1/8)
+
+2016-07-18 15:24:27,642 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 2.0 in stage 1.0 (TID 10)
+
+2016-07-18 15:24:27,647 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,647 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:27,651 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 2.0 in stage 1.0 (TID 10). 1418 bytes result sent to driver
+
+2016-07-18 15:24:27,653 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 11, localhost, partition 3,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,653 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 10) in 15 ms on localhost (2/8)
+
+2016-07-18 15:24:27,654 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 3.0 in stage 1.0 (TID 11)
+
+2016-07-18 15:24:27,660 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,661 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:27,671 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 3.0 in stage 1.0 (TID 11). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,673 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 12, localhost, partition 4,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,673 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 4.0 in stage 1.0 (TID 12)
+
+2016-07-18 15:24:27,673 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 11) in 21 ms on localhost (3/8)
+
+2016-07-18 15:24:27,677 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,677 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:27,681 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 4.0 in stage 1.0 (TID 12). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,682 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 13, localhost, partition 5,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,683 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 12) in 10 ms on localhost (4/8)
+
+2016-07-18 15:24:27,683 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 5.0 in stage 1.0 (TID 13)
+
+2016-07-18 15:24:27,686 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,686 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:27,691 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 5.0 in stage 1.0 (TID 13). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,692 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 14, localhost, partition 6,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,693 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 6.0 in stage 1.0 (TID 14)
+
+2016-07-18 15:24:27,693 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 13) in 12 ms on localhost (5/8)
+
+2016-07-18 15:24:27,695 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,695 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:27,699 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 6.0 in stage 1.0 (TID 14). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,700 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 15, localhost, partition 7,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:27,700 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 7.0 in stage 1.0 (TID 15)
+
+2016-07-18 15:24:27,700 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 14) in 8 ms on localhost (6/8)
+
+2016-07-18 15:24:27,705 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,705 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:27,710 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 7.0 in stage 1.0 (TID 15). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,711 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 15) in 12 ms on localhost (7/8)
+
+2016-07-18 15:24:27,719 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 0.0 in stage 1.0 (TID 8). 1414 bytes result sent to driver
+
+2016-07-18 15:24:27,722 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 8) in 146 ms on localhost (8/8)
+
+2016-07-18 15:24:27,723 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+
+2016-07-18 15:24:27,723 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: ResultStage 1 (sortBy at main.scala:30) finished in 0.148 s
+
+2016-07-18 15:24:27,768 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Job 0 finished: sortBy at main.scala:30, took 26.467949 s
+
+2016-07-18 15:24:27,816 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO SparkContext: Starting job: collect at main.scala:30
+
+2016-07-18 15:24:27,823 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 159 bytes
+
+2016-07-18 15:24:27,827 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Registering RDD 6 (sortBy at main.scala:30)
+
+2016-07-18 15:24:27,827 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Got job 1 (collect at main.scala:30) with 8 output partitions
+
+2016-07-18 15:24:27,828 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Final stage: ResultStage 4 (collect at main.scala:30)
+
+2016-07-18 15:24:27,828 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+
+2016-07-18 15:24:27,828 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+
+2016-07-18 15:24:27,828 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[6] at sortBy at main.scala:30), which has no missing parents
+
+2016-07-18 15:24:27,833 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.5 KB, free 157.1 KB)
+
+2016-07-18 15:24:27,835 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.0 KB, free 159.2 KB)
+
+2016-07-18 15:24:27,836 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+
+2016-07-18 15:24:27,836 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO DAGScheduler: Submitting 8 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[6] at sortBy at main.scala:30)
+
+2016-07-18 15:24:27,836 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSchedulerImpl: Adding task set 3.0 with 8 tasks
+
+2016-07-18 15:24:27,838 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 16, localhost, partition 0,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:27,838 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 17, localhost, partition 1,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:27,839 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 1.0 in stage 3.0 (TID 17)
+
+2016-07-18 15:24:27,859 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,859 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:27,909 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 0.0 in stage 3.0 (TID 16)
+
+2016-07-18 15:24:27,937 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,937 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:27,941 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Finished task 1.0 in stage 3.0 (TID 17). 1381 bytes result sent to driver
+
+2016-07-18 15:24:27,942 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 18, localhost, partition 2,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:27,943 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO Executor: Running task 2.0 in stage 3.0 (TID 18)
+
+2016-07-18 15:24:27,943 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 17) in 104 ms on localhost (1/8)
+
+2016-07-18 15:24:27,946 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:27,946 - [INFO] - from application in Thread-165 
+16/07/18 15:24:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,008 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 0.0 in stage 3.0 (TID 16). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,009 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 19, localhost, partition 3,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:28,009 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 3.0 in stage 3.0 (TID 19)
+
+2016-07-18 15:24:28,009 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 16) in 172 ms on localhost (2/8)
+
+2016-07-18 15:24:28,014 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,014 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,042 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 2.0 in stage 3.0 (TID 18). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,047 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 20, localhost, partition 4,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:28,047 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 18) in 103 ms on localhost (3/8)
+
+2016-07-18 15:24:28,057 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 4.0 in stage 3.0 (TID 20)
+
+2016-07-18 15:24:28,061 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,061 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,111 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 4.0 in stage 3.0 (TID 20). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,112 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 21, localhost, partition 5,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:28,112 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 5.0 in stage 3.0 (TID 21)
+
+2016-07-18 15:24:28,112 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 20) in 70 ms on localhost (4/8)
+
+2016-07-18 15:24:28,115 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,115 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,186 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 3.0 in stage 3.0 (TID 19). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,188 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 22, localhost, partition 6,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:28,189 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 19) in 180 ms on localhost (5/8)
+
+2016-07-18 15:24:28,190 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 6.0 in stage 3.0 (TID 22)
+
+2016-07-18 15:24:28,198 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,199 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,219 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 5.0 in stage 3.0 (TID 21). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,226 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 23, localhost, partition 7,NODE_LOCAL, 1942 bytes)
+
+2016-07-18 15:24:28,226 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 7.0 in stage 3.0 (TID 23)
+
+2016-07-18 15:24:28,226 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 21) in 115 ms on localhost (6/8)
+
+2016-07-18 15:24:28,232 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,232 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,245 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 6.0 in stage 3.0 (TID 22). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,246 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 22) in 59 ms on localhost (7/8)
+
+2016-07-18 15:24:28,255 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 7.0 in stage 3.0 (TID 23). 1381 bytes result sent to driver
+
+2016-07-18 15:24:28,256 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 23) in 31 ms on localhost (8/8)
+
+2016-07-18 15:24:28,257 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+
+2016-07-18 15:24:28,257 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: ShuffleMapStage 3 (sortBy at main.scala:30) finished in 0.420 s
+
+2016-07-18 15:24:28,257 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: looking for newly runnable stages
+
+2016-07-18 15:24:28,257 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: running: Set()
+
+2016-07-18 15:24:28,257 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: waiting: Set(ResultStage 4)
+
+2016-07-18 15:24:28,257 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: failed: Set()
+
+2016-07-18 15:24:28,258 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at sortBy at main.scala:30), which has no missing parents
+
+2016-07-18 15:24:28,261 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.3 KB, free 162.4 KB)
+
+2016-07-18 15:24:28,263 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1945.0 B, free 164.3 KB)
+
+2016-07-18 15:24:28,265 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+
+2016-07-18 15:24:28,272 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: Submitting 8 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at sortBy at main.scala:30)
+
+2016-07-18 15:24:28,272 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSchedulerImpl: Adding task set 4.0 with 8 tasks
+
+2016-07-18 15:24:28,272 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 24, localhost, partition 0,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,272 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 25, localhost, partition 1,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,273 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 0.0 in stage 4.0 (TID 24)
+
+2016-07-18 15:24:28,273 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,273 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,282 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 1.0 in stage 4.0 (TID 25)
+
+2016-07-18 15:24:28,284 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 0.0 in stage 4.0 (TID 24). 1496 bytes result sent to driver
+
+2016-07-18 15:24:28,285 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,285 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 26, localhost, partition 2,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,286 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,286 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 24) in 19 ms on localhost (1/8)
+
+2016-07-18 15:24:28,286 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 2.0 in stage 4.0 (TID 26)
+
+2016-07-18 15:24:28,288 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,288 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,289 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 1.0 in stage 4.0 (TID 25). 1520 bytes result sent to driver
+
+2016-07-18 15:24:28,290 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 27, localhost, partition 3,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,291 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 25) in 23 ms on localhost (2/8)
+
+2016-07-18 15:24:28,291 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 3.0 in stage 4.0 (TID 27)
+
+2016-07-18 15:24:28,291 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 2.0 in stage 4.0 (TID 26). 1472 bytes result sent to driver
+
+2016-07-18 15:24:28,293 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 4.0 in stage 4.0 (TID 28, localhost, partition 4,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,293 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 26) in 8 ms on localhost (3/8)
+
+2016-07-18 15:24:28,293 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 4.0 in stage 4.0 (TID 28)
+
+2016-07-18 15:24:28,295 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,295 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-18 15:24:28,297 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,297 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,298 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 4.0 in stage 4.0 (TID 28). 1472 bytes result sent to driver
+
+2016-07-18 15:24:28,299 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 5.0 in stage 4.0 (TID 29, localhost, partition 5,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,299 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 5.0 in stage 4.0 (TID 29)
+
+2016-07-18 15:24:28,299 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 4.0 in stage 4.0 (TID 28) in 8 ms on localhost (4/8)
+
+2016-07-18 15:24:28,302 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,303 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,307 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 5.0 in stage 4.0 (TID 29). 1472 bytes result sent to driver
+
+2016-07-18 15:24:28,308 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 6.0 in stage 4.0 (TID 30, localhost, partition 6,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,308 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 6.0 in stage 4.0 (TID 30)
+
+2016-07-18 15:24:28,308 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 5.0 in stage 4.0 (TID 29) in 10 ms on localhost (5/8)
+
+2016-07-18 15:24:28,311 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,311 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,313 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 6.0 in stage 4.0 (TID 30). 1472 bytes result sent to driver
+
+2016-07-18 15:24:28,314 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Starting task 7.0 in stage 4.0 (TID 31, localhost, partition 7,NODE_LOCAL, 1953 bytes)
+
+2016-07-18 15:24:28,315 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 6.0 in stage 4.0 (TID 30) in 7 ms on localhost (6/8)
+
+2016-07-18 15:24:28,315 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Running task 7.0 in stage 4.0 (TID 31)
+
+2016-07-18 15:24:28,317 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Getting 8 non-empty blocks out of 8 blocks
+
+2016-07-18 15:24:28,317 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-18 15:24:28,323 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 3.0 in stage 4.0 (TID 27). 1424 bytes result sent to driver
+
+2016-07-18 15:24:28,328 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 27) in 37 ms on localhost (7/8)
+
+2016-07-18 15:24:28,329 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO Executor: Finished task 7.0 in stage 4.0 (TID 31). 1472 bytes result sent to driver
+
+2016-07-18 15:24:28,329 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSetManager: Finished task 7.0 in stage 4.0 (TID 31) in 16 ms on localhost (8/8)
+
+2016-07-18 15:24:28,329 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+
+2016-07-18 15:24:28,331 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: ResultStage 4 (collect at main.scala:30) finished in 0.063 s
+
+2016-07-18 15:24:28,331 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO DAGScheduler: Job 1 finished: collect at main.scala:30, took 0.515245 s
+
+2016-07-18 15:24:28,332 - [INFO] - from application in Thread-165 
+ArrayBuffer((F,94640), (G,94640), (C,189280), (V,189280), (X,283920), (B,283920), (K,283920), (q,378560), (J,378560), (E,378560), (I,473200), (z,473200), (R,473200), (j,473200), (U,473200), (D,567840), (W,567840), (H,662480), (L,662480), (N,662480), (O,662480), (k,757120), (T,851760), (P,946400), (S,1041040), (A,1230320), (x,1608880), (w,1608880), (b,1798160), (f,1892800), (M,1987440), (y,2460640), (v,3028480), (g,3217760), (u,3880240), (d,4826640), (m,5015920), (h,5110560), (p,5299840), (c,5867680), (l,6908720), (r,7571200), (s,8706880), (i,10031840), (n,10505040), (o,11262160), (t,12019280), (a,14479920), (e,17129840))
+
+2016-07-18 15:24:28,335 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO SparkContext: Invoking stop() from shutdown hook
+
+2016-07-18 15:24:28,410 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO SparkUI: Stopped Spark web UI at http://10.236.63.24:4040
+
+2016-07-18 15:24:28,423 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+
+2016-07-18 15:24:28,446 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO MemoryStore: MemoryStore cleared
+
+2016-07-18 15:24:28,447 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO BlockManager: BlockManager stopped
+
+2016-07-18 15:24:28,447 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO BlockManagerMaster: BlockManagerMaster stopped
+
+2016-07-18 15:24:28,450 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+
+2016-07-18 15:24:28,455 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO SparkContext: Successfully stopped SparkContext
+
+2016-07-18 15:24:28,456 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShutdownHookManager: Shutdown hook called
+
+2016-07-18 15:24:28,457 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShutdownHookManager: Deleting directory /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-5bf3e021-0ed3-488c-8894-78e540fba1d6
+
+2016-07-18 15:24:28,458 - [INFO] - from application in Thread-165 
+16/07/18 15:24:28 INFO ShutdownHookManager: Deleting directory /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-5bf3e021-0ed3-488c-8894-78e540fba1d6/httpd-b8319d59-607a-43fb-a91f-deb4cf44c723
+

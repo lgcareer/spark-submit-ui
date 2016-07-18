@@ -48,7 +48,7 @@ object SparkStream extends Controller with Secured{
       import java.io.File
       val filename = picture.filename
       val contentType = picture.contentType
-      picture.ref.moveTo(new File(s"/tmp/file/$filename"))
+      picture.ref.moveTo(new File(s"/tmp/file/$filename"),true)
       Redirect(routes.SparkStream.streamArgs)
     }.getOrElse {
       Redirect(routes.SparkJar.errorpage())

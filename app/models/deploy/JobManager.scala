@@ -139,7 +139,6 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         request.jarLocation.foreach(builder.jarLocation)
         val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
         val output = process.inputIterator.mkString("\n")
-
         val regex = """Successfully (.*)""".r.unanchored
         output match {
           case regex(success) => {
