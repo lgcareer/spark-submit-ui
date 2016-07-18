@@ -44,6 +44,7 @@ object  JobManagerActor{
 
   def props(contextConfig: Config): Props = Props(classOf[JobManagerActor], contextConfig)
 }
+
 class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
 
   import JobManagerActor._
@@ -162,8 +163,6 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }
-
-
 
 
 }

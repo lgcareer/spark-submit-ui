@@ -5,7 +5,7 @@ import akka.actor.Actor
 /**
   * Created by liangkai on 16/7/4.
   */
-abstract class InstrumentedActor extends Actor with Slf4jLogging with ActorMetrics {
+abstract class InstrumentedActor extends Actor with Slf4jLogging  {
 
   override def preRestart(reason: Throwable, message: Option[Any]) {
     super.preRestart(reason, message)
