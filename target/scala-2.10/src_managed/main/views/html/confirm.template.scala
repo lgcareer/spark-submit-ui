@@ -45,7 +45,7 @@ Seq[Any](format.raw/*1.18*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Jul 15 15:42:48 CST 2016
+                    DATE: Fri Jul 15 16:01:46 CST 2016
                     SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/confirm.scala.html
                     HASH: 3c3f50a4acc472e0472da1b939d0920bdc3272cf
                     MATRIX: 558->1|668->17|757->79|785->80|857->117|885->124|949->161|977->162|1047->205|1075->206|1120->224|1148->225|1219->268|1248->269|1287->280|1316->281

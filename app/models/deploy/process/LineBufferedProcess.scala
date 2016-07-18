@@ -1,15 +1,16 @@
 package models.deploy.process
 
+import akka.actor.ActorRef
 import org.apache.spark.Logging
 
 
 /**
   * Created by liangkai1 on 16/7/12.
   */
-class LineBufferedProcess(process: Process) extends Logging {
+class LineBufferedProcess(act:ActorRef,process: Process) extends Logging {
 
-  private[this] val _inputStream = new LineBufferedStream(process.getInputStream)
-  private[this] val _errorStream = new LineBufferedStream(process.getErrorStream)
+  private[this] val _inputStream = new LineBufferedStream(act,process.getInputStream)
+  private[this] val _errorStream = new LineBufferedStream(act,process.getErrorStream)
 
   def inputLines: IndexedSeq[String] = _inputStream.lines
   def errorLines: IndexedSeq[String] = _errorStream.lines

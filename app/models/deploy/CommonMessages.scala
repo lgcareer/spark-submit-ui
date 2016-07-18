@@ -5,8 +5,13 @@ package models
   */
 sealed trait CommonMessages
 
-class JobSubmitExecption(msg:String) extends  RuntimeException(msg) with CommonMessages
-class JobRunExecption(msg:String) extends  RuntimeException(msg) with CommonMessages
+/** 任务提交异常 */
+case class JobSubmitExecption(msg:String) extends  RuntimeException(msg) with CommonMessages
 
+/** 任务运行异常 */
+case class JobRunExecption(msg:String) extends  RuntimeException(msg) with CommonMessages
+
+/** 任务提交成功 */
+case class JobSubmitSuccess(msg:String) extends  RuntimeException(msg) with CommonMessages
 
 

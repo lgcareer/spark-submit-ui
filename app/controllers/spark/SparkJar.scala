@@ -1,13 +1,13 @@
 package controllers
 
-import java.util.concurrent.{ExecutorService, Executors}
-
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
 import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
+
+import scala.concurrent.Future
 
 object SparkJar extends Controller with Secured {
 
@@ -49,6 +49,7 @@ object SparkJar extends Controller with Secured {
         }
       }
 
+
       def executejarpage = Action { implicit request =>
         Ok(views.html.sparkjar(executeForm))
       }
@@ -62,21 +63,13 @@ object SparkJar extends Controller with Secured {
           },
 
           executeArguments => {
-//            val argss = ExecuteModel(
-//              executeArguments.executeClass,
-//              executeArguments.numExecutors,
-//              executeArguments.driverMemory,
-//              executeArguments.executorMemory,
-//              executeArguments.executorCores,
-//              executeArguments.jarLocation,
-//              executeArguments.args1)
-//
-            //val model: ExecuteModel = ExecuteModel("mainq","1", "1G","1G","1","no","no")
-
-            Execute.main(executeArguments)
-
-            Ok(views.html.index())
-      }
+          Execute.main(executeArguments)
+          match {
+              case JobSubmitSuccess(msg) => Logger.info(msg); Ok("提交成功! ")
+              case JobRunExecption(error) => BadRequest(error)
+              case _ => NotFound
+            }
+       }
      )
 }
 

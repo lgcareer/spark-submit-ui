@@ -21,14 +21,18 @@ package models.deploy.process
 import java.io.InputStream
 import java.util.concurrent.locks.ReentrantLock
 
+import akka.actor.ActorRef
+import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess}
 import org.apache.spark.Logging
+import play.api.Logger
 
 import scala.io.Source
 
 /**
   * Created by liangkai1 on 16/7/12.
   */
-class LineBufferedStream(inputStream: InputStream) extends Logging {
+class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging {
+
 
   private[this] var _lines: IndexedSeq[String] = IndexedSeq()
 
@@ -41,7 +45,13 @@ class LineBufferedStream(inputStream: InputStream) extends Logging {
       val lines = Source.fromInputStream(inputStream).getLines()
       for (line <- lines) {
         _lock.lock()
-        println(line)
+        val regex = """Added (.*)""".r.unanchored
+        line match {
+          case regex(success) => {
+            act ! JobSubmitSuccess("任务提交成功")
+          }
+          case _ =>  Logger.info(line)
+        }
         try {
           _lines = _lines :+ line
           _condition.signalAll()
@@ -49,7 +59,6 @@ class LineBufferedStream(inputStream: InputStream) extends Logging {
           _lock.unlock()
         }
       }
-
       _lock.lock()
       try {
         _finished = true
@@ -77,7 +86,6 @@ class LineBufferedStream(inputStream: InputStream) extends Logging {
       if (index < _lines.length) {
         true
       } else {
-        // Otherwise we might still have more data.
         _lock.lock()
         try {
           if (_finished) {

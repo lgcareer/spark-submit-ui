@@ -3,7 +3,6 @@ package models
 import java.io.{File, IOException}
 import java.util.UUID
 import java.util.concurrent.Executors._
-
 import akka.actor.{ActorRef, Props}
 import com.typesafe.config.Config
 import models.actor.InstrumentedActor
@@ -91,7 +90,6 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       )
   }
 
-
   def wrappedReceive: Receive = {
 
     case Initializ(executeModel) => {
@@ -108,7 +106,7 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
     }
 
     case SubmitJob(request) => {
-      runJobFuture(request, sparkEnv =SparkEnv.get)
+      runJobFuture(request, sparkEnv =SparkEnv.get,sender)
     }
 
     case StoreJar(userName,filePart) => {
@@ -127,12 +125,12 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
     *
     * @param request
     */
-  def runJobFuture(request:CreateBatchRequest, sparkEnv: SparkEnv): Future[Any] = {
+  def runJobFuture(request:CreateBatchRequest, sparkEnv: SparkEnv,act :ActorRef): Future[Any] = {
     logger.info("Starting job")
     Future {
       try {
         SparkEnv.set(sparkEnv)
-        val builder = new SparkProcessBuilder()
+        val builder = new SparkProcessBuilder(act)
         request.className.foreach(builder.className)
         request.driverMemory.foreach(builder.driverMemory)
         request.executorMemory.foreach(builder.executorMemory)
@@ -145,10 +143,10 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         val regex = """Successfully (.*)""".r.unanchored
         output match {
           case regex(success) => {
-            "执行成功"
+            "执行成功!"
           }
           case _ =>
-            throw new JobRunExecption("任务运行异常")
+            throw new JobRunExecption(output)
         }
       } catch {
         case e: AbstractMethodError => {
@@ -162,7 +160,7 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       }
     }(executionContext).andThen {
       case scala.util.Success(result:Any) => println(result)
-      case scala.util.Failure(error :Throwable) => println(error)
+      case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }
 

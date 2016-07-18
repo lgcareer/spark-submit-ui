@@ -1,6 +1,7 @@
 
 package models.deploy.process
 
+import akka.actor.ActorRef
 import org.apache.spark.Logging
 import play.api.Logger
 
@@ -11,7 +12,7 @@ import scala.collection.mutable.ArrayBuffer
 /**
   * Created by liangkai1 on 16/7/12.
   */
-class SparkProcessBuilder extends Logging {
+class SparkProcessBuilder(act:ActorRef) extends Logging {
 
   private[this] var _executable: String = _
   private[this] var _master: Option[String] = None
@@ -143,7 +144,7 @@ class SparkProcessBuilder extends Logging {
     _redirectError.foreach(pb.redirectError)
     _redirectErrorStream.foreach(pb.redirectErrorStream)
 
-    val process: LineBufferedProcess = new LineBufferedProcess(pb.start())
+    val process: LineBufferedProcess = new LineBufferedProcess(act,pb.start())
     process.waitFor()
     process
   }
