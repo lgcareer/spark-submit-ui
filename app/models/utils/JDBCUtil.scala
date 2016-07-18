@@ -21,11 +21,11 @@ object JDBCUtil {
       Class.forName(driver)
       connection = DriverManager.getConnection(url, username, password)
       val statement = connection.createStatement()
-      val resultSet = statement.executeQuery("select * from dashboard_metric order by time desc limit 100")
+      val resultSet = statement.executeQuery("select * from dashboard_info order by time desc limit 100")
       while (resultSet.next()) {
         val id = resultSet.getString("id")
         val time = resultSet.getString("time")
-        val gauges = resultSet.getString("gauges")
+        val gauges = resultSet.getString("mem_used")
         val times = time.split("-").mkString.split(" ").mkString.split(":").mkString
         val gauge = gauges.substring(gauges.indexOf("{") + 1, gauges.length())
         MetriJson = "{\"time\":" + times + "," + gauge

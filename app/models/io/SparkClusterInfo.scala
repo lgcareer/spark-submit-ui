@@ -4,7 +4,6 @@ import anorm._
 import play.api.Play.current
 import play.api.db.DB
 
-
 /**
  *  Spark_Cluster_Info
     alive_workers  节点数
@@ -33,7 +32,9 @@ object SparkTotalinfo {
        val status = findall.apply().head[String]("status")
        val spark_info ="{alive_workers:"+alive_workers+","+"cores:"+cores+","+"memory:"+memory+","+"applications:"+applications+","+"drivers:"+drivers+","+"status:"+status+"}"
        val spark_info_json = "{\"alive_workers\":"+"\""+alive_workers+"\""+","+"\"cores\":"+"\""+cores+"\""+","+"\"memory\":"+"\""+memory+"\""+","+"\"applications\":"+"\""+applications+"\""+","+"\"drivers\":"+"\""+drivers+"\""+","+"\"status\":"+"\""+status+"\""+"}"
+//       println(spark_info_json.toString)
        spark_info_json
+
     }
   }
 }

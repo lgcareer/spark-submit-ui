@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
-// @HASH:8e8de0b5e625bf75313e2d6ac8263959b23576cc
-// @DATE:Thu Jul 07 18:41:31 CST 2016
+// @HASH:fbd3c78d6849c09bd713ae1910325e87b441d38c
+// @DATE:Mon Jul 18 15:34:24 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,14 +13,12 @@ import play.api.mvc._
 import Router.queryString
 
 
-// @LINE:73
-// @LINE:72
-// @LINE:69
 // @LINE:67
 // @LINE:66
-// @LINE:65
-// @LINE:62
+// @LINE:63
 // @LINE:61
+// @LINE:60
+// @LINE:59
 // @LINE:56
 // @LINE:55
 // @LINE:54
@@ -59,19 +57,19 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:69
+// @LINE:63
 // @LINE:36
 class ReverseAssets {
     
 
-// @LINE:69
+// @LINE:63
 // @LINE:36
 def at(file:String): Call = {
    (file: @unchecked) match {
 // @LINE:36
 case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:69
+// @LINE:63
 case (file) if true => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
    }
@@ -171,38 +169,20 @@ def login(): Call = {
 }
                           
 
-// @LINE:62
-// @LINE:61
 // @LINE:27
 // @LINE:26
 class ReverseSparkSql {
     
 
-// @LINE:61
 // @LINE:26
 def sqlpage(): Call = {
-   () match {
-// @LINE:26
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-// @LINE:61
-case () if true => Call("GET", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-   }
+   Call("GET", _prefix + { _defaultPrefix } + "sparksql")
 }
                                                 
 
-// @LINE:62
 // @LINE:27
 def executesql(): Call = {
-   () match {
-// @LINE:27
-case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-// @LINE:62
-case () if true => Call("POST", _prefix + { _defaultPrefix } + "sparksql")
-                                                        
-   }
+   Call("GET", _prefix + { _defaultPrefix } + "executesql")
 }
                                                 
     
@@ -308,18 +288,18 @@ def index(): Call = {
 }
                           
 
-// @LINE:73
-// @LINE:72
+// @LINE:67
+// @LINE:66
 class ReverseMonitorController {
     
 
-// @LINE:72
+// @LINE:66
 def jobs(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "jobs")
 }
                                                 
 
-// @LINE:73
+// @LINE:67
 def streaming(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "streaming")
 }
@@ -369,9 +349,9 @@ def streamArgs(): Call = {
 }
                           
 
-// @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:61
+// @LINE:60
+// @LINE:59
 // @LINE:34
 // @LINE:33
 // @LINE:32
@@ -380,14 +360,14 @@ def streamArgs(): Call = {
 class ReverseYarnList {
     
 
-// @LINE:66
+// @LINE:60
 // @LINE:31
 def yarnlist(): Call = {
    () match {
 // @LINE:31
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
                                                         
-// @LINE:66
+// @LINE:60
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnlist")
                                                         
    }
@@ -400,14 +380,14 @@ def spark_info(): Call = {
 }
                                                 
 
-// @LINE:65
+// @LINE:59
 // @LINE:30
 def yarnInfo(): Call = {
    () match {
 // @LINE:30
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
                                                         
-// @LINE:65
+// @LINE:59
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "yarnInfo")
                                                         
    }
@@ -420,14 +400,14 @@ def sparklist(): Call = {
 }
                                                 
 
-// @LINE:67
+// @LINE:61
 // @LINE:32
 def workerlist(): Call = {
    () match {
 // @LINE:32
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
                                                         
-// @LINE:67
+// @LINE:61
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
                                                         
    }
@@ -440,14 +420,12 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
                   
 
 
-// @LINE:73
-// @LINE:72
-// @LINE:69
 // @LINE:67
 // @LINE:66
-// @LINE:65
-// @LINE:62
+// @LINE:63
 // @LINE:61
+// @LINE:60
+// @LINE:59
 // @LINE:56
 // @LINE:55
 // @LINE:54
@@ -486,12 +464,12 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:69
+// @LINE:63
 // @LINE:36
 class ReverseAssets {
     
 
-// @LINE:69
+// @LINE:63
 // @LINE:36
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
@@ -661,42 +639,28 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:62
-// @LINE:61
 // @LINE:27
 // @LINE:26
 class ReverseSparkSql {
     
 
-// @LINE:61
 // @LINE:26
 def sqlpage : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.SparkSql.sqlpage",
    """
       function() {
-      if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
-      }
       }
    """
 )
                         
 
-// @LINE:62
 // @LINE:27
 def executesql : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.SparkSql.executesql",
    """
       function() {
-      if (true) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
-      }
-      if (true) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sparksql"})
-      }
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "executesql"})
       }
    """
 )
@@ -824,12 +788,12 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:73
-// @LINE:72
+// @LINE:67
+// @LINE:66
 class ReverseMonitorController {
     
 
-// @LINE:72
+// @LINE:66
 def jobs : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.MonitorController.jobs",
    """
@@ -840,7 +804,7 @@ def jobs : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:73
+// @LINE:67
 def streaming : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.MonitorController.streaming",
    """
@@ -920,9 +884,9 @@ def streamArgs : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:61
+// @LINE:60
+// @LINE:59
 // @LINE:34
 // @LINE:33
 // @LINE:32
@@ -931,7 +895,7 @@ def streamArgs : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseYarnList {
     
 
-// @LINE:66
+// @LINE:60
 // @LINE:31
 def yarnlist : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.YarnList.yarnlist",
@@ -959,7 +923,7 @@ def spark_info : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:65
+// @LINE:59
 // @LINE:30
 def yarnInfo : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.YarnList.yarnInfo",
@@ -987,7 +951,7 @@ def sparklist : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:67
+// @LINE:61
 // @LINE:32
 def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.YarnList.workerlist",
@@ -1010,14 +974,12 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:73
-// @LINE:72
-// @LINE:69
 // @LINE:67
 // @LINE:66
-// @LINE:65
-// @LINE:62
+// @LINE:63
 // @LINE:61
+// @LINE:60
+// @LINE:59
 // @LINE:56
 // @LINE:55
 // @LINE:54
@@ -1057,7 +1019,7 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:69
+// @LINE:63
 // @LINE:36
 class ReverseAssets {
     
@@ -1161,8 +1123,6 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:62
-// @LINE:61
 // @LINE:27
 // @LINE:26
 class ReverseSparkSql {
@@ -1176,7 +1136,7 @@ def sqlpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 
 // @LINE:27
 def executesql(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkSql.executesql(), HandlerDef(this, "controllers.SparkSql", "executesql", Seq(), "POST", """""", _prefix + """sparksql""")
+   controllers.SparkSql.executesql(), HandlerDef(this, "controllers.SparkSql", "executesql", Seq(), "GET", """""", _prefix + """executesql""")
 )
                       
     
@@ -1242,18 +1202,18 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:73
-// @LINE:72
+// @LINE:67
+// @LINE:66
 class ReverseMonitorController {
     
 
-// @LINE:72
+// @LINE:66
 def jobs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.MonitorController.jobs(), HandlerDef(this, "controllers.MonitorController", "jobs", Seq(), "GET", """""", _prefix + """jobs""")
 )
                       
 
-// @LINE:73
+// @LINE:67
 def streaming(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.MonitorController.streaming(), HandlerDef(this, "controllers.MonitorController", "streaming", Seq(), "GET", """""", _prefix + """streaming""")
 )
@@ -1303,9 +1263,9 @@ def streamArgs(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:61
+// @LINE:60
+// @LINE:59
 // @LINE:34
 // @LINE:33
 // @LINE:32

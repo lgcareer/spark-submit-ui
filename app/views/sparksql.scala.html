@@ -1,35 +1,75 @@
-@(form: Form[SqlModel])
+@(form: play.api.data.Form[String])
 @main("Neptune Spark-sql"){
 @confirm("确定执行？")
+<script charset="utf-8">
+
+    $(document).ready(function(){
+        alert("aa")
+        $.ajax({
+            type:"GET",
+            url:"/executesql",
+            success:function(data){
+            alert("bb")
+              var head= "<table border='10' width='439'><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
+                var myobj=eval(data);
+                alert("cc")
+                for (var p in myobj) {
+                    var datamid = data[p];
+                    for(var  x in datamid){
+                        var mid = eval(data[p][x]);
+                        for (var i = 0; i < mid.length; i++) {
+                             if(mid[i].progress == 100){
+                             head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                             }
+                             if(mid[i].progress != 100){
+                             head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                             }
+                             if(mid[i].FinalStatus == "FAILED"){
+                             head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                             }
+                          };
+                    }
+
+                };
+                head += " </table>";
+                $('#executesql').html(head);
+            }
+        });
+});
+    </script>
 <div class="graphs">
- <div class="xs">
-   <h3>Neptune Spark Sql</h3>
-   @helper.form(action=routes.SparkSql.executesql){
-   <div class="tab-content">
-    <div class="tab-pane active" id="horizontal-form">
-        <div class="form-group">
-        <label for="txtarea1" class="col-sm-2 control-label">请输入要执行的SQL</label>
-          <div class="col-sm-8"><textarea name="sql" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
+    <div class="xs">
+        <h3>Neptune Spark Sql</h3>
+        @helper.form(action=routes.SparkSql.executesql){
+        <div class="tab-content">
+            <div class="tab-pane active" id="horizontal-form">
+                <div class="form-group">
+                    <label for="txtarea1" class="col-sm-2 control-label">请输入要执行的SQL</label>
+                    <div class="col-sm-8"><textarea name="sql" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bs-example" data-example-id="form-validation-states">
+        </div>
+
+        <div class="bs-example" data-example-id="form-validation-states-with-icons">
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <button class="btn-success btn" type="submit" id="sql_sum" >提交</button>
+                        <button class="btn-inverse btn" type="reset" >重置</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
+    <div class="bs-example4" data-example-id="contextual-table">
+        <table class="table" id = "result">
 
-  <div class="bs-example" data-example-id="form-validation-states">
-  </div>
-  
-  <div class="bs-example" data-example-id="form-validation-states-with-icons">
-      <div class="panel-footer">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <button class="btn-success btn" type="submit" onclick="getConfirmation();" >提交</button>
-            <button class="btn-inverse btn" type="reset" >重置</button>
-          </div>
-        </div>
-      </div>
-  </div>
-</div>
-@copyright()
+        </table>
+    </div>
+    @copyright()
 </div>
 }
 }
-

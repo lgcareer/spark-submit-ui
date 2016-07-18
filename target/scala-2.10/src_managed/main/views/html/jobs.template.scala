@@ -29,15 +29,14 @@ Seq[Any](format.raw/*1.14*/("""
 <!-- <link rel="stylesheet" href=""""),_display_(Seq[Any](/*8.36*/routes/*8.42*/.Assets.at("stylesheets/webui.css"))),format.raw/*8.77*/("""" type="text/css"/> -->
 <link rel="stylesheet" href=""""),_display_(Seq[Any](/*9.31*/routes/*9.37*/.Assets.at("stylesheets/timeline-view.css"))),format.raw/*9.80*/("""" type="text/css"/>
 
-
-   <script src=""""),_display_(Seq[Any](/*12.18*/routes/*12.24*/.Assets.at("javascripts/sorttable.js"))),format.raw/*12.62*/("""" type="text/javascript" ></script>
-   <script src=""""),_display_(Seq[Any](/*13.18*/routes/*13.24*/.Assets.at("javascripts/jquery-1.11.1.min.js"))),format.raw/*13.70*/(""""  type="text/javascript" ></script>
-   <script src=""""),_display_(Seq[Any](/*14.18*/routes/*14.24*/.Assets.at("javascripts/vis.min.js"))),format.raw/*14.60*/("""" type="text/javascript"></script>
-   <script src=""""),_display_(Seq[Any](/*15.18*/routes/*15.24*/.Assets.at("javascripts/bootstrap-tooltip.js"))),format.raw/*15.70*/("""" type="text/javascript"></script>
-   <script src=""""),_display_(Seq[Any](/*16.18*/routes/*16.24*/.Assets.at("javascripts/initialize-tooltips.js"))),format.raw/*16.72*/("""" type="text/javascript"></script>
-   <script src=""""),_display_(Seq[Any](/*17.18*/routes/*17.24*/.Assets.at("javascripts/table.js"))),format.raw/*17.58*/("""" type="text/javascript"></script>
-   <script src=""""),_display_(Seq[Any](/*18.18*/routes/*18.24*/.Assets.at("javascripts/additional-metrics.js"))),format.raw/*18.71*/("""" type="text/javascript"></script>
-   <script src=""""),_display_(Seq[Any](/*19.18*/routes/*19.24*/.Assets.at("javascripts/timeline-view.js"))),format.raw/*19.66*/("""" type="text/javascript"></script>
+   <script src=""""),_display_(Seq[Any](/*11.18*/routes/*11.24*/.Assets.at("javascripts/sorttable.js"))),format.raw/*11.62*/("""" type="text/javascript" ></script>
+   <script src=""""),_display_(Seq[Any](/*12.18*/routes/*12.24*/.Assets.at("javascripts/jquery-1.11.1.min.js"))),format.raw/*12.70*/(""""  type="text/javascript" ></script>
+   <script src=""""),_display_(Seq[Any](/*13.18*/routes/*13.24*/.Assets.at("javascripts/vis.min.js"))),format.raw/*13.60*/("""" type="text/javascript"></script>
+   <script src=""""),_display_(Seq[Any](/*14.18*/routes/*14.24*/.Assets.at("javascripts/bootstrap-tooltip.js"))),format.raw/*14.70*/("""" type="text/javascript"></script>
+   <script src=""""),_display_(Seq[Any](/*15.18*/routes/*15.24*/.Assets.at("javascripts/initialize-tooltips.js"))),format.raw/*15.72*/("""" type="text/javascript"></script>
+   <script src=""""),_display_(Seq[Any](/*16.18*/routes/*16.24*/.Assets.at("javascripts/table.js"))),format.raw/*16.58*/("""" type="text/javascript"></script>
+   <script src=""""),_display_(Seq[Any](/*17.18*/routes/*17.24*/.Assets.at("javascripts/additional-metrics.js"))),format.raw/*17.71*/("""" type="text/javascript"></script>
+   <script src=""""),_display_(Seq[Any](/*18.18*/routes/*18.24*/.Assets.at("javascripts/timeline-view.js"))),format.raw/*18.66*/("""" type="text/javascript"></script>
 
 <div class="container-fluid">
    <div class="row-fluid">
@@ -49,12 +48,12 @@ Seq[Any](format.raw/*1.14*/("""
    </div>
    </div>
    <div>
-       """),_display_(Seq[Any](/*31.9*/Html(job.timeline))),format.raw/*31.27*/("""
-       """),_display_(Seq[Any](/*32.9*/Html(job.active))),format.raw/*32.25*/("""
-       """),_display_(Seq[Any](/*33.9*/Html(job.completed))),format.raw/*33.28*/("""
+       """),_display_(Seq[Any](/*30.9*/Html(job.timeline))),format.raw/*30.27*/("""
+       """),_display_(Seq[Any](/*31.9*/Html(job.active))),format.raw/*31.25*/("""
+       """),_display_(Seq[Any](/*32.9*/Html(job.completed))),format.raw/*32.28*/("""
    </div>
    <div>
-       """),_display_(Seq[Any](/*36.9*/copyright())),format.raw/*36.20*/("""
+       """),_display_(Seq[Any](/*35.9*/copyright())),format.raw/*35.20*/("""
    </div>
 """)))})))}
     }
@@ -68,11 +67,11 @@ Seq[Any](format.raw/*1.14*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Jul 07 18:41:32 CST 2016
+                    DATE: Mon Jul 18 14:53:32 CST 2016
                     SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/jobs.scala.html
-                    HASH: 93f77b946615cdb8379197969b721077031108b0
-                    MATRIX: 554->1|660->13|696->15|728->39|766->40|889->128|903->134|961->171|1047->222|1061->228|1125->271|1215->326|1229->332|1285->367|1374->421|1388->427|1452->470|1527->509|1542->515|1602->553|1691->606|1706->612|1774->658|1864->712|1879->718|1937->754|2025->806|2040->812|2108->858|2196->910|2211->916|2281->964|2369->1016|2384->1022|2440->1056|2528->1108|2543->1114|2612->1161|2700->1213|2715->1219|2779->1261|3100->1547|3140->1565|3184->1574|3222->1590|3266->1599|3307->1618|3370->1646|3403->1657
-                    LINES: 19->1|22->1|23->2|23->2|23->2|27->6|27->6|27->6|28->7|28->7|28->7|29->8|29->8|29->8|30->9|30->9|30->9|33->12|33->12|33->12|34->13|34->13|34->13|35->14|35->14|35->14|36->15|36->15|36->15|37->16|37->16|37->16|38->17|38->17|38->17|39->18|39->18|39->18|40->19|40->19|40->19|52->31|52->31|53->32|53->32|54->33|54->33|57->36|57->36
+                    HASH: cb1cf7290740b8b4bac047361d8622e5f3ba3a4c
+                    MATRIX: 554->1|660->13|696->15|728->39|766->40|889->128|903->134|961->171|1047->222|1061->228|1125->271|1215->326|1229->332|1285->367|1374->421|1388->427|1452->470|1526->508|1541->514|1601->552|1690->605|1705->611|1773->657|1863->711|1878->717|1936->753|2024->805|2039->811|2107->857|2195->909|2210->915|2280->963|2368->1015|2383->1021|2439->1055|2527->1107|2542->1113|2611->1160|2699->1212|2714->1218|2778->1260|3099->1546|3139->1564|3183->1573|3221->1589|3265->1598|3306->1617|3369->1645|3402->1656
+                    LINES: 19->1|22->1|23->2|23->2|23->2|27->6|27->6|27->6|28->7|28->7|28->7|29->8|29->8|29->8|30->9|30->9|30->9|32->11|32->11|32->11|33->12|33->12|33->12|34->13|34->13|34->13|35->14|35->14|35->14|36->15|36->15|36->15|37->16|37->16|37->16|38->17|38->17|38->17|39->18|39->18|39->18|51->30|51->30|52->31|52->31|53->32|53->32|56->35|56->35
                     -- GENERATED --
                 */
             
