@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body>
+<body style="margin-bottom: 150px">
+
+    <ul id="logs">
+        <li>This is log 1</li>
+
+    </ul>
+
+<script charset="utf-8">
+
+    var $logs = $('#logs');
+
+        setInterval(
+            function () {
+              $(document).ready(function(){
+                $.ajax({
+                    type:"GET",
+                    url:"/log",
+                    dataType:"text",
+                    success:function(data){
+                        var $el = $('<li>'+ data + '</li>');
+                        $el.appendTo($logs);
+                        //$('body').animate({scrollTop: $el.offset().top});
+
+                    }
+                });
+           });
+         },
+            200
+    )
+
+  </script>
+
 
 </body>
 </html>

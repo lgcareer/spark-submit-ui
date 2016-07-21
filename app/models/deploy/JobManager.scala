@@ -12,6 +12,7 @@ import models.utils.CreateBatchRequest
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkEnv
 import org.joda.time.DateTime
+import play.api.Logger
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 
@@ -34,11 +35,12 @@ case  class ExecuteModel(
 
 object  JobManagerActor{
   case class SubmitJob(request: CreateBatchRequest)
+  case class SubmitJobed(msg:String)
   case class StoreJar(userName: String, filePart: FilePart[TemporaryFile])
 
   case class Initializ(executeModel: ExecuteModel)
   case class InitError(t: Throwable)
-  case class JobLoadingError(err: Throwable)
+  case class JobLoading(msg: String)
 
   case class InvalidJar(error:String)
   case class JarStored(id :String)
@@ -115,7 +117,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
     case StoreJar(userName,filePart) => {
 
       if(!validateJar(filePart.filename)){
-        sender ! InvalidJar("文件类型不正确")
+        sender ! InvalidJar("文件类型不正确!")
       }else{
         jobDAO.saveJar(userName,DateTime.now(),filePart)
         sender ! JarStored(UUID.randomUUID().toString)

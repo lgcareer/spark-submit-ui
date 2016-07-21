@@ -6692,3 +6692,12 @@ models.JobRunExecption: java.lang.ClassNotFoundException:
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
 	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
 
+2016-07-21 18:16:14,625 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-21 18:16:14,904 - [INFO] - from play in play-internal-execution-context-2 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-21 18:16:14,910 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
