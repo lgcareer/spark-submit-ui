@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark_2.10;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5abbc10[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1736f894[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.10.3] org.scala-lang#scala-library;2.10.3[0m
@@ -19972,7 +19972,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.3!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 16034ms :: artifacts dl 216ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5754ms :: artifacts dl 103ms[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark_2.10;1.0-SNAPSHOT compile produced in /Users/liangkai1/IdeaProjects/ficusspark/target/resolution-cache/reports/default-ficusspark_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark_2.10;1.0-SNAPSHOT runtime produced in /Users/liangkai1/IdeaProjects/ficusspark/target/resolution-cache/reports/default-ficusspark_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark_2.10;1.0-SNAPSHOT test produced in /Users/liangkai1/IdeaProjects/ficusspark/target/resolution-cache/reports/default-ficusspark_2.10-test.xml[0m
@@ -19986,7 +19986,7 @@
 [0m[[0mdebug[0m] [0m	report for default#ficusspark_2.10;1.0-SNAPSHOT docs produced in /Users/liangkai1/IdeaProjects/ficusspark/target/resolution-cache/reports/default-ficusspark_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark_2.10;1.0-SNAPSHOT pom produced in /Users/liangkai1/IdeaProjects/ficusspark/target/resolution-cache/reports/default-ficusspark_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark_2.10;1.0-SNAPSHOT scala-tool produced in /Users/liangkai1/IdeaProjects/ficusspark/target/resolution-cache/reports/default-ficusspark_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (16034ms resolve - 216ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (5754ms resolve - 103ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
 [0m[[33mwarn[0m] [0mScala version was updated by one of library dependencies:[0m
 [0m[[33mwarn[0m] [0m	* org.scala-lang:scala-library:(2.10.0, 2.10.3, 2.10.2) -> 2.10.4[0m

@@ -33,12 +33,8 @@ object SparkJar extends Controller with Secured {
          session.get("email").map { user =>
            Logger.info("用户名=>"+user)
            Execute.storeJar(user,jobFile) match {
-
             case JarStored(id) => Redirect(routes.SparkJar.executejar())
-            case InvalidJar(error) => {
-              Logger.info(error)
-              BadRequest(error)
-            }
+            case InvalidJar(error) => Logger.info(error); BadRequest(error)
             case _ => NotFound
           }
         }.getOrElse {

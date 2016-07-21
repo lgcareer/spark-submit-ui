@@ -6,6 +6,8 @@ import org.apache.spark.Logging
 import play.api.Logger
 
 import scala.collection.JavaConverters._
+import scala.collection.immutable.HashMap.HashMap1
+import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
 

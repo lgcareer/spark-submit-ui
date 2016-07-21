@@ -3,6 +3,7 @@ package models
 import java.io.{File, IOException}
 import java.util.UUID
 import java.util.concurrent.Executors._
+
 import akka.actor.{ActorRef, Props}
 import com.typesafe.config.Config
 import models.actor.InstrumentedActor
@@ -14,7 +15,7 @@ import org.joda.time.DateTime
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
 import ExecutionContext.Implicits.global
 import scala.collection.mutable
 
@@ -45,12 +46,13 @@ object  JobManagerActor{
   def props(contextConfig: Config): Props = Props(classOf[JobManagerActor], contextConfig)
 }
 
-class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
+private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
 
   import JobManagerActor._
 
   val config = mutable.HashMap.empty[String,String]
   val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(10))
+
   private[this] val nameSpance="usr"
   private[this] val nameLocal="local"
 
@@ -111,6 +113,7 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
     }
 
     case StoreJar(userName,filePart) => {
+
       if(!validateJar(filePart.filename)){
         sender ! InvalidJar("文件类型不正确")
       }else{
@@ -143,7 +146,7 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         val regex = """Successfully (.*)""".r.unanchored
         output match {
           case regex(success) => {
-            "执行成功!"
+            "执行成功!" //TODO
           }
           case _ =>
             throw new JobRunExecption(output)
@@ -159,10 +162,12 @@ class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) => println(result)
+      case scala.util.Success(result:Any) => println(result) //TODO
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }
+
+
 
 
 }

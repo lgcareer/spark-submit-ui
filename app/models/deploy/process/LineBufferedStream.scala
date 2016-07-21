@@ -48,7 +48,7 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
         val regex = """Added (.*)""".r.unanchored
         line match {
           case regex(success) => {
-            act ! JobSubmitSuccess("任务提交成功")
+            act ! JobSubmitSuccess("任务提交成功!")
           }
           case _ =>  Logger.info(line)
         }
@@ -81,6 +81,7 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
 
   private class LinesIterator extends Iterator[String] {
     private[this] var index = 0
+
 
     override def hasNext: Boolean = {
       if (index < _lines.length) {
