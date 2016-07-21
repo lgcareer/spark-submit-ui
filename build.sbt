@@ -2,6 +2,8 @@ name := "ficusSpark"
 
 version := "1.0-SNAPSHOT"
 
+scalaVersion := "2.10.6"
+
 libraryDependencies ++= Seq(
   jdbc,
   anorm,
@@ -13,6 +15,7 @@ libraryDependencies ++= Seq(
   "net.minidev" % "json-smart" % "1.3.1",
   "org.apache.hive" % "hive-jdbc" % "2.0.0"
 )
+
 play.Project.playScalaSettings
 
 

@@ -4,7 +4,11 @@
 		module="ficusspark_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
+<<<<<<< HEAD
 		publication="20160720111257"
+=======
+		publication="20160720140833"
+>>>>>>> 6c87dee3ccd36f4abb322413020222f473a51e93
 	>
 		<description>
 		ficusSpark

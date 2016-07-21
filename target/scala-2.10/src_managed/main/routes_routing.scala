@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
 // @HASH:dbc52924157a7988be592b6e3fdffa51d68ed683
 // @DATE:Thu Jul 21 17:55:12 CST 2016
+=======
+// @SOURCE:/Users/liangkai1/IdeaProjects/ficusspark/conf/routes
+// @HASH:8e8de0b5e625bf75313e2d6ac8263959b23576cc
+// @DATE:Fri Jul 15 16:01:45 CST 2016
+>>>>>>> 6c87dee3ccd36f4abb322413020222f473a51e93
 
 
 import play.core._

@@ -18,14 +18,14 @@ object sparkjar extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendab
     /**/
     def apply/*1.2*/(form: Form[ExecuteModel]):play.api.templates.HtmlFormat.Appendable = {
         _display_ {
-def /*2.2*/scripts/*2.9*/:play.api.templates.HtmlFormat.Appendable = {_display_(
+def /*3.2*/scripts/*3.9*/:play.api.templates.HtmlFormat.Appendable = {_display_(
 
-Seq[Any](format.raw/*2.13*/("""
+Seq[Any](format.raw/*3.13*/("""
     <script type="text/javascript">alert("上传成功！！");</script>
 """)))};
 Seq[Any](format.raw/*1.28*/("""
-"""),format.raw/*4.2*/("""
 
+"""),format.raw/*5.2*/("""
 
     """),_display_(Seq[Any](/*7.6*/main("Neptune Spark-Jar", scripts)/*7.40*/ {_display_(Seq[Any](format.raw/*7.42*/("""
 
@@ -115,11 +115,11 @@ Seq[Any](format.raw/*1.28*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Jul 07 18:41:33 CST 2016
-                    SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/sparkjar.scala.html
-                    HASH: 1966bbcfad00d9de38777bd71cbfd48e013fbf55
-                    MATRIX: 571->1|674->29|688->36|772->40|874->27|901->103|943->111|985->145|1024->147|1285->372|1300->378|1351->420|1391->422|5267->4266|5389->4352|5422->4363|5490->4400
-                    LINES: 19->1|21->2|21->2|23->2|26->1|27->4|30->7|30->7|30->7|38->15|38->15|38->15|38->15|94->71|101->78|101->78|105->82
+                    DATE: Fri Jul 15 16:23:25 CST 2016
+                    SOURCE: /Users/liangkai1/IdeaProjects/ficusspark/app/views/sparkjar.scala.html
+                    HASH: a5437fcd5547b2148a0a5e7ef99133317f7eded9
+                    MATRIX: 571->1|674->30|688->37|772->41|874->27|902->104|943->111|985->145|1024->147|1285->372|1300->378|1351->420|1391->422|5267->4266|5389->4352|5422->4363|5490->4400
+                    LINES: 19->1|21->3|21->3|23->3|26->1|28->5|30->7|30->7|30->7|38->15|38->15|38->15|38->15|94->71|101->78|101->78|105->82
                     -- GENERATED --
                 */
             
