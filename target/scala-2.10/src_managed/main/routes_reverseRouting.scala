@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
-// @HASH:fbd3c78d6849c09bd713ae1910325e87b441d38c
-// @DATE:Mon Jul 18 15:34:24 CST 2016
+// @HASH:dbc52924157a7988be592b6e3fdffa51d68ed683
+// @DATE:Thu Jul 21 17:55:12 CST 2016
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,6 +13,9 @@ import play.api.mvc._
 import Router.queryString
 
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
 // @LINE:67
 // @LINE:66
 // @LINE:63
@@ -182,7 +185,7 @@ def sqlpage(): Call = {
 
 // @LINE:27
 def executesql(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "executesql")
+   Call("POST", _prefix + { _defaultPrefix } + "executesql")
 }
                                                 
     
@@ -269,6 +272,33 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "executejar")
 case () if true => Call("GET", _prefix + { _defaultPrefix } + "executejar")
                                                         
    }
+}
+                                                
+    
+}
+                          
+
+// @LINE:72
+// @LINE:71
+// @LINE:70
+class ReverseServiceplan {
+    
+
+// @LINE:72
+def functionplan(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "functionplan")
+}
+                                                
+
+// @LINE:70
+def serviceplan(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "widgets")
+}
+                                                
+
+// @LINE:71
+def servicedao(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "serviceplan")
 }
                                                 
     
@@ -420,6 +450,9 @@ case () if true => Call("GET", _prefix + { _defaultPrefix } + "workerlist")
                   
 
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
 // @LINE:67
 // @LINE:66
 // @LINE:63
@@ -660,7 +693,7 @@ def executesql : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.SparkSql.executesql",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "executesql"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "executesql"})
       }
    """
 )
@@ -762,6 +795,48 @@ def executejarpage : JavascriptReverseRoute = JavascriptReverseRoute(
       if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "executejar"})
       }
+      }
+   """
+)
+                        
+    
+}
+              
+
+// @LINE:72
+// @LINE:71
+// @LINE:70
+class ReverseServiceplan {
+    
+
+// @LINE:72
+def functionplan : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Serviceplan.functionplan",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "functionplan"})
+      }
+   """
+)
+                        
+
+// @LINE:70
+def serviceplan : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Serviceplan.serviceplan",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "widgets"})
+      }
+   """
+)
+                        
+
+// @LINE:71
+def servicedao : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Serviceplan.servicedao",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "serviceplan"})
       }
    """
 )
@@ -974,6 +1049,9 @@ def workerlist : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:72
+// @LINE:71
+// @LINE:70
 // @LINE:67
 // @LINE:66
 // @LINE:63
@@ -1136,7 +1214,7 @@ def sqlpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 
 // @LINE:27
 def executesql(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.SparkSql.executesql(), HandlerDef(this, "controllers.SparkSql", "executesql", Seq(), "GET", """""", _prefix + """executesql""")
+   controllers.SparkSql.executesql(), HandlerDef(this, "controllers.SparkSql", "executesql", Seq(), "POST", """""", _prefix + """executesql""")
 )
                       
     
@@ -1183,6 +1261,33 @@ def uploadpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:14
 def executejarpage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.SparkJar.executejarpage(), HandlerDef(this, "controllers.SparkJar", "executejarpage", Seq(), "GET", """""", _prefix + """executejar""")
+)
+                      
+    
+}
+                          
+
+// @LINE:72
+// @LINE:71
+// @LINE:70
+class ReverseServiceplan {
+    
+
+// @LINE:72
+def functionplan(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Serviceplan.functionplan(), HandlerDef(this, "controllers.Serviceplan", "functionplan", Seq(), "GET", """""", _prefix + """functionplan""")
+)
+                      
+
+// @LINE:70
+def serviceplan(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Serviceplan.serviceplan(), HandlerDef(this, "controllers.Serviceplan", "serviceplan", Seq(), "GET", """ServicePlan""", _prefix + """widgets""")
+)
+                      
+
+// @LINE:71
+def servicedao(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Serviceplan.servicedao(), HandlerDef(this, "controllers.Serviceplan", "servicedao", Seq(), "GET", """""", _prefix + """serviceplan""")
 )
                       
     

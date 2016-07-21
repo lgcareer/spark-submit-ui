@@ -15,8 +15,10 @@
 <!-- Graph CSS -->
 <link href="@routes.Assets.at("stylesheets/lines.css")" rel="stylesheet" type="text/css" />
 <link href="@routes.Assets.at("stylesheets/font-awesome.css")" rel="stylesheet">
-<!-- jQuery -->
+<!-- jQuery
 <script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
+ -->
+<script src="@routes.Assets.at("javascripts/jquery-1.11.1.min.js")"></script>
 <!-- Nav CSS -->
 <link href="@routes.Assets.at("stylesheets/custom.css")" rel="stylesheet">
 <!-- Metis Menu Plugin JavaScript -->
@@ -107,7 +109,7 @@
 
            <li> <a href="#"><i class="fa fa-table nav_icon"></i>节点分布情况<span class="fa arrow"></span></a>
           <ul class="nav nav-second-level">
-            <li> <a href="@routes.YarnList.yarnlist">服务划分</a> </li>
+            <li> <a href="@routes.Serviceplan.serviceplan">服务划分</a> </li>
             <li> <a href="@routes.YarnList.yarnlist">功能划分</a> </li>
           </ul>
 

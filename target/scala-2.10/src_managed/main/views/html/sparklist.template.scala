@@ -40,9 +40,9 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main("Neptun Dashboard")/*1.26*/{_display_(Se
 <!----Calender -------->
 <link rel="stylesheet" href=""""),_display_(Seq[Any](/*20.31*/routes/*20.37*/.Assets.at("stylesheets/clndr.css"))),format.raw/*20.72*/("""" type="text/css" />
 <script src=""""),_display_(Seq[Any](/*21.15*/routes/*21.21*/.Assets.at("javascripts/underscore-min.js"))),format.raw/*21.64*/("""" type="text/javascript"></script>
-            <script src=""""),_display_(Seq[Any](/*22.27*/routes/*22.33*/.Assets.at("javascripts/moment-2.2.1.js"))),format.raw/*22.74*/("""" type="text/javascript"></script>
+<script src=""""),_display_(Seq[Any](/*22.15*/routes/*22.21*/.Assets.at("javascripts/moment-2.2.1.js"))),format.raw/*22.62*/("""" type="text/javascript"></script>
 <script src=""""),_display_(Seq[Any](/*23.15*/routes/*23.21*/.Assets.at("javascripts/clndr.js"))),format.raw/*23.55*/("""" type="text/javascript"></script>
-            <script src=""""),_display_(Seq[Any](/*24.27*/routes/*24.33*/.Assets.at("javascripts/site.js"))),format.raw/*24.66*/("""" type="text/javascript"></script>
+<script src=""""),_display_(Seq[Any](/*24.15*/routes/*24.21*/.Assets.at("javascripts/site.js"))),format.raw/*24.54*/("""" type="text/javascript"></script>
 <!----End Calender -------->
 <div class="graphs">
 
@@ -106,10 +106,10 @@ Seq[Any](_display_(Seq[Any](/*1.2*/main("Neptun Dashboard")/*1.26*/{_display_(Se
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Jul 07 18:41:33 CST 2016
+                    DATE: Tue Jul 19 16:24:36 CST 2016
                     SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/sparklist.scala.html
-                    HASH: a1e0f179fb7949fd1b1327f2076046525795aff3
-                    MATRIX: 650->1|682->25|720->26|785->64|813->65|901->127|928->128|998->171|1026->172|1073->192|1101->193|1177->241|1206->242|1274->283|1302->284|1403->349|1418->355|1475->390|1546->425|1561->431|1626->474|1723->535|1738->541|1801->582|1886->631|1901->637|1957->671|2054->732|2069->738|2124->771|2602->1214|2635->1225|2729->1291|2758->1292|2802->1308|2831->1309|2978->1428|3007->1429|3368->1762|3397->1763|4137->2475|4166->2476|4291->2573|4320->2574|4356->2583|4385->2584|4418->2590|4446->2591|4493->2607
+                    HASH: 5a77444c4110a58a49d95c15471fcf9307cea3cf
+                    MATRIX: 650->1|682->25|720->26|785->64|813->65|901->127|928->128|998->171|1026->172|1073->192|1101->193|1177->241|1206->242|1274->283|1302->284|1403->349|1418->355|1475->390|1546->425|1561->431|1626->474|1711->523|1726->529|1789->570|1874->619|1889->625|1945->659|2030->708|2045->714|2100->747|2578->1190|2611->1201|2705->1267|2734->1268|2778->1284|2807->1285|2954->1404|2983->1405|3344->1738|3373->1739|4113->2451|4142->2452|4267->2549|4296->2550|4332->2559|4361->2560|4394->2566|4422->2567|4469->2583
                     LINES: 22->1|22->1|22->1|24->3|24->3|27->6|27->6|30->9|30->9|32->11|32->11|35->14|35->14|38->17|38->17|41->20|41->20|41->20|42->21|42->21|42->21|43->22|43->22|43->22|44->23|44->23|44->23|45->24|45->24|45->24|63->42|63->42|67->46|67->46|68->47|68->47|72->51|72->51|76->55|76->55|85->64|85->64|90->69|90->69|91->70|91->70|92->71|92->71|94->73
                     -- GENERATED --
                 */

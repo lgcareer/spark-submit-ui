@@ -1,0 +1,40 @@
+@main("Neptun Dashboard"){
+
+<style type='text/css'>
+    .col-md-6 {
+    width: 51%;
+    }
+</style>
+<div class="bs-example4" data-example-id="contextual-table">
+    <div id="sparkinfo"  class="col-md-4 span_4">
+
+        <div>
+            <table class="table" id = "servicelist">
+
+            </table>
+        </div>
+            </div>
+    </div>
+
+<script charset="utf-8">
+    $(document).ready(function(){
+        $.ajax({
+            type:"GET",
+            url:"/serviceplan",
+            dataType:"json",
+            success:function(data){
+                var head= "<table border='10' width='439'><tr><th>IP</th><th>服务</th></tr>";
+                var service=eval(data);
+                console.log(service);
+                for (var ip in service) {
+                    var ser = service[ip];
+                    head += "<tr><td>"+ip+"</td><td>"+ser+"</td></tr>";
+                   };
+                head += " </table>";
+                $('#servicelist').html(head);
+            }
+        });
+   });
+  </script>
+}
+@copyright()

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/manbu/IdeaProjects/ficusspark/conf/routes
-// @HASH:fbd3c78d6849c09bd713ae1910325e87b441d38c
-// @DATE:Mon Jul 18 15:34:24 CST 2016
+// @HASH:dbc52924157a7988be592b6e3fdffa51d68ed683
+// @DATE:Thu Jul 21 17:55:12 CST 2016
 
 
 import play.core._
@@ -89,7 +89,7 @@ private[this] lazy val controllers_SparkSql_sqlpage14 = Route("GET", PathPattern
         
 
 // @LINE:27
-private[this] lazy val controllers_SparkSql_executesql15 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executesql"))))
+private[this] lazy val controllers_SparkSql_executesql15 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("executesql"))))
         
 
 // @LINE:30
@@ -195,7 +195,19 @@ private[this] lazy val controllers_MonitorController_jobs40 = Route("GET", PathP
 // @LINE:67
 private[this] lazy val controllers_MonitorController_streaming41 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("streaming"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Authentication.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Authentication.authenticate"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Authentication.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stream""","""controllers.SparkStream.stream"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stremupload""","""controllers.SparkStream.stremupload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamArgs""","""controllers.SparkStream.streamArgs"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamExecute""","""controllers.SparkStream.streamExecute"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkStream.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executesql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """spark_info""","""controllers.YarnList.spark_info"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparklist""","""controllers.YarnList.sparklist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.Authentication.registration"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.Authentication.verifying"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail""","""controllers.Authentication.mail(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/verifyingmail""","""controllers.Authentication.verifyingmail(email:String, validateCode:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.Authentication.findpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """captcha""","""controllers.Authentication.captcha"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.Authentication.resetpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/setpwd""","""controllers.Authentication.setpwd(email:String, pwdToken:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updatepwd""","""controllers.Authentication.updatepwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """jobs""","""controllers.MonitorController.jobs"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streaming""","""controllers.MonitorController.streaming""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:70
+private[this] lazy val controllers_Serviceplan_serviceplan42 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("widgets"))))
+        
+
+// @LINE:71
+private[this] lazy val controllers_Serviceplan_servicedao43 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("serviceplan"))))
+        
+
+// @LINE:72
+private[this] lazy val controllers_Serviceplan_functionplan44 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("functionplan"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Authentication.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Authentication.authenticate"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.Authentication.logout"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stream""","""controllers.SparkStream.stream"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """stremupload""","""controllers.SparkStream.stremupload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamArgs""","""controllers.SparkStream.streamArgs"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streamExecute""","""controllers.SparkStream.streamExecute"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkStream.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparksql""","""controllers.SparkSql.sqlpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executesql""","""controllers.SparkSql.executesql"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """spark_info""","""controllers.YarnList.spark_info"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparklist""","""controllers.YarnList.sparklist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.Authentication.registration"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """registration""","""controllers.Authentication.verifying"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail""","""controllers.Authentication.mail(user:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/verifyingmail""","""controllers.Authentication.verifyingmail(email:String, validateCode:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.Authentication.findpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """captcha""","""controllers.Authentication.captcha"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """findpwd""","""controllers.Authentication.resetpwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mail/setpwd""","""controllers.Authentication.setpwd(email:String, pwdToken:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updatepwd""","""controllers.Authentication.updatepwd"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.uploadpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sparkjar""","""controllers.SparkJar.upload"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejarpage"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """executejar""","""controllers.SparkJar.executejar"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """errorpage""","""controllers.SparkJar.errorpage"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnInfo""","""controllers.YarnList.yarnInfo"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """yarnlist""","""controllers.YarnList.yarnlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """workerlist""","""controllers.YarnList.workerlist"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """jobs""","""controllers.MonitorController.jobs"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """streaming""","""controllers.MonitorController.streaming"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """widgets""","""controllers.Serviceplan.serviceplan"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """serviceplan""","""controllers.Serviceplan.servicedao"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """functionplan""","""controllers.Serviceplan.functionplan""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -326,7 +338,7 @@ case controllers_SparkSql_sqlpage14(params) => {
 // @LINE:27
 case controllers_SparkSql_executesql15(params) => {
    call { 
-        invokeHandler(controllers.SparkSql.executesql, HandlerDef(this, "controllers.SparkSql", "executesql", Nil,"GET", """""", Routes.prefix + """executesql"""))
+        invokeHandler(controllers.SparkSql.executesql, HandlerDef(this, "controllers.SparkSql", "executesql", Nil,"POST", """""", Routes.prefix + """executesql"""))
    }
 }
         
@@ -535,6 +547,30 @@ case controllers_MonitorController_jobs40(params) => {
 case controllers_MonitorController_streaming41(params) => {
    call { 
         invokeHandler(controllers.MonitorController.streaming, HandlerDef(this, "controllers.MonitorController", "streaming", Nil,"GET", """""", Routes.prefix + """streaming"""))
+   }
+}
+        
+
+// @LINE:70
+case controllers_Serviceplan_serviceplan42(params) => {
+   call { 
+        invokeHandler(controllers.Serviceplan.serviceplan, HandlerDef(this, "controllers.Serviceplan", "serviceplan", Nil,"GET", """ServicePlan""", Routes.prefix + """widgets"""))
+   }
+}
+        
+
+// @LINE:71
+case controllers_Serviceplan_servicedao43(params) => {
+   call { 
+        invokeHandler(controllers.Serviceplan.servicedao, HandlerDef(this, "controllers.Serviceplan", "servicedao", Nil,"GET", """""", Routes.prefix + """serviceplan"""))
+   }
+}
+        
+
+// @LINE:72
+case controllers_Serviceplan_functionplan44(params) => {
+   call { 
+        invokeHandler(controllers.Serviceplan.functionplan, HandlerDef(this, "controllers.Serviceplan", "functionplan", Nil,"GET", """""", Routes.prefix + """functionplan"""))
    }
 }
         

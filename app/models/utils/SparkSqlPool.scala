@@ -7,8 +7,8 @@ import java.util
   * Created by manbu on 16/7/18.
   */
 object SparkSqlPool {
-   private val max = 8
-   private val connectionNum = 10
+   private val max = 80
+   private val connectionNum = 100
    private var conNum = 0
    private val pool = new util.LinkedList[Connection]()
 

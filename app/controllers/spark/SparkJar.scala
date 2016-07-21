@@ -7,10 +7,6 @@ import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
 
-
-
-
-
 case  class  ExecuteModel(
   executeClass:String,
   numExecutors:String,
@@ -19,9 +15,6 @@ case  class  ExecuteModel(
   executorCores:String,
   jarLocation:String,
   args1:String)
-
-
-
 
 object SparkJar extends Controller with Secured {
   val threadPool:ExecutorService = Executors.newFixedThreadPool(5)
@@ -78,7 +71,6 @@ object SparkJar extends Controller with Secured {
               "--master  yarn-cluster",
               argss.jarLocation,
               argss.args1
-
               )
             StoreJars.insertJarToDb(JarModel(username,argss.jarLocation))
             class ThreadDemo(filename:String) extends Runnable{
@@ -94,7 +86,7 @@ object SparkJar extends Controller with Secured {
               finally{}
             }
             executeJar()
-       //utils.Execute.main(arguments)
+//       utils.Execute.main(arguments)
        //Ok(views.html.blank(arguments))
        Ok(views.html.index())
      }

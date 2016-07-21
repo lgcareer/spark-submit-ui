@@ -13,104 +13,194 @@ import play.api.mvc._
 import play.api.data._
 import views.html._
 /**/
-object sparksql extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[play.api.data.Form[String],play.api.templates.HtmlFormat.Appendable] {
+object sparksql extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template0[play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(form: play.api.data.Form[String]):play.api.templates.HtmlFormat.Appendable = {
+    def apply():play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.36*/("""
-"""),_display_(Seq[Any](/*2.2*/main("Neptune Spark-sql")/*2.27*/{_display_(Seq[Any](format.raw/*2.28*/("""
-"""),_display_(Seq[Any](/*3.2*/confirm("确定执行？"))),format.raw/*3.18*/("""
-<script charset="utf-8">
+Seq[Any](_display_(Seq[Any](/*1.2*/main("Neptune Spark-sql")/*1.27*/{_display_(Seq[Any](format.raw/*1.28*/("""
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spark sql</title>
+<script src=""""),_display_(Seq[Any](/*6.15*/routes/*6.21*/.Assets.at("javascripts/underscore-min.js"))),format.raw/*6.64*/("""" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" media="screen" href='"""),_display_(Seq[Any](/*8.62*/routes/*8.68*/.Assets.at("stylesheets/bootstrap.min.css"))),format.raw/*8.111*/("""'>
+<script src=""""),_display_(Seq[Any](/*9.15*/routes/*9.21*/.Assets.at("javascripts/jquery-1.11.1.min.js"))),format.raw/*9.67*/("""" type="text/javascript"></script>
+<script src=""""),_display_(Seq[Any](/*10.15*/routes/*10.21*/.Assets.at("javascripts/bootstrap.min.js"))),format.raw/*10.63*/("""" type="text/javascript" ></script>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+</head>
+<body>
+<!--
+<textarea class="form-control" id="sql" rows="3"></textarea>
+-->
+	<div class="tab-content">
+		<div class="tab-pane active" id="horizontal-form">
+			<div class="form-group">
+				<label for="sql" class="col-sm-2 control-label">请输入要执行的SQL</label>
+				<div class="col-sm-8">
+					<textarea id="sql" cols="50" rows="4" class="form-control1"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
 
-    $(document).ready(function()"""),format.raw/*6.33*/("""{"""),format.raw/*6.34*/("""
-        alert("aa")
-        $.ajax("""),format.raw/*8.16*/("""{"""),format.raw/*8.17*/("""
-            type:"GET",
-            url:"/executesql",
-            success:function(data)"""),format.raw/*11.35*/("""{"""),format.raw/*11.36*/("""
-            alert("bb")
-              var head= "<table border='10' width='439'><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
-                var myobj=eval(data);
-                alert("cc")
-                for (var p in myobj) """),format.raw/*16.38*/("""{"""),format.raw/*16.39*/("""
-                    var datamid = data[p];
-                    for(var  x in datamid)"""),format.raw/*18.43*/("""{"""),format.raw/*18.44*/("""
-                        var mid = eval(data[p][x]);
-                        for (var i = 0; i < mid.length; i++) """),format.raw/*20.62*/("""{"""),format.raw/*20.63*/("""
-                             if(mid[i].progress == 100)"""),format.raw/*21.56*/("""{"""),format.raw/*21.57*/("""
-                             head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
-                             """),format.raw/*23.30*/("""}"""),format.raw/*23.31*/("""
-                             if(mid[i].progress != 100)"""),format.raw/*24.56*/("""{"""),format.raw/*24.57*/("""
-                             head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
-                             """),format.raw/*26.30*/("""}"""),format.raw/*26.31*/("""
-                             if(mid[i].FinalStatus == "FAILED")"""),format.raw/*27.64*/("""{"""),format.raw/*27.65*/("""
-                             head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
-                             """),format.raw/*29.30*/("""}"""),format.raw/*29.31*/("""
-                          """),format.raw/*30.27*/("""}"""),format.raw/*30.28*/(""";
-                    """),format.raw/*31.21*/("""}"""),format.raw/*31.22*/("""
-
-                """),format.raw/*33.17*/("""}"""),format.raw/*33.18*/(""";
-                head += " </table>";
-                $('#executesql').html(head);
-            """),format.raw/*36.13*/("""}"""),format.raw/*36.14*/("""
-        """),format.raw/*37.9*/("""}"""),format.raw/*37.10*/(""");
-"""),format.raw/*38.1*/("""}"""),format.raw/*38.2*/(""");
-    </script>
-<div class="graphs">
-    <div class="xs">
-        <h3>Neptune Spark Sql</h3>
-        """),_display_(Seq[Any](/*43.10*/helper/*43.16*/.form(action=routes.SparkSql.executesql)/*43.56*/{_display_(Seq[Any](format.raw/*43.57*/("""
-        <div class="tab-content">
-            <div class="tab-pane active" id="horizontal-form">
-                <div class="form-group">
-                    <label for="txtarea1" class="col-sm-2 control-label">请输入要执行的SQL</label>
-                    <div class="col-sm-8"><textarea name="sql" id="txtarea1" cols="50" rows="4" class="form-control1"></textarea></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bs-example" data-example-id="form-validation-states">
-        </div>
-
-        <div class="bs-example" data-example-id="form-validation-states-with-icons">
-            <div class="panel-footer">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <button class="btn-success btn" type="submit" id="sql_sum" >提交</button>
-                        <button class="btn-inverse btn" type="reset" >重置</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bs-example4" data-example-id="contextual-table">
-        <table class="table" id = "result">
-
-        </table>
-    </div>
-    """),_display_(Seq[Any](/*72.6*/copyright())),format.raw/*72.17*/("""
+<div class="col-sm-8">
+<button class="btn btn-primary" id="submit">提交</button>
+	<div id="result"></div>
 </div>
-""")))})),format.raw/*74.2*/("""
-""")))})),format.raw/*75.2*/("""
+</body>
+
+
+<script>
+		function resultToTable(data) """),format.raw/*36.32*/("""{"""),format.raw/*36.33*/("""
+			var header = data.header;
+			var sql_data = data.data;
+			var result = "";
+			var tr = "";
+			for (var i = 0;i < header.length;i++) """),format.raw/*41.42*/("""{"""),format.raw/*41.43*/("""
+				tr += "<th>" + header[i] + "</th>";
+			"""),format.raw/*43.4*/("""}"""),format.raw/*43.5*/("""
+			result += "<tr>" + tr + "</tr>";
+
+			for (var j = 0;j < sql_data.length;j++) """),format.raw/*46.44*/("""{"""),format.raw/*46.45*/("""
+				tr = "";
+				for (var i = 0;i < sql_data[j].length;i++) """),format.raw/*48.48*/("""{"""),format.raw/*48.49*/("""
+					tr += "<td>" + sql_data[j][i] + "</td>";
+				"""),format.raw/*50.5*/("""}"""),format.raw/*50.6*/("""
+				result += "<tr>" + tr + "</tr>";
+			"""),format.raw/*52.4*/("""}"""),format.raw/*52.5*/("""
+
+			return "<table class='table table-bordered table-striped'>" + result + "</table>";
+		"""),format.raw/*55.3*/("""}"""),format.raw/*55.4*/("""
+
+		function resultToChart(data) """),format.raw/*57.32*/("""{"""),format.raw/*57.33*/("""
+			var header = data.header;
+			var select = "";
+			for (var i = 0;i < header.length;i++) """),format.raw/*60.42*/("""{"""),format.raw/*60.43*/("""
+				select += "<option value='" + header[i] + "'>" + header[i] + "</option>";
+			"""),format.raw/*62.4*/("""}"""),format.raw/*62.5*/("""
+//			select = "<select class='form-control'>" + select + "</select>";
+
+			var result
+					= "<div class='form-group'>"
+					+ "<label class='col-sm-4 control-label' for='x'>x坐标：</label>"
+					+ "<div class='col-sm-4'><select class='form-control' id='x'>" + select + "</select></div>"
+					+ "</div>"
+					+ "<div class='form-group'>"
+					+ "<label class='col-sm-4 control-label' for='y'>y坐标：</label>"
+					+ "<div class='col-sm-4'><select class='form-control' id='y'>" + select + "</select></div>"
+					+ "</div>";
+
+			result += "<div class='form-group'><div class='col-sm-4'></div><button class='btn btn-default' id='generate'>生成</button></div>";
+			result = "<div class='form-horizontal'>" + result + "</div>"
+			result += "<div id='chartDiv'></div>";
+
+			return result;
+		"""),format.raw/*80.3*/("""}"""),format.raw/*80.4*/("""
+
+		function toggleToChart(div, data) """),format.raw/*82.37*/("""{"""),format.raw/*82.38*/("""
+			$(div).find("#generate").click(function() """),format.raw/*83.46*/("""{"""),format.raw/*83.47*/("""
+				var header = data.header;
+				var sql_data = data.data;
+				var categories = [];
+				var value = [];
+				var x_index = header.indexOf($(div).find("#x").val());
+				var y_index = header.indexOf($(div).find("#y").val());
+
+				for (var j = 0;j < sql_data.length;j++) """),format.raw/*91.45*/("""{"""),format.raw/*91.46*/("""
+					categories.push(sql_data[j][x_index]);
+					value.push(sql_data[j][y_index]);
+				"""),format.raw/*94.5*/("""}"""),format.raw/*94.6*/("""
+
+				$(div).find("#chartDiv").highcharts("""),format.raw/*96.41*/("""{"""),format.raw/*96.42*/("""
+					chart: """),format.raw/*97.13*/("""{"""),format.raw/*97.14*/("""
+						type: 'column'
+					"""),format.raw/*99.6*/("""}"""),format.raw/*99.7*/(""",
+					xAxis: """),format.raw/*100.13*/("""{"""),format.raw/*100.14*/("""
+						categories: categories
+					"""),format.raw/*102.6*/("""}"""),format.raw/*102.7*/(""",
+					yAxis: """),format.raw/*103.13*/("""{"""),format.raw/*103.14*/("""
+						min: 0,
+						title: """),format.raw/*105.14*/("""{"""),format.raw/*105.15*/("""
+							text: $(div).find("#y").val()
+						"""),format.raw/*107.7*/("""}"""),format.raw/*107.8*/("""
+					"""),format.raw/*108.6*/("""}"""),format.raw/*108.7*/(""",
+					plotOptions: """),format.raw/*109.19*/("""{"""),format.raw/*109.20*/("""
+						column: """),format.raw/*110.15*/("""{"""),format.raw/*110.16*/("""
+							pointPadding: 0.2,
+							borderWidth: 0
+						"""),format.raw/*113.7*/("""}"""),format.raw/*113.8*/("""
+					"""),format.raw/*114.6*/("""}"""),format.raw/*114.7*/(""",
+					series: ["""),format.raw/*115.15*/("""{"""),format.raw/*115.16*/("""
+						name: $(div).find("#y").val(),
+						data: value
+					"""),format.raw/*118.6*/("""}"""),format.raw/*118.7*/("""]
+				"""),format.raw/*119.5*/("""}"""),format.raw/*119.6*/(""");
+			"""),format.raw/*120.4*/("""}"""),format.raw/*120.5*/(""")
+		"""),format.raw/*121.3*/("""}"""),format.raw/*121.4*/("""
+
+		function resultToDisplay(data) """),format.raw/*123.34*/("""{"""),format.raw/*123.35*/("""
+			$("#result").html("");
+
+			var result = "";
+			result += '<li role="presentation" class="active"><a href="#table" aria-controls="table" role="tab" data-toggle="tab">表格</a></li>';
+			result += '<li role="presentation"><a href="#chart" aria-controls="chart" role="tab" data-toggle="tab">图表</a></li>';
+			result = "<ul class='nav nav-tabs' role='tablist'>" + result + "</ul>";
+
+			result += '<div class="tab-content">'
+					+ '<div role="tabpanel" class="tab-pane active" id="table">' + resultToTable(data) + '</div>'
+					+ '<div role="tabpanel" class="tab-pane" id="chart">' + resultToChart(data) + '</div>'
+					+ "</div>";
+
+			$("#result").html(result);
+
+			toggleToChart($("#chart"), data);
+		"""),format.raw/*139.3*/("""}"""),format.raw/*139.4*/("""
+
+		$(document).ready(function()"""),format.raw/*141.31*/("""{"""),format.raw/*141.32*/("""
+			$("#submit").click(function()"""),format.raw/*142.33*/("""{"""),format.raw/*142.34*/("""
+				$.ajax("""),format.raw/*143.12*/("""{"""),format.raw/*143.13*/("""
+					"data": """),format.raw/*144.14*/("""{"""),format.raw/*144.15*/("""
+						"sql": $("#sql").val()
+					"""),format.raw/*146.6*/("""}"""),format.raw/*146.7*/(""",
+					"method": "POST",
+					"url": "/executesql",
+					"dataType": "json",
+					"success": function (data, textStatus, jqXHR)"""),format.raw/*150.51*/("""{"""),format.raw/*150.52*/("""
+						resultToDisplay(data);
+					"""),format.raw/*152.6*/("""}"""),format.raw/*152.7*/("""
+				"""),format.raw/*153.5*/("""}"""),format.raw/*153.6*/(""");
+			"""),format.raw/*154.4*/("""}"""),format.raw/*154.5*/(""")
+		"""),format.raw/*155.3*/("""}"""),format.raw/*155.4*/(""")
+	</script>
+</html>
+""")))})),format.raw/*158.2*/("""
+"""),_display_(Seq[Any](/*159.2*/copyright())),format.raw/*159.13*/("""
+
+
+
+
+
+
 """))}
     }
     
-    def render(form:play.api.data.Form[String]): play.api.templates.HtmlFormat.Appendable = apply(form)
+    def render(): play.api.templates.HtmlFormat.Appendable = apply()
     
-    def f:((play.api.data.Form[String]) => play.api.templates.HtmlFormat.Appendable) = (form) => apply(form)
+    def f:(() => play.api.templates.HtmlFormat.Appendable) = () => apply()
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Jul 18 15:28:44 CST 2016
+                    DATE: Wed Jul 20 10:21:13 CST 2016
                     SOURCE: /Users/manbu/IdeaProjects/ficusspark/app/views/sparksql.scala.html
-                    HASH: 705c4b5333993ba22d7b198852f38b4814824aea
-                    MATRIX: 579->1|707->35|743->37|776->62|814->63|850->65|887->81|973->140|1001->141|1064->177|1092->178|1210->268|1239->269|1595->597|1624->598|1738->684|1767->685|1909->799|1938->800|2022->856|2051->857|2488->1266|2517->1267|2601->1323|2630->1324|3067->1733|3096->1734|3188->1798|3217->1799|3653->2207|3682->2208|3737->2235|3766->2236|3816->2258|3845->2259|3891->2277|3920->2278|4044->2374|4073->2375|4109->2384|4138->2385|4168->2388|4196->2389|4335->2492|4350->2498|4399->2538|4438->2539|5621->3687|5654->3698|5694->3707|5727->3709
-                    LINES: 19->1|22->1|23->2|23->2|23->2|24->3|24->3|27->6|27->6|29->8|29->8|32->11|32->11|37->16|37->16|39->18|39->18|41->20|41->20|42->21|42->21|44->23|44->23|45->24|45->24|47->26|47->26|48->27|48->27|50->29|50->29|51->30|51->30|52->31|52->31|54->33|54->33|57->36|57->36|58->37|58->37|59->38|59->38|64->43|64->43|64->43|64->43|93->72|93->72|95->74|96->75
+                    HASH: 9a54daf0181f1030316a7b99edec849995650d57
+                    MATRIX: 649->1|682->26|720->27|825->97|839->103|903->146|1102->310|1116->316|1181->359|1233->376|1247->382|1314->428|1399->477|1414->483|1478->525|2181->1200|2210->1201|2374->1337|2403->1338|2474->1382|2502->1383|2611->1464|2640->1465|2729->1526|2758->1527|2836->1578|2864->1579|2932->1620|2960->1621|3077->1711|3105->1712|3166->1745|3195->1746|3314->1837|3343->1838|3452->1920|3480->1921|4284->2698|4312->2699|4378->2737|4407->2738|4481->2784|4510->2785|4807->3054|4836->3055|4951->3143|4979->3144|5049->3186|5078->3187|5119->3200|5148->3201|5202->3228|5230->3229|5273->3243|5303->3244|5366->3279|5395->3280|5438->3294|5468->3295|5525->3323|5555->3324|5627->3368|5656->3369|5690->3375|5719->3376|5768->3396|5798->3397|5842->3412|5872->3413|5955->3468|5984->3469|6018->3475|6047->3476|6092->3492|6122->3493|6211->3554|6240->3555|6274->3561|6303->3562|6337->3568|6366->3569|6398->3573|6427->3574|6491->3609|6521->3610|7248->4309|7277->4310|7338->4342|7368->4343|7430->4376|7460->4377|7501->4389|7531->4390|7574->4404|7604->4405|7667->4440|7696->4441|7852->4568|7882->4569|7945->4604|7974->4605|8007->4610|8036->4611|8070->4617|8099->4618|8131->4622|8160->4623|8214->4645|8252->4647|8286->4658
+                    LINES: 22->1|22->1|22->1|27->6|27->6|27->6|29->8|29->8|29->8|30->9|30->9|30->9|31->10|31->10|31->10|57->36|57->36|62->41|62->41|64->43|64->43|67->46|67->46|69->48|69->48|71->50|71->50|73->52|73->52|76->55|76->55|78->57|78->57|81->60|81->60|83->62|83->62|101->80|101->80|103->82|103->82|104->83|104->83|112->91|112->91|115->94|115->94|117->96|117->96|118->97|118->97|120->99|120->99|121->100|121->100|123->102|123->102|124->103|124->103|126->105|126->105|128->107|128->107|129->108|129->108|130->109|130->109|131->110|131->110|134->113|134->113|135->114|135->114|136->115|136->115|139->118|139->118|140->119|140->119|141->120|141->120|142->121|142->121|144->123|144->123|160->139|160->139|162->141|162->141|163->142|163->142|164->143|164->143|165->144|165->144|167->146|167->146|171->150|171->150|173->152|173->152|174->153|174->153|175->154|175->154|176->155|176->155|179->158|180->159|180->159
                     -- GENERATED --
                 */
             

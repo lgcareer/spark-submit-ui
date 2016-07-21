@@ -24,7 +24,7 @@ GET     /errorpage                  controllers.SparkStream.errorpage
 
 # Saprk Sql
 GET     /sparksql                   controllers.SparkSql.sqlpage
-GET     /executesql                    controllers.SparkSql.executesql
+POST     /executesql                 controllers.SparkSql.executesql
 
 #Dashboard
 GET     /yarnInfo                   controllers.YarnList.yarnInfo
@@ -65,6 +65,11 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET   /jobs                          controllers.MonitorController.jobs
 GET   /streaming                     controllers.MonitorController.streaming
+
+#ServicePlan
+GET    /widgets                       controllers.Serviceplan.serviceplan
+GET    /serviceplan                   controllers.Serviceplan.servicedao
+GET    /functionplan                   controllers.Serviceplan.functionplan
 
 
 

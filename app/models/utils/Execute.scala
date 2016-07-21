@@ -1,6 +1,5 @@
 package models
 
-import org.apache.spark.deploy.SparkSubmit
 import play.Logger
 
 import scala.sys.process._
@@ -17,7 +16,6 @@ object Execute {
     stringbuffer = stringbuffer.substring(0,stringbuffer.length-1)
     Logger.info(stringbuffer)
     val executeArgument = stringbuffer!
-
 
    // SparkSubmit.main(args)
   }
