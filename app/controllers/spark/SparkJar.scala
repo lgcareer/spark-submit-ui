@@ -3,11 +3,16 @@ package controllers
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
+import play.api.cache.Cache
 import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
+import play.api.Play.current
 
+<<<<<<< HEAD
 import scala.concurrent.Future
+=======
+>>>>>>> 78a705c4931ae44b591bd92292cee111fb642820
 
 object SparkJar extends Controller with Secured {
 
@@ -45,7 +50,6 @@ object SparkJar extends Controller with Secured {
         }
       }
 
-
       def executejarpage = Action { implicit request =>
         Ok(views.html.sparkjar(executeForm))
       }
@@ -67,13 +71,35 @@ object SparkJar extends Controller with Secured {
               case _ => NotFound
             }
        }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 78a705c4931ae44b591bd92292cee111fb642820
      )
 }
 
     def errorpage = IsAuthenticated {username => implicit request =>
       Ok(views.html.index())
     }
+
+
+
+   var count:Int = 0
+
+    def log =Action{
+      count+=1
+      var log  = Cache.getAs[String]("log_"+count).getOrElse("none")
+      if("none".equals(log)){
+        count=0
+        count+=1
+        log  = Cache.getAs[String]("log_"+count).getOrElse("none")
+      }
+      Ok(log)
+    }
+
+  def he =Action{
+    Ok(views.html.he())
+  }
 
  }
 
