@@ -1,7 +1,5 @@
 package controllers
 
-import java.util.concurrent.atomic.AtomicInteger
-
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
@@ -10,6 +8,7 @@ import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
 import play.api.Play.current
+
 
 object SparkJar extends Controller with Secured {
 
@@ -60,6 +59,7 @@ object SparkJar extends Controller with Secured {
           },
 
           executeArguments => {
+
           Execute.main(executeArguments)
           match {
               case JobSubmitSuccess(msg) => Logger.info(msg); Ok("提交成功! ")
