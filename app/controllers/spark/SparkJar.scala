@@ -9,10 +9,7 @@ import play.api.data._
 import play.api.mvc._
 import play.api.Play.current
 
-<<<<<<< HEAD
-import scala.concurrent.Future
-=======
->>>>>>> 78a705c4931ae44b591bd92292cee111fb642820
+
 
 object SparkJar extends Controller with Secured {
 
@@ -71,10 +68,8 @@ object SparkJar extends Controller with Secured {
               case _ => NotFound
             }
        }
-<<<<<<< HEAD
 
-=======
->>>>>>> 78a705c4931ae44b591bd92292cee111fb642820
+
      )
 }
 
