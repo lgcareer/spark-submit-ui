@@ -6,10 +6,8 @@ object JDBCUtil {
   def main(args: Array[String]): Unit = {
       query()
   }
-
   def query()={
     val conn_str = "jdbc:mysql://10.73.33.41:3306/test?user=admin&password=admin123!@#"
-
     val driver = "com.mysql.jdbc.Driver"
     val url = "jdbc:mysql://10.73.33.41:3306/test"
     val username = "admin"

@@ -7,18 +7,7 @@ import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
 
-<<<<<<< HEAD
-case  class  ExecuteModel(
-  executeClass:String,
-  numExecutors:String,
-  driverMemory:String,
-  executorMemory:String,
-  executorCores:String,
-  jarLocation:String,
-  args1:String)
-=======
 import scala.concurrent.Future
->>>>>>> 6c87dee3ccd36f4abb322413020222f473a51e93
 
 object SparkJar extends Controller with Secured {
 
@@ -70,38 +59,7 @@ object SparkJar extends Controller with Secured {
           },
 
           executeArguments => {
-<<<<<<< HEAD
-            val argss = ExecuteModel(executeArguments.executeClass,executeArguments.numExecutors,executeArguments.driverMemory,executeArguments.executorMemory,executeArguments.executorCores,executeArguments.jarLocation,executeArguments.args1)
-            val arguments = Array(
-              "/usr/local/spark/bin/spark-submit",
-              "--class", argss.executeClass,
-              "--num-executors", argss.numExecutors,
-              "--driver-memory", argss.driverMemory,
-              "--executor-memory", argss.executorMemory,
-              "--executor-cores", argss.executorCores,
-              "--master  yarn-cluster",
-              argss.jarLocation,
-              argss.args1
-              )
-            StoreJars.insertJarToDb(JarModel(username,argss.jarLocation))
-            class ThreadDemo(filename:String) extends Runnable{
-              override def run(){
-                println("start execute jar")
-              //  models.utils.Execute.main(arguments)
-                Execute.main(arguments)
-                println("end execute jar")
-              }
-            }
-            def executeJar():Unit={
-              try{threadPool.execute(new ThreadDemo("filename"))}
-              finally{}
-            }
-            executeJar()
-//       utils.Execute.main(arguments)
-       //Ok(views.html.blank(arguments))
-       Ok(views.html.index())
-     }
-=======
+
           Execute.main(executeArguments)
           match {
               case JobSubmitSuccess(msg) => Logger.info(msg); Ok("提交成功! ")
@@ -109,7 +67,7 @@ object SparkJar extends Controller with Secured {
               case _ => NotFound
             }
        }
->>>>>>> 6c87dee3ccd36f4abb322413020222f473a51e93
+
      )
 }
 

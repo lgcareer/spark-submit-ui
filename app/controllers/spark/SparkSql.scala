@@ -14,7 +14,6 @@ object SparkSql extends Controller with Secured {
   def sqlpage = IsAuthenticated { username => implicit request =>
     Ok(views.html.sparksql())
   }
-
   //接受页面输入sql
   val sqlForm = Form(
     single("sql" -> text)
