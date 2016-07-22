@@ -1,5 +1,7 @@
 package controllers
 
+import java.util.concurrent.atomic.AtomicInteger
+
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
@@ -68,8 +70,6 @@ object SparkJar extends Controller with Secured {
               case _ => NotFound
             }
        }
-
-
      )
 }
 
