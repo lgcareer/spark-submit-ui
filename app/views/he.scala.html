@@ -46,21 +46,28 @@ li:before {
        var timeBox =setInterval(
             function () {
               $(document).ready(function(){
-               var id="@jobId"+"_"+index++
+               var id="@jobId"+"_"+index
                 $.ajax({
                     type:"GET",
                     url:"/logs",
                     data: {id: id},
                     dataType:"text",
                     success:function(data){
-                        var $el = $('<li><font color="#FFFFFF">'+ data + '</font></li>');
-                        //$el.appendTo($logs);
-                        //$('body').animate({scrollTop: $el.offset().top});
+                        var $el;
+                        if(data.indexOf('Exception')==0 || data.indexOf('at')==1){
+                            $el = $('<li><font color="#FF0000">'+ data + '</font></li>');
+                        }
+                        else{
+                             $el = $('<li><font color="#FFFFFF">'+ data + '</font></li>');
+                        }
+
 
                        if(data!= "none" && data!='finish'){
                          $("#testScroll2").append($el)
                          $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
+                         index++
                        }
+
                        if(data=='finish'){
                             $("#testScroll2").append($end)
                             $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
@@ -70,7 +77,7 @@ li:before {
                 });
            });
          },
-            100
+            50
     )
 
   </script>

@@ -4,16 +4,14 @@ import java.io.InputStream
 import java.util.UUID
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.locks.ReentrantLock
-
 import akka.actor.ActorRef
 import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess}
 import org.apache.spark.Logging
 import play.api.{Logger, cache}
 import play.api.cache.Cache
 import play.api.Play.current
-
 import scala.io.Source
-
+import scala.concurrent.duration._
 /**
   * Created by liangkai1 on 16/7/12.
   */
@@ -45,7 +43,7 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
         }
         try {
           _lines = _lines :+ line
-          Cache.set(jobId+"_"+nextCount,line)
+          Cache.set(jobId+"_"+nextCount,line,1.hour)
           _condition.signalAll()
         } finally {
           _lock.unlock()
