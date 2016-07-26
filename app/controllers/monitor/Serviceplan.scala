@@ -9,14 +9,13 @@ import play.api.mvc.Controller
 object Serviceplan extends Controller with Secured{
 
   def servicedao = IsAuthenticated { username => implicit request =>
+
     val service =ServicePlan.service()
-    Ok(service)
+//    val serviceJson =Json.toJson(service)
+//    println("serviceJson" + serviceJson)
+    println("调用service方法" + service)
+    Ok(views.html.widgets(service))
   }
-
-  def serviceplan = IsAuthenticated { username => implicit request =>
-    Ok(views.html.widgets())
-  }
-
   def functionplan = IsAuthenticated { username => implicit request =>
     Ok(views.html.widgetsfun())
   }

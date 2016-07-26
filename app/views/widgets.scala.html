@@ -1,21 +1,16 @@
+@(map: Map[String,String])
 @main("Neptun Dashboard"){
 
-<style type='text/css'>
-    .col-md-6 {
-    width: 51%;
-    }
-</style>
 <div class="bs-example4" data-example-id="contextual-table">
-    <div id="sparkinfo"  class="col-md-4 span_4">
-
-        <div>
-            <table class="table" id = "servicelist">
-
-            </table>
-        </div>
-            </div>
-    </div>
-
+    <table class="table table-hover">
+        <tr><th>Host</th><th>Services</th></tr>
+        @for((key, value) <- map) {
+            <tr>
+                <td>@key</td><td>@value</td>
+            </tr>
+        }
+    </table>
+</div>
 <script charset="utf-8">
     $(document).ready(function(){
         $.ajax({
@@ -36,5 +31,12 @@
         });
    });
   </script>
+<scripe>
+
+
 }
+
+            <!--@for((key, value) <- map) {-->
+            <!--<span>@key</span><span>@value</span>-->
+            <!--}-->
 @copyright()

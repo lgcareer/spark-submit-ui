@@ -1,0 +1,56 @@
+@(count:Int)
+@main("Neptun Dashboard"){
+<!doctype html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
+<script>
+
+$(function () {
+    <!--var b =$('#a').text()-->
+    var c = @count
+    <!--alert(c)-->
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '用户统计'
+        },
+        xAxis: {
+            categories: ['admin', 'userGroup', 'general','other']
+        },
+        yAxis: {
+            title: {
+                text: '用户数'
+            }
+        },
+        series: [{
+            name: '总数',
+            data: [c,3,2,1]
+        }, {
+            name: 'userGroup',
+            data: [1,7,5]
+        },{
+            name: 'general',
+            data: [2,10,4]
+        },{
+            name: 'other',
+            data: [2,7,1]
+        }]
+    });
+});
+</script>
+</head>
+<!--<div id="a">-->
+    <!--@count-->
+<!--</div>-->
+<body>
+<div id="container" style="min-width:700px;height:400px"></div>
+</body>
+</html>
+
+}
+@copyright()

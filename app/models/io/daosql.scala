@@ -1,10 +1,11 @@
 package models.io
-
+import play.api.Play.current
 import java.sql.ResultSet
 
 import models.utils.SparkSqlPool
+import play.api.Play
 
-import scala.collection.mutable.{ArrayBuffer, Map}
+import scala.collection.mutable.{ListBuffer, ArrayBuffer, Map}
 
 /**
  * Created by manbu on 16/7/11.
@@ -30,6 +31,25 @@ object daosql {
     SparkSqlPool.releaseConn(conn)
     arr
   }
+
+  def getName(path:String,fileNameListBuffer:ListBuffer[String]): Unit  =  {
+
+    val file = Play.getFile(path)
+    if(file.isDirectory){
+      val files = file.listFiles()
+      if(files.nonEmpty){
+        for(f <- files){
+          if(f.isDirectory){
+            getName(f.getAbsolutePath,fileNameListBuffer)
+          }else{
+            fileNameListBuffer += f.getName
+          }
+        }
+      }
+    }
+  }
+
+
 
 }
 

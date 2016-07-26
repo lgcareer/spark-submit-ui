@@ -1,5 +1,7 @@
 package controllers
 
+import java.io.{File, PrintWriter}
+
 import com.fasterxml.jackson.databind.ObjectMapper
 import models.utils.SparkSqlPool
 import play.api.data.Form
@@ -8,6 +10,7 @@ import play.api.mvc.Controller
 import play.libs.Json
 
 import scala.collection.mutable.ArrayBuffer
+import scala.util.Random
 
 object SparkSql extends Controller with Secured {
 
@@ -18,6 +21,8 @@ object SparkSql extends Controller with Secured {
   val sqlForm = Form(
     single("sql" -> text)
   )
+
+  var n = Random.nextInt()
 
   val mapper = new ObjectMapper()
   mapper.registerModule(com.fasterxml.jackson.module.scala.DefaultScalaModule)
@@ -48,8 +53,27 @@ object SparkSql extends Controller with Secured {
               row += resultSet.getObject(i)
             }
             result += row.toArray
-            println("result:"+result)
           }
+
+
+          val writer = new PrintWriter(new File(s"public/download/spark$n.txt"))
+
+          val resultCSV = Json.toJson(
+            Map[String, Any](
+              "header" -> header.toArray,
+              "data" -> result.toArray
+            )
+          ).toString()
+
+          println("c :"+resultCSV.toString)
+
+          header.toArray.toString + "\n" + result.toArray.toString
+
+          writer.println(resultCSV.toString)
+          writer.close()
+
+          Responder.constant("text/plain")
+
           SparkSqlPool.releaseConn(connection)
           Ok(Json.toJson(
             Map[String, Any](
@@ -59,6 +83,24 @@ object SparkSql extends Controller with Secured {
           ).toString())
         }
       })
+
+
+//    def download(file_path:String) = IsAuthenticated { username => implicit request =>
+//      Ok.sendFile(new java.io.File(s"public/download/$file_path"))
+//    }
+
+//    def toDownload = IsAuthenticated { username => implicit request =>
+//      val path = "public/uploads/"
+//      val fileNameListBuffer =new ListBuffer[String]
+//      daosql.getName(path,fileNameListBuffer)
+//      Ok(views.html.download(fileNameListBuffer.toList))
+//    }
+
+
+  }
+
+  def download = IsAuthenticated { username => implicit request =>
+    Ok.sendFile(new File(s"public/download/spark$n.txt"))
   }
 
 }
