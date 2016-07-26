@@ -1,5 +1,9 @@
 package controllers
 
+
+import java.util.UUID
+import java.util.concurrent.atomic.AtomicInteger
+import play.api.Play.current
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
@@ -7,8 +11,6 @@ import play.api.cache.Cache
 import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._
-import play.api.Play.current
-
 
 
 object SparkJar extends Controller with Secured {
@@ -60,16 +62,13 @@ object SparkJar extends Controller with Secured {
           },
 
           executeArguments => {
-
           Execute.main(executeArguments)
           match {
-              case JobSubmitSuccess(msg) => Logger.info(msg); Ok("提交成功! ")
+              case JobSubmitSuccess(msg) => Logger.info(msg); Ok(views.html.he(msg))
               case JobRunExecption(error) => BadRequest(error)
               case _ => NotFound
             }
        }
-
-
      )
 }
 
@@ -77,24 +76,11 @@ object SparkJar extends Controller with Secured {
       Ok(views.html.index())
     }
 
-
-
-   var count:Int = 0
-
-    def log =Action{
-      count+=1
-      var log  = Cache.getAs[String]("log_"+count).getOrElse("none")
-      if("none".equals(log)){
-        count=0
-        count+=1
-        log  = Cache.getAs[String]("log_"+count).getOrElse("none")
-      }
-      Ok(log)
+    def logs(id:String) =Action{
+      Ok(Cache.getAs[String](id).getOrElse("none"))
     }
 
-  def he =Action{
-    Ok(views.html.he())
-  }
+
 
  }
 

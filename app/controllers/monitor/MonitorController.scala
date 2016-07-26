@@ -32,7 +32,7 @@ object MonitorController  extends Controller with Secured{
     val timeFuture= WS.url(url3).get() map{
       response => response.status match {
         case  200 => Some{
-          val timeline: String = (response.json \  "timeline").as[String]
+          val timeline: String = (response.json \ "timeline").as[String]
           val active: String = (response.json \  "active").as[String]
           val completed: String = (response.json \  "completed").as[String]
           val failed: String = (response.json \  "failed").as[String]
@@ -49,7 +49,7 @@ object MonitorController  extends Controller with Secured{
 
   def streaming =Action {
 
-    val url3 = "http://10.77.136.159:4040/streaming/json/"
+    val url3 = "http://10.77.136.159:4041/streaming/json/"
 
 
     val timeFuture = WS.url(url3).get() map {

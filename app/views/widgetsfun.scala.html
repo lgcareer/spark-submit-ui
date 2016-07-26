@@ -1,15 +1,107 @@
 @main("Neptun Dashboard"){
+<!doctype html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
+    <script>
+			$(function () {
+			    var chart;
 
-<style type='text/css'>
-    .col-md-6 {
-    width: 51%;
-    }
-</style>
-<div class="bs-example4" data-example-id="contextual-table">
+			    $(document).ready(function () {
 
-    </div>
+			    	// Build the chart
+			        $('#container1').highcharts({
+			            chart: {
+			                plotBackgroundColor: null,
+			                plotBorderWidth: null,
+			                plotShadow: false
+			            },
+			            title: {
+			                text: '集群功能划分'
+			            },
+			            tooltip: {
+			        	    pointFormat: '{series.name}'
+			            },
+			            plotOptions: {
+			                pie: {
+			                    allowPointSelect: true,
+			                    cursor: 'pointer',
+			                    dataLabels: {
+			                        enabled: true
+			                    },
+			                    showInLegend: true
+			                }
+			            },
+			            series: [{
+			                <!--type: 'pie',-->
+			                type: '',
+			                name: '集群节点数',
+			                data: [
+			                    ['Spark',6],
+			                    ['Hadoop',5],
+			                    ['Hbase',3],
+			                    ['Hive',1],
+			                    ['Mysql',1]
+			                ]
+			            }]
+			        });
+			    });
 
-<script charset="utf-8">
-  </script>
+			});
+		</script>
+	<script>
+			$(function () {
+			    var chart;
+
+			    $(document).ready(function () {
+
+			    	// Build the chart
+			        $('#container2').highcharts({
+			            chart: {
+			                plotBackgroundColor: null,
+			                plotBorderWidth: null,
+			                plotShadow: false
+			            },
+			            title: {
+			                text: '集群功能划分'
+			            },
+			            tooltip: {
+			        	    pointFormat: '{series.name}'
+			            },
+			            plotOptions: {
+			                pie: {
+			                    allowPointSelect: true,
+			                    cursor: 'pointer',
+			                    dataLabels: {
+			                        enabled: true
+			                    },
+			                    showInLegend: true
+			                }
+			            },
+			            series: [{
+			                type: 'pie',
+			                name: '集群节点数',
+			                data: [
+			                    ['Spark',6],
+			                    ['Hadoop',5],
+			                    ['Hbase',3],
+			                    ['Hive',1],
+			                    ['Mysql',1]
+			                ]
+			            }]
+			        });
+			    });
+
+			});
+		</script>
+</head>
+<body>
+<div id="container2" style="min-width:700px;height:400px">
+</div>
+<div id="container1" style="min-width:700px;height:400px">
+</div>
+</body>
+</html>
 }
 @copyright()

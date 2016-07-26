@@ -23,8 +23,9 @@ POST     /streamExecute                controllers.SparkStream.streamExecute
 GET     /errorpage                  controllers.SparkStream.errorpage
 
 # Saprk Sql
-GET     /sparksql                   controllers.SparkSql.sqlpage
+GET      /sparksql                   controllers.SparkSql.sqlpage
 POST     /executesql                 controllers.SparkSql.executesql
+GET      /download                    controllers.SparkSql.download
 
 #Dashboard
 GET     /yarnInfo                   controllers.YarnList.yarnInfo
@@ -54,6 +55,8 @@ POST     /sparkjar                     controllers.SparkJar.upload
 GET     /executejar                    controllers.SparkJar.executejarpage
 POST     /executejar                   controllers.SparkJar.executejar
 GET     /errorpage                     controllers.SparkJar.errorpage
+GET     /logs                          controllers.SparkJar.logs(id:String)
+
 
 #Dashboard
 GET     /yarnInfo                     controllers.YarnList.yarnInfo
@@ -67,9 +70,22 @@ GET   /jobs                          controllers.MonitorController.jobs
 GET   /streaming                     controllers.MonitorController.streaming
 
 #ServicePlan
-GET    /widgets                       controllers.Serviceplan.serviceplan
-GET    /serviceplan                   controllers.Serviceplan.servicedao
-GET    /functionplan                   controllers.Serviceplan.functionplan
+GET    /widgets                       controllers.Serviceplan.servicedao
+#GET    /serviceplan                   controllers.Serviceplan.servicedao
+GET    /functionplan                  controllers.Serviceplan.functionplan
+#UserCounts
+GET    /usertatol                     controllers.Usertally.usertatol
+
+
+#Dispatch
+GET    /dispatch                     controllers.Oozie.oozie
+
+#Alarm
+GET    /alarm                     controllers.AlarmDisk.alarmDisk
+
+
+#Test
+GET    /test                     controllers.test.test
 
 
 
