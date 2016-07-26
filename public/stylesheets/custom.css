@@ -104,6 +104,9 @@
 .sidebar .nav-third-level li a {
     padding-left: 52px;
 }
+.btn-group {
+    margin:0 auto;
+}
 
 @media(min-width:768px) {
     .sidebar {

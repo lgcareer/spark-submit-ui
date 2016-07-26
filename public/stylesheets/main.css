@@ -912,7 +912,7 @@ canvas#doughnut, canvas#line, canvas#polarArea, #bar, #pie, #radar{
   background-color:rgb(3, 197, 135);
   border-color:rgb(3, 197, 135);
 }
-.btn-success:hover{
+.btn-successs:hover{
   border-color:#E74225 !important;
   background:#E74225 !important;
 }
@@ -1486,12 +1486,12 @@ div.checker input {
 .table > thead > tr > th {
   border-bottom: 1px solid #ddd !important;
 }
-.badge-success, .bg-green, .bootstrap-switch-success, .btn-success {
+.badge-success, .bg-green, .bootstrap-switch-success, .btn-successs {
   border-color: #ef553a;
   background: #ef553a;
   padding:8.5px 12px;
 }
-.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+.btn-successs:hover, .btn-successs:focus, .btn-successs:active, .btn-successs.active, .open .dropdown-toggle.btn-successs {
   color: #fff;
   background-color:rgb(6, 217, 149);
   border-color:rgb(6, 217, 149);
@@ -2099,7 +2099,7 @@ body#login{
   -o-border-radius: 2px;
 }
 
-.app-cam input[type="submit"], .btn-success1{
+.app-cam input[type="submit"], .btn-successs1{
   font-size: 14px;
   font-weight: 300 !important;
   color: #fff;
@@ -2115,7 +2115,7 @@ body#login{
   -o-border-radius: 2px;
   text-transform: uppercase;
 }
-.app-cam input[type="submit"]:hover, .btn-success1:hover{
+.app-cam input[type="submit"]:hover, .btn-successs1:hover{
   background:rgb(1, 200, 136);
   color:#fff !important;
 }
@@ -2603,7 +2603,7 @@ button.btn.btn-lg, button.btn{
 .copy_layout {
   padding: 10px;
 }
-button.btn.btn-success {
+button.btn.btn-successs {
   padding:9px 12px;
 }
 .xs h3, .widget_head {
