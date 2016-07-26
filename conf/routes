@@ -8,13 +8,6 @@ GET     /login                      controllers.Authentication.login
 POST    /login                      controllers.Authentication.authenticate
 GET     /logout                     controllers.Authentication.logout
 
-# Spark Jar
-GET     /sparkjar                   controllers.SparkJar.uploadpage
-POST     /sparkjar                  controllers.SparkJar.upload
-GET     /executejar                 controllers.SparkJar.executejarpage
-POST     /executejar                controllers.SparkJar.executejar
-GET     /errorpage                  controllers.SparkJar.errorpage
-
 # Spark Stream
 GET     /stream                     controllers.SparkStream.stream
 POST     /stremupload              controllers.SparkStream.stremupload
@@ -52,10 +45,11 @@ POST   /updatepwd                   controllers.Authentication.updatepwd
 # Spark Jar
 GET     /sparkjar                     controllers.SparkJar.uploadpage
 POST     /sparkjar                     controllers.SparkJar.upload
-GET     /executejar                    controllers.SparkJar.executejarpage
+GET     /executejar                    controllers.SparkJar.executejarpage(location:String)
 POST     /executejar                   controllers.SparkJar.executejar
 GET     /errorpage                     controllers.SparkJar.errorpage
 GET     /logs                          controllers.SparkJar.logs(id:String)
+GET    /he                             controllers.SparkJar.he(id:String)
 
 
 #Dashboard

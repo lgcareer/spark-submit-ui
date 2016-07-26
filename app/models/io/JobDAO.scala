@@ -12,9 +12,9 @@ case class JarInfo(userName: String, uploadTime: String, location:String)
 
 trait JobDAO {
 
-  def saveJar(userName: String, uploadTime: DateTime, filePart: FilePart[TemporaryFile])
+  def saveJar(userName: String, uploadTime: DateTime, filePart: FilePart[TemporaryFile]):String
 
-  def getJar(userName: String) : JarInfo
+  def getJar(id: String) : JarInfo
 
 
 }

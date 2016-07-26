@@ -108,11 +108,10 @@ object Authentication  extends Controller {
     regex.findAllIn(name).hasNext
   }
 
+
   /**
     * 验证密码
-    *
-    * @param password
-    * @param repassword
+    * @param registration
     * @return
     */
   def validatePassword(registration:Registration): Boolean ={
@@ -173,7 +172,7 @@ object Authentication  extends Controller {
   /**
     * 验证验证码
     *
-    * @param captcha
+    * @param captcha1
     * @return
     */
   def verifyCaptcha(captcha1:String,captcha2:String):Boolean={
@@ -197,7 +196,7 @@ object Authentication  extends Controller {
     */
   def captcha =Action{
     implicit request =>
-    val verifyCode = CaptchaUtils.generateVerifyCode(4);
+    val verifyCode = CaptchaUtils.generateVerifyCode(4)
       Logger.info(verifyCode)
       Cache.set("captcha",verifyCode)
       val outputImage: Array[Byte] = CaptchaUtils.outputImage(130, 52, verifyCode)

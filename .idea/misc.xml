@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   <component name="ClientPropertiesManager">
     <properties class="javax.swing.AbstractButton">
@@ -44,6 +45,11 @@
   </component>
 =======
 >>>>>>> db9c4d25f0fbfe4ca312c8803ef7c2df780431ed
+=======
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+>>>>>>> Stashed changes
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>

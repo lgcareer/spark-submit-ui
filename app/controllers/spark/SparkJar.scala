@@ -37,7 +37,7 @@ object SparkJar extends Controller with Secured {
          session.get("email").map { user =>
            Logger.info("用户名=>"+user)
            Execute.storeJar(user,jobFile) match {
-            case JarStored(id) => Redirect(routes.SparkJar.executejar())
+            case JarStored(uri) => Redirect(routes.SparkJar.executejarpage(uri))
             case InvalidJar(error) => Logger.info(error); BadRequest(error)
             case _ => NotFound
           }
@@ -49,8 +49,8 @@ object SparkJar extends Controller with Secured {
         }
       }
 
-      def executejarpage = Action { implicit request =>
-        Ok(views.html.sparkjar(executeForm))
+      def executejarpage(loc:String) = Action { implicit request =>
+        Ok(views.html.sparkjar(executeForm)(loc))
       }
 
       def executejar = IsAuthenticated { username => implicit request =>
@@ -60,11 +60,10 @@ object SparkJar extends Controller with Secured {
             formWithErrors.globalError.map(x => Logger.info(x.message))
             BadRequest(views.html.error(formWithErrors.toString))
           },
-
           executeArguments => {
           Execute.main(executeArguments)
           match {
-              case JobSubmitSuccess(msg) => Logger.info(msg); Ok(views.html.he(msg))
+              case JobSubmitSuccess(msg) => Logger.info(msg); Redirect(routes.SparkJar.he(msg))
               case JobRunExecption(error) => BadRequest(error)
               case _ => NotFound
             }
@@ -78,6 +77,10 @@ object SparkJar extends Controller with Secured {
 
     def logs(id:String) =Action{
       Ok(Cache.getAs[String](id).getOrElse("none"))
+    }
+
+    def he(jobId:String)=Action{
+      Ok(views.html.he(jobId))
     }
 
 

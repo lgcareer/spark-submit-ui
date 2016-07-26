@@ -4,7 +4,11 @@
 		module="ficusspark-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
+<<<<<<< Updated upstream
 		publication="20160726112257"
+=======
+		publication="20160726111823"
+>>>>>>> Stashed changes
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

@@ -36,8 +36,6 @@ li:before {
 
 <div id="testScroll2" style="width:100%; height: 500px; overflow-y: scroll;float: left;"></div>
 
-
-
 <script charset="utf-8">
 
      var $end = $('<li><font color="#FFFFFF">'+ "执行结束!" + '</font></li>');
@@ -60,11 +58,10 @@ li:before {
                         else{
                              $el = $('<li><font color="#FFFFFF">'+ data + '</font></li>');
                         }
-
                        if(data!= "none" && data!='finish'){
                          $("#testScroll2").append($el)
                          $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
-                         index++
+                           index++
                        }
 
                        if(data=='finish'){
