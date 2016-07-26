@@ -3,40 +3,17 @@
 
 <div class="bs-example4" data-example-id="contextual-table">
     <table class="table table-hover">
-        <tr><th>Host</th><th>Services</th></tr>
+        <tr><th><font color="SteelBlue"><h3>Host</h3></font></th><th><font color="SteelBlue"><h3>Service</h3></font></th></tr>
         @for((key, value) <- map) {
             <tr>
-                <td>@key</td><td>@value</td>
+                @if(value.contains("Worker")){
+                <td><font color="SteelBlue"><h4>@key</h4></font></td><td><font color="CornflowerBlue"><h4>@value</h4></font></td>
+                }else {
+                <td><font color="SteelBlue"><h4>@key</h4></font></td><td><font color="CadetBlue"><h4>@value</h4></font></td>
+                }
             </tr>
         }
     </table>
 </div>
-<script charset="utf-8">
-    $(document).ready(function(){
-        $.ajax({
-            type:"GET",
-            url:"/serviceplan",
-            dataType:"json",
-            success:function(data){
-                var head= "<table border='10' width='439'><tr><th>IP</th><th>服务</th></tr>";
-                var service=eval(data);
-                console.log(service);
-                for (var ip in service) {
-                    var ser = service[ip];
-                    head += "<tr><td>"+ip+"</td><td>"+ser+"</td></tr>";
-                   };
-                head += " </table>";
-                $('#servicelist').html(head);
-            }
-        });
-   });
-  </script>
-<scripe>
-
-
 }
-
-            <!--@for((key, value) <- map) {-->
-            <!--<span>@key</span><span>@value</span>-->
-            <!--}-->
 @copyright()
