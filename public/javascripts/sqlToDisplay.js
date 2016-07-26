@@ -46,6 +46,10 @@ function resultToCharts() {
             chart: {
                 type: 'column'
             },
+            title: {
+                text: '数据图表',
+                x: -20
+            },
             xAxis: {
                 categories: categories
             },
@@ -60,6 +64,10 @@ function resultToCharts() {
                     pointPadding: 0.2,
                     borderWidth: 0
                 }
+            },
+            credits: {
+                text: 'DSP-NEPTUNE©️',
+                href: 'http://t.cn'
             },
             series: [{
                 name: $('#data_charts').find("#yargs").val(),
