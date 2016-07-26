@@ -13,6 +13,7 @@ import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkEnv
 import org.joda.time.DateTime
 import play.api.Logger
+import play.api.cache.Cache
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 
@@ -145,10 +146,10 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         request.jarLocation.foreach(builder.jarLocation)
         val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
         val output = process.inputIterator.mkString("\n")
-        val regex = """Successfully (.*)""".r.unanchored
+        val regex = """Shutdown (.*)""".r.unanchored
         output match {
           case regex(success) => {
-            "执行成功!" //TODO
+             JobRunFinish("执行结束!")
           }
           case _ =>
             throw new JobRunExecption(output)
@@ -164,7 +165,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) => println(result) //TODO
+      case scala.util.Success(result:Any) => self ! Logger.info(result.msg); JobLoading(result.msg)
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }

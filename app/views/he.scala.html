@@ -1,41 +1,90 @@
+@(jobId:String)
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>输出结果</title>
+    <style type="text/css">
+
+ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+li:before {
+    content: "• ";
+    color: white; /* or whatever color you prefer */
+}
+    </style>
+
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 </head>
-<body style="margin-bottom: 150px">
 
-    <ul id="logs">
-        <li>This is log 1</li>
 
-    </ul>
+<body style="background-color:#000" style="margin-bottom: 155px;" >
+
+<ul id="logs">
+  <p><li ><font color="#00CD00">提交成功!</font></li><li>
+      <font color="#00CD00">任务ID :<font color="red">@jobId</font>   </font></li></p>
+</ul>
+
+<div id="testScroll2" style="width:100%; height: 500px; overflow-y: scroll;float: left;"></div>
+
+
 
 <script charset="utf-8">
 
+     var $end = $('<li><font color="#FFFFFF">'+ "执行结束!" + '</font></li>');
     var $logs = $('#logs');
-
-        setInterval(
+     var index =0
+       var timeBox =setInterval(
             function () {
               $(document).ready(function(){
+               var id="@jobId"+"_"+index
                 $.ajax({
                     type:"GET",
-                    url:"/log",
+                    url:"/logs",
+                    data: {id: id},
                     dataType:"text",
                     success:function(data){
-                        var $el = $('<li>'+ data + '</li>');
-                        $el.appendTo($logs);
-                        //$('body').animate({scrollTop: $el.offset().top});
+                        var $el;
+                        if(data.indexOf('Exception')==0 || data.indexOf('at')==1){
+                            $el = $('<li><font color="#FF0000">'+ data + '</font></li>');
+                        }
+                        else{
+                             $el = $('<li><font color="#FFFFFF">'+ data + '</font></li>');
+                        }
 
+
+                       if(data!= "none" && data!='finish'){
+                         $("#testScroll2").append($el)
+                         $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
+                         index++
+                       }
+
+                       if(data=='finish'){
+                            $("#testScroll2").append($end)
+                            $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
+                             clearInterval(timeBox);
+                       }
                     }
                 });
            });
          },
-            200
+            50
     )
 
   </script>
+
+
+
+
 
 
 </body>

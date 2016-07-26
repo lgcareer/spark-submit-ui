@@ -1,18 +1,17 @@
 package models.deploy.process
 
 import java.io.InputStream
+import java.util.UUID
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.locks.ReentrantLock
-
 import akka.actor.ActorRef
 import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess}
 import org.apache.spark.Logging
 import play.api.{Logger, cache}
 import play.api.cache.Cache
 import play.api.Play.current
-
 import scala.io.Source
-
+import scala.concurrent.duration._
 /**
   * Created by liangkai1 on 16/7/12.
   */
@@ -32,18 +31,19 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
   private val thread = new Thread {
     override def run() = {
       val lines:Iterator[String] = Source.fromInputStream(inputStream).getLines()
-
+      val jobId: String = UUID.randomUUID().toString
       for (line <- lines) {
         _lock.lock()
         val regex = """Added (.*)""".r.unanchored
         line match {
           case regex(success) => {
-            act ! JobSubmitSuccess("任务提交成功!")
+            act ! JobSubmitSuccess(jobId)
           }
-          case _ => Logger.info(line); Cache.set("log_"+nextCount,line)
+          case _ => Logger.info(line);
         }
         try {
           _lines = _lines :+ line
+          Cache.set(jobId+"_"+nextCount,line,1.hour)
           _condition.signalAll()
         } finally {
           _lock.unlock()
@@ -52,6 +52,7 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
       _lock.lock()
       try {
         _finished = true
+        Cache.set(jobId+"_"+nextCount,"finish")
         _condition.signalAll()
       } finally {
         _lock.unlock()
