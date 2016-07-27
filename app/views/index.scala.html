@@ -134,6 +134,7 @@
                             </a>
                         </div>
 
+<<<<<<< Updated upstream
                         <div class="col-md-6 col_1_of_2 span_1_of_2">
                             <a class="tiles_info tiles_blue">
                                 <div class="tiles-head tiles_blue1">
@@ -175,6 +176,21 @@
                         </div>
                         <div class="clearfix"> </div>
                     </div>
+=======
+      </div>
+
+        <div class="content_bottom">
+            <div class="col-md-4 stats-info">
+                <div class="panel-heading">
+                    <h4 class="panel-title"><b>任务状态：</b></h4>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href='javascript:void(0)' onclick='show_task(this)'>已完成的任务</a><div class="text-success pull-right"></div></li>
+                        <li><a href='javascript:void(0)' onclick='show_task(this)'>运行中的任务</a><div class="text-success pull-right"></div></li>
+                        <li><a href='javascript:void(0)' onclick='show_task(this)'>已失败任务</a><div class="text-success pull-right"></div></li>
+                    </ul>
+>>>>>>> Stashed changes
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -497,7 +513,51 @@
                         $('#fail').html(fail_task);
                         $('#plain').html(plain_task);
                     }
+<<<<<<< Updated upstream
                 });
+=======
+                  }
+                }
+            });
+        };
+        //setInterval(show_work,5000);
+        //计算任务个数
+        function task_count(){
+            $.ajax({
+                type:"GET",
+                url:"/yarnInfo",
+                dataType:"json",
+                success:function(data){
+                  var myobj=eval(data);
+                  var app=myobj.apps.app;
+                  var succ_task = 0;
+                  var run_task = 0;
+                  var fail_task = 0;
+     var plain_task =0;
+                  for(var i=0;i<app.length;i++){
+                      var finalStatus = app[i].finalStatus;
+                      var state = app[i].state
+       //计算完成的
+                      if(finalStatus == 'SUCCEEDED'){
+                          succ_task += 1;
+                      }
+                      if(state == 'RUNNING'){
+                          run_task += 1;
+                      }
+                      if(finalStatus == 'FAILED'){
+                          fail_task += 1;
+                      }
+          if(state == 'ACCEPTED'){
+                          plain_task += 1;
+                      }
+                  }
+                  $('#run').html(run_task);
+                  $('#succ').html(succ_task);
+                  $('#fail').html(fail_task);
+                  $('#plain').html(plain_task);
+                   }
+            });
+>>>>>>> Stashed changes
 
             }
     </script>

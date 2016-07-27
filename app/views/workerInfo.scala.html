@@ -1,0 +1,33 @@
+@main("Neptun Dashboard") {
+<div class="graphs">
+    <h3 style="text-align:center;">  Spark Worker信息  </h3>
+    <div id = "workerInfo">
+
+    </div>
+    @copyright()
+</div>
+
+
+ <script charset="utf-8">
+    $(document).ready(function(){
+        $.ajax({
+            type:"GET",
+            url:"/workerlist",
+            dataType:"json",
+            success:function(data){
+              var head= "<table border='5' width='1150' ><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
+                var myobj=eval(data);
+                var url = myobj.url;
+                var status = myobj.status;
+                var workers=myobj.workers;
+                for(var i=0;i<workers.length;i++){
+               head += "<tr class= \"success\"><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+workers[i].coresused+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+ new Date(workers[i].startedTime).toLocaleString()+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
+                                    }
+                head += " </table>";
+                $('#workerInfo').html(head);
+                console.log(head);
+            }
+        });
+   });
+  </script>
+}

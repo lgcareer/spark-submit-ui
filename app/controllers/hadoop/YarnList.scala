@@ -18,10 +18,14 @@ object YarnList extends Controller with Secured {
     Ok(views.html.yarnlist.render())
   }
 
-  def workerlist = IsAuthenticated { username => implicit request =>
+  def workerlistdata = IsAuthenticated { username => implicit request =>
     val workersJson = scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString
     val workerlist = Json.parse(workersJson)
     Ok(workerlist)
+  }
+
+  def workerInfo = IsAuthenticated { username => implicit request =>
+    Ok(views.html.workerInfo.render())
   }
 
   def sparklist = IsAuthenticated { username => implicit request =>
