@@ -32,12 +32,13 @@ class JobFileDAO extends JobDAO {
   }
 
 
-  override def saveJar(userName: String, uploadTime: DateTime, filePart: FilePart[TemporaryFile]) {
+  override def saveJar(userName: String, uploadTime: DateTime, filePart: FilePart[TemporaryFile]):String= {
     val jobName:String=filePart.filename
     val file: File = new File(s"/tmp/file/$jobName")
     filePart.ref.moveTo(file,rootOV)
       addJar(jobName,uploadTime)
-      insertJarToDb(JarInfo(userName,uploadTime.toDateTimeISO.toString,file.getAbsoluteFile.toString))
+      insertJarToDb(JarInfo(userName,uploadTime.toDateTimeISO.toString,file.getAbsolutePath))
+    file.getAbsoluteFile.getAbsolutePath
   }
 
   private def addJar(jobName: String, uploadTime: DateTime) {
@@ -48,7 +49,7 @@ class JobFileDAO extends JobDAO {
     }
   }
 
-  override def getJar(userName: String): JarInfo = ???
+  override def getJar(id: String): JarInfo = ???
 
    def insertJarToDb(jarInfo: JarInfo): Unit = {
     DB.withConnection { implicit connection =>

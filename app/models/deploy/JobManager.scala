@@ -33,7 +33,6 @@ case  class ExecuteModel(
                           jarLocation:String,
                           args1:String)
 
-
 object  JobManagerActor{
   case class SubmitJob(request: CreateBatchRequest)
   case class SubmitJobed(msg:String)
@@ -44,11 +43,15 @@ object  JobManagerActor{
   case class JobLoading(msg: String)
 
   case class InvalidJar(error:String)
-  case class JarStored(id :String)
+  case class JarStored(uri :String)
 
   def props(contextConfig: Config): Props = Props(classOf[JobManagerActor], contextConfig)
 }
 
+/**
+  * [[models.JobDAO]]
+  * @param jobDAO
+  */
 private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
 
   import JobManagerActor._
@@ -116,12 +119,15 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
     }
 
     case StoreJar(userName,filePart) => {
-
       if(!validateJar(filePart.filename)){
         sender ! InvalidJar("文件类型不正确!")
       }else{
-        jobDAO.saveJar(userName,DateTime.now(),filePart)
-        sender ! JarStored(UUID.randomUUID().toString)
+        val jar = jobDAO.saveJar(userName,DateTime.now(),filePart)
+        if(jar.nonEmpty){
+          sender ! JarStored(jar)
+        }else{
+          sender ! InvalidJar("文件路径保存失败!")
+        }
       }
     }
   }
