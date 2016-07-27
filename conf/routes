@@ -85,7 +85,7 @@ GET    /alarm                     controllers.AlarmDisk.alarmDisk
 
 
 #Test
-GET    /test                     controllers.test.test
+GET    /graph                     controllers.Serviceplan.graph
 
 
 

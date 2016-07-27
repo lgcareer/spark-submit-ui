@@ -1,0 +1,187 @@
+@(ip:String)
+@main("Neptun Dashboard"){
+    <script src="@routes.Assets.at("javascripts/echarts.min.js")" type="text/javascript"></script>
+    <div class="clearfix"> </div>
+<div id="main" style="width:1200px;height:600px;float:left"></div>
+<script type="text/javascript">
+
+        var myChart = echarts.init(document.getElementById('main'));
+
+
+option = {
+    title: {
+        text: ''
+    },
+    tooltip: {},
+    animationDurationUpdate: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    series : [
+        {
+            type: 'graph',
+            layout: 'none',
+            symbolSize: 100,
+            roam: true,
+            label: {
+                normal: {
+                    show: true
+                }
+            },
+            edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [4, 10],
+            edgeLabel: {
+                normal: {
+                    textStyle: {
+                        fontSize: 20
+                    }
+                }
+            },
+            data: [{
+                name: 'GetWay',
+                x: 200,
+                y: 300
+            }, {
+                name: 'Master standby',
+                x: 350,
+                y: 400
+            }, {
+                name: 'Master alive',
+                x: 300,
+                y: 400
+            }, {
+                name: 'Hmaster',
+                x: 100,
+                y: 400
+            }
+            , {
+                name: 'Worker',
+                x: 0,
+                y: 500
+            }
+            , {
+                name: 'Datanode',
+                x: 150,
+                y: 500
+            }
+            , {
+                name: 'ResourceManager',
+                x: 200,
+                y: 400
+            }
+            , {
+                name: 'Hive',
+                x: 250,
+                y: 500
+            }, {
+                name: 'NameNode',
+                x: 1,
+                y: 400
+            }, {
+                name: 'DFSZKFailoverController',
+                x: 50,
+                y: 500
+            }, {
+                name: 'NodeManager',
+                x: 100,
+                y: 500
+            }, {
+                name: 'JournalNode',
+                x: 200,
+                y: 500
+            }, {
+                name: 'HRegionServer',
+                x: 300,
+                y: 500
+            }, {
+                name: 'Zookeeper',
+                x: 100,
+                y: 300
+            }],
+            // links: [],
+            links: [{
+                label: {
+                    normal: {
+                        show: true
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        width: 5,
+                        curveness: 0.3
+                    }
+                }
+            }, {
+                source: 'GetWay',
+                target: 'Master alive'
+            }, {
+                source: 'GetWay',
+                target: 'GetWay'
+            }, {
+                source: 'Master standby',
+                target: 'Master alive'
+            }, {
+                source: 'Master alive',
+                target: 'Worker'
+            }, {
+                source: 'ResourceManager',
+                target: 'Master alive'
+            }, {
+                source: 'GetWay',
+                target: 'ResourceManager'
+            }, {
+                source: 'GetWay',
+                target: 'Hive'
+            }, {
+                source: 'ResourceManager',
+                target: 'NodeManager'
+            }, {
+                source: 'NameNode',
+                target: 'DFSZKFailoverController'
+            }, {
+                source: 'GetWay',
+                target: 'NameNode'
+            }, {
+                source: 'GetWay',
+                target: 'Hmaster'
+            }, {
+                source: 'NameNode',
+                target: 'Datanode'
+            }, {
+                source: 'NameNode',
+                target: 'DFSZKFailoverController'
+            }, {
+                source: 'NameNode',
+                target: 'JournalNode'
+            }, {
+                source: 'Hmaster',
+                target: 'HRegionServer'
+            }, {
+                source: 'NameNode',
+                target: 'JournalNode'
+            }, {
+                source: 'Master alive',
+                target: 'Datanode'
+            }, {
+                source: 'Zookeeper',
+                target: 'Master alive'
+            }, {
+                source: 'Zookeeper',
+                target: 'Master standby'
+            }],
+            lineStyle: {
+                normal: {
+                    opacity: 0.9,
+                    width: 2,
+                    curveness: 0
+                }
+            }
+        }
+    ]
+};
+        myChart.setOption(option);
+    </script>
+    <div class="clearfix"> </div>
+    @copyright()
+}
+
+
+

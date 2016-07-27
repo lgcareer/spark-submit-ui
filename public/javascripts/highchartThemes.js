@@ -80,7 +80,7 @@ Highcharts.theme = {
     plotOptions: {
         series: {
             dataLabels: {
-                color: '#B0B0B3'
+                color: '#282828'
             },
             marker: {
                 lineColor: '#333'
@@ -202,7 +202,7 @@ Highcharts.theme = {
     legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
     background2: '#505053',
     dataLabelsColor: '#B0B0B3',
-    textColor: '#C0C0C0',
+    textColor: '#000000',
     contrastTextColor: '#F0F0F3',
     maskColor: 'rgba(255,255,255,0.3)'
 };
