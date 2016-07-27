@@ -17,6 +17,7 @@ object SparkSql extends Controller with Secured {
   def sqlpage = IsAuthenticated { username => implicit request =>
     Ok(views.html.sparksql())
   }
+
   //接受页面输入sql
   val sqlForm = Form(
     single("sql" -> text)
@@ -41,7 +42,7 @@ object SparkSql extends Controller with Secured {
           val resultSet = statement.getResultSet()
           val result = new ArrayBuffer[Array[Any]]()
           val rsmd = resultSet.getMetaData()
-          println("rsmd:"+rsmd)
+          println("rsmd:" + rsmd)
           val header = new ArrayBuffer[String]()
           for (i <- 1 to rsmd.getColumnCount()) {
             header += rsmd.getColumnName(i)
@@ -65,7 +66,7 @@ object SparkSql extends Controller with Secured {
             )
           ).toString()
 
-          println("c :"+resultCSV.toString)
+          println("c :" + resultCSV.toString)
 
           header.toArray.toString + "\n" + result.toArray.toString
 
@@ -85,16 +86,16 @@ object SparkSql extends Controller with Secured {
       })
 
 
-//    def download(file_path:String) = IsAuthenticated { username => implicit request =>
-//      Ok.sendFile(new java.io.File(s"public/download/$file_path"))
-//    }
+    //    def download(file_path:String) = IsAuthenticated { username => implicit request =>
+    //      Ok.sendFile(new java.io.File(s"public/download/$file_path"))
+    //    }
 
-//    def toDownload = IsAuthenticated { username => implicit request =>
-//      val path = "public/uploads/"
-//      val fileNameListBuffer =new ListBuffer[String]
-//      daosql.getName(path,fileNameListBuffer)
-//      Ok(views.html.download(fileNameListBuffer.toList))
-//    }
+    //    def toDownload = IsAuthenticated { username => implicit request =>
+    //      val path = "public/uploads/"
+    //      val fileNameListBuffer =new ListBuffer[String]
+    //      daosql.getName(path,fileNameListBuffer)
+    //      Ok(views.html.download(fileNameListBuffer.toList))
+    //    }
 
 
   }
