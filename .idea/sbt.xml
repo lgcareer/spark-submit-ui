@@ -4,6 +4,10 @@
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+=======
+        <option name="jdk" value="1.8 (3)" />
+>>>>>>> e8345e9898bf604936063706bd96b0289970e653
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -11,8 +15,11 @@
           </set>
         </option>
         <option name="sbtVersion" value="0.13.11" />
+<<<<<<< HEAD
         <option name="useAutoImport" value="true" />
         <option name="useOurOwnAutoImport" value="true" />
+=======
+>>>>>>> e8345e9898bf604936063706bd96b0289970e653
       </SbtProjectSettings>
     </option>
   </component>
