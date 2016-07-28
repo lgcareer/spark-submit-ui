@@ -4,14 +4,18 @@ import java.io.InputStream
 import java.util.UUID
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.locks.ReentrantLock
+
 import akka.actor.ActorRef
 import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess}
 import org.apache.spark.Logging
 import play.api.{Logger, cache}
 import play.api.cache.Cache
 import play.api.Play.current
+
+import scala.collection.mutable
 import scala.io.Source
 import scala.concurrent.duration._
+import scala.util.control.Breaks
 /**
   * Created by liangkai1 on 16/7/12.
   *
@@ -23,7 +27,6 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
   private[this] val _lock = new ReentrantLock()
   private[this] val _condition = _lock.newCondition()
   private[this] var _finished = false
-
   private val atomicCounter = new AtomicInteger()
 
   def nextCount(): Int = atomicCounter.getAndIncrement()
@@ -31,17 +34,19 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
   private val thread = new Thread {
     override def run() = {
       val lines:Iterator[String] = Source.fromInputStream(inputStream).getLines()
-      val jobId: String = UUID.randomUUID().toString
+      //val jobId: String = UUID.randomUUID().toString
+      var jobId:String =null
+      //val regex = """Added (.*)""".r.unanchored
+
+      val regex_id = """Spark cluster with app ID (.*)""".r.unanchored
       for (line <- lines) {
         _lock.lock()
-        val regex = """Added (.*)""".r.unanchored
         line match {
-          case regex(success) => {
-            act ! JobSubmitSuccess(jobId)
-          }
-          case _ => Logger.info(line);
+          case regex_id(id) => act ! JobSubmitSuccess(id); jobId=id
+          case _ => Logger.info(line)
         }
         try {
+          if(jobId!=null&&line.nonEmpty)
           Cache.set(jobId+"_"+nextCount,line,1.hours)
           _lines = _lines :+ line
           _condition.signalAll()

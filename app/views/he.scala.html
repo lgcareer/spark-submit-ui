@@ -1,32 +1,28 @@
 @(jobId:String)
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>输出结果</title>
-    <style type="text/css">
+@main("Neptun Dashboard"){
 
-ul {
-    list-style: none;
-    padding:0;
-    margin:0;
-}
+    <!--<style type="text/css">-->
 
-li {
-    padding-left: 1em;
-    text-indent: -.7em;
-}
+<!--ul {-->
+    <!--list-style: none;-->
+    <!--padding:0;-->
+    <!--margin:0;-->
+<!--}-->
 
-li:before {
-    content: "• ";
-    color: white; /* or whatever color you prefer */
-}
-    </style>
+<!--li {-->
+    <!--padding-left: 1em;-->
+    <!--text-indent: -.7em;-->
+<!--}-->
+
+<!--li:before {-->
+    <!--content: "• ";-->
+    <!--color: white; /* or whatever color you prefer */-->
+<!--}-->
+    <!--</style>-->
 
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-</head>
 
-<body style="background-color:#000" style="margin-bottom: 155px;" >
+<!--<body style="background-color:#000" style="margin-bottom: 20%;" >-->
 
 <ul id="logs">
   <p><li ><font color="#00CD00">提交成功!</font></li><li>
@@ -55,7 +51,7 @@ li:before {
                             $el = $('<li><font color="#FF0000">'+ data + '</font></li>');
                         }
                         else{
-                             $el = $('<li><font color="#FFFFFF">'+ data + '</font></li>');
+                             $el = $('<li><font color="#000000">'+ data + '</font></li>');
                         }
                        if(data!= "none" && data!='finish'){
                          $("#testScroll2").append($el)
@@ -68,7 +64,12 @@ li:before {
                             $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
                              clearInterval(timeBox);
                        }
-                    }
+                    },
+                           error: function(e) {
+                               clearInterval(timeBox);
+                        },
+                   complete: function (XHR, TS) { XHR = null }
+
                 });
            });
          },
@@ -77,10 +78,5 @@ li:before {
 
   </script>
 
+}
 
-
-
-
-
-</body>
-</html>
