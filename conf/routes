@@ -50,6 +50,7 @@ GET     /executejar                    controllers.SparkJar.executejarpage(locat
 POST     /executejar                   controllers.SparkJar.executejar
 GET     /errorpage                     controllers.SparkJar.errorpage
 GET     /logs                          controllers.SparkJar.logs(id:String)
+GET    /runtasklogs                    controllers.RunTask.runTaskLogs
 GET    /he                             controllers.SparkJar.he(id:String)
 
 
@@ -62,7 +63,7 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
 GET   /jobs                          controllers.MonitorController.jobs
-GET   /streaming                     controllers.MonitorController.streaming
+GET   /streaming                     controllers.MonitorController.streaming(appui:String)
 
 #ServicePlan
 GET    /widgets                       controllers.Serviceplan.servicedao
@@ -77,6 +78,9 @@ GET    /dispatch                     controllers.Oozie.oozie
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
+
+#RunTask
+GET    /runTask                     controllers.RunTask.runTask
 
 
 #Test

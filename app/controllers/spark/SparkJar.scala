@@ -1,12 +1,10 @@
 package controllers
 
 
-import java.util.UUID
-import java.util.concurrent.atomic.AtomicInteger
-import play.api.Play.current
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
+import play.api.Play.current
 import play.api.cache.Cache
 import play.api.data.Forms._
 import play.api.data._
@@ -80,8 +78,10 @@ object SparkJar extends Controller with Secured {
     }
 
     def he(jobId:String)=Action{
+      println("打印日志:"+ jobId)
       Ok(views.html.he(jobId))
     }
+
 
 
 

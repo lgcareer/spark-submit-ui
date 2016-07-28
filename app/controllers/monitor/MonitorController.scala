@@ -47,9 +47,11 @@ object MonitorController  extends Controller with Secured{
 
   }
 
-  def streaming =Action {
-
-    val url3 = "http://10.77.136.159:4041/streaming/json/"
+  def streaming (appui:String) =Action {
+    val aa = appui
+    println(aa)
+    val url3 = s"$aa/streaming/json/"
+    println(url3)
 
 
     val timeFuture = WS.url(url3).get() map {

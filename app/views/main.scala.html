@@ -101,10 +101,9 @@
 
                             <li> <a href="#"><i class="fa fa-bell nav_icon"></i>监控和报警<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
-                                    <li> <a href="@routes.MonitorController.streaming">Streaming监控</a> </li>
-                                    <li> <a href="@routes.MonitorController.jobs">日志输出</a> </li>
-                                    <li> <a href="@routes.MonitorController.jobs">临时任务监控</a> </li>
-                                    <li> <a href="@routes.MonitorController.jobs">调度监控</a> </li>
+                                    <li> <a href="@routes.RunTask.runTask">Spark Stream 运行任务列表</a> </li>
+                                    <li> <a href="@routes.MonitorController.jobs">Spark Sql任务列表</a> </li>
+                                    <li> <a href="@routes.RunTask.runTaskLogs">Spark 运行任务日志</a> </li>
                                 </ul>
                             </li>
 
