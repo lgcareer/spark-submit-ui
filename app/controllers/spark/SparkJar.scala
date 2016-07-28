@@ -78,12 +78,8 @@ object SparkJar extends Controller with Secured {
     }
 
     def he(jobId:String)=Action{
-      println("打印日志:"+ jobId)
       Ok(views.html.he(jobId))
     }
-
-
-
 
  }
 

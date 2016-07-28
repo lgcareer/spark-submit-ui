@@ -34,15 +34,16 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
   private val thread = new Thread {
     override def run() = {
       val lines:Iterator[String] = Source.fromInputStream(inputStream).getLines()
-      //val jobId: String = UUID.randomUUID().toString
+      val uid: String = UUID.randomUUID().toString
       var jobId:String =null
       //val regex = """Added (.*)""".r.unanchored
-
+      val regex_local = """Starting executor ID driver on host localhost(.*)""".r.unanchored
       val regex_id = """Spark cluster with app ID (.*)""".r.unanchored
       for (line <- lines) {
         _lock.lock()
         line match {
           case regex_id(id) => act ! JobSubmitSuccess(id); jobId=id
+          case regex_local(msg) => jobId=uid; act ! JobSubmitSuccess(jobId)
           case _ => Logger.info(line)
         }
         try {
@@ -54,6 +55,9 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
           _lock.unlock()
         }
       }
+
+
+
       _lock.lock()
       try {
         _finished = true
