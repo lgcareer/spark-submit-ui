@@ -1,8 +1,6 @@
 package controllers
 
 
-import java.util.UUID
-import java.util.concurrent.atomic.AtomicInteger
 import play.api.Play.current
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
@@ -28,16 +26,12 @@ object SparkJar extends Controller with Secured {
     }
 
 
-    def uploadpage = IsAuthenticated {username => implicit request =>
-      Ok(views.html.upload())
-    }
-
     def upload = Action(parse.multipartFormData) { implicit request =>
       request.body.file("file").map { jobFile =>
          session.get("email").map { user =>
            Logger.info("用户名=>"+user)
            Execute.storeJar(user,jobFile) match {
-            case JarStored(uri) => Redirect(routes.SparkJar.executejarpage(uri))
+            case JarStored(uri) => Redirect(routes.SparkJar.executejarpage())
             case InvalidJar(error) => Logger.info(error); BadRequest(error)
             case _ => NotFound
           }
@@ -49,8 +43,8 @@ object SparkJar extends Controller with Secured {
         }
       }
 
-      def executejarpage(loc:String) = Action { implicit request =>
-        Ok(views.html.sparkjar(executeForm)(loc))
+      def executejarpage = Action { implicit request =>
+        Ok(views.html.upload(executeForm))
       }
 
       def executejar = IsAuthenticated { username => implicit request =>

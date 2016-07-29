@@ -1,32 +1,191 @@
+@(form: Form[ExecuteModel])
 @main("Neputune Spark-jar-uploadJar") {
-@confirm("确定上传jar文件吗？")
+    <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
 <div class="graphs">
 <div class="xs">
- <h3>Neptune Spark Jar</h3>
+    @helper.form(action = routes.SparkJar.executejar,'id -> "jarForm") {
+    <div class="paneltxt paneltxt-color paneltxt-success">
+        <div class="paneltxt-heading">
+            <h3 class="paneltxt-title">请上传jar包</h3>
 
- <div class="bs-example" data-example-id="form-validation-states-with-icons">
+            <div class="paneltxt-options">
+                <a href="#" data-toggle="paneltxt">
+                    <i class="linecons-cog"></i>
+                </a>
+                <a href="#" data-toggle="paneltxt">
+                    <span class="fa fa-play" id="submit"></span>
+                </a>
+                <a href="#" data-toggle="paneltxt">
+                    <span class="fa fa-wrench" id="setting"></span>
+                </a>
 
-    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-    <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-  </div>
-@helper.form(action = routes.SparkJar.upload, 'enctype -> "multipart/form-data") {
-  <div class="form-group">
-    <label for="exampleInputFile">文件上载</label>
-    <input type="file" name="file">
-    <p class="help-block">请上传需要执行的jar文件！</p>
-  </div>
-  <div class="panel-footer">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-        <button class="btn-success btn" type="submit">提交</button>
-        <button class="btn-inverse btn" type="reset">重置</button>
-      </div>
+            </div>
+        </div>
+
+        <div class="panel-body" >
+
+            <div class="paneltxt-body">
+
+                <script type="text/javascript">
+                    var FILENAME="";
+                        jQuery(document).ready(function($)
+                        {
+                            var i = 1,
+                                    $example_dropzone_filetable = $("#example-dropzone-filetable"),
+                                    example_dropzone = $("#advancedDropzone").dropzone({
+                                        url: '/sparkjar',
+
+                                        // Events
+                                        addedfile: function(file)
+
+                                        {
+                                            FILENAME = file.name;
+                                            var location = "/tmp/file/" + FILENAME;
+                                            $("#jarlocation").val(location);
+
+                                            if(i == 1)
+                                            {
+                                                $example_dropzone_filetable.find('tbody').html('');
+                                            }
+
+                                            var size = parseInt(file.size/1024, 10);
+                                            size = size < 1024 ? (size + " KB") : (parseInt(size/1024, 10) + " MB");
+
+                                            var $el = $('<tr>\
+                                                    <td class="text-centers">'+(i++)+'</td>\
+                                                    <td>'+file.name+'</td>\
+                                                    <td><div class="progress progress-striped"><div class="progress-bar progress-bar-warning"></div></div></td>\
+                                                    <td>'+size+'</td>\
+                                                    <td>Uploading...</td>\
+                                                </tr>');
+
+
+                                            $example_dropzone_filetable.find('tbody').append($el);
+                                            file.fileEntryTd = $el;
+                                            file.progressBar = $el.find('.progress-bar');
+                                        },
+
+                                        uploadprogress: function(file, progress, bytesSent)
+                                        {
+                                            file.progressBar.width(progress + '%');
+                                        },
+
+                                        success: function(file)
+                                        {
+                                            file.fileEntryTd.find('td:last').html('<span class="text-success">Uploaded</span>');
+                                            file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
+                                        },
+
+                                        error: function(file)
+                                        {
+                                            file.fileEntryTd.find('td:last').html('<span class="text-danger">Failed</span>');
+                                            file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
+                                            $("#jarlocation").val("无效文件!上传失败!!");
+                                        }
+                                    });
+
+                            $("#advancedDropzone").css({
+                                minHeight: 200
+                            });
+
+                            $("#submit").click(function(){ $("#jarForm").submit(); });
+                        });
+                </script>
+                <br />
+                <div class="row">
+                    <div class="col-sm-3 text-centers">
+
+                        <div id="advancedDropzone" class="droppable-area">
+                            拖拽或点击
+                        </div>
+
+                    </div>
+                    <div class="col-sm-9">
+
+                        <table class="table table-bordered table-striped" id="example-dropzone-filetable">
+                            <thead>
+                                <tr>
+                                    <th width="1%" class="text-centers">#</th>
+                                    <th width="50%">Jar包名称</th>
+                                    <th width="20%">Upload progress</th>
+                                    <th>文件大小</th>
+                                    <th>上传状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5">Files list will appear here</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="xs">
+            <h3>执行参数</h3>
+            <div class="tab-content">
+                <div class="tab-pane active" id="horizontal-form">
+                    <div class="form-horizontal" >
+
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="executeClass" id="executeClass" placeholder="Large Input">
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--num-executors</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="numExecutors" id="numExecutors" placeholder="Large Input">
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--driver-memory</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="driverMemory" id="driverMemory" placeholder="Large Input">
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                --executor-memory</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="executorMemory" id="executorMemory" placeholder="Large Input">
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--executor-cores</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="executorCores" id="executorCores" placeholder="Large Input">
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="Large Input">
+                            </div>
+                        </div>
+                        <div class="form-group mb-n">
+                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control1 input-lg" name="args1" id="args1" placeholder="Large Input">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
     </div>
-  </div>
-}
-
+    }
 </div>
 </div>
 @copyright()
-</div>
 }

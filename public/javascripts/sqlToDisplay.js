@@ -4,10 +4,11 @@
 
 var DATA = "";
 $(document).ready(function () {
+    $('#sql').focus();
     $("#submit").click(function () {
         $.ajax({
             "data": {
-                "sql": $("#sql").val()
+                "sql": $("#sql").text()
             },
             "method": "POST",
             "url": "/executesql",

@@ -685,7 +685,7 @@ i.icon_13{
 }
 #style-2::-webkit-scrollbar-track
 {
-	
+
 	background-color:#f0f0f0;
 }
 
@@ -697,7 +697,7 @@ i.icon_13{
 
 #style-2::-webkit-scrollbar-thumb
 {
-	
+
 	background-color:rgb(6, 217, 149);
 }
 /*-- General stats --*/
@@ -1271,7 +1271,7 @@ div[id^=uniform-] input {
   -moz-opacity: 0;
 }
 .email-list1{
-  padding: 0; 
+  padding: 0;
 }
 ul.collection {
   margin: 0;
@@ -1287,7 +1287,7 @@ ul.collection li.email_last{
 }
 #email-list .collection .collection-item.avatar {
   height: auto;
-  
+
   position: relative;
 }
 #email-list .collection .collection-item.avatar .icon {
@@ -1421,10 +1421,10 @@ i.icon_6{
   background: #4CAF50;
 }
 h4.content-box-header{
-  color: #000; 
-  font-size: 1.3em; 
-  font-weight: 300; 
-  margin-bottom: 1em; 
+  color: #000;
+  font-size: 1.3em;
+  font-weight: 300;
+  margin-bottom: 1em;
   text-align:left;
 }
 .editor{
@@ -1926,7 +1926,7 @@ label.round {
 	line-height:1.8em;
 }
 .list-inline>li a{
-   font-size:0.85em;	
+   font-size:0.85em;
 }
 /*-- media --*/
 .bs-example5{

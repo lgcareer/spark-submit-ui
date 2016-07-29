@@ -43,9 +43,9 @@ POST   /updatepwd                   controllers.Authentication.updatepwd
 
 
 # Spark Jar
-GET     /sparkjar                     controllers.SparkJar.uploadpage
+#GET     /sparkjar                     controllers.SparkJar.uploadpage
 POST     /sparkjar                     controllers.SparkJar.upload
-GET     /executejar                    controllers.SparkJar.executejarpage(location:String)
+GET     /executejar                    controllers.SparkJar.executejarpage
 POST     /executejar                   controllers.SparkJar.executejar
 GET     /errorpage                     controllers.SparkJar.errorpage
 GET     /logs                          controllers.SparkJar.logs(id:String)
