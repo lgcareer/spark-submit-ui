@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2016-07-28 17:58:34,497 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
@@ -3016,16 +3017,47 @@ play.api.Application$$anon$1: Execution exception[[AskTimeoutException: Timed ou
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
 	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.4.jar:na]
+=======
+2016-07-29 10:26:19,389 - [INFO] - from play in pool-4-thread-5 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2016-07-29 10:26:48,833 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:26:49,195 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:26:49,422 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 10:28:13,275 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:28:13,646 - [INFO] - from play in play-internal-execution-context-2 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:28:13,654 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2016-07-29 10:33:55,028 - [ERROR] - from application in play-akka.actor.default-dispatcher-29 
+
+
+! @70pkl3hdf - Internal server error, for (GET) [/streaming?appui=http://10.209.78.145:4040] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@3540ebe8; line: 1, column: 1]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
 	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
 	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
@@ -3045,6 +3077,78 @@ play.api.Application$$anon$1: Execution exception[[AskTimeoutException: Timed ou
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@3540ebe8; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:148) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3110) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:54) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-29 10:34:04,934 - [ERROR] - from application in play-akka.actor.default-dispatcher-40 
+
+
+! @70pkl464m - Internal server error, for (GET) [/streaming?appui=http://10.209.78.145:4040] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@4ca302c5; line: 1, column: 1]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+>>>>>>> 2d068483cdf14d2b5cf0602105678b1f28048962
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+<<<<<<< HEAD
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+=======
+>>>>>>> 2d068483cdf14d2b5cf0602105678b1f28048962
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+<<<<<<< HEAD
 akka.pattern.AskTimeoutException: Timed out
 	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:334) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
 	at akka.actor.Scheduler$$anon$11.run(Scheduler.scala:118) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
@@ -3055,4 +3159,35 @@ akka.pattern.AskTimeoutException: Timed out
 	at akka.actor.LightArrayRevolverScheduler$$anon$12.nextTick(Scheduler.scala:411) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
 	at akka.actor.LightArrayRevolverScheduler$$anon$12.run(Scheduler.scala:363) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
 	at java.lang.Thread.run(Thread.java:744) ~[na:1.8.0]
+=======
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@4ca302c5; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:148) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3110) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:54) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+>>>>>>> 2d068483cdf14d2b5cf0602105678b1f28048962
+
+2016-07-29 10:47:03,686 - [INFO] - from play in play-internal-execution-context-7 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:47:03,899 - [INFO] - from play in play-internal-execution-context-7 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:47:03,908 - [INFO] - from play in play-internal-execution-context-7 
+Application started (Dev)
 
