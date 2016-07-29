@@ -1,15 +1,9 @@
 @main("Neptun Dashboard"){
-<!----Calender -------->
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/clndr.css")" type="text/css" />
-<script src="@routes.Assets.at("javascripts/underscore-min.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/moment-2.2.1.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/clndr.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/site.js")" type="text/javascript"></script>
-<!----End Calender -------->
 <div class="graphs">
             <h3 style="text-align:center;"> Spark 正在运行任务列表  </h3>
-            <div id = "runtask">
-            </div>
+    <div class="bs-example4" data-example-id="contextual-table">
+        <div id = "runtask">
+        </div>
     </div>
 
 @copyright()
@@ -22,7 +16,7 @@
             url:"/workerlist",
             dataType:"json",
             success:function(data){
-              var head= "<table border='10' width='1500'><tr><th>Application ID</th><th>Name</th><th>User</th><th>Memory per Node</th><th>Submitted Time</th><th>State</th><th>Appui</th><th>Monitor</th></tr>"
+              var head= "<table class=\"table\"><tr><th>Application ID</th><th>Name</th><th>User</th><th>Memory per Node</th><th>Submitted Time</th><th>State</th><th>Appui</th><th>Monitor</th></tr>"
                 var myobj=eval(data);
                 var activeapps =myobj.activeapps
                 for (var p in activeapps) {
