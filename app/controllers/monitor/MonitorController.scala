@@ -28,7 +28,6 @@ object MonitorController  extends Controller with Secured{
   def jobs=Action{
 
     val url3 ="http://10.77.136.159:4040/jobs/json/"
-
     val timeFuture= WS.url(url3).get() map{
       response => response.status match {
         case  200 => Some{
@@ -47,11 +46,10 @@ object MonitorController  extends Controller with Secured{
 
   }
 
-  def streaming =Action {
-
-    val url3 = "http://10.77.136.159:4041/streaming/json/"
-
-
+  def streaming (appui:String) =Action {
+    val aa = appui
+    println("任务监控URL:"+aa)
+    val url3 = s"$aa/streaming/json/"
     val timeFuture = WS.url(url3).get() map {
       response => response.status match {
         case 200 => Some {

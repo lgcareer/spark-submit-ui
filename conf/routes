@@ -23,7 +23,8 @@ GET      /download                    controllers.SparkSql.download
 #Dashboard
 GET     /yarnInfo                   controllers.YarnList.yarnInfo
 GET     /yarnlist                   controllers.YarnList.yarnlist
-GET     /workerlist                 controllers.YarnList.workerlist
+GET     /workerlist                 controllers.YarnList.workerlistdata
+GET     /workerInfo                  controllers.YarnList.workerInfo
 GET     /spark_info                 controllers.YarnList.spark_info
 GET     /sparklist                  controllers.YarnList.sparklist
 # Map static resources from the /public folder to the /assets URL path
@@ -49,19 +50,20 @@ GET     /executejar                    controllers.SparkJar.executejarpage
 POST     /executejar                   controllers.SparkJar.executejar
 GET     /errorpage                     controllers.SparkJar.errorpage
 GET     /logs                          controllers.SparkJar.logs(id:String)
+GET    /runtasklogs                    controllers.RunTask.runTaskLogs
 GET    /he                             controllers.SparkJar.he(id:String)
 
 
 #Dashboard
 GET     /yarnInfo                     controllers.YarnList.yarnInfo
 GET     /yarnlist                     controllers.YarnList.yarnlist
-GET     /workerlist                   controllers.YarnList.workerlist
+GET     /workerlist                   controllers.YarnList.workerlistdata
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
 GET   /jobs                          controllers.MonitorController.jobs
-GET   /streaming                     controllers.MonitorController.streaming
+GET   /streaming                     controllers.MonitorController.streaming(appui:String)
 
 #ServicePlan
 GET    /widgets                       controllers.Serviceplan.servicedao
@@ -76,6 +78,9 @@ GET    /dispatch                     controllers.Oozie.oozie
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
+
+#RunTask
+GET    /runTask                     controllers.RunTask.runTask
 
 
 #Test

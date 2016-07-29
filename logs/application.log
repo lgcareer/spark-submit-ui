@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2016-07-29 08:32:07,327 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
@@ -19,3 +20,3198 @@ database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&chara
 2016-07-29 09:04:16,439 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
+=======
+<<<<<<< HEAD
+2016-07-28 17:58:34,497 - [INFO] - from play in pool-4-thread-2 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2016-07-28 17:59:09,550 - [ERROR] - from application in New I/O worker #1 
+
+
+! @70pfkdl9n - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[missing arguments for method ! in trait ScalaActorRef;
+follow this method with `_' if you want to treat it as a partially applied function]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-07-28 17:59:09,631 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2016-07-28 18:00:10,602 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-28 18:00:11,009 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-28 18:00:11,163 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-28 18:00:24,857 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+用户名=>kingekinge@163.com
+
+2016-07-28 18:00:56,596 - [INFO] - from application in pool-24-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, spark://BJ-M-203554A.local:7077, --class, mainq, --num-executors, 2, --executor-memory, 2G, --driver-memory, 2G, --executor-cores, 2, /tmp/file/spark_2.10-1.0.jar, 2313, 1312, 3123)
+
+2016-07-28 18:00:57,457 - [INFO] - from application in Thread-4 
+2313
+
+2016-07-28 18:00:57,457 - [INFO] - from application in Thread-4 
+1312
+
+2016-07-28 18:00:57,457 - [INFO] - from application in Thread-4 
+3123
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+total 328
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff     17  7 21 18:26 20160713122046
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff      8  7 21 18:26 20160713122105
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+-rwxr-xr-x  1 liangkai1  staff    568  7 23 20:57 Global.scala
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+drwxr-xr-x  5 liangkai1  staff    170  7  7 14:32 app
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+drwxr-xr-x  2 liangkai1  staff     68  7 22 11:16 app-2.10
+
+2016-07-28 18:00:57,476 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff    730  7 21 18:26 build.sbt
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+drwxr-xr-x  5 liangkai1  staff    170  7 28 15:59 conf
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff    750  7 18 15:22 derby.log
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff  80998  7 28 15:59 ficusSpark.ipr
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff  58653  7 28 15:59 ficusSpark.iws
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+drwxr-xr-x  3 liangkai1  staff    102  7 28 17:58 logs
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+-rw-r--r--  1 liangkai1  staff     75  7  7 18:22 play
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+drwxr-xr-x  9 liangkai1  staff    306  7 15 15:40 project
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+drwxr-xr-x  7 liangkai1  staff    238  7 26 14:32 public
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+drwxr-xr-x  7 liangkai1  staff    238  7 22 10:42 target
+
+2016-07-28 18:00:57,477 - [INFO] - from application in Thread-4 
+drwxr-xr-x  5 liangkai1  staff    170  7 15 15:32 test
+
+2016-07-28 18:00:57,621 - [INFO] - from application in Thread-4 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+
+2016-07-28 18:00:57,626 - [INFO] - from application in Thread-4 
+16/07/28 18:00:57 INFO SparkContext: Running Spark version 1.5.2
+
+2016-07-28 18:00:58,003 - [INFO] - from application in Thread-4 
+16/07/28 18:00:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-07-28 18:00:58,222 - [INFO] - from application in Thread-4 
+16/07/28 18:00:58 INFO SecurityManager: Changing view acls to: liangkai1
+
+2016-07-28 18:00:58,222 - [INFO] - from application in Thread-4 
+16/07/28 18:00:58 INFO SecurityManager: Changing modify acls to: liangkai1
+
+2016-07-28 18:00:58,223 - [INFO] - from application in Thread-4 
+16/07/28 18:00:58 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(liangkai1); users with modify permissions: Set(liangkai1)
+
+2016-07-28 18:00:59,091 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Slf4jLogger: Slf4jLogger started
+
+2016-07-28 18:00:59,138 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Remoting: Starting remoting
+
+2016-07-28 18:00:59,318 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@10.236.61.124:56157]
+
+2016-07-28 18:00:59,329 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Utils: Successfully started service 'sparkDriver' on port 56157.
+
+2016-07-28 18:00:59,369 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO SparkEnv: Registering MapOutputTracker
+
+2016-07-28 18:00:59,395 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO SparkEnv: Registering BlockManagerMaster
+
+2016-07-28 18:00:59,433 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO DiskBlockManager: Created local directory at /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/blockmgr-7acebd72-1535-4505-bc8e-651f1faff78e
+
+2016-07-28 18:00:59,447 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO MemoryStore: MemoryStore started with capacity 1060.0 MB
+
+2016-07-28 18:00:59,512 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO HttpFileServer: HTTP File server directory is /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-f1e8060d-0d4d-4a7b-9c76-82b7eab1621c/httpd-988d28f3-b824-4fd8-95e9-66f1f78959ff
+
+2016-07-28 18:00:59,517 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO HttpServer: Starting HTTP Server
+
+2016-07-28 18:00:59,612 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Utils: Successfully started service 'HTTP file server' on port 56158.
+
+2016-07-28 18:00:59,628 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO SparkEnv: Registering OutputCommitCoordinator
+
+2016-07-28 18:00:59,764 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+
+2016-07-28 18:00:59,766 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO SparkUI: Started SparkUI at http://10.236.61.124:4040
+
+2016-07-28 18:00:59,807 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO SparkContext: Added JAR file:/tmp/file/spark_2.10-1.0.jar at http://10.236.61.124:56158/jars/spark_2.10-1.0.jar with timestamp 1469700059806
+
+2016-07-28 18:00:59,879 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+
+2016-07-28 18:00:59,883 - [INFO] - from application in Thread-4 
+16/07/28 18:00:59 INFO Executor: Starting executor ID driver on host localhost
+
+2016-07-28 18:01:00,056 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56159.
+
+2016-07-28 18:01:00,057 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO NettyBlockTransferService: Server created on 56159
+
+2016-07-28 18:01:00,058 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO BlockManagerMaster: Trying to register BlockManager
+
+2016-07-28 18:01:00,061 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO BlockManagerMasterEndpoint: Registering block manager localhost:56159 with 1060.0 MB RAM, BlockManagerId(driver, localhost, 56159)
+
+2016-07-28 18:01:00,064 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO BlockManagerMaster: Registered BlockManager
+
+2016-07-28 18:01:00,797 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO MemoryStore: ensureFreeSpace(131072) called with curMem=0, maxMem=1111511531
+
+2016-07-28 18:01:00,799 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 1059.9 MB)
+
+2016-07-28 18:01:00,847 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO MemoryStore: ensureFreeSpace(14420) called with curMem=131072, maxMem=1111511531
+
+2016-07-28 18:01:00,848 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 1059.9 MB)
+
+2016-07-28 18:01:00,851 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:56159 (size: 14.1 KB, free: 1060.0 MB)
+
+2016-07-28 18:01:00,856 - [INFO] - from application in Thread-4 
+16/07/28 18:01:00 INFO SparkContext: Created broadcast 0 from textFile at main.scala:26
+
+2016-07-28 18:01:01,019 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO FileInputFormat: Total input paths to process : 1
+
+2016-07-28 18:01:01,125 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO SparkContext: Starting job: sortBy at main.scala:30
+
+2016-07-28 18:01:01,145 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Registering RDD 4 (map at main.scala:28)
+
+2016-07-28 18:01:01,148 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Got job 0 (sortBy at main.scala:30) with 15 output partitions
+
+2016-07-28 18:01:01,149 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Final stage: ResultStage 1(sortBy at main.scala:30)
+
+2016-07-28 18:01:01,149 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+
+2016-07-28 18:01:01,151 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+
+2016-07-28 18:01:01,160 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[4] at map at main.scala:28), which has no missing parents
+
+2016-07-28 18:01:01,189 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO MemoryStore: ensureFreeSpace(4320) called with curMem=145492, maxMem=1111511531
+
+2016-07-28 18:01:01,190 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.2 KB, free 1059.9 MB)
+
+2016-07-28 18:01:01,192 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO MemoryStore: ensureFreeSpace(2438) called with curMem=149812, maxMem=1111511531
+
+2016-07-28 18:01:01,193 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 1059.9 MB)
+
+2016-07-28 18:01:01,194 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:56159 (size: 2.4 KB, free: 1060.0 MB)
+
+2016-07-28 18:01:01,195 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:01:01,199 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO DAGScheduler: Submitting 15 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[4] at map at main.scala:28)
+
+2016-07-28 18:01:01,201 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO TaskSchedulerImpl: Adding task set 0.0 with 15 tasks
+
+2016-07-28 18:01:01,243 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:01,243 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:01,257 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+
+2016-07-28 18:01:01,262 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+
+2016-07-28 18:01:01,267 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO Executor: Fetching http://10.236.61.124:56158/jars/spark_2.10-1.0.jar with timestamp 1469700059806
+
+2016-07-28 18:01:01,362 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO Utils: Fetching http://10.236.61.124:56158/jars/spark_2.10-1.0.jar to /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-f1e8060d-0d4d-4a7b-9c76-82b7eab1621c/userFiles-c042baa7-c04c-4f5c-9131-45be9dd46e43/fetchFileTemp1737782315606974736.tmp
+
+2016-07-28 18:01:01,379 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO Executor: Adding file:/private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-f1e8060d-0d4d-4a7b-9c76-82b7eab1621c/userFiles-c042baa7-c04c-4f5c-9131-45be9dd46e43/spark_2.10-1.0.jar to class loader
+
+2016-07-28 18:01:01,408 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:33554432+33554432
+
+2016-07-28 18:01:01,408 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:0+33554432
+
+2016-07-28 18:01:01,417 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+
+2016-07-28 18:01:01,418 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+
+2016-07-28 18:01:01,418 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+
+2016-07-28 18:01:01,418 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+
+2016-07-28 18:01:01,418 - [INFO] - from application in Thread-4 
+16/07/28 18:01:01 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+
+2016-07-28 18:01:09,733 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2267 bytes result sent to driver
+
+2016-07-28 18:01:09,737 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:09,738 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+
+2016-07-28 18:01:09,745 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 8522 ms on localhost (1/15)
+
+2016-07-28 18:01:09,750 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:67108864+33554432
+
+2016-07-28 18:01:09,804 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2267 bytes result sent to driver
+
+2016-07-28 18:01:09,807 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:09,808 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 8569 ms on localhost (2/15)
+
+2016-07-28 18:01:09,810 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+
+2016-07-28 18:01:09,832 - [INFO] - from application in Thread-4 
+16/07/28 18:01:09 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:100663296+33554432
+
+2016-07-28 18:01:14,206 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2267 bytes result sent to driver
+
+2016-07-28 18:01:14,210 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:14,210 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+
+2016-07-28 18:01:14,211 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 4475 ms on localhost (3/15)
+
+2016-07-28 18:01:14,225 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:134217728+33554432
+
+2016-07-28 18:01:14,599 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2267 bytes result sent to driver
+
+2016-07-28 18:01:14,601 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:14,602 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 4795 ms on localhost (4/15)
+
+2016-07-28 18:01:14,603 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+
+2016-07-28 18:01:14,607 - [INFO] - from application in Thread-4 
+16/07/28 18:01:14 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:167772160+33554432
+
+2016-07-28 18:01:18,524 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2267 bytes result sent to driver
+
+2016-07-28 18:01:18,525 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:18,526 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 4317 ms on localhost (5/15)
+
+2016-07-28 18:01:18,526 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+
+2016-07-28 18:01:18,529 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:201326592+33554432
+
+2016-07-28 18:01:18,895 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2267 bytes result sent to driver
+
+2016-07-28 18:01:18,896 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:18,897 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 4296 ms on localhost (6/15)
+
+2016-07-28 18:01:18,897 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+
+2016-07-28 18:01:18,900 - [INFO] - from application in Thread-4 
+16/07/28 18:01:18 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:234881024+33554432
+
+2016-07-28 18:01:22,725 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2267 bytes result sent to driver
+
+2016-07-28 18:01:22,732 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:22,732 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 4205 ms on localhost (7/15)
+
+2016-07-28 18:01:22,732 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+
+2016-07-28 18:01:22,738 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:268435456+33554432
+
+2016-07-28 18:01:22,749 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2267 bytes result sent to driver
+
+2016-07-28 18:01:22,749 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:22,750 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 3854 ms on localhost (8/15)
+
+2016-07-28 18:01:22,750 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+
+2016-07-28 18:01:22,752 - [INFO] - from application in Thread-4 
+16/07/28 18:01:22 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:301989888+33554432
+
+2016-07-28 18:01:26,250 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 2267 bytes result sent to driver
+
+2016-07-28 18:01:26,256 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:26,256 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 3523 ms on localhost (9/15)
+
+2016-07-28 18:01:26,256 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+
+2016-07-28 18:01:26,256 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:335544320+33554432
+
+2016-07-28 18:01:26,389 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 2267 bytes result sent to driver
+
+2016-07-28 18:01:26,392 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:26,392 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+
+2016-07-28 18:01:26,392 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 3643 ms on localhost (10/15)
+
+2016-07-28 18:01:26,393 - [INFO] - from application in Thread-4 
+16/07/28 18:01:26 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:369098752+33554432
+
+2016-07-28 18:01:30,132 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 2267 bytes result sent to driver
+
+2016-07-28 18:01:30,133 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:30,137 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 3884 ms on localhost (11/15)
+
+2016-07-28 18:01:30,137 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+
+2016-07-28 18:01:30,137 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:402653184+33554432
+
+2016-07-28 18:01:30,391 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 2267 bytes result sent to driver
+
+2016-07-28 18:01:30,392 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:30,397 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+
+2016-07-28 18:01:30,397 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 4003 ms on localhost (12/15)
+
+2016-07-28 18:01:30,397 - [INFO] - from application in Thread-4 
+16/07/28 18:01:30 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:436207616+33554432
+
+2016-07-28 18:01:33,873 - [INFO] - from application in Thread-4 
+16/07/28 18:01:33 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 2267 bytes result sent to driver
+
+2016-07-28 18:01:33,874 - [INFO] - from application in Thread-4 
+16/07/28 18:01:33 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:01:33,876 - [INFO] - from application in Thread-4 
+16/07/28 18:01:33 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 3743 ms on localhost (13/15)
+
+2016-07-28 18:01:33,876 - [INFO] - from application in Thread-4 
+16/07/28 18:01:33 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+
+2016-07-28 18:01:33,877 - [INFO] - from application in Thread-4 
+16/07/28 18:01:33 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:469762048+11199384
+
+2016-07-28 18:01:34,179 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 2267 bytes result sent to driver
+
+2016-07-28 18:01:34,183 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 3791 ms on localhost (14/15)
+
+2016-07-28 18:01:34,915 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 2267 bytes result sent to driver
+
+2016-07-28 18:01:34,918 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 1043 ms on localhost (15/15)
+
+2016-07-28 18:01:34,920 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: ShuffleMapStage 0 (map at main.scala:28) finished in 33.707 s
+
+2016-07-28 18:01:34,920 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: looking for newly runnable stages
+
+2016-07-28 18:01:34,921 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: running: Set()
+
+2016-07-28 18:01:34,922 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: waiting: Set(ResultStage 1)
+
+2016-07-28 18:01:34,922 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:01:34,922 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: failed: Set()
+
+2016-07-28 18:01:34,926 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: Missing parents for ResultStage 1: List()
+
+2016-07-28 18:01:34,927 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at sortBy at main.scala:30), which is now runnable
+
+2016-07-28 18:01:34,930 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO MemoryStore: ensureFreeSpace(3392) called with curMem=152250, maxMem=1111511531
+
+2016-07-28 18:01:34,931 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.3 KB, free 1059.9 MB)
+
+2016-07-28 18:01:34,932 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO MemoryStore: ensureFreeSpace(1944) called with curMem=155642, maxMem=1111511531
+
+2016-07-28 18:01:34,933 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1944.0 B, free 1059.9 MB)
+
+2016-07-28 18:01:34,935 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:56159 (size: 1944.0 B, free: 1060.0 MB)
+
+2016-07-28 18:01:34,936 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:01:34,937 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO DAGScheduler: Submitting 15 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at sortBy at main.scala:30)
+
+2016-07-28 18:01:34,937 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSchedulerImpl: Adding task set 1.0 with 15 tasks
+
+2016-07-28 18:01:34,943 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 15, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:34,943 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 16, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:34,943 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO Executor: Running task 0.0 in stage 1.0 (TID 15)
+
+2016-07-28 18:01:34,943 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO Executor: Running task 1.0 in stage 1.0 (TID 16)
+
+2016-07-28 18:01:34,959 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:34,959 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:34,959 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 5 ms
+
+2016-07-28 18:01:34,959 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+
+2016-07-28 18:01:34,993 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO Executor: Finished task 1.0 in stage 1.0 (TID 16). 1358 bytes result sent to driver
+
+2016-07-28 18:01:34,993 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO Executor: Finished task 0.0 in stage 1.0 (TID 15). 1358 bytes result sent to driver
+
+2016-07-28 18:01:34,997 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 17, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:34,998 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 18, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,000 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 16) in 57 ms on localhost (1/15)
+
+2016-07-28 18:01:35,000 - [INFO] - from application in Thread-4 
+16/07/28 18:01:34 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 15) in 61 ms on localhost (2/15)
+
+2016-07-28 18:01:35,008 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 2.0 in stage 1.0 (TID 17)
+
+2016-07-28 18:01:35,008 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 3.0 in stage 1.0 (TID 18)
+
+2016-07-28 18:01:35,009 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,009 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,009 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,009 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,013 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 2.0 in stage 1.0 (TID 17). 1358 bytes result sent to driver
+
+2016-07-28 18:01:35,014 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 3.0 in stage 1.0 (TID 18). 1354 bytes result sent to driver
+
+2016-07-28 18:01:35,014 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 19, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,014 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 20, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,021 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 17) in 23 ms on localhost (3/15)
+
+2016-07-28 18:01:35,021 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 18) in 22 ms on localhost (4/15)
+
+2016-07-28 18:01:35,021 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 4.0 in stage 1.0 (TID 19)
+
+2016-07-28 18:01:35,021 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 5.0 in stage 1.0 (TID 20)
+
+2016-07-28 18:01:35,021 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,022 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,026 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,026 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,026 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 4.0 in stage 1.0 (TID 19). 1354 bytes result sent to driver
+
+2016-07-28 18:01:35,032 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 5.0 in stage 1.0 (TID 20). 1358 bytes result sent to driver
+
+2016-07-28 18:01:35,032 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 21, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,032 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 22, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,032 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 19) in 18 ms on localhost (5/15)
+
+2016-07-28 18:01:35,032 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 20) in 18 ms on localhost (6/15)
+
+2016-07-28 18:01:35,036 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 6.0 in stage 1.0 (TID 21)
+
+2016-07-28 18:01:35,037 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,038 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,045 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 7.0 in stage 1.0 (TID 22)
+
+2016-07-28 18:01:35,045 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,045 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,051 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 7.0 in stage 1.0 (TID 22). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,052 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 23, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,055 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 6.0 in stage 1.0 (TID 21). 1354 bytes result sent to driver
+
+2016-07-28 18:01:35,056 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 22) in 24 ms on localhost (7/15)
+
+2016-07-28 18:01:35,056 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 8.0 in stage 1.0 (TID 23)
+
+2016-07-28 18:01:35,069 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,069 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,069 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 8.0 in stage 1.0 (TID 23). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,069 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 24, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,070 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 25, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,092 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 21) in 46 ms on localhost (8/15)
+
+2016-07-28 18:01:35,095 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 10.0 in stage 1.0 (TID 25)
+
+2016-07-28 18:01:35,096 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 23) in 26 ms on localhost (9/15)
+
+2016-07-28 18:01:35,096 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,096 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,097 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 10.0 in stage 1.0 (TID 25). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,097 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 26, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,097 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 11.0 in stage 1.0 (TID 26)
+
+2016-07-28 18:01:35,097 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,099 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,099 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 25) in 20 ms on localhost (10/15)
+
+2016-07-28 18:01:35,099 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 11.0 in stage 1.0 (TID 26). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,100 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 27, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,100 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 12.0 in stage 1.0 (TID 27)
+
+2016-07-28 18:01:35,100 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 26) in 14 ms on localhost (11/15)
+
+2016-07-28 18:01:35,100 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,100 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,105 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 12.0 in stage 1.0 (TID 27). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,107 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 28, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,107 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 13.0 in stage 1.0 (TID 28)
+
+2016-07-28 18:01:35,107 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 27) in 9 ms on localhost (12/15)
+
+2016-07-28 18:01:35,109 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,109 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,113 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 13.0 in stage 1.0 (TID 28). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,115 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 29, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,117 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 14.0 in stage 1.0 (TID 29)
+
+2016-07-28 18:01:35,117 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 28) in 9 ms on localhost (13/15)
+
+2016-07-28 18:01:35,117 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,117 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,128 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 14.0 in stage 1.0 (TID 29). 1358 bytes result sent to driver
+
+2016-07-28 18:01:35,129 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 29) in 15 ms on localhost (14/15)
+
+2016-07-28 18:01:35,175 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 9.0 in stage 1.0 (TID 24)
+
+2016-07-28 18:01:35,179 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,181 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+
+2016-07-28 18:01:35,191 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 9.0 in stage 1.0 (TID 24). 1365 bytes result sent to driver
+
+2016-07-28 18:01:35,192 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 24) in 124 ms on localhost (15/15)
+
+2016-07-28 18:01:35,192 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:01:35,192 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: ResultStage 1 (sortBy at main.scala:30) finished in 0.254 s
+
+2016-07-28 18:01:35,205 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Job 0 finished: sortBy at main.scala:30, took 34.079321 s
+
+2016-07-28 18:01:35,234 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO SparkContext: Starting job: collect at main.scala:30
+
+2016-07-28 18:01:35,239 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 165 bytes
+
+2016-07-28 18:01:35,242 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Registering RDD 6 (sortBy at main.scala:30)
+
+2016-07-28 18:01:35,243 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Got job 1 (collect at main.scala:30) with 15 output partitions
+
+2016-07-28 18:01:35,243 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Final stage: ResultStage 4(collect at main.scala:30)
+
+2016-07-28 18:01:35,243 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+
+2016-07-28 18:01:35,243 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+
+2016-07-28 18:01:35,244 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[6] at sortBy at main.scala:30), which has no missing parents
+
+2016-07-28 18:01:35,245 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: ensureFreeSpace(3224) called with curMem=157586, maxMem=1111511531
+
+2016-07-28 18:01:35,246 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.1 KB, free 1059.9 MB)
+
+2016-07-28 18:01:35,247 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: ensureFreeSpace(1912) called with curMem=160810, maxMem=1111511531
+
+2016-07-28 18:01:35,247 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1912.0 B, free 1059.9 MB)
+
+2016-07-28 18:01:35,248 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:56159 (size: 1912.0 B, free: 1060.0 MB)
+
+2016-07-28 18:01:35,249 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:01:35,249 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Submitting 15 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[6] at sortBy at main.scala:30)
+
+2016-07-28 18:01:35,249 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSchedulerImpl: Adding task set 3.0 with 15 tasks
+
+2016-07-28 18:01:35,251 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 30, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,251 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 31, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,251 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 1.0 in stage 3.0 (TID 31)
+
+2016-07-28 18:01:35,252 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 0.0 in stage 3.0 (TID 30)
+
+2016-07-28 18:01:35,255 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,255 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,256 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,256 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,285 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 0.0 in stage 3.0 (TID 30). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,286 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 32, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,287 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 2.0 in stage 3.0 (TID 32)
+
+2016-07-28 18:01:35,287 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 30) in 36 ms on localhost (1/15)
+
+2016-07-28 18:01:35,288 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 1.0 in stage 3.0 (TID 31). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,289 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,289 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,289 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 33, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,290 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 31) in 38 ms on localhost (2/15)
+
+2016-07-28 18:01:35,290 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 3.0 in stage 3.0 (TID 33)
+
+2016-07-28 18:01:35,292 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,293 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,304 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 2.0 in stage 3.0 (TID 32). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,305 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 34, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,305 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 4.0 in stage 3.0 (TID 34)
+
+2016-07-28 18:01:35,305 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 32) in 19 ms on localhost (3/15)
+
+2016-07-28 18:01:35,307 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 3.0 in stage 3.0 (TID 33). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,307 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,307 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 35, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,308 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,308 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 33) in 19 ms on localhost (4/15)
+
+2016-07-28 18:01:35,309 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 5.0 in stage 3.0 (TID 35)
+
+2016-07-28 18:01:35,311 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,311 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,322 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 4.0 in stage 3.0 (TID 34). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,324 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 36, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,324 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 34) in 19 ms on localhost (5/15)
+
+2016-07-28 18:01:35,324 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 6.0 in stage 3.0 (TID 36)
+
+2016-07-28 18:01:35,324 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 5.0 in stage 3.0 (TID 35). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,325 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 37, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,326 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 35) in 18 ms on localhost (6/15)
+
+2016-07-28 18:01:35,330 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,330 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,340 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 7.0 in stage 3.0 (TID 37)
+
+2016-07-28 18:01:35,340 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 6.0 in stage 3.0 (TID 36). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,341 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 8.0 in stage 3.0 (TID 38, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,341 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 36) in 17 ms on localhost (7/15)
+
+2016-07-28 18:01:35,341 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 8.0 in stage 3.0 (TID 38)
+
+2016-07-28 18:01:35,343 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,343 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,343 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,344 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+
+2016-07-28 18:01:35,358 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 8.0 in stage 3.0 (TID 38). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,360 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 9.0 in stage 3.0 (TID 39, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,361 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 8.0 in stage 3.0 (TID 38) in 19 ms on localhost (8/15)
+
+2016-07-28 18:01:35,361 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 9.0 in stage 3.0 (TID 39)
+
+2016-07-28 18:01:35,361 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,361 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,371 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 7.0 in stage 3.0 (TID 37). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,374 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 10.0 in stage 3.0 (TID 40, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,374 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 10.0 in stage 3.0 (TID 40)
+
+2016-07-28 18:01:35,374 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 37) in 47 ms on localhost (9/15)
+
+2016-07-28 18:01:35,374 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,374 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,377 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 9.0 in stage 3.0 (TID 39). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,380 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 11.0 in stage 3.0 (TID 41, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,380 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 9.0 in stage 3.0 (TID 39) in 22 ms on localhost (10/15)
+
+2016-07-28 18:01:35,380 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 11.0 in stage 3.0 (TID 41)
+
+2016-07-28 18:01:35,381 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,382 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,407 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 11.0 in stage 3.0 (TID 41). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,409 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 12.0 in stage 3.0 (TID 42, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,409 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 11.0 in stage 3.0 (TID 41) in 31 ms on localhost (11/15)
+
+2016-07-28 18:01:35,417 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 12.0 in stage 3.0 (TID 42)
+
+2016-07-28 18:01:35,419 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,420 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,427 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 10.0 in stage 3.0 (TID 40). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,428 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 13.0 in stage 3.0 (TID 43, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,429 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 10.0 in stage 3.0 (TID 40) in 57 ms on localhost (12/15)
+
+2016-07-28 18:01:35,431 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 13.0 in stage 3.0 (TID 43)
+
+2016-07-28 18:01:35,435 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 12.0 in stage 3.0 (TID 42). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,436 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 14.0 in stage 3.0 (TID 44, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:01:35,436 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 12.0 in stage 3.0 (TID 42) in 29 ms on localhost (13/15)
+
+2016-07-28 18:01:35,439 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 14.0 in stage 3.0 (TID 44)
+
+2016-07-28 18:01:35,440 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,440 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,445 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,446 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,461 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 13.0 in stage 3.0 (TID 43). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,461 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 13.0 in stage 3.0 (TID 43) in 32 ms on localhost (14/15)
+
+2016-07-28 18:01:35,461 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 14.0 in stage 3.0 (TID 44). 1388 bytes result sent to driver
+
+2016-07-28 18:01:35,463 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 14.0 in stage 3.0 (TID 44) in 27 ms on localhost (15/15)
+
+2016-07-28 18:01:35,463 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:01:35,463 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: ShuffleMapStage 3 (sortBy at main.scala:30) finished in 0.212 s
+
+2016-07-28 18:01:35,464 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: looking for newly runnable stages
+
+2016-07-28 18:01:35,464 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: running: Set()
+
+2016-07-28 18:01:35,464 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: waiting: Set(ResultStage 4)
+
+2016-07-28 18:01:35,464 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: failed: Set()
+
+2016-07-28 18:01:35,464 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Missing parents for ResultStage 4: List()
+
+2016-07-28 18:01:35,464 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at sortBy at main.scala:30), which is now runnable
+
+2016-07-28 18:01:35,465 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: ensureFreeSpace(3056) called with curMem=162722, maxMem=1111511531
+
+2016-07-28 18:01:35,466 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.0 KB, free 1059.9 MB)
+
+2016-07-28 18:01:35,470 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: ensureFreeSpace(1808) called with curMem=165778, maxMem=1111511531
+
+2016-07-28 18:01:35,470 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1808.0 B, free 1059.9 MB)
+
+2016-07-28 18:01:35,470 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:56159 (size: 1808.0 B, free: 1060.0 MB)
+
+2016-07-28 18:01:35,470 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:01:35,470 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Submitting 15 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at sortBy at main.scala:30)
+
+2016-07-28 18:01:35,470 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSchedulerImpl: Adding task set 4.0 with 15 tasks
+
+2016-07-28 18:01:35,471 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 45, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,473 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 46, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,474 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 0.0 in stage 4.0 (TID 45)
+
+2016-07-28 18:01:35,474 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,475 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,475 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 1.0 in stage 4.0 (TID 46)
+
+2016-07-28 18:01:35,477 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,478 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,484 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 0.0 in stage 4.0 (TID 45). 1424 bytes result sent to driver
+
+2016-07-28 18:01:35,486 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 1.0 in stage 4.0 (TID 46). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,486 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 47, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,486 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 45) in 16 ms on localhost (1/15)
+
+2016-07-28 18:01:35,487 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 2.0 in stage 4.0 (TID 47)
+
+2016-07-28 18:01:35,488 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 48, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,488 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 3.0 in stage 4.0 (TID 48)
+
+2016-07-28 18:01:35,489 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 46) in 17 ms on localhost (2/15)
+
+2016-07-28 18:01:35,490 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,491 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,491 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,491 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,494 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 3.0 in stage 4.0 (TID 48). 1424 bytes result sent to driver
+
+2016-07-28 18:01:35,495 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 4.0 in stage 4.0 (TID 49, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,495 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 4.0 in stage 4.0 (TID 49)
+
+2016-07-28 18:01:35,495 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 48) in 8 ms on localhost (3/15)
+
+2016-07-28 18:01:35,497 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,497 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 2.0 in stage 4.0 (TID 47). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 5.0 in stage 4.0 (TID 50, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 47) in 15 ms on localhost (4/15)
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 5.0 in stage 4.0 (TID 50)
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 4.0 in stage 4.0 (TID 49). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 6.0 in stage 4.0 (TID 51, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,503 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 4.0 in stage 4.0 (TID 49) in 7 ms on localhost (5/15)
+
+2016-07-28 18:01:35,504 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,504 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,507 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 5.0 in stage 4.0 (TID 50). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,508 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 7.0 in stage 4.0 (TID 52, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,508 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 6.0 in stage 4.0 (TID 51)
+
+2016-07-28 18:01:35,508 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 5.0 in stage 4.0 (TID 50) in 7 ms on localhost (6/15)
+
+2016-07-28 18:01:35,508 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 7.0 in stage 4.0 (TID 52)
+
+2016-07-28 18:01:35,510 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,510 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,510 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,510 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,513 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 7.0 in stage 4.0 (TID 52). 1424 bytes result sent to driver
+
+2016-07-28 18:01:35,513 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 6.0 in stage 4.0 (TID 51). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,513 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 8.0 in stage 4.0 (TID 53, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,514 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 8.0 in stage 4.0 (TID 53)
+
+2016-07-28 18:01:35,515 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 9.0 in stage 4.0 (TID 54, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,515 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 6.0 in stage 4.0 (TID 51) in 13 ms on localhost (7/15)
+
+2016-07-28 18:01:35,515 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 7.0 in stage 4.0 (TID 52) in 8 ms on localhost (8/15)
+
+2016-07-28 18:01:35,515 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 9.0 in stage 4.0 (TID 54)
+
+2016-07-28 18:01:35,519 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,520 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,520 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,520 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:01:35,520 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 9.0 in stage 4.0 (TID 54). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,520 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 10.0 in stage 4.0 (TID 55, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,522 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 9.0 in stage 4.0 (TID 54) in 7 ms on localhost (9/15)
+
+2016-07-28 18:01:35,522 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 10.0 in stage 4.0 (TID 55)
+
+2016-07-28 18:01:35,522 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 8.0 in stage 4.0 (TID 53). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,522 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 11.0 in stage 4.0 (TID 56, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,523 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 8.0 in stage 4.0 (TID 53) in 10 ms on localhost (10/15)
+
+2016-07-28 18:01:35,523 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 11.0 in stage 4.0 (TID 56)
+
+2016-07-28 18:01:35,524 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,524 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,527 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,528 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,528 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 10.0 in stage 4.0 (TID 55). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,528 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 12.0 in stage 4.0 (TID 57, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,528 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 10.0 in stage 4.0 (TID 55) in 8 ms on localhost (11/15)
+
+2016-07-28 18:01:35,528 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 12.0 in stage 4.0 (TID 57)
+
+2016-07-28 18:01:35,530 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,530 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,531 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 11.0 in stage 4.0 (TID 56). 1424 bytes result sent to driver
+
+2016-07-28 18:01:35,531 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 13.0 in stage 4.0 (TID 58, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,531 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 11.0 in stage 4.0 (TID 56) in 9 ms on localhost (12/15)
+
+2016-07-28 18:01:35,534 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 12.0 in stage 4.0 (TID 57). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,534 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Starting task 14.0 in stage 4.0 (TID 59, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:01:35,534 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 12.0 in stage 4.0 (TID 57) in 8 ms on localhost (13/15)
+
+2016-07-28 18:01:35,534 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 14.0 in stage 4.0 (TID 59)
+
+2016-07-28 18:01:35,537 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,537 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,540 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 14.0 in stage 4.0 (TID 59). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,540 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 14.0 in stage 4.0 (TID 59) in 7 ms on localhost (14/15)
+
+2016-07-28 18:01:35,540 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Running task 13.0 in stage 4.0 (TID 58)
+
+2016-07-28 18:01:35,543 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:01:35,544 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:01:35,548 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO Executor: Finished task 13.0 in stage 4.0 (TID 58). 1400 bytes result sent to driver
+
+2016-07-28 18:01:35,548 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSetManager: Finished task 13.0 in stage 4.0 (TID 58) in 16 ms on localhost (15/15)
+
+2016-07-28 18:01:35,548 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:01:35,549 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: ResultStage 4 (collect at main.scala:30) finished in 0.077 s
+
+2016-07-28 18:01:35,549 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Job 1 finished: collect at main.scala:30, took 0.313193 s
+
+2016-07-28 18:01:35,549 - [INFO] - from application in Thread-4 
+ArrayBuffer((F,189280), (G,189281), (C,378561), (V,378561), (K,567840), (B,567840), (X,567840), (q,757120), (J,757120), (E,757121), (z,946400), (U,946400), (j,946401), (R,946401), (I,946402), (D,1135681), (W,1135681), (O,1324960), (L,1324961), (H,1324961), (N,1324963), (k,1514243), (T,1703521), (P,1892802), (S,2082081), (A,2460642), (x,3217761), (w,3217765), (b,3596322), (f,3785602), (M,3974883), (y,4921281), (v,6056968), (g,6435535), (u,7760487), (d,9653287), (m,10031853), (h,10221141), (p,10599700), (c,11735374), (l,13817457), (r,15142414), (s,17413781), (i,20063699), (n,21010097), (o,22524341), (t,24038586), (a,28959877), (e,34259715))
+
+2016-07-28 18:01:35,551 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO SparkContext: Invoking stop() from shutdown hook
+
+2016-07-28 18:01:35,642 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO SparkUI: Stopped Spark web UI at http://10.236.61.124:4040
+
+2016-07-28 18:01:35,644 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO DAGScheduler: Stopping DAGScheduler
+
+2016-07-28 18:01:35,708 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+
+2016-07-28 18:01:35,731 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO MemoryStore: MemoryStore cleared
+
+2016-07-28 18:01:35,732 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO BlockManager: BlockManager stopped
+
+2016-07-28 18:01:35,733 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO BlockManagerMaster: BlockManagerMaster stopped
+
+2016-07-28 18:01:35,735 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+
+2016-07-28 18:01:35,735 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO SparkContext: Successfully stopped SparkContext
+
+2016-07-28 18:01:35,735 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShutdownHookManager: Shutdown hook called
+
+2016-07-28 18:01:35,737 - [INFO] - from application in Thread-4 
+16/07/28 18:01:35 INFO ShutdownHookManager: Deleting directory /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-f1e8060d-0d4d-4a7b-9c76-82b7eab1621c
+
+2016-07-28 18:01:36,206 - [INFO] - from application in ForkJoinPool-4-worker-5 
+执行结束!
+
+2016-07-28 18:02:12,696 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-28 18:02:12,996 - [INFO] - from play in play-internal-execution-context-3 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-28 18:02:13,008 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2016-07-28 18:02:13,118 - [INFO] - from application in pool-29-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, spark://BJ-M-203554A.local:7077, --class, mainq, --num-executors, 2, --executor-memory, 2G, --driver-memory, 2G, --executor-cores, 2, /tmp/file/spark_2.10-1.0.jar, 2313, 1312, 3123)
+
+2016-07-28 18:02:13,850 - [INFO] - from application in Thread-8 
+2313
+
+2016-07-28 18:02:13,850 - [INFO] - from application in Thread-8 
+1312
+
+2016-07-28 18:02:13,850 - [INFO] - from application in Thread-8 
+3123
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+total 328
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff     17  7 21 18:26 20160713122046
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff      8  7 21 18:26 20160713122105
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rwxr-xr-x  1 liangkai1  staff    568  7 23 20:57 Global.scala
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+drwxr-xr-x  5 liangkai1  staff    170  7  7 14:32 app
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+drwxr-xr-x  2 liangkai1  staff     68  7 22 11:16 app-2.10
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff    730  7 21 18:26 build.sbt
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+drwxr-xr-x  5 liangkai1  staff    170  7 28 15:59 conf
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff    750  7 18 15:22 derby.log
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff  80998  7 28 15:59 ficusSpark.ipr
+
+2016-07-28 18:02:13,869 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff  58653  7 28 15:59 ficusSpark.iws
+
+2016-07-28 18:02:13,870 - [INFO] - from application in Thread-8 
+drwxr-xr-x  3 liangkai1  staff    102  7 28 17:58 logs
+
+2016-07-28 18:02:13,870 - [INFO] - from application in Thread-8 
+-rw-r--r--  1 liangkai1  staff     75  7  7 18:22 play
+
+2016-07-28 18:02:13,870 - [INFO] - from application in Thread-8 
+drwxr-xr-x  9 liangkai1  staff    306  7 15 15:40 project
+
+2016-07-28 18:02:13,870 - [INFO] - from application in Thread-8 
+drwxr-xr-x  7 liangkai1  staff    238  7 26 14:32 public
+
+2016-07-28 18:02:13,870 - [INFO] - from application in Thread-8 
+drwxr-xr-x  7 liangkai1  staff    238  7 22 10:42 target
+
+2016-07-28 18:02:13,870 - [INFO] - from application in Thread-8 
+drwxr-xr-x  5 liangkai1  staff    170  7 15 15:32 test
+
+2016-07-28 18:02:14,037 - [INFO] - from application in Thread-8 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+
+2016-07-28 18:02:14,042 - [INFO] - from application in Thread-8 
+16/07/28 18:02:14 INFO SparkContext: Running Spark version 1.5.2
+
+2016-07-28 18:02:14,433 - [INFO] - from application in Thread-8 
+16/07/28 18:02:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-07-28 18:02:14,593 - [INFO] - from application in Thread-8 
+16/07/28 18:02:14 INFO SecurityManager: Changing view acls to: liangkai1
+
+2016-07-28 18:02:14,594 - [INFO] - from application in Thread-8 
+16/07/28 18:02:14 INFO SecurityManager: Changing modify acls to: liangkai1
+
+2016-07-28 18:02:14,594 - [INFO] - from application in Thread-8 
+16/07/28 18:02:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(liangkai1); users with modify permissions: Set(liangkai1)
+
+2016-07-28 18:02:15,319 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO Slf4jLogger: Slf4jLogger started
+
+2016-07-28 18:02:15,389 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO Remoting: Starting remoting
+
+2016-07-28 18:02:15,583 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@10.236.61.124:56189]
+
+2016-07-28 18:02:15,594 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO Utils: Successfully started service 'sparkDriver' on port 56189.
+
+2016-07-28 18:02:15,649 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO SparkEnv: Registering MapOutputTracker
+
+2016-07-28 18:02:15,676 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO SparkEnv: Registering BlockManagerMaster
+
+2016-07-28 18:02:15,717 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO DiskBlockManager: Created local directory at /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/blockmgr-420be8a1-30b8-4d53-a2b0-f7cd6a0d8b1e
+
+2016-07-28 18:02:15,737 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO MemoryStore: MemoryStore started with capacity 1060.0 MB
+
+2016-07-28 18:02:15,807 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO HttpFileServer: HTTP File server directory is /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-3b74f58f-ac76-48b7-8358-57db03de3474/httpd-b5645d1e-74a5-4938-8ff6-ef6da1455bd8
+
+2016-07-28 18:02:15,812 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO HttpServer: Starting HTTP Server
+
+2016-07-28 18:02:15,931 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO Utils: Successfully started service 'HTTP file server' on port 56190.
+
+2016-07-28 18:02:15,947 - [INFO] - from application in Thread-8 
+16/07/28 18:02:15 INFO SparkEnv: Registering OutputCommitCoordinator
+
+2016-07-28 18:02:16,130 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+
+2016-07-28 18:02:16,132 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO SparkUI: Started SparkUI at http://10.236.61.124:4040
+
+2016-07-28 18:02:16,170 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO SparkContext: Added JAR file:/tmp/file/spark_2.10-1.0.jar at http://10.236.61.124:56190/jars/spark_2.10-1.0.jar with timestamp 1469700136169
+
+2016-07-28 18:02:16,263 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 WARN MetricsSystem: Using default name DAGScheduler for source because spark.app.id is not set.
+
+2016-07-28 18:02:16,270 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+c5e20603-a1c2-4e6a-a7b4-6a3864014a14
+
+2016-07-28 18:02:16,703 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56196.
+
+2016-07-28 18:02:16,703 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO NettyBlockTransferService: Server created on 56196
+
+2016-07-28 18:02:16,705 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO BlockManagerMaster: Trying to register BlockManager
+
+2016-07-28 18:02:16,708 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO BlockManagerMasterEndpoint: Registering block manager localhost:56196 with 1060.0 MB RAM, BlockManagerId(driver, localhost, 56196)
+
+2016-07-28 18:02:16,711 - [INFO] - from application in Thread-8 
+16/07/28 18:02:16 INFO BlockManagerMaster: Registered BlockManager
+
+2016-07-28 18:02:17,652 - [INFO] - from application in Thread-8 
+16/07/28 18:02:17 INFO MemoryStore: ensureFreeSpace(131072) called with curMem=0, maxMem=1111511531
+
+2016-07-28 18:02:17,654 - [INFO] - from application in Thread-8 
+16/07/28 18:02:17 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 128.0 KB, free 1059.9 MB)
+
+2016-07-28 18:02:17,875 - [INFO] - from application in Thread-8 
+16/07/28 18:02:17 INFO MemoryStore: ensureFreeSpace(14420) called with curMem=131072, maxMem=1111511531
+
+2016-07-28 18:02:17,878 - [INFO] - from application in Thread-8 
+16/07/28 18:02:17 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.1 KB, free 1059.9 MB)
+
+2016-07-28 18:02:17,910 - [INFO] - from application in Thread-8 
+16/07/28 18:02:17 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:56196 (size: 14.1 KB, free: 1060.0 MB)
+
+2016-07-28 18:02:18,070 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO SparkContext: Created broadcast 0 from textFile at main.scala:26
+
+2016-07-28 18:02:18,430 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO FileInputFormat: Total input paths to process : 1
+
+2016-07-28 18:02:18,652 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO SparkContext: Starting job: sortBy at main.scala:30
+
+2016-07-28 18:02:18,677 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Registering RDD 4 (map at main.scala:28)
+
+2016-07-28 18:02:18,680 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Got job 0 (sortBy at main.scala:30) with 15 output partitions
+
+2016-07-28 18:02:18,681 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Final stage: ResultStage 1(sortBy at main.scala:30)
+
+2016-07-28 18:02:18,681 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+
+2016-07-28 18:02:18,683 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+
+2016-07-28 18:02:18,704 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[4] at map at main.scala:28), which has no missing parents
+
+2016-07-28 18:02:18,757 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO MemoryStore: ensureFreeSpace(4320) called with curMem=145492, maxMem=1111511531
+
+2016-07-28 18:02:18,758 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.2 KB, free 1059.9 MB)
+
+2016-07-28 18:02:18,774 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO MemoryStore: ensureFreeSpace(2438) called with curMem=149812, maxMem=1111511531
+
+2016-07-28 18:02:18,775 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.4 KB, free 1059.9 MB)
+
+2016-07-28 18:02:18,777 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:56196 (size: 2.4 KB, free: 1060.0 MB)
+
+2016-07-28 18:02:18,779 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:02:18,785 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO DAGScheduler: Submitting 15 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[4] at map at main.scala:28)
+
+2016-07-28 18:02:18,786 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO TaskSchedulerImpl: Adding task set 0.0 with 15 tasks
+
+2016-07-28 18:02:18,854 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:18,857 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:18,868 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+
+2016-07-28 18:02:18,868 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+
+2016-07-28 18:02:18,879 - [INFO] - from application in Thread-8 
+16/07/28 18:02:18 INFO Executor: Fetching http://10.236.61.124:56190/jars/spark_2.10-1.0.jar with timestamp 1469700136169
+
+2016-07-28 18:02:19,028 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO Utils: Fetching http://10.236.61.124:56190/jars/spark_2.10-1.0.jar to /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-3b74f58f-ac76-48b7-8358-57db03de3474/userFiles-adb1368b-28c8-4e41-a097-df575165cfb1/fetchFileTemp7821873137347190504.tmp
+
+2016-07-28 18:02:19,043 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO Executor: Adding file:/private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-3b74f58f-ac76-48b7-8358-57db03de3474/userFiles-adb1368b-28c8-4e41-a097-df575165cfb1/spark_2.10-1.0.jar to class loader
+
+2016-07-28 18:02:19,090 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:33554432+33554432
+
+2016-07-28 18:02:19,090 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:0+33554432
+
+2016-07-28 18:02:19,105 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+
+2016-07-28 18:02:19,106 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+
+2016-07-28 18:02:19,106 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+
+2016-07-28 18:02:19,106 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+
+2016-07-28 18:02:19,106 - [INFO] - from application in Thread-8 
+16/07/28 18:02:19 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+
+2016-07-28 18:02:25,955 - [INFO] - from application in Thread-8 
+16/07/28 18:02:25 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2267 bytes result sent to driver
+
+2016-07-28 18:02:25,978 - [INFO] - from application in Thread-8 
+16/07/28 18:02:25 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:26,018 - [INFO] - from application in Thread-8 
+16/07/28 18:02:25 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+
+2016-07-28 18:02:26,081 - [INFO] - from application in Thread-8 
+16/07/28 18:02:25 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 7125 ms on localhost (1/15)
+
+2016-07-28 18:02:26,146 - [INFO] - from application in Thread-8 
+16/07/28 18:02:26 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:67108864+33554432
+
+2016-07-28 18:02:26,377 - [INFO] - from application in Thread-8 
+16/07/28 18:02:26 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2267 bytes result sent to driver
+
+2016-07-28 18:02:26,379 - [INFO] - from application in Thread-8 
+16/07/28 18:02:26 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:26,380 - [INFO] - from application in Thread-8 
+16/07/28 18:02:26 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 7556 ms on localhost (2/15)
+
+2016-07-28 18:02:26,381 - [INFO] - from application in Thread-8 
+16/07/28 18:02:26 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)
+
+2016-07-28 18:02:26,386 - [INFO] - from application in Thread-8 
+16/07/28 18:02:26 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:100663296+33554432
+
+2016-07-28 18:02:31,355 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 2267 bytes result sent to driver
+
+2016-07-28 18:02:31,358 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:31,358 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 5385 ms on localhost (3/15)
+
+2016-07-28 18:02:31,359 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)
+
+2016-07-28 18:02:31,364 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:134217728+33554432
+
+2016-07-28 18:02:31,612 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 2267 bytes result sent to driver
+
+2016-07-28 18:02:31,623 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:31,626 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 5247 ms on localhost (4/15)
+
+2016-07-28 18:02:31,630 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)
+
+2016-07-28 18:02:31,671 - [INFO] - from application in Thread-8 
+16/07/28 18:02:31 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:167772160+33554432
+
+2016-07-28 18:02:36,248 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 2267 bytes result sent to driver
+
+2016-07-28 18:02:36,249 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:36,250 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 4894 ms on localhost (5/15)
+
+2016-07-28 18:02:36,251 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO Executor: Running task 6.0 in stage 0.0 (TID 6)
+
+2016-07-28 18:02:36,256 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:201326592+33554432
+
+2016-07-28 18:02:36,450 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 2267 bytes result sent to driver
+
+2016-07-28 18:02:36,451 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:36,452 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO Executor: Running task 7.0 in stage 0.0 (TID 7)
+
+2016-07-28 18:02:36,452 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 4831 ms on localhost (6/15)
+
+2016-07-28 18:02:36,454 - [INFO] - from application in Thread-8 
+16/07/28 18:02:36 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:234881024+33554432
+
+2016-07-28 18:02:40,613 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO Executor: Finished task 6.0 in stage 0.0 (TID 6). 2267 bytes result sent to driver
+
+2016-07-28 18:02:40,615 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:40,616 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 4365 ms on localhost (7/15)
+
+2016-07-28 18:02:40,616 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO Executor: Running task 8.0 in stage 0.0 (TID 8)
+
+2016-07-28 18:02:40,618 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:268435456+33554432
+
+2016-07-28 18:02:40,860 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO Executor: Finished task 7.0 in stage 0.0 (TID 7). 2267 bytes result sent to driver
+
+2016-07-28 18:02:40,862 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:40,863 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 4412 ms on localhost (8/15)
+
+2016-07-28 18:02:40,863 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO Executor: Running task 9.0 in stage 0.0 (TID 9)
+
+2016-07-28 18:02:40,867 - [INFO] - from application in Thread-8 
+16/07/28 18:02:40 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:301989888+33554432
+
+2016-07-28 18:02:44,729 - [INFO] - from application in Thread-8 
+16/07/28 18:02:44 INFO Executor: Finished task 8.0 in stage 0.0 (TID 8). 2267 bytes result sent to driver
+
+2016-07-28 18:02:44,732 - [INFO] - from application in Thread-8 
+16/07/28 18:02:44 INFO TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:44,732 - [INFO] - from application in Thread-8 
+16/07/28 18:02:44 INFO TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 4118 ms on localhost (9/15)
+
+2016-07-28 18:02:44,732 - [INFO] - from application in Thread-8 
+16/07/28 18:02:44 INFO Executor: Running task 10.0 in stage 0.0 (TID 10)
+
+2016-07-28 18:02:44,735 - [INFO] - from application in Thread-8 
+16/07/28 18:02:44 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:335544320+33554432
+
+2016-07-28 18:02:45,061 - [INFO] - from application in Thread-8 
+16/07/28 18:02:45 INFO Executor: Finished task 9.0 in stage 0.0 (TID 9). 2267 bytes result sent to driver
+
+2016-07-28 18:02:45,063 - [INFO] - from application in Thread-8 
+16/07/28 18:02:45 INFO TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:45,064 - [INFO] - from application in Thread-8 
+16/07/28 18:02:45 INFO Executor: Running task 11.0 in stage 0.0 (TID 11)
+
+2016-07-28 18:02:45,064 - [INFO] - from application in Thread-8 
+16/07/28 18:02:45 INFO TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 4202 ms on localhost (10/15)
+
+2016-07-28 18:02:45,068 - [INFO] - from application in Thread-8 
+16/07/28 18:02:45 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:369098752+33554432
+
+2016-07-28 18:02:50,089 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO Executor: Finished task 10.0 in stage 0.0 (TID 10). 2267 bytes result sent to driver
+
+2016-07-28 18:02:50,091 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:50,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 5360 ms on localhost (11/15)
+
+2016-07-28 18:02:50,093 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO Executor: Running task 12.0 in stage 0.0 (TID 12)
+
+2016-07-28 18:02:50,100 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:402653184+33554432
+
+2016-07-28 18:02:50,567 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO Executor: Finished task 11.0 in stage 0.0 (TID 11). 2267 bytes result sent to driver
+
+2016-07-28 18:02:50,568 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:50,569 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 5506 ms on localhost (12/15)
+
+2016-07-28 18:02:50,570 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO Executor: Running task 13.0 in stage 0.0 (TID 13)
+
+2016-07-28 18:02:50,572 - [INFO] - from application in Thread-8 
+16/07/28 18:02:50 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:436207616+33554432
+
+2016-07-28 18:02:54,127 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO Executor: Finished task 12.0 in stage 0.0 (TID 12). 2267 bytes result sent to driver
+
+2016-07-28 18:02:54,129 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, localhost, PROCESS_LOCAL, 2198 bytes)
+
+2016-07-28 18:02:54,130 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 4040 ms on localhost (13/15)
+
+2016-07-28 18:02:54,130 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO Executor: Running task 14.0 in stage 0.0 (TID 14)
+
+2016-07-28 18:02:54,132 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO HadoopRDD: Input split: file:/Users/liangkai1/Desktop/README.txt:469762048+11199384
+
+2016-07-28 18:02:54,550 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO Executor: Finished task 13.0 in stage 0.0 (TID 13). 2267 bytes result sent to driver
+
+2016-07-28 18:02:54,554 - [INFO] - from application in Thread-8 
+16/07/28 18:02:54 INFO TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 3987 ms on localhost (14/15)
+
+2016-07-28 18:02:55,333 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 14.0 in stage 0.0 (TID 14). 2267 bytes result sent to driver
+
+2016-07-28 18:02:55,335 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 1206 ms on localhost (15/15)
+
+2016-07-28 18:02:55,336 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: ShuffleMapStage 0 (map at main.scala:28) finished in 36.528 s
+
+2016-07-28 18:02:55,337 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:02:55,337 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: looking for newly runnable stages
+
+2016-07-28 18:02:55,338 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: running: Set()
+
+2016-07-28 18:02:55,338 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: waiting: Set(ResultStage 1)
+
+2016-07-28 18:02:55,340 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: failed: Set()
+
+2016-07-28 18:02:55,349 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Missing parents for ResultStage 1: List()
+
+2016-07-28 18:02:55,350 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[8] at sortBy at main.scala:30), which is now runnable
+
+2016-07-28 18:02:55,353 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: ensureFreeSpace(3392) called with curMem=152250, maxMem=1111511531
+
+2016-07-28 18:02:55,356 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.3 KB, free 1059.9 MB)
+
+2016-07-28 18:02:55,357 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: ensureFreeSpace(1944) called with curMem=155642, maxMem=1111511531
+
+2016-07-28 18:02:55,359 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1944.0 B, free 1059.9 MB)
+
+2016-07-28 18:02:55,362 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:56196 (size: 1944.0 B, free: 1060.0 MB)
+
+2016-07-28 18:02:55,362 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:02:55,364 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Submitting 15 missing tasks from ResultStage 1 (MapPartitionsRDD[8] at sortBy at main.scala:30)
+
+2016-07-28 18:02:55,365 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSchedulerImpl: Adding task set 1.0 with 15 tasks
+
+2016-07-28 18:02:55,383 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 15, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,383 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 16, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,383 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 0.0 in stage 1.0 (TID 15)
+
+2016-07-28 18:02:55,383 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 1.0 in stage 1.0 (TID 16)
+
+2016-07-28 18:02:55,410 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,411 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,413 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+
+2016-07-28 18:02:55,413 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 6 ms
+
+2016-07-28 18:02:55,477 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 1.0 in stage 1.0 (TID 16). 1358 bytes result sent to driver
+
+2016-07-28 18:02:55,478 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 0.0 in stage 1.0 (TID 15). 1358 bytes result sent to driver
+
+2016-07-28 18:02:55,478 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 17, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,482 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 18, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,483 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 16) in 104 ms on localhost (1/15)
+
+2016-07-28 18:02:55,483 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 15) in 114 ms on localhost (2/15)
+
+2016-07-28 18:02:55,483 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 2.0 in stage 1.0 (TID 17)
+
+2016-07-28 18:02:55,486 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 3.0 in stage 1.0 (TID 18)
+
+2016-07-28 18:02:55,487 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,487 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,487 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,487 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,494 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 3.0 in stage 1.0 (TID 18). 1354 bytes result sent to driver
+
+2016-07-28 18:02:55,494 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 19, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,494 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 18) in 14 ms on localhost (3/15)
+
+2016-07-28 18:02:55,495 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 4.0 in stage 1.0 (TID 19)
+
+2016-07-28 18:02:55,498 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,498 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,504 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 4.0 in stage 1.0 (TID 19). 1354 bytes result sent to driver
+
+2016-07-28 18:02:55,504 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 20, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,506 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 2.0 in stage 1.0 (TID 17). 1358 bytes result sent to driver
+
+2016-07-28 18:02:55,506 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 5.0 in stage 1.0 (TID 20)
+
+2016-07-28 18:02:55,509 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 6.0 in stage 1.0 (TID 21, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,510 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,510 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,524 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 6.0 in stage 1.0 (TID 21)
+
+2016-07-28 18:02:55,532 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 19) in 36 ms on localhost (4/15)
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 17) in 53 ms on localhost (5/15)
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 5.0 in stage 1.0 (TID 20). 1358 bytes result sent to driver
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 7.0 in stage 1.0 (TID 22, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 20) in 32 ms on localhost (6/15)
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 7.0 in stage 1.0 (TID 22)
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,542 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,543 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 7.0 in stage 1.0 (TID 22). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,545 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 8.0 in stage 1.0 (TID 23, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,545 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 8.0 in stage 1.0 (TID 23)
+
+2016-07-28 18:02:55,545 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 7.0 in stage 1.0 (TID 22) in 11 ms on localhost (7/15)
+
+2016-07-28 18:02:55,547 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,549 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,551 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 6.0 in stage 1.0 (TID 21). 1354 bytes result sent to driver
+
+2016-07-28 18:02:55,552 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 9.0 in stage 1.0 (TID 24, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,553 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 6.0 in stage 1.0 (TID 21) in 45 ms on localhost (8/15)
+
+2016-07-28 18:02:55,559 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 9.0 in stage 1.0 (TID 24)
+
+2016-07-28 18:02:55,560 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 8.0 in stage 1.0 (TID 23). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,560 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 8.0 in stage 1.0 (TID 23) in 13 ms on localhost (9/15)
+
+2016-07-28 18:02:55,561 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 10.0 in stage 1.0 (TID 25, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,561 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 10.0 in stage 1.0 (TID 25)
+
+2016-07-28 18:02:55,576 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,576 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,577 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,577 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,577 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 9.0 in stage 1.0 (TID 24). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,577 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 11.0 in stage 1.0 (TID 26, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,577 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 11.0 in stage 1.0 (TID 26)
+
+2016-07-28 18:02:55,577 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 9.0 in stage 1.0 (TID 24) in 19 ms on localhost (10/15)
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 10.0 in stage 1.0 (TID 25). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 12.0 in stage 1.0 (TID 27, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 12.0 in stage 1.0 (TID 27)
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 10.0 in stage 1.0 (TID 25) in 13 ms on localhost (11/15)
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,578 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,579 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,585 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 12.0 in stage 1.0 (TID 27). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,586 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 13.0 in stage 1.0 (TID 28, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,586 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 13.0 in stage 1.0 (TID 28)
+
+2016-07-28 18:02:55,586 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 12.0 in stage 1.0 (TID 27) in 10 ms on localhost (12/15)
+
+2016-07-28 18:02:55,586 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,586 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,590 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 13.0 in stage 1.0 (TID 28). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,590 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 14.0 in stage 1.0 (TID 29, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:55,596 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 14.0 in stage 1.0 (TID 29)
+
+2016-07-28 18:02:55,596 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 13.0 in stage 1.0 (TID 28) in 11 ms on localhost (13/15)
+
+2016-07-28 18:02:55,596 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,597 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,600 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 14.0 in stage 1.0 (TID 29). 1358 bytes result sent to driver
+
+2016-07-28 18:02:55,600 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 14.0 in stage 1.0 (TID 29) in 9 ms on localhost (14/15)
+
+2016-07-28 18:02:55,615 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 11.0 in stage 1.0 (TID 26). 1365 bytes result sent to driver
+
+2016-07-28 18:02:55,616 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 11.0 in stage 1.0 (TID 26) in 46 ms on localhost (15/15)
+
+2016-07-28 18:02:55,616 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:02:55,616 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: ResultStage 1 (sortBy at main.scala:30) finished in 0.251 s
+
+2016-07-28 18:02:55,622 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Job 0 finished: sortBy at main.scala:30, took 36.969337 s
+
+2016-07-28 18:02:55,654 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO SparkContext: Starting job: collect at main.scala:30
+
+2016-07-28 18:02:55,663 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 165 bytes
+
+2016-07-28 18:02:55,671 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Registering RDD 6 (sortBy at main.scala:30)
+
+2016-07-28 18:02:55,671 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Got job 1 (collect at main.scala:30) with 15 output partitions
+
+2016-07-28 18:02:55,671 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Final stage: ResultStage 4(collect at main.scala:30)
+
+2016-07-28 18:02:55,671 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+
+2016-07-28 18:02:55,672 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+
+2016-07-28 18:02:55,672 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[6] at sortBy at main.scala:30), which has no missing parents
+
+2016-07-28 18:02:55,673 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: ensureFreeSpace(3224) called with curMem=157586, maxMem=1111511531
+
+2016-07-28 18:02:55,674 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.1 KB, free 1059.9 MB)
+
+2016-07-28 18:02:55,675 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: ensureFreeSpace(1912) called with curMem=160810, maxMem=1111511531
+
+2016-07-28 18:02:55,676 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1912.0 B, free 1059.9 MB)
+
+2016-07-28 18:02:55,677 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:56196 (size: 1912.0 B, free: 1060.0 MB)
+
+2016-07-28 18:02:55,677 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:02:55,677 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO DAGScheduler: Submitting 15 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[6] at sortBy at main.scala:30)
+
+2016-07-28 18:02:55,678 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSchedulerImpl: Adding task set 3.0 with 15 tasks
+
+2016-07-28 18:02:55,681 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 30, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,681 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 31, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,681 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 0.0 in stage 3.0 (TID 30)
+
+2016-07-28 18:02:55,684 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,684 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,689 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 1.0 in stage 3.0 (TID 31)
+
+2016-07-28 18:02:55,690 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,691 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,732 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 0.0 in stage 3.0 (TID 30). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,733 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 1.0 in stage 3.0 (TID 31). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,735 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 2.0 in stage 3.0 (TID 32, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,735 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 30) in 55 ms on localhost (1/15)
+
+2016-07-28 18:02:55,735 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 31) in 54 ms on localhost (2/15)
+
+2016-07-28 18:02:55,736 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 2.0 in stage 3.0 (TID 32)
+
+2016-07-28 18:02:55,736 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 3.0 in stage 3.0 (TID 33, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,736 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 3.0 in stage 3.0 (TID 33)
+
+2016-07-28 18:02:55,738 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,739 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,744 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,744 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 4 ms
+
+2016-07-28 18:02:55,756 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 2.0 in stage 3.0 (TID 32). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,758 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 2.0 in stage 3.0 (TID 32) in 25 ms on localhost (3/15)
+
+2016-07-28 18:02:55,759 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 4.0 in stage 3.0 (TID 34, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,759 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 4.0 in stage 3.0 (TID 34)
+
+2016-07-28 18:02:55,760 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 3.0 in stage 3.0 (TID 33). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,761 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 5.0 in stage 3.0 (TID 35, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,762 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 5.0 in stage 3.0 (TID 35)
+
+2016-07-28 18:02:55,762 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 3.0 in stage 3.0 (TID 33) in 27 ms on localhost (4/15)
+
+2016-07-28 18:02:55,773 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,773 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,773 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,773 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms
+
+2016-07-28 18:02:55,798 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 5.0 in stage 3.0 (TID 35). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,798 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 6.0 in stage 3.0 (TID 36, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,799 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 5.0 in stage 3.0 (TID 35) in 36 ms on localhost (5/15)
+
+2016-07-28 18:02:55,799 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 6.0 in stage 3.0 (TID 36)
+
+2016-07-28 18:02:55,800 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,800 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,825 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 4.0 in stage 3.0 (TID 34). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,825 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 7.0 in stage 3.0 (TID 37, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,826 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 4.0 in stage 3.0 (TID 34) in 66 ms on localhost (6/15)
+
+2016-07-28 18:02:55,828 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 7.0 in stage 3.0 (TID 37)
+
+2016-07-28 18:02:55,832 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,832 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,857 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 7.0 in stage 3.0 (TID 37). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,858 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 8.0 in stage 3.0 (TID 38, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,858 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 7.0 in stage 3.0 (TID 37) in 33 ms on localhost (7/15)
+
+2016-07-28 18:02:55,860 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 8.0 in stage 3.0 (TID 38)
+
+2016-07-28 18:02:55,860 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 6.0 in stage 3.0 (TID 36). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,861 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 9.0 in stage 3.0 (TID 39, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,862 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 9.0 in stage 3.0 (TID 39)
+
+2016-07-28 18:02:55,862 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 6.0 in stage 3.0 (TID 36) in 65 ms on localhost (8/15)
+
+2016-07-28 18:02:55,876 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,876 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,884 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,884 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,901 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 9.0 in stage 3.0 (TID 39). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,902 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 10.0 in stage 3.0 (TID 40, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,903 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 10.0 in stage 3.0 (TID 40)
+
+2016-07-28 18:02:55,903 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 9.0 in stage 3.0 (TID 39) in 42 ms on localhost (9/15)
+
+2016-07-28 18:02:55,904 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,904 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:55,934 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 8.0 in stage 3.0 (TID 38). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,935 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 11.0 in stage 3.0 (TID 41, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,935 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 8.0 in stage 3.0 (TID 38) in 76 ms on localhost (10/15)
+
+2016-07-28 18:02:55,935 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 11.0 in stage 3.0 (TID 41)
+
+2016-07-28 18:02:55,937 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,937 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:55,940 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Finished task 10.0 in stage 3.0 (TID 40). 1388 bytes result sent to driver
+
+2016-07-28 18:02:55,940 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Starting task 12.0 in stage 3.0 (TID 42, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:55,940 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO TaskSetManager: Finished task 10.0 in stage 3.0 (TID 40) in 39 ms on localhost (11/15)
+
+2016-07-28 18:02:55,942 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO Executor: Running task 12.0 in stage 3.0 (TID 42)
+
+2016-07-28 18:02:55,945 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:55,945 - [INFO] - from application in Thread-8 
+16/07/28 18:02:55 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:56,064 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 11.0 in stage 3.0 (TID 41). 1388 bytes result sent to driver
+
+2016-07-28 18:02:56,065 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 13.0 in stage 3.0 (TID 43, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:56,065 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 13.0 in stage 3.0 (TID 43)
+
+2016-07-28 18:02:56,066 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 11.0 in stage 3.0 (TID 41) in 133 ms on localhost (12/15)
+
+2016-07-28 18:02:56,067 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,067 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:56,069 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 12.0 in stage 3.0 (TID 42). 1388 bytes result sent to driver
+
+2016-07-28 18:02:56,070 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 14.0 in stage 3.0 (TID 44, localhost, PROCESS_LOCAL, 1950 bytes)
+
+2016-07-28 18:02:56,070 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 12.0 in stage 3.0 (TID 42) in 130 ms on localhost (13/15)
+
+2016-07-28 18:02:56,070 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 14.0 in stage 3.0 (TID 44)
+
+2016-07-28 18:02:56,072 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,073 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,086 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 13.0 in stage 3.0 (TID 43). 1388 bytes result sent to driver
+
+2016-07-28 18:02:56,087 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 13.0 in stage 3.0 (TID 43) in 23 ms on localhost (14/15)
+
+2016-07-28 18:02:56,091 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 14.0 in stage 3.0 (TID 44). 1388 bytes result sent to driver
+
+2016-07-28 18:02:56,091 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 14.0 in stage 3.0 (TID 44) in 22 ms on localhost (15/15)
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: ShuffleMapStage 3 (sortBy at main.scala:30) finished in 0.413 s
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: looking for newly runnable stages
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: running: Set()
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: waiting: Set(ResultStage 4)
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: failed: Set()
+
+2016-07-28 18:02:56,092 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: Missing parents for ResultStage 4: List()
+
+2016-07-28 18:02:56,093 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at sortBy at main.scala:30), which is now runnable
+
+2016-07-28 18:02:56,094 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO MemoryStore: ensureFreeSpace(3056) called with curMem=162722, maxMem=1111511531
+
+2016-07-28 18:02:56,095 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.0 KB, free 1059.9 MB)
+
+2016-07-28 18:02:56,096 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO MemoryStore: ensureFreeSpace(1808) called with curMem=165778, maxMem=1111511531
+
+2016-07-28 18:02:56,097 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1808.0 B, free 1059.9 MB)
+
+2016-07-28 18:02:56,100 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:56196 (size: 1808.0 B, free: 1060.0 MB)
+
+2016-07-28 18:02:56,100 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:861
+
+2016-07-28 18:02:56,101 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: Submitting 15 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at sortBy at main.scala:30)
+
+2016-07-28 18:02:56,101 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSchedulerImpl: Adding task set 4.0 with 15 tasks
+
+2016-07-28 18:02:56,101 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 45, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,102 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 46, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,102 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 0.0 in stage 4.0 (TID 45)
+
+2016-07-28 18:02:56,105 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 1.0 in stage 4.0 (TID 46)
+
+2016-07-28 18:02:56,106 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,106 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:56,109 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,109 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:56,157 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 1.0 in stage 4.0 (TID 46). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,157 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 2.0 in stage 4.0 (TID 47, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,157 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 2.0 in stage 4.0 (TID 47)
+
+2016-07-28 18:02:56,157 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 46) in 55 ms on localhost (1/15)
+
+2016-07-28 18:02:56,159 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,159 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,173 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 0.0 in stage 4.0 (TID 45). 1424 bytes result sent to driver
+
+2016-07-28 18:02:56,173 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 3.0 in stage 4.0 (TID 48, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,177 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 45) in 74 ms on localhost (2/15)
+
+2016-07-28 18:02:56,178 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 3.0 in stage 4.0 (TID 48)
+
+2016-07-28 18:02:56,178 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 2.0 in stage 4.0 (TID 47). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,178 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,178 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,178 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 4.0 in stage 4.0 (TID 49, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,180 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 2.0 in stage 4.0 (TID 47) in 22 ms on localhost (3/15)
+
+2016-07-28 18:02:56,180 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 4.0 in stage 4.0 (TID 49)
+
+2016-07-28 18:02:56,181 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,182 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,187 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 3.0 in stage 4.0 (TID 48). 1424 bytes result sent to driver
+
+2016-07-28 18:02:56,191 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 5.0 in stage 4.0 (TID 50, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,191 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 3.0 in stage 4.0 (TID 48) in 15 ms on localhost (4/15)
+
+2016-07-28 18:02:56,191 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 5.0 in stage 4.0 (TID 50)
+
+2016-07-28 18:02:56,191 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 4.0 in stage 4.0 (TID 49). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,192 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,192 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+
+2016-07-28 18:02:56,192 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 6.0 in stage 4.0 (TID 51, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,192 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 4.0 in stage 4.0 (TID 49) in 14 ms on localhost (5/15)
+
+2016-07-28 18:02:56,192 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 6.0 in stage 4.0 (TID 51)
+
+2016-07-28 18:02:56,193 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,194 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,194 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 5.0 in stage 4.0 (TID 50). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,195 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 7.0 in stage 4.0 (TID 52, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,195 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 5.0 in stage 4.0 (TID 50) in 7 ms on localhost (6/15)
+
+2016-07-28 18:02:56,196 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 7.0 in stage 4.0 (TID 52)
+
+2016-07-28 18:02:56,201 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,203 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,205 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 6.0 in stage 4.0 (TID 51). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,209 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 8.0 in stage 4.0 (TID 53, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,209 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 6.0 in stage 4.0 (TID 51) in 17 ms on localhost (7/15)
+
+2016-07-28 18:02:56,209 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 8.0 in stage 4.0 (TID 53)
+
+2016-07-28 18:02:56,209 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 7.0 in stage 4.0 (TID 52). 1424 bytes result sent to driver
+
+2016-07-28 18:02:56,209 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,209 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,210 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 9.0 in stage 4.0 (TID 54, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 7.0 in stage 4.0 (TID 52) in 15 ms on localhost (8/15)
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 9.0 in stage 4.0 (TID 54)
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 8.0 in stage 4.0 (TID 53). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 10.0 in stage 4.0 (TID 55, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 8.0 in stage 4.0 (TID 53) in 7 ms on localhost (9/15)
+
+2016-07-28 18:02:56,213 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 10.0 in stage 4.0 (TID 55)
+
+2016-07-28 18:02:56,216 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,216 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,216 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 9.0 in stage 4.0 (TID 54). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,216 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 11.0 in stage 4.0 (TID 56, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,216 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 9.0 in stage 4.0 (TID 54) in 7 ms on localhost (10/15)
+
+2016-07-28 18:02:56,216 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 11.0 in stage 4.0 (TID 56)
+
+2016-07-28 18:02:56,219 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,219 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,219 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 10.0 in stage 4.0 (TID 55). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,219 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 12.0 in stage 4.0 (TID 57, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,220 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 10.0 in stage 4.0 (TID 55) in 8 ms on localhost (11/15)
+
+2016-07-28 18:02:56,221 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 12.0 in stage 4.0 (TID 57)
+
+2016-07-28 18:02:56,221 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 11.0 in stage 4.0 (TID 56). 1424 bytes result sent to driver
+
+2016-07-28 18:02:56,223 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 13.0 in stage 4.0 (TID 58, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,225 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 11.0 in stage 4.0 (TID 56) in 7 ms on localhost (12/15)
+
+2016-07-28 18:02:56,226 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 13.0 in stage 4.0 (TID 58)
+
+2016-07-28 18:02:56,226 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,226 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,226 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,226 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,231 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 13.0 in stage 4.0 (TID 58). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,231 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Starting task 14.0 in stage 4.0 (TID 59, localhost, PROCESS_LOCAL, 1961 bytes)
+
+2016-07-28 18:02:56,233 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 13.0 in stage 4.0 (TID 58) in 7 ms on localhost (13/15)
+
+2016-07-28 18:02:56,233 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Running task 14.0 in stage 4.0 (TID 59)
+
+2016-07-28 18:02:56,233 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 12.0 in stage 4.0 (TID 57). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,233 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 12.0 in stage 4.0 (TID 57) in 11 ms on localhost (14/15)
+
+2016-07-28 18:02:56,233 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Getting 15 non-empty blocks out of 15 blocks
+
+2016-07-28 18:02:56,233 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+
+2016-07-28 18:02:56,234 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO Executor: Finished task 14.0 in stage 4.0 (TID 59). 1400 bytes result sent to driver
+
+2016-07-28 18:02:56,234 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSetManager: Finished task 14.0 in stage 4.0 (TID 59) in 6 ms on localhost (15/15)
+
+2016-07-28 18:02:56,235 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+
+2016-07-28 18:02:56,236 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: ResultStage 4 (collect at main.scala:30) finished in 0.134 s
+
+2016-07-28 18:02:56,236 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: Job 1 finished: collect at main.scala:30, took 0.579830 s
+
+2016-07-28 18:02:56,236 - [INFO] - from application in Thread-8 
+ArrayBuffer((F,189280), (G,189281), (C,378561), (V,378561), (K,567840), (B,567840), (X,567840), (q,757120), (J,757120), (E,757121), (z,946400), (U,946400), (j,946401), (R,946401), (I,946402), (D,1135681), (W,1135681), (O,1324960), (L,1324961), (H,1324961), (N,1324963), (k,1514243), (T,1703521), (P,1892802), (S,2082081), (A,2460642), (x,3217761), (w,3217765), (b,3596322), (f,3785602), (M,3974883), (y,4921281), (v,6056968), (g,6435535), (u,7760487), (d,9653287), (m,10031853), (h,10221141), (p,10599700), (c,11735374), (l,13817457), (r,15142414), (s,17413781), (i,20063699), (n,21010097), (o,22524341), (t,24038586), (a,28959877), (e,34259715))
+
+2016-07-28 18:02:56,246 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO SparkContext: Invoking stop() from shutdown hook
+
+2016-07-28 18:02:56,330 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO SparkUI: Stopped Spark web UI at http://10.236.61.124:4040
+
+2016-07-28 18:02:56,334 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO DAGScheduler: Stopping DAGScheduler
+
+2016-07-28 18:02:56,418 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+
+2016-07-28 18:02:56,447 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO MemoryStore: MemoryStore cleared
+
+2016-07-28 18:02:56,448 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO BlockManager: BlockManager stopped
+
+2016-07-28 18:02:56,449 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO BlockManagerMaster: BlockManagerMaster stopped
+
+2016-07-28 18:02:56,457 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+
+2016-07-28 18:02:56,459 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO SparkContext: Successfully stopped SparkContext
+
+2016-07-28 18:02:56,462 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShutdownHookManager: Shutdown hook called
+
+2016-07-28 18:02:56,462 - [INFO] - from application in Thread-8 
+16/07/28 18:02:56 INFO ShutdownHookManager: Deleting directory /private/var/folders/tb/6r9ysvzn50q72y6_8wnyf1bw0000gn/T/spark-3b74f58f-ac76-48b7-8358-57db03de3474
+
+2016-07-28 18:02:56,935 - [INFO] - from application in ForkJoinPool-4-worker-5 
+执行结束!
+
+2016-07-28 18:04:16,582 - [ERROR] - from play in play-akka.actor.default-dispatcher-8 
+Cannot invoke the action, eventually got an error: akka.pattern.AskTimeoutException: Timed out
+
+2016-07-28 18:04:16,615 - [ERROR] - from application in play-akka.actor.default-dispatcher-8 
+
+
+! @70pfl57gf - Internal server error, for (POST) [/executejar] ->
+
+play.api.Application$$anon$1: Execution exception[[AskTimeoutException: Timed out]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.4.jar:na]
+=======
+2016-07-29 10:26:19,389 - [INFO] - from play in pool-4-thread-5 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2016-07-29 10:26:48,833 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:26:49,195 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:26:49,422 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 10:28:13,275 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:28:13,646 - [INFO] - from play in play-internal-execution-context-2 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:28:13,654 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2016-07-29 10:33:55,028 - [ERROR] - from application in play-akka.actor.default-dispatcher-29 
+
+
+! @70pkl3hdf - Internal server error, for (GET) [/streaming?appui=http://10.209.78.145:4040] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@3540ebe8; line: 1, column: 1]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@3540ebe8; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:148) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3110) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:54) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+
+2016-07-29 10:34:04,934 - [ERROR] - from application in play-akka.actor.default-dispatcher-40 
+
+
+! @70pkl464m - Internal server error, for (GET) [/streaming?appui=http://10.209.78.145:4040] ->
+
+play.api.Application$$anon$1: Execution exception[[JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@4ca302c5; line: 1, column: 1]]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+>>>>>>> 2d068483cdf14d2b5cf0602105678b1f28048962
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+<<<<<<< HEAD
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+=======
+>>>>>>> 2d068483cdf14d2b5cf0602105678b1f28048962
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+<<<<<<< HEAD
+akka.pattern.AskTimeoutException: Timed out
+	at akka.pattern.PromiseActorRef$$anonfun$1.apply$mcV$sp(AskSupport.scala:334) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.actor.Scheduler$$anon$11.run(Scheduler.scala:118) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.Future$InternalCallbackExecutor$.scala$concurrent$Future$InternalCallbackExecutor$$unbatchedExecute(Future.scala:694) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:691) ~[scala-library-2.10.4.jar:na]
+	at akka.actor.LightArrayRevolverScheduler$TaskHolder.executeTask(Scheduler.scala:455) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.actor.LightArrayRevolverScheduler$$anon$12.executeBucket$1(Scheduler.scala:407) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.actor.LightArrayRevolverScheduler$$anon$12.nextTick(Scheduler.scala:411) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.actor.LightArrayRevolverScheduler$$anon$12.run(Scheduler.scala:363) ~[akka-actor_2.10-2.2.0.jar:2.2.0]
+	at java.lang.Thread.run(Thread.java:744) ~[na:1.8.0]
+=======
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
+ at [Source: [B@4ca302c5; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:148) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3110) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:54) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
+>>>>>>> 2d068483cdf14d2b5cf0602105678b1f28048962
+
+2016-07-29 10:47:03,686 - [INFO] - from play in play-internal-execution-context-7 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:47:03,899 - [INFO] - from play in play-internal-execution-context-7 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 10:47:03,908 - [INFO] - from play in play-internal-execution-context-7 
+Application started (Dev)
+
+>>>>>>> b5a3ee1140c780fd17cf1817579cac40d1686d63

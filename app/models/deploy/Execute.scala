@@ -38,7 +38,7 @@ object Execute {
     * @return
     */
   def getRequest(executeModel: ExecuteModel): CreateBatchRequest ={
-    val timeoutSecs: Long = 5
+    val timeoutSecs: Long = 50
     Await.result( (_jobMange ? Initializ(executeModel))(Timeout(timeoutSecs,TimeUnit.SECONDS)) ,
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration).asInstanceOf[CreateBatchRequest]
   }
@@ -54,7 +54,6 @@ object Execute {
       (_jobMange ? SubmitJob(getRequest(executeModel)))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
-
 }
 
 
@@ -65,7 +64,7 @@ object Execute {
     * @return
     */
   def storeJar(userName:String,filePart: FilePart[TemporaryFile]):Any = {
-    val timeoutSecs: Long = 50
+    val timeoutSecs: Long = 100
     Await.result( (_jobMange ? StoreJar(userName,filePart))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration);

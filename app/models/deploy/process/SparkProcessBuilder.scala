@@ -125,7 +125,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
       }
     }
 
-    addOpt("--master", Some("local"))
+    addOpt("--master", Some("spark://BJ-M-203554A.local:7077"))
     addOpt("--class", _className)
     addOpt("--num-executors",_num_executors)
     addOpt("--executor-memory", _executor_memory)

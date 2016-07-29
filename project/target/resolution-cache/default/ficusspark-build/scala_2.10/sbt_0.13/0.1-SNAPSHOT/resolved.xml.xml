@@ -4,7 +4,11 @@
 		module="ficusspark-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
+<<<<<<< HEAD
 		publication="20160727151720"
+=======
+		publication="20160728175828"
+>>>>>>> b5a3ee1140c780fd17cf1817579cac40d1686d63
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

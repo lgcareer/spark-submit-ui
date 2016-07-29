@@ -1,10 +1,10 @@
 package controllers
 
 
-import play.api.Play.current
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models._
 import play.api.Logger
+import play.api.Play.current
 import play.api.cache.Cache
 import play.api.data.Forms._
 import play.api.data._
@@ -76,8 +76,6 @@ object SparkJar extends Controller with Secured {
     def he(jobId:String)=Action{
       Ok(views.html.he(jobId))
     }
-
-
 
  }
 
