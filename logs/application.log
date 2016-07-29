@@ -1,21 +1,67 @@
-2016-07-29 11:45:18,868 - [INFO] - from play in pool-4-thread-7 
+2016-07-29 12:09:45,815 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-07-29 11:45:44,692 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-29 12:09:48,898 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-07-29 11:45:45,065 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-29 12:09:49,142 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-07-29 11:45:45,161 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-29 12:09:49,250 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-07-29 11:45:46,456 - [ERROR] - from application in play-akka.actor.default-dispatcher-9 
+2016-07-29 12:10:23,038 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:10:23,456 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:10:23,465 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 12:12:38,263 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:12:38,609 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:12:38,614 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 12:13:06,750 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:13:07,156 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:13:07,161 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 12:14:12,312 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:14:12,692 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:14:12,699 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 12:14:54,093 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:14:54,678 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-07-29 12:14:54,683 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-07-29 12:15:54,432 - [ERROR] - from application in play-akka.actor.default-dispatcher-40 
 
 
-! @70pl4ep9g - Internal server error, for (GET) [/workerlist] ->
+! @70pl8dln8 - Internal server error, for (GET) [/streaming?appui=http://10.77.136.158:4040] ->
 
-play.api.Application$$anon$1: Execution exception[[ConnectException: Connection refused]]
+play.api.Application$$anon$1: Execution exception[[JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@7112bbb1; line: 1, column: 2]]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
@@ -47,88 +93,38 @@ play.api.Application$$anon$1: Execution exception[[ConnectException: Connection 
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: java.net.ConnectException: Connection refused
-	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0_40]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0_40]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_40]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_40]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_40]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_40]
-	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_40]
-	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_40]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432) ~[na:1.8.0_40]
-	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527) ~[na:1.8.0_40]
-	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211) ~[na:1.8.0_40]
-	at sun.net.www.http.HttpClient.New(HttpClient.java:308) ~[na:1.8.0_40]
-	at sun.net.www.http.HttpClient.New(HttpClient.java:326) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1168) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1104) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:988) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection$6.run(HttpURLConnection.java:986) ~[na:1.8.0_40]
-	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_40]
-	at java.security.AccessController.doPrivileged(AccessController.java:713) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:985) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:932) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1512) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.access$200(HttpURLConnection.java:90) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1432) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection$9.run(HttpURLConnection.java:1430) ~[na:1.8.0_40]
-	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_40]
-	at java.security.AccessController.doPrivileged(AccessController.java:713) ~[na:1.8.0_40]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1429) ~[na:1.8.0_40]
-	at java.net.URL.openStream(URL.java:1038) ~[na:1.8.0_40]
-	at scala.io.Source$.fromURL(Source.scala:140) ~[scala-library-2.10.4.jar:na]
-	at scala.io.Source$.fromURL(Source.scala:130) ~[scala-library-2.10.4.jar:na]
-	at controllers.YarnList$$anonfun$workerlistdata$1$$anonfun$apply$5$$anonfun$apply$6.apply(YarnList.scala:22) ~[classes/:na]
-	at controllers.YarnList$$anonfun$workerlistdata$1$$anonfun$apply$5$$anonfun$apply$6.apply(YarnList.scala:21) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
-	... 6 common frames omitted
+Caused by: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: [B@7112bbb1; line: 1, column: 2]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1419) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:508) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:437) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2363) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._nextTokenNotInObject(UTF8StreamJsonParser.java:794) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextToken(UTF8StreamJsonParser.java:690) ~[jackson-core-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3105) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:3024) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1652) ~[jackson-databind-2.4.4.jar:2.4.4]
+	at play.api.libs.json.JacksonJson$.parseJsValue(JsValue.scala:479) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.json.Json$.parse(Json.scala:27) ~[play-json_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json$lzycompute(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.ws.Response.json(WS.scala:747) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:56) ~[classes/:na]
+	at controllers.MonitorController$$anonfun$streaming$1$$anonfun$2.apply(MonitorController.scala:54) ~[classes/:na]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Success.map(Try.scala:206) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$3.exec(ExecutionContextImpl.scala:107) ~[scala-library-2.10.4.jar:na]
+	... 4 common frames omitted
 
-2016-07-29 11:46:47,874 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-29 12:17:01,672 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-07-29 11:46:48,141 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-29 12:17:01,887 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-07-29 11:46:48,147 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-07-29 11:48:23,423 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-07-29 11:48:23,783 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-07-29 11:48:23,788 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-07-29 11:51:10,089 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-07-29 11:51:10,429 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-07-29 11:51:10,435 - [INFO] - from play in play-internal-execution-context-1 
+2016-07-29 12:17:01,893 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

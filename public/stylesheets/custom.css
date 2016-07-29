@@ -543,3 +543,6 @@
 .text-centers.table > tfood > tr > th {
     text-align: center !important;
 }
+.stramss{
+    align-items: center;
+}
