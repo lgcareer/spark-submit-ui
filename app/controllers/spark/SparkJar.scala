@@ -47,6 +47,8 @@ object SparkJar extends Controller with Secured {
         Ok(views.html.upload(executeForm))
       }
 
+
+
       def executejar = IsAuthenticated { username => implicit request =>
         executeForm.bindFromRequest.fold(
           formWithErrors => {

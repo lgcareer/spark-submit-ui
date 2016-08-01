@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
   cache,
   "org.apache.commons" % "commons-email" % "1.4",
   "mysql" % "mysql-connector-java" % "5.1.29",
-  "org.apache.spark" % "spark-core_2.10" % "1.4.1",
+  "org.apache.spark" % "spark-core_2.10" % "1.5.2",
   "com.codahale" % "jerkson_2.9.1" % "0.5.0",
   "net.minidev" % "json-smart" % "1.3.1",
   "org.apache.hive" % "hive-jdbc" % "2.0.0"
@@ -25,4 +25,6 @@ resolvers ++= Seq(
   "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases",
   Resolver.sonatypeRepo("public")
 )
+
+
 

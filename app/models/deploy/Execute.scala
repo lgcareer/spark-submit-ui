@@ -49,7 +49,7 @@ object Execute {
     * @param executeModel
     */
   def main(executeModel: ExecuteModel)={
-    val timeoutSecs: Long = 200
+    val timeoutSecs: Long = 300
       Await.result(
       (_jobMange ? SubmitJob(getRequest(executeModel)))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
