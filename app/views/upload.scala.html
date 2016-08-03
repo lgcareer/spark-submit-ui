@@ -12,15 +12,21 @@
                 <a href="#" data-toggle="paneltxt">
                     <i class="linecons-cog"></i>
                 </a>
-                <a href="#" data-toggle="paneltxt">
+                <span>RUN</span>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行执行程序">
                     <span class="fa fa-play" id="submit"></span>
                 </a>
-                <a href="#" data-toggle="paneltxt">
+                <span>设置</span>
+                <a href="#" data-toggle="tooltip" data-placement="top" title="点此进行设置">
                     <span class="fa fa-wrench" id="setting"></span>
                 </a>
 
             </div>
         </div>
+
+        <script>
+                $(function () { $("[data-toggle='tooltip']").tooltip(); });
+        </script>
 
         <div class="panel-body" >
 
