@@ -2,13 +2,24 @@
  * Created by jhazheng on 16/7/26.
  */
 
+
 var DATA = "";
 $(document).ready(function () {
+    var myTextarea = document.getElementById('sql');
+    var CodeMirrorEditor = CodeMirror.fromTextArea(myTextarea, {
+        mode: "text/x-hive",
+        theme:"neo",
+        lineNumbers: true,
+        autofocus:true
+    });
+    CodeMirrorEditor.setSize('auto', 'auto');
     $('#sql').focus();
     $("#submit").click(function () {
+        $("#submit").addClass("fa fa-spinner fa-pulse fa-fw");
+        console.log(CodeMirrorEditor.getValue());
         $.ajax({
             "data": {
-                "sql": $("#sql").text()
+                "sql": CodeMirrorEditor.getValue()
             },
             "method": "POST",
             "url": "/executesql",
@@ -16,10 +27,16 @@ $(document).ready(function () {
             "success": function (data) {
                 DATA = data;
                 resultToTable();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                $("#submit").removeClass().addClass("fa fa-play");
+                alert(errorThrown);
+
             }
         });
+        resultToCharts();
     });
-    resultToCharts();
+
 })
 
 $(function () {
@@ -78,7 +95,11 @@ function resultToCharts() {
     });
 }
 function resultToTable() {
+
     if (DATA != "") {
+        $("#submit").removeClass().addClass("fa fa-play");
+        $("#submit").addClass("fa fa-play");
+        toTab();
         var header = DATA.header;
         var sql_data = DATA.data;
         var result = "";
@@ -95,9 +116,9 @@ function resultToTable() {
             for (var i = 0; i < sql_data[j].length; i++) {
                 tr += "<td>" + sql_data[j][i] + "</td>";
             }
-            if(j%2 == 0){
+            if (j % 2 == 0) {
                 result += "<tr class='success'>" + tr + "</tr>";
-            }else {
+            } else {
                 result += "<tr>" + tr + "</tr>";
             }
 
@@ -109,3 +130,11 @@ function resultToTable() {
     }
 }
 
+function toTab() {
+
+    var htmls = document.getElementById("readtodisplay").innerHTML;
+    $("#todisplay").html(htmls);
+
+}
+
+highlightCode = function() { Prism.highlightElement($("#sql")); };

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaSbtSettings">
+    <option name="customVMPath" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk" />
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="jdk" value="1.8" />
 <<<<<<< Updated upstream
 =======
         <option name="modules">
@@ -12,10 +14,8 @@
             <option value="$PROJECT_DIR$/project" />
           </set>
         </option>
->>>>>>> Stashed changes
         <option name="sbtVersion" value="0.13.11" />
-        <option name="useAutoImport" value="true" />
-        <option name="useOurOwnAutoImport" value="true" />
+>>>>>>> Stashed changes
       </SbtProjectSettings>
     </option>
   </component>
