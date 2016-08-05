@@ -88,13 +88,27 @@ var EditableTable = function () {
             $('#editable-sample a.delete').live('click', function (e) {
                 e.preventDefault();
 
-                if (confirm("Are you sure to delete this row ?") == false) {
+                if (confirm("确定删除该用户?") == false) {
                     return;
                 }
 
                 var nRow = $(this).parents('tr')[0];
+
+                //获取用户邮箱
+                var $thisTD = $(this).parents('tr').find("td:eq(0)");
+                console.log($thisTD);
                 oTable.fnDeleteRow(nRow);
-                alert("Deleted! Do not forget to do some ajax to sync with backend :)");
+                $(document).ready(function(){
+                        $.ajax({
+                            type:"GET",
+                            url:"/rmgroup",
+                            data:{email:$thisTD.text()},
+                            dataType:"text",
+                            success:function(data){
+                                alert($thisTD.text()+" "+data);
+                            }
+                        });
+                });
             });
 
             $('#editable-sample a.cancel').live('click', function (e) {

@@ -26,17 +26,22 @@ $(document).ready(function(){
             url:"/usergroup",
             dataType:"json",
             success:function(data){
-                var head= "<thead><tr><th>email</th><th>name</th><th>password</th><th>group</h><th>Edit</th><th>Delete</th></tr></thead><tbody>"
+                var head= "<thead><tr><th>email</th><th>name</th><th>group</th><th>queue</h><th>Edit</th><th>Delete</th></tr></thead><tbody>"
                 var myobj=eval(data);
                 for (var p in myobj) {
                     var datamid = eval(data[p]);
                     for (var i = 0; i < datamid.length; i++) {
-                    head += "<tr><td>" + datamid[i].email + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].password + "</td><td>"+datamid[i].name+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Edit' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'Delete' + "</a></td></tr>";
+                    head += "<tr><td>" + datamid[i].email +
+                    "</td><td>" + datamid[i].name +
+                    "</td><td>" + datamid[i].group +
+                    "</td><td>"+datamid[i].queue +
+                    "</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Edit' +
+                    "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'Delete' +
+                    "</a></td></tr>";
                 };
                 };
                 head += "<tbody>";
                 $('#editable-sample').html(head);
-
                     jQuery(document).ready(function() {
                         EditableTable.init();
                     });
@@ -49,8 +54,8 @@ $(document).ready(function(){
 </head>
 <body class="sticky-header">
 
-
 <section>
+
     <div class="wrapper">
         <div class="row">
             <div class="col-sm-12">

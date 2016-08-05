@@ -90,3 +90,5 @@ GET    /graph                     controllers.Serviceplan.graph
 #Authority
 GET    /userlist                  controllers.UserManager.userlist
 GET   /usergroup                    controllers.UserManager.usergroup
+GET   /rmgroup                      controllers.UserManager.rmgroup(email:String)
+
