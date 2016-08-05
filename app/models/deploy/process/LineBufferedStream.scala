@@ -55,9 +55,6 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
           _lock.unlock()
         }
       }
-
-
-
       _lock.lock()
       try {
         _finished = true

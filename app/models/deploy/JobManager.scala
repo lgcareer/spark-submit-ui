@@ -57,7 +57,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
   import JobManagerActor._
 
   val config = mutable.HashMap.empty[String,String]
-  val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(10))
+  val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(20))
 
   private[this] val nameSpance="usr"
   private[this] val nameLocal="local"
@@ -152,10 +152,16 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         request.jarLocation.foreach(builder.jarLocation)
         val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
         val output = process.inputIterator.mkString("\n")
-        val regex = """Shutdown (.*)""".r.unanchored
+        //val regex = """Shutdown (.*)""".r.unanchored
+        val regex_local = """Starting executor ID driver on host localhost(.*)""".r.unanchored
+        val regex_id = """Spark cluster with app ID (.*)""".r.unanchored
+
         output match {
-          case regex(success) => {
+          case regex_local(success) => {
              JobRunFinish("执行结束!")
+          }
+          case regex_id(success) => {
+            JobRunFinish("执行结束!")
           }
           case _ =>
             throw new JobRunExecption(output)
@@ -171,7 +177,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) => self ! Logger.info(result.msg); JobLoading(result.msg)
+      case scala.util.Success(result:Any) => Logger.info(result.msg); self ! JobLoading(result.msg)
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }

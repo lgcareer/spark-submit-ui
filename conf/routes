@@ -30,7 +30,7 @@ GET     /sparklist                  controllers.YarnList.sparklist
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-#TestIndex
+#User
 GET     /registration                controllers.Authentication.registration
 POST    /registration                controllers.Authentication.verifying
 GET     /mail                         controllers.Authentication.mail(user)
@@ -87,5 +87,6 @@ GET    /runTask                     controllers.RunTask.runTask
 GET    /graph                     controllers.Serviceplan.graph
 
 
-
-
+#Authority
+GET    /userlist                  controllers.UserManager.userlist
+GET   /usergroup                    controllers.UserManager.usergroup

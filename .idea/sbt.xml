@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaSbtSettings">
-<<<<<<< HEAD
-    <option name="customVMEnabled" value="true" />
-    <option name="customVMPath" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk" />
-=======
     <option name="customVMPath" value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk" />
     <option name="linkedExternalProjectsSettings">
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="jdk" value="1.8" />
+<<<<<<< Updated upstream
+=======
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -17,8 +15,8 @@
           </set>
         </option>
         <option name="sbtVersion" value="0.13.11" />
+>>>>>>> Stashed changes
       </SbtProjectSettings>
     </option>
->>>>>>> b5a3ee1140c780fd17cf1817579cac40d1686d63
   </component>
 </project>
