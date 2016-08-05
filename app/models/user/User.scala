@@ -8,6 +8,7 @@ import play.api.db.DB
 case class User(email: String, name: String, password: String)
 case class Registration(email:String,name:String,password:String,repassword:String)
 case class Verify(email:String,captcha:String,name:String)
+case class UserGroup(userGroup: Seq[User])
 
 object User {
 
@@ -30,6 +31,14 @@ object User {
     DB.withConnection { implicit connection =>
       play.api.db.DB.withConnection { implicit connection =>
         SQL("select * from user").as(User.simple *)
+      }
+    }
+  }
+
+  def findGroup : Seq[User] = {
+    DB.withConnection { implicit connection =>
+      play.api.db.DB.withConnection { implicit connection =>
+        SQL("select * from user_group").as(User.simple *)
       }
     }
   }
