@@ -1,74 +1,30 @@
-2016-08-06 07:08:44,289 - [INFO] - from play in pool-4-thread-1 
+2016-08-06 07:37:53,199 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-08-06 07:08:53,479 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-06 07:38:04,514 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-06 07:08:53,965 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-06 07:38:05,018 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-06 07:08:54,063 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-06 07:38:05,132 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-06 07:13:58,925 - [ERROR] - from application in New I/O worker #8 
-
-
-! @711ppbd03 - Internal server error, for (GET) [/sparksql] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value mian]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
-	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
-	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
-
-2016-08-06 07:15:29,402 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-06 07:47:13,119 - [INFO] - from play in play-internal-execution-context-4 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-06 07:15:29,873 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-06 07:47:13,623 - [INFO] - from play in play-internal-execution-context-4 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-06 07:15:29,881 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-06 07:47:13,632 - [INFO] - from play in play-internal-execution-context-4 
 Application started (Dev)
 
-2016-08-05 17:27:19,771 - [INFO] - from play in play-internal-execution-context-14 
+2016-08-06 07:52:38,038 - [INFO] - from play in play-internal-execution-context-4 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-05 17:27:20,020 - [INFO] - from play in play-internal-execution-context-14 
+2016-08-06 07:52:38,569 - [INFO] - from play in play-internal-execution-context-4 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-05 17:27:20,027 - [INFO] - from play in play-internal-execution-context-14 
-Application started (Dev)
-
-2016-08-05 17:29:55,321 - [INFO] - from play in play-internal-execution-context-14 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-05 17:29:55,550 - [INFO] - from play in play-internal-execution-context-14 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-05 17:29:55,555 - [INFO] - from play in play-internal-execution-context-14 
-Application started (Dev)
-
-2016-08-05 18:01:50,244 - [INFO] - from play in play-internal-execution-context-14 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-05 18:01:50,467 - [INFO] - from play in play-internal-execution-context-14 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-05 18:01:50,474 - [INFO] - from play in play-internal-execution-context-14 
+2016-08-06 07:52:38,575 - [INFO] - from play in play-internal-execution-context-4 
 Application started (Dev)
 
