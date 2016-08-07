@@ -137,7 +137,28 @@ var EditableTable = function () {
                     /* Editing this row and want to save it */
                     saveRow(oTable, nEditing);
                     nEditing = null;
-                    alert("Updated! Do not forget to do some ajax to sync with backend :)");
+                    //alert("Updated! Do not forget to do some ajax to sync with backend :)");
+                                //获取用户邮箱
+                                    var $email = $(this).parents('tr').find("td:eq(0)");
+                                    var $name = $(this).parents('tr').find("td:eq(1)");
+                                    var $group = $(this).parents('tr').find("td:eq(2)");
+                                    var $queue = $(this).parents('tr').find("td:eq(3)");
+
+                                    oTable.fnDeleteRow(nRow);
+                                    $(document).ready(function(){
+                                            $.ajax({
+                                                type:"GET",
+                                                url:"/addgroup",
+                                                data:{email:$email.text(),name:$name.text(),group:$group.text(),queue:$queue.text()},
+                                                dataType:"text",
+                                                success:function(data){
+                                                    alert($email.text()+" "+data);
+                                                }
+                                            });
+                                    });
+
+
+
                 } else {
                     /* No edit in progress - let's start one */
                     editRow(oTable, nRow);

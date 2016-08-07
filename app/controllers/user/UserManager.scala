@@ -1,6 +1,7 @@
 package controllers
 
 import models.{Group, User, UserGroup}
+import play.api.Logger
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.libs.json.{JsValue, Json}
@@ -12,24 +13,6 @@ import play.api.mvc.{Action, Controller}
   */
 object UserManager extends Controller with  Secured{
 
-//  val loginForm = Form(
-//    tuple(
-//      "email" -> text.verifying("用户还未激活",User.isActivate(_).isDefined),
-//      "name" -> text,
-//      "group" -> text,
-//      "queue" -> text
-//    )
-//  )
-
-
-  val groupForm:Form[UserGroup] = Form{
-    mapping (
-      "email"->text.verifying("用户还未激活",User.isActivate(_).isDefined),
-      "name"->text,
-      "group"->text,
-      "queue"->text
-    )(UserGroup.apply)(UserGroup.unapply)
-  }
 
 
   /**
@@ -65,16 +48,16 @@ object UserManager extends Controller with  Secured{
      }
   }
 
+
   /**
     * 新增用户到组
-    * @param email
-    * @param name
-    * @param group
-    * @param queue
     * @return
     */
-  def addgroup(email:String,name:String,group:String,queue:String)=Action{
-    Ok("add succus")
+  def addgroup(email:String,name:String,group:String,queue:String) =IsAuthenticated{
+    username => implicit request =>
+      val user: UserGroup = UserGroup(email,name,group,queue)
+      UserGroup.addGroup(user)
+      Ok("成功!")
   }
 
 
@@ -89,25 +72,6 @@ object UserManager extends Controller with  Secured{
   def udgroup(email:String,name:String,group:String,queue:String)=Action{
     Ok("add succus")
   }
-
-//  def executejar = IsAuthenticated { username => implicit request =>
-//    executeForm.bindFromRequest.fold(
-//      formWithErrors => {
-//        formWithErrors.errors.map(x => Logger.info(x.message))
-//        formWithErrors.globalError.map(x => Logger.info(x.message))
-//        BadRequest(views.html.error(formWithErrors.toString))
-//      },
-//      executeArguments => {
-//        Execute.main(executeArguments)
-//        match {
-//          case JobSubmitSuccess(msg) => Logger.info(msg); Redirect(routes.SparkJar.he(msg))
-//          case JobRunExecption(error) => BadRequest(error)
-//          case _ => NotFound
-//        }
-//      }
-//    )
-//  }
-
 
 
 

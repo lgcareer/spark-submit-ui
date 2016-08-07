@@ -5,7 +5,8 @@ import play.api.db.DB
 import anorm._
 import play.api.Play.current
 /**
-  * Created by liangkai1 on 16/8/5.
+  * Created by liangkai1 on 16/8/4.
+  * 用户组数据操作相关
   */
 
 case class  UserGroup(email:String,name:String,group:String,queue:String)
@@ -49,6 +50,24 @@ object UserGroup {
         """).on(
         'email -> email
         ).executeUpdate()
+    }
+  }
+
+  def addGroup(userGroup: UserGroup): UserGroup ={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+          insert into user_group values (
+            {email}, {name}, {group}, {queue},0
+          )
+        """).on(
+        'email -> userGroup.email,
+        'name -> userGroup.name,
+        'password -> 123,
+        'group -> userGroup.group,
+         'queue ->userGroup.queue
+         ).executeUpdate()
+      userGroup
     }
   }
 

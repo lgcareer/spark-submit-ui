@@ -91,4 +91,5 @@ GET    /graph                     controllers.Serviceplan.graph
 GET    /userlist                  controllers.UserManager.userlist
 GET   /usergroup                    controllers.UserManager.usergroup
 GET   /rmgroup                      controllers.UserManager.rmgroup(email:String)
+GET  /addgroup                      controllers.UserManager.addgroup(email:String,name:String,group:String,queue:String)
 
