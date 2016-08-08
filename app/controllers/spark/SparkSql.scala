@@ -57,7 +57,7 @@ object SparkSql extends Controller with Secured {
           }
 
 
-          val writer = new PrintWriter(new File(s"public/download/spark$n.txt"))
+          val writer = new PrintWriter(new File(s"/download/spark$n.txt"))
 
           val resultCSV = Json.toJson(
             Map[String, Any](
