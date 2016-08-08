@@ -2,61 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1bb34fa-b214-47a7-8fc8-11f8d6129dc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.10/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sbt.xml" afterPath="$PROJECT_DIR$/.idea/sbt.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/spark/SparkSql.scala" afterPath="$PROJECT_DIR$/app/controllers/spark/SparkSql.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/alarm.scala.html" afterPath="$PROJECT_DIR$/app/views/alarm.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dispatch.scala.html" afterPath="$PROJECT_DIR$/app/views/dispatch.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/download.scala.html" afterPath="$PROJECT_DIR$/app/views/download.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/graph.scala.html" afterPath="$PROJECT_DIR$/app/views/graph.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/he.scala.html" afterPath="$PROJECT_DIR$/app/views/he.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.scala.html" afterPath="$PROJECT_DIR$/app/views/index.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/jobs.scala.html" afterPath="$PROJECT_DIR$/app/views/jobs.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/runtask.scala.html" afterPath="$PROJECT_DIR$/app/views/runtask.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/runtasklogs.scala.html" afterPath="$PROJECT_DIR$/app/views/runtasklogs.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sparkjar.scala.html" afterPath="$PROJECT_DIR$/app/views/sparkjar.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sparklist.scala.html" afterPath="$PROJECT_DIR$/app/views/sparklist.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sparksql.scala.html" afterPath="$PROJECT_DIR$/app/views/sparksql.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/stream.scala.html" afterPath="$PROJECT_DIR$/app/views/stream.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/streamArgs.scala.html" afterPath="$PROJECT_DIR$/app/views/streamArgs.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/streaming.scala.html" afterPath="$PROJECT_DIR$/app/views/streaming.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/upload.scala.html" afterPath="$PROJECT_DIR$/app/views/upload.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/userelevan.scala.html" afterPath="$PROJECT_DIR$/app/views/userelevan.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/userlist.scala.html" afterPath="$PROJECT_DIR$/app/views/userlist.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/widgets.scala.html" afterPath="$PROJECT_DIR$/app/views/widgets.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/widgetsfun.scala.html" afterPath="$PROJECT_DIR$/app/views/widgetsfun.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workerInfo.scala.html" afterPath="$PROJECT_DIR$/app/views/workerInfo.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workerlist.scala.html" afterPath="$PROJECT_DIR$/app/views/workerlist.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/yarnlist.scala.html" afterPath="$PROJECT_DIR$/app/views/yarnlist.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/ficusspark-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-ficusspark-build-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" />
     </list>
     <ignored path="ficusSpark.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="userlist.scala.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/userlist.scala.html">
+      <file leaf-file-name="SparkSql.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/spark/SparkSql.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.9009347">
-              <caret line="228" column="34" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.7536814">
+              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,7 +80,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/bootstrap.css" />
         <option value="$PROJECT_DIR$/app/controllers/user/UserManager.scala" />
         <option value="$PROJECT_DIR$/app/models/user/UserGroup.scala" />
-        <option value="$PROJECT_DIR$/app/controllers/spark/SparkSql.scala" />
         <option value="$PROJECT_DIR$/app/views/main.scala.html" />
         <option value="$PROJECT_DIR$/app/views/index.scala.html" />
         <option value="$PROJECT_DIR$/app/views/runtasklogs.scala.html" />
@@ -158,6 +105,7 @@
         <option value="$PROJECT_DIR$/app/views/widgets.scala.html" />
         <option value="$PROJECT_DIR$/app/views/graph.scala.html" />
         <option value="$PROJECT_DIR$/app/views/widgetsfun.scala.html" />
+        <option value="$PROJECT_DIR$/app/controllers/spark/SparkSql.scala" />
       </list>
     </option>
   </component>
@@ -896,12 +844,12 @@
       <option name="number" value="Default" />
       <updated>1470493341303</updated>
       <workItem from="1470623350631" duration="2227000" />
-      <workItem from="1470638645498" duration="8251000" />
+      <workItem from="1470638645498" duration="8578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10478000" />
+    <option name="totallyTimeSpent" value="10805000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -915,10 +863,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3141593" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3141593" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36460176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2774228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2774228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1053,14 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0852995">
           <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/spark/SparkSql.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2013296">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1361,8 +1301,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/userlist.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.9009347">
+        <state vertical-scroll-proportion="7.3342657">
           <caret line="228" column="34" selection-start-line="228" selection-start-column="34" selection-end-line="228" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/spark/SparkSql.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7536814">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
