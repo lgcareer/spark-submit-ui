@@ -1,6 +1,6 @@
 package controllers
 
-import models.{Group, User, UserGroup}
+import models._
 import play.api.Logger
 import play.api.data.Form
 import play.api.data.Forms._
@@ -12,7 +12,6 @@ import play.api.mvc.{Action, Controller}
   * 用户管理相关
   */
 object UserManager extends Controller with  Secured{
-
 
 
   /**
@@ -50,14 +49,15 @@ object UserManager extends Controller with  Secured{
 
 
   /**
-    * 新增用户到组
+    * 新增&&修改用户到组
     * @return
     */
   def addgroup(email:String,name:String,group:String,queue:String) =IsAuthenticated{
     username => implicit request =>
       val user: UserGroup = UserGroup(email,name,group,queue)
-      UserGroup.addGroup(user)
-      Ok("成功!")
+      UserGroup.addOrUpdate(user) match {
+        case user=> Ok(user.unapply(user).getOrElse("系统错误,修改失败!"))
+      }
   }
 
 

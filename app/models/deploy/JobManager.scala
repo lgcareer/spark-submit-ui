@@ -1,23 +1,21 @@
 package models
 
 import java.io.{File, IOException}
-import java.util.UUID
 import java.util.concurrent.Executors._
 
 import akka.actor.{ActorRef, Props}
 import com.typesafe.config.Config
 import models.actor.InstrumentedActor
+import models.deploy.CreateBatchRequest
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
-import models.utils.CreateBatchRequest
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkEnv
 import org.joda.time.DateTime
 import play.api.Logger
-import play.api.cache.Cache
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 
-import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
+import scala.concurrent.{ExecutionContext, Future}
 import ExecutionContext.Implicits.global
 import scala.collection.mutable
 

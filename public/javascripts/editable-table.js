@@ -88,7 +88,7 @@ var EditableTable = function () {
             $('#editable-sample a.delete').live('click', function (e) {
                 e.preventDefault();
 
-                if (confirm("确定删除该用户?") == false) {
+                if (confirm("确定删除 "+$(this).parents('tr').find("td:eq(0)").text()+"?") == false) {
                     return;
                 }
 
@@ -97,7 +97,6 @@ var EditableTable = function () {
                 //获取用户邮箱
                 var $thisTD = $(this).parents('tr').find("td:eq(0)");
                 console.log($thisTD);
-                oTable.fnDeleteRow(nRow);
                 $(document).ready(function(){
                         $.ajax({
                             type:"GET",
@@ -105,7 +104,9 @@ var EditableTable = function () {
                             data:{email:$thisTD.text()},
                             dataType:"text",
                             success:function(data){
+                                 oTable.fnDeleteRow(nRow);
                                 alert($thisTD.text()+" "+data);
+
                             }
                         });
                 });
@@ -135,24 +136,23 @@ var EditableTable = function () {
                     nEditing = nRow;
                 } else if (nEditing == nRow && this.innerHTML == "Save") {
                     /* Editing this row and want to save it */
-                    saveRow(oTable, nEditing);
-                    nEditing = null;
-                    //alert("Updated! Do not forget to do some ajax to sync with backend :)");
-                                //获取用户邮箱
-                                    var $email = $(this).parents('tr').find("td:eq(0)");
-                                    var $name = $(this).parents('tr').find("td:eq(1)");
-                                    var $group = $(this).parents('tr').find("td:eq(2)");
-                                    var $queue = $(this).parents('tr').find("td:eq(3)");
 
-                                    oTable.fnDeleteRow(nRow);
+                            var jqInputs = $('input', nEditing);
+                                    var $email = jqInputs[0].value;
+                                    var $name = jqInputs[1].value;
+                                    var $group = jqInputs[2].value;
+                                    var $queue = jqInputs[3].value;
+
                                     $(document).ready(function(){
                                             $.ajax({
                                                 type:"GET",
                                                 url:"/addgroup",
-                                                data:{email:$email.text(),name:$name.text(),group:$group.text(),queue:$queue.text()},
+                                                data:{email:$email,name:$name,group:$group,queue:$queue},
                                                 dataType:"text",
                                                 success:function(data){
-                                                    alert($email.text()+" "+data);
+                                                    saveRow(oTable, nEditing);
+                                                    nEditing = null;
+                                                    alert($email+" "+data);
                                                 }
                                             });
                                     });

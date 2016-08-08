@@ -9,7 +9,7 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import models.utils.CreateBatchRequest
+import models.deploy.CreateBatchRequest
 import play.api.Logger
 
 import scala.concurrent.duration.Duration
