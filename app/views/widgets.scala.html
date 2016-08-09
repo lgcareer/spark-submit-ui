@@ -1,5 +1,5 @@
-@(map: Map[String,String])
-    @sidebar={
+@(map: Map[String, String])
+    @sidebar = {
         <div class="sidebar-menu toggle-others fixed">
 
             <div class="sidebar-menu-inner">
@@ -38,7 +38,6 @@
 
 
                 </header>
-
 
 
                 <ul id="main-menu" class="main-menu">
@@ -224,21 +223,50 @@
 
         </div>
     }
-@main("Neptun Dashboard")(sidebar){
+    @main("Neptun Dashboard")(sidebar) {
 
-<div class="bs-example4" data-example-id="contextual-table">
-    <table class="table table-hover">
-        <tr><th><font color="SteelBlue"><h3>Host</h3></font></th><th><font color="SteelBlue"><h3>Service</h3></font></th></tr>
-        @for((key, value) <- map) {
-            <tr>
-                @if(value.contains("Worker")){
-                <td><font color="SteelBlue"><h4>@key</h4></font></td><td><font color="CornflowerBlue"><h4>@value</h4></font></td>
-                }else {
-                <td><font color="SteelBlue"><h4>@key</h4></font></td><td><font color="CadetBlue"><h4>@value</h4></font></td>
+        <div class="page-title">
+
+            <div class="title-env">
+                <h1 class="title">服务划分</h1>
+                <p class="description">服务划分面板</p>
+            </div>
+
+            <div class="breadcrumb-env">
+
+                <ol class="breadcrumb bc-1">
+                    <li>
+                        <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                    </li>
+                    <li>
+
+                        <a href="#">节点分布情况</a>
+                    </li>
+                    <li class="active">
+
+                        <strong>服务划分</strong>
+                    </li>
+                </ol>
+
+            </div>
+
+        </div>
+
+
+        <div class="bs-example4" data-example-id="contextual-table">
+            <table class="table table-hover">
+                <tr><th><font color="SteelBlue"><h3>Host</h3></font></th><th><font color="SteelBlue"><h3>
+                    Service</h3></font></th></tr>
+                @for((key, value) <- map) {
+                    <tr>
+                    @if(value.contains("Worker")) {
+                        <td><font color="SteelBlue"><h4>@key</h4></font></td> <td><font color="CornflowerBlue"><h4>@value</h4></font></td>
+                    } else {
+                        <td><font color="SteelBlue"><h4>@key</h4></font></td> <td><font color="CadetBlue"><h4>@value</h4></font></td>
+                    }
+                    </tr>
                 }
-            </tr>
-        }
-    </table>
-</div>
-}
-@copyright()
+            </table>
+        </div>
+    }
+    @copyright()

@@ -1,12 +1,15 @@
-2016-08-08 17:33:03,001 - [INFO] - from play in pool-4-thread-3 
+2016-08-09 11:14:19,945 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-08-08 17:33:12,811 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-09 11:14:24,806 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-08 17:33:13,057 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-09 11:14:25,587 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-08 17:33:13,157 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-09 11:14:25,681 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
+
+2016-08-09 11:15:33,379 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+UBGW
 

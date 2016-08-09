@@ -1,332 +1,353 @@
-@sidebar={
-	<div class="sidebar-menu toggle-others fixed">
+    @sidebar = {
+        <div class="sidebar-menu toggle-others fixed">
 
-		<div class="sidebar-menu-inner">
+            <div class="sidebar-menu-inner">
 
-			<header class="logo-env">
+                <header class="logo-env">
 
-					<!-- logo -->
-				<div class="logo">
-					<a href="@routes.Application.index" class="logo-expanded">
-						<img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
-					</a>
+                        <!-- logo -->
+                    <div class="logo">
+                        <a href="@routes.Application.index" class="logo-expanded">
+                            <img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
+                        </a>
 
-					<a href="@routes.Application.index" class="logo-collapsed">
-						<img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
-					</a>
-				</div>
+                        <a href="@routes.Application.index" class="logo-collapsed">
+                            <img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
+                        </a>
+                    </div>
 
-					<!-- This will toggle the mobile menu and will be visible only on mobile devices -->
-				<div class="mobile-menu-toggle visible-xs">
-					<a href="#" data-toggle="user-info-menu">
-						<i class="fa-bell-o"></i>
-						<span class="badge badge-success">7</span>
-					</a>
+                        <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="#" data-toggle="user-info-menu">
+                            <i class="fa-bell-o"></i>
+                            <span class="badge badge-success">7</span>
+                        </a>
 
-					<a href="#" data-toggle="mobile-menu">
-						<i class="fa-bars"></i>
-					</a>
-				</div>
+                        <a href="#" data-toggle="mobile-menu">
+                            <i class="fa-bars"></i>
+                        </a>
+                    </div>
 
-					<!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
-				<div class="settings-icon">
-					<a href="#" data-toggle="settings-pane" data-animate="true">
-						<i class="fa fa-cog fa-4x"></i>
-					</a>
-				</div>
+                        <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                    <div class="settings-icon">
+                        <a href="#" data-toggle="settings-pane" data-animate="true">
+                            <i class="fa fa-cog fa-4x"></i>
+                        </a>
+                    </div>
 
-
-			</header>
-
+                </header>
 
 
-			<ul id="main-menu" class="main-menu">
-					<!-- add class "multiple-expanded" to allow multiple submenus to open -->
-					<!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-				<li>
-					<a href="@routes.Application.index">
-						<i class="fa fa-dashboard fa-fw"></i>
-						<span class="title">仪表盘</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-check-square-o"></i>
-						<span class="title">数据应用面板</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.SparkJar.executejarpage">
-								<span class="title">SPARK-JAR应用</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.SparkSql.sqlpage">
-								<span class="title">SPARK-SQL应用</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.SparkStream.stream">
-								<span class="title">SPARK-STREAM基于HDFS的应用</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.SparkStream.stream">
-								<span class="title">SPARK-STREAM基于KAFKA的应用</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-table"></i>
-						<span class="title">APP数据</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.YarnList.yarnlist">
-								<span class="title">Yarn数据列表</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.YarnList.sparklist">
-								<span class="title">Spark数据列表</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.YarnList.workerInfo">
-								<span class="title">Spark Worker信息</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-anchor"></i>
-						<span class="title">任务调度</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.Oozie.oozie">
-								<span class="title">Oozie任务调度</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.Oozie.oozie">
-								<span class="title">Spark任务调度</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.Oozie.oozie">
-								<span class="title">Yarn任务调度</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-bell"></i>
-						<span class="title">App Tracking</span>
-						<span class="label label-success pull-right">50</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.RunTask.runTask">
-								<span class="title">Spark Stream 运行任务列表</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.MonitorController.jobs">
-								<span class="title">Spark Sql任务列表</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.RunTask.runTaskLogs">
-								<span class="title">Spark 运行任务日志</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-wrench"></i>
-						<span class="title">报警管理</span>
-						<span class="label label-success pull-right">5</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.AlarmDisk.alarmDisk">
-								<span class="title">磁盘空间报警</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.AlarmDisk.alarmDisk">
-								<span class="title">内存相关报警</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.AlarmDisk.alarmDisk">
-								<span class="title">其他报警</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-users"></i>
-						<span class="title">用户管理</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.Usertally.usertatol">
-								<span class="title">用户统计</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.UserManager.userlist">
-								<span class="title">用户管理</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.Usertally.usertatol">
-								<span class="title">权限分配</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="opened active">
-					<a href="#">
-						<i class="fa fa-arrows-alt"></i>
-						<span class="title">节点分布情况</span>
-					</a>
-					<ul>
-						<li>
-							<a href="@routes.Serviceplan.servicedao">
-								<span class="title">服务划分</span>
-							</a>
-						</li>
-						<li>
-							<a href="@routes.Serviceplan.graph">
-								<span class="title">Graph展示</span>
-							</a>
-						</li>
-						<li class="active">
-							<a href="@routes.Serviceplan.functionplan">
-								<span class="title">功能划分</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
 
-		</div>
+                <ul id="main-menu" class="main-menu">
+                        <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+                        <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+                    <li>
+                        <a href="@routes.Application.index">
+                            <i class="fa fa-dashboard fa-fw"></i>
+                            <span class="title">仪表盘</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-check-square-o"></i>
+                            <span class="title">数据应用面板</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.SparkJar.executejarpage">
+                                    <span class="title">SPARK-JAR应用</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.SparkSql.sqlpage">
+                                    <span class="title">SPARK-SQL应用</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.SparkStream.stream">
+                                    <span class="title">SPARK-STREAM基于HDFS的应用</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.SparkStream.stream">
+                                    <span class="title">SPARK-STREAM基于KAFKA的应用</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+                            <span class="title">APP数据</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.YarnList.yarnlist">
+                                    <span class="title">Yarn数据列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.YarnList.sparklist">
+                                    <span class="title">Spark数据列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.YarnList.workerInfo">
+                                    <span class="title">Spark Worker信息</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-anchor"></i>
+                            <span class="title">任务调度</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.Oozie.oozie">
+                                    <span class="title">Oozie任务调度</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Oozie.oozie">
+                                    <span class="title">Spark任务调度</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Oozie.oozie">
+                                    <span class="title">Yarn任务调度</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bell"></i>
+                            <span class="title">App Tracking</span>
+                            <span class="label label-success pull-right">50</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.RunTask.runTask">
+                                    <span class="title">Spark Stream 运行任务列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.MonitorController.jobs">
+                                    <span class="title">Spark Sql任务列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.RunTask.runTaskLogs">
+                                    <span class="title">Spark 运行任务日志</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-wrench"></i>
+                            <span class="title">报警管理</span>
+                            <span class="label label-success pull-right">5</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.AlarmDisk.alarmDisk">
+                                    <span class="title">磁盘空间报警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.AlarmDisk.alarmDisk">
+                                    <span class="title">内存相关报警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.AlarmDisk.alarmDisk">
+                                    <span class="title">其他报警</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="title">用户管理</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.Usertally.usertatol">
+                                    <span class="title">用户统计</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.UserManager.userlist">
+                                    <span class="title">用户管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Usertally.usertatol">
+                                    <span class="title">权限分配</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="opened active">
+                        <a href="#">
+                            <i class="fa fa-arrows-alt"></i>
+                            <span class="title">节点分布情况</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.Serviceplan.servicedao">
+                                    <span class="title">服务划分</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Serviceplan.graph">
+                                    <span class="title">Graph展示</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="@routes.Serviceplan.functionplan">
+                                    <span class="title">功能划分</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-	</div>
-}
-@main("Neptun Dashboard")(sidebar){
-<!doctype html>
-<html lang="en">
-<head>
+            </div>
+
+        </div>
+    }
+@main("Neptun Dashboard")(sidebar) {
+
+
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">服务划分</h1>
+            <p class="description">服务划分面板</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+
+                    <a href="#">节点分布情况</a>
+                </li>
+                <li class="active">
+
+                    <strong>功能划分</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <div id="container1"></div>
+    <div id="container2"></div>
     <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
     <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
     <script>
-			$(function () {
-			    var chart;
+            $(function () {
+                var chart;
 
-			    $(document).ready(function () {
+                $(document).ready(function () {
 
-			    	// Build the chart
-			        $('#container1').highcharts({
-			            chart: {
-			                plotBackgroundColor: null,
-			                plotBorderWidth: null,
-			                plotShadow: false
-			            },
-			            title: {
-			                text: '集群功能划分'
-			            },
-			            tooltip: {
-			        	    pointFormat: '{series.name}'
-			            },
-			            plotOptions: {
-			                pie: {
-			                    allowPointSelect: true,
-			                    cursor: 'pointer',
-			                    dataLabels: {
-			                        enabled: true
-			                    },
-			                    showInLegend: true
-			                }
-			            },
-			            series: [{
-			                <!--type: 'pie',-->
-			                type: '',
-			                name: '集群节点数',
-			                data: [
-			                    ['Spark',6],
-			                    ['Hadoop',5],
-			                    ['Hbase',3],
-			                    ['Hive',1],
-			                    ['Mysql',1]
-			                ]
-			            }]
-			        });
-			    });
+                    // Build the chart
+                    $('#container1').highcharts({
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false
+                        },
+                        title: {
+                            text: '集群功能划分'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: true
+                                },
+                                showInLegend: true
+                            }
+                        },
+                        series: [{
+                            <!--type: 'pie',-->
+                            type: '',
+                            name: '集群节点数',
+                            data: [
+                                ['Spark',6],
+                                ['Hadoop',5],
+                                ['Hbase',3],
+                                ['Hive',1],
+                                ['Mysql',1]
+                            ]
+                        }]
+                    });
+                });
 
-			});
-		</script>
-	<script>
-			$(function () {
-			    var chart;
+            });
+    </script>
+    <script>
+            $(function () {
+                var chart;
 
-			    $(document).ready(function () {
+                $(document).ready(function () {
 
-			    	// Build the chart
-			        $('#container2').highcharts({
-			            chart: {
-			                plotBackgroundColor: null,
-			                plotBorderWidth: null,
-			                plotShadow: false
-			            },
-			            title: {
-			                text: '集群功能划分'
-			            },
-			            tooltip: {
-			        	    pointFormat: '{series.name}'
-			            },
-			            plotOptions: {
-			                pie: {
-			                    allowPointSelect: true,
-			                    cursor: 'pointer',
-			                    dataLabels: {
-			                        enabled: true
-			                    },
-			                    showInLegend: true
-			                }
-			            },
-			            series: [{
-			                type: 'pie',
-			                name: '集群节点数',
-			                data: [
-			                    ['Spark',6],
-			                    ['Hadoop',5],
-			                    ['Hbase',3],
-			                    ['Hive',1],
-			                    ['Mysql',1]
-			                ]
-			            }]
-			        });
-			    });
+                    // Build the chart
+                    $('#container2').highcharts({
+                        chart: {
+                            plotBackgroundColor: null,
+                            plotBorderWidth: null,
+                            plotShadow: false
+                        },
+                        title: {
+                            text: '集群功能划分'
+                        },
+                        tooltip: {
+                            pointFormat: '{series.name}'
+                        },
+                        plotOptions: {
+                            pie: {
+                                allowPointSelect: true,
+                                cursor: 'pointer',
+                                dataLabels: {
+                                    enabled: true
+                                },
+                                showInLegend: true
+                            }
+                        },
+                        series: [{
+                            type: 'pie',
+                            name: '集群节点数',
+                            data: [
+                                ['Spark',6],
+                                ['Hadoop',5],
+                                ['Hbase',3],
+                                ['Hive',1],
+                                ['Mysql',1]
+                            ]
+                        }]
+                    });
+                });
 
-			});
-		</script>
-</head>
-<body>
-<div id="container2" style="min-width:700px;height:400px">
-</div>
-<div id="container1" style="min-width:700px;height:400px">
-</div>
-</body>
-</html>
+            });
+    </script>
+
 }
 @copyright()

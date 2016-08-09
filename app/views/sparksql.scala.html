@@ -1,4 +1,4 @@
-@sidebar=    {
+@sidebar = {
     <div class="sidebar-menu toggle-others fixed">
 
         <div class="sidebar-menu-inner">
@@ -37,7 +37,6 @@
 
 
             </header>
-
 
 
             <ul id="main-menu" class="main-menu">
@@ -223,7 +222,7 @@
 
     </div>
 }
-@main("Neptune SparkSql")(sidebar){
+@main("Neptune SparkSql")(sidebar) {
 
     <link href="@routes.Assets.at("stylesheets/datapp.css")" rel="stylesheet">
     <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
@@ -233,6 +232,32 @@
     <script src="@routes.Assets.at("javascripts/sqlToDisplay.js")"></script>
     <script src="@routes.Assets.at("javascripts/codemirror.js")"></script>
     <script src="@routes.Assets.at("javascripts/sql.js")"></script>
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">Spark Sql</h1>
+            <p class="description">Spark Sql 交互方式</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+
+                    <a href="#">数据应用面板</a>
+                </li>
+                <li class="active">
+
+                    <strong>SPARK-SQL应用</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
     <div class="graphs">
         <div class="clearfix"> </div>
         <div class="paneltxt paneltxt-color paneltxt-success">
@@ -258,11 +283,10 @@
                     </a>
 
 
-
                 </div>
             </div>
 
-           <!-- <div class="paneltxt paneltxt-body" id="sql" contenteditable="true"></div> -->
+                <!-- <div class="paneltxt paneltxt-body" id="sql" contenteditable="true"></div> -->
             <div class="paneltxt paneltxt-body">
                 <textarea class="paneltxt paneltxt-body" id="sql" ></textarea>
             </div>

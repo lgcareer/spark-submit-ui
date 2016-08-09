@@ -1,4 +1,4 @@
-@sidebar={
+@sidebar = {
     <div class="sidebar-menu toggle-others fixed">
 
         <div class="sidebar-menu-inner">
@@ -37,7 +37,6 @@
 
 
             </header>
-
 
 
             <ul id="main-menu" class="main-menu">
@@ -224,7 +223,35 @@
     </div>
 }
 @main("Neptun Dashboard")(sidebar) {
-    <!----End Calender -------->
+
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">Yarn调度任务信息列表</h1>
+            <p class="description">Yarn调度任务信息列表view面板</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+
+                    <a href="#">App数据</a>
+                </li>
+                <li class="active">
+
+                    <strong>Yarn数据列表</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
     <div class="graphs">
 
         <div class="col_1">

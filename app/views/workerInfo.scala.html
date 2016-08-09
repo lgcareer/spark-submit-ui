@@ -1,4 +1,4 @@
-@sidebar={
+@sidebar = {
     <div class="sidebar-menu toggle-others fixed">
 
         <div class="sidebar-menu-inner">
@@ -37,7 +37,6 @@
 
 
             </header>
-
 
 
             <ul id="main-menu" class="main-menu">
@@ -223,35 +222,65 @@
 
     </div>
 }
-@main("Neptun Dashboard")(sidebar){
-<div class="graphs">
-    <h3 style="text-align:center;"> Spark Worker信息  </h3>
-    <div class="bs-example4" data-example-id="contextual-table">
-        <div id = "workerInfo">
-        </div>
-    </div>
-    @copyright()
-</div>
+@main("Neptun Dashboard")(sidebar) {
 
- <script charset="utf-8">
-    $(document).ready(function(){
-        $.ajax({
-            type:"GET",
-            url:"/workerlist",
-            dataType:"json",
-            success:function(data){
-              var head= "<table class=\"table\"><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
-                var myobj=eval(data);
-                var url = myobj.url;
-                var status = myobj.status;
-                var workers=myobj.workers;
-                for(var i=0;i<workers.length;i++){
-               head += "<tr class= \"success\"><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+workers[i].coresused+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+ new Date(workers[i].startedTime).toLocaleString()+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
-                                    }
-                head += " </table>";
-                $('#workerInfo').html(head);
-            }
-        });
-   });
-  </script>
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">Spark Worker信息</h1>
+            <p class="description">Spark Worker信息view面板</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+
+                    <a href="#">App数据</a>
+                </li>
+                <li class="active">
+
+                    <strong>Spark Worker信息</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="graphs">
+        <h3 style="text-align:center ;"> Spark Worker信息  </h3>
+        <div class="bs-example4" data-example-id="contextual-table">
+            <div id = "workerInfo">
+            </div>
+        </div>
+        @copyright()
+    </div>
+
+    <script charset="utf-8">
+            $(document).ready(function(){
+                $.ajax({
+                    type:"GET",
+                    url:"/workerlist",
+                    dataType:"json",
+                    success:function(data){
+                        var head= "<table class=\"table\"><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
+                        var myobj=eval(data);
+                        var url = myobj.url;
+                        var status = myobj.status;
+                        var workers=myobj.workers;
+                        for(var i=0;i<workers.length;i++){
+                            head += "<tr class= \"success\"><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+workers[i].coresused+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+ new Date(workers[i].startedTime).toLocaleString()+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
+                        }
+                        head += " </table>";
+                        $('#workerInfo').html(head);
+                    }
+                });
+            });
+    </script>
 }

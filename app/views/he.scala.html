@@ -1,6 +1,7 @@
-@(jobId:String)
+@(jobId: String)
 
-@sidebar = { <div class="sidebar-menu toggle-others fixed">
+@sidebar = {
+    <div class="sidebar-menu toggle-others fixed">
 
         <div class="sidebar-menu-inner">
 
@@ -38,7 +39,6 @@
 
 
             </header>
-
 
 
             <ul id="main-menu" class="main-menu">
@@ -223,8 +223,37 @@
         </div>
 
     </div>
-    }
-@main("Neptun Dashboard")(sidebar){
+}
+@main("Neptun Dashboard")(sidebar) {
+
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">Spark任务日志</h1>
+            <p class="description">Spark任务日志view面板</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+
+                    <a href="#">App Tracking</a>
+                </li>
+                <li class="active">
+
+                    <strong>Spark 运行任务日志</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
     <div class="graphs">
         <ul id="logs">
             <p><li ><font color="#00CD00">提交成功!</font></li><li>
@@ -232,55 +261,54 @@
         </ul>
 
 
+        <div id="testScroll2" style="width:100% ; height: 500px ; overflow-y: scroll ; float: left ;"></div>
 
-<div id="testScroll2" style="width:100%; height: 500px; overflow-y: scroll;float: left;"></div>
+        <script charset="utf-8">
 
-<script charset="utf-8">
+                var $end = $('<li><font color="#0000">'+ "执行结束!" + '</font></li>');
+                var $logs = $('#logs');
+                var index =0
+                var timeBox =setInterval(
+                        function () {
+                            $(document).ready(function(){
+                                var id="@jobId"+"_"+index
+                                $.ajax({
+                                    type:"GET",
+                                    url:"/logs",
+                                    data: {id: id},
+                                    dataType:"text",
+                                    success:function(data){
+                                        var $el;
+                                        if(data.indexOf('Exception')==0 || data.indexOf('at')==1){
+                                            $el = $('<li><font color="#FF0000">'+ data + '</font></li>');
+                                        }
+                                        else{
+                                            $el = $('<li><font color="#000000">'+ data + '</font></li>');
+                                        }
+                                        if(data!= "none" && data!='finish'){
+                                            $("#testScroll2").append($el)
+                                            $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
+                                            index++
+                                        }
 
-     var $end = $('<li><font color="#0000">'+ "执行结束!" + '</font></li>');
-    var $logs = $('#logs');
-     var index =0
-       var timeBox =setInterval(
-            function () {
-              $(document).ready(function(){
-               var id="@jobId"+"_"+index
-                $.ajax({
-                    type:"GET",
-                    url:"/logs",
-                    data: {id: id},
-                    dataType:"text",
-                    success:function(data){
-                        var $el;
-                        if(data.indexOf('Exception')==0 || data.indexOf('at')==1){
-                            $el = $('<li><font color="#FF0000">'+ data + '</font></li>');
-                        }
-                        else{
-                             $el = $('<li><font color="#000000">'+ data + '</font></li>');
-                        }
-                       if(data!= "none" && data!='finish'){
-                         $("#testScroll2").append($el)
-                         $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
-                           index++
-                       }
+                                        if(data=='finish'){
+                                            $("#testScroll2").append($end)
+                                            $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
+                                            clearInterval(timeBox);
+                                        }
+                                    },
+                                    error: function(e) {
+                                        clearInterval(timeBox);
+                                    },
+                                    complete: function (XHR, TS) { XHR = null }
 
-                       if(data=='finish'){
-                            $("#testScroll2").append($end)
-                            $("#testScroll2").scrollTop($("#testScroll2")[0].scrollHeight);
-                             clearInterval(timeBox);
-                       }
-                    },
-                           error: function(e) {
-                               clearInterval(timeBox);
+                                });
+                            });
                         },
-                   complete: function (XHR, TS) { XHR = null }
+                        50
+                )
 
-                });
-           });
-         },
-            50
-    )
-
-  </script>
+        </script>
     </div>
     <div class="clearfix"> </div>
     @copyright()

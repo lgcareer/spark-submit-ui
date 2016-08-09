@@ -1,4 +1,4 @@
-@sidebar=   {
+@sidebar = {
     <div class="sidebar-menu toggle-others fixed">
 
         <div class="sidebar-menu-inner">
@@ -39,7 +39,6 @@
             </header>
 
 
-
             <ul id="main-menu" class="main-menu">
                     <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                     <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
@@ -65,7 +64,7 @@
                                 <span class="title">SPARK-SQL应用</span>
                             </a>
                         </li>
-                        <li  class="active">
+                        <li class="active">
                             <a href="@routes.SparkStream.stream">
                                 <span class="title">SPARK-STREAM基于HDFS的应用</span>
                             </a>
@@ -226,32 +225,60 @@
 
 @main("Neputune Spark-jar-uploadJar")(sidebar) {
 
-<div class="graphs">
-<div class="xs">
- <h3>Neptune Spark Stream</h3>
 
- <div class="bs-example" data-example-id="form-validation-states-with-icons">
+    <div class="page-title">
 
-    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-    <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-  </div>
-@helper.form(action = routes.SparkStream.stremupload, 'enctype -> "multipart/form-data") {
-  <div class="form-group">
-    <label for="exampleInputFile">文件上传</label>
-    <input type="file" name="file">
-    <p class="help-block">请上传需要执行的jar文件！</p>
-  </div>
-  <div class="panel-footer">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-        <button class="btn-success btn" type="submit">提交</button>
-        <button class="btn-inverse btn" type="reset">重置</button>
-      </div>
+        <div class="title-env">
+            <h1 class="title">Spark Stream</h1>
+            <p class="description">Spark Stream 交互方式</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+
+                    <a href="#">数据应用面板</a>
+                </li>
+                <li class="active">
+
+                    <strong>SPARK-STREAM基于HDFS的应用</strong>
+                </li>
+            </ol>
+
+        </div>
+
     </div>
-  </div>
-}
 
-</div>
-</div>
-@copyright()
+    <div class="graphs">
+        <div class="xs">
+            <h3>Neptune Spark Stream</h3>
+
+            <div class="bs-example" data-example-id="form-validation-states-with-icons">
+
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+            </div>
+            @helper.form(action = routes.SparkStream.stremupload, 'enctype -> "multipart/form-data") {
+                <div class="form-group">
+                    <label for="exampleInputFile">文件上传</label>
+                    <input type="file" name="file">
+                    <p class="help-block">请上传需要执行的jar文件！</p>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <button class="btn-success btn" type="submit">提交</button>
+                            <button class="btn-inverse btn" type="reset">重置</button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+    @copyright()
 }
