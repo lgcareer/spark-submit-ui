@@ -20,6 +20,6 @@ object Yarn extends Controller with Secured {
     val vcpu = "100"
     val maxRunningApps = "10"
     val alert =XmlParse.XMLParses(queueName,memory,vcpu,maxRunningApps)
-    Ok(views.html.dispatchyarn("测试"))
+    Ok(views.html.dispatchyarn("test"))
   }
 }
