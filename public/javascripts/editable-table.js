@@ -18,10 +18,10 @@ var EditableTable = function () {
             function editRow(oTable, nRow) {
                 var aData = oTable.fnGetData(nRow);
                 var jqTds = $('>td', nRow);
-                jqTds[0].innerHTML = '<input type="text" class="form-control small" value="' + aData[0] + '">';
-                jqTds[1].innerHTML = '<input type="text" class="form-control small" value="' + aData[1] + '">';
-                jqTds[2].innerHTML = '<input type="text" class="form-control small" value="' + aData[2] + '">';
-                jqTds[3].innerHTML = '<input type="text" class="form-control small" value="' + aData[3] + '">';
+                jqTds[0].innerHTML = '<input type="text" class="form-control_2 smallstat" value="' + aData[0] + '">';
+                jqTds[1].innerHTML = '<input type="text" class="form-control_2 smallstat" value="' + aData[1] + '">';
+                jqTds[2].innerHTML = '<input type="text" class="form-control_2 smallstat" value="' + aData[2] + '">';
+                jqTds[3].innerHTML = '<input type="text" class="form-control_2 smallstat" value="' + aData[3] + '">';
                 jqTds[4].innerHTML = '<a class="edit" href="">Save</a>';
                 jqTds[5].innerHTML = '<a class="cancel" href="">Cancel</a>';
             }
@@ -57,7 +57,7 @@ var EditableTable = function () {
                 "sDom": "<'row'<'col-lg-6'l><'col-lg-6'f>r>t<'row'<'col-lg-6'i><'col-lg-6'p>>",
                 "sPaginationType": "bootstrap",
                 "oLanguage": {
-                    "sLengthMenu": "_MENU_ records per page",
+                    "sLengthMenu": "_MENU_ 条记录",
                     "oPaginate": {
                         "sPrevious": "Prev",
                         "sNext": "Next"
@@ -69,9 +69,8 @@ var EditableTable = function () {
                     }
                 ]
             });
-
-            jQuery('#editable-sample_wrapper .dataTables_filter input').addClass("form-control medium"); // modify table search input
-            jQuery('#editable-sample_wrapper .dataTables_length select').addClass("form-control xsmall"); // modify table per page dropdown
+            jQuery('#editable-sample_wrapper .dataTables_filter input').addClass("form-control1"); // modify table search input
+            jQuery('#editable-sample_wrapper .dataTables_length select').addClass("form-control1"); // modify table per page dropdown
 
             var nEditing = null;
 
