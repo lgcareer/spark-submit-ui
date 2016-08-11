@@ -75,6 +75,9 @@ GET    /usertatol                     controllers.Usertally.usertatol
 
 #Dispatch
 GET    /dispatch                     controllers.Oozie.oozie
+GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
+GET    /yarndispatch                 controllers.Yarn.yarnDispatch
+GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk

@@ -1,0 +1,52 @@
+@(aa:String)
+@main("Neptun Dashboard"){
+<div class="graphs">
+    <div>
+        @aa
+    </div>
+    <div class="col_1">
+        <div class="xs" >
+            <h3 style="text-align:center ;">  Yarn调度参数列表  </h3>
+            <div class="bs-example4" data-example-id="contextual-table">
+                <table class="table" id = "yarnSchedulerJson">
+
+                </table>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+    <div class="clearfix"> </div>
+    @copyright()
+</div>
+<script charset="utf-8">
+$(document).ready(function(){
+    $.ajax({
+        type:"GET",
+        url:"/yarnSchedulerJson",
+        dataType:"json",
+        success:function(data){
+            var head= "<table border='10' width='438'><tr><th>队列名称</th><th>最大内存</th><th>已使用内存</th><th>最大CPU数</th><th>已使用CPU数</th><th>最大App数</th></tr>"
+            var schedulerJson=eval(data);
+            var childQueues =schedulerJson.scheduler.schedulerInfo.rootQueue.childQueues
+             for(var  x in childQueues){
+                var queueName= childQueues[x].queueName
+                var maxApps= childQueues[x].maxApps
+                var maxResourcesMemory =childQueues[x].maxResources.memory
+                var minResourcesMemory =childQueues[x].minResources.memory
+                var maxResourcesVCores =childQueues[x].maxResources.vCores
+                var minResourcesVCores =childQueues[x].minResources.vCores
+                var usedResourcesMemory =childQueues[x].usedResources.vCores
+                var usedResourcesVCores =childQueues[x].usedResources.vCores
+                if(maxApps <1000) {
+               head += "<tr><td>"+queueName+"</td><td>"+Math.round(maxResourcesMemory/1024)+"G</td><td>"+usedResourcesMemory+"</td><td>"+maxResourcesVCores+"</td><td>"+usedResourcesVCores+"</td><td>"+maxApps+"</td></tr>"
+                    }
+               }
+            head += " </table>";
+            $('#yarnSchedulerJson').html(head);
+        }
+    });
+});
+    </script>
+}
