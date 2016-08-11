@@ -106,17 +106,17 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="@routes.Oozie.oozie">
+                            <a href="@routes.Yarn.yarnDispatch">
                                 <span class="title">Oozie任务调度</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@routes.Oozie.oozie">
+                            <a href="@routes.Yarn.yarnDispatch">
                                 <span class="title">Spark任务调度</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@routes.Oozie.oozie">
+                            <a href="@routes.Yarn.yarnDispatch">
                                 <span class="title">Yarn任务调度</span>
                             </a>
                         </li>
@@ -268,7 +268,7 @@
                     url:"/usergroup",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th>email</th><th>name</th><th>group</th><th>queue</h><th>Edit</th><th>Delete</th></tr></thead><tbody>"
+                        var head= "<thead><tr><th>email</th><th>name</th><th>group</th><th>queue</th><th>Edit</th><th>Delete</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);

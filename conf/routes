@@ -75,6 +75,9 @@ GET    /usertatol                     controllers.Usertally.usertatol
 
 #Dispatch
 GET    /dispatch                     controllers.Oozie.oozie
+GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
+GET    /yarndispatch                 controllers.Yarn.yarnDispatch
+GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
@@ -92,4 +95,4 @@ GET    /userlist                  controllers.UserManager.userlist
 GET   /usergroup                    controllers.UserManager.usergroup
 GET   /rmgroup                      controllers.UserManager.rmgroup(email:String)
 GET  /addgroup                      controllers.UserManager.addgroup(email:String,name:String,group:String,queue:String)
-
+GET  /members                        controllers.Member.members

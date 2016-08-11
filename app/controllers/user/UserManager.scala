@@ -1,9 +1,6 @@
 package controllers
 
 import models._
-import play.api.Logger
-import play.api.data.Form
-import play.api.data.Forms._
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -15,12 +12,15 @@ object UserManager extends Controller with  Secured{
 
 
   /**
-    * 用户组Table页面
+    * 超级用户组Table页面
     * @return
     */
-  def userlist =Action{
-    Ok(views.html.userlist())
+  def userlist =IsAuthenticated{
+    username => implicit request =>
+     if(UserGroup.hasAdminGroup(username)) Ok(views.html.userlist())  else
+    Ok(views.html.memberlist())
   }
+
 
   /**
     * 获取所有用户组列表
@@ -58,19 +58,6 @@ object UserManager extends Controller with  Secured{
       UserGroup.addOrUpdate(user) match {
         case user=> Ok(user.unapply(user).getOrElse("系统错误,修改失败!"))
       }
-  }
-
-
-  /**
-    * 更新用户组
-    * @param email
-    * @param name
-    * @param group
-    * @param queue
-    * @return
-    */
-  def udgroup(email:String,name:String,group:String,queue:String)=Action{
-    Ok("add succus")
   }
 
 
