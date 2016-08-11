@@ -61,5 +61,13 @@ object UserManager extends Controller with  Secured{
   }
 
 
+  def auditList=Action{
+    implicit val residentWrites = Json.writes[User]
+    implicit val clusterListWrites = Json.writes[UserList]
+    val json: JsValue = Json.toJson(UserList(User.findAuditUser))
+    Ok(json)
+  }
+
+
 
 }

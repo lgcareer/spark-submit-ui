@@ -128,7 +128,7 @@
 .paneltxt {
     position: relative;
     background: #ffffff;
-    padding: 20px 30px;
+    padding: 18px 28px;
     border: 0;
     margin-bottom: 30px;
     -webkit-box-shadow: none;
@@ -149,7 +149,7 @@
 }
 .paneltxt .paneltxt-heading > .paneltxt-title {
     float: left;
-    font-size: 17px;
+    font-size: 10px;
 }
 .paneltxt .paneltxt-heading > .paneltxt-title > a {
     color: inherit;
@@ -648,4 +648,7 @@ form.navbar-form.navbar-right {
     background-color: #fde0dc;
     border-color: #f69988 !important;
 }
-
+.paneltxt-title h3{
+    color: #ffffff;
+    font-size:10px;
+}

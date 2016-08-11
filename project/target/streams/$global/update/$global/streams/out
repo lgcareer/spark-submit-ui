@@ -1,4 +1,4 @@
-[info] Updating {file:/Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/}ficusspark-build...
+[info] Updating {file:/Users/king/IdeaProject/ficusspark/project/}ficusspark-build...
 [debug] :: resolving dependencies :: default#ficusspark-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -573,13 +573,13 @@
 [debug] 	found org.apache.commons#commons-compress;1.4.1 in sbt-chain
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
-[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
+[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [info] Resolving org.tukaani#xz;1.0 ...
-[debug] sbt-chain: Checking cache for: dependency: org.tukaani#xz;1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+[debug] sbt-chain: Checking cache for: dependency: org.tukaani#xz;1.0 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.tukaani#xz;1.0
 [debug] 	found org.tukaani#xz;1.0 in sbt-chain
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)]
@@ -1468,7 +1468,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
-[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
+[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
@@ -2300,7 +2300,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
-[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
+[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
@@ -3935,7 +3935,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
-[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
+[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
@@ -5302,7 +5302,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
-[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
+[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
@@ -6136,7 +6136,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
-[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
+[debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}
@@ -7212,19 +7212,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2101ms :: artifacts dl 76ms
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT compile produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT runtime produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT test produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT provided produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT optional produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT compile-internal produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT runtime-internal produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT test-internal produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT plugin produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT sources produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT docs produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT pom produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml
-[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT scala-tool produced in /Users/jhazheng/Documents/gitdata/ficusSpark/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml
-[debug] 	resolve done (2101ms resolve - 76ms download)
+[debug] :: resolution report :: resolve 1253ms :: artifacts dl 46ms
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT compile produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT runtime produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT test produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT provided produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT optional produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT compile-internal produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT runtime-internal produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT test-internal produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT plugin produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT sources produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT docs produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT pom produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml
+[debug] 	report for default#ficusspark-build;0.1-SNAPSHOT scala-tool produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml
+[debug] 	resolve done (1253ms resolve - 46ms download)
 [info] Done updating.

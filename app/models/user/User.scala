@@ -5,9 +5,10 @@ import anorm._
 import play.api.Play.current
 import play.api.db.DB
 
-case class User(email: String, name: String, password: String)
+case class User(email: String, name: String, password: String,status:Int =0,audit:Int=0)
 case class Registration(email:String,name:String,password:String,repassword:String)
 case class Verify(email:String,captcha:String,name:String)
+case class UserList(all:Seq[User])
 
 object User {
 
@@ -17,10 +18,13 @@ object User {
   val simple = {
     get[String]("user.email") ~
       get[String]("user.name") ~
-      get[String]("user.password") map {
-      case email ~ name ~ password => User(email, name, password)
+      get[String]("user.password")~
+      get[Int]("user.status")~
+      get[Int]("user.audit") map {
+      case email ~ name ~ password ~ status ~ audit => User(email, name, password,status,audit)
     }
   }
+
 
 
   /**
@@ -50,6 +54,26 @@ object User {
     }
   }
     }
+
+
+
+  /**
+    * Authenticate a User.
+    */
+  def hasUser(email: String): Boolean = {
+    DB.withConnection { implicit connection =>
+      play.api.db.DB.withConnection { implicit connection =>
+        SQL(
+          """
+         select * from user where
+         email = {email}
+          """).on(
+          'email -> email
+          ).as(User.simple.singleOpt)
+      }
+    }.isDefined
+  }
+
 
   def isActivate(email: String): Option[User] ={
     play.api.db.DB.withConnection { implicit connection =>
@@ -129,7 +153,7 @@ object User {
       SQL(
         """
           insert into user values (
-            {email}, {name}, {password},0
+            {email}, {name}, {password}
           )
         """).on(
         'email -> user.email,
@@ -138,6 +162,20 @@ object User {
       user
     }
   }
+
+
+
+  def findAuditUser: Seq[User] ={
+    DB.withConnection{
+      implicit  connection =>
+      SQL(
+        """
+           select * from user where audit < 1
+        """
+      ).as(User.simple *)
+    }
+  }
+
   }
 
 

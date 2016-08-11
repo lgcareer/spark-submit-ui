@@ -68,10 +68,10 @@ object UserGroup {
   }
 
 
-  def findByEmail(email: String): Option[UserGroup] = {
+  def findByEmail(email: String): Option[String] = {
     play.api.db.DB.withConnection { implicit connection =>
-      SQL("select * from user_group where email = {email}").on(
-        'email -> email).as(UserGroup.simple.singleOpt)
+      SQL("select `group` from user_group where email = {email}").on(
+        'email -> email).as(scalar[String].singleOpt)
     }
   }
 
@@ -135,13 +135,13 @@ object UserGroup {
   }
 
 
-  def findByGroup(userGroup: UserGroup): Seq[UserGroup] ={
+  def findByGroup(userGroup: String): Seq[UserGroup] ={
     play.api.db.DB.withConnection { implicit connection =>
       SQL(
         """
           select * from user_group where `group` ={group}
         """).on(
-        'group -> userGroup.group
+        'group -> userGroup
       ).as(UserGroup.simple *)
     }
   }
@@ -152,4 +152,9 @@ object UserGroup {
         'email -> email).as(UserGroup.simple.singleOpt)
     }.get.group.equals("admin")
   }
+
+
+
+
+
 }

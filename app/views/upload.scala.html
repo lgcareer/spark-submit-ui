@@ -107,17 +107,17 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="@routes.Oozie.oozie">
+                            <a href="@routes.Yarn.yarnDispatch">
                                 <span class="title">Oozie任务调度</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@routes.Oozie.oozie">
+                            <a href="@routes.Yarn.yarnDispatch">
                                 <span class="title">Spark任务调度</span>
                             </a>
                         </li>
                         <li>
-                            <a href="@routes.Oozie.oozie">
+                            <a href="@routes.Yarn.yarnDispatch">
                                 <span class="title">Yarn任务调度</span>
                             </a>
                         </li>
@@ -225,6 +225,9 @@
 }
 @main("Neputune Spark-jar-uploadJar")(sidebar) {
 
+    <link href="@routes.Assets.at("stylesheets/datapp.css")" rel="stylesheet">
+    <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
+
     <div class="page-title">
 
         <div class="title-env">
@@ -253,21 +256,19 @@
     </div>
 
 
-    <link href="@routes.Assets.at("stylesheets/datapp.css")" rel="stylesheet">
-    <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
     <div class="graphs">
         <div class="xs">
         @helper.form(action = routes.SparkJar.executejar, 'id -> "jarForm") {
             <div class="paneltxt paneltxt-color paneltxt-success">
                 <div class="paneltxt-heading">
-                    <h3 class="paneltxt-title">请上传jar包</h3>
+                    <h5 class="panel-title">请上传jar包</h5>
 
                     <div class="paneltxt-options">
                         <a href="#" data-toggle="paneltxt">
                             <i class="linecons-cog"></i>
                         </a>
                         <span>RUN</span>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行执行程序">
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行程序">
                             <span class="fa fa-play" id="submit"></span>
                         </a>
                         <span>设置</span>

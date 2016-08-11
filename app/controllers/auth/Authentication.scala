@@ -18,7 +18,7 @@ object Authentication  extends Controller {
 
   val loginForm = Form(
     tuple(
-      "email" -> text.verifying("用户还未激活",User.isActivate(_).isDefined),
+      "email" -> text.verifying("用户不存在,请先注册",User.hasUser(_)).verifying("用户还未激活",User.isActivate(_).isDefined),
       "password" -> text
     ) verifying ("Invalid email or password", result => result match {
         case (email, password) => User.authenticate(email, password).isDefined
