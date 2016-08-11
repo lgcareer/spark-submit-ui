@@ -1,64 +1,317 @@
 @(form: Form[ExecuteModel])
-@main("Neputune Spark-jar-uploadJar") {
-    <link href="@routes.Assets.at("stylesheets/datapp.css")" rel="stylesheet">
-    <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
-<div class="graphs">
-<div class="xs">
-    @helper.form(action = routes.SparkJar.executejar,'id -> "jarForm") {
-    <div class="paneltxt paneltxt-color paneltxt-success">
-        <div class="paneltxt-heading">
-            <h3 class="paneltxt-title">请上传jar包</h3>
+@sidebar = {
+    <div class="sidebar-menu toggle-others fixed">
 
-            <div class="paneltxt-options">
-                <a href="#" data-toggle="paneltxt">
-                    <i class="linecons-cog"></i>
-                </a>
-                <span>RUN</span>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行执行程序">
-                    <span class="fa fa-play" id="submit"></span>
-                </a>
-                <span>设置</span>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="点此进行设置">
-                    <span class="fa fa-wrench" id="setting"></span>
-                </a>
+        <div class="sidebar-menu-inner">
 
-            </div>
+            <header class="logo-env">
+
+                    <!-- logo -->
+                <div class="logo">
+                    <a href="@routes.Application.index" class="logo-expanded">
+                        <img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
+                    </a>
+
+                    <a href="@routes.Application.index" class="logo-collapsed">
+                        <img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
+                    </a>
+                </div>
+
+                    <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                <div class="mobile-menu-toggle visible-xs">
+                    <a href="#" data-toggle="user-info-menu">
+                        <i class="fa-bell-o"></i>
+                        <span class="badge badge-success">7</span>
+                    </a>
+
+                    <a href="#" data-toggle="mobile-menu">
+                        <i class="fa-bars"></i>
+                    </a>
+                </div>
+
+                    <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                <div class="settings-icon">
+                    <a href="#" data-toggle="settings-pane" data-animate="true">
+                        <i class="fa fa-cog fa-4x"></i>
+                    </a>
+                </div>
+
+
+            </header>
+
+
+            <ul id="main-menu" class="main-menu">
+                    <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+                    <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+                <li>
+                    <a href="@routes.Application.index">
+                        <i class="fa fa-dashboard fa-fw"></i>
+                        <span class="title">仪表盘</span>
+                    </a>
+                </li>
+                <li class="opened active">
+                    <a href="#">
+                        <i class="fa fa-check-square-o"></i>
+                        <span class="title">数据应用面板</span>
+                    </a>
+                    <ul>
+                        <li class="active">
+                            <a href="@routes.SparkJar.executejarpage">
+                                <span class="title">SPARK-JAR应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkSql.sqlpage">
+                                <span class="title">SPARK-SQL应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkStream.stream">
+                                <span class="title">SPARK-STREAM基于HDFS的应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkStream.stream">
+                                <span class="title">SPARK-STREAM基于KAFKA的应用</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-table"></i>
+                        <span class="title">APP数据</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.YarnList.yarnlist">
+                                <span class="title">Yarn数据列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.YarnList.sparklist">
+                                <span class="title">Spark数据列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.YarnList.workerInfo">
+                                <span class="title">Spark Worker信息</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-anchor"></i>
+                        <span class="title">任务调度</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Oozie.oozie">
+                                <span class="title">Oozie任务调度</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Oozie.oozie">
+                                <span class="title">Spark任务调度</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Oozie.oozie">
+                                <span class="title">Yarn任务调度</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        <span class="title">App Tracking</span>
+                        <span class="label label-success pull-right">50</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.RunTask.runTask">
+                                <span class="title">Spark Stream 运行任务列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.MonitorController.jobs">
+                                <span class="title">Spark Sql任务列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.RunTask.runTaskLogs">
+                                <span class="title">Spark 运行任务日志</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-wrench"></i>
+                        <span class="title">报警管理</span>
+                        <span class="label label-success pull-right">5</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">磁盘空间报警</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">内存相关报警</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">其他报警</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span class="title">用户管理</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Usertally.usertatol">
+                                <span class="title">用户统计</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.UserManager.userlist">
+                                <span class="title">用户管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Usertally.usertatol">
+                                <span class="title">权限分配</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrows-alt"></i>
+                        <span class="title">节点分布情况</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Serviceplan.servicedao">
+                                <span class="title">服务划分</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Serviceplan.graph">
+                                <span class="title">Graph展示</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Serviceplan.functionplan">
+                                <span class="title">功能划分</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
 
-        <script>
-                $(function () { $("[data-toggle='tooltip']").tooltip(); });
-        </script>
+    </div>
+}
+@main("Neputune Spark-jar-uploadJar")(sidebar) {
 
-        <div class="panel-body" >
+    <div class="page-title">
 
-            <div class="paneltxt-body">
+        <div class="title-env">
+            <h1 class="title">Spark Jar</h1>
+            <p class="description">Spark Jar 交互方式</p>
+        </div>
 
-                <script type="text/javascript">
-                    var FILENAME="";
-                        jQuery(document).ready(function($)
-                        {
-                            var i = 1,
-                                    $example_dropzone_filetable = $("#example-dropzone-filetable"),
-                                    example_dropzone = $("#advancedDropzone").dropzone({
-                                        url: '/sparkjar',
+        <div class="breadcrumb-env">
 
-                                        // Events
-                                        addedfile: function(file)
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
 
-                                        {
-                                            FILENAME = file.name;
-                                            var location = "/tmp/file/" + FILENAME;
-                                            $("#jarlocation").val(location);
+                    <a href="#">数据应用面板</a>
+                </li>
+                <li class="active">
 
-                                            if(i == 1)
-                                            {
-                                                $example_dropzone_filetable.find('tbody').html('');
-                                            }
+                    <strong>SPARK-JAR应用</strong>
+                </li>
+            </ol>
 
-                                            var size = parseInt(file.size/1024, 10);
-                                            size = size < 1024 ? (size + " KB") : (parseInt(size/1024, 10) + " MB");
+        </div>
 
-                                            var $el = $('<tr>\
+    </div>
+
+
+    <link href="@routes.Assets.at("stylesheets/datapp.css")" rel="stylesheet">
+    <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
+    <div class="graphs">
+        <div class="xs">
+        @helper.form(action = routes.SparkJar.executejar, 'id -> "jarForm") {
+            <div class="paneltxt paneltxt-color paneltxt-success">
+                <div class="paneltxt-heading">
+                    <h3 class="paneltxt-title">请上传jar包</h3>
+
+                    <div class="paneltxt-options">
+                        <a href="#" data-toggle="paneltxt">
+                            <i class="linecons-cog"></i>
+                        </a>
+                        <span>RUN</span>
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行执行程序">
+                            <span class="fa fa-play" id="submit"></span>
+                        </a>
+                        <span>设置</span>
+                        <a href="#" data-toggle="tooltip" data-placement="top" title="点此进行设置">
+                            <span class="fa fa-wrench" id="setting"></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <script>
+                        $(function () { $("[data-toggle='tooltip']").tooltip(); });
+                </script>
+
+                <div class="panel-body" >
+
+                    <div class="paneltxt-body">
+
+                        <script type="text/javascript">
+                                var FILENAME="";
+                                jQuery(document).ready(function($)
+                                {
+                                    var i = 1,
+                                            $example_dropzone_filetable = $("#example-dropzone-filetable"),
+                                            example_dropzone = $("#advancedDropzone").dropzone({
+                                                url: '/sparkjar',
+
+                                                // Events
+                                                addedfile: function(file)
+
+                                                {
+                                                    FILENAME = file.name;
+                                                    var location = "/tmp/file/" + FILENAME;
+                                                    $("#jarlocation").val(location);
+
+                                                    if(i == 1)
+                                                    {
+                                                        $example_dropzone_filetable.find('tbody').html('');
+                                                    }
+
+                                                    var size = parseInt(file.size/1024, 10);
+                                                    size = size < 1024 ? (size + " KB") : (parseInt(size/1024, 10) + " MB");
+
+                                                    var $el = $('<tr>\
                                                     <td class="text-centers">'+(i++)+'</td>\
                                                     <td>'+file.name+'</td>\
                                                     <td><div class="progress progress-striped"><div class="progress-bar progress-bar-warning"></div></div></td>\
@@ -67,132 +320,134 @@
                                                 </tr>');
 
 
-                                            $example_dropzone_filetable.find('tbody').append($el);
-                                            file.fileEntryTd = $el;
-                                            file.progressBar = $el.find('.progress-bar');
-                                        },
+                                                    $example_dropzone_filetable.find('tbody').append($el);
+                                                    file.fileEntryTd = $el;
+                                                    file.progressBar = $el.find('.progress-bar');
+                                                },
 
-                                        uploadprogress: function(file, progress, bytesSent)
-                                        {
-                                            file.progressBar.width(progress + '%');
-                                        },
+                                                uploadprogress: function(file, progress, bytesSent)
+                                                {
+                                                    file.progressBar.width(progress + '%');
+                                                },
 
-                                        success: function(file)
-                                        {
-                                            file.fileEntryTd.find('td:last').html('<span class="text-success">Uploaded</span>');
-                                            file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
-                                        },
+                                                success: function(file)
+                                                {
+                                                    file.fileEntryTd.find('td:last').html('<span class="text-success">Uploaded</span>');
+                                                    file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
+                                                },
 
-                                        error: function(file)
-                                        {
-                                            file.fileEntryTd.find('td:last').html('<span class="text-danger">Failed</span>');
-                                            file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
-                                            $("#jarlocation").val("无效文件!上传失败!!");
-                                        }
+                                                error: function(file)
+                                                {
+                                                    file.fileEntryTd.find('td:last').html('<span class="text-danger">Failed</span>');
+                                                    file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
+                                                    $("#jarlocation").val("无效文件!上传失败!!");
+                                                }
+                                            });
+
+                                    $("#advancedDropzone").css({
+                                        minHeight: 200
                                     });
 
-                            $("#advancedDropzone").css({
-                                minHeight: 200
-                            });
+                                    $("#submit").click(function(){ $("#jarForm").submit(); });
+                                });
+                        </script>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-3 text-centers">
 
-                            $("#submit").click(function(){ $("#jarForm").submit(); });
-                        });
-                </script>
-                <br />
-                <div class="row">
-                    <div class="col-sm-3 text-centers">
+                                <div id="advancedDropzone" class="droppable-area">
+                                    拖拽或点击
+                                </div>
 
-                        <div id="advancedDropzone" class="droppable-area">
-                            拖拽或点击
+                            </div>
+                            <div class="col-sm-9">
+
+                                <table class="table table-bordered table-striped" id="example-dropzone-filetable">
+                                    <thead>
+                                        <tr>
+                                            <th width="1%" class="text-centers">#</th>
+                                            <th width="50%">Jar包名称</th>
+                                            <th width="20%">Upload progress</th>
+                                            <th>文件大小</th>
+                                            <th>上传状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5">Files list will appear here</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="col-sm-9">
-
-                        <table class="table table-bordered table-striped" id="example-dropzone-filetable">
-                            <thead>
-                                <tr>
-                                    <th width="1%" class="text-centers">#</th>
-                                    <th width="50%">Jar包名称</th>
-                                    <th width="20%">Upload progress</th>
-                                    <th>文件大小</th>
-                                    <th>上传状态</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="5">Files list will appear here</td>
-                                </tr>
-                            </tbody>
-                        </table>
 
                     </div>
                 </div>
 
-            </div>
-        </div>
+                <div class="xs">
+                    <h3>执行参数</h3>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="horizontal-form">
+                            <div class="form-horizontal" >
 
-        <div class="xs">
-            <h3>执行参数</h3>
-            <div class="tab-content">
-                <div class="tab-pane active" id="horizontal-form">
-                    <div class="form-horizontal" >
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="executeClass" id="executeClass" placeholder="请输入...">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                        --num-executors</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="numExecutors" id="numExecutors" placeholder="请输入...">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                        --driver-memory</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="driverMemory" id="driverMemory" placeholder="请输入...">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                        --executor-memory</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="executorMemory" id="executorMemory" placeholder="请输入...">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                        --executor-cores</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="executorCores" id="executorCores" placeholder="请输入...">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-n">
+                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control1 input-lg" name="args1" id="args1" placeholder="请输入...">
+                                    </div>
+                                </div>
 
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="executeClass" id="executeClass" placeholder="请输入...">
                             </div>
-                        </div>
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--num-executors</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="numExecutors" id="numExecutors" placeholder="请输入...">
-                            </div>
-                        </div>
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--driver-memory</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="driverMemory" id="driverMemory" placeholder="请输入...">
-                            </div>
-                        </div>
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">
-                                --executor-memory</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="executorMemory" id="executorMemory" placeholder="请输入...">
-                            </div>
-                        </div>
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">--executor-cores</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="executorCores" id="executorCores" placeholder="请输入...">
-                            </div>
-                        </div>
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
-                            </div>
-                        </div>
-                        <div class="form-group mb-n">
-                            <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1 input-lg" name="args1" id="args1" placeholder="请输入...">
-                            </div>
-                        </div>
 
+                        </div>
                     </div>
 
+
                 </div>
+
             </div>
-
-
+        }
         </div>
-
     </div>
-    }
-</div>
-</div>
-@copyright()
 }

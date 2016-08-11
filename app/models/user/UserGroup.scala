@@ -134,4 +134,22 @@ object UserGroup {
     if(rc!=0) CreateSuccess("添加成功!") else CreateFail("添加失败!")
   }
 
+
+  def findByGroup(userGroup: UserGroup): Seq[UserGroup] ={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+          select * from user_group where `group` ={group}
+        """).on(
+        'group -> userGroup.group
+      ).as(UserGroup.simple *)
+    }
+  }
+
+  def hasAdminGroup(email: String):Boolean= {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select * from user_group where email = {email}").on(
+        'email -> email).as(UserGroup.simple.singleOpt)
+    }.get.group.equals("admin")
+  }
 }
