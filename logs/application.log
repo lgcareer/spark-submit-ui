@@ -1,81 +1,30 @@
-2016-08-12 16:53:29,456 - [INFO] - from play in pool-4-thread-2 
+2016-08-12 18:04:18,491 - [INFO] - from play in pool-4-thread-7 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-08-12 16:53:32,526 - [ERROR] - from application in New I/O worker #1 
-
-
-! @713kdogdj - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$RoutesCompilationException: Compilation error[HTTP Verb (GET, POST, ...), include (->) or comment (#) expected]
-	at play.PlaySourceGenerators$$anonfun$2.apply(PlaySourceGenerators.scala:21) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$2.apply(PlaySourceGenerators.scala:9) ~[na:na]
-	at play.Settings$$anonfun$defaultSettings$18.apply(PlaySettings.scala:105) ~[na:na]
-	at play.Settings$$anonfun$defaultSettings$18.apply(PlaySettings.scala:104) ~[na:na]
-	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_45]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_45]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_45]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_45]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_45]
-	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
-
-2016-08-12 16:53:32,564 - [WARN] - from play in New I/O worker #1 
-No application found at invoker init
-
-2016-08-12 16:54:47,880 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:04:47,970 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 16:54:48,799 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:04:52,395 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 16:54:48,951 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:04:52,497 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-12 16:58:58,742 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:07:08,715 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 16:59:00,101 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:07:09,571 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 16:59:00,110 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:07:09,577 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-12 17:01:42,476 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:08:50,750 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 17:01:44,235 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:08:52,517 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 17:01:44,241 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-12 17:03:05,787 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-12 17:03:06,674 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-12 17:03:06,681 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-12 17:04:50,725 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-12 17:04:51,220 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-12 17:04:51,226 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-12 18:08:52,529 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

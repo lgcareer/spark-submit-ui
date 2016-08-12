@@ -356,10 +356,10 @@
                 <div class="pull-right">
                     <select class="form-control meduim" id="usergroup">
                         <option option:selected value="normal">DSP组</option>
-                        <option value="high">大数据组</option>
+                        <option value="default">大数据组</option>
                         <option value="default">用户增长组</option>
-                        <option value="weiboTop">微博头条组</option>
-                        <option value="weiboMonitors">数据监控组</option>
+                        <option value="pt_UserGrowth">微博头条组</option>
+                        <option value="pt_UserGrowth">数据监控组</option>
                     </select>
                 </div>
 
@@ -370,13 +370,13 @@
                     <div class="clearfix"></div>
 
                     <span>
-                        内存资源</span> <div id="mem" class="slider slider-danger" data-min="0" data-postfix=" GB" data-max="1800" data-value="223"></div>
+                        内存资源</span> <div id="mem" class="slider slider-danger" data-min="0" data-postfix=" mb" data-max="1800" data-value="223"></div>
 
                     <span>
-                        CPU资源</span><div id="cpu" class="slider slider-blue" data-postfix=" cores" data-min="0" data-max="1800" data-value="465"></div>
+                        CPU资源</span><div id="cpu" class="slider slider-blue" data-postfix=" vcores" data-min="0" data-max="1800" data-value="465"></div>
 
                     <span>
-                        磁盘资源</span><div id="disk" class="slider slider-purple" data-postfix=" GB" data-min="0" data-max="1800" data-value="897"></div>
+                        最大任务数</span><div id="disk" class="slider slider-purple" data-postfix="" data-min="0" data-max="1800" data-value="897"></div>
 
                 </div>
 
@@ -384,9 +384,20 @@
                         function getvalue(){
                             var mem = $('#mem').text();
                             var cpu = $('#cpu').text();
-                            var disk = $('#disk').text();
+                            var apps = $('#apps').text();
                             var group = $("#usergroup").find("option:selected").val();
-                            swal("确认信息?","选择信息如下 : \n\n用户组: " + group + "\n内存: " + mem + "\n" + "CPU: " + cpu + "\n" + "磁盘空间: " + disk + "\n");
+                            swal("确认信息?","选择信息如下 : \n\n用户组: " + group + "\n内存: " + mem + "\n" + "CPU: " + cpu + "\n" + "并行任务数: " + apps + "\n");
+
+                            $.ajax({
+                                type:"GET",
+                                url:"/UserResource",
+                                data:{queueName:group,mem:mem,cpu:cpu,apps:apps},
+                                dataType:"text",
+                                success:function(data){
+                                    alert("修改成功");
+                                }
+                        });
+
                         };
                 </script>
 

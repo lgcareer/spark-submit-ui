@@ -13,7 +13,7 @@ object XmlParse {
    * @param queueName  队列名称
    * @param memory  最大内存
    * @param vcpu  最大使用CPU数
-   * @param maxRunningApps  最大运行数
+   * @param maxRunningApps  最大并行数
    * @return  String
    */
 
@@ -95,7 +95,7 @@ object XmlParse {
                 {default}
               <queue name={queueName}>
                 <minResources>109227 mb,24 vcores</minResources>
-                <maxResources>{maxRunningApps}</maxResources>
+                <maxResources>{memory},{vcpu}</maxResources>
                 <maxRunningApps>{maxRunningApps}</maxRunningApps>
                 <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
                 <aclSubmitApps>UserGrowth,root</aclSubmitApps>
