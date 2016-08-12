@@ -72,7 +72,7 @@
                         <div class="user-info">
 
                             <div class="user-image">
-                                <a href="extra-profile.html">
+                                <a href="#">
                                     <img src="@routes.Assets.at("images/user-2.png")" class="img-responsive img-circle" />
                                 </a>
                             </div>
@@ -80,7 +80,7 @@
                             <div class="user-details">
 
                                 <h3>
-                                    <a href="extra-profile.html">John Smith</a>
+                                    <a id="userprofile" href="#">John Smith</a>
 
                                         <!-- Available statuses: is-online, is-idle, is-busy and is-offline -->
                                     <span class="user-status is-online"></span>
@@ -88,10 +88,10 @@
 
                                 <p class="user-title">Web Developer</p>
 
-                                <div class="user-links">
-                                    <a href="extra-profile.html" class="btn btn-primary">Edit Profile</a>
-                                    <a href="extra-profile.html" class="btn btn-success">Upgrade</a>
-                                </div>
+                           @*     <div class="user-links">
+                                    <a href="#" class="btn btn-primary">Edit Profile</a>
+                                    <a href="#" class="btn btn-success">Upgrade</a>
+                                </div>*@
 
                             </div>
 
@@ -99,7 +99,7 @@
 
                     </div>
 
-                    <div class="col-md-8 link-blocks-env">
+                    @*<div class="col-md-8 link-blocks-env">
 
                         <div class="links-block left-sep">
                             <h4>
@@ -161,7 +161,7 @@
                             </ul>
                         </div>
 
-                    </div>
+                    </div>*@
 
                 </div>
 
@@ -189,8 +189,8 @@
                                 <i class="fa-bars"></i>
                             </a>
                         </li>
-
-                        <li class="dropdown hover-line">
+<!-- message面板 -->
+                        @*<li class="dropdown hover-line">
                             <a href="#" data-toggle="dropdown">
                                 <i class="fa-envelope-o"></i>
                                 <span class="badge badge-green">15</span>
@@ -312,13 +312,13 @@
                                 </li>
 
                                 <li class="external">
-                                    <a href="blank-sidebar.html">
+                                    <a href="#">
                                         <span>All Messages</span>
                                         <i class="fa-link-ext"></i>
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>*@
 
                         <li class="dropdown hover-line">
                             <a href="#" data-toggle="dropdown">
@@ -452,8 +452,8 @@
                         <li class="dropdown user-profile">
                             <a href="#" data-toggle="dropdown">
                                 <img src="@routes.Assets.at("images/user-4.png")" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
-                                <span>
-                  NPE User
+                                <span id="whoiam">
+                  NEP User
                                     <i class="fa-angle-down"></i>
                                 </span>
                             </a>
@@ -498,6 +498,24 @@
                 @content
             </div>
         </div>
+
+        <script>
+                $(document).ready(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"/whoiam",
+                        dataType:"json",
+                        success:function(data){
+                            var myobj=eval(data);
+                            var usernow=myobj.user;
+                            console.log(usernow);
+                            $('#whoiam').html(usernow + '<i class="fa-angle-down"></i>');
+                            $('#userprofile').html(usernow);
+                        }
+                    });
+                });
+        </script>
+
 
     </body>
 </html>

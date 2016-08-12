@@ -416,37 +416,6 @@ Author: ThemeBucket
     top: 20px;
 }
 
-.state-info .panel {
-    float: right;
-    margin-left: 15px;
-}
-
-.state-info .panel .summary {
-    float: left;
-    margin-right: 20px;
-}
-
-.state-info .panel .summary span {
-    color: #49586e;
-    font-size: 13px;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-
-.state-info .panel .summary h3 {
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 20px;
-    margin: 0;
-}
-
-.state-info .panel .summary h3.green-txt {
-    color: #65cea7;
-}
-
-.state-info .panel .summary h3.red-txt {
-    color: #fc8675;
-}
 
 .chart-bar {
     float: right;
@@ -461,7 +430,7 @@ Author: ThemeBucket
     color: #fff;
 }
 
-.state-overview .panel {
+.state-overview {
     padding: 35px 20px;
 }
 
@@ -515,11 +484,6 @@ Author: ThemeBucket
     MORE STATISTICS BOX
 -------------------------------------*/
 
-.panel.deep-purple-box {
-    background: #49586e;
-    box-shadow: 0 5px 0 #424f63;
-    color: #fff;
-}
 
 ul.bar-legend {
     list-style-type: none;
