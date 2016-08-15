@@ -98,6 +98,9 @@ GET   /usergroup                    controllers.UserManager.usergroup
 GET   /rmgroup                      controllers.UserManager.rmgroup(email:String)
 GET  /addgroup                      controllers.UserManager.addgroup(email:String,name:String,group:String,queue:String)
 GET  /members                        controllers.Member.members
+GET  /pass                           controllers.UserManager.pass(email:String)
+GET  /nopass                         controllers.UserManager.nopass(email:String,body:String)
+
 
 GET  /audit                         controllers.UserManager.auditList
 

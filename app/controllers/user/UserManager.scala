@@ -1,6 +1,7 @@
 package controllers
 
 import models._
+import models.user.UserAudit
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -64,9 +65,21 @@ object UserManager extends Controller with  Secured{
   def auditList=Action{
     implicit val residentWrites = Json.writes[User]
     implicit val clusterListWrites = Json.writes[UserList]
-    val json: JsValue = Json.toJson(UserList(User.findAuditUser))
+    val json: JsValue = Json.toJson(UserList(UserAudit.findAuditUser))
     Ok(json)
   }
+
+  def pass(email: String)=Action{
+    UserAudit.pass(email) match  {
+      case user => Ok(user.unapply(user).getOrElse("操作失败!"))
+    }
+  }
+
+
+  def nopass(email: String,body:String)=Action{
+    Ok(UserAudit.nopass(email,body))
+  }
+
 
 
 

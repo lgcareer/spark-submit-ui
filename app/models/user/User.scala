@@ -165,17 +165,6 @@ object User {
 
 
 
-  def findAuditUser: Seq[User] ={
-    DB.withConnection{
-      implicit  connection =>
-      SQL(
-        """
-           select * from user where audit < 1
-        """
-      ).as(User.simple *)
-    }
-  }
-
   }
 
 
