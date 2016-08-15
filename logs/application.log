@@ -1610,3 +1610,30 @@ database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&chara
 2016-08-15 12:52:44,941 - [INFO] - from play in play-internal-execution-context-6 
 Application started (Dev)
 
+2016-08-15 12:56:29,537 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 12:56:30,359 - [INFO] - from play in play-internal-execution-context-6 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 12:56:30,365 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2016-08-15 13:02:42,268 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 13:02:44,310 - [INFO] - from play in play-internal-execution-context-6 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 13:02:44,316 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2016-08-15 13:03:27,211 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 13:03:27,939 - [INFO] - from play in play-internal-execution-context-6 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 13:03:27,944 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+

@@ -86,29 +86,47 @@ var EditableTable = function () {
 
             $('#editable-sample a.delete').live('click', function (e) {
                 e.preventDefault();
+                            var nRow = $(this).parents('tr')[0];
+                              var $thisTD = $(this).parents('tr').find("td:eq(0)");
 
-                if (confirm("确定删除 "+$(this).parents('tr').find("td:eq(0)").text()+"?") == false) {
-                    return;
-                }
 
-                var nRow = $(this).parents('tr')[0];
+                                     swal({
+                                        title: "请确认?",
+                                        text: "确定删除 "+$(this).parents('tr').find("td:eq(0)").text()+"?",
+                                        type: "warning",
+                                        confirmButtonColor: "#DD6B55",
+                                        confirmButtonText: "确认",
+                                        cancelButtonText: "取消",
+                                        showCancelButton: true,
+                                        closeOnConfirm: false,
+                                         },
+                                        function(isConfirm){
+                                        if (isConfirm) {
 
-                //获取用户邮箱
-                var $thisTD = $(this).parents('tr').find("td:eq(0)");
-                console.log($thisTD);
-                $(document).ready(function(){
-                        $.ajax({
-                            type:"GET",
-                            url:"/rmgroup",
-                            data:{email:$thisTD.text()},
-                            dataType:"text",
-                            success:function(data){
-                                 oTable.fnDeleteRow(nRow);
-                                alert($thisTD.text()+" "+data);
+                                            $(document).ready(function(){
+                                                $.ajax({
+                                                    type:"GET",
+                                                    url:"/rmgroup",
+                                                    data:{email:$thisTD.text()},
+                                                    dataType:"text",
+                                                    success:function(data){
+                                                         oTable.fnDeleteRow(nRow);
+                                                         swal("操作成功", $thisTD.text()+" "+data, "success");
 
-                            }
-                        });
-                });
+                                                    }
+                                                });
+                                            });
+
+                                           }  });
+
+
+
+
+
+
+
+
+
             });
 
             $('#editable-sample a.cancel').live('click', function (e) {
@@ -151,7 +169,7 @@ var EditableTable = function () {
                                                 success:function(data){
                                                     saveRow(oTable, nEditing);
                                                     nEditing = null;
-                                                    alert($email+" "+data);
+                                                    swal("操作成功!",$email+" "+data,"success");
                                                 }
                                             });
                                     });
