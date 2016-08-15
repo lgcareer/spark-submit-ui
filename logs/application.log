@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 2016-08-12 16:53:29,456 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
@@ -77,5 +78,17 @@ database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
 2016-08-12 17:04:51,226 - [INFO] - from play in play-internal-execution-context-1 
+=======
+2016-08-12 16:48:34,825 - [INFO] - from play in pool-4-thread-3 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2016-08-12 16:48:38,418 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-12 16:48:39,772 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-12 16:48:39,865 - [INFO] - from play in play-internal-execution-context-1 
+>>>>>>> Stashed changes
 Application started (Dev)
 
