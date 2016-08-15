@@ -15,11 +15,13 @@ object Yarn extends Controller with Secured {
     Ok(json)
   }
   def yarnDispatch = IsAuthenticated { username => implicit request =>
-    val queueName = "default"
-    val memory = "1234"
-    val vcpu = "100"
-    val maxRunningApps = "10"
-    val alert =XmlParse.XMLParses(queueName,memory,vcpu,maxRunningApps)
     Ok(views.html.dispatchyarn("test"))
+  }
+  def UserResource(queueName:String,
+                   mem:String,
+                   cpu:String,
+                   apps:String) = IsAuthenticated { username => implicit request =>
+     XmlParse.XMLParses(queueName,mem,cpu,apps)
+    Ok(views.html.userlist())
   }
 }

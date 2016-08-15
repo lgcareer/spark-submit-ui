@@ -255,13 +255,6 @@
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/google.css")" type="text/css"/>
-<<<<<<< Updated upstream
-
-    <link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css"/>
-    <script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
-=======
->>>>>>> Stashed changes
 
     <link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
     <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css"/>
@@ -318,7 +311,6 @@
                     <table class="table table-striped table-hover table-bordered" id="editable-sample">
                     </table>
                 </div>
-<<<<<<< Updated upstream
 
             </div>
         </section>
@@ -328,12 +320,6 @@
         </script>
     </div>
 
-=======
-            </div>
-        </section>
-
-    </div>
->>>>>>> Stashed changes
 
 
     <div class="row">
@@ -343,7 +329,6 @@
             <div class="panel-heading">
                 <h4 class="panel-title">用户组资源分配设置</h4>
                 <div class="panel-options">
-<<<<<<< Updated upstream
 
                     <a href="#">
                         <i class="linecons-cog"></i>
@@ -368,66 +353,33 @@
                 <div class="pull-right">
                     <select class="form-control meduim" id="usergroup">
                         <option option:selected value="normal">DSP组</option>
-                        <option value="high">大数据组</option>
+                        <option value="default">大数据组</option>
                         <option value="default">用户增长组</option>
-                        <option value="weiboTop">微博头条组</option>
-                        <option value="weiboMonitors">数据监控组</option>
+                        <option value="pt_UserGrowth">微博头条组</option>
+                        <option value="pt_UserGrowth">数据监控组</option>
                     </select>
                 </div>
 
-                <div class="clearfix"></div>
-
-                <div>
-                    <h3>调整参数</h3>
-                    <div class="clearfix"></div>
-
-=======
-
-                    <a href="#">
-                        <i class="linecons-cog"></i>
-                    </a>
-                    <span>确认修改</span>
-                    <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行变更操作">
-                        <span class="fa fa-check" id="submit" onclick="getvalue();"></span>
-                    </a>
-                    <span>伸缩</span><a href="#" data-toggle="panel">
-                    <span class="collapse-icon">&ndash;</span>
-                    <span class="expand-icon">+</span>
-                </a>
-
-                </div>
 
             </div>
             <div class="panel panel-body">
 
-                <h3>选择用户组(队列名称)</h3>
-
-                <div class="pull-right">
-                    <select class="form-control meduim" id="usergroup">
-                        <option option:selected value="normal">DSP组</option>
-                        <option value="high">大数据组</option>
-                        <option value="default">用户增长组</option>
-                        <option value="weiboTop">微博头条组</option>
-                        <option value="weiboMonitors">数据监控组</option>
-                    </select>
-                </div>
 
                 <div class="clearfix"></div>
 
                 <div>
                     <h3>调整参数</h3>
                     <div class="clearfix"></div>
-
->>>>>>> Stashed changes
                     <span>
-                        内存资源</span> <div id="mem" class="slider slider-danger" data-min="0" data-postfix=" GB" data-max="1800" data-value="223"></div>
+                        内存资源</span> <div id="mem" class="slider slider-danger" data-min="0" data-postfix=" mb" data-max="1800" data-value="223"></div>
 
                     <span>
-                        CPU资源</span><div id="cpu" class="slider slider-blue" data-postfix=" cores" data-min="0" data-max="1800" data-value="465"></div>
+                        CPU资源</span><div id="cpu" class="slider slider-blue" data-postfix=" vcores" data-min="0" data-max="1800" data-value="465"></div>
 
                     <span>
-<<<<<<< Updated upstream
                         磁盘资源</span><div id="disk" class="slider slider-purple" data-postfix=" GB" data-min="0" data-max="1800" data-value="897"></div>
+                    <span>
+                        最大任务数</span><div id="disk" class="slider slider-purple" data-postfix="" data-min="0" data-max="1800" data-value="897"></div>
 
                 </div>
 
@@ -435,28 +387,22 @@
                         function getvalue(){
                             var mem = $('#mem').text();
                             var cpu = $('#cpu').text();
-                            var disk = $('#disk').text();
+                            var apps = $('#apps').text();
                             var group = $("#usergroup").find("option:selected").val();
-                            swal("确认信息?","选择信息如下 : \n\n用户组: " + group + "\n内存: " + mem + "\n" + "CPU: " + cpu + "\n" + "磁盘空间: " + disk + "\n");
+                            swal("确认信息?","选择信息如下 : \n\n用户组: " + group + "\n内存: " + mem + "\n" + "CPU: " + cpu + "\n" + "并行任务数: " + apps + "\n");
+
+                            $.ajax({
+                                type:"GET",
+                                url:"/UserResource",
+                                data:{queueName:group,mem:mem,cpu:cpu,apps:apps},
+                                dataType:"text",
+                                success:function(data){
+                                    alert("修改成功");
+                                }
+                            });
+
                         };
                 </script>
-
-=======
-                        磁盘资源</span><div id="disk"  class="slider slider-purple" data-postfix=" GB" data-min="0" data-max="1800" data-value="897"></div>
-
-                </div>
-
-                <script>
-                    function getvalue(){
-                        var mem = $('#mem').text();
-                        var cpu = $('#cpu').text();
-                        var disk = $('#disk').text();
-                        var group = $("#usergroup").find("option:selected").val();
-                        swal("确认信息?","选择信息如下 : \n\n用户组: " + group + "\n内存: " + mem + "\n" + "CPU: " + cpu + "\n" + "磁盘空间: " + disk + "\n");
-                    };
-                </script>
-
->>>>>>> Stashed changes
                 <script>
                         $(function () { $("[data-toggle='tooltip']").tooltip();});
                 </script>
@@ -466,7 +412,6 @@
 
     </div>
 
-<<<<<<< Updated upstream
 
         <!--注册审核-->
 
@@ -588,10 +533,6 @@
                 $(function () { $("[data-toggle='tooltip']").tooltip();});
         </script>
     </div>
-
-
-=======
->>>>>>> Stashed changes
 
     <script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
     <script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript" ></script>

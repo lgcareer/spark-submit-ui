@@ -77,7 +77,9 @@ GET    /usertatol                     controllers.Usertally.usertatol
 GET    /dispatch                     controllers.Oozie.oozie
 GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
 GET    /yarndispatch                 controllers.Yarn.yarnDispatch
+GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
 GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
+
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
@@ -97,11 +99,8 @@ GET   /rmgroup                      controllers.UserManager.rmgroup(email:String
 GET  /addgroup                      controllers.UserManager.addgroup(email:String,name:String,group:String,queue:String)
 GET  /members                        controllers.Member.members
 
-<<<<<<< Updated upstream
 GET  /audit                         controllers.UserManager.auditList
 
-=======
->>>>>>> Stashed changes
 #return User
 
 GET   /whoiam                     controllers.UserName.userName
