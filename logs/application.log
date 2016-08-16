@@ -1,33 +1,34 @@
-2016-08-12 18:04:18,491 - [INFO] - from play in pool-4-thread-7 
+2016-08-15 10:57:07,118 - [INFO] - from play in pool-4-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-08-12 18:04:47,970 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:57:50,934 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 18:04:52,395 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:57:51,704 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 18:04:52,497 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:57:51,864 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-12 18:07:08,715 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:59:08,651 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 18:07:09,571 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:59:09,537 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 18:07:09,577 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:59:09,545 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-12 18:08:50,750 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:59:53,222 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 18:08:52,517 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:59:54,665 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-12 18:08:52,529 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-15 10:59:54,671 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+<<<<<<< HEAD
 2016-08-15 10:18:13,954 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
@@ -95,6 +96,12 @@ Application started (Dev)
 
 
 ! @714ec029k - Internal server error, for (GET) [/UserResource?queueName=normal&mem=223+mb&cpu=465+vcores&apps=] ->
+=======
+2016-08-15 11:00:11,668 - [ERROR] - from application in play-akka.actor.default-dispatcher-22 
+
+
+! @714eejmn4 - Internal server error, for (GET) [/UserResource?queueName=normal&mem=223+mb&cpu=465+vcores&apps=] ->
+>>>>>>> e0052ca92e0ddc731f136ee248e74242dc12007c
 
 play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /Users/manbu/Desktop/conf2/fair-scheduler.xml (No such file or directory)]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
@@ -129,9 +136,16 @@ play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /Users
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
 Caused by: java.io.FileNotFoundException: /Users/manbu/Desktop/conf2/fair-scheduler.xml (No such file or directory)
+<<<<<<< HEAD
 	at java.io.FileInputStream.open(Native Method) ~[na:1.8.0]
 	at java.io.FileInputStream.<init>(FileInputStream.java:131) ~[na:1.8.0]
 	at java.io.FileInputStream.<init>(FileInputStream.java:87) ~[na:1.8.0]
+=======
+	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_45]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_45]
+	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_45]
+>>>>>>> e0052ca92e0ddc731f136ee248e74242dc12007c
 	at scala.xml.Source$.fromFile(XML.scala:21) ~[scala-library-2.10.4.jar:na]
 	at scala.xml.factory.XMLLoader$class.loadFile(XMLLoader.scala:49) ~[scala-library-2.10.4.jar:na]
 	at scala.xml.XML$.loadFile(XML.scala:57) ~[scala-library-2.10.4.jar:na]
@@ -162,6 +176,7 @@ Caused by: java.io.FileNotFoundException: /Users/manbu/Desktop/conf2/fair-schedu
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
 	... 6 common frames omitted
 
+<<<<<<< HEAD
 2016-08-15 10:39:28,587 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
@@ -1635,5 +1650,299 @@ database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
 2016-08-15 13:03:27,944 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+=======
+>>>>>>> e0052ca92e0ddc731f136ee248e74242dc12007c
+2016-08-15 17:39:32,515 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 17:39:33,940 - [INFO] - from play in play-internal-execution-context-6 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-15 17:39:33,945 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2016-08-15 19:35:38,014 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:40,160 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:41,164 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:42,177 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:43,182 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:44,190 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:45,203 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 4. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 19:35:46,216 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 3. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 20:07:25,527 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.NoRouteToHostException: Can't assign requested address.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 20:07:26,538 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:13:54,060 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:13:55,069 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:02,949 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:03,958 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:04,966 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:05,971 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:06,982 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:07,992 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 21:28:09,000 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 4. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 22:31:43,944 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 22:31:44,956 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 22:31:45,968 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 22:31:46,975 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 22:31:47,981 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-15 22:31:48,984 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 00:20:48,856 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 00:20:49,858 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 04:07:55,012 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 04:07:57,160 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:16,012 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:17,014 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:18,023 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:19,030 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:20,039 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:21,044 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:22,054 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 4. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:23,057 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 3. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:24,067 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 2. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:25,073 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 1. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:26,084 - [ERROR] - from com.jolbox.bonecp.ConnectionHandle in BoneCP-pool-watch-thread 
+Database access problem. Killing off this connection and all remaining connections in the connection pool. SQL State = 08S01
+
+2016-08-16 10:02:26,097 - [ERROR] - from com.jolbox.bonecp.PoolWatchThread in BoneCP-pool-watch-thread 
+Error in trying to obtain a connection. Retrying in 1000ms
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor64.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1129) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:358) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2498) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2320) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46) ~[mysql-connector-java-5.1.29.jar:na]
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347) ~[mysql-connector-java-5.1.29.jar:na]
+	at play.utils.ProxyDriver.connect(ProxyDriver.scala:9) ~[play_2.10-2.2.6.jar:2.2.6]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0]
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.obtainInternalConnection(BoneCP.java:269) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.ConnectionHandle.<init>(ConnectionHandle.java:242) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.PoolWatchThread.fillConnections(PoolWatchThread.java:115) [bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.PoolWatchThread.run(PoolWatchThread.java:82) [bonecp-0.8.0.RELEASE.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+Caused by: java.net.SocketException: Network is unreachable
+	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0]
+	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0]
+	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0]
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.29.jar:na]
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:308) ~[mysql-connector-java-5.1.29.jar:na]
+	... 22 common frames omitted
+
+2016-08-16 10:02:27,122 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:28,133 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:29,144 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:02:30,151 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2016-08-16 10:16:03,420 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-16 10:16:04,289 - [INFO] - from play in play-internal-execution-context-6 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-16 10:16:04,295 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2016-08-16 10:43:15,781 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-16 10:43:17,234 - [INFO] - from play in play-internal-execution-context-6 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-16 10:43:17,240 - [INFO] - from play in play-internal-execution-context-6 
 Application started (Dev)
 

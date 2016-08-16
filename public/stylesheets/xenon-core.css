@@ -3261,6 +3261,40 @@ body.chat-open #chat {
 .panel.panel-flat .panel-disabled {
   background: rgba(238, 238, 238, 0.6);
 }
+
+.panel.panel-yellow .panel-heading {
+  background-color: #ff9900;
+  color: #ffffff;
+}
+.panel.panel-yellow .panel-heading > .panel-title {
+  color: #ffffff;
+}
+.panel.panel-yellow .panel-heading > .panel-title > a {
+  color: inherit;
+}
+.panel.panel-yellow .panel-heading > .panel-options {
+  color: #ffffff;
+}
+.panel.panel-yellow .panel-heading > .panel-options a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.panel.panel-yellow .panel-heading > .panel-options a:hover {
+  color: #ffffff;
+}
+.panel.panel-yellow > .panel-disabled {
+  background-color: rgba(255, 153, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
 .panel.panel-success .panel-heading {
   background-color: #8dc63f;
   color: #ffffff;
