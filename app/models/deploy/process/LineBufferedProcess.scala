@@ -7,10 +7,10 @@ import org.apache.spark.Logging
 /**
   * Created by liangkai1 on 16/7/12.
   */
-class LineBufferedProcess(act:ActorRef,process: Process) extends Logging {
+class LineBufferedProcess(master: Option[String],act:ActorRef,process: Process) extends Logging {
 
-  private[this] val _inputStream = new LineBufferedStream(act,process.getInputStream)
-  private[this] val _errorStream = new LineBufferedStream(act,process.getErrorStream)
+  private[this] val _inputStream = new LineBufferedStream(master,act,process.getInputStream)
+  private[this] val _errorStream = new LineBufferedStream(master,act,process.getErrorStream)
 
   def inputLines: IndexedSeq[String] = _inputStream.lines
   def errorLines: IndexedSeq[String] = _errorStream.lines

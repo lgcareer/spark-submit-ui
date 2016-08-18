@@ -5,6 +5,7 @@ package models.deploy
   */
 class CreateBatchRequest {
 
+  var master :Option[String]=None
   var file: String = _
   var proxyUser: Option[String] = None
   var args: List[String] = List()

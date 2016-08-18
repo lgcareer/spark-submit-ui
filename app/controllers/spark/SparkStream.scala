@@ -13,6 +13,7 @@ import play.api.mvc.{Action, Controller}
 object SparkStream extends Controller with Secured{
   val executeForm:Form[ExecuteModel] = Form{
     mapping (
+      "master"->text,
       "executeClass"->text,
       "numExecutors"->text,
       "driverMemory"->text,

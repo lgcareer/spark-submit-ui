@@ -15,6 +15,7 @@ object SparkJar extends Controller with Secured {
 
   val executeForm:Form[ExecuteModel] = Form{
     mapping (
+      "master"->text,
       "executeClass"->text,
       "numExecutors"->text,
       "driverMemory"->text,
@@ -57,6 +58,7 @@ object SparkJar extends Controller with Secured {
             BadRequest(views.html.error(formWithErrors.toString))
           },
           executeArguments => {
+          Logger.info("执行模式=>"+executeArguments.master)
           Execute.main(executeArguments)
           match {
               case JobSubmitSuccess(msg) => Logger.info(msg); Redirect(routes.SparkJar.he(msg))

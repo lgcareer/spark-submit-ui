@@ -1,1389 +1,181 @@
-2016-08-15 10:57:07,118 - [INFO] - from play in pool-4-thread-6 
+2016-08-18 14:22:56,710 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-08-15 10:57:50,934 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:23:35,705 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:57:51,704 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:23:47,338 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:57:51,864 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:23:47,455 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:59:08,651 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:27:20,356 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:59:09,537 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:27:32,021 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:59:09,545 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:27:32,027 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:59:53,222 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:30:42,461 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:59:54,665 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:31:02,058 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:59:54,671 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:31:02,065 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-<<<<<<< HEAD
-2016-08-15 10:18:13,954 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:36:18,688 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:18:16,000 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:36:40,230 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:18:16,005 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:36:40,237 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:19:53,110 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:47:20,470 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:19:53,573 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:47:33,047 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:19:53,580 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:47:33,054 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:25:14,075 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:58:32,979 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:25:15,322 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:58:46,601 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:25:15,328 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:58:46,611 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:28:58,901 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:58:51,613 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:29:15,515 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:58:59,035 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:29:15,522 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 14:58:59,040 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:30:58,816 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 15:03:36,881 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:31:00,766 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 15:03:53,479 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 10:31:00,771 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-18 15:03:53,486 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 10:33:13,590 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:33:14,725 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:33:14,731 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:33:45,589 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:33:46,440 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:33:46,445 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:39:09,894 - [ERROR] - from application in play-akka.actor.default-dispatcher-80 
+2016-08-18 16:30:19,761 - [ERROR] - from application in New I/O worker #13 
 
 
-! @714ec029k - Internal server error, for (GET) [/UserResource?queueName=normal&mem=223+mb&cpu=465+vcores&apps=] ->
-=======
-2016-08-15 11:00:11,668 - [ERROR] - from application in play-akka.actor.default-dispatcher-22 
+! @715c186jj - Internal server error, for (GET) [/standalone] ->
 
-
-! @714eejmn4 - Internal server error, for (GET) [/UserResource?queueName=normal&mem=223+mb&cpu=465+vcores&apps=] ->
->>>>>>> e0052ca92e0ddc731f136ee248e74242dc12007c
-
-play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /Users/manbu/Desktop/conf2/fair-scheduler.xml (No such file or directory)]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: java.io.FileNotFoundException: /Users/manbu/Desktop/conf2/fair-scheduler.xml (No such file or directory)
-<<<<<<< HEAD
-	at java.io.FileInputStream.open(Native Method) ~[na:1.8.0]
-	at java.io.FileInputStream.<init>(FileInputStream.java:131) ~[na:1.8.0]
-	at java.io.FileInputStream.<init>(FileInputStream.java:87) ~[na:1.8.0]
-=======
-	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_45]
-	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_45]
-	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_45]
-	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_45]
->>>>>>> e0052ca92e0ddc731f136ee248e74242dc12007c
-	at scala.xml.Source$.fromFile(XML.scala:21) ~[scala-library-2.10.4.jar:na]
-	at scala.xml.factory.XMLLoader$class.loadFile(XMLLoader.scala:49) ~[scala-library-2.10.4.jar:na]
-	at scala.xml.XML$.loadFile(XML.scala:57) ~[scala-library-2.10.4.jar:na]
-	at models.utils.XmlParse$.XMLParses(XmlParse.scala:34) ~[classes/:na]
-	at controllers.Yarn$$anonfun$UserResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Yarn.scala:24) ~[classes/:na]
-	at controllers.Yarn$$anonfun$UserResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Yarn.scala:23) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+play.PlayExceptions$CompilationException: Compilation error[You do not have an implicit Application in scope. If you want to bring the current running Application into context, just add import play.api.Play.current]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
-	... 6 common frames omitted
-
-<<<<<<< HEAD
-2016-08-15 10:39:28,587 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:39:33,265 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:39:33,272 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:44:04,626 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:44:07,381 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:44:07,387 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:46:56,270 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:46:58,054 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:46:58,060 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:51:32,410 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:51:34,702 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:51:34,708 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:52:27,912 - [ERROR] - from application in New I/O worker #11 
-
-
-! @714edjbe4 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 10:52:50,769 - [ERROR] - from application in New I/O worker #11 
-
-
-! @714edkkel - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 10:52:58,905 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:53:02,063 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:53:02,072 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:54:09,821 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:54:16,501 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:54:16,506 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:54:35,540 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:54:49,271 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:54:49,277 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:55:32,853 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:55:53,812 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:55:53,821 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:59:40,352 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:59:46,218 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 10:59:46,227 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 10:59:55,372 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:00:01,506 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:00:01,512 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:02:15,689 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:02:19,749 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:02:19,754 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:03:50,170 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:03:53,344 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:03:53,351 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:04:28,943 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:04:29,539 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:04:29,545 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:05:54,947 - [ERROR] - from application in New I/O worker #1 
-
-
-! @714efd9cd - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:06:14,403 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:06:15,682 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:06:15,687 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:07:46,656 - [ERROR] - from application in New I/O worker #13 
-
-
-! @714efjiga - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:07:50,239 - [ERROR] - from application in New I/O worker #13 
-
-
-! @714efjp42 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:08:10,349 - [ERROR] - from application in New I/O worker #13 
-
-
-! @714efl2n8 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:01,944 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo0al - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:04,302 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo4ie - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:05,219 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo622 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:05,836 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo6p8 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:06,526 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo7pi - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:07,090 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo8lj - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:07,578 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efo9ec - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:08,147 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efoaa8 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:16,244 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efom9c - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:16,973 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efonbd - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:17,567 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efoo8f - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:18,044 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efop0f - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:18,564 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efopl1 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:19,021 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efp0cc - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:19,435 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efp12h - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:19,870 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efp1im - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:20,458 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efp2fo - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:20,933 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efp387 - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:21,361 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714efp3of - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:38,449 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714eg035k - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:39,343 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714eg04dp - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:39,985 - [ERROR] - from application in New I/O worker #14 
-
-
-! @714eg05ck - Internal server error, for (GET) [/userlist] ->
-
-play.PlayExceptions$TemplateCompilationException: Compilation error[Unmatched bracket]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:55) ~[na:na]
-	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:30) ~[na:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:35) ~[scala-library-2.10.4.jar:na]
-	at scala.Function5$$anonfun$tupled$1.apply(Function5.scala:34) ~[scala-library-2.10.4.jar:na]
-	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4.jar:na]
-	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
-	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
-	at sbt.Execute.work(Execute.scala:237) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
-	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
-	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-
-2016-08-15 11:09:56,175 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:09:57,749 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:09:57,755 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:10:54,549 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:10:55,642 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:10:55,648 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:11:50,112 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:11:51,826 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:11:51,832 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:12:58,213 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:13:00,308 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:13:00,312 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:15:07,998 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:15:08,620 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:15:08,624 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:16:55,526 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:16:57,587 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:16:57,593 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:20:01,711 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:20:03,657 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:20:03,662 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:28:45,888 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:28:47,499 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:28:47,504 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:32:33,475 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:32:37,034 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:32:37,042 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:33:20,135 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:33:22,054 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:33:22,058 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:34:43,280 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:34:45,116 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:34:45,122 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:42:04,409 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:42:07,021 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:42:07,025 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2016-08-15 11:45:09,053 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:45:11,425 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:45:11,431 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 11:45:50,326 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:45:51,637 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:45:51,643 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 11:47:41,076 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:47:42,455 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:47:42,461 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 11:48:53,894 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:48:54,753 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:48:54,758 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 11:49:44,096 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:49:45,608 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:49:45,614 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 11:51:09,578 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:51:10,423 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 11:51:10,429 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 12:31:03,194 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:31:04,297 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:31:04,304 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-08-15 12:34:15,158 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:34:16,198 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:34:16,203 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:35:30,882 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:35:31,660 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:35:31,666 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:35:37,086 - [ERROR] - from application in play-akka.actor.default-dispatcher-338 
-
-
-! @714f17gbm - Internal server error, for (GET) [/nopass?email=1578326883%40qq.com&body=faced] ->
-
-play.api.Application$$anon$1: Execution exception[[EmailException: Sending the email to the following server failed : smtp.sina.com:465]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: org.apache.commons.mail.EmailException: Sending the email to the following server failed : smtp.sina.com:465
-	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1421) ~[commons-email-1.4.jar:1.4]
-	at org.apache.commons.mail.Email.send(Email.java:1448) ~[commons-email-1.4.jar:1.4]
-	at models.Email$.sendHtmlMail(Email.scala:66) ~[classes/:na]
-	at models.user.UserAudit$.nopass(UserAudit.scala:52) ~[classes/:na]
-	at controllers.UserManager$$anonfun$nopass$1.apply(UserManager.scala:80) ~[classes/:na]
-	at controllers.UserManager$$anonfun$nopass$1.apply(UserManager.scala:80) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
-	... 6 common frames omitted
-Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.sina.com, port: 465
-	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2055) ~[javax.mail-1.5.2.jar:1.5.2]
-	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:697) ~[javax.mail-1.5.2.jar:1.5.2]
-	at javax.mail.Service.connect(Service.java:386) ~[javax.mail-1.5.2.jar:1.5.2]
-	at javax.mail.Service.connect(Service.java:245) ~[javax.mail-1.5.2.jar:1.5.2]
-	at javax.mail.Service.connect(Service.java:194) ~[javax.mail-1.5.2.jar:1.5.2]
-	at javax.mail.Transport.send0(Transport.java:253) ~[javax.mail-1.5.2.jar:1.5.2]
-	at javax.mail.Transport.send(Transport.java:124) ~[javax.mail-1.5.2.jar:1.5.2]
-	at org.apache.commons.mail.Email.sendMimeMessage(Email.java:1411) ~[commons-email-1.4.jar:1.4]
-	... 33 common frames omitted
-Caused by: java.net.SocketTimeoutException: Read timed out
-	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0]
-	at java.net.SocketInputStream.read(SocketInputStream.java:150) ~[na:1.8.0]
-	at java.net.SocketInputStream.read(SocketInputStream.java:121) ~[na:1.8.0]
-	at sun.security.ssl.InputRecord.readFully(InputRecord.java:465) ~[na:1.8.0]
-	at sun.security.ssl.InputRecord.read(InputRecord.java:503) ~[na:1.8.0]
-	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:954) ~[na:1.8.0]
-	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1343) ~[na:1.8.0]
-	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1371) ~[na:1.8.0]
-	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1355) ~[na:1.8.0]
-	at com.sun.mail.util.SocketFetcher.configureSSLSocket(SocketFetcher.java:543) ~[javax.mail-1.5.2.jar:1.5.2]
-	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:348) ~[javax.mail-1.5.2.jar:1.5.2]
-	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:215) ~[javax.mail-1.5.2.jar:1.5.2]
-	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2019) ~[javax.mail-1.5.2.jar:1.5.2]
-	... 40 common frames omitted
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
 
-2016-08-15 12:37:11,268 - [INFO] - from play in play-internal-execution-context-6 
+2016-08-18 16:31:07,022 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 12:37:16,582 - [INFO] - from play in play-internal-execution-context-6 
+2016-08-18 16:31:11,521 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 12:37:16,587 - [INFO] - from play in play-internal-execution-context-6 
+2016-08-18 16:31:11,528 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-15 12:37:17,836 - [ERROR] - from application in play-akka.actor.default-dispatcher-344 
+2016-08-18 16:41:36,950 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 16:41:39,969 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 16:41:39,976 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 16:41:45,187 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 16:41:51,127 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 16:41:51,133 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:01:45,110 - [ERROR] - from application in New I/O worker #2 
 
 
-! @714f1d9cl - Internal server error, for (GET) [/audit] ->
+! @715c5bdja - Internal server error, for (GET) [/tasklist] ->
 
-play.api.Application$$anon$1: Execution exception[[MySQLSyntaxErrorException: Unknown column 'aduit' in 'where clause']]
+play.PlayExceptions$CompilationException: Compilation error[not found: type JobUi]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-18 17:02:06,624 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:02:12,187 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:02:12,193 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:26:18,135 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:26:20,779 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:26:20,786 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:26:21,460 - [ERROR] - from application in play-akka.actor.default-dispatcher-145 
+
+
+! @715c8hdi1 - Internal server error, for (GET) [/yarn] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: task_yarn.applicaton_id not found, available columns : task_standalone.app_id, app_id, task_standalone.name, name, task_standalone.cores, cores, task_standalone.memoryperslave, memoryperslave, task_standalone.state, state, task_standalone.submitdate, submitdate, task_standalone.duration, duration, task_standalone.email, email]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
@@ -1415,39 +207,24 @@ play.api.Application$$anon$1: Execution exception[[MySQLSyntaxErrorException: Un
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'aduit' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2617) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2778) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2834) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2156) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2313) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeQuery(PreparedStatementHandle.java:174) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at anorm.Sql$class.resultSet(Anorm.scala:451) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.resultSet(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
+Caused by: java.lang.RuntimeException: task_yarn.applicaton_id not found, available columns : task_standalone.app_id, app_id, task_standalone.name, name, task_standalone.cores, cores, task_standalone.memoryperslave, memoryperslave, task_standalone.state, state, task_standalone.submitdate, submitdate, task_standalone.duration, duration, task_standalone.email, email
+	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.4.jar:na]
+	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
 	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.user.UserAudit$$anonfun$findAuditUser$1.apply(UserAudit.scala:31) ~[classes/:na]
-	at models.user.UserAudit$$anonfun$findAuditUser$1.apply(UserAudit.scala:26) ~[classes/:na]
+	at anorm.SimpleSql.as(Anorm.scala:372) ~[anorm_2.10-2.2.6.jar:2.2.6]
+	at models.TaskInfoDao$$anonfun$getYarnTaskList$1.apply(TaskDao.scala:33) ~[classes/:na]
+	at models.TaskInfoDao$$anonfun$getYarnTaskList$1.apply(TaskDao.scala:27) ~[classes/:na]
 	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
 	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.user.UserAudit$.findAuditUser(UserAudit.scala:25) ~[classes/:na]
-	at controllers.UserManager$$anonfun$auditList$1.apply(UserManager.scala:68) ~[classes/:na]
-	at controllers.UserManager$$anonfun$auditList$1.apply(UserManager.scala:65) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
+	at models.TaskInfoDao$.getYarnTaskList(TaskDao.scala:26) ~[classes/:na]
+	at controllers.TaskManager$$anonfun$yarnInfo$1$$anonfun$apply$3$$anonfun$apply$4.apply(TaskManager.scala:32) ~[classes/:na]
+	at controllers.TaskManager$$anonfun$yarnInfo$1$$anonfun$apply$3$$anonfun$apply$4.apply(TaskManager.scala:29) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
@@ -1470,12 +247,12 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown co
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
 	... 6 common frames omitted
 
-2016-08-15 12:38:03,052 - [ERROR] - from application in play-akka.actor.default-dispatcher-357 
+2016-08-18 17:26:28,153 - [ERROR] - from application in play-akka.actor.default-dispatcher-145 
 
 
-! @714f1fo9o - Internal server error, for (GET) [/audit] ->
+! @715c8hnfe - Internal server error, for (GET) [/yarn] ->
 
-play.api.Application$$anon$1: Execution exception[[MySQLSyntaxErrorException: Unknown column 'aduit' in 'where clause']]
+play.api.Application$$anon$1: Execution exception[[RuntimeException: task_yarn.applicaton_id not found, available columns : task_standalone.app_id, app_id, task_standalone.name, name, task_standalone.cores, cores, task_standalone.memoryperslave, memoryperslave, task_standalone.state, state, task_standalone.submitdate, submitdate, task_standalone.duration, duration, task_standalone.email, email]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
@@ -1507,39 +284,24 @@ play.api.Application$$anon$1: Execution exception[[MySQLSyntaxErrorException: Un
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'aduit' in 'where clause'
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.Util.getInstance(Util.java:386) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1054) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4237) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4169) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2617) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2778) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2834) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2156) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2313) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeQuery(PreparedStatementHandle.java:174) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at anorm.Sql$class.resultSet(Anorm.scala:451) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.resultSet(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
+Caused by: java.lang.RuntimeException: task_yarn.applicaton_id not found, available columns : task_standalone.app_id, app_id, task_standalone.name, name, task_standalone.cores, cores, task_standalone.memoryperslave, memoryperslave, task_standalone.state, state, task_standalone.submitdate, submitdate, task_standalone.duration, duration, task_standalone.email, email
+	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.4.jar:na]
+	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
 	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.user.UserAudit$$anonfun$findAuditUser$1.apply(UserAudit.scala:31) ~[classes/:na]
-	at models.user.UserAudit$$anonfun$findAuditUser$1.apply(UserAudit.scala:26) ~[classes/:na]
+	at anorm.SimpleSql.as(Anorm.scala:372) ~[anorm_2.10-2.2.6.jar:2.2.6]
+	at models.TaskInfoDao$$anonfun$getYarnTaskList$1.apply(TaskDao.scala:33) ~[classes/:na]
+	at models.TaskInfoDao$$anonfun$getYarnTaskList$1.apply(TaskDao.scala:27) ~[classes/:na]
 	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
 	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.user.UserAudit$.findAuditUser(UserAudit.scala:25) ~[classes/:na]
-	at controllers.UserManager$$anonfun$auditList$1.apply(UserManager.scala:68) ~[classes/:na]
-	at controllers.UserManager$$anonfun$auditList$1.apply(UserManager.scala:65) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
+	at models.TaskInfoDao$.getYarnTaskList(TaskDao.scala:26) ~[classes/:na]
+	at controllers.TaskManager$$anonfun$yarnInfo$1$$anonfun$apply$3$$anonfun$apply$4.apply(TaskManager.scala:32) ~[classes/:na]
+	at controllers.TaskManager$$anonfun$yarnInfo$1$$anonfun$apply$3$$anonfun$apply$4.apply(TaskManager.scala:29) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
@@ -1562,569 +324,12 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown co
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
 	... 6 common frames omitted
 
-2016-08-15 12:38:07,588 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+2016-08-18 17:27:13,568 - [ERROR] - from application in play-akka.actor.default-dispatcher-143 
 
-2016-08-15 12:38:08,296 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-15 12:38:08,302 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
+! @715c8kck7 - Internal server error, for (GET) [/yarn] ->
 
-2016-08-15 12:42:09,379 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:42:10,040 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:42:10,046 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:44:38,979 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:44:40,464 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:44:40,469 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:47:02,185 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:47:04,683 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:47:04,689 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:49:02,710 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:49:04,681 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:49:04,686 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:51:31,771 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:51:32,651 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:51:32,656 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:52:44,156 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:52:44,936 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:52:44,941 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 12:56:29,537 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:56:30,359 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 12:56:30,365 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 13:02:42,268 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 13:02:44,310 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 13:02:44,316 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 13:03:27,211 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 13:03:27,939 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 13:03:27,944 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-=======
->>>>>>> e0052ca92e0ddc731f136ee248e74242dc12007c
-2016-08-15 17:39:32,515 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 17:39:33,940 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-15 17:39:33,945 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-15 19:35:38,014 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:40,160 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:41,164 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:42,177 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:43,182 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:44,190 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:45,203 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 4. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 19:35:46,216 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 3. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 20:07:25,527 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.NoRouteToHostException: Can't assign requested address.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 20:07:26,538 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:13:54,060 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:13:55,069 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:02,949 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:03,958 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:04,966 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:05,971 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:06,982 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:07,992 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 21:28:09,000 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 4. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 22:31:43,944 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 22:31:44,956 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 22:31:45,968 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 22:31:46,975 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 22:31:47,981 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-15 22:31:48,984 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 00:20:48,856 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 00:20:49,858 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 04:07:55,012 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 04:07:57,160 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:16,012 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is down.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:17,014 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:18,023 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:19,030 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:20,039 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 6. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:21,044 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 5. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:22,054 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 4. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:23,057 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 3. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:24,067 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 2. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:25,073 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 1. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:26,084 - [ERROR] - from com.jolbox.bonecp.ConnectionHandle in BoneCP-pool-watch-thread 
-Database access problem. Killing off this connection and all remaining connections in the connection pool. SQL State = 08S01
-
-2016-08-16 10:02:26,097 - [ERROR] - from com.jolbox.bonecp.PoolWatchThread in BoneCP-pool-watch-thread 
-Error in trying to obtain a connection. Retrying in 1000ms
-com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.GeneratedConstructorAccessor64.newInstance(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1129) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:358) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2498) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2535) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2320) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46) ~[mysql-connector-java-5.1.29.jar:na]
-	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[na:na]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408) ~[na:1.8.0]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347) ~[mysql-connector-java-5.1.29.jar:na]
-	at play.utils.ProxyDriver.connect(ProxyDriver.scala:9) ~[play_2.10-2.2.6.jar:2.2.6]
-	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0]
-	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0]
-	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.jolbox.bonecp.BoneCP.obtainInternalConnection(BoneCP.java:269) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.jolbox.bonecp.ConnectionHandle.<init>(ConnectionHandle.java:242) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.jolbox.bonecp.PoolWatchThread.fillConnections(PoolWatchThread.java:115) [bonecp-0.8.0.RELEASE.jar:na]
-	at com.jolbox.bonecp.PoolWatchThread.run(PoolWatchThread.java:82) [bonecp-0.8.0.RELEASE.jar:na]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
-	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
-Caused by: java.net.SocketException: Network is unreachable
-	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[na:1.8.0]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345) ~[na:1.8.0]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0]
-	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0]
-	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0]
-	at java.net.Socket.<init>(Socket.java:434) ~[na:1.8.0]
-	at java.net.Socket.<init>(Socket.java:244) ~[na:1.8.0]
-	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256) ~[mysql-connector-java-5.1.29.jar:na]
-	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:308) ~[mysql-connector-java-5.1.29.jar:na]
-	... 22 common frames omitted
-
-2016-08-16 10:02:27,122 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:28,133 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 9. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:29,144 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 8. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:02:30,151 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
-Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 7. Exception: java.net.SocketException: Network is unreachable.Message:Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-
-2016-08-16 10:16:03,420 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-16 10:16:04,289 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-16 10:16:04,295 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-16 10:43:15,781 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-16 10:43:17,234 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-16 10:43:17,240 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-16 14:33:39,691 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-08-16 14:33:56,438 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-08-16 14:33:56,445 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-08-16 15:02:46,120 - [ERROR] - from play in play-akka.actor.default-dispatcher-706 
-Cannot invoke the action, eventually got an error: java.sql.SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000
-
-2016-08-16 15:02:46,127 - [ERROR] - from application in play-akka.actor.default-dispatcher-706 
-
-
-! @714n1hjl6 - Internal server error, for (POST) [/executesql] ->
-
-play.api.Application$$anon$1: Execution exception[[SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: java.sql.SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000
-	at java.sql.DriverManager.getConnection(DriverManager.java:689) ~[na:1.8.0]
-	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0]
-	at models.utils.SparkSqlPool$$anonfun$getJdbcConn$1.apply$mcVI$sp(SparkSqlPool.scala:23) ~[classes/:na]
-	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
-	at models.utils.SparkSqlPool$.getJdbcConn(SparkSqlPool.scala:22) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$6.apply(SparkSql.scala:36) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$6.apply(SparkSql.scala:35) ~[classes/:na]
-	at play.api.data.Form.fold(Form.scala:136) ~[play_2.10-2.2.6.jar:2.2.6]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4.apply(SparkSql.scala:33) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4.apply(SparkSql.scala:32) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
-	... 6 common frames omitted
-
-2016-08-16 15:02:49,877 - [ERROR] - from play in play-akka.actor.default-dispatcher-710 
-Cannot invoke the action, eventually got an error: java.sql.SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000
-
-2016-08-16 15:02:49,882 - [ERROR] - from application in play-akka.actor.default-dispatcher-710 
-
-
-! @714n1hp9i - Internal server error, for (POST) [/executesql] ->
-
-play.api.Application$$anon$1: Execution exception[[SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$3.apply(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:268) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:264) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: java.sql.SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000
-	at java.sql.DriverManager.getConnection(DriverManager.java:689) ~[na:1.8.0]
-	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0]
-	at models.utils.SparkSqlPool$$anonfun$getJdbcConn$1.apply$mcVI$sp(SparkSqlPool.scala:23) ~[classes/:na]
-	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
-	at models.utils.SparkSqlPool$.getJdbcConn(SparkSqlPool.scala:22) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$6.apply(SparkSql.scala:36) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4$$anonfun$apply$6.apply(SparkSql.scala:35) ~[classes/:na]
-	at play.api.data.Form.fold(Form.scala:136) ~[play_2.10-2.2.6.jar:2.2.6]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4.apply(SparkSql.scala:33) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$executesql$1$$anonfun$apply$3$$anonfun$apply$4.apply(SparkSql.scala:32) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.10.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:494) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
-	... 6 common frames omitted
-
-2016-08-16 15:02:54,978 - [ERROR] - from application in play-akka.actor.default-dispatcher-710 
-
-
-! @714n1i6nj - Internal server error, for (GET) [/download] ->
-
-play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /tmp/spark-1600065395.txt (No such file or directory)]]
+play.api.Application$$anon$1: Execution exception[[RuntimeException: task_yarn.applicaton_id not found, available columns : task_standalone.app_id, app_id, task_standalone.name, name, task_standalone.cores, cores, task_standalone.memoryperslave, memoryperslave, task_standalone.state, state, task_standalone.submitdate, submitdate, task_standalone.duration, duration, task_standalone.email, email]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
@@ -2156,13 +361,22 @@ play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /tmp/s
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: java.io.FileNotFoundException: /tmp/spark-1600065395.txt (No such file or directory)
-	at java.io.FileInputStream.open(Native Method) ~[na:1.8.0]
-	at java.io.FileInputStream.<init>(FileInputStream.java:131) ~[na:1.8.0]
-	at play.api.libs.iteratee.Enumerator$.fromFile(Enumerator.scala:574) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Results$Status.sendFile(Results.scala:686) ~[play_2.10-2.2.6.jar:2.2.6]
-	at controllers.SparkSql$$anonfun$download$1$$anonfun$apply$9$$anonfun$apply$10.apply(SparkSql.scala:104) ~[classes/:na]
-	at controllers.SparkSql$$anonfun$download$1$$anonfun$apply$9$$anonfun$apply$10.apply(SparkSql.scala:103) ~[classes/:na]
+Caused by: java.lang.RuntimeException: task_yarn.applicaton_id not found, available columns : task_standalone.app_id, app_id, task_standalone.name, name, task_standalone.cores, cores, task_standalone.memoryperslave, memoryperslave, task_standalone.state, state, task_standalone.submitdate, submitdate, task_standalone.duration, duration, task_standalone.email, email
+	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.4.jar:na]
+	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
+	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
+	at anorm.SimpleSql.as(Anorm.scala:372) ~[anorm_2.10-2.2.6.jar:2.2.6]
+	at models.TaskInfoDao$$anonfun$getYarnTaskList$1.apply(TaskDao.scala:33) ~[classes/:na]
+	at models.TaskInfoDao$$anonfun$getYarnTaskList$1.apply(TaskDao.scala:27) ~[classes/:na]
+	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at models.TaskInfoDao$.getYarnTaskList(TaskDao.scala:26) ~[classes/:na]
+	at controllers.TaskManager$$anonfun$yarnInfo$1$$anonfun$apply$3$$anonfun$apply$4.apply(TaskManager.scala:32) ~[classes/:na]
+	at controllers.TaskManager$$anonfun$yarnInfo$1$$anonfun$apply$3$$anonfun$apply$4.apply(TaskManager.scala:29) ~[classes/:na]
 	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
 	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
@@ -2187,6 +401,129 @@ Caused by: java.io.FileNotFoundException: /tmp/spark-1600065395.txt (No such fil
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
 	... 6 common frames omitted
 
-2016-08-16 15:03:24,631 - [INFO] - from application in play-akka.actor.default-dispatcher-708 
-用户名=>liangkai1@staff.weibo.com
+2016-08-18 17:27:19,386 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:27:20,557 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:27:20,562 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:33:37,902 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:33:39,742 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:33:39,747 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:36:01,658 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:36:09,622 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:36:09,629 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:39:02,592 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:39:07,883 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:39:07,888 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:39:18,155 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:39:20,664 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:39:20,670 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:40:27,099 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:40:37,820 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:40:37,826 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:43:09,970 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:43:12,982 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:43:12,988 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:53:09,527 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:53:12,930 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:53:12,935 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:54:06,660 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:54:09,164 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:54:09,169 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:56:54,054 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:56:55,873 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:56:55,879 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 17:58:16,230 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:58:17,770 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 17:58:17,776 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 18:01:07,767 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 18:01:09,375 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 18:01:09,380 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 18:03:53,675 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 18:03:58,718 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 18:03:58,724 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-08-18 18:30:45,448 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 18:30:48,099 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-18 18:30:48,105 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 

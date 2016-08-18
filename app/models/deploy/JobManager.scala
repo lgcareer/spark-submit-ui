@@ -9,7 +9,8 @@ import models.actor.InstrumentedActor
 import models.deploy.CreateBatchRequest
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
 import org.apache.commons.lang.StringUtils
-import org.apache.spark.SparkEnv
+import org.apache.spark.{SparkEnv, deploy}
+import org.apache.spark.deploy.SparkSubmit
 import org.joda.time.DateTime
 import play.api.Logger
 import play.api.libs.Files.TemporaryFile
@@ -23,6 +24,7 @@ import scala.collection.mutable
   * Created by liangkai1 on 16/7/11.
   */
 case  class ExecuteModel(
+                          master:String,
                           executeClass:String,
                           numExecutors:String,
                           driverMemory:String,
@@ -51,15 +53,21 @@ object  JobManagerActor{
   * @param jobDAO
   */
 private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
+  SparkSubmit
 
   import JobManagerActor._
 
   val config = mutable.HashMap.empty[String,String]
   val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(20))
 
-  private[this] val nameSpance="usr"
-  private[this] val nameLocal="local"
-
+  private val master_uri="spark://hadoop01:7077";
+  private val yarn="yarn-cluster"
+  private val nameSpance="usr"
+  private val nameLocal="local"
+  private val YARN = 1
+  private val STANDALONE = 2
+  private val MESOS = 4
+  private val LOCAL = 8
 
   /**
     * jar 文件验证
@@ -107,6 +115,14 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       request.driverMemory=Some(executeModel.driverMemory)
       request.executorMemory=Some(executeModel.executorMemory)
       request.jarLocation = Some(executeModel.jarLocation)
+
+      val masters: Int = executeModel.master match {
+        case m if m.startsWith("yarn") =>   request.master=Some(yarn); YARN
+        case m if m.startsWith("standalone") => request.master=Some(master_uri);STANDALONE
+        case m if m.startsWith("mesos") => MESOS
+        case m if m.startsWith("local") => request.master=Some(executeModel.master);LOCAL
+      }
+      Logger.info(s"select mode $masters")
       val args: Array[String] = executeModel.args1.split("\\s+")
       request.args=args.toList
       sender ! request
@@ -148,6 +164,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         request.executorCores.foreach(builder.executorCores)
         request.numExecutors.foreach(builder.numExecutors)
         request.jarLocation.foreach(builder.jarLocation)
+        request.master.foreach(builder.master)
         val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
         val output = process.inputIterator.mkString("\n")
         //val regex = """Shutdown (.*)""".r.unanchored

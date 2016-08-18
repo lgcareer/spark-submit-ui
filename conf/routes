@@ -107,3 +107,9 @@ GET  /audit                         controllers.UserManager.auditList
 #return User
 
 GET   /whoiam                     controllers.UserName.userName
+
+#Job
+GET   /tasklist                      controllers.TaskManager.tasklist
+GET   /standalone                      controllers.TaskManager.standaloneInfo
+GET   /yarn                             controllers.TaskManager.yarnInfo
+

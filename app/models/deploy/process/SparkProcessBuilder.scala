@@ -125,7 +125,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
       }
     }
 
-    addOpt("--master", Some("spark://BJ-M-203554A.local:7077"))
+    addOpt("--master", _master)
     addOpt("--class", _className)
     addOpt("--num-executors",_num_executors)
     addOpt("--executor-memory", _executor_memory)
@@ -146,7 +146,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
     _redirectError.foreach(pb.redirectError)
     _redirectErrorStream.foreach(pb.redirectErrorStream)
 
-    val process: LineBufferedProcess = new LineBufferedProcess(act,pb.start())
+    val process: LineBufferedProcess = new LineBufferedProcess(_master,act,pb.start())
     process.waitFor()
     process
   }
