@@ -41,7 +41,6 @@ class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputS
 
       val regex: Regex = MatchEngine.matchMode(master.get)
 
-
       for (line <- lines) {
         _lock.lock()
         line match {

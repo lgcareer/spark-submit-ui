@@ -9,18 +9,18 @@ object MatchEngine {
 
 
   /**
-    * on_local 模式正则匹配
+    * on_local 模式匹配
     */
   val regex_on_local = """Starting executor ID driver on host localhost(.*)""".r.unanchored
 
   /**
-    * on yarn-cluster 模式正则匹配
+    * on yarn-cluster 模式匹配
     */
   val regex_on_yarn = """Submitted application (.*)""".r.unanchored
 
 
   /**
-    * standalone 模式正则匹配
+    * standalone 模式匹配
     */
   val regex_on_standalone = """Spark cluster with app ID (.*)""".r.unanchored
 
