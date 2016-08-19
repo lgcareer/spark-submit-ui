@@ -82,3 +82,21 @@ Caused by: java.io.FileNotFoundException: tmp/fair-scheduler.xml (No such file o
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
 	... 6 common frames omitted
 
+2016-08-19 12:06:25,268 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-19 12:06:25,785 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-19 12:06:25,791 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-08-19 12:14:45,853 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-19 12:14:46,947 - [INFO] - from play in play-internal-execution-context-5 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-19 12:14:46,953 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
