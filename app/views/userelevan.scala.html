@@ -1,5 +1,5 @@
-@(count: Int)
-    @sidebar = {
+@(audit:Long)
+@sidebar = {
         <div class="sidebar-menu toggle-others fixed">
 
             <div class="sidebar-menu-inner">
@@ -255,46 +255,156 @@
         <div class="clearfix"> </div>
         <div class="graphs">
             <div id="container" style="min-width:700px ; height:400px">
-                <script>
-                        $(function () {
-                            <!--var b =$('#a').text()-->
-                            var c = @count
-                                <!--alert(c)-->
-                                    $('#container').highcharts({
-                                        chart: {
-                                            type: 'column'
-                                        },
-                                        title: {
-                                            text: '用户统计'
-                                        },
-                                        xAxis: {
-                                            categories: ['admin', 'userGroup', 'general','other']
-                                        },
-                                        yAxis: {
-                                            title: {
-                                                text: '用户数'
-                                            }
-                                        },
-                                        credits: {
-                                            text: 'DSP-NEPTUNE©️',
-                                            href: 'http://t.cn'
-                                        },
-                                        series: [{
-                                            name: '总数',
-                                            data: [c,3,2,1]
-                                        }, {
-                                            name: 'userGroup',
-                                            data: [1,7,5]
-                                        },{
-                                            name: 'general',
-                                            data: [2,10,4]
-                                        },{
-                                            name: 'other',
-                                            data: [2,7,1]
-                                        }]
-                                    });
-                        });
-                </script>
+    <script>
+
+
+                   function task_count(){
+                      var retVal = '';
+                        $.ajax({
+                            type:"GET",
+                            url:"/usergroup",
+                            dataType:"json",
+                            async:false,
+                            success:function(data){
+                                retVal = data;
+                            }
+                       });
+                       return retVal;
+               }
+
+          $(function () {
+             <!--var audits=@audit-->
+             var data = task_count();
+              var userlist=eval(data);
+                                for(var i=0;i<userlist.length;i++){
+                                    var group = userlist[i].group;
+                                    var tatol = userlist[i].tatol;
+                                    //统计组用户数
+                                    if(group == 'ad'){
+                                        ad_total = userlist[i].tatol;
+                                    }
+                                    if(group == 'admin'){
+                                        admin_total = userlist[i].tatol;
+                                    }
+                                    if(group == 'test'){
+                                        test_total = userlist[i].tatol;
+                                    }
+                                    if(group == 'user'){
+                                        user_total = userlist[i].tatol;
+                                    }
+                                }
+
+            var colors = Highcharts.getOptions().colors,
+                categories = ['超级用户组','普通用户组','测试用户组','待审核用户组'],
+                name = '用户数',
+                data = [{
+                        y: admin_total,
+                        color: colors[0],
+                        drilldown: {
+                            name: '超级用户组',
+                            categories: ['DSP组', '大数据组', '粉丝库'],
+                            data: [3, 1, 1],
+                            color: colors[0]
+                        }
+                    }, {
+                        y: user_total,
+                        color: colors[1],
+                        drilldown: {
+                            name: '普通用户组',
+                            categories: ['对象库', '评论'],
+                            data: [2, 1],
+                            color: colors[1]
+                        }
+                    }, {
+                        y: test_total,
+                        color: colors[2],
+                        drilldown: {
+                            name: '测试用户组',
+                            categories: ['A组', 'B组'],
+                            data: [1, 0],
+                            color: colors[2]
+                        }
+                    },{
+                        y: @audit,
+                        color: colors[4],
+                        drilldown: {
+                            name: '待审核用户组',
+                            categories: ['A组', 'B组'],
+                            data: [ 1,1],
+                            color: colors[4]
+                        }
+                    }];
+
+            function setChart(name, categories, data, color) {
+            chart.xAxis[0].setCategories(categories, false);
+            chart.series[0].remove(false);
+            chart.addSeries({
+                name: name,
+                data: data,
+                color: color || 'white'
+            }, false);
+            chart.redraw();
+            }
+
+            var chart = $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '用户统计'
+                },
+                subtitle: {
+                    text: '点击查看组员数'
+                },
+                xAxis: {
+                    categories: categories
+                },
+                yAxis: {
+                    title: {
+                        text: '用户数'
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        cursor: 'pointer',
+                        point: {
+                            events: {
+                                click: function() {
+                                    var drilldown = this.drilldown;
+                                    if (drilldown) { // drill down
+                                        setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                                    } else { // restore
+                                        setChart(name, categories, data);
+                                    }
+                                }
+                            }
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            color: colors[0],
+                            style: {
+                                fontWeight: 'bold'
+                            },
+                            formatter: function() {
+                                return this.y;
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: name,
+                    data: data,
+                    color: 'white'
+                }],
+                exporting: {
+                    enabled: true
+                }
+            })
+            .highcharts();
+        });
+ 	   </script>
+
+
             </div>
             <div class="clearfix"> </div>
 

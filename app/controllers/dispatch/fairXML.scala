@@ -8,10 +8,6 @@ import play.api.mvc.Controller
 object fairXML extends Controller with Secured {
 
   def yarnfairXML = IsAuthenticated { username => implicit request =>
-    val queueName = "default"
-    val memory = "1234"
-    val vcpu = "100"
-    val maxRunningApps = "10"
     Ok(views.html.yarnfairXML("aa"))
   }
 

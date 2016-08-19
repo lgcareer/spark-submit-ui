@@ -16,11 +16,9 @@ object ServicePlan {
          row[String]("ip") ->
          row[String]("service")
       ).toMap
-        println("stream  " + stream)
 //      val serviceJson =Json.toJson(stream)
         println("返回Json " + stream.toString)
         stream
-
     }
 
   }

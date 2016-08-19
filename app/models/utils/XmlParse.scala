@@ -31,7 +31,8 @@ object XmlParse {
       /*
       load xml file
        */
-       val fairXml = XML.loadFile("/Users/manbu/Desktop/conf2/fair-scheduler.xml")
+      // s"public/download/fair-scheduler.xml"
+       val fairXml = XML.loadFile(s"tmp/fair-scheduler.xml")
       //fetch nodes insert into Map
         val queueMap =
          (Map[String,String]() /:(fairXml \ "queue" \ "queue")){
@@ -84,7 +85,7 @@ object XmlParse {
              </queue>
            </allocations>
          //保存文件路径
-         XML.save("/Users/manbu/Desktop/newXmlFile.xml", defaultFile)
+         XML.save(s"tmp/fair-scheduler.xml", defaultFile)
        }
        if(queueName == queueList(1)) {
           val pt_UserGrowth =
@@ -105,10 +106,10 @@ object XmlParse {
               </queue>
             </allocations>
          //保存文件路径
-         XML.save("/Users/manbu/Desktop/newXmlFile.xml", pt_UserGrowth)
+         XML.save(s"/tmp/newXmlFile.xml", pt_UserGrowth)
         }
 
-       println(XML.load("/Users/manbu/Desktop/newXmlFile.xml"))
+       println(XML.load(s"tmp/fair-scheduler.xml"))
        println("-------分隔符---------")
        fairXml.toString()
    }

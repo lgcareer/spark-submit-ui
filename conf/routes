@@ -71,6 +71,7 @@ GET    /widgets                       controllers.Serviceplan.servicedao
 GET    /functionplan                  controllers.Serviceplan.functionplan
 #UserCounts
 GET    /usertatol                     controllers.Usertally.usertatol
+GET    /usergroup                     controllers.Usertally.userGroup
 
 
 #Dispatch

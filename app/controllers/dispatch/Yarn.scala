@@ -15,7 +15,9 @@ object Yarn extends Controller with Secured {
     Ok(json)
   }
   def yarnDispatch = IsAuthenticated { username => implicit request =>
-    Ok(views.html.dispatchyarn("test"))
+    val data = "{\"user\":" + "\"" + username + "\"}"
+    println(data)
+    Ok(views.html.dispatchyarn())
   }
   def UserResource(queueName:String,
                    mem:String,
