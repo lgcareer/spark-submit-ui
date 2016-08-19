@@ -256,11 +256,8 @@
 
         <div class="col_1">
             <div class="xs" >
-                <h3 style="text-align:center ;">  Yarn调度任务信息列表  </h3>
-                <div class="bs-example4" data-example-id="contextual-table">
-                    <table class="table" id = "yarnInfo">
-
-                    </table>
+                <h3 class="text-center">  Yarn调度任务信息列表  </h3>
+                <div class="col-lg-pull-0" id="yarnInfo" >
                 </div>
             </div>
 
@@ -277,7 +274,7 @@
                     url:"/yarnInfo",
                     dataType:"json",
                     success:function(data){
-                        var head= "<table border='10' width='439'><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
+                        var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = data[p];

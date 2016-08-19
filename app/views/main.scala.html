@@ -13,7 +13,7 @@
 
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
             <!-- Bootstrap Core CSS -->
-        <link href="@routes.Assets.at("stylesheets/bootstrap.css")" rel="stylesheet" type="text/css" />
+        <link href="@routes.Assets.at("stylesheets/bootstrap.min.css")" rel="stylesheet" type="text/css" />
             <!-- Custom CSS -->
         <link href="@routes.Assets.at("stylesheets/xenon-core.css")" rel="stylesheet" type="text/css" />
             <!-- Graph CSS -->
@@ -506,10 +506,11 @@
                         url:"/whoiam",
                         dataType:"json",
                         success:function(data){
+                            console.log(data);
                             var myobj=eval(data);
                             var usernow=myobj.user;
-                            console.log(usernow);
-                            $('#whoiam').html(usernow + '<i class="fa-angle-down"></i>');
+                            var userShortName = myobj.shortName;
+                            $('#whoiam').html(userShortName + '<i class="fa-angle-down"></i>');
                             $('#userprofile').html(usernow);
                         }
                     });

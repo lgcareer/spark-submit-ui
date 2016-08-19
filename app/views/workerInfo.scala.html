@@ -255,7 +255,7 @@
 
     <div class="graphs">
         <h3 style="text-align:center ;"> Spark Worker信息  </h3>
-        <div class="bs-example4" data-example-id="contextual-table">
+        <div class="bs-example4">
             <div id = "workerInfo">
             </div>
         </div>
@@ -269,13 +269,13 @@
                     url:"/workerlist",
                     dataType:"json",
                     success:function(data){
-                        var head= "<table class=\"table\"><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
+                        var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
                         var myobj=eval(data);
                         var url = myobj.url;
                         var status = myobj.status;
                         var workers=myobj.workers;
                         for(var i=0;i<workers.length;i++){
-                            head += "<tr class= \"success\"><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+workers[i].coresused+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+ new Date(workers[i].startedTime).toLocaleString()+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
+                            head += "<tr><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+workers[i].coresused+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+ new Date(workers[i].startedTime).toLocaleString()+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
                         }
                         head += " </table>";
                         $('#workerInfo').html(head);

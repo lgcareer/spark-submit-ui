@@ -117,7 +117,7 @@ function resultToTable() {
                 tr += "<td>" + sql_data[j][i] + "</td>";
             }
             if (j % 2 == 0) {
-                result += "<tr class='success'>" + tr + "</tr>";
+                result += "<tr class='gray '>" + tr + "</tr>";
             } else {
                 result += "<tr>" + tr + "</tr>";
             }

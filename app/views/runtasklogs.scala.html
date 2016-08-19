@@ -270,7 +270,7 @@
                     url:"/workerlist",
                     dataType:"json",
                     success:function(data){
-                        var head= "<table  class=\"table\"><tr><th>Application ID</th><th>Name</th><th>User</th><th>Submitted Time</th><th>State</th><th>Logs</th></tr>"
+                        var head= "<table  class='table table-bordered table-striped table-condensed table-hover'><tr><th>Application ID</th><th>Name</th><th>User</th><th>Submitted Time</th><th>State</th><th>Logs</th></tr>"
                         var myobj=eval(data);
                         var activeapps =myobj.activeapps
                         for (var p in activeapps) {

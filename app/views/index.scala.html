@@ -43,7 +43,7 @@
             <ul id="main-menu" class="main-menu">
                     <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                     <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
-                <li>
+                <li class="active">
                     <a href="@routes.Application.index">
                         <i class="fa fa-dashboard fa-fw"></i>
                         <span class="title">仪表盘</span>
@@ -227,8 +227,12 @@
 
 @main("Neptun Dashboard")(sidebar) {
 
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/google.css")" type="text/css"/>
+
     <script src="@routes.Assets.at("javascripts/globalize.min.js")" type="text/javascript"></script>
     <script src="@routes.Assets.at("javascripts/dx.chartjs.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
     <script charset="utf-8">
             $(document).ready(function(){
                 $.ajax({
@@ -735,8 +739,41 @@
 
     });
     </script>*@
-    <div class="clearfix"></div>
 
+@*    修改编辑用户与注册审核对话框
+    添加注册审核发送邮件功能
+    添加个人中心下的任务列表页面
+    提交jar页面新增yarn,standalone，local选择
+    添加查看任务，杀死任务，重试任务功能
+    添加用户组、组员统计功能
+    添加Yarn资源调度参数列表
+    修正服务划分图标
+    本组资源占比计算以及展示*@
+
+    <script>
+            window.onload=function(){
+                swal({
+                    title: "修订日志:v3.0.2(2016.08.19)",
+                    text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
+                    "<span class='fa-circle'>&nbsp;修改编辑用户与注册审核对话框</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;添加注册审核发送邮件功能</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加个人中心下的任务列表页面</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>提交jar页面新增yarn,standalone，local选择</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加查看任务，杀死任务，重试任务功能</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加用户组、组员统计功能</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;添加Yarn资源调度参数列表</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修正服务划分图标</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>本组资源占比计算以及展示</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修正用户名称显示,长邮件名称换成段名称</sapn><br><br>" +
+                    "</div>",
+                    timer: 8000,
+                    html:true,
+                    showConfirmButton: true
+                });
+            }
+    </script>
+    <div class="clearfix"></div>
     @copyright()
 
 }
