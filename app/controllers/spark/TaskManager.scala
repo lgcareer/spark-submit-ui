@@ -1,6 +1,6 @@
 package controllers
 
-import models.user.UserAudit
+import com.google.inject.Inject
 import models._
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
@@ -9,7 +9,7 @@ import play.api.mvc.{Action, Controller}
   * Created by liangkai on 16/8/18.
   * 任务运行管理相关
   */
-object TaskManager extends Controller with Secured{
+class TaskManager @Inject() (taskDao: TaskDao) extends Controller with Secured{
 
    def tasklist=Action{
      Ok(views.html.tasklist())
@@ -20,7 +20,7 @@ object TaskManager extends Controller with Secured{
      username => implicit request =>
        implicit val residentWrites = Json.writes[TaskInfo]
        implicit val clusterWrites = Json.writes[TaskList]
-       val json: JsValue = Json.toJson(TaskList(TaskInfoDao.getTaskInfoList(username)))
+       val json: JsValue = Json.toJson(TaskList(taskDao.getTaskInfoList(username)))
        Ok(json)
    }
 
@@ -29,7 +29,7 @@ object TaskManager extends Controller with Secured{
     username => implicit request =>
       implicit val residentWrites = Json.writes[YarnTaskInfo]
       implicit val clusterWrites = Json.writes[YarnTaskList]
-      val json: JsValue = Json.toJson(YarnTaskList(TaskInfoDao.getYarnTaskList(username)))
+      val json: JsValue = Json.toJson(YarnTaskList(taskDao.getYarnTaskList(username)))
       Ok(json)
   }
 

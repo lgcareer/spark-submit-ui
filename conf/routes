@@ -44,14 +44,14 @@ POST   /updatepwd                   controllers.Authentication.updatepwd
 
 
 # Spark Jar
-#GET     /sparkjar                     controllers.SparkJar.uploadpage
-POST     /sparkjar                     controllers.SparkJar.upload
-GET     /executejar                    controllers.SparkJar.executejarpage
-POST     /executejar                   controllers.SparkJar.executejar
-GET     /errorpage                     controllers.SparkJar.errorpage
-GET     /logs                          controllers.SparkJar.logs(id:String)
+#GET     /sparkjar                     @controllers.SparkJar.uploadpage
+POST     /sparkjar                     @controllers.SparkJar.upload
+GET     /executejar                    @controllers.SparkJar.executejarpage
+POST     /executejar                   @controllers.SparkJar.executejar
+GET     /errorpage                     @controllers.SparkJar.errorpage
+GET     /logs                          @controllers.SparkJar.logs(id:String)
 GET    /runtasklogs                    controllers.RunTask.runTaskLogs
-GET    /he                             controllers.SparkJar.he(id:String)
+GET    /he                             @controllers.SparkJar.he(id:String)
 
 
 #Dashboard
@@ -110,7 +110,7 @@ GET  /audit                         controllers.UserManager.auditList
 GET   /whoiam                     controllers.UserName.userName
 
 #Job
-GET   /tasklist                      controllers.TaskManager.tasklist
-GET   /standalone                      controllers.TaskManager.standaloneInfo
-GET   /yarn                             controllers.TaskManager.yarnInfo
+GET   /tasklist                        @controllers.TaskManager.tasklist
+GET   /standalone                      @controllers.TaskManager.standaloneInfo
+GET   /yarn                             @controllers.TaskManager.yarnInfo
 

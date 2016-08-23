@@ -1,102 +1,1215 @@
-2016-08-19 11:59:43,174 - [INFO] - from play in pool-4-thread-3 
+2016-08-22 18:14:47,140 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-08-19 12:00:35,051 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-22 18:14:51,616 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-19 12:00:35,581 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-22 18:14:52,183 - [INFO] - from play in play-internal-execution-context-1 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-19 12:00:35,705 - [INFO] - from play in play-internal-execution-context-1 
+2016-08-22 18:14:52,279 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-08-19 12:02:51,303 - [ERROR] - from application in play-akka.actor.default-dispatcher-22 
+2016-08-22 18:18:02,438 - [ERROR] - from application in New I/O worker #7 
 
 
-! @715hp6p24 - Internal server error, for (GET) [/UserResource?queueName=normal&mem=223+mb&cpu=465+vcores&apps=897] ->
+! @716fhj3e0 - Internal server error, for (POST) [/executejar] ->
 
-play.api.Application$$anon$1: Execution exception[[FileNotFoundException: tmp/fair-scheduler.xml (No such file or directory)]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
-Caused by: java.io.FileNotFoundException: tmp/fair-scheduler.xml (No such file or directory)
-	at java.io.FileInputStream.open0(Native Method) ~[na:1.8.0_45]
-	at java.io.FileInputStream.open(FileInputStream.java:195) ~[na:1.8.0_45]
-	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[na:1.8.0_45]
-	at java.io.FileInputStream.<init>(FileInputStream.java:93) ~[na:1.8.0_45]
-	at scala.xml.Source$.fromFile(XML.scala:21) ~[scala-library-2.10.4.jar:na]
-	at scala.xml.factory.XMLLoader$class.loadFile(XMLLoader.scala:49) ~[scala-library-2.10.4.jar:na]
-	at scala.xml.XML$.loadFile(XML.scala:57) ~[scala-library-2.10.4.jar:na]
-	at models.utils.XmlParse$.XMLParses(XmlParse.scala:35) ~[classes/:na]
-	at controllers.Yarn$$anonfun$UserResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Yarn.scala:26) ~[classes/:na]
-	at controllers.Yarn$$anonfun$UserResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Yarn.scala:25) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+play.PlayExceptions$CompilationException: Compilation error[No Json deserializer found for type models.YarnTaskInfoList. Try to implement an implicit Reads or Format for this type.]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
-	... 6 common frames omitted
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
 
-2016-08-19 12:06:25,268 - [INFO] - from play in play-internal-execution-context-5 
+2016-08-22 18:34:08,491 - [ERROR] - from application in New I/O worker #8 
+
+
+! @716fjm2g0 - Internal server error, for (POST) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Overloaded method value [read] cannot be applied to  (Seq[models.YarnTaskInfo] => models.YarnData)]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-22 18:35:46,375 - [ERROR] - from application in New I/O worker #9 
+
+
+! @716fk1hak - Internal server error, for (POST) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Overloaded method value [read] cannot be applied to  (Seq[models.YarnTaskInfo] => models.YarnData)]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-22 18:36:51,149 - [ERROR] - from application in New I/O worker #10 
+
+
+! @716fk5964 - Internal server error, for (POST) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Overloaded method value [read] cannot be applied to  (Seq[models.TaskInfo] => models.TaskData)]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-23 10:23:23,114 - [ERROR] - from application in New I/O worker #11 
+
+
+! @716kecf0d - Internal server error, for (POST) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[No Json deserializer found for type models.YarnTaskInfoList. Try to implement an implicit Reads or Format for this type.]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-23 10:23:27,511 - [ERROR] - from application in New I/O worker #11 
+
+
+! @716keclde - Internal server error, for (POST) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[No Json deserializer found for type models.YarnTaskInfoList. Try to implement an implicit Reads or Format for this type.]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-23 10:25:08,104 - [INFO] - from play in play-internal-execution-context-2 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-08-19 12:06:25,785 - [INFO] - from play in play-internal-execution-context-5 
+2016-08-23 10:25:08,821 - [INFO] - from play in play-internal-execution-context-2 
 database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
 
-2016-08-19 12:06:25,791 - [INFO] - from play in play-internal-execution-context-5 
+2016-08-23 10:25:08,828 - [INFO] - from play in play-internal-execution-context-2 
 Application started (Dev)
 
-2016-08-19 12:14:45,853 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+2016-08-23 10:25:08,918 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+执行模式=>yarn-cluster
 
-2016-08-19 12:14:46,947 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+2016-08-23 10:25:08,945 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-2 
+select mode 1
 
-2016-08-19 12:14:46,953 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
+2016-08-23 10:25:08,961 - [INFO] - from application in pool-73-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, com.weibo.spark.stream.HDFSWordCount, --num-executors, 1, --executor-memory, 1g, --driver-memory, 1g, --total-executor-cores, 1, /tmp/file/sparkStream.jar, )
+
+2016-08-23 10:25:09,965 - [INFO] - from application in Thread-6 
+16/08/23 10:25:09 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-08-23 10:25:10,056 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+
+2016-08-23 10:25:10,212 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+
+2016-08-23 10:25:10,226 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+
+2016-08-23 10:25:10,226 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Will allocate AM container, with 1408 MB memory including 384 MB overhead
+
+2016-08-23 10:25:10,227 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Setting up container launch context for our AM
+
+2016-08-23 10:25:10,228 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Setting up the launch environment for our AM container
+
+2016-08-23 10:25:10,240 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Preparing resources for our AM container
+
+2016-08-23 10:25:10,613 - [INFO] - from application in Thread-6 
+16/08/23 10:25:10 INFO yarn.Client: Uploading resource file:/usr/local/spark/assembly/target/scala-2.10/spark-assembly-1.5.2-hadoop2.6.0.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1471502301744_0015/spark-assembly-1.5.2-hadoop2.6.0.jar
+
+2016-08-23 10:25:11,317 - [INFO] - from application in Thread-6 
+16/08/23 10:25:11 INFO yarn.Client: Uploading resource file:/tmp/file/sparkStream.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1471502301744_0015/sparkStream.jar
+
+2016-08-23 10:25:11,360 - [INFO] - from application in Thread-6 
+16/08/23 10:25:11 INFO yarn.Client: Uploading resource file:/private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-5224db16-a15a-4b95-9846-55d7d4eb9363/__spark_conf__3691847286798339708.zip -> hdfs://localhost:9000/user/king/.sparkStaging/application_1471502301744_0015/__spark_conf__3691847286798339708.zip
+
+2016-08-23 10:25:11,395 - [INFO] - from application in Thread-6 
+16/08/23 10:25:11 INFO spark.SecurityManager: Changing view acls to: king
+
+2016-08-23 10:25:11,395 - [INFO] - from application in Thread-6 
+16/08/23 10:25:11 INFO spark.SecurityManager: Changing modify acls to: king
+
+2016-08-23 10:25:11,396 - [INFO] - from application in Thread-6 
+16/08/23 10:25:11 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(king); users with modify permissions: Set(king)
+
+2016-08-23 10:25:11,586 - [INFO] - from application in Thread-6 
+16/08/23 10:25:11 INFO yarn.Client: Submitting application 15 to ResourceManager
+
+2016-08-23 10:25:11,654 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+用户任务Id====>application_1471502301744_0015
+
+2016-08-23 10:25:11,858 - [ERROR] - from application in ForkJoinPool-4-worker-13 
+field: /activeapps, errors: List(ValidationError(error.path.missing,WrappedArray()))
+
+2016-08-23 10:25:11,858 - [ERROR] - from application in ForkJoinPool-4-worker-13 
+field: /completedapps, errors: List(ValidationError(error.path.missing,WrappedArray()))
+
+2016-08-23 10:25:12,660 - [INFO] - from application in Thread-6 
+16/08/23 10:25:12 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+16/08/23 10:25:12 INFO yarn.Client: 
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 client token: N/A
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 diagnostics: N/A
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 ApplicationMaster host: N/A
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 ApplicationMaster RPC port: -1
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 queue: default
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 start time: 1471919111615
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 final status: UNDEFINED
+
+2016-08-23 10:25:12,663 - [INFO] - from application in Thread-6 
+	 tracking URL: http://10.236.13.42:8088/proxy/application_1471502301744_0015/
+
+2016-08-23 10:25:12,664 - [INFO] - from application in Thread-6 
+	 user: king
+
+2016-08-23 10:25:13,667 - [INFO] - from application in Thread-6 
+16/08/23 10:25:13 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:14,674 - [INFO] - from application in Thread-6 
+16/08/23 10:25:14 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:15,681 - [INFO] - from application in Thread-6 
+16/08/23 10:25:15 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:16,690 - [INFO] - from application in Thread-6 
+16/08/23 10:25:16 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:17,696 - [INFO] - from application in Thread-6 
+16/08/23 10:25:17 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:18,702 - [INFO] - from application in Thread-6 
+16/08/23 10:25:18 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:19,709 - [INFO] - from application in Thread-6 
+16/08/23 10:25:19 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:20,716 - [INFO] - from application in Thread-6 
+16/08/23 10:25:20 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:21,721 - [INFO] - from application in Thread-6 
+16/08/23 10:25:21 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:22,728 - [INFO] - from application in Thread-6 
+16/08/23 10:25:22 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:23,735 - [INFO] - from application in Thread-6 
+16/08/23 10:25:23 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:24,739 - [INFO] - from application in Thread-6 
+16/08/23 10:25:24 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:25,745 - [INFO] - from application in Thread-6 
+16/08/23 10:25:25 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:26,753 - [INFO] - from application in Thread-6 
+16/08/23 10:25:26 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:27,759 - [INFO] - from application in Thread-6 
+16/08/23 10:25:27 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:28,765 - [INFO] - from application in Thread-6 
+16/08/23 10:25:28 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:29,771 - [INFO] - from application in Thread-6 
+16/08/23 10:25:29 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:30,777 - [INFO] - from application in Thread-6 
+16/08/23 10:25:30 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:31,779 - [INFO] - from application in Thread-6 
+16/08/23 10:25:31 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:32,785 - [INFO] - from application in Thread-6 
+16/08/23 10:25:32 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:33,790 - [INFO] - from application in Thread-6 
+16/08/23 10:25:33 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:34,795 - [INFO] - from application in Thread-6 
+16/08/23 10:25:34 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:35,799 - [INFO] - from application in Thread-6 
+16/08/23 10:25:35 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:36,804 - [INFO] - from application in Thread-6 
+16/08/23 10:25:36 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:37,809 - [INFO] - from application in Thread-6 
+16/08/23 10:25:37 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:38,817 - [INFO] - from application in Thread-6 
+16/08/23 10:25:38 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:39,821 - [INFO] - from application in Thread-6 
+16/08/23 10:25:39 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:40,826 - [INFO] - from application in Thread-6 
+16/08/23 10:25:40 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:41,834 - [INFO] - from application in Thread-6 
+16/08/23 10:25:41 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:42,838 - [INFO] - from application in Thread-6 
+16/08/23 10:25:42 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:43,843 - [INFO] - from application in Thread-6 
+16/08/23 10:25:43 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:44,848 - [INFO] - from application in Thread-6 
+16/08/23 10:25:44 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:45,854 - [INFO] - from application in Thread-6 
+16/08/23 10:25:45 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:46,862 - [INFO] - from application in Thread-6 
+16/08/23 10:25:46 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:47,869 - [INFO] - from application in Thread-6 
+16/08/23 10:25:47 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:48,875 - [INFO] - from application in Thread-6 
+16/08/23 10:25:48 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:49,881 - [INFO] - from application in Thread-6 
+16/08/23 10:25:49 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:50,885 - [INFO] - from application in Thread-6 
+16/08/23 10:25:50 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:51,892 - [INFO] - from application in Thread-6 
+16/08/23 10:25:51 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:52,895 - [INFO] - from application in Thread-6 
+16/08/23 10:25:52 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:53,901 - [INFO] - from application in Thread-6 
+16/08/23 10:25:53 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:54,908 - [INFO] - from application in Thread-6 
+16/08/23 10:25:54 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:55,913 - [INFO] - from application in Thread-6 
+16/08/23 10:25:55 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:56,919 - [INFO] - from application in Thread-6 
+16/08/23 10:25:56 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:57,925 - [INFO] - from application in Thread-6 
+16/08/23 10:25:57 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:58,931 - [INFO] - from application in Thread-6 
+16/08/23 10:25:58 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:25:59,938 - [INFO] - from application in Thread-6 
+16/08/23 10:25:59 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:00,944 - [INFO] - from application in Thread-6 
+16/08/23 10:26:00 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:01,950 - [INFO] - from application in Thread-6 
+16/08/23 10:26:01 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:02,955 - [INFO] - from application in Thread-6 
+16/08/23 10:26:02 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:03,959 - [INFO] - from application in Thread-6 
+16/08/23 10:26:03 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:04,966 - [INFO] - from application in Thread-6 
+16/08/23 10:26:04 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:05,970 - [INFO] - from application in Thread-6 
+16/08/23 10:26:05 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:06,976 - [INFO] - from application in Thread-6 
+16/08/23 10:26:06 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:07,984 - [INFO] - from application in Thread-6 
+16/08/23 10:26:07 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:08,990 - [INFO] - from application in Thread-6 
+16/08/23 10:26:08 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:09,993 - [INFO] - from application in Thread-6 
+16/08/23 10:26:09 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:10,999 - [INFO] - from application in Thread-6 
+16/08/23 10:26:10 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:12,044 - [INFO] - from application in Thread-6 
+16/08/23 10:26:12 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:13,050 - [INFO] - from application in Thread-6 
+16/08/23 10:26:13 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:14,054 - [INFO] - from application in Thread-6 
+16/08/23 10:26:14 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:15,059 - [INFO] - from application in Thread-6 
+16/08/23 10:26:15 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:16,065 - [INFO] - from application in Thread-6 
+16/08/23 10:26:16 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:17,072 - [INFO] - from application in Thread-6 
+16/08/23 10:26:17 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:18,075 - [INFO] - from application in Thread-6 
+16/08/23 10:26:18 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:19,081 - [INFO] - from application in Thread-6 
+16/08/23 10:26:19 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:20,085 - [INFO] - from application in Thread-6 
+16/08/23 10:26:20 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:21,092 - [INFO] - from application in Thread-6 
+16/08/23 10:26:21 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:22,097 - [INFO] - from application in Thread-6 
+16/08/23 10:26:22 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:23,100 - [INFO] - from application in Thread-6 
+16/08/23 10:26:23 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:24,103 - [INFO] - from application in Thread-6 
+16/08/23 10:26:24 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:25,109 - [INFO] - from application in Thread-6 
+16/08/23 10:26:25 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:26,115 - [INFO] - from application in Thread-6 
+16/08/23 10:26:26 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:27,119 - [INFO] - from application in Thread-6 
+16/08/23 10:26:27 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:28,122 - [INFO] - from application in Thread-6 
+16/08/23 10:26:28 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:29,128 - [INFO] - from application in Thread-6 
+16/08/23 10:26:29 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:30,133 - [INFO] - from application in Thread-6 
+16/08/23 10:26:30 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:31,139 - [INFO] - from application in Thread-6 
+16/08/23 10:26:31 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:32,143 - [INFO] - from application in Thread-6 
+16/08/23 10:26:32 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:33,150 - [INFO] - from application in Thread-6 
+16/08/23 10:26:33 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:34,154 - [INFO] - from application in Thread-6 
+16/08/23 10:26:34 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:35,161 - [INFO] - from application in Thread-6 
+16/08/23 10:26:35 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:36,166 - [INFO] - from application in Thread-6 
+16/08/23 10:26:36 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:37,174 - [INFO] - from application in Thread-6 
+16/08/23 10:26:37 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:38,181 - [INFO] - from application in Thread-6 
+16/08/23 10:26:38 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:39,185 - [INFO] - from application in Thread-6 
+16/08/23 10:26:39 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:40,192 - [INFO] - from application in Thread-6 
+16/08/23 10:26:40 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:41,195 - [INFO] - from application in Thread-6 
+16/08/23 10:26:41 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:42,203 - [INFO] - from application in Thread-6 
+16/08/23 10:26:42 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:43,208 - [INFO] - from application in Thread-6 
+16/08/23 10:26:43 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:44,214 - [INFO] - from application in Thread-6 
+16/08/23 10:26:44 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:45,219 - [INFO] - from application in Thread-6 
+16/08/23 10:26:45 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:46,224 - [INFO] - from application in Thread-6 
+16/08/23 10:26:46 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:47,230 - [INFO] - from application in Thread-6 
+16/08/23 10:26:47 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:48,235 - [INFO] - from application in Thread-6 
+16/08/23 10:26:48 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:49,240 - [INFO] - from application in Thread-6 
+16/08/23 10:26:49 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:50,245 - [INFO] - from application in Thread-6 
+16/08/23 10:26:50 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:51,250 - [INFO] - from application in Thread-6 
+16/08/23 10:26:51 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:52,258 - [INFO] - from application in Thread-6 
+16/08/23 10:26:52 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:53,265 - [INFO] - from application in Thread-6 
+16/08/23 10:26:53 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:54,270 - [INFO] - from application in Thread-6 
+16/08/23 10:26:54 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:55,277 - [INFO] - from application in Thread-6 
+16/08/23 10:26:55 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:56,284 - [INFO] - from application in Thread-6 
+16/08/23 10:26:56 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:57,291 - [INFO] - from application in Thread-6 
+16/08/23 10:26:57 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:58,297 - [INFO] - from application in Thread-6 
+16/08/23 10:26:58 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:26:59,303 - [INFO] - from application in Thread-6 
+16/08/23 10:26:59 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:00,310 - [INFO] - from application in Thread-6 
+16/08/23 10:27:00 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:01,316 - [INFO] - from application in Thread-6 
+16/08/23 10:27:01 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:02,323 - [INFO] - from application in Thread-6 
+16/08/23 10:27:02 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:03,326 - [INFO] - from application in Thread-6 
+16/08/23 10:27:03 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:04,332 - [INFO] - from application in Thread-6 
+16/08/23 10:27:04 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:05,338 - [INFO] - from application in Thread-6 
+16/08/23 10:27:05 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:06,344 - [INFO] - from application in Thread-6 
+16/08/23 10:27:06 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:07,351 - [INFO] - from application in Thread-6 
+16/08/23 10:27:07 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:08,355 - [INFO] - from application in Thread-6 
+16/08/23 10:27:08 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:09,362 - [INFO] - from application in Thread-6 
+16/08/23 10:27:09 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:10,367 - [INFO] - from application in Thread-6 
+16/08/23 10:27:10 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:11,373 - [INFO] - from application in Thread-6 
+16/08/23 10:27:11 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:12,378 - [INFO] - from application in Thread-6 
+16/08/23 10:27:12 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:13,384 - [INFO] - from application in Thread-6 
+16/08/23 10:27:13 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:14,391 - [INFO] - from application in Thread-6 
+16/08/23 10:27:14 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:15,398 - [INFO] - from application in Thread-6 
+16/08/23 10:27:15 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:16,403 - [INFO] - from application in Thread-6 
+16/08/23 10:27:16 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:17,411 - [INFO] - from application in Thread-6 
+16/08/23 10:27:17 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:18,417 - [INFO] - from application in Thread-6 
+16/08/23 10:27:18 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:19,422 - [INFO] - from application in Thread-6 
+16/08/23 10:27:19 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:20,428 - [INFO] - from application in Thread-6 
+16/08/23 10:27:20 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:21,435 - [INFO] - from application in Thread-6 
+16/08/23 10:27:21 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:22,441 - [INFO] - from application in Thread-6 
+16/08/23 10:27:22 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:23,445 - [INFO] - from application in Thread-6 
+16/08/23 10:27:23 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:24,452 - [INFO] - from application in Thread-6 
+16/08/23 10:27:24 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:25,456 - [INFO] - from application in Thread-6 
+16/08/23 10:27:25 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:26,461 - [INFO] - from application in Thread-6 
+16/08/23 10:27:26 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:27,467 - [INFO] - from application in Thread-6 
+16/08/23 10:27:27 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:28,474 - [INFO] - from application in Thread-6 
+16/08/23 10:27:28 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:29,480 - [INFO] - from application in Thread-6 
+16/08/23 10:27:29 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:30,485 - [INFO] - from application in Thread-6 
+16/08/23 10:27:30 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:31,491 - [INFO] - from application in Thread-6 
+16/08/23 10:27:31 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:32,497 - [INFO] - from application in Thread-6 
+16/08/23 10:27:32 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:33,504 - [INFO] - from application in Thread-6 
+16/08/23 10:27:33 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:34,510 - [INFO] - from application in Thread-6 
+16/08/23 10:27:34 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:35,516 - [INFO] - from application in Thread-6 
+16/08/23 10:27:35 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:36,520 - [INFO] - from application in Thread-6 
+16/08/23 10:27:36 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:37,524 - [INFO] - from application in Thread-6 
+16/08/23 10:27:37 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:38,529 - [INFO] - from application in Thread-6 
+16/08/23 10:27:38 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:39,534 - [INFO] - from application in Thread-6 
+16/08/23 10:27:39 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:40,539 - [INFO] - from application in Thread-6 
+16/08/23 10:27:40 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:41,543 - [INFO] - from application in Thread-6 
+16/08/23 10:27:41 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:42,552 - [INFO] - from application in Thread-6 
+16/08/23 10:27:42 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:43,558 - [INFO] - from application in Thread-6 
+16/08/23 10:27:43 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:44,564 - [INFO] - from application in Thread-6 
+16/08/23 10:27:44 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:45,571 - [INFO] - from application in Thread-6 
+16/08/23 10:27:45 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:46,576 - [INFO] - from application in Thread-6 
+16/08/23 10:27:46 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:47,582 - [INFO] - from application in Thread-6 
+16/08/23 10:27:47 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:48,588 - [INFO] - from application in Thread-6 
+16/08/23 10:27:48 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:49,594 - [INFO] - from application in Thread-6 
+16/08/23 10:27:49 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:50,600 - [INFO] - from application in Thread-6 
+16/08/23 10:27:50 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:51,606 - [INFO] - from application in Thread-6 
+16/08/23 10:27:51 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:52,613 - [INFO] - from application in Thread-6 
+16/08/23 10:27:52 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:53,619 - [INFO] - from application in Thread-6 
+16/08/23 10:27:53 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:54,624 - [INFO] - from application in Thread-6 
+16/08/23 10:27:54 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:55,633 - [INFO] - from application in Thread-6 
+16/08/23 10:27:55 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:56,640 - [INFO] - from application in Thread-6 
+16/08/23 10:27:56 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:57,644 - [INFO] - from application in Thread-6 
+16/08/23 10:27:57 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:58,651 - [INFO] - from application in Thread-6 
+16/08/23 10:27:58 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:27:59,657 - [INFO] - from application in Thread-6 
+16/08/23 10:27:59 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:00,662 - [INFO] - from application in Thread-6 
+16/08/23 10:28:00 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:01,669 - [INFO] - from application in Thread-6 
+16/08/23 10:28:01 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:02,676 - [INFO] - from application in Thread-6 
+16/08/23 10:28:02 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:03,682 - [INFO] - from application in Thread-6 
+16/08/23 10:28:03 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:04,690 - [INFO] - from application in Thread-6 
+16/08/23 10:28:04 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:05,694 - [INFO] - from application in Thread-6 
+16/08/23 10:28:05 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:06,700 - [INFO] - from application in Thread-6 
+16/08/23 10:28:06 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:07,707 - [INFO] - from application in Thread-6 
+16/08/23 10:28:07 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:08,713 - [INFO] - from application in Thread-6 
+16/08/23 10:28:08 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:09,719 - [INFO] - from application in Thread-6 
+16/08/23 10:28:09 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:10,723 - [INFO] - from application in Thread-6 
+16/08/23 10:28:10 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:11,730 - [INFO] - from application in Thread-6 
+16/08/23 10:28:11 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:12,779 - [INFO] - from application in Thread-6 
+16/08/23 10:28:12 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:13,784 - [INFO] - from application in Thread-6 
+16/08/23 10:28:13 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:14,790 - [INFO] - from application in Thread-6 
+16/08/23 10:28:14 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:15,794 - [INFO] - from application in Thread-6 
+16/08/23 10:28:15 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:16,801 - [INFO] - from application in Thread-6 
+16/08/23 10:28:16 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:17,804 - [INFO] - from application in Thread-6 
+16/08/23 10:28:17 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:18,809 - [INFO] - from application in Thread-6 
+16/08/23 10:28:18 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:19,820 - [INFO] - from application in Thread-6 
+16/08/23 10:28:19 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:20,825 - [INFO] - from application in Thread-6 
+16/08/23 10:28:20 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:21,831 - [INFO] - from application in Thread-6 
+16/08/23 10:28:21 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:22,838 - [INFO] - from application in Thread-6 
+16/08/23 10:28:22 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:23,845 - [INFO] - from application in Thread-6 
+16/08/23 10:28:23 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:24,851 - [INFO] - from application in Thread-6 
+16/08/23 10:28:24 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:25,854 - [INFO] - from application in Thread-6 
+16/08/23 10:28:25 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:26,861 - [INFO] - from application in Thread-6 
+16/08/23 10:28:26 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:27,870 - [INFO] - from application in Thread-6 
+16/08/23 10:28:27 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:28,877 - [INFO] - from application in Thread-6 
+16/08/23 10:28:28 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:29,883 - [INFO] - from application in Thread-6 
+16/08/23 10:28:29 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:30,889 - [INFO] - from application in Thread-6 
+16/08/23 10:28:30 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:31,895 - [INFO] - from application in Thread-6 
+16/08/23 10:28:31 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:32,901 - [INFO] - from application in Thread-6 
+16/08/23 10:28:32 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:33,907 - [INFO] - from application in Thread-6 
+16/08/23 10:28:33 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:34,913 - [INFO] - from application in Thread-6 
+16/08/23 10:28:34 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:35,920 - [INFO] - from application in Thread-6 
+16/08/23 10:28:35 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:36,926 - [INFO] - from application in Thread-6 
+16/08/23 10:28:36 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:37,931 - [INFO] - from application in Thread-6 
+16/08/23 10:28:37 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:38,936 - [INFO] - from application in Thread-6 
+16/08/23 10:28:38 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:39,944 - [INFO] - from application in Thread-6 
+16/08/23 10:28:39 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:40,950 - [INFO] - from application in Thread-6 
+16/08/23 10:28:40 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:41,952 - [INFO] - from application in Thread-6 
+16/08/23 10:28:41 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:42,958 - [INFO] - from application in Thread-6 
+16/08/23 10:28:42 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:43,966 - [INFO] - from application in Thread-6 
+16/08/23 10:28:43 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:44,972 - [INFO] - from application in Thread-6 
+16/08/23 10:28:44 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:45,977 - [INFO] - from application in Thread-6 
+16/08/23 10:28:45 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:46,980 - [INFO] - from application in Thread-6 
+16/08/23 10:28:46 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:47,984 - [INFO] - from application in Thread-6 
+16/08/23 10:28:47 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:48,990 - [INFO] - from application in Thread-6 
+16/08/23 10:28:48 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:49,995 - [INFO] - from application in Thread-6 
+16/08/23 10:28:49 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:50,998 - [INFO] - from application in Thread-6 
+16/08/23 10:28:50 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:52,005 - [INFO] - from application in Thread-6 
+16/08/23 10:28:52 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:53,009 - [INFO] - from application in Thread-6 
+16/08/23 10:28:53 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:54,013 - [INFO] - from application in Thread-6 
+16/08/23 10:28:54 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:55,020 - [INFO] - from application in Thread-6 
+16/08/23 10:28:55 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:56,024 - [INFO] - from application in Thread-6 
+16/08/23 10:28:56 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:57,030 - [INFO] - from application in Thread-6 
+16/08/23 10:28:57 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:58,038 - [INFO] - from application in Thread-6 
+16/08/23 10:28:58 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:28:59,044 - [INFO] - from application in Thread-6 
+16/08/23 10:28:59 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:00,049 - [INFO] - from application in Thread-6 
+16/08/23 10:29:00 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:01,055 - [INFO] - from application in Thread-6 
+16/08/23 10:29:01 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:02,059 - [INFO] - from application in Thread-6 
+16/08/23 10:29:02 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:03,065 - [INFO] - from application in Thread-6 
+16/08/23 10:29:03 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:04,069 - [INFO] - from application in Thread-6 
+16/08/23 10:29:04 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:05,076 - [INFO] - from application in Thread-6 
+16/08/23 10:29:05 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:06,080 - [INFO] - from application in Thread-6 
+16/08/23 10:29:06 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:07,085 - [INFO] - from application in Thread-6 
+16/08/23 10:29:07 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:08,091 - [INFO] - from application in Thread-6 
+16/08/23 10:29:08 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:09,098 - [INFO] - from application in Thread-6 
+16/08/23 10:29:09 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:10,100 - [INFO] - from application in Thread-6 
+16/08/23 10:29:10 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:11,107 - [INFO] - from application in Thread-6 
+16/08/23 10:29:11 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:12,114 - [INFO] - from application in Thread-6 
+16/08/23 10:29:12 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:13,149 - [INFO] - from application in Thread-6 
+16/08/23 10:29:13 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:14,156 - [INFO] - from application in Thread-6 
+16/08/23 10:29:14 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:15,161 - [INFO] - from application in Thread-6 
+16/08/23 10:29:15 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:16,168 - [INFO] - from application in Thread-6 
+16/08/23 10:29:16 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:17,173 - [INFO] - from application in Thread-6 
+16/08/23 10:29:17 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:18,180 - [INFO] - from application in Thread-6 
+16/08/23 10:29:18 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:19,183 - [INFO] - from application in Thread-6 
+16/08/23 10:29:19 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:20,190 - [INFO] - from application in Thread-6 
+16/08/23 10:29:20 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:21,198 - [INFO] - from application in Thread-6 
+16/08/23 10:29:21 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:22,202 - [INFO] - from application in Thread-6 
+16/08/23 10:29:22 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:23,207 - [INFO] - from application in Thread-6 
+16/08/23 10:29:23 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:24,212 - [INFO] - from application in Thread-6 
+16/08/23 10:29:24 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:25,217 - [INFO] - from application in Thread-6 
+16/08/23 10:29:25 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:26,223 - [INFO] - from application in Thread-6 
+16/08/23 10:29:26 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:27,227 - [INFO] - from application in Thread-6 
+16/08/23 10:29:27 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:28,234 - [INFO] - from application in Thread-6 
+16/08/23 10:29:28 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:29,240 - [INFO] - from application in Thread-6 
+16/08/23 10:29:29 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:30,248 - [INFO] - from application in Thread-6 
+16/08/23 10:29:30 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:31,253 - [INFO] - from application in Thread-6 
+16/08/23 10:29:31 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:32,256 - [INFO] - from application in Thread-6 
+16/08/23 10:29:32 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:33,264 - [INFO] - from application in Thread-6 
+16/08/23 10:29:33 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:34,269 - [INFO] - from application in Thread-6 
+16/08/23 10:29:34 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:35,275 - [INFO] - from application in Thread-6 
+16/08/23 10:29:35 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:36,280 - [INFO] - from application in Thread-6 
+16/08/23 10:29:36 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:37,286 - [INFO] - from application in Thread-6 
+16/08/23 10:29:37 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:38,293 - [INFO] - from application in Thread-6 
+16/08/23 10:29:38 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:39,299 - [INFO] - from application in Thread-6 
+16/08/23 10:29:39 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:40,306 - [INFO] - from application in Thread-6 
+16/08/23 10:29:40 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:41,311 - [INFO] - from application in Thread-6 
+16/08/23 10:29:41 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:42,317 - [INFO] - from application in Thread-6 
+16/08/23 10:29:42 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:43,325 - [INFO] - from application in Thread-6 
+16/08/23 10:29:43 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:44,331 - [INFO] - from application in Thread-6 
+16/08/23 10:29:44 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:45,334 - [INFO] - from application in Thread-6 
+16/08/23 10:29:45 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:46,339 - [INFO] - from application in Thread-6 
+16/08/23 10:29:46 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:47,347 - [INFO] - from application in Thread-6 
+16/08/23 10:29:47 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:48,353 - [INFO] - from application in Thread-6 
+16/08/23 10:29:48 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:49,357 - [INFO] - from application in Thread-6 
+16/08/23 10:29:49 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:50,363 - [INFO] - from application in Thread-6 
+16/08/23 10:29:50 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:51,369 - [INFO] - from application in Thread-6 
+16/08/23 10:29:51 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:52,375 - [INFO] - from application in Thread-6 
+16/08/23 10:29:52 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:53,382 - [INFO] - from application in Thread-6 
+16/08/23 10:29:53 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:54,385 - [INFO] - from application in Thread-6 
+16/08/23 10:29:54 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:55,389 - [INFO] - from application in Thread-6 
+16/08/23 10:29:55 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:56,396 - [INFO] - from application in Thread-6 
+16/08/23 10:29:56 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:57,403 - [INFO] - from application in Thread-6 
+16/08/23 10:29:57 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:58,409 - [INFO] - from application in Thread-6 
+16/08/23 10:29:58 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:29:59,414 - [INFO] - from application in Thread-6 
+16/08/23 10:29:59 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:00,420 - [INFO] - from application in Thread-6 
+16/08/23 10:30:00 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:01,425 - [INFO] - from application in Thread-6 
+16/08/23 10:30:01 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:02,432 - [INFO] - from application in Thread-6 
+16/08/23 10:30:02 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:03,436 - [INFO] - from application in Thread-6 
+16/08/23 10:30:03 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:04,441 - [INFO] - from application in Thread-6 
+16/08/23 10:30:04 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:05,448 - [INFO] - from application in Thread-6 
+16/08/23 10:30:05 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:06,454 - [INFO] - from application in Thread-6 
+16/08/23 10:30:06 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:07,461 - [INFO] - from application in Thread-6 
+16/08/23 10:30:07 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:08,468 - [INFO] - from application in Thread-6 
+16/08/23 10:30:08 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:09,475 - [INFO] - from application in Thread-6 
+16/08/23 10:30:09 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:10,480 - [INFO] - from application in Thread-6 
+16/08/23 10:30:10 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:11,485 - [INFO] - from application in Thread-6 
+16/08/23 10:30:11 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:12,491 - [INFO] - from application in Thread-6 
+16/08/23 10:30:12 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:14,323 - [INFO] - from application in Thread-6 
+16/08/23 10:30:14 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:15,329 - [INFO] - from application in Thread-6 
+16/08/23 10:30:15 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:16,335 - [INFO] - from application in Thread-6 
+16/08/23 10:30:16 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:17,340 - [INFO] - from application in Thread-6 
+16/08/23 10:30:17 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:18,345 - [INFO] - from application in Thread-6 
+16/08/23 10:30:18 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:19,351 - [INFO] - from application in Thread-6 
+16/08/23 10:30:19 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:20,353 - [INFO] - from application in Thread-6 
+16/08/23 10:30:20 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:21,361 - [INFO] - from application in Thread-6 
+16/08/23 10:30:21 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:22,363 - [INFO] - from application in Thread-6 
+16/08/23 10:30:22 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:23,369 - [INFO] - from application in Thread-6 
+16/08/23 10:30:23 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:24,376 - [INFO] - from application in Thread-6 
+16/08/23 10:30:24 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:25,382 - [INFO] - from application in Thread-6 
+16/08/23 10:30:25 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:26,388 - [INFO] - from application in Thread-6 
+16/08/23 10:30:26 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:27,395 - [INFO] - from application in Thread-6 
+16/08/23 10:30:27 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:28,401 - [INFO] - from application in Thread-6 
+16/08/23 10:30:28 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
+
+2016-08-23 10:30:29,405 - [INFO] - from application in Thread-6 
+16/08/23 10:30:29 INFO yarn.Client: Application report for application_1471502301744_0015 (state: ACCEPTED)
 

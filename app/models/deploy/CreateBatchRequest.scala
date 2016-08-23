@@ -17,6 +17,7 @@ class CreateBatchRequest {
   var driverCores: Option[String] = None
   var executorMemory: Option[String] = None
   var executorCores: Option[String] = None
+  var total_executor_cores:Option[String] =None
   var numExecutors: Option[String] = None
   var jarLocation :Option[String] =None
   var archives: List[String] = List()

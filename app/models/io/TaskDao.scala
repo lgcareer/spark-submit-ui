@@ -1,50 +1,73 @@
 package models
 
 import anorm.SqlParser._
-import anorm._
-import models._
-import play.api.Play.current
-import play.api.db.DB
+import anorm.~
+
 
 /**
-  * Created by king on 16/8/18.
-  * 运行时任务数据
-  * "starttime" : 1471494218651,
-  * "id" : "app-20160818122338-0000",
-  * "name" : "HFDSWordCount",
-  * "user" : "king",
-  * "memoryperslave" : 1024,
-  * "submitdate" : "Thu Aug 18 12:23:38 HKT 2016",
-  * "state" : "RUNNING",
-  * "duration" : 17290
+  * Created by king on 16/8/22.
   */
-object TaskInfoDao extends TaskDao{
+case class TaskInfo(
+                     app_id:String,
+                     name:String,
+                     cores: Int,
+                     memoryperslave:Long,
+                     state:String,
+                     submitdate:String,
+                     duration:Long
+                   )
 
-    override def saveTask(task: TaskInfo): Unit = ???
+case class YarnTaskInfo(
+                         applicaton_id:String,
+                         name:String,
+                         apptype:String,
+                         queue:String,
+                         starttime:String,
+                         finishtime:String,
+                         state:String,
+                         finalstatus:String
+                       )
+case class YarnTaskList(list:Seq[YarnTaskInfo])
+case class TaskList(list:Seq[TaskInfo])
 
-    override def getYarnTaskList(username:String): Seq[YarnTaskInfo] = {
-        DB.withConnection{
-            implicit  connection =>
-                SQL(
-                    """
-                 select * from task_yarn where email={email}
-                    """
-                ).on( 'email -> username)
-                  .as(yarn *)
-        }
+
+trait TaskDao{
+
+
+  val yarn = {
+    get[String]("task_yarn.applicaton_id") ~
+      get[String]("task_yarn.name") ~
+      get[String]("task_yarn.apptype")~
+      get[String]("task_yarn.queue") ~
+      get[String]("task_yarn.starttime")~
+      get[String]("task_yarn.finishtime") ~
+      get[String]("task_yarn.state")~
+      get[String]("task_yarn.finalstatus") map {
+      case applicaton_id ~ name ~ apptype ~ queue ~starttime ~finishtime ~state~finalstatus=> YarnTaskInfo(applicaton_id,name,apptype,queue,starttime,finishtime,state,finalstatus)
     }
+  }
 
-    override def saveYarnTask(yarnTask: YarnTaskInfo): Unit = ???
-
-    override def getTaskInfoList(username:String): Seq[TaskInfo] = {
-        DB.withConnection{
-            implicit  connection =>
-                SQL(
-                    """
-                 select * from task_standalone where email={email}
-                    """
-                ).on( 'email -> username)
-               .as(standalone *)
-        }
+  val standalone = {
+    get[String]("task_standalone.app_id") ~
+      get[String]("task_standalone.name") ~
+      get[Int]("task_standalone.cores")~
+      get[Long]("task_standalone.memoryperslave")~
+      get[String]("task_standalone.state") ~
+      get[String]("task_standalone.submitdate")~
+      get[Long]("task_standalone.duration") map {
+      case app_id ~ name ~ cores ~ memoryperslave ~ state ~ submitdate ~ duration  => TaskInfo(app_id,name,cores,memoryperslave,state,submitdate,duration)
     }
+  }
+
+
+  def saveTask(task: TaskInfo)(user:String): TaskInfo
+
+  def saveYarnTask(yarnTask: YarnTaskInfo)(user:String): YarnTaskInfo
+
+  def getTaskInfoList(username:String): Seq[TaskInfo]
+
+  def getYarnTaskList(username:String): Seq[YarnTaskInfo]
+
+
+
 }

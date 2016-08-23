@@ -6,8 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.locks.ReentrantLock
 
 import akka.actor.ActorRef
-import models.deploy.MatchEngine
-import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess}
+import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess, MatchEngine}
 import org.apache.spark.Logging
 import play.api.{Logger, cache}
 import play.api.cache.Cache

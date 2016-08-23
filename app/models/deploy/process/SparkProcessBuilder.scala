@@ -23,7 +23,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
   private[this] var _executor_memory: Option[String]=None
   private[this] var _num_executors: Option[String] = None
   private[this] var _driver_memory: Option[String] = None
-  private[this] var _executor_cores: Option[String] = None
+  private[this] var _total_executor_cores: Option[String] = None
   private[this] var _name: Option[String] = Some("app")
   private[this] var _jarLocation:Option[String] =None
   private[this] var _queue: Option[String] = None
@@ -62,7 +62,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
   }
 
   def executorCores(executorCores: String): SparkProcessBuilder = {
-    _executor_cores = Some(executorCores)
+    _total_executor_cores = Some(executorCores)
     this
   }
 
@@ -130,7 +130,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
     addOpt("--num-executors",_num_executors)
     addOpt("--executor-memory", _executor_memory)
     addOpt("--driver-memory",_driver_memory)
-    addOpt("--executor-cores", _executor_cores)
+    addOpt("--total-executor-cores", _total_executor_cores)
     addArg(_jarLocation)
     addList(args)
     Logger.info(s"args $arguments")

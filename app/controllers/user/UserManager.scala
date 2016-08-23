@@ -9,7 +9,7 @@ import play.api.mvc.{Action, Controller}
   * Created by liangkai1 on 16/8/4.
   * 用户管理相关
   */
-object UserManager extends Controller with  Secured{
+object UserManager  extends Controller with  Secured{
 
 
   /**

@@ -13,7 +13,9 @@ libraryDependencies ++= Seq(
   "org.apache.spark" % "spark-core_2.10" % "1.4.1",
   "com.codahale" % "jerkson_2.9.1" % "0.5.0",
   "net.minidev" % "json-smart" % "1.3.1",
-  "org.apache.hive" % "hive-jdbc" % "2.0.0"
+  "org.apache.hive" % "hive-jdbc" % "2.0.0",
+  "com.google.inject" % "guice" % "3.0",
+  "com.tzavellas" % "sse-guice" % "0.7.1"
 )
 
 play.Project.playScalaSettings

@@ -1,4 +1,4 @@
-package models.deploy
+package models
 
 import scala.util.matching.Regex
 
@@ -6,6 +6,7 @@ import scala.util.matching.Regex
   * Created by king on 16/8/18.
   */
 object MatchEngine {
+
 
 
   /**
@@ -25,11 +26,25 @@ object MatchEngine {
   val regex_on_standalone = """Spark cluster with app ID (.*)""".r.unanchored
 
 
+  val spark_uri ="http://localhost:8080/json/"
+
+  val yarn_uri="http://localhost:8088/ws/v1/cluster/apps"
+
+
 
   def matchMode :PartialFunction[String,Regex]={
     case m if m.startsWith("yarn") =>   regex_on_yarn
-    case m if m.startsWith("standalone") => regex_on_standalone
+    case m if m.startsWith("spark") => regex_on_standalone
     case m if m.startsWith("local") => regex_on_local
   }
 
+  def matchURI : PartialFunction[String,Option[(String,String)]]={
+    case m if m.startsWith("application") => Some(("yarn",yarn_uri))
+    case m if m.startsWith("app") => Some(("standalone",spark_uri))
+    case m if m.startsWith("local") => None
+
+  }
+
 }
+
+
