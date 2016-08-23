@@ -22,10 +22,9 @@ case class YarnTaskInfo(
                          name:String,
                          apptype:String,
                          queue:String,
-                         starttime:String,
-                         finishtime:String,
+                         starttime:Long,
                          state:String,
-                         finalstatus:String
+                         finishtime:Long
                        )
 case class YarnTaskList(list:Seq[YarnTaskInfo])
 case class TaskList(list:Seq[TaskInfo])
@@ -33,17 +32,15 @@ case class TaskList(list:Seq[TaskInfo])
 
 trait TaskDao{
 
-
   val yarn = {
-    get[String]("task_yarn.applicaton_id") ~
+      get[String]("task_yarn.applicaton_id") ~
       get[String]("task_yarn.name") ~
       get[String]("task_yarn.apptype")~
       get[String]("task_yarn.queue") ~
-      get[String]("task_yarn.starttime")~
-      get[String]("task_yarn.finishtime") ~
+      get[Long]("task_yarn.starttime")~
       get[String]("task_yarn.state")~
-      get[String]("task_yarn.finalstatus") map {
-      case applicaton_id ~ name ~ apptype ~ queue ~starttime ~finishtime ~state~finalstatus=> YarnTaskInfo(applicaton_id,name,apptype,queue,starttime,finishtime,state,finalstatus)
+      get[Long]("task_yarn.finishtime") map {
+      case applicaton_id ~ name ~ apptype ~ queue ~starttime ~state~finishtime=> YarnTaskInfo(applicaton_id,name,apptype,queue,starttime,state,finishtime)
     }
   }
 
@@ -64,9 +61,9 @@ trait TaskDao{
 
   def saveYarnTask(yarnTask: YarnTaskInfo)(user:String): YarnTaskInfo
 
-  def getTaskInfoList(username:String): Seq[TaskInfo]
+  def getTaskInfoList(user:String): Seq[TaskInfo]
 
-  def getYarnTaskList(username:String): Seq[YarnTaskInfo]
+  def getYarnTaskList(user:String): Seq[YarnTaskInfo]
 
 
 

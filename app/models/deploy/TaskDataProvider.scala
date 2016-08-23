@@ -1,6 +1,7 @@
 package models
 
 import com.google.inject.Inject
+import models.TaskDataProvider.{AppDataObject, TaskData, YarnTaskInfoList}
 import play.api.Logger
 import play.api.libs.ws.WS
 
@@ -11,11 +12,14 @@ import scala.language.postfixOps
   * Created by liangkai on 16/8/18.
   * 数据内容提供者
   */
-case class  TaskData(activeapps:Seq[TaskInfo],completedapps:Seq[TaskInfo])
-case class  YarnData(apps:Seq[YarnTaskInfo])
-case class  YarnTaskInfoList(app:YarnData,app2:YarnData)
+object TaskDataProvider{
 
-case class AppDataObject(appId:String,url:String,user:String)
+  case class  TaskData(activeapps:Seq[TaskInfo],completedapps:Seq[TaskInfo])
+
+  case class AppDataObject(appId:String,url:String,user:String)
+
+  case class YarnTaskInfoList(app: Seq[YarnTaskInfo])
+}
 
 class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataObject]{
 
@@ -64,7 +68,6 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
                      starttime:String,
                      finishtime:String,
                      state:String,
-                     finalstatus:String
                    )
     */
   implicit val yarnReads: Reads[YarnTaskInfo] = (
@@ -72,17 +75,14 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
       (JsPath \ "name").read[String] and
       (JsPath \ "applicationType").read[String] and
       (JsPath \ "queue").read[String] and
-      (JsPath \ "startedTime").read[String] and
+      (JsPath \ "startedTime").read[Long] and
       (JsPath \ "state").read[String] and
-      (JsPath \ "finishtime").read[String] and
-      (JsPath \ "finalStatus").read[String]
+      (JsPath \ "finishedTime").read[Long]
     )(YarnTaskInfo.apply _)
 
-//  implicit val yarnDataReads:Reads[YarnData]=((JsPath \ "apps").read[Seq[models.YarnTaskInfo]] and null)(YarnData.apply _)
-//
-//  implicit val yarnListReads: Reads[YarnTaskInfoList]=(
-//    (JsPath \ "app").read[String])
-//    (YarnTaskInfoList.apply _)
+
+
+  implicit  val areads = (__ \ 'apps \ 'app).read[Seq[YarnTaskInfo]].map{ l => YarnTaskInfoList(l) }
 
 
 
@@ -128,11 +128,12 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
   }
 
 
+
   override  def proTaskOnYarn(app:AppDataObject): Unit ={
     WS.url(app.url).get() map{
       response => response.status match {
         case  200 => Some{
-          response.json .validate[TaskData].fold(
+          response.json .validate[YarnTaskInfoList].fold(
             invalid = {
               fieldErrors => fieldErrors.foreach(x => {
                 Logger.error("field: " + x._1 + ", errors: " + x._2)
@@ -141,7 +142,8 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
             },
             valid = {
               tasks => {
-
+                 val runingTask= tasks.app.filter(_.applicaton_id.equals(app.appId))(0)
+                  taskDao.saveYarnTask(runingTask)(app.user)
               }
             })
         }

@@ -3,6 +3,7 @@ package controllers
 
 import com.google.inject.Inject
 import models.JobManagerActor.{InvalidJar, JarStored}
+import models.TaskDataProvider.AppDataObject
 import models._
 import play.api.Logger
 import play.api.Play.current
@@ -62,7 +63,7 @@ class SparkJar @Inject() (taskProvider: TaskProvider[AppDataObject]) extends Con
           Logger.info("执行模式=>"+executeArguments.master)
           Execute.main(executeArguments)
           match {
-              case JobSubmitSuccess(id) =>  taskProvider.findTaskInfo(id)(username);Redirect(routes.SparkJar.he(id))
+              case JobSubmitSuccess(id) =>  taskProvider.findTaskInfo(id)(username);Redirect(routes.TaskManager.tasklist())
               case JobRunExecption(error) => BadRequest(error)
               case _ => NotFound
             }

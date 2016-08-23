@@ -222,7 +222,7 @@
 
 </div>
 }
-@main("Neptun 任务管理")(sidebar) {
+@main("Neptun 用户任务管理")(sidebar) {
 
 <div class="page-title">
 
@@ -259,12 +259,12 @@
                     url:"/yarn",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th>ID</th><th>Name</th><th>App Type</th><th>Queue</th><th>StartTime</th><th>FinishTime</th>th>State</th><th>FinalStatus</th><th>Kill</th><th>ReRun</th></tr></thead><tbody>"
+                        var head= "<thead><tr><th style=\"WORD-WRAP: break-word\" width=\"150\">ID</th><th style=\"WORD-WRAP: break-word\" width=\"150\">Name</th><th>App Type</th><th>Queue</th><th style=\"WORD-WRAP: break-word\" width=\"160\">StartTime</th><th style=\"WORD-WRAP: break-word\" width=\"160\">FinishTime</th><th style=\"WORD-WRAP: break-word\" width=\"100\">State</th><th style=\"WORD-WRAP: break-word\" width=\"55\">Kill</th><th>ReRun</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].applicaton_id + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td>"+datamid[i].starttime+ "</td><td>"+datamid[i].finishtime+ "</td><td>"+datamid[i].finalstatus+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
+                                head += "<tr><td style=\"WORD-WRAP: break-word\" width=\"80\">" + datamid[i].applicaton_id + "</td><td style=\"WORD-WRAP: break-word\" width=\"60\">" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td style=\"WORD-WRAP: break-word\" width=\"80\">"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -285,7 +285,7 @@
                     url:"/standalone",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th>Application ID</th><th>Name</th><th>Cores</th><th>Memory per Node</th><th>Submitted Time</th><th>State</th><th>Duration</th><th>Kill</th><th>reRun</th></tr></thead><tbody>"
+                        var head= "<thead><tr><th>Application ID</th><th>Name</th><th>Cores</th><th>Memory per Node</th><th>Submitted Time</th><th>State</th><th>Duration</th><th>Kill</th><th>ReRun</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
@@ -327,7 +327,7 @@
 
                         </div>
                         <div class="space15"></div>
-                        <table class="table table-striped table-hover table-bordered" id="editable-yarn">
+                        <table class="table table-striped table-hover table-bordered" id="editable-yarn"  style="TABLE-LAYOUT: fixed" >
                         </table>
                     </div>
                 </div>
