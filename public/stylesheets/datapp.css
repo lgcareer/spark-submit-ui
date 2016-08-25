@@ -604,7 +604,7 @@ h2.form-heading {
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: rgb(6, 217, 149);
 }
-.form-control {
+.form-control1 {
     background: none !important;
     border: 1px solid #fff !important;
     border-radius: 20px !important;

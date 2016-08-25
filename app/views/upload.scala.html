@@ -241,6 +241,9 @@
     </script>
 
 
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster.bundle.min.css")" type="text/css"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster-sideTip-punk.min.css")" type="text/css"/>
+    <script src="@routes.Assets.at("javascripts/tooltipster.bundle.min.js")" type="text/javascript"></script>
 
     <div class="page-title">
 
@@ -269,7 +272,7 @@
 
     </div>
 
-
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css"/>
     <div class="graphs">
         <div class="xs">
           <form action="/executejar" method="POST" id="jarForm">
@@ -282,20 +285,17 @@
                             <i class="linecons-cog"></i>
                         </a>
                         <span>RUN</span>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="点此执行程序">
-                            <span class="fa fa-play" id="submit" ></span>
+                        <a href="#" class="toop" title="点此执行程序">
+                            <span class="fa fa-play" id="submit"></span>
                         </a>
                         <span>设置</span>
-                        <a href="#" data-toggle="tooltip" data-placement="top" title="点此进行设置">
+                        <a href="#" class="toop" title="点此进行设置">
                             <span class="fa fa-wrench" id="setting"></span>
                         </a>
 
                     </div>
                 </div>
 
-                <script>
-                        $(function () { $("[data-toggle='tooltip']").tooltip(); });
-                </script>
 
                 <div class="panel-body" >
 
@@ -316,7 +316,7 @@
                                                 {
                                                     FILENAME = file.name;
                                                     var location = "/tmp/file/" + FILENAME;
-                                                    $("#jarlocation").val(location);
+                                                    $("#jarlocation").val(location).removeClass("alert-success").removeClass("alert-danger").addClass("alert-success");
 
                                                     if(i == 1)
                                                     {
@@ -347,15 +347,16 @@
 
                                                 success: function(file)
                                                 {
-                                                    file.fileEntryTd.find('td:last').html('<span class="text-success">Uploaded</span>');
+                                                    file.fileEntryTd.find('td:last').html('<span class="alert-success">上传成功!</span>');
                                                     file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
                                                 },
 
                                                 error: function(file)
                                                 {
-                                                    file.fileEntryTd.find('td:last').html('<span class="text-danger">Failed</span>');
+                                                    file.fileEntryTd.find('td:last').html('<span class="alert-danger">上传失败!</span>');
                                                     file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
                                                     $("#jarlocation").val("无效文件!上传失败!!");
+                                                    $("#jarlocation").addClass("alert-danger");
                                                 }
                                             });
 
@@ -412,10 +413,20 @@
                         <div class="row">
                             <div class="col-sm-3 text-centers">
 
-                                <div id="advancedDropzone" class="droppable-area">
-                                    拖拽或点击
+                                <div id="advancedDropzone" class="droppable-area" title="拖拽文件至此处或者点击选择文件上传">
+                                    拖拽或点击上传文件
                                 </div>
+                                <script>
+                                        $(document).ready(function() {
+                                            $('.toop').tooltipster({
+                                                theme: 'tooltipster-punk'
+                                            });
 
+                                            $('.droppable-area').tooltipster({
+                                                theme: 'tooltipster-punk'
+                                            });
+                                        });
+                                </script>
                             </div>
                             <div class="col-sm-9">
 
@@ -463,47 +474,47 @@
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="executeClass" id="executeClass" placeholder="请输入...">
+                                        <input type="text" class="form-control large" name="executeClass" id="executeClass" placeholder="请输入...">
                                     </div>
                                 </div>
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                         --num-executors</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="numExecutors" id="numExecutors" placeholder="请输入...">
+                                        <input type="text" class="form-control large" name="numExecutors" id="numExecutors" placeholder="请输入...">
                                     </div>
                                 </div>
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                         --driver-memory</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="driverMemory" id="driverMemory" placeholder="请输入...">
+                                        <input type="text" class="form-control large" name="driverMemory" id="driverMemory" placeholder="请输入...">
                                     </div>
                                 </div>
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                         --executor-memory</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="executorMemory" id="executorMemory" placeholder="请输入...">
+                                        <input type="text" class="form-control large" name="executorMemory" id="executorMemory" placeholder="请输入...">
                                     </div>
                                 </div>
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                         --total_executor_cores</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="total-executor-cores" id="executorCores" placeholder="请输入...">
+                                        <input type="text" class="form-control large" name="total-executor-cores" id="executorCores" placeholder="请输入...">
                                     </div>
                                 </div>
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
+                                        <input type="text" class="form-control large" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
                                     </div>
                                 </div>
                                 <div class="form-group mb-n">
                                     <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
                                     <div class="col-sm-8">
-                                        <input type="text" class="form-control1 input-lg" name="args1" id="args1" placeholder="请输入...">
+                                        <input type="text" class="form-control large" name="args1" id="args1" placeholder="请输入...">
                                     </div>
                                 </div>
 
