@@ -270,7 +270,7 @@
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td style=\"WORD-WRAP: break-word\" width=\"80\">" + datamid[i].application_id + "</td><td style=\"WORD-WRAP: break-word\" width=\"60\">" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td style=\"WORD-WRAP: break-word\" width=\"80\">"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
+                                head += "<tr><td style=\"WORD-WRAP: break-word\" width=\"80\">" + datamid[i].application_id + "</td><td style=\"WORD-WRAP: break-word\" width=\"60\">" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td style=\"WORD-WRAP: break-word\" width=\"80\">"+datamid[i].queue+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -334,7 +334,7 @@
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].app_id + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].cores + "</td><td>"+datamid[i].memoryperslave+ "</td><td>"+datamid[i].submitdate+ "</td><td>"+datamid[i].state+ "</td><td>"+datamid[i].duration+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
+                                head += "<tr><td>" + datamid[i].app_id + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].cores + "</td><td>"+datamid[i].memoryperslave+ "</td><td>"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+datamid[i].state+ "</td><td>"+datamid[i].duration+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";

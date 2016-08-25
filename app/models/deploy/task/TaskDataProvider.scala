@@ -39,7 +39,7 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
                      cores: Int,
                      memoryperslave:String,
                      state:String,
-                     submitdate:String,
+                     starttime:String,
                      duration:String
                    )
     */
@@ -49,7 +49,7 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
       (JsPath \ "cores").read[Int] and
       (JsPath \ "memoryperslave").read[Long] and
       (JsPath \ "state").read[String] and
-      (JsPath \ "submitdate").read[String] and
+      (JsPath \ "starttime").read[Long] and
       (JsPath \ "duration").read[Long]
     )(TaskInfo.apply _)
 

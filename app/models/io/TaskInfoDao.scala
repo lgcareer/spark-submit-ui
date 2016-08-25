@@ -14,7 +14,7 @@ import play.api.db.DB
   * "name" : "HFDSWordCount",
   * "user" : "king",
   * "memoryperslave" : 1024,
-  * "submitdate" : "Thu Aug 18 12:23:38 HKT 2016",
+  * "starttime" : "Thu Aug 18 12:23:38 HKT 2016",
   * "state" : "RUNNING",
   * "duration" : 17290
   */
@@ -25,7 +25,7 @@ class TaskInfoDao  extends  TaskDao{
         SQL(
           """
           insert into task_standalone values (
-            {app_id}, {name}, {cores}, {memoryperslave},{state},{submitdate},{duration},{user}
+            {app_id}, {name}, {cores}, {memoryperslave},{state},{starttime},{duration},{user}
           )
           """).on(
           'app_id -> task.app_id,
@@ -33,7 +33,7 @@ class TaskInfoDao  extends  TaskDao{
           'cores -> task.cores,
           'memoryperslave ->task.memoryperslave,
           'state ->task.state,
-          'submitdate ->task.submitdate,
+          'starttime ->task.starttime,
           'duration ->task.duration,
           'user ->user
         ).executeUpdate()
@@ -79,7 +79,7 @@ class TaskInfoDao  extends  TaskDao{
             implicit  connection =>
                 SQL(
                     """
-                 select * from task_standalone where user={user} order by submitdate desc
+                 select * from task_standalone where user={user} order by starttime desc
                     """
                 ).on( 'user -> user)
                .as(standalone *)

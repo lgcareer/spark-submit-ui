@@ -13,7 +13,7 @@ case class TaskInfo(
                      cores: Int,
                      memoryperslave:Long,
                      state:String,
-                     submitdate:String,
+                     starttime:Long,
                      duration:Long
                    )
 
@@ -50,9 +50,9 @@ trait TaskDao{
       get[Int]("task_standalone.cores")~
       get[Long]("task_standalone.memoryperslave")~
       get[String]("task_standalone.state") ~
-      get[String]("task_standalone.submitdate")~
+      get[Long]("task_standalone.starttime")~
       get[Long]("task_standalone.duration") map {
-      case app_id ~ name ~ cores ~ memoryperslave ~ state ~ submitdate ~ duration  => TaskInfo(app_id,name,cores,memoryperslave,state,submitdate,duration)
+      case app_id ~ name ~ cores ~ memoryperslave ~ state ~ starttime ~ duration  => TaskInfo(app_id,name,cores,memoryperslave,state,starttime,duration)
     }
   }
 
