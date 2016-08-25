@@ -33,7 +33,7 @@ class TaskManager @Inject() (taskDao: TaskDao) extends Controller with Secured{
     username => implicit request =>
 
       implicit val yarnWrites: Writes[YarnTaskInfo] = (
-        (JsPath \ "applicaton_id").write[String] and
+        (JsPath \ "application_id").write[String] and
           (JsPath \ "name").write[String] and
           (JsPath \ "apptype").write[String] and
           (JsPath \ "queue").write[String] and
@@ -44,6 +44,7 @@ class TaskManager @Inject() (taskDao: TaskDao) extends Controller with Secured{
 
 
       implicit val clusterWrites = Json.writes[YarnTaskList]
+
       val json: JsValue = Json.toJson(YarnTaskList(taskDao.getYarnTaskList(username)))
       Ok(json)
   }

@@ -61,7 +61,7 @@ class TaskInfoDao  extends  TaskDao{
             {application_id}, {name}, {apptype}, {queue},{starttime},{finishtime},{state},{user}
           )
           """).on(
-          'application_id -> yarnTask.applicaton_id,
+          'application_id -> yarnTask.application_id,
           'name -> yarnTask.name,
           'apptype -> yarnTask.apptype,
           'queue -> yarnTask.queue,
@@ -86,7 +86,24 @@ class TaskInfoDao  extends  TaskDao{
         }
     }
 
+  override def updateYarnTaskList(tasks: Seq[YarnTaskInfo]): Unit = {
+    play.api.db.DB.withConnection { implicit connection =>
+      tasks.map{
+        info =>
+          SQL(
+            """
+          update  task_yarn  set
+             state={state}
+            where application_id={application_id}
+            """).on(
+            'application_id -> info.application_id,
+           'state -> info.state
+          ).executeUpdate()
+      }
+    }
+  }
 
+  override def updateTaskList(tasks: Seq[TaskInfo]): Unit = {
 
-
+  }
 }

@@ -63,7 +63,7 @@ class SparkJar @Inject() (taskProvider: TaskProvider[AppDataObject]) extends Con
           Logger.info("执行模式=>"+executeArguments.master)
           Execute.main(executeArguments)
           match {
-              case JobSubmitSuccess(id) =>  taskProvider.findTaskInfo(id)(username);Ok("任务提交成功!") //Redirect(routes.TaskManager.tasklist())
+              case JobSubmitSuccess(id) =>  taskProvider.findTaskInfo(AppDataObject(id,username));Ok("任务提交成功!") //Redirect(routes.TaskManager.tasklist())
               case JobRunExecption(error) => Ok("提交成功")
               case _ => NotFound
             }

@@ -1,9 +1,10 @@
-package models.deploy.task
+package models
 
 import com.google.inject.Inject
-import models.{MatchEngine, TaskDao, TaskInfo, YarnTaskInfo}
+import models.TaskDataProvider.{AppDataObject, TaskData, YarnTaskInfoList}
 import play.api.Logger
 import play.api.libs.ws.WS
+import play.libs.Akka
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.postfixOps
@@ -16,7 +17,7 @@ object TaskDataProvider{
 
   case class  TaskData(activeapps:Seq[TaskInfo],completedapps:Seq[TaskInfo])
 
-  case class AppDataObject(appId:String,url:String,user:String)
+  case class AppDataObject(var appId:String,var user:String,var url:String = "yarn")
 
   case class YarnTaskInfoList(app: Seq[YarnTaskInfo])
 }
@@ -27,6 +28,8 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
   import play.api.libs.functional.syntax._
   import play.api.libs.json.Reads._
   import play.api.libs.json._
+
+  scheduleTaskDate
 
 
   /**
@@ -61,7 +64,7 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
 
   /**
     * YarnTaskInfo(
-                     applicaton_id:String,
+                     application_id:String,
                      name:String,
                      apptype:String,
                      queue:String,
@@ -85,15 +88,14 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
   implicit  val areads = (__ \ 'apps \ 'app).read[Seq[YarnTaskInfo]].map{ l => YarnTaskInfoList(l) }
 
 
-
-
-  def findTaskInfo(appId:String)(user:String): Unit ={
+  def findTaskInfo(app:AppDataObject): Unit ={
+    val appId: String = app.appId
     Logger.info(s"用户任务Id====>$appId")
     MatchEngine.matchURI(appId).map(
-      app=>
-      app._1 match {
-        case m if m.equals("yarn") => proTaskOnYarn(AppDataObject(appId,app._2,user))
-        case m if m.equals("standalone") => proTaskOnMaster(AppDataObject(appId,app._2,user))
+      data=>
+      data._1 match {
+        case m if m.equals("yarn") => app.url=data._2;proTaskOnYarn(app)
+        case m if m.equals("standalone") => app.url=data._2;proTaskOnMaster(app)
         //case m if m.equals("local") => saveTaskOnLocal(m,appId)
       }
     )
@@ -142,7 +144,7 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
             },
             valid = {
               tasks => {
-                 val runingTask= tasks.app.filter(_.applicaton_id.equals(app.appId))(0)
+                 val runingTask= tasks.app.filter(_.application_id.equals(app.appId))(0)
                   taskDao.saveYarnTask(runingTask)(app.user)
               }
             })
@@ -151,6 +153,37 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
       }
     }
   }
+
+  import play.api.libs.concurrent.Execution.Implicits._
+  import scala.concurrent.duration._
+
+  def scheduleTaskDate={
+
+    Akka.system.scheduler.schedule(0.second, 5 second, new Runnable {
+      override def run(): Unit = {
+        WS.url("http://localhost:8088/ws/v1/cluster/apps").get() map{
+          response => response.status match {
+            case  200 => Some{
+              response.json .validate[YarnTaskInfoList].fold(
+                invalid = {
+                  fieldErrors => fieldErrors.foreach(x => {
+                    Logger.error("field: " + x._1 + ", errors: " + x._2)
+                  })
+                    None
+                },
+                valid = {
+                  tasks => {
+                      taskDao.updateYarnTaskList(tasks.app)
+                  }
+                })
+            }
+            case _ => None
+          }
+        }
+      }
+    })
+  }
+
 
 
 

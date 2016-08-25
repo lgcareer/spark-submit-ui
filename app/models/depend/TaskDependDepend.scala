@@ -1,7 +1,7 @@
 package models
 
 import com.tzavellas.sse.guice.ScalaModule
-import models.TaskDataProvider.AppDataObject
+import TaskDataProvider.AppDataObject
 /**
   * Created by liangkai on 16/8/22.
   */

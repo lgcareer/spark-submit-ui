@@ -270,7 +270,7 @@
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td style=\"WORD-WRAP: break-word\" width=\"80\">" + datamid[i].applicaton_id + "</td><td style=\"WORD-WRAP: break-word\" width=\"60\">" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td style=\"WORD-WRAP: break-word\" width=\"80\">"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
+                                head += "<tr><td style=\"WORD-WRAP: break-word\" width=\"80\">" + datamid[i].application_id + "</td><td style=\"WORD-WRAP: break-word\" width=\"60\">" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td style=\"WORD-WRAP: break-word\" width=\"80\">"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -397,7 +397,7 @@
             <div class="panel-heading dark">
                 <h4 class="panel-title">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
-                        yarn mode
+                        HADOOP YARN
                     </a>
                 </h4>
             </div>
@@ -418,7 +418,7 @@
             <div class="panel-heading dark">
                 <h4 class="panel-title">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
-                        standalone mode
+                        SPARK STANDALONE
                     </a>
                 </h4>
             </div>
@@ -439,7 +439,7 @@
             <div class="panel-heading dark">
                 <h4 class="panel-title">
                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2">
-                        local mode
+                        SPARK LOCAL
                     </a>
                 </h4>
             </div>
