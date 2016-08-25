@@ -1,10 +1,9 @@
 package models
 
 import anorm.SqlParser._
-import play.api.db.DB
 import anorm._
-import play.api.Logger
 import play.api.Play.current
+import play.api.db.DB
 /**
   * Created by liangkai1 on 16/8/4.
   * 用户组数据操作相关

@@ -314,8 +314,168 @@
                 });
 
             }
+
     </script>
-    <script>
+
+        <script type="text/javascript">
+                                <!--已使用内存统计-->
+                               $(function() {
+                               var data = group_resource();
+                                var rate = eval(data);
+                                var rateMemory = rate.rateData.rateMemory;
+
+                                <!--设置默认值-->
+                                <!--var rateMemory = 66-->
+                                $("#userdRateMemory").attr("data-to", rateMemory);
+                                });
+                                 <!--本组资源统计   -->
+                                function group_resource(){
+                                        var retVal = '';
+                                        $.ajax({
+                                        type:"GET",
+                                        url:"/userResource",
+                                        dataType:"json",
+                                        async:false,
+                                        success:function(data){
+                                            retVal=data;
+                                        }
+                                    });
+                                    return retVal;
+                                }
+                                var data = group_resource();
+                                var rate = eval(data);
+                                var rateData = rate.rateData.resourceRate;
+
+                            jQuery(document).ready(function($)
+                            {
+                                var gauge = $('#gauge-3').dxCircularGauge({
+                                    scale: {
+                                        startValue: 0,
+                                        endValue: 120,
+                                        majorTick: {
+                                            tickInterval: 10
+                                        },
+                                        label: {
+                                            customizeText: function (arg) {
+                                                return arg.valueText + ' %';
+                                            }
+                                        }
+                                    },
+                                    rangeContainer: {
+                                        ranges: [
+                                            { startValue: 0, endValue: 40, color: '#90ee7e' },
+                                            { startValue: 40, endValue: 80, color: '#FF7F24' },
+                                            { startValue: 80, endValue: 100, color: '#f45b5b' }
+                                        ]
+                                    },
+                                    title: {
+                                        text: '本组使用资源占比',
+                                        font: { size: 20}
+                                    },
+                                    tooltip: {
+                                        enabled: true,
+                                        format: {
+                                            type: 'present',
+                                            precision: 2
+                                        }
+                                    },
+                                    value: rateData
+                                }).dxCircularGauge('instance');
+
+                                $('#chart_container').highcharts({
+                                    chart: {
+                                        plotBackgroundColor: null,
+                                        plotBorderWidth: null,
+                                        plotShadow: false
+                                    },
+                                    title: {
+                                        text: '集群角色划分'
+                                    },
+                                    tooltip: {
+                                        pointFormat: '{series.name}'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            allowPointSelect: true,
+                                             cursor: 'pointer',
+                                            dataLabels: {
+                                                enabled: true,
+                                                color: '#000000'
+                                            },
+                                            showInLegend: true
+                                        }
+                                    },
+                                    series: [{
+                                        type: 'pie',
+                                        name: '集群节点数',
+                                        data: [
+                                        ['Spark',6],
+                                        ['Hadoop',5],
+                                        ['Mysql',1],
+                                        ['Hive',1],
+                                        ['Hbase',3],
+
+
+                                        ]
+                                    }]
+                                });
+                                var doughnut2_data_source = [
+                                    { id: 0, x1: 0 },
+                                    { id: 1, x1: 2 },
+                                    { id: 2, x1: 3 },
+                                    { id: 3, x1: 5 },
+                                    { id: 4, x1: 7 },
+                                    { id: 5, x1: 3 },
+                                    { id: 6, x1: 1 },
+                                    { id: 7, x1: 2 },
+                                    { id: 8, x1: 5 },
+                                    { id: 9, x1: 4 },
+                                ];
+
+                                $("#area-2").dxChart({
+                                    dataSource: doughnut2_data_source,
+                                    commonSeriesSettings: {
+                                        type: "area",
+                                        argumentField: "id"
+                                    },
+                                    series: [
+                                        { valueField: "x1", name: "15-64 years", color: '#7c38bc', opacity: .7 },
+                                    ],
+                                    argumentAxis:{
+                                        valueMarginsEnabled: false
+                                    },
+                                    valueAxis:{
+                                        label: {
+                                            format: "millions"
+                                        }
+                                    },
+                                    legend: {
+                                        verticalAlignment: "bottom",
+                                        horizontalAlignment: "center"
+                                    },
+                                    legend: {
+                                        visible: false
+                                    },
+                                    commonAxisSettings: {
+                                        label: {
+                                            visible: false
+                                        },
+                                        grid: {
+                                            visible: false
+                                        }
+                                    },
+                                    margin: {
+                                        bottom: 0,
+                                        top: 30
+                                    }
+                                });
+
+
+                            });
+                    </script>
+
+
+<script>
 
             //spark集群运行情况
             function cluster_info(){
@@ -525,135 +685,6 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <script type="text/javascript">
-                            jQuery(document).ready(function($)
-                            {
-                                var gauge = $('#gauge-3').dxCircularGauge({
-                                    scale: {
-                                        startValue: 0,
-                                        endValue: 100,
-                                        majorTick: {
-                                            tickInterval: 10
-                                        },
-                                        label: {
-                                            customizeText: function (arg) {
-                                                return arg.valueText + ' %';
-                                            }
-                                        }
-                                    },
-                                    rangeContainer: {
-                                        ranges: [
-                                            { startValue: 0, endValue: 40, color: '#90ee7e' },
-                                            { startValue: 40, endValue: 80, color: '#FF7F24' },
-                                            { startValue: 80, endValue: 100, color: '#f45b5b' }
-                                        ]
-                                    },
-                                    title: {
-                                        text: '本组资源',
-                                        font: { size: 20}
-                                    },
-                                    tooltip: {
-                                        enabled: true,
-                                        format: {
-                                            type: 'present',
-                                            precision: 2
-                                        }
-                                    },
-                                    value: 35
-                                }).dxCircularGauge('instance');
-
-                                $('#chart_container').highcharts({
-                                    chart: {
-                                        plotBackgroundColor: null,
-                                        plotBorderWidth: null,
-                                        plotShadow: false
-                                    },
-                                    title: {
-                                        text: '集群角色划分'
-                                    },
-                                    tooltip: {
-                                        pointFormat: '{series.name}'
-                                    },
-                                    plotOptions: {
-                                        pie: {
-                                            allowPointSelect: true,
-                                             cursor: 'pointer',
-                                            dataLabels: {
-                                                enabled: true,
-                                                color: '#000000'
-                                            },
-                                            showInLegend: true
-                                        }
-                                    },
-                                    series: [{
-                                        type: 'pie',
-                                        name: '集群节点数',
-                                        data: [
-                                        ['Spark',6],
-                                        ['Hadoop',5],
-                                        ['Mysql',1],
-                                        ['Hive',1],
-                                        ['Hbase',3],
-
-
-                                        ]
-                                    }]
-                                });
-                                var doughnut2_data_source = [
-                                    { id: 0, x1: 0 },
-                                    { id: 1, x1: 2 },
-                                    { id: 2, x1: 3 },
-                                    { id: 3, x1: 5 },
-                                    { id: 4, x1: 7 },
-                                    { id: 5, x1: 3 },
-                                    { id: 6, x1: 1 },
-                                    { id: 7, x1: 2 },
-                                    { id: 8, x1: 5 },
-                                    { id: 9, x1: 4 },
-                                ];
-
-                                $("#area-2").dxChart({
-                                    dataSource: doughnut2_data_source,
-                                    commonSeriesSettings: {
-                                        type: "area",
-                                        argumentField: "id"
-                                    },
-                                    series: [
-                                        { valueField: "x1", name: "15-64 years", color: '#7c38bc', opacity: .7 },
-                                    ],
-                                    argumentAxis:{
-                                        valueMarginsEnabled: false
-                                    },
-                                    valueAxis:{
-                                        label: {
-                                            format: "millions"
-                                        }
-                                    },
-                                    legend: {
-                                        verticalAlignment: "bottom",
-                                        horizontalAlignment: "center"
-                                    },
-                                    legend: {
-                                        visible: false
-                                    },
-                                    commonAxisSettings: {
-                                        label: {
-                                            visible: false
-                                        },
-                                        grid: {
-                                            visible: false
-                                        }
-                                    },
-                                    margin: {
-                                        bottom: 0,
-                                        top: 30
-                                    }
-                                });
-
-
-                            });
-                    </script>
-
                     <div id="gauge-3" style="height: 440px ; margin: 0 30px ;"></div>
 
                 </div>
@@ -672,8 +703,10 @@
             <div class="col-sm-12">
 
                 <div class="chart-item-bg-2">
-                    <div class="chart-item-num num-sm" style="width: 370px ;" data-count="this" data-from="0" data-to="85.89" data-decimal="," data-suffix="%" data-duration="3">
-                        0%</div>
+                    <div class="chart-item-num num-sm" style="width: 370px ;"
+                         data-count="this" data-from="0"
+                         data-to="20.89"
+                         data-suffix="%" data-duration="3" id ="userdRateMemory">0%</div>
                     <div class="chart-item-env no-padding">
                         <div id="area-2" style="height: 150px ; margin: 0"></div>
                     </div>
@@ -740,7 +773,9 @@
     });
     </script>*@
 
-@*    修改编辑用户与注册审核对话框
+@*
+    修订日志:v3.0.2(2016.08.19)
+        修改编辑用户与注册审核对话框
     添加注册审核发送邮件功能
     添加个人中心下的任务列表页面
     提交jar页面新增yarn,standalone，local选择
@@ -750,22 +785,30 @@
     修正服务划分图标
     本组资源占比计算以及展示*@
 
+@*
+    修订日志:v3.0.3(2016.08.24)
+        添加任务kill,rerun功能
+    添加执行任务交互
+    添加个人任务展示
+    修正表格样式&部分UI调整
+    dashboard页面添加本组资源占比
+    添加本组内存使用占比
+    添加Yarn资源调度参数列表
+    添加组用户组yarn任务列表*@
+
+
     <script>
             window.onload=function(){
                 swal({
                     title: "修订日志:v3.0.2(2016.08.19)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;修改编辑用户与注册审核对话框</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加注册审核发送邮件功能</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加个人中心下的任务列表页面</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>提交jar页面新增yarn,standalone，local选择</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加查看任务，杀死任务，重试任务功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加用户组、组员统计功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加Yarn资源调度参数列表</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修正服务划分图标</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>本组资源占比计算以及展示</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加任务kill,rerun功能</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加执行任务交互</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加个人任务展示</i></sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修正用户名称显示,长邮件名称换成段名称</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;dashboard页面添加本组资源占比</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;添加本组内存使用占比</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;添加组用户组yarn任务列表</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
                     html:true,
