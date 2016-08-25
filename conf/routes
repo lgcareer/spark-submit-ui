@@ -112,5 +112,6 @@ GET   /whoiam                     controllers.UserName.userName
 #Job
 GET   /tasklist                        @controllers.TaskManager.tasklist
 GET   /standalone                      @controllers.TaskManager.standaloneInfo
-GET   /yarn                             @controllers.TaskManager.yarnInfo
+GET   /yarn                            @controllers.TaskManager.yarnInfo
+GET   /kill                      @controllers.TaskManager.kill(appId:String)
 

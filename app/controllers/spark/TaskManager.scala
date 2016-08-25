@@ -44,11 +44,16 @@ class TaskManager @Inject() (taskDao: TaskDao) extends Controller with Secured{
 
 
       implicit val clusterWrites = Json.writes[YarnTaskList]
-
       val json: JsValue = Json.toJson(YarnTaskList(taskDao.getYarnTaskList(username)))
       Ok(json)
   }
 
+
+  def kill(appId:String) =IsAuthenticated{
+    username => implicit request =>
+      Runtime.getRuntime.exec(s"app/models/shell/kill_job.sh $appId")
+      Ok("KILLED")
+  }
 
 
 
