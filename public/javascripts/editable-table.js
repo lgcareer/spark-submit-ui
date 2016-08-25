@@ -119,14 +119,6 @@ var EditableTable = function () {
 
                                            }  });
 
-
-
-
-
-
-
-
-
             });
 
             $('#editable-sample a.cancel').live('click', function (e) {

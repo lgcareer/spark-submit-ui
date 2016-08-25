@@ -29,7 +29,7 @@ case  class ExecuteModel(
                           numExecutors:String,
                           driverMemory:String,
                           executorMemory:String,
-                          executorCores:String,
+                          total_executor_cores:String,
                           jarLocation:String,
                           args1:String)
 
@@ -41,6 +41,8 @@ object  JobManagerActor{
   case class Initializ(executeModel: ExecuteModel)
   case class InitError(t: Throwable)
   case class JobLoading(msg: String)
+  case class SaveTask(appId:String)
+
 
   case class InvalidJar(error:String)
   case class JarStored(uri :String)
@@ -53,14 +55,13 @@ object  JobManagerActor{
   * @param jobDAO
   */
 private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
-  SparkSubmit
 
   import JobManagerActor._
 
   val config = mutable.HashMap.empty[String,String]
   val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(20))
 
-  private val master_uri="spark://hadoop01:7077";
+  private val master_uri="spark://localhost:7077";
   private val yarn="yarn-cluster"
   private val nameSpance="usr"
   private val nameLocal="local"
@@ -111,7 +112,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       val request: CreateBatchRequest = CreateBatchRequest()
       request.className=Some(executeModel.executeClass)
       request.numExecutors=Some(executeModel.numExecutors)
-      request.executorCores=Some(executeModel.executorCores)
+      request.total_executor_cores=Some(executeModel.total_executor_cores)
       request.driverMemory=Some(executeModel.driverMemory)
       request.executorMemory=Some(executeModel.executorMemory)
       request.jarLocation = Some(executeModel.jarLocation)
@@ -161,7 +162,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         request.className.foreach(builder.className)
         request.driverMemory.foreach(builder.driverMemory)
         request.executorMemory.foreach(builder.executorMemory)
-        request.executorCores.foreach(builder.executorCores)
+        request.total_executor_cores.foreach(builder.executorCores)
         request.numExecutors.foreach(builder.numExecutors)
         request.jarLocation.foreach(builder.jarLocation)
         request.master.foreach(builder.master)
