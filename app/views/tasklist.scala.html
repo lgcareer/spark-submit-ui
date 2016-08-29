@@ -251,10 +251,12 @@
 
 </div>
 
+<!--<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css"/>-->
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
 <script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
+
 
 
 <!--yarn table-->
@@ -265,18 +267,76 @@
                     url:"/yarn",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th style=\"WORD-WRAP: break-word\" width=\"150\">ID</th><th style=\"WORD-WRAP: break-word\" width=\"150\">Name</th><th>App Type</th><th>Queue</th><th style=\"WORD-WRAP: break-word\" width=\"160\">StartTime</th><th style=\"WORD-WRAP: break-word\" width=\"160\">FinishTime</th><th style=\"WORD-WRAP: break-word\" width=\"100\">State</th><th style=\"WORD-WRAP: break-word\" width=\"55\">Kill</th><th>ReRun</th></tr></thead><tbody>"
+                        var head= "<thead><tr><th>ID</th><th>Name</th><th>App Type</th><th>Queue</th><th>StartTime</th><th>FinishTime</th><th>State</th><th>Kill</th><th>ReRun</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td style=\"WORD-WRAP: break-word\" width=\"80\">" + datamid[i].application_id + "</td><td style=\"WORD-WRAP: break-word\" width=\"60\">" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td style=\"WORD-WRAP: break-word\" width=\"80\">"+datamid[i].queue+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
+                                head += "<tr><td>" + datamid[i].application_id + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].apptype + "</td><td>"+datamid[i].queue+ "</td><td>"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+new Date(datamid[i].finishtime).toLocaleString()+ "</td><td>"+datamid[i].state+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
                         $('#editable-yarn').html(head);
 
+                            <!--重运行任务-->
+                    $('#editable-yarn a.delete').live('click', function (e) {
+                        e.preventDefault();
+                            var nRow = $(this).parents('tr')[0];
+                              var $id = $(this).parents('tr').find("td:eq(0)").text();
 
+
+                                        swal({
+                                         title: "确定重新运行任务?",
+                                          text: "重新运行 "+$id+" \n可能结束正在运行状态,是否继续",
+                                           type: "warning",
+                                             confirmButtonColor: "#DD6B55",
+                                            confirmButtonText: "确认",
+                                          cancelButtonText: "取消",
+                                           showCancelButton: true,
+                                           closeOnConfirm: false,
+                                            showLoaderOnConfirm: true, },
+                                          function(){
+                                           setTimeout(function(){
+                                              $(document).ready(function(){
+                                                $.ajax({
+                                                    type:"GET",
+                                                    url:'/rerun',
+                                                    data:{appId:$id},
+                                                    success:function(data){
+                                                            swal({
+                                                          title: "操作成功!",
+                                                          text: "任务已提交,生成任务id "+data,
+                                                          type: "success",
+                                                          showCancelButton: false,
+                                                          confirmButtonText: "确定",
+                                                          closeOnConfirm: true,
+                                                          closeOnCancel: false },
+                                                          function(isConfirm){
+                                                                    window.location="/tasklist";
+                                                                });
+
+
+
+                                                    }
+                                                });
+                                            });
+
+
+                                            },
+                                           2000); });
+
+
+
+
+
+
+
+                   });
+
+
+
+
+                <!--KILL任务-->
                 $('#editable-yarn a.edit').live('click', function (e) {
                    e.preventDefault();
                             var nRow = $(this).parents('tr')[0];
@@ -302,7 +362,17 @@
                                                     url:"/kill",
                                                     data:{appId:$id},
                                                     success:function(data){
-                                                         swal("操作成功!", "Kill Success!", "success");
+                                                                  swal({
+                                                          title: "操作成功!",
+                                                          text: "Kill Success!",
+                                                          type: "success",
+                                                          showCancelButton: false,
+                                                          confirmButtonText: "确定",
+                                                          closeOnConfirm: true,
+                                                          closeOnCancel: false },
+                                                          function(isConfirm){
+                                                                    window.location="/tasklist";
+                                                                });
                                                     }
                                                 });
                                             });
@@ -323,6 +393,27 @@
 
 <!--standalone table-->
 <script>
+function MillisecondToDate(msd) {
+    var time = parseFloat(msd) / 1000;
+    if (null != time && "" != time) {
+        if (time > 60 && time < 60 * 60) {
+            time = parseInt(time / 60.0) + "分钟" + parseInt((parseFloat(time / 60.0) -
+                parseInt(time / 60.0)) * 60) + "秒";
+        }
+        else if (time >= 60 * 60 && time < 60 * 60 * 24) {
+            time = parseInt(time / 3600.0) + "小时" + parseInt((parseFloat(time / 3600.0) -
+                parseInt(time / 3600.0)) * 60) + "分钟" +
+                parseInt((parseFloat((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60) -
+                parseInt((parseFloat(time / 3600.0) - parseInt(time / 3600.0)) * 60)) * 60) + "秒";
+        }
+        else {
+            time = parseInt(time) + "秒";
+        }
+    }
+    return time;
+}
+
+
             $(document).ready(function(){
                 $.ajax({
                     type:"GET",
@@ -334,12 +425,13 @@
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].app_id + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].cores + "</td><td>"+datamid[i].memoryperslave+ "</td><td>"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+datamid[i].state+ "</td><td>"+datamid[i].duration+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
+                                head += "<tr><td>" + datamid[i].app_id + "</td><td>" + datamid[i].name + "</td><td>" + datamid[i].cores + "</td><td>"+datamid[i].memoryperslave+ "</td><td>"+new Date(datamid[i].starttime).toLocaleString()+ "</td><td>"+datamid[i].state+ "</td><td>"+MillisecondToDate(datamid[i].duration)+"</td><td><a class=\"edit\" href=\"javascript:;\">" + 'Kill' + "</a></td><td><a class=\"delete\" href=\"javascript:;\">" + 'ReRun' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
                         $('#editable-standalone').html(head);
 
+                                                <!--KILL任务-->
                                         $('#editable-standalone a.edit').live('click', function (e) {
                    e.preventDefault();
                             var nRow = $(this).parents('tr')[0];
@@ -365,12 +457,80 @@
                                                     url:'http://127.0.0.1:8080/app/kill/',
                                                     data:{id:$id,terminate: true},
                                                     complete:function(data){
-                                                         swal("操作成功!", "Kill Success!", "success");
+                                                              swal({
+                                                          title: "操作成功!",
+                                                          text: "Kill Success!",
+                                                          type: "success",
+                                                          showCancelButton: false,
+                                                          confirmButtonText: "确定",
+                                                          closeOnConfirm: true,
+                                                          closeOnCancel: false },
+                                                          function(isConfirm){
+                                                                    window.location="/tasklist";
+                                                                });
                                                     }
                                                 });
                                             });
 
                                            }  });
+                   });
+
+
+
+
+                    <!--重运行任务-->
+                    $('#editable-standalone a.delete').live('click', function (e) {
+                        e.preventDefault();
+                            var nRow = $(this).parents('tr')[0];
+                              var $id = $(this).parents('tr').find("td:eq(0)").text();
+
+
+                                        swal({
+                                         title: "确定重新运行任务?",
+                                          text: "重新运行 "+$id+" \n可能结束正在运行状态,是否继续",
+                                           type: "warning",
+                                             confirmButtonColor: "#DD6B55",
+                                            confirmButtonText: "确认",
+                                          cancelButtonText: "取消",
+                                           showCancelButton: true,
+                                           closeOnConfirm: false,
+                                            showLoaderOnConfirm: true, },
+                                          function(){
+                                           setTimeout(function(){
+                                              $(document).ready(function(){
+                                                $.ajax({
+                                                    type:"GET",
+                                                    url:'/rerun',
+                                                    data:{appId:$id},
+                                                    success:function(data){
+                                                            swal({
+                                                          title: "操作成功!",
+                                                          text: "任务已提交,生成任务id "+data,
+                                                          type: "success",
+                                                          showCancelButton: false,
+                                                          confirmButtonText: "确定",
+                                                          closeOnConfirm: true,
+                                                          closeOnCancel: false },
+                                                          function(isConfirm){
+                                                                    window.location="/tasklist";
+                                                                });
+
+
+
+                                                    }
+                                                });
+                                            });
+
+
+                                            },
+                                           2000); });
+
+
+
+
+
+
+
                    });
 
 
@@ -408,7 +568,7 @@
 
                         </div>
                         <div class="space15"></div>
-                        <table class="table table-striped table-hover table-bordered" id="editable-yarn"  style="TABLE-LAYOUT: fixed" >
+                        <table class="table table-striped table-hover table-bordered" id="editable-yarn">
                         </table>
                     </div>
                 </div>

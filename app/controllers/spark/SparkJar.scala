@@ -13,7 +13,10 @@ import play.api.data._
 import play.api.mvc._
 
 
-class SparkJar @Inject() (taskProvider: TaskProvider[AppDataObject]) extends Controller with Secured {
+/**
+  * Created by king on 16/6/22.
+  */
+class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObject]) extends Controller with Secured {
 
   val executeForm:Form[ExecuteModel] = Form{
     mapping (
@@ -63,8 +66,12 @@ class SparkJar @Inject() (taskProvider: TaskProvider[AppDataObject]) extends Con
           Logger.info("执行模式=>"+executeArguments.master)
           Execute.main(executeArguments)
           match {
-              case JobSubmitSuccess(id) =>  taskProvider.findTaskInfo(AppDataObject(id,username));Ok("任务提交成功!") //Redirect(routes.TaskManager.tasklist())
-              case JobRunExecption(error) => Ok("提交成功")
+              case JobSubmitSuccess(id) =>  {
+                taskDao.saveTaskArgs(executeArguments)(id)
+                taskProvider.loadTaskInfo(AppDataObject(id,username));
+                Ok("任务提交成功!")
+              }
+              case JobRunExecption(error) => Ok("提交失败")
               case _ => NotFound
             }
        }

@@ -104,6 +104,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
   def start(file: Option[String], args: Traversable[String]): LineBufferedProcess = {
     executable(file.get)
     var arguments = ArrayBuffer[String](_executable)
+
     def addOpt(option: String, value: Option[String]): Unit = {
       value.foreach { v =>
         arguments += option
@@ -124,6 +125,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
         }
       }
     }
+
 
     addOpt("--master", _master)
     addOpt("--class", _className)

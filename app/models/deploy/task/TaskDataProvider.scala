@@ -88,7 +88,7 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
   implicit  val areads = (__ \ 'apps \ 'app).read[Seq[YarnTaskInfo]].map{ l => YarnTaskInfoList(l) }
 
 
-  def findTaskInfo(app:AppDataObject): Unit ={
+  def loadTaskInfo(app:AppDataObject): Unit ={
     val appId: String = app.appId
     Logger.info(s"用户任务Id====>$appId")
     MatchEngine.matchURI(appId).map(
@@ -154,7 +154,6 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
     }
   }
 
-  import play.api.libs.concurrent.Execution.Implicits._
   import scala.concurrent.duration._
 
   def scheduleTaskDate={
@@ -180,6 +179,29 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
             case _ => None
           }
         }
+
+        WS.url("http://localhost:8080/json").get() map{
+          response => response.status match {
+            case  200 => Some{
+              response.json .validate[TaskData].fold(
+                invalid = {
+                  fieldErrors => fieldErrors.foreach(x => {
+                    Logger.error("field: " + x._1 + ", errors: " + x._2)
+                  })
+                    None
+                },
+                valid = {
+                  tasks => {
+                    val taskInfoes = tasks.activeapps++tasks.completedapps
+                    taskDao.updateTaskList(taskInfoes)
+
+                  }
+                })
+            }
+            case _ => None
+          }
+        }
+
       }
     })
   }

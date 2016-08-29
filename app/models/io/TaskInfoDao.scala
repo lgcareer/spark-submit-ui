@@ -20,6 +20,7 @@ import play.api.db.DB
   */
 class TaskInfoDao  extends  TaskDao{
 
+
   override def saveTask(task: TaskInfo)(user:String): TaskInfo = {
       play.api.db.DB.withConnection { implicit connection =>
         SQL(
@@ -86,24 +87,79 @@ class TaskInfoDao  extends  TaskDao{
         }
     }
 
+//  ArrayBuffer(YarnTaskInfo(application_1472438450103_0001,com.weibo.spark.stream.HDFSWordCount,
+//    SPARK,default,1472438549402,KILLED,1472438768238),
+//
+//    YarnTaskInfo(application_1472438450103_0002,
+//    com.weibo.spark.stream.HDFSWordCount,SPARK,default,1472463641679,KILLED,1472463980804))
+
   override def updateYarnTaskList(tasks: Seq[YarnTaskInfo]): Unit = {
     play.api.db.DB.withConnection { implicit connection =>
       tasks.map{
         info =>
           SQL(
             """
-          update  task_yarn  set
-             state={state}
-            where application_id={application_id}
+          update task_yarn set finishtime ={finishtime},state={state} where application_id={application_id}
             """).on(
-            'application_id -> info.application_id,
-           'state -> info.state
+            'state -> info.state,
+            'finishtime -> info.finishtime,
+            'application_id -> info.application_id
           ).executeUpdate()
       }
     }
   }
 
   override def updateTaskList(tasks: Seq[TaskInfo]): Unit = {
-
+    play.api.db.DB.withConnection { implicit connection =>
+      tasks.map{
+        info =>
+          SQL(
+            """
+          update  task_standalone set
+             state={state}, duration={duration} where app_id={app_id}
+            """).on(
+            'state -> info.state,
+            'duration -> info.duration,
+            'app_id -> info.app_id
+          ).executeUpdate()
+      }
+    }
   }
+
+
+  override def saveTaskArgs(executeModel: ExecuteModel)(appId: String): ExecuteModel = {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+          insert into task_args values (
+            {id}, {master}, {executeClass}, {numExecutors},{driverMemory},{executorMemory},{total_executor_cores},{jarLocation},{args1}
+          )
+        """).on(
+        'id -> appId,
+        'master -> executeModel.master,
+        'executeClass -> executeModel.executeClass,
+        'numExecutors -> executeModel.numExecutors,
+        'driverMemory -> executeModel.driverMemory,
+        'executorMemory ->executeModel.executorMemory,
+        'total_executor_cores ->executeModel.total_executor_cores,
+        'jarLocation -> executeModel.jarLocation,
+        'args1 ->executeModel.args1
+      ).executeUpdate()
+    }
+    executeModel
+  }
+
+  override def getTaskArgs(appId: String): ExecuteModel = {
+    DB.withConnection{
+      implicit  connection =>
+        SQL(
+          """
+            select * from task_args where id={id}
+          """
+        ).on( 'id -> appId)
+          .as(args.single)
+    }
+  }
+
+
 }

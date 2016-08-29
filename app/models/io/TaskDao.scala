@@ -57,6 +57,25 @@ trait TaskDao{
   }
 
 
+  val args = {
+      get[String]("task_args.master") ~
+      get[String]("task_args.executeClass") ~
+      get[String]("task_args.numExecutors")~
+      get[String]("task_args.driverMemory")~
+      get[String]("task_args.executorMemory") ~
+      get[String]("task_args.total_executor_cores") ~
+      get[String]("task_args.jarLocation")~
+      get[String]("task_args.args1") map {
+      case master ~ executeClass ~ numExecutors ~ driverMemory ~ executorMemory ~ total_executor_cores ~ jarLocation ~ args1 => ExecuteModel(master,executeClass,numExecutors,driverMemory,executorMemory,total_executor_cores,jarLocation,args1)
+    }
+  }
+
+
+  def saveTaskArgs(executeModel: ExecuteModel)(appId:String) : ExecuteModel
+
+  def getTaskArgs(appId:String):ExecuteModel
+
+
   def saveTask(task: TaskInfo)(user:String): TaskInfo
 
   def saveYarnTask(yarnTask: YarnTaskInfo)(user:String): YarnTaskInfo

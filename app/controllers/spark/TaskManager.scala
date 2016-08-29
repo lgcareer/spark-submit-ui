@@ -1,15 +1,16 @@
 package controllers
 
 import com.google.inject.Inject
+import models.TaskDataProvider.AppDataObject
 import models._
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
 /**
   * Created by liangkai on 16/8/18.
-  * 任务运行管理相关
+  * 任务运行时管理相关
   */
-class TaskManager @Inject() (taskDao: TaskDao) extends Controller with Secured{
+class TaskManager @Inject() (taskProvider:  TaskProvider[AppDataObject],taskDao: TaskDao) extends Controller with Secured{
 
   import play.api.libs.json._
   import play.api.libs.functional.syntax._
@@ -44,16 +45,35 @@ class TaskManager @Inject() (taskDao: TaskDao) extends Controller with Secured{
 
 
       implicit val clusterWrites = Json.writes[YarnTaskList]
-
       val json: JsValue = Json.toJson(YarnTaskList(taskDao.getYarnTaskList(username)))
       Ok(json)
+
+  }
+
+  def killTask(appId:String): Unit ={
+    Runtime.getRuntime.exec(s"app/models/shell/kill_job.sh $appId")
   }
 
 
   def kill(appId:String) =IsAuthenticated{
     username => implicit request =>
-      Runtime.getRuntime.exec(s"app/models/shell/kill_job.sh $appId")
+      killTask(appId)
       Ok("KILLED")
+  }
+
+
+  def rerun(appId:String) =IsAuthenticated{
+    username => implicit request =>
+      val executeModel: ExecuteModel = taskDao.getTaskArgs(appId)
+      Execute.main(executeModel) match {
+        case JobSubmitSuccess(id) =>  {
+          taskDao.saveTaskArgs(executeModel)(id)
+          taskProvider.loadTaskInfo(AppDataObject(id,username));
+          Ok(id)
+        }
+        case JobRunExecption(error) => Ok("提交失败")
+        case _ => NotFound
+      }
   }
 
 

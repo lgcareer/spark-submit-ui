@@ -114,5 +114,6 @@ GET   /whoiam                     controllers.UserName.userName
 GET   /tasklist                        @controllers.TaskManager.tasklist
 GET   /standalone                      @controllers.TaskManager.standaloneInfo
 GET   /yarn                            @controllers.TaskManager.yarnInfo
-GET   /kill                      @controllers.TaskManager.kill(appId:String)
+GET   /kill                            @controllers.TaskManager.kill(appId:String)
+GET   /rerun                           @controllers.TaskManager.rerun(appId:String)
 

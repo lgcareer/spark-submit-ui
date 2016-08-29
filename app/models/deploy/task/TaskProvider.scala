@@ -5,7 +5,7 @@ package models
   */
 trait TaskProvider[T] {
 
-  def findTaskInfo(app:T)
+  def loadTaskInfo(app:T)
 
   def proTaskOnMaster(app:T)
 
