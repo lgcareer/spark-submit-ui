@@ -71,12 +71,13 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
                 taskProvider.loadTaskInfo(AppDataObject(id,username));
                 Ok("任务提交成功!")
               }
-              case JobRunExecption(error) => Ok("提交失败")
+              case JobRunExecption(error) => Ok("任务提交失败!")
               case _ => NotFound
             }
        }
      )
 }
+
 
     def errorpage = IsAuthenticated {username => implicit request =>
       Ok(views.html.index())

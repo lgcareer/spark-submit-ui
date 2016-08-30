@@ -21593,3 +21593,1318 @@ Pi is roughly 3.1423848
 2016-08-30 11:45:54,465 - [INFO] - from application in ForkJoinPool-3-worker-9 
 执行结束!
 
+2016-08-30 11:49:23,515 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 11:49:25,248 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 11:49:29,726 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 11:49:29,731 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 11:49:29,778 - [INFO] - from play in New I/O worker #6 
+Starting application default Akka system.
+
+2016-08-30 11:49:41,842 - [INFO] - from application in play-akka.actor.default-dispatcher-235 
+执行模式=>yarn-cluster
+
+2016-08-30 11:49:41,861 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-6 
+select mode 1
+
+2016-08-30 11:49:41,874 - [INFO] - from application in pool-151-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, , --num-executors, , --executor-memory, , --driver-memory, , --total-executor-cores, , , )
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+Usage: org.apache.spark.deploy.yarn.Client [options]
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+Options:
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+                           mode)
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+  --class CLASS_NAME       Name of your application's main class (required)
+
+2016-08-30 11:49:42,721 - [INFO] - from application in Thread-55 
+  --primary-py-file        A main Python file
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --primary-r-file         A main R file
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --arg ARG                Argument to be passed to your application's main class.
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+                           Multiple invocations are possible, each will be passed in order.
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --num-executors NUM      Number of executors to start (Default: 2)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --name NAME              The name of your application (Default: Spark)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+                           'default')
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+                           to work with.
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+                           place on the PYTHONPATH for Python apps.
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --files files            Comma separated list of files to be distributed with the job.
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+  --archives archives      Comma separated list of archives to be distributed with the job.
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+      
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-08-30 11:49:42,722 - [INFO] - from application in Thread-55 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-08-30 11:49:42,731 - [ERROR] - from models.JobManagerActor in pool-151-thread-1 
+Got Throwable
+models.JobRunExecption: Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+Usage: org.apache.spark.deploy.yarn.Client [options]
+Options:
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+                           mode)
+  --class CLASS_NAME       Name of your application's main class (required)
+  --primary-py-file        A main Python file
+  --primary-r-file         A main R file
+  --arg ARG                Argument to be passed to your application's main class.
+                           Multiple invocations are possible, each will be passed in order.
+  --num-executors NUM      Number of executors to start (Default: 2)
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+  --name NAME              The name of your application (Default: Spark)
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+                           'default')
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+                           to work with.
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+                           place on the PYTHONPATH for Python apps.
+  --files files            Comma separated list of files to be distributed with the job.
+  --archives archives      Comma separated list of archives to be distributed with the job.
+      
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:178) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:159) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 11:54:55,287 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 11:54:58,311 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 11:54:59,692 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 11:54:59,698 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 11:54:59,733 - [INFO] - from play in New I/O worker #4 
+Starting application default Akka system.
+
+2016-08-30 11:54:59,758 - [INFO] - from application in play-akka.actor.default-dispatcher-249 
+执行模式=>yarn-cluster
+
+2016-08-30 11:54:59,774 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-4 
+select mode 1
+
+2016-08-30 11:54:59,785 - [INFO] - from application in pool-156-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, , --num-executors, , --executor-memory, , --driver-memory, , --total-executor-cores, , , )
+
+2016-08-30 11:55:00,619 - [INFO] - from application in Thread-59 
+Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+2016-08-30 11:55:00,619 - [INFO] - from application in Thread-59 
+
+
+2016-08-30 11:55:00,619 - [INFO] - from application in Thread-59 
+Usage: org.apache.spark.deploy.yarn.Client [options]
+
+2016-08-30 11:55:00,619 - [INFO] - from application in Thread-59 
+Options:
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+                           mode)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --class CLASS_NAME       Name of your application's main class (required)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --primary-py-file        A main Python file
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --primary-r-file         A main R file
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --arg ARG                Argument to be passed to your application's main class.
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+                           Multiple invocations are possible, each will be passed in order.
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --num-executors NUM      Number of executors to start (Default: 2)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --name NAME              The name of your application (Default: Spark)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+                           'default')
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+                           to work with.
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+                           place on the PYTHONPATH for Python apps.
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --files files            Comma separated list of files to be distributed with the job.
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+  --archives archives      Comma separated list of archives to be distributed with the job.
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+      
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-08-30 11:55:00,620 - [INFO] - from application in Thread-59 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-08-30 11:55:00,629 - [ERROR] - from models.JobManagerActor in pool-156-thread-1 
+Got Throwable
+models.JobRunExecption: Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+Usage: org.apache.spark.deploy.yarn.Client [options]
+Options:
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+                           mode)
+  --class CLASS_NAME       Name of your application's main class (required)
+  --primary-py-file        A main Python file
+  --primary-r-file         A main R file
+  --arg ARG                Argument to be passed to your application's main class.
+                           Multiple invocations are possible, each will be passed in order.
+  --num-executors NUM      Number of executors to start (Default: 2)
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+  --name NAME              The name of your application (Default: Spark)
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+                           'default')
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+                           to work with.
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+                           place on the PYTHONPATH for Python apps.
+  --files files            Comma separated list of files to be distributed with the job.
+  --archives archives      Comma separated list of archives to be distributed with the job.
+      
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:178) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:159) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 12:00:17,935 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:00:19,081 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:00:19,742 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:00:19,750 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:00:19,785 - [INFO] - from play in New I/O worker #10 
+Starting application default Akka system.
+
+2016-08-30 12:01:23,604 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:01:24,251 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:01:24,797 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:01:24,803 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:01:24,853 - [INFO] - from play in New I/O worker #12 
+Starting application default Akka system.
+
+2016-08-30 12:01:44,121 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:01:46,197 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:01:58,015 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:01:58,021 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:01:58,057 - [INFO] - from play in New I/O worker #13 
+Starting application default Akka system.
+
+2016-08-30 12:07:35,236 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718jpgm75 - Internal server error, for (GET) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value data]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 12:08:05,947 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718jpifi9 - Internal server error, for (GET) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value data]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 12:08:08,453 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718jpijak - Internal server error, for (GET) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value $data]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 12:08:10,795 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718jpimml - Internal server error, for (GET) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value $data]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 12:08:21,400 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718jpjcei - Internal server error, for (GET) [/executejar] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value $data]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 12:08:25,628 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:08:27,292 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:08:29,434 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:08:29,441 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:08:29,472 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2016-08-30 12:08:39,454 - [INFO] - from application in play-akka.actor.default-dispatcher-279 
+执行模式=>yarn-cluster
+
+2016-08-30 12:08:39,467 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-2 
+select mode 1
+
+2016-08-30 12:08:39,474 - [INFO] - from application in pool-222-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, , --num-executors, , --executor-memory, , --driver-memory, , --total-executor-cores, , , )
+
+2016-08-30 12:08:40,323 - [INFO] - from application in Thread-69 
+Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+Usage: org.apache.spark.deploy.yarn.Client [options]
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+Options:
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+                           mode)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --class CLASS_NAME       Name of your application's main class (required)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --primary-py-file        A main Python file
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --primary-r-file         A main R file
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --arg ARG                Argument to be passed to your application's main class.
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+                           Multiple invocations are possible, each will be passed in order.
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --num-executors NUM      Number of executors to start (Default: 2)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --name NAME              The name of your application (Default: Spark)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+                           'default')
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+                           to work with.
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+                           place on the PYTHONPATH for Python apps.
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --files files            Comma separated list of files to be distributed with the job.
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+  --archives archives      Comma separated list of archives to be distributed with the job.
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+      
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-08-30 12:08:40,324 - [INFO] - from application in Thread-69 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-08-30 12:08:40,334 - [ERROR] - from models.JobManagerActor in pool-222-thread-1 
+Got Throwable
+models.JobRunExecption: Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+Usage: org.apache.spark.deploy.yarn.Client [options]
+Options:
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+                           mode)
+  --class CLASS_NAME       Name of your application's main class (required)
+  --primary-py-file        A main Python file
+  --primary-r-file         A main R file
+  --arg ARG                Argument to be passed to your application's main class.
+                           Multiple invocations are possible, each will be passed in order.
+  --num-executors NUM      Number of executors to start (Default: 2)
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+  --name NAME              The name of your application (Default: Spark)
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+                           'default')
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+                           to work with.
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+                           place on the PYTHONPATH for Python apps.
+  --files files            Comma separated list of files to be distributed with the job.
+  --archives archives      Comma separated list of archives to be distributed with the job.
+      
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:178) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:159) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 12:08:57,038 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:08:58,970 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:09:00,004 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:09:00,009 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:09:00,042 - [INFO] - from play in New I/O worker #2 
+Starting application default Akka system.
+
+2016-08-30 12:09:08,169 - [INFO] - from application in play-akka.actor.default-dispatcher-287 
+执行模式=>yarn-cluster
+
+2016-08-30 12:09:08,183 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-4 
+select mode 1
+
+2016-08-30 12:09:08,191 - [INFO] - from application in pool-228-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, , --num-executors, , --executor-memory, , --driver-memory, , --total-executor-cores, , , )
+
+2016-08-30 12:09:09,001 - [INFO] - from application in Thread-73 
+Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+Usage: org.apache.spark.deploy.yarn.Client [options]
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+Options:
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+                           mode)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --class CLASS_NAME       Name of your application's main class (required)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --primary-py-file        A main Python file
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --primary-r-file         A main R file
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --arg ARG                Argument to be passed to your application's main class.
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+                           Multiple invocations are possible, each will be passed in order.
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --num-executors NUM      Number of executors to start (Default: 2)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --name NAME              The name of your application (Default: Spark)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+                           'default')
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+                           to work with.
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+                           place on the PYTHONPATH for Python apps.
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --files files            Comma separated list of files to be distributed with the job.
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+  --archives archives      Comma separated list of archives to be distributed with the job.
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+      
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-08-30 12:09:09,002 - [INFO] - from application in Thread-73 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-08-30 12:09:09,012 - [ERROR] - from models.JobManagerActor in pool-228-thread-1 
+Got Throwable
+models.JobRunExecption: Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+Usage: org.apache.spark.deploy.yarn.Client [options]
+Options:
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+                           mode)
+  --class CLASS_NAME       Name of your application's main class (required)
+  --primary-py-file        A main Python file
+  --primary-r-file         A main R file
+  --arg ARG                Argument to be passed to your application's main class.
+                           Multiple invocations are possible, each will be passed in order.
+  --num-executors NUM      Number of executors to start (Default: 2)
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+  --name NAME              The name of your application (Default: Spark)
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+                           'default')
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+                           to work with.
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+                           place on the PYTHONPATH for Python apps.
+  --files files            Comma separated list of files to be distributed with the job.
+  --archives archives      Comma separated list of archives to be distributed with the job.
+      
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:178) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:159) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 12:10:49,684 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:10:51,834 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:10:52,901 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:10:52,907 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:10:52,946 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-08-30 12:12:12,106 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:12:12,657 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:12:13,340 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:12:13,345 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 12:12:13,379 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2016-08-30 12:12:13,398 - [INFO] - from application in play-akka.actor.default-dispatcher-301 
+执行模式=>yarn-cluster
+
+2016-08-30 12:12:13,413 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-2 
+select mode 1
+
+2016-08-30 12:12:13,425 - [INFO] - from application in pool-238-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, , --num-executors, , --executor-memory, , --driver-memory, , --total-executor-cores, , , )
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+Usage: org.apache.spark.deploy.yarn.Client [options]
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+Options:
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+                           mode)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --class CLASS_NAME       Name of your application's main class (required)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --primary-py-file        A main Python file
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --primary-r-file         A main R file
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --arg ARG                Argument to be passed to your application's main class.
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+                           Multiple invocations are possible, each will be passed in order.
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --num-executors NUM      Number of executors to start (Default: 2)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --name NAME              The name of your application (Default: Spark)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+                           'default')
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+                           to work with.
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+                           place on the PYTHONPATH for Python apps.
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --files files            Comma separated list of files to be distributed with the job.
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+  --archives archives      Comma separated list of archives to be distributed with the job.
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+      
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-08-30 12:12:14,287 - [INFO] - from application in Thread-79 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-08-30 12:12:14,301 - [ERROR] - from models.JobManagerActor in pool-238-thread-1 
+Got Throwable
+models.JobRunExecption: Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+Usage: org.apache.spark.deploy.yarn.Client [options]
+Options:
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+                           mode)
+  --class CLASS_NAME       Name of your application's main class (required)
+  --primary-py-file        A main Python file
+  --primary-r-file         A main R file
+  --arg ARG                Argument to be passed to your application's main class.
+                           Multiple invocations are possible, each will be passed in order.
+  --num-executors NUM      Number of executors to start (Default: 2)
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+  --name NAME              The name of your application (Default: Spark)
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+                           'default')
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+                           to work with.
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+                           place on the PYTHONPATH for Python apps.
+  --files files            Comma separated list of files to be distributed with the job.
+  --archives archives      Comma separated list of archives to be distributed with the job.
+      
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:178) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:159) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 12:12:45,128 - [INFO] - from application in play-akka.actor.default-dispatcher-304 
+执行模式=>yarn-cluster
+
+2016-08-30 12:12:45,128 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-2 
+select mode 1
+
+2016-08-30 12:12:45,128 - [INFO] - from application in pool-238-thread-2 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, , --num-executors, , --executor-memory, , --driver-memory, , --total-executor-cores, , , )
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+Usage: org.apache.spark.deploy.yarn.Client [options]
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+Options:
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+                           mode)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --class CLASS_NAME       Name of your application's main class (required)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --primary-py-file        A main Python file
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --primary-r-file         A main R file
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --arg ARG                Argument to be passed to your application's main class.
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+                           Multiple invocations are possible, each will be passed in order.
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --num-executors NUM      Number of executors to start (Default: 2)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --name NAME              The name of your application (Default: Spark)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+                           'default')
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+                           to work with.
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+                           place on the PYTHONPATH for Python apps.
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --files files            Comma separated list of files to be distributed with the job.
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+  --archives archives      Comma separated list of archives to be distributed with the job.
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+      
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-08-30 12:12:45,941 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-08-30 12:12:45,942 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-08-30 12:12:45,942 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-08-30 12:12:45,942 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-08-30 12:12:45,942 - [INFO] - from application in Thread-81 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-08-30 12:12:45,949 - [ERROR] - from models.JobManagerActor in pool-238-thread-2 
+Got Throwable
+models.JobRunExecption: Exception in thread "main" java.lang.IllegalArgumentException: Unknown/unsupported param List(--driver-memory, , --executor-memory, , --jar, file:/Users/king/IdeaProject/ficusspark/, --class, , --arg, )
+
+Usage: org.apache.spark.deploy.yarn.Client [options]
+Options:
+  --jar JAR_PATH           Path to your application's JAR file (required in yarn-cluster
+                           mode)
+  --class CLASS_NAME       Name of your application's main class (required)
+  --primary-py-file        A main Python file
+  --primary-r-file         A main R file
+  --arg ARG                Argument to be passed to your application's main class.
+                           Multiple invocations are possible, each will be passed in order.
+  --num-executors NUM      Number of executors to start (Default: 2)
+  --executor-cores NUM     Number of cores per executor (Default: 1).
+  --driver-memory MEM      Memory for driver (e.g. 1000M, 2G) (Default: 1024 Mb)
+  --driver-cores NUM       Number of cores used by the driver (Default: 1).
+  --executor-memory MEM    Memory per executor (e.g. 1000M, 2G) (Default: 1G)
+  --name NAME              The name of your application (Default: Spark)
+  --queue QUEUE            The hadoop queue to use for allocation requests (Default:
+                           'default')
+  --addJars jars           Comma separated list of local jars that want SparkContext.addJar
+                           to work with.
+  --py-files PY_FILES      Comma-separated list of .zip, .egg, or .py files to
+                           place on the PYTHONPATH for Python apps.
+  --files files            Comma separated list of files to be distributed with the job.
+  --archives archives      Comma separated list of archives to be distributed with the job.
+      
+	at org.apache.spark.deploy.yarn.ClientArguments.parseArgs(ClientArguments.scala:235)
+	at org.apache.spark.deploy.yarn.ClientArguments.<init>(ClientArguments.scala:58)
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:966)
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:178) [classes/:na]
+	at models.JobManagerActor$$anonfun$runJobFuture$2.apply(JobManager.scala:159) [classes/:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+

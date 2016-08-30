@@ -502,7 +502,7 @@
                                                     success:function(data){
                                                         oTable.fnUpdate("已审核", nRow, 3, false);
                                                         oTable.fnDraw();
-                                                        swal("操作成功!", "审核理由: " + inputValue +" 已发送到邮件"+$email, "success");
+                                                        swal("操作完成!", "审核理由: " + inputValue +" 已发送到邮件"+$email, "success");
                                                     }
                                                 });
                                             });
@@ -546,7 +546,7 @@
                                     success:function(data){
                                         oTable.fnUpdate("已审核", nRow, 3, false);
                                         oTable.fnDraw();
-                                        swal("操作成功", data, "success");
+                                        swal("操作完成", data, "success");
 
                                     }
                                 });
