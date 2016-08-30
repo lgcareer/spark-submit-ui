@@ -228,5 +228,4 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
 
 
 
-
 }
