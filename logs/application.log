@@ -22908,3 +22908,1785 @@ Options:
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
 	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
 
+2016-08-30 12:27:33,548 - [INFO] - from play in play-internal-execution-context-17 
+Shutdown application default Akka system.
+
+2016-08-30 12:27:35,048 - [INFO] - from play in play-internal-execution-context-17 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:27:36,144 - [INFO] - from play in play-internal-execution-context-17 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 12:27:36,151 - [INFO] - from play in play-internal-execution-context-17 
+Application started (Dev)
+
+2016-08-30 14:24:32,955 - [ERROR] - from play.nettyException in New I/O worker #13 
+Exception caught in Netty
+java.lang.IllegalArgumentException: empty text
+	at org.jboss.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:97) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:189) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:101) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:485) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty-3.8.0.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 14:24:32,965 - [ERROR] - from play.nettyException in New I/O worker #13 
+Exception caught in Netty
+java.lang.IllegalArgumentException: empty text
+	at org.jboss.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:97) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:189) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:101) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.cleanup(ReplayingDecoder.java:554) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.channelDisconnected(FrameDecoder.java:365) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireChannelDisconnected(Channels.java:396) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.close(AbstractNioWorker.java:360) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:81) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:36) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:54) ~[netty-3.8.0.Final.jar:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.handleDownstream(HttpPipeliningHandler.java:106) ~[netty-http-pipelining-1.1.2.jar:na]
+	at org.jboss.netty.channel.Channels.close(Channels.java:812) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.AbstractChannel.close(AbstractChannel.java:197) ~[netty-3.8.0.Final.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.exceptionCaught(PlayDefaultUpstreamHandler.scala:44) ~[play_2.10-2.2.6.jar:2.2.6]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.exceptionCaught(FrameDecoder.java:377) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireExceptionCaught(Channels.java:525) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:48) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty-3.8.0.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 14:24:34,356 - [ERROR] - from play.nettyException in New I/O worker #14 
+Exception caught in Netty
+java.lang.IllegalArgumentException: empty text
+	at org.jboss.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:97) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:189) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:101) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:485) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty-3.8.0.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 14:24:34,358 - [ERROR] - from play.nettyException in New I/O worker #14 
+Exception caught in Netty
+java.lang.IllegalArgumentException: empty text
+	at org.jboss.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:97) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:189) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:101) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.cleanup(ReplayingDecoder.java:554) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.channelDisconnected(FrameDecoder.java:365) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireChannelDisconnected(Channels.java:396) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.close(AbstractNioWorker.java:360) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:81) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:36) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:54) ~[netty-3.8.0.Final.jar:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.handleDownstream(HttpPipeliningHandler.java:106) ~[netty-http-pipelining-1.1.2.jar:na]
+	at org.jboss.netty.channel.Channels.close(Channels.java:812) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.AbstractChannel.close(AbstractChannel.java:197) ~[netty-3.8.0.Final.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.exceptionCaught(PlayDefaultUpstreamHandler.scala:44) ~[play_2.10-2.2.6.jar:2.2.6]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.exceptionCaught(FrameDecoder.java:377) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireExceptionCaught(Channels.java:525) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:48) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) ~[netty-3.8.0.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) ~[netty-3.8.0.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-08-30 14:27:42,143 - [INFO] - from play in New I/O worker #15 
+Starting application default Akka system.
+
+2016-08-30 14:28:04,468 - [INFO] - from application in play-akka.actor.default-dispatcher-331 
+用户名=>liangkai1@staff.weibo.com
+
+2016-08-30 14:28:27,889 - [INFO] - from application in play-akka.actor.default-dispatcher-326 
+执行模式=>yarn-cluster
+
+2016-08-30 14:28:27,892 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-2 
+select mode 1
+
+2016-08-30 14:28:27,905 - [INFO] - from application in pool-244-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, org.apache.spark.examples.SparkPi, --num-executors, 2, --executor-memory, 2g, --driver-memory, 2g, --total-executor-cores, 6, /tmp/file/spark-examples-1.5.2-hadoop2.6.4.jar, 10000)
+
+2016-08-30 14:28:28,908 - [INFO] - from application in Thread-85 
+16/08/30 14:28:28 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-08-30 14:28:29,013 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+
+2016-08-30 14:28:29,184 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+
+2016-08-30 14:28:29,196 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+
+2016-08-30 14:28:29,197 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Will allocate AM container, with 2432 MB memory including 384 MB overhead
+
+2016-08-30 14:28:29,197 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Setting up container launch context for our AM
+
+2016-08-30 14:28:29,198 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Setting up the launch environment for our AM container
+
+2016-08-30 14:28:29,211 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Preparing resources for our AM container
+
+2016-08-30 14:28:29,606 - [INFO] - from application in Thread-85 
+16/08/30 14:28:29 INFO yarn.Client: Uploading resource file:/usr/local/spark/lib/spark-assembly-1.5.2-hadoop2.6.0.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472538323529_0002/spark-assembly-1.5.2-hadoop2.6.0.jar
+
+2016-08-30 14:28:30,334 - [INFO] - from application in Thread-85 
+16/08/30 14:28:30 INFO yarn.Client: Uploading resource file:/tmp/file/spark-examples-1.5.2-hadoop2.6.4.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472538323529_0002/spark-examples-1.5.2-hadoop2.6.4.jar
+
+2016-08-30 14:28:30,704 - [INFO] - from application in Thread-85 
+16/08/30 14:28:30 INFO yarn.Client: Uploading resource file:/private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-878541fc-95df-4973-b322-bebd94957372/__spark_conf__1891836778688737497.zip -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472538323529_0002/__spark_conf__1891836778688737497.zip
+
+2016-08-30 14:28:30,738 - [INFO] - from application in Thread-85 
+16/08/30 14:28:30 INFO spark.SecurityManager: Changing view acls to: king
+
+2016-08-30 14:28:30,739 - [INFO] - from application in Thread-85 
+16/08/30 14:28:30 INFO spark.SecurityManager: Changing modify acls to: king
+
+2016-08-30 14:28:30,739 - [INFO] - from application in Thread-85 
+16/08/30 14:28:30 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(king); users with modify permissions: Set(king)
+
+2016-08-30 14:28:30,912 - [INFO] - from application in Thread-85 
+16/08/30 14:28:30 INFO yarn.Client: Submitting application 2 to ResourceManager
+
+2016-08-30 14:28:30,966 - [INFO] - from application in play-akka.actor.default-dispatcher-326 
+用户任务Id====>application_1472538323529_0002
+
+2016-08-30 14:28:31,943 - [INFO] - from application in Thread-85 
+16/08/30 14:28:31 INFO yarn.Client: Application report for application_1472538323529_0002 (state: ACCEPTED)
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+16/08/30 14:28:31 INFO yarn.Client: 
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 client token: N/A
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 diagnostics: N/A
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 ApplicationMaster host: N/A
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 ApplicationMaster RPC port: -1
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 queue: default
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 start time: 1472538510924
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 final status: UNDEFINED
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 tracking URL: http://10.236.64.23:8088/proxy/application_1472538323529_0002/
+
+2016-08-30 14:28:31,946 - [INFO] - from application in Thread-85 
+	 user: king
+
+2016-08-30 14:28:32,953 - [INFO] - from application in Thread-85 
+16/08/30 14:28:32 INFO yarn.Client: Application report for application_1472538323529_0002 (state: ACCEPTED)
+
+2016-08-30 14:28:33,958 - [INFO] - from application in Thread-85 
+16/08/30 14:28:33 INFO yarn.Client: Application report for application_1472538323529_0002 (state: ACCEPTED)
+
+2016-08-30 14:28:34,965 - [INFO] - from application in Thread-85 
+16/08/30 14:28:34 INFO yarn.Client: Application report for application_1472538323529_0002 (state: ACCEPTED)
+
+2016-08-30 14:28:35,972 - [INFO] - from application in Thread-85 
+16/08/30 14:28:35 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+16/08/30 14:28:35 INFO yarn.Client: 
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 client token: N/A
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 diagnostics: N/A
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 ApplicationMaster host: 10.236.64.23
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 ApplicationMaster RPC port: 0
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 queue: default
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 start time: 1472538510924
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 final status: UNDEFINED
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 tracking URL: http://10.236.64.23:8088/proxy/application_1472538323529_0002/
+
+2016-08-30 14:28:35,973 - [INFO] - from application in Thread-85 
+	 user: king
+
+2016-08-30 14:28:36,980 - [INFO] - from application in Thread-85 
+16/08/30 14:28:36 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:37,986 - [INFO] - from application in Thread-85 
+16/08/30 14:28:37 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:38,990 - [INFO] - from application in Thread-85 
+16/08/30 14:28:38 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:39,997 - [INFO] - from application in Thread-85 
+16/08/30 14:28:39 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:41,002 - [INFO] - from application in Thread-85 
+16/08/30 14:28:41 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:42,010 - [INFO] - from application in Thread-85 
+16/08/30 14:28:42 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:43,016 - [INFO] - from application in Thread-85 
+16/08/30 14:28:43 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:44,022 - [INFO] - from application in Thread-85 
+16/08/30 14:28:44 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:45,028 - [INFO] - from application in Thread-85 
+16/08/30 14:28:45 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:46,031 - [INFO] - from application in Thread-85 
+16/08/30 14:28:46 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:47,039 - [INFO] - from application in Thread-85 
+16/08/30 14:28:47 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:48,044 - [INFO] - from application in Thread-85 
+16/08/30 14:28:48 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:49,050 - [INFO] - from application in Thread-85 
+16/08/30 14:28:49 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:50,082 - [INFO] - from application in Thread-85 
+16/08/30 14:28:50 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:51,089 - [INFO] - from application in Thread-85 
+16/08/30 14:28:51 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:52,095 - [INFO] - from application in Thread-85 
+16/08/30 14:28:52 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:53,103 - [INFO] - from application in Thread-85 
+16/08/30 14:28:53 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:54,109 - [INFO] - from application in Thread-85 
+16/08/30 14:28:54 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:55,118 - [INFO] - from application in Thread-85 
+16/08/30 14:28:55 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:56,126 - [INFO] - from application in Thread-85 
+16/08/30 14:28:56 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:57,133 - [INFO] - from application in Thread-85 
+16/08/30 14:28:57 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:58,140 - [INFO] - from application in Thread-85 
+16/08/30 14:28:58 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:28:59,145 - [INFO] - from application in Thread-85 
+16/08/30 14:28:59 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:00,153 - [INFO] - from application in Thread-85 
+16/08/30 14:29:00 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:01,157 - [INFO] - from application in Thread-85 
+16/08/30 14:29:01 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:02,163 - [INFO] - from application in Thread-85 
+16/08/30 14:29:02 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:03,171 - [INFO] - from application in Thread-85 
+16/08/30 14:29:03 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:04,178 - [INFO] - from application in Thread-85 
+16/08/30 14:29:04 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:05,185 - [INFO] - from application in Thread-85 
+16/08/30 14:29:05 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:06,192 - [INFO] - from application in Thread-85 
+16/08/30 14:29:06 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:07,198 - [INFO] - from application in Thread-85 
+16/08/30 14:29:07 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:08,204 - [INFO] - from application in Thread-85 
+16/08/30 14:29:08 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:09,209 - [INFO] - from application in Thread-85 
+16/08/30 14:29:09 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:10,218 - [INFO] - from application in Thread-85 
+16/08/30 14:29:10 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:11,223 - [INFO] - from application in Thread-85 
+16/08/30 14:29:11 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:12,229 - [INFO] - from application in Thread-85 
+16/08/30 14:29:12 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:13,234 - [INFO] - from application in Thread-85 
+16/08/30 14:29:13 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:14,241 - [INFO] - from application in Thread-85 
+16/08/30 14:29:14 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:15,247 - [INFO] - from application in Thread-85 
+16/08/30 14:29:15 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:16,253 - [INFO] - from application in Thread-85 
+16/08/30 14:29:16 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:17,258 - [INFO] - from application in Thread-85 
+16/08/30 14:29:17 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:18,264 - [INFO] - from application in Thread-85 
+16/08/30 14:29:18 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:19,272 - [INFO] - from application in Thread-85 
+16/08/30 14:29:19 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:20,278 - [INFO] - from application in Thread-85 
+16/08/30 14:29:20 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:21,284 - [INFO] - from application in Thread-85 
+16/08/30 14:29:21 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:22,289 - [INFO] - from application in Thread-85 
+16/08/30 14:29:22 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:23,295 - [INFO] - from application in Thread-85 
+16/08/30 14:29:23 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:24,302 - [INFO] - from application in Thread-85 
+16/08/30 14:29:24 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:25,308 - [INFO] - from application in Thread-85 
+16/08/30 14:29:25 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:26,314 - [INFO] - from application in Thread-85 
+16/08/30 14:29:26 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:27,322 - [INFO] - from application in Thread-85 
+16/08/30 14:29:27 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:28,327 - [INFO] - from application in Thread-85 
+16/08/30 14:29:28 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:29,331 - [INFO] - from application in Thread-85 
+16/08/30 14:29:29 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:30,338 - [INFO] - from application in Thread-85 
+16/08/30 14:29:30 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:31,340 - [INFO] - from application in Thread-85 
+16/08/30 14:29:31 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:32,347 - [INFO] - from application in Thread-85 
+16/08/30 14:29:32 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:33,353 - [INFO] - from application in Thread-85 
+16/08/30 14:29:33 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:34,356 - [INFO] - from application in Thread-85 
+16/08/30 14:29:34 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:35,361 - [INFO] - from application in Thread-85 
+16/08/30 14:29:35 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:36,365 - [INFO] - from application in Thread-85 
+16/08/30 14:29:36 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:37,370 - [INFO] - from application in Thread-85 
+16/08/30 14:29:37 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:38,375 - [INFO] - from application in Thread-85 
+16/08/30 14:29:38 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:39,377 - [INFO] - from application in Thread-85 
+16/08/30 14:29:39 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:40,383 - [INFO] - from application in Thread-85 
+16/08/30 14:29:40 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:41,387 - [INFO] - from application in Thread-85 
+16/08/30 14:29:41 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:42,393 - [INFO] - from application in Thread-85 
+16/08/30 14:29:42 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:43,400 - [INFO] - from application in Thread-85 
+16/08/30 14:29:43 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:44,404 - [INFO] - from application in Thread-85 
+16/08/30 14:29:44 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:45,409 - [INFO] - from application in Thread-85 
+16/08/30 14:29:45 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:46,416 - [INFO] - from application in Thread-85 
+16/08/30 14:29:46 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:47,420 - [INFO] - from application in Thread-85 
+16/08/30 14:29:47 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:48,427 - [INFO] - from application in Thread-85 
+16/08/30 14:29:48 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:49,430 - [INFO] - from application in Thread-85 
+16/08/30 14:29:49 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:50,439 - [INFO] - from application in Thread-85 
+16/08/30 14:29:50 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:51,445 - [INFO] - from application in Thread-85 
+16/08/30 14:29:51 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:52,452 - [INFO] - from application in Thread-85 
+16/08/30 14:29:52 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:53,458 - [INFO] - from application in Thread-85 
+16/08/30 14:29:53 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:54,464 - [INFO] - from application in Thread-85 
+16/08/30 14:29:54 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:55,468 - [INFO] - from application in Thread-85 
+16/08/30 14:29:55 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:56,472 - [INFO] - from application in Thread-85 
+16/08/30 14:29:56 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:57,477 - [INFO] - from application in Thread-85 
+16/08/30 14:29:57 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:58,483 - [INFO] - from application in Thread-85 
+16/08/30 14:29:58 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:29:59,487 - [INFO] - from application in Thread-85 
+16/08/30 14:29:59 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:00,494 - [INFO] - from application in Thread-85 
+16/08/30 14:30:00 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:01,500 - [INFO] - from application in Thread-85 
+16/08/30 14:30:01 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:02,506 - [INFO] - from application in Thread-85 
+16/08/30 14:30:02 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:03,512 - [INFO] - from application in Thread-85 
+16/08/30 14:30:03 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:04,520 - [INFO] - from application in Thread-85 
+16/08/30 14:30:04 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:05,522 - [INFO] - from application in Thread-85 
+16/08/30 14:30:05 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:06,528 - [INFO] - from application in Thread-85 
+16/08/30 14:30:06 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:07,533 - [INFO] - from application in Thread-85 
+16/08/30 14:30:07 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:08,540 - [INFO] - from application in Thread-85 
+16/08/30 14:30:08 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:09,546 - [INFO] - from application in Thread-85 
+16/08/30 14:30:09 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:10,553 - [INFO] - from application in Thread-85 
+16/08/30 14:30:10 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:11,558 - [INFO] - from application in Thread-85 
+16/08/30 14:30:11 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:12,564 - [INFO] - from application in Thread-85 
+16/08/30 14:30:12 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:13,570 - [INFO] - from application in Thread-85 
+16/08/30 14:30:13 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:14,575 - [INFO] - from application in Thread-85 
+16/08/30 14:30:14 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:15,582 - [INFO] - from application in Thread-85 
+16/08/30 14:30:15 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:16,588 - [INFO] - from application in Thread-85 
+16/08/30 14:30:16 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:17,594 - [INFO] - from application in Thread-85 
+16/08/30 14:30:17 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:18,597 - [INFO] - from application in Thread-85 
+16/08/30 14:30:18 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:19,600 - [INFO] - from application in Thread-85 
+16/08/30 14:30:19 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:20,606 - [INFO] - from application in Thread-85 
+16/08/30 14:30:20 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:21,610 - [INFO] - from application in Thread-85 
+16/08/30 14:30:21 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:22,615 - [INFO] - from application in Thread-85 
+16/08/30 14:30:22 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:23,622 - [INFO] - from application in Thread-85 
+16/08/30 14:30:23 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:24,629 - [INFO] - from application in Thread-85 
+16/08/30 14:30:24 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:25,634 - [INFO] - from application in Thread-85 
+16/08/30 14:30:25 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:26,639 - [INFO] - from application in Thread-85 
+16/08/30 14:30:26 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:27,644 - [INFO] - from application in Thread-85 
+16/08/30 14:30:27 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:28,648 - [INFO] - from application in Thread-85 
+16/08/30 14:30:28 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:29,653 - [INFO] - from application in Thread-85 
+16/08/30 14:30:29 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:30,660 - [INFO] - from application in Thread-85 
+16/08/30 14:30:30 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:31,666 - [INFO] - from application in Thread-85 
+16/08/30 14:30:31 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:32,672 - [INFO] - from application in Thread-85 
+16/08/30 14:30:32 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:33,676 - [INFO] - from application in Thread-85 
+16/08/30 14:30:33 INFO yarn.Client: Application report for application_1472538323529_0002 (state: RUNNING)
+
+2016-08-30 14:30:34,682 - [INFO] - from application in Thread-85 
+16/08/30 14:30:34 INFO yarn.Client: Application report for application_1472538323529_0002 (state: FINISHED)
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+16/08/30 14:30:34 INFO yarn.Client: 
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 client token: N/A
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 diagnostics: N/A
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 ApplicationMaster host: 10.236.64.23
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 ApplicationMaster RPC port: 0
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 queue: default
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 start time: 1472538510924
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 final status: SUCCEEDED
+
+2016-08-30 14:30:34,683 - [INFO] - from application in Thread-85 
+	 tracking URL: http://10.236.64.23:8088/proxy/application_1472538323529_0002/
+
+2016-08-30 14:30:34,684 - [INFO] - from application in Thread-85 
+	 user: king
+
+2016-08-30 14:30:34,689 - [INFO] - from application in Thread-85 
+16/08/30 14:30:34 INFO util.ShutdownHookManager: Shutdown hook called
+
+2016-08-30 14:30:34,690 - [INFO] - from application in Thread-85 
+16/08/30 14:30:34 INFO util.ShutdownHookManager: Deleting directory /private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-878541fc-95df-4973-b322-bebd94957372
+
+2016-08-30 14:30:34,715 - [INFO] - from application in ForkJoinPool-3-worker-13 
+执行结束!
+
+2016-08-30 14:31:58,855 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 14:31:59,263 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 14:31:59,707 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 14:31:59,714 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 14:31:59,754 - [INFO] - from play in New I/O worker #4 
+Starting application default Akka system.
+
+2016-08-30 14:32:28,612 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 14:32:28,937 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 14:32:29,488 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 14:32:29,493 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 14:32:29,523 - [INFO] - from play in New I/O worker #16 
+Starting application default Akka system.
+
+2016-08-30 15:17:59,558 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:17:59,993 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:18:00,422 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:18:00,429 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:18:00,476 - [INFO] - from play in New I/O worker #10 
+Starting application default Akka system.
+
+2016-08-30 15:18:56,133 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:18:56,535 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:18:56,853 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:18:56,859 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:18:56,889 - [INFO] - from play in New I/O worker #7 
+Starting application default Akka system.
+
+2016-08-30 15:19:14,180 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:19:14,560 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:19:14,872 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:19:14,877 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:19:14,906 - [INFO] - from play in New I/O worker #10 
+Starting application default Akka system.
+
+2016-08-30 15:30:25,366 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l077b2 - Internal server error, for (GET) [/userResource] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:25,920 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l07869 - Internal server error, for (GET) [/yarnInfo] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:26,419 - [ERROR] - from application in New I/O worker #14 
+
+
+! @718l078pe - Internal server error, for (GET) [/userResource] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:27,004 - [ERROR] - from application in New I/O worker #13 
+
+
+! @718l079m0 - Internal server error, for (GET) [/spark_info] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:27,584 - [ERROR] - from application in New I/O worker #11 
+
+
+! @718l07ai6 - Internal server error, for (GET) [/workerlist] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:28,082 - [ERROR] - from application in New I/O worker #14 
+
+
+! @718l07bbc - Internal server error, for (GET) [/assets/images/favicon.png] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:28,622 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l07c69 - Internal server error, for (GET) [/yarnInfo] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:30,720 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l07f90 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:30:58,713 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l094ji - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:31:01,305 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l098f9 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:31:16,420 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l0a4oj - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:31:18,981 - [ERROR] - from application in New I/O worker #12 
+
+
+! @718l0a8j6 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:36:30,112 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718l120pl - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:36:33,624 - [ERROR] - from application in New I/O worker #1 
+
+
+! @718l1264l - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[illegal start of simple expression]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 15:36:50,689 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:36:51,037 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:36:51,448 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:36:51,454 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:39:17,542 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:39:17,885 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:39:17,891 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:39:53,013 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:39:53,294 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:39:53,300 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:40:14,551 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:40:14,873 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:40:14,879 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:40:36,625 - [INFO] - from play in New I/O worker #5 
+Starting application default Akka system.
+
+2016-08-30 15:42:16,388 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:42:16,650 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:42:16,879 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:42:16,885 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:42:59,309 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:42:59,600 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:42:59,606 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:43:24,492 - [INFO] - from play in New I/O worker #4 
+Starting application default Akka system.
+
+2016-08-30 15:43:52,953 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:43:53,384 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:43:53,655 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:43:53,660 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:43:53,691 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2016-08-30 15:44:28,907 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:44:29,285 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:44:29,566 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:44:29,572 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:44:29,633 - [INFO] - from play in New I/O worker #6 
+Starting application default Akka system.
+
+2016-08-30 15:45:41,269 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:45:41,655 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:45:41,974 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:45:41,980 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:45:42,384 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-08-30 15:52:05,179 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-08-30 15:52:05,885 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:52:06,362 - [INFO] - from play in play-internal-execution-context-23 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 15:52:06,368 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-08-30 15:53:55,387 - [INFO] - from play in New I/O worker #8 
+Starting application default Akka system.
+
+2016-08-30 16:00:12,252 - [ERROR] - from application in New I/O worker #4 
+
+
+! @718l44ojb - Internal server error, for (GET) [/?encoding=text] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:00:12,774 - [ERROR] - from application in New I/O worker #5 
+
+
+! @718l44pdf - Internal server error, for (GET) [/?encoding=text] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:00:14,376 - [ERROR] - from application in New I/O worker #6 
+
+
+! @718l451n4 - Internal server error, for (GET) [/?encoding=text] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:00:25,845 - [ERROR] - from application in New I/O worker #7 
+
+
+! @718l45im7 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:00:28,313 - [ERROR] - from application in New I/O worker #7 
+
+
+! @718l45md6 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:01:36,601 - [ERROR] - from application in New I/O worker #7 
+
+
+! @718l49jdh - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:01:39,739 - [ERROR] - from application in New I/O worker #7 
+
+
+! @718l49o4a - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:02:41,499 - [INFO] - from play in play-internal-execution-context-29 
+Shutdown application default Akka system.
+
+2016-08-30 16:02:41,820 - [INFO] - from play in play-internal-execution-context-29 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:02:42,140 - [INFO] - from play in play-internal-execution-context-29 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:02:42,147 - [INFO] - from play in play-internal-execution-context-29 
+Application started (Dev)
+
+2016-08-30 16:12:33,695 - [ERROR] - from application in New I/O worker #8 
+
+
+! @718l5l3ee - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Unmatched closing brace '}' ignored here]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:13:21,114 - [ERROR] - from application in New I/O worker #8 
+
+
+! @718l5nli9 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Unmatched closing brace '}' ignored here]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:14:05,941 - [INFO] - from play in play-internal-execution-context-30 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:14:06,497 - [INFO] - from play in play-internal-execution-context-30 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:14:06,503 - [INFO] - from play in play-internal-execution-context-30 
+Application started (Dev)
+
+2016-08-30 16:16:39,766 - [INFO] - from play in play-internal-execution-context-31 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:16:40,245 - [INFO] - from play in play-internal-execution-context-31 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:16:40,251 - [INFO] - from play in play-internal-execution-context-31 
+Application started (Dev)
+
+2016-08-30 16:21:26,052 - [ERROR] - from application in New I/O worker #8 
+
+
+! @718l6pb1f - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:21:29,742 - [ERROR] - from application in New I/O worker #8 
+
+
+! @718l6pgdi - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[Cannot find an implicit ExecutionContext, either require one yourself or import ExecutionContext.Implicits.global]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4.jar:na]
+
+2016-08-30 16:21:57,543 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:21:58,040 - [INFO] - from play in play-internal-execution-context-32 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:21:58,045 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2016-08-30 16:27:33,844 - [INFO] - from play in play-internal-execution-context-34 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:27:34,172 - [INFO] - from play in play-internal-execution-context-34 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:27:34,177 - [INFO] - from play in play-internal-execution-context-34 
+Application started (Dev)
+
+2016-08-30 16:28:50,363 - [INFO] - from play in play-internal-execution-context-37 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:28:50,671 - [INFO] - from play in play-internal-execution-context-37 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:28:50,680 - [INFO] - from play in play-internal-execution-context-37 
+Application started (Dev)
+
+2016-08-30 16:36:15,301 - [INFO] - from play in play-internal-execution-context-34 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:36:15,672 - [INFO] - from play in play-internal-execution-context-34 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:36:15,677 - [INFO] - from play in play-internal-execution-context-34 
+Application started (Dev)
+
+2016-08-30 16:37:21,457 - [INFO] - from play in play-internal-execution-context-40 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:37:21,720 - [INFO] - from play in play-internal-execution-context-40 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:37:21,725 - [INFO] - from play in play-internal-execution-context-40 
+Application started (Dev)
+
+2016-08-30 16:38:01,803 - [INFO] - from play in play-internal-execution-context-40 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:38:02,163 - [INFO] - from play in play-internal-execution-context-40 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:38:02,168 - [INFO] - from play in play-internal-execution-context-40 
+Application started (Dev)
+
+2016-08-30 16:38:22,793 - [INFO] - from play in play-internal-execution-context-41 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:38:23,065 - [INFO] - from play in play-internal-execution-context-41 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:38:23,070 - [INFO] - from play in play-internal-execution-context-41 
+Application started (Dev)
+
+2016-08-30 16:38:36,136 - [INFO] - from play in play-internal-execution-context-41 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:38:36,523 - [INFO] - from play in play-internal-execution-context-41 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:38:36,528 - [INFO] - from play in play-internal-execution-context-41 
+Application started (Dev)
+
+2016-08-30 16:39:44,443 - [INFO] - from play in play-internal-execution-context-41 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:39:44,734 - [INFO] - from play in play-internal-execution-context-41 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:39:44,739 - [INFO] - from play in play-internal-execution-context-41 
+Application started (Dev)
+
+2016-08-30 16:41:23,988 - [INFO] - from play in play-internal-execution-context-50 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:41:24,289 - [INFO] - from play in play-internal-execution-context-50 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:41:24,295 - [INFO] - from play in play-internal-execution-context-50 
+Application started (Dev)
+
+2016-08-30 16:49:50,039 - [INFO] - from play in play-internal-execution-context-41 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:49:50,368 - [INFO] - from play in play-internal-execution-context-41 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:49:50,373 - [INFO] - from play in play-internal-execution-context-41 
+Application started (Dev)
+
+2016-08-30 16:50:44,451 - [INFO] - from play in play-internal-execution-context-53 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:50:44,931 - [INFO] - from play in play-internal-execution-context-53 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:50:44,935 - [INFO] - from play in play-internal-execution-context-53 
+Application started (Dev)
+
+2016-08-30 16:52:34,472 - [INFO] - from play in play-internal-execution-context-55 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:52:34,795 - [INFO] - from play in play-internal-execution-context-55 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:52:34,800 - [INFO] - from play in play-internal-execution-context-55 
+Application started (Dev)
+
+2016-08-30 16:58:00,444 - [INFO] - from play in play-internal-execution-context-52 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:58:00,869 - [INFO] - from play in play-internal-execution-context-52 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 16:58:00,874 - [INFO] - from play in play-internal-execution-context-52 
+Application started (Dev)
+
+2016-08-30 17:02:15,844 - [INFO] - from play in play-internal-execution-context-64 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:02:16,272 - [INFO] - from play in play-internal-execution-context-64 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:02:16,276 - [INFO] - from play in play-internal-execution-context-64 
+Application started (Dev)
+
+2016-08-30 17:02:59,392 - [INFO] - from play in play-internal-execution-context-64 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:02:59,901 - [INFO] - from play in play-internal-execution-context-64 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:02:59,907 - [INFO] - from play in play-internal-execution-context-64 
+Application started (Dev)
+
+2016-08-30 17:06:29,175 - [INFO] - from play in play-internal-execution-context-64 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:06:29,797 - [INFO] - from play in play-internal-execution-context-64 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:06:29,803 - [INFO] - from play in play-internal-execution-context-64 
+Application started (Dev)
+
+2016-08-30 17:17:45,452 - [INFO] - from play in play-internal-execution-context-64 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:17:45,780 - [INFO] - from play in play-internal-execution-context-64 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:17:45,790 - [INFO] - from play in play-internal-execution-context-64 
+Application started (Dev)
+
+2016-08-30 17:18:09,017 - [INFO] - from play in play-internal-execution-context-64 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:18:09,369 - [INFO] - from play in play-internal-execution-context-64 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:18:09,375 - [INFO] - from play in play-internal-execution-context-64 
+Application started (Dev)
+
+2016-08-30 17:40:35,714 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:40:36,017 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:40:36,023 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 17:41:31,910 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:41:32,341 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:41:32,346 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 17:41:57,765 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:41:58,016 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:41:58,022 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 17:43:51,464 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:43:51,778 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:43:51,784 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 17:44:04,242 - [INFO] - from play in play-internal-execution-context-84 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:44:04,680 - [INFO] - from play in play-internal-execution-context-84 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:44:04,684 - [INFO] - from play in play-internal-execution-context-84 
+Application started (Dev)
+
+2016-08-30 17:47:28,247 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:47:28,538 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:47:28,544 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 17:47:48,396 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:47:48,735 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 17:47:48,740 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 18:00:44,385 - [INFO] - from play in play-internal-execution-context-80 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 18:00:44,631 - [INFO] - from play in play-internal-execution-context-80 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-08-30 18:00:44,639 - [INFO] - from play in play-internal-execution-context-80 
+Application started (Dev)
+
+2016-08-30 18:16:10,472 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in BoneCP-pool-watch-thread 
+Failed to acquire connection to jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8 Sleeping for 1000ms and trying again. Attempts left: 10. Exception: java.net.ConnectException: Operation timed out.Message:Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+

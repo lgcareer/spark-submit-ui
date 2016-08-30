@@ -68,7 +68,7 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
           match {
               case JobSubmitSuccess(id) =>  {
                 taskDao.saveTaskArgs(executeArguments)(id)
-                taskProvider.loadTaskInfo(AppDataObject(id,username));
+                taskProvider.loadTaskInfo(AppDataObject(id,username))
                 Ok("任务提交成功!")
               }
               case JobRunExecption(error) => Ok("任务提交失败!")

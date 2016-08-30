@@ -40,7 +40,7 @@ object  JobManagerActor{
 
   case class Initializ(executeModel: ExecuteModel)
   case class InitError(t: Throwable)
-  case class JobLoading(msg: String)
+  case class JobFinish(msg: String)
   case class SaveTask(appId:String)
 
 
@@ -145,6 +145,8 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }
+
+    case JobFinish(msg) =>
   }
 
 
@@ -188,7 +190,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) => Logger.info(result.msg); self ! JobLoading(result.msg)
+      case scala.util.Success(result:Any) => Logger.info(result.msg); self ! JobFinish(result.msg)
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }
