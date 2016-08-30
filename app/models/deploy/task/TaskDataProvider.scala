@@ -3,6 +3,7 @@ package models
 import com.google.inject.Inject
 import models.TaskDataProvider.{AppDataObject, TaskData, YarnTaskInfoList}
 import play.api.Logger
+import play.api.http.Writeable
 import play.api.libs.ws.WS
 import play.libs.Akka
 
@@ -204,6 +205,23 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
 
       }
     })
+  }
+
+
+  def coverTask(appId:String): Unit ={
+    MatchEngine.matchURI(appId).map(
+      data=>
+        data._1 match {
+          case m if m.equals("yarn") => {
+            Runtime.getRuntime.exec(s"app/models/shell/kill_job.sh $appId")
+            taskDao.rmYarnTaskInfo(appId)
+          }
+          case m if m.equals("standalone") => {
+            WS.url("http://127.0.0.1:8080/app/kill/").post(Map("id" -> Seq(appId),"terminate"->Seq("true")))
+            taskDao.rmYarnTaskInfo(appId)
+          }
+        }
+    )
   }
 
 

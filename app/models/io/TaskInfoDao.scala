@@ -161,5 +161,28 @@ class TaskInfoDao  extends  TaskDao{
     }
   }
 
+  override def rmYarnTaskInfo(appId: String): Unit = {
+    DB.withConnection{
+      implicit  connection =>
+        SQL(
+          """
+            delete  from task_yarn where application_id={application_id}
+          """
+        ).on('application_id -> appId)
+          .executeUpdate()
+    }
 
+  }
+
+  override def rmTaskInfo(appId: String): Unit = {
+    DB.withConnection{
+      implicit  connection =>
+        SQL(
+          """
+            delete from task_standalone where app_id={app_id}
+          """
+        ).on('app_id -> appId)
+          .executeUpdate()
+    }
+  }
 }

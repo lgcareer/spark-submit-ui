@@ -169,15 +169,10 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
         val output = process.inputIterator.mkString("\n")
         //val regex = """Shutdown (.*)""".r.unanchored
-        val regex_local = """Starting executor ID driver on host localhost(.*)""".r.unanchored
-        val regex_id = """Spark cluster with app ID (.*)""".r.unanchored
-
+        val regex = """Shutdown hook called(.*)""".r.unanchored
         output match {
-          case regex_local(success) => {
+          case regex(success) => {
              JobRunFinish("执行结束!")
-          }
-          case regex_id(success) => {
-            JobRunFinish("执行结束!")
           }
           case _ =>
             throw new JobRunExecption(output)

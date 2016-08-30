@@ -88,6 +88,12 @@ trait TaskDao{
 
   def updateTaskList(tasks:Seq[TaskInfo])
 
+  def rmYarnTaskInfo(appId:String)
+
+  def rmTaskInfo(appId:String)
+
+
+
 
 
 }

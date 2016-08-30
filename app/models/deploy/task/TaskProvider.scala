@@ -5,6 +5,8 @@ package models
   */
 trait TaskProvider[T] {
 
+  def coverTask(appId:String)
+
   def loadTaskInfo(app:T)
 
   def proTaskOnMaster(app:T)

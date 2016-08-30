@@ -3,6 +3,7 @@ package controllers
 import com.google.inject.Inject
 import models.TaskDataProvider.AppDataObject
 import models._
+import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -67,7 +68,13 @@ class TaskManager @Inject() (taskProvider:  TaskProvider[AppDataObject],taskDao:
       val executeModel: ExecuteModel = taskDao.getTaskArgs(appId)
       Execute.main(executeModel) match {
         case JobSubmitSuccess(id) =>  {
+          Logger.info(s"旧任务Id====> $appId,新任务id====> $id")
+          /**
+            *保存新的任务参数
+            *将旧的任务删除,重新添加到队列
+            */
           taskDao.saveTaskArgs(executeModel)(id)
+          taskProvider.coverTask(appId)
           taskProvider.loadTaskInfo(AppDataObject(id,username));
           Ok(id)
         }
