@@ -10288,3 +10288,1145 @@ args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --cl
 2016-09-02 11:05:11,444 - [INFO] - from application in Thread-22 
 16/09/02 11:05:11 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
 
+2016-09-02 11:05:12,450 - [INFO] - from application in Thread-22 
+16/09/02 11:05:12 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:13,458 - [INFO] - from application in Thread-22 
+16/09/02 11:05:13 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:14,466 - [INFO] - from application in Thread-22 
+16/09/02 11:05:14 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:15,468 - [INFO] - from application in Thread-22 
+16/09/02 11:05:15 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:16,473 - [INFO] - from application in Thread-22 
+16/09/02 11:05:16 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:17,486 - [INFO] - from application in Thread-22 
+16/09/02 11:05:17 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:18,489 - [INFO] - from application in Thread-22 
+16/09/02 11:05:18 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
+
+2016-09-02 11:05:19,494 - [INFO] - from application in Thread-22 
+16/09/02 11:05:19 INFO yarn.Client: Application report for application_1472781969555_0002 (state: FINISHED)
+
+2016-09-02 11:05:19,494 - [INFO] - from application in Thread-22 
+16/09/02 11:05:19 INFO yarn.Client: 
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 client token: N/A
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 diagnostics: N/A
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 ApplicationMaster host: 10.236.63.93
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 ApplicationMaster RPC port: 0
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 queue: default
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 start time: 1472785480232
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 final status: SUCCEEDED
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 tracking URL: http://10.236.63.93:8088/proxy/application_1472781969555_0002/
+
+2016-09-02 11:05:19,495 - [INFO] - from application in Thread-22 
+	 user: king
+
+2016-09-02 11:05:19,500 - [INFO] - from application in Thread-22 
+16/09/02 11:05:19 INFO util.ShutdownHookManager: Shutdown hook called
+
+2016-09-02 11:05:19,500 - [INFO] - from application in Thread-22 
+16/09/02 11:05:19 INFO util.ShutdownHookManager: Deleting directory /private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-98ef75c2-9368-4275-91af-f96e7c828c45
+
+2016-09-02 11:05:37,248 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-4 
+任务结束,当前状态==>RUNNING
+
+2016-09-02 11:10:49,138 - [INFO] - from play in play-internal-execution-context-44 
+Shutdown application default Akka system.
+
+2016-09-02 11:11:18,721 - [INFO] - from play in play-internal-execution-context-44 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 11:11:49,013 - [INFO] - from play in play-internal-execution-context-44 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 11:11:49,020 - [INFO] - from play in play-internal-execution-context-44 
+Application started (Dev)
+
+2016-09-02 11:11:49,042 - [INFO] - from play in New I/O worker #12 
+Starting application default Akka system.
+
+2016-09-02 11:11:50,799 - [INFO] - from play in play-internal-execution-context-44 
+Shutdown application default Akka system.
+
+2016-09-02 11:12:19,893 - [INFO] - from play in play-internal-execution-context-44 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 11:12:41,004 - [INFO] - from play in play-internal-execution-context-44 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 11:12:41,011 - [INFO] - from play in play-internal-execution-context-44 
+Application started (Dev)
+
+2016-09-02 11:12:41,062 - [INFO] - from play in New I/O worker #2 
+Starting application default Akka system.
+
+2016-09-02 11:14:16,427 - [ERROR] - from application in play-akka.actor.default-dispatcher-148 
+
+
+! @719fdm66n - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:14:44,348 - [ERROR] - from application in play-akka.actor.default-dispatcher-150 
+
+
+! @719fdnlej - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:14:44,354 - [ERROR] - from application in play-akka.actor.default-dispatcher-154 
+
+
+! @719fdnlf0 - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:14:44,597 - [ERROR] - from application in play-akka.actor.default-dispatcher-150 
+
+
+! @719fdnlo8 - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:14:44,827 - [ERROR] - from application in play-akka.actor.default-dispatcher-152 
+
+
+! @719fdnm74 - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:16:31,148 - [ERROR] - from application in play-akka.actor.default-dispatcher-152 
+
+
+! @719fe3neb - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:16:31,584 - [ERROR] - from application in play-akka.actor.default-dispatcher-162 
+
+
+! @719fe3o55 - Internal server error, for (GET) [/userResource] ->
+
+play.api.Application$$anon$1: Execution exception[[NoSuchElementException: key not found: SuperAdmin]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4.jar:na]
+Caused by: java.util.NoSuchElementException: key not found: SuperAdmin
+	at scala.collection.MapLike$class.default(MapLike.scala:228) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.default(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.MapLike$class.apply(MapLike.scala:141) ~[scala-library-2.10.4.jar:na]
+	at scala.collection.AbstractMap.apply(Map.scala:58) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$$anonfun$userResourceRate$1.apply$mcVI$sp(UserCountDao.scala:83) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.4.jar:na]
+	at models.io.UserCountDao$.userResourceRate(UserCountDao.scala:79) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:32) ~[classes/:na]
+	at controllers.Usertally$$anonfun$userResource$1$$anonfun$apply$5$$anonfun$apply$6.apply(Usertally.scala:31) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
+	... 6 common frames omitted
+
+2016-09-02 11:18:24,774 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-4 
+select mode 1
+
+2016-09-02 11:18:24,788 - [INFO] - from application in pool-63-thread-1 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, org.apache.spark.examples.SparkPi, --num-executors, 2, --executor-memory, 2g, --driver-memory, 2g, --total-executor-cores, 5, /tmp/file/spark-examples-1.5.2-hadoop2.6.4.jar, 200)
+
+2016-09-02 11:18:27,223 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-09-02 11:18:27,331 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+
+2016-09-02 11:18:27,497 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+
+2016-09-02 11:18:27,518 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+
+2016-09-02 11:18:27,519 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Will allocate AM container, with 2432 MB memory including 384 MB overhead
+
+2016-09-02 11:18:27,519 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Setting up container launch context for our AM
+
+2016-09-02 11:18:27,520 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Setting up the launch environment for our AM container
+
+2016-09-02 11:18:27,533 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Preparing resources for our AM container
+
+2016-09-02 11:18:27,888 - [INFO] - from application in Thread-28 
+16/09/02 11:18:27 INFO yarn.Client: Uploading resource file:/usr/local/spark/lib/spark-assembly-1.5.2-hadoop2.6.0.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472781969555_0003/spark-assembly-1.5.2-hadoop2.6.0.jar
+
+2016-09-02 11:18:28,689 - [INFO] - from application in Thread-28 
+16/09/02 11:18:28 INFO yarn.Client: Uploading resource file:/tmp/file/spark-examples-1.5.2-hadoop2.6.4.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472781969555_0003/spark-examples-1.5.2-hadoop2.6.4.jar
+
+2016-09-02 11:18:29,127 - [INFO] - from application in Thread-28 
+16/09/02 11:18:29 INFO yarn.Client: Uploading resource file:/private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-357f4206-3e4d-4f6c-9312-917f53a8fc8a/__spark_conf__387226525395960101.zip -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472781969555_0003/__spark_conf__387226525395960101.zip
+
+2016-09-02 11:18:29,166 - [INFO] - from application in Thread-28 
+16/09/02 11:18:29 INFO spark.SecurityManager: Changing view acls to: king
+
+2016-09-02 11:18:29,166 - [INFO] - from application in Thread-28 
+16/09/02 11:18:29 INFO spark.SecurityManager: Changing modify acls to: king
+
+2016-09-02 11:18:29,166 - [INFO] - from application in Thread-28 
+16/09/02 11:18:29 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(king); users with modify permissions: Set(king)
+
+2016-09-02 11:18:29,343 - [INFO] - from application in Thread-28 
+16/09/02 11:18:29 INFO yarn.Client: Submitting application 3 to ResourceManager
+
+2016-09-02 11:18:29,368 - [INFO] - from application in play-akka.actor.default-dispatcher-175 
+旧任务Id====> application_1472781969555_0002,新任务id====> application_1472781969555_0003
+
+2016-09-02 11:18:30,373 - [INFO] - from application in Thread-28 
+16/09/02 11:18:30 INFO yarn.Client: Application report for application_1472781969555_0003 (state: ACCEPTED)
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+16/09/02 11:18:30 INFO yarn.Client: 
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 client token: N/A
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 diagnostics: N/A
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 ApplicationMaster host: N/A
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 ApplicationMaster RPC port: -1
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 queue: default
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 start time: 1472786309353
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 final status: UNDEFINED
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 tracking URL: http://10.236.63.93:8088/proxy/application_1472781969555_0003/
+
+2016-09-02 11:18:30,376 - [INFO] - from application in Thread-28 
+	 user: king
+
+2016-09-02 11:18:31,378 - [INFO] - from application in Thread-28 
+16/09/02 11:18:31 INFO yarn.Client: Application report for application_1472781969555_0003 (state: ACCEPTED)
+
+2016-09-02 11:18:31,429 - [INFO] - from application in play-akka.actor.default-dispatcher-175 
+用户任务Id====>application_1472781969555_0003
+
+2016-09-02 11:18:32,385 - [INFO] - from application in Thread-28 
+16/09/02 11:18:32 INFO yarn.Client: Application report for application_1472781969555_0003 (state: ACCEPTED)
+
+2016-09-02 11:18:33,390 - [INFO] - from application in Thread-28 
+16/09/02 11:18:33 INFO yarn.Client: Application report for application_1472781969555_0003 (state: ACCEPTED)
+
+2016-09-02 11:18:34,397 - [INFO] - from application in Thread-28 
+16/09/02 11:18:34 INFO yarn.Client: Application report for application_1472781969555_0003 (state: ACCEPTED)
+
+2016-09-02 11:18:35,403 - [INFO] - from application in Thread-28 
+16/09/02 11:18:35 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+16/09/02 11:18:35 INFO yarn.Client: 
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 client token: N/A
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 diagnostics: N/A
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 ApplicationMaster host: 10.236.63.93
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 ApplicationMaster RPC port: 0
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 queue: default
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 start time: 1472786309353
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 final status: UNDEFINED
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 tracking URL: http://10.236.63.93:8088/proxy/application_1472781969555_0003/
+
+2016-09-02 11:18:35,404 - [INFO] - from application in Thread-28 
+	 user: king
+
+2016-09-02 11:18:36,410 - [INFO] - from application in Thread-28 
+16/09/02 11:18:36 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:37,416 - [INFO] - from application in Thread-28 
+16/09/02 11:18:37 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:38,422 - [INFO] - from application in Thread-28 
+16/09/02 11:18:38 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:39,429 - [INFO] - from application in Thread-28 
+16/09/02 11:18:39 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:40,436 - [INFO] - from application in Thread-28 
+16/09/02 11:18:40 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:41,442 - [INFO] - from application in Thread-28 
+16/09/02 11:18:41 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:42,449 - [INFO] - from application in Thread-28 
+16/09/02 11:18:42 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:43,455 - [INFO] - from application in Thread-28 
+16/09/02 11:18:43 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:44,463 - [INFO] - from application in Thread-28 
+16/09/02 11:18:44 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:45,469 - [INFO] - from application in Thread-28 
+16/09/02 11:18:45 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:46,476 - [INFO] - from application in Thread-28 
+16/09/02 11:18:46 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:47,483 - [INFO] - from application in Thread-28 
+16/09/02 11:18:47 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:48,488 - [INFO] - from application in Thread-28 
+16/09/02 11:18:48 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:49,496 - [INFO] - from application in Thread-28 
+16/09/02 11:18:49 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:50,502 - [INFO] - from application in Thread-28 
+16/09/02 11:18:50 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:51,506 - [INFO] - from application in Thread-28 
+16/09/02 11:18:51 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:52,512 - [INFO] - from application in Thread-28 
+16/09/02 11:18:52 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:53,518 - [INFO] - from application in Thread-28 
+16/09/02 11:18:53 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:54,525 - [INFO] - from application in Thread-28 
+16/09/02 11:18:54 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:55,532 - [INFO] - from application in Thread-28 
+16/09/02 11:18:55 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:56,539 - [INFO] - from application in Thread-28 
+16/09/02 11:18:56 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:57,545 - [INFO] - from application in Thread-28 
+16/09/02 11:18:57 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:58,548 - [INFO] - from application in Thread-28 
+16/09/02 11:18:58 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:18:59,554 - [INFO] - from application in Thread-28 
+16/09/02 11:18:59 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:00,561 - [INFO] - from application in Thread-28 
+16/09/02 11:19:00 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:01,567 - [INFO] - from application in Thread-28 
+16/09/02 11:19:01 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:02,572 - [INFO] - from application in Thread-28 
+16/09/02 11:19:02 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:03,578 - [INFO] - from application in Thread-28 
+16/09/02 11:19:03 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:04,642 - [INFO] - from application in Thread-28 
+16/09/02 11:19:04 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:05,648 - [INFO] - from application in Thread-28 
+16/09/02 11:19:05 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:06,653 - [INFO] - from application in Thread-28 
+16/09/02 11:19:06 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:07,659 - [INFO] - from application in Thread-28 
+16/09/02 11:19:07 INFO yarn.Client: Application report for application_1472781969555_0003 (state: RUNNING)
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+16/09/02 11:19:08 INFO yarn.Client: Application report for application_1472781969555_0003 (state: FINISHED)
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+16/09/02 11:19:08 INFO yarn.Client: 
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+	 client token: N/A
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+	 diagnostics: N/A
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+	 ApplicationMaster host: 10.236.63.93
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+	 ApplicationMaster RPC port: 0
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+	 queue: default
+
+2016-09-02 11:19:08,666 - [INFO] - from application in Thread-28 
+	 start time: 1472786309353
+
+2016-09-02 11:19:08,667 - [INFO] - from application in Thread-28 
+	 final status: SUCCEEDED
+
+2016-09-02 11:19:08,667 - [INFO] - from application in Thread-28 
+	 tracking URL: http://10.236.63.93:8088/proxy/application_1472781969555_0003/
+
+2016-09-02 11:19:08,667 - [INFO] - from application in Thread-28 
+	 user: king
+
+2016-09-02 11:19:08,669 - [INFO] - from application in Thread-28 
+16/09/02 11:19:08 INFO yarn.Client: Deleting staging directory .sparkStaging/application_1472781969555_0003
+
+2016-09-02 11:19:08,675 - [INFO] - from application in Thread-28 
+16/09/02 11:19:08 INFO util.ShutdownHookManager: Shutdown hook called
+
+2016-09-02 11:19:08,676 - [INFO] - from application in Thread-28 
+16/09/02 11:19:08 INFO util.ShutdownHookManager: Deleting directory /private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-357f4206-3e4d-4f6c-9312-917f53a8fc8a
+
+2016-09-02 11:19:21,194 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-2 
+任务结束,当前状态==>FINISHED
+
+2016-09-02 11:23:19,318 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-3 
+select mode 1
+
+2016-09-02 11:23:19,319 - [INFO] - from application in pool-63-thread-2 
+args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --class, org.apache.spark.examples.SparkPi, --num-executors, 2, --executor-memory, 2g, --driver-memory, 2g, --total-executor-cores, 5, /tmp/file/spark-examples-1.5.2-hadoop2.6.4.jar, 200)
+
+2016-09-02 11:23:22,707 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+2016-09-02 11:23:22,815 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO client.RMProxy: Connecting to ResourceManager at /127.0.0.1:8032
+
+2016-09-02 11:23:22,975 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO yarn.Client: Requesting a new application from cluster with 1 NodeManagers
+
+2016-09-02 11:23:22,984 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (8192 MB per container)
+
+2016-09-02 11:23:22,984 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO yarn.Client: Will allocate AM container, with 2432 MB memory including 384 MB overhead
+
+2016-09-02 11:23:22,985 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO yarn.Client: Setting up container launch context for our AM
+
+2016-09-02 11:23:22,986 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO yarn.Client: Setting up the launch environment for our AM container
+
+2016-09-02 11:23:22,998 - [INFO] - from application in Thread-30 
+16/09/02 11:23:22 INFO yarn.Client: Preparing resources for our AM container
+
+2016-09-02 11:23:23,348 - [INFO] - from application in Thread-30 
+16/09/02 11:23:23 INFO yarn.Client: Uploading resource file:/usr/local/spark/lib/spark-assembly-1.5.2-hadoop2.6.0.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472781969555_0004/spark-assembly-1.5.2-hadoop2.6.0.jar
+
+2016-09-02 11:23:24,084 - [INFO] - from application in Thread-30 
+16/09/02 11:23:24 INFO yarn.Client: Uploading resource file:/tmp/file/spark-examples-1.5.2-hadoop2.6.4.jar -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472781969555_0004/spark-examples-1.5.2-hadoop2.6.4.jar
+
+2016-09-02 11:23:24,487 - [INFO] - from application in Thread-30 
+16/09/02 11:23:24 INFO yarn.Client: Uploading resource file:/private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-358d92a4-e617-493d-b58e-82195c3194c3/__spark_conf__7235369164869035491.zip -> hdfs://localhost:9000/user/king/.sparkStaging/application_1472781969555_0004/__spark_conf__7235369164869035491.zip
+
+2016-09-02 11:23:24,525 - [INFO] - from application in Thread-30 
+16/09/02 11:23:24 INFO spark.SecurityManager: Changing view acls to: king
+
+2016-09-02 11:23:24,525 - [INFO] - from application in Thread-30 
+16/09/02 11:23:24 INFO spark.SecurityManager: Changing modify acls to: king
+
+2016-09-02 11:23:24,526 - [INFO] - from application in Thread-30 
+16/09/02 11:23:24 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(king); users with modify permissions: Set(king)
+
+2016-09-02 11:23:24,713 - [INFO] - from application in Thread-30 
+16/09/02 11:23:24 INFO yarn.Client: Submitting application 4 to ResourceManager
+
+2016-09-02 11:23:24,743 - [INFO] - from application in play-akka.actor.default-dispatcher-169 
+旧任务Id====> application_1472781969555_0003,新任务id====> application_1472781969555_0004
+
+2016-09-02 11:23:25,749 - [INFO] - from application in Thread-30 
+16/09/02 11:23:25 INFO yarn.Client: Application report for application_1472781969555_0004 (state: ACCEPTED)
+
+2016-09-02 11:23:25,752 - [INFO] - from application in Thread-30 
+16/09/02 11:23:25 INFO yarn.Client: 
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 client token: N/A
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 diagnostics: N/A
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 ApplicationMaster host: N/A
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 ApplicationMaster RPC port: -1
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 queue: default
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 start time: 1472786604724
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 final status: UNDEFINED
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 tracking URL: http://10.236.63.93:8088/proxy/application_1472781969555_0004/
+
+2016-09-02 11:23:25,753 - [INFO] - from application in Thread-30 
+	 user: king
+
+2016-09-02 11:23:26,185 - [INFO] - from application in play-akka.actor.default-dispatcher-169 
+用户任务Id====>application_1472781969555_0004
+
+2016-09-02 11:23:26,755 - [INFO] - from application in Thread-30 
+16/09/02 11:23:26 INFO yarn.Client: Application report for application_1472781969555_0004 (state: ACCEPTED)
+
+2016-09-02 11:23:27,763 - [INFO] - from application in Thread-30 
+16/09/02 11:23:27 INFO yarn.Client: Application report for application_1472781969555_0004 (state: ACCEPTED)
+
+2016-09-02 11:23:28,769 - [INFO] - from application in Thread-30 
+16/09/02 11:23:28 INFO yarn.Client: Application report for application_1472781969555_0004 (state: ACCEPTED)
+
+2016-09-02 11:23:29,776 - [INFO] - from application in Thread-30 
+16/09/02 11:23:29 INFO yarn.Client: Application report for application_1472781969555_0004 (state: ACCEPTED)
+
+2016-09-02 11:23:30,778 - [INFO] - from application in Thread-30 
+16/09/02 11:23:30 INFO yarn.Client: Application report for application_1472781969555_0004 (state: ACCEPTED)
+
+2016-09-02 11:23:31,784 - [INFO] - from application in Thread-30 
+16/09/02 11:23:31 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+16/09/02 11:23:31 INFO yarn.Client: 
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 client token: N/A
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 diagnostics: N/A
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 ApplicationMaster host: 10.236.63.93
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 ApplicationMaster RPC port: 0
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 queue: default
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 start time: 1472786604724
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 final status: UNDEFINED
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 tracking URL: http://10.236.63.93:8088/proxy/application_1472781969555_0004/
+
+2016-09-02 11:23:31,785 - [INFO] - from application in Thread-30 
+	 user: king
+
+2016-09-02 11:23:32,791 - [INFO] - from application in Thread-30 
+16/09/02 11:23:32 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:33,797 - [INFO] - from application in Thread-30 
+16/09/02 11:23:33 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:34,800 - [INFO] - from application in Thread-30 
+16/09/02 11:23:34 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:35,803 - [INFO] - from application in Thread-30 
+16/09/02 11:23:35 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:36,809 - [INFO] - from application in Thread-30 
+16/09/02 11:23:36 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:37,814 - [INFO] - from application in Thread-30 
+16/09/02 11:23:37 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:38,821 - [INFO] - from application in Thread-30 
+16/09/02 11:23:38 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:39,828 - [INFO] - from application in Thread-30 
+16/09/02 11:23:39 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:40,834 - [INFO] - from application in Thread-30 
+16/09/02 11:23:40 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:41,840 - [INFO] - from application in Thread-30 
+16/09/02 11:23:41 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:42,847 - [INFO] - from application in Thread-30 
+16/09/02 11:23:42 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:43,851 - [INFO] - from application in Thread-30 
+16/09/02 11:23:43 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:44,857 - [INFO] - from application in Thread-30 
+16/09/02 11:23:44 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:45,864 - [INFO] - from application in Thread-30 
+16/09/02 11:23:45 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:46,871 - [INFO] - from application in Thread-30 
+16/09/02 11:23:46 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:47,878 - [INFO] - from application in Thread-30 
+16/09/02 11:23:47 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:48,883 - [INFO] - from application in Thread-30 
+16/09/02 11:23:48 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:49,888 - [INFO] - from application in Thread-30 
+16/09/02 11:23:49 INFO yarn.Client: Application report for application_1472781969555_0004 (state: RUNNING)
+
+2016-09-02 11:23:50,895 - [INFO] - from application in Thread-30 
+16/09/02 11:23:50 INFO yarn.Client: Application report for application_1472781969555_0004 (state: KILLED)
+
+2016-09-02 11:23:50,895 - [INFO] - from application in Thread-30 
+16/09/02 11:23:50 INFO yarn.Client: 
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 client token: N/A
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 diagnostics: Application killed by user.
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 ApplicationMaster host: N/A
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 ApplicationMaster RPC port: -1
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 queue: default
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 start time: 1472786604724
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 final status: KILLED
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 tracking URL: http://10.236.63.93:8088/cluster/app/application_1472781969555_0004
+
+2016-09-02 11:23:50,896 - [INFO] - from application in Thread-30 
+	 user: king
+
+2016-09-02 11:23:50,898 - [INFO] - from application in Thread-30 
+16/09/02 11:23:50 INFO yarn.Client: Deleting staging directory .sparkStaging/application_1472781969555_0004
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+Exception in thread "main" org.apache.spark.SparkException: Application application_1472781969555_0004 is killed
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.yarn.Client.run(Client.scala:929)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.yarn.Client$.main(Client.scala:971)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.yarn.Client.main(Client.scala)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at java.lang.reflect.Method.invoke(Method.java:483)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:674)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:180)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:205)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:120)
+
+2016-09-02 11:23:50,906 - [INFO] - from application in Thread-30 
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+
+2016-09-02 11:23:50,908 - [INFO] - from application in Thread-30 
+16/09/02 11:23:50 INFO util.ShutdownHookManager: Shutdown hook called
+
+2016-09-02 11:23:50,908 - [INFO] - from application in Thread-30 
+16/09/02 11:23:50 INFO util.ShutdownHookManager: Deleting directory /private/var/folders/c0/zs327zy53v12p389np1zrv200000gn/T/spark-358d92a4-e617-493d-b58e-82195c3194c3
+
+2016-09-02 11:24:08,342 - [INFO] - from application in jobSystem-akka.actor.default-dispatcher-3 
+任务结束,当前状态==>KILLED
+
