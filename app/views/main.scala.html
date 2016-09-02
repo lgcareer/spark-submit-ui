@@ -49,6 +49,35 @@
         <script src="@routes.Assets.at("javascripts/xenon-custom.js")" type="text/javascript"></script>
         <script src="@routes.Assets.at("javascripts/bootstrap-tooltip.js")" type="text/javascript"></script>
         <script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/push.js")"></script>
+
+        <script>
+                $(document).ready(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"/msglist",
+                        dataType:"json",
+                        success:function(data){
+                        var head= ""
+                        var $count = 0;
+                        var myobj=eval(data);
+                        for (var p in myobj) {
+                            var datamid = eval(data[p]);
+                            for (var i = 0; i < datamid.length; i++) {
+                                $count++;
+                                head +="<li class=\"notification-warning\"><a href=\"/tasklist\"><i class=\"fa-envelope-o\"></i><span class=\"line\">"+"任务运行结束,当前状态 "+datamid[i].state+"</span><span class=\"line small time\">"+"ID "+datamid[i].id+"</span></a></li>"
+
+                            };
+                        };
+                        $('#msglist').html(head);
+                        if($count !=0){
+                         $('#count').html($count);
+                        }
+                        }
+                    });
+                });
+        </script>
+
 
     </head>
     <body class="page-body">
@@ -322,11 +351,6 @@
 
 
 
-
-                        <script src="@routes.Assets.at("javascripts/push.js")"></script>
-
-
-
                         <!--消息列表-->
 
 
@@ -487,30 +511,7 @@
                 });
         </script>
 
-                        <script>
-                $(document).ready(function(){
-                    $.ajax({
-                        type:"GET",
-                        url:"/msglist",
-                        dataType:"json",
-                        success:function(data){
-                        var head= ""
-                        var $count = 0;
-                        var myobj=eval(data);
-                        for (var p in myobj) {
-                            var datamid = eval(data[p]);
-                            for (var i = 0; i < datamid.length; i++) {
-                                $count++;
-                                head +="<li class=\"notification-warning\"><a href=\"/tasklist\"><i class=\"fa-envelope-o\"></i><span class=\"line\">"+"任务运行结束,当前状态 "+datamid[i].state+"</span><span class=\"line small time\">"+"ID "+datamid[i].id+"</span></a></li>"
 
-                            };
-                        };
-                        $('#msglist').html(head);
-                        $('#count').html($count);
-                        }
-                    });
-                });
-        </script>
 
 
     </body>

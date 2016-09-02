@@ -50,7 +50,9 @@
                                  };
                              };
                              $('#msglist').html(head);
-                             $('#count').html($count);
+                             if($count!=0){
+                              $('#count').html($count);
+                               }
                              }
                          });
    }
