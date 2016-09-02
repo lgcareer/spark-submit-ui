@@ -4,8 +4,6 @@ import models.io.UserCountDao
 import play.api.libs.json._
 import play.api.mvc._
 
-import scala.collection.mutable.ArrayBuffer
-
 
 object YarnList extends Controller with Secured {
   /**
@@ -17,18 +15,25 @@ object YarnList extends Controller with Secured {
     val group_queue_all :Map[String,String] = UserCountDao.find_group_queue()
     val queueName = group_queue_all(groupName)
     val json = Json.parse(indexSource)
-    val jsonNative = json \ "apps" \ "app"
-    val jobList = jsonNative \\ "queue"
-    var jobQueueList = ArrayBuffer[Any]()
-    for(i <- 0 until jobList.size){
-       val job = jsonNative(i)
-       val queueNatName = job \ "queue"
-        if(queueNatName.toString() == ("\""+queueName+"\"")){
-          jobQueueList += (job.toString())
-        }
-    }
-      val newjson = models.utils.JsonParse.jsonParse(jobQueueList)
-    Ok(newjson)
+    //用户权限判断
+//    if(queueName == "") {
+//      println("queueName:" + queueName +"超级用户")
+//      Ok(json)
+//    } else {
+//          val jsonNative = json \ "apps" \ "app"
+//          val jobList = jsonNative \\ "queue"
+//          var jobQueueList = ArrayBuffer[Any]()
+//          for(i <- 0 until jobList.size){
+//             val job = jsonNative(i)
+//             val queueNatName = job \ "queue"
+//              if(queueNatName.toString() == ("\""+queueName+"\"")){
+//                jobQueueList += (job.toString())
+//              }
+//          }
+//          val newjson = models.utils.JsonParse.jsonParse(jobQueueList.reverse)
+//          Ok(newjson)
+//        }
+     Ok(json)
   }
 
   /**
@@ -36,8 +41,15 @@ object YarnList extends Controller with Secured {
    * @return
    */
   def yarnlist = IsAuthenticated { username => implicit request =>
-    Ok(views.html.yarnlist.render())
-  }
+    val groupName = UserCountDao.userBygroup(username)
+    val group_queue_all :Map[String,String] = UserCountDao.find_group_queue()
+    val queueName = group_queue_all(groupName)
+    if(queueName == "") {
+      Ok(views.html.yarnlist("SuperAdmin"))
+     }else {
+      Ok(views.html.yarnlist(queueName))
+    }
+  } 
 
 
   /**

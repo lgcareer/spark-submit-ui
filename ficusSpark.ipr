@@ -23,13 +23,6 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf8 -g" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectDictionaryState">
     <dictionary name="manbu" />
   </component>
@@ -568,6 +561,13 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="SBT: com.tzavellas:sse-guice:0.7.1:jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/com.tzavellas/sse-guice/jars/sse-guice-0.7.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="SBT: commons-beanutils:commons-beanutils-core:1.8.0:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/commons-beanutils/commons-beanutils-core/jars/commons-beanutils-core-1.8.0.jar!/" />
@@ -585,13 +585,6 @@
     <library name="SBT: commons-cli:commons-cli:1.2:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="SBT: commons-codec:commons-codec:1.5:jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.5.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -1191,13 +1184,6 @@
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="SBT: org.apache.hadoop:hadoop-yarn-server-nodemanager:2.2.0:jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-nodemanager/jars/hadoop-yarn-server-nodemanager-2.2.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
     <library name="SBT: org.apache.hadoop:hadoop-yarn-server-resourcemanager:2.6.0:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-resourcemanager/jars/hadoop-yarn-server-resourcemanager-2.6.0.jar!/" />
@@ -1712,13 +1698,6 @@
     <library name="SBT: org.objenesis:objenesis:1.2:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.objenesis/objenesis/jars/objenesis-1.2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
-    <library name="SBT: org.ow2.asm:asm-all:5.0.2:jar">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/org.ow2.asm/asm-all/jars/asm-all-5.0.2.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

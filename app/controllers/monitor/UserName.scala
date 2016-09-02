@@ -1,5 +1,6 @@
 package controllers
 
+import models.io.UserCountDao
 import play.api.mvc.Controller
 import play.api.libs.json._
 
@@ -10,15 +11,17 @@ import play.api.libs.json._
 object UserName extends Controller with Secured {
 
   def userName = IsAuthenticated { username => implicit request =>
-
+    //获取用户名
     var shortName = username
-
     if (username.contains("@")){
       shortName = username.split("@")(0)
     }
-
-    val data = "{\"user\":" + "\"" + username + "\",\"shortName\":" + "\"" + shortName + "\"}"
-
+    //获取用户权限 SuperAdmin
+    val group = UserCountDao.userBygroup(username)
+    //用户组和队列映射
+    val group_queue = UserCountDao.find_group_queue()
+    val queue = group_queue(group)
+    val data = "{\"user\":" + "\"" + username + "\",\"shortName\":" + "\"" + shortName + "\",\"queueName\":" + "\"" + queue +"\"}"
     Ok(Json.parse(data))
 
   }

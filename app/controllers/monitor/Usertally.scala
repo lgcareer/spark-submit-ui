@@ -13,7 +13,6 @@ object Usertally extends Controller with Secured{
     val users = UserCountDao.userCount()
     implicit val userstatotal = Json.writes[UserCountDao]
     val json: JsValue = Json.toJson(UserCountDao.findAll)
-    val counts = users.length
     val aduits = UserCountDao.auditUser()
     Ok(views.html.userelevan(aduits))
   }

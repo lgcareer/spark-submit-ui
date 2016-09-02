@@ -1,4 +1,4 @@
-@(audit:Long)
+@(aduits:Long)
 @sidebar = {
         <div class="sidebar-menu toggle-others fixed">
 
@@ -273,17 +273,16 @@
                }
 
           $(function () {
-             <!--var audits=@audit-->
              var data = task_count();
               var userlist=eval(data);
                                 for(var i=0;i<userlist.length;i++){
                                     var group = userlist[i].group;
                                     var tatol = userlist[i].tatol;
                                     //统计组用户数
-                                    if(group == 'ad'){
+                                    if(group == 'UserGrowth'){
                                         ad_total = userlist[i].tatol;
                                     }
-                                    if(group == 'admin'){
+                                    if(group == 'SuperAdmin'){
                                         admin_total = userlist[i].tatol;
                                     }
                                     if(group == 'test'){
@@ -325,12 +324,12 @@
                             color: colors[2]
                         }
                     },{
-                        y: @audit,
+                        y: @aduits,
                         color: colors[4],
                         drilldown: {
                             name: '待审核用户组',
-                            categories: ['A组', 'B组'],
-                            data: [ 1,1],
+                            categories: ['待审核用户数'],
+                            data: [@aduits],
                             color: colors[4]
                         }
                     }];

@@ -6,6 +6,8 @@ import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.{JsValue, Json}
 
+import scala.collection.mutable.ArrayBuffer
+
 /**
  * Created by manbu on 16/7/22.
  */
@@ -52,17 +54,19 @@ object UserCountDao {
       def userResourceRate (username:String) :String ={
       //获取登录用户所属组
       val group = UserCountDao.userBygroup(username)
-
       //用户组与队列映射
-      val group_queue = Map[String,String](
-        "admin" -> "\"root.pt_UserGrowth\"",
-        "user" -> "\"root.default\"",
-        "test" -> "\"root.default\""
-      )
+      val group_queue = find_group_queue()
+
+    /**
+     * 判断用户权限
+     */
+
+
       /**
        * 接口调用数据
        */
-      val scheduleryarn = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/scheduler").mkString
+            val scheduleryarn = scala.io.Source.
+              fromURL("http://10.77.136.159:8088/ws/v1/cluster/scheduler").mkString
       //转成JsValue 格式
       val scheduler :JsValue = Json.parse(scheduleryarn)
       //获取childQueues 列表
@@ -74,13 +78,45 @@ object UserCountDao {
       val queueNameList = childQueues \\ "queueName"
       val queueNameListSize = queueNameList.length
       var resourceRate = 0.00
-      var rateMemory = 0.00
+      var rateMemoryRate = 0.00
+
+      //全局memory
+      val globalMemory =ArrayBuffer[Long]()
+      //全局cpu
+      val globalVcore =ArrayBuffer[Long]()
+       //已使用memory
+       val useredMemory =ArrayBuffer[Long]()
+      //已使用cpu
+       val useredVcore =ArrayBuffer[Long]()
+
+      if(group_queue(group) == "") {
+        for(i <- 0 until queueNameListSize) {
+          //全局最大内存
+          globalMemory += (Json.parse((childQueues \\ "maxResources")(i)
+            .toString()) \ "memory").toString().toLong
+          //全局最大CPU数
+          globalVcore += (Json.parse((childQueues \\ "maxResources")(i)
+            .toString()) \ "vCores").toString().toLong
+          //已使用最大内存数
+          useredMemory += (Json.parse((childQueues \\ "usedResources")(i)
+            .toString()) \ "memory").toString().toLong
+          //已使用最大CPU数
+          useredVcore += (Json.parse((childQueues \\ "usedResources")(i)
+            .toString()) \ "vCores").toString().toLong
+           }
+        //资源度量计算
+
+        resourceRate = Math.round((useredMemory.sum * 0.7 + useredMemory.sum * 0.3)
+          /(globalMemory.max * 0.7 + globalVcore.max * 0.3) * 100)
+        //内存使用占比
+        rateMemoryRate =Math.round((useredMemory.max * 1.0/globalMemory.max * 1.0) * 100)
+      }
       //遍历数据，获取相关计算指标
       for(i <- 0 until queueNameListSize){
         val queue = childQueues(i)
         //队列名称
         val queueName = queue \ "queueName"
-        if(queueName.toString() == group_queue(group)) {
+        if(queueName.toString() == "\"" + group_queue(group)+ "\"") {
           //该队列最大资源
           val maxMemoryJson = Json.parse((queue \ "maxResources").toString())
           val maxMemory: Long = (maxMemoryJson \ "memory").toString().toLong / 1024
@@ -95,13 +131,10 @@ object UserCountDao {
             / (maxMemory * 0.7 + maxVCores * 0.3) * 100)
 
           //内存使用占比
-           rateMemory =Math.round((usedMemory/maxMemory) * 100)
-          println(rateMemory)
-
+          rateMemoryRate =Math.round((usedMemory * 1.0/maxMemory * 1.0) * 100)
            }
         }
-         val rateJson = "{\"resourceRate\":" + "\"" + resourceRate + "\",\"rateMemory\":" + "\"" + rateMemory + "\"}"
-//          resourceRate.toString
+         val rateJson = "{\"resourceRate\":" + "\"" + resourceRate + "\",\"rateMemory\":" + "\"" + rateMemoryRate + "\"}"
            rateJson.toString
       }
 

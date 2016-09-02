@@ -1,3 +1,4 @@
+@(queueName:String)
 @sidebar = {
     <div class="sidebar-menu toggle-others fixed">
 
@@ -238,7 +239,6 @@
                     <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
                 </li>
                 <li>
-
                     <a href="#">App数据</a>
                 </li>
                 <li class="active">
@@ -267,63 +267,87 @@
         <div class="clearfix"> </div>
         @copyright()
     </div>
-    <script charset="utf-8">
+    <!--<script charset="utf-8">-->
+            <!--$(document).ready(function(){-->
+                <!--var aa = @queueName-->
+                <!--alert(aa)-->
+                <!--$.ajax({-->
+                    <!--type:"GET",-->
+                    <!--url:"/yarnInfo",-->
+                    <!--dataType:"json",-->
+                    <!--success:function(data){-->
+                        <!--var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"-->
+                        <!--var myobj = eval(data);-->
+                            <!--var mid = myobj.jobs;-->
+                             <!--var myjobs = eval(mid);-->
+                                <!--for (var i = 0; i < myjobs.length; i++) {-->
+                                        <!--var mid = eval("(" + myjobs[i] + ")")-->
+                                        <!--&lt;!&ndash;console.log(typeof(myjobs[i]));&ndash;&gt;-->
+                                        <!--if(mid.progress !=100){-->
+                                        <!--head += "<tr class= \"warning\"><td onclick=clickaction(this)><a href ='"+mid.trackingUrl+"'>"+mid.id+"</a></td><td>"+mid.user+"</td><td>"+mid.queue+"</td><td>"+mid.state+"</td><td>"+mid.finalStatus+"</td><td>"+mid.progress+"</td><td>"+ new Date(mid.startedTime).toLocaleString()+"</td><td>"+new Date(mid.finishedTime).toLocaleString()+"</td></tr>"-->
+                                        <!--}-->
+                                        <!--head += "<tr class= \"success\"><td><a href ='"+mid.trackingUrl+"'>"+mid.id+"</a></td><td>"+mid.user+"</td><td>"+mid.queue+"</td><td>"+mid.state+"</td><td>"+mid.finalStatus+"</td><td>"+mid.progress+"</td><td>"+ new Date(mid.startedTime).toLocaleString()+"</td><td>"+new Date(mid.finishedTime).toLocaleString()+"</td></tr>"-->
+                                    <!--};-->
+                        <!--head += " </table>";-->
+                        <!--$('#yarnInfo').html(head);-->
+                    <!--}-->
+
+                <!--});-->
+            <!--});-->
+
+            <!--function clickaction(td){-->
+                <!--alert(td.innerText);-->
+            <!--}-->
+
+    <!--</script>-->
+
+<script charset="utf-8">
+            var queue = "@queueName"
             $(document).ready(function(){
                 $.ajax({
                     type:"GET",
                     url:"/yarnInfo",
-                    dataType:"json",
+                    <!--dataType:"text",-->
                     success:function(data){
                         var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
-                        var myobj = eval(data);
-                            var mid = myobj.jobs;
-                             var myjobs = eval(mid);
-                                for (var i = 0; i < myjobs.length; i++) {
-                                        var mid = eval("(" + myjobs[i] + ")")
-                                        <!--console.log(typeof(myjobs[i]));-->
-                                        head += "<tr class= \"success\"><td><a href ='"+mid.trackingUrl+"'>"+mid.id+"</a></td><td>"+mid.user+"</td><td>"+mid.queue+"</td><td>"+mid.state+"</td><td>"+mid.finalStatus+"</td><td>"+mid.progress+"</td><td>"+ new Date(mid.startedTime).toLocaleString()+"</td><td>"+new Date(mid.finishedTime).toLocaleString()+"</td></tr>"
+                        var myobj=eval(data);
+                        for (var p in myobj) {
+                            var datamid = data[p];
+                            for(var  x in datamid){
+                                var mid = eval(data[p][x]);
+                                if(queue == "SuperAdmin"){
+                                  for (var i = 0; i < mid.length; i++) {
+                                    if(mid[i].progress == 100){
+                                        head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                         }
+                                    if(mid[i].progress != 100){
+                                        head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                         }
+                                    if(mid[i].FinalStatus == "FAILED"){
+                                        head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                        }
                                     };
+                                 }
+                                 else {
+                                    for (var i = 0; i < mid.length; i++) {
+                                    if(mid[i].progress == 100 && mid[i].queue == queue){
+                                        head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                    }
+                                    if(mid[i].progress != 100 && mid[i].queue == queue){
+                                        head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                    }
+                                    if(mid[i].FinalStatus == "FAILED" && mid[i].queue == queue){
+                                        head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                    }
+                                };
+                             }
+                            }
+
+                        };
                         head += " </table>";
                         $('#yarnInfo').html(head);
                     }
-
                 });
             });
     </script>
-
-<!--<script charset="utf-8">-->
-            <!--$(document).ready(function(){-->
-                <!--$.ajax({-->
-                    <!--type:"GET",-->
-                    <!--url:"/yarnInfo",-->
-                    <!--&lt;!&ndash;dataType:"text",&ndash;&gt;-->
-                    <!--success:function(data){-->
-                        <!--var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"-->
-                        <!--var myobj=eval(data);-->
-                        <!--console.log(data);-->
-                        <!--for (var p in myobj) {-->
-                            <!--var datamid = data[p];-->
-                            <!--console.log(datamid);-->
-                            <!--for(var  x in datamid){-->
-                                <!--var mid = eval(data[p][x]);-->
-                                <!--for (var i = 0; i < mid.length; i++) {-->
-                                    <!--if(mid[i].progress == 100){-->
-                                        <!--head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"-->
-                                    <!--}-->
-                                    <!--if(mid[i].progress != 100){-->
-                                        <!--head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"-->
-                                    <!--}-->
-                                    <!--if(mid[i].FinalStatus == "FAILED"){-->
-                                        <!--head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"-->
-                                    <!--}-->
-                                <!--};-->
-                            <!--}-->
-
-                        <!--};-->
-                        <!--head += " </table>";-->
-                        <!--$('#yarnInfo').html(head);-->
-                    <!--}-->
-                <!--});-->
-            <!--});-->
-    <!--</script>-->
 }
