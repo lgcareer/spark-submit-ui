@@ -1,29 +1,25 @@
 package models
 
-import java.io.{File, IOException}
-import java.util.concurrent.Callable
+import java.io.File
 import java.util.concurrent.Executors._
 
-import akka.actor.{ActorRef, ActorSelection, Props}
-import akka.dispatch.Futures
-import akka.pattern.Patterns
-import com.typesafe.config.Config
+import akka.actor.{ActorRef, Props}
 import controllers._
 import models.actor.InstrumentedActor
 import models.deploy.CreateBatchRequest
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
 import org.apache.commons.lang.StringUtils
-import org.apache.spark.{SparkEnv, deploy}
+import org.apache.spark.SparkEnv
 import org.joda.time.DateTime
 import play.api.Logger
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import play.libs.Akka
 
-import scala.concurrent.{ExecutionContext, Future}
-import ExecutionContext.Implicits.global
 import scala.collection.mutable
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
+import scala.concurrent.{ExecutionContext, Future}
 import scala.util.matching.Regex
 
 /**
@@ -172,11 +168,8 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
          taskDao.queryYarnState(appId).map{
           info =>
             Message.addMessage(TaskMessage(info.application_id,info.state,user))
-<<<<<<< Updated upstream
             act ! Sealing(info.state) ;
-=======
-            act ! Sealing(info.state)  ;
->>>>>>> Stashed changes
+
             Logger.info(s"任务结束,当前状态==>"+info.state);
         }
       }else {
@@ -191,10 +184,6 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
 
       }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   }
 
 
@@ -240,11 +229,7 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
         }
       }
     }(executionContext).andThen {
-<<<<<<< Updated upstream
       case scala.util.Success(result:Any) =>  context.system.scheduler.scheduleOnce(7 seconds,self,JobFinish(result.msg))
-=======
-      case scala.util.Success(result:Any) =>  context.system.scheduler.scheduleOnce(5 seconds,self,JobFinish(result.msg))
->>>>>>> Stashed changes
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }
