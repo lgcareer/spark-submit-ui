@@ -49,7 +49,7 @@ object YarnList extends Controller with Secured {
      }else {
       Ok(views.html.yarnlist(queueName))
     }
-  } 
+  }
 
 
   /**

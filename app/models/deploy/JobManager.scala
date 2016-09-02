@@ -172,7 +172,11 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
          taskDao.queryYarnState(appId).map{
           info =>
             Message.addMessage(TaskMessage(info.application_id,info.state,user))
+<<<<<<< Updated upstream
             act ! Sealing(info.state) ;
+=======
+            act ! Sealing(info.state)  ;
+>>>>>>> Stashed changes
             Logger.info(s"任务结束,当前状态==>"+info.state);
         }
       }else {
@@ -187,6 +191,10 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
 
       }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
   }
 
 
@@ -232,7 +240,11 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
         }
       }
     }(executionContext).andThen {
+<<<<<<< Updated upstream
       case scala.util.Success(result:Any) =>  context.system.scheduler.scheduleOnce(7 seconds,self,JobFinish(result.msg))
+=======
+      case scala.util.Success(result:Any) =>  context.system.scheduler.scheduleOnce(5 seconds,self,JobFinish(result.msg))
+>>>>>>> Stashed changes
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }

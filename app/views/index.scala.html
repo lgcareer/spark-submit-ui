@@ -838,19 +838,28 @@
     添加Yarn资源调度参数列表
     添加组用户组yarn任务列表*@
 
+@*
+    修订日志:v3.0.4(2016.09.02)
+    添加WebSocket任务消息推送
+    调整任务状态标签样式
+    添加超级用户组(SuperAdmin)权限
+    添加根据不同用户组权限显示资源占比
+    修正yarn接口数据传输格式
+    修正表格样式&部分UI调整
+    *@
+
 
     <script>
             window.onload=function(){
                 swal({
                     title: "修订日志:v3.0.3(2016.08.24)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加任务kill,rerun功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加执行任务交互</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加个人任务展示</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加WebSocket任务消息推送</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>调整任务状态标签样式</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加超级用户组(SuperAdmin)权限</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;添加根据不同用户组权限显示资源占比</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修正yarn接口数据传输格式</sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;dashboard页面添加本组资源占比</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加本组内存使用占比</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加组用户组yarn任务列表</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
                     html:true,

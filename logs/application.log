@@ -10302,6 +10302,7 @@ args ArrayBuffer(/usr/local/spark/bin/spark-submit, --master, yarn-cluster, --cl
 2016-09-02 11:05:11,444 - [INFO] - from application in Thread-22 
 16/09/02 11:05:11 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
 
+<<<<<<< Updated upstream
 2016-09-02 11:05:12,450 - [INFO] - from application in Thread-22 
 16/09/02 11:05:12 INFO yarn.Client: Application report for application_1472781969555_0002 (state: RUNNING)
 
@@ -11445,3 +11446,33 @@ Exception in thread "main" org.apache.spark.SparkException: Application applicat
 任务结束,当前状态==>KILLED
 
 >>>>>>> e128db287e915948b7b10b6fbb2617e2b5f47037
+=======
+>>>>>>> 54a6f235e207efb02e52a90810efd5f5a023d14e
+2016-09-02 13:28:04,582 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 13:28:08,497 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 13:28:08,503 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-09-02 13:28:16,956 - [INFO] - from play in New I/O worker #15 
+Starting application default Akka system.
+
+2016-09-02 13:31:35,311 - [INFO] - from play in play-internal-execution-context-1 
+Shutdown application default Akka system.
+
+2016-09-02 13:31:50,652 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 13:32:02,880 - [INFO] - from play in play-internal-execution-context-1 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-09-02 13:32:02,888 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-09-02 13:32:02,929 - [INFO] - from play in New I/O worker #16 
+Starting application default Akka system.
+
+>>>>>>> Stashed changes

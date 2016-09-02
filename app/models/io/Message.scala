@@ -40,9 +40,13 @@ object Message {
   def getMessages(user:String):Seq[TaskMessage]={
     DB.withConnection { implicit connection =>
       play.api.db.DB.withConnection { implicit connection =>
+<<<<<<< Updated upstream
         SQL("select * from  task_msg where user={user}").on(
           'user -> user
         ).as(taskmsg *)
+=======
+        SQL("select * from  task_msg").as(taskmsg *)
+>>>>>>> Stashed changes
       }
     }
   }
