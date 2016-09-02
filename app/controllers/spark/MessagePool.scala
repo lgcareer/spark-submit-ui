@@ -1,47 +1,57 @@
-package controllers.spark
+package controllers
 
-import akka.actor.Actor
 import akka.actor.ActorRef
 import akka.actor.Props
-import scala.util.Random
 import akka.actor.PoisonPill
-import akka.actor.Kill
 import akka.actor.AllForOneStrategy
 import akka.actor.SupervisorStrategy._
 import akka.actor.Terminated
+import models.actor.InstrumentedActor
+import models._
 
 
 
-case class ChangeDirection(coordinates: Int)
-case class NewSnake(snakeName: String)
 
-object SnakePool {
-  def props(webSocketChannel: ActorRef): Props = Props(new SnakePool(webSocketChannel))
+
+object Grow
+sealed  trait State
+object RUNNING extends State
+object FINISHED extends State
+object KILLED extends State
+object FAILED extends State
+object NEW extends  State
+
+
+
+/**
+  * Created by liangkai on 16/8/31.
+  */
+object MessagePool {
+  def props(webSocketChannel: ActorRef): Props = Props(new MessagePool(webSocketChannel))
 }
 
 
-class SnakePool(webSocketChannel: ActorRef) extends Actor {
-  
+class MessagePool(webSocketChannel: ActorRef) extends InstrumentedActor {
+
   override val supervisorStrategy = AllForOneStrategy() {
     case anyException => Stop
   }
-  
-  val apple = context.actorOf(Apple.props(new Random(), webSocketChannel))
-  apple ! NewApple
+  override def preStart()={
+    snakes += ("user" -> webSocketChannel)
+    context.watch(webSocketChannel)
+  }
+
   var snakes = Map.empty[String, ActorRef]
-  def receive = {
-    case NewSnake(snakeName) => {
-      val snake = context.actorOf(Snake.props(apple, snakeName, webSocketChannel), snakeName)
-      snake ! Start
-      snakes += (snakeName -> snake)
-      context.watch(snake)
-    }
-    case t: Terminated => self ! PoisonPill
-    case cd: ChangeDirection => snakes.map(snakesByName => snakesByName._2 ! cd)
-  }
-  
-  override def postStop() {
-    webSocketChannel ! Send("Game Over")
-    snakes.map(snakeByName => snakeByName._2 ! Kill)
-  }
+
+  override def wrappedReceive: Receive = {
+        case RUNNING => webSocketChannel ! Send("任务正在执行!")
+        case  FINISHED => webSocketChannel ! Send("任务执行结束!")
+        case KILLED  => webSocketChannel ! Send("任务已经KILLED");
+        case  FAILED => webSocketChannel ! Send("任务执行失败!")
+
+
+
+        case t: Terminated => self ! PoisonPill
+
+ }
 }

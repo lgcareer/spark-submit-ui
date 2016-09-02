@@ -1,24 +1,30 @@
 package models
 
 import java.io.{File, IOException}
+import java.util.concurrent.Callable
 import java.util.concurrent.Executors._
 
-import akka.actor.{ActorRef, Props}
+import akka.actor.{ActorRef, ActorSelection, Props}
+import akka.dispatch.Futures
+import akka.pattern.Patterns
 import com.typesafe.config.Config
+import controllers._
 import models.actor.InstrumentedActor
 import models.deploy.CreateBatchRequest
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.{SparkEnv, deploy}
-import org.apache.spark.deploy.SparkSubmit
 import org.joda.time.DateTime
 import play.api.Logger
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
+import play.libs.Akka
 
 import scala.concurrent.{ExecutionContext, Future}
 import ExecutionContext.Implicits.global
 import scala.collection.mutable
+import scala.concurrent.duration._
+import scala.util.matching.Regex
 
 /**
   * Created by liangkai1 on 16/7/11.
@@ -47,20 +53,22 @@ object  JobManagerActor{
   case class InvalidJar(error:String)
   case class JarStored(uri :String)
 
-  def props(contextConfig: Config): Props = Props(classOf[JobManagerActor], contextConfig)
+  def props(jobDAO: JobDAO,taskDao: TaskDao): Props = Props(classOf[JobManagerActor], jobDAO,taskDao)
 }
 
 /**
   * [[models.JobDAO]]
   * @param jobDAO
   */
-private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
+private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends InstrumentedActor{
+
 
   import JobManagerActor._
 
   val config = mutable.HashMap.empty[String,String]
   val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(20))
 
+  private val push_akka ="/user/MessagePool"
   private val master_uri="spark://localhost:7077";
   private val yarn="yarn-cluster"
   private val nameSpance="usr"
@@ -69,6 +77,8 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
   private val STANDALONE = 2
   private val MESOS = 4
   private val LOCAL = 8
+
+
 
   /**
     * jar 文件验证
@@ -104,6 +114,15 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       "spark"
       +File.separator)
       )
+  }
+
+  def Sealing:PartialFunction[String,State] ={
+    case m if(m.equals("RUNNING")) => RUNNING
+    case m if(m.equals("FINISHED")) => FINISHED
+    case m if(m.equals("KILLED")) => KILLED
+    case m if(m.equals("FAILED")) => FAILED
+    case _  => FINISHED
+
   }
 
   def wrappedReceive: Receive = {
@@ -146,7 +165,29 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       }
     }
 
-    case JobFinish(msg) =>
+    case JobFinish(appId) => {
+      if(appId.startsWith("application")){
+         val user: String = taskDao.findyarnTaskUser(appId)
+         val act = Akka.system.actorSelection(push_akka+user)
+         taskDao.queryYarnState(appId).map{
+          info =>
+            Message.addMessage(TaskMessage(info.application_id,info.state,user))
+            act ! Sealing(info.state)  ;
+            Logger.info(s"任务结束,当前状态==>"+info.state);
+        }
+      }else {
+        val user: String = taskDao.findTaskUser(appId)
+        val act = Akka.system.actorSelection(push_akka+user)
+        taskDao.queryState(appId).map{
+          info =>
+            Message.addMessage(TaskMessage(info.app_id,info.state,user));
+            act ! Sealing(info.state);Logger.info(s"任务结束,当前状态==>"+info.state);
+        }
+      }
+
+      }
+
+
   }
 
 
@@ -171,10 +212,12 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
         val output = process.inputIterator.mkString("\n")
         //val regex = """Shutdown (.*)""".r.unanchored
-        val regex = """Shutdown hook called(.*)""".r.unanchored
+        //val regex = """Shutdown hook called(.*)""".r.unanchored
+
+        val regex: Regex = MatchEngine.matchMode(request.master.get)
         output match {
-          case regex(success) => {
-             JobRunFinish("执行结束!")
+          case regex(appId) => {
+              JobRunFinish(appId)
           }
           case _ =>
             throw new JobRunExecption(output)
@@ -190,7 +233,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) => Logger.info(result.msg); self ! JobFinish(result.msg)
+      case scala.util.Success(result:Any) =>  context.system.scheduler.scheduleOnce(5 seconds,self,JobFinish(result.msg))
       case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
     }
   }

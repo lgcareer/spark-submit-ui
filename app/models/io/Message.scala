@@ -1,0 +1,51 @@
+package models
+
+import anorm.SqlParser._
+import anorm._
+import play.api.Play.current
+import play.api.db.DB
+
+/**
+  * Created by king on 16/9/1.
+  */
+
+case class  TaskMessage(id:String,state:String,user:String)
+case class  MessageList(list:Seq[TaskMessage])
+object Message {
+  val taskmsg = {
+    get[String]("task_msg.id") ~
+      get[String]("task_msg.state") ~
+      get[String]("task_msg.user") map {
+      case id ~ state ~ user => TaskMessage(id,state,user)
+    }
+  }
+
+
+  def addMessage(taskMessage: TaskMessage): TaskMessage ={
+     DB.withConnection { implicit connection =>
+      SQL(
+        """
+          insert into task_msg values (
+            {id}, {state}, {user}
+          )
+        """).on(
+        'id -> taskMessage.id,
+        'state -> taskMessage.state,
+        'user -> taskMessage.user
+      ).executeUpdate()
+    }
+    taskMessage
+  }
+
+  def getMessages(user:String):Seq[TaskMessage]={
+    DB.withConnection { implicit connection =>
+      play.api.db.DB.withConnection { implicit connection =>
+        SQL("select * from  task_msg").as(taskmsg *)
+      }
+    }
+  }
+
+
+
+
+}

@@ -5,7 +5,7 @@ import anorm.~
 
 
 /**
-  * Created by king on 16/8/22.
+  * Created by liangkai on 16/8/22.
   */
 case class TaskInfo(
                      app_id:String,
@@ -71,26 +71,100 @@ trait TaskDao{
   }
 
 
+  /**
+    * 保存任务参数
+    * @param executeModel
+    * @param appId
+    * @return
+    */
   def saveTaskArgs(executeModel: ExecuteModel)(appId:String) : ExecuteModel
 
+
+  /**
+    * 获取任务参数
+    * @param appId
+    * @return
+    */
   def getTaskArgs(appId:String):ExecuteModel
 
 
+  /**
+    * 保存spark参数
+    * @param task
+    * @param user
+    * @return
+    */
   def saveTask(task: TaskInfo)(user:String): TaskInfo
 
+  /**
+    * 保存yarn任务
+    * @param yarnTask
+    * @param user
+    * @return
+    */
   def saveYarnTask(yarnTask: YarnTaskInfo)(user:String): YarnTaskInfo
 
+  /**
+    * 获取用户所有spark 任务
+    * @param user
+    * @return
+    */
   def getTaskInfoList(user:String): Seq[TaskInfo]
 
+  /**
+    * 获取用户所有yarn 任务
+    * @param user
+    * @return
+    */
   def getYarnTaskList(user:String): Seq[YarnTaskInfo]
 
+  /**
+    * 更新yarn任务信息
+    * @param tasks
+    */
   def updateYarnTaskList(tasks: Seq[YarnTaskInfo])
 
+  /**
+    * 更新spark任务信息
+    * @param tasks
+    */
   def updateTaskList(tasks:Seq[TaskInfo])
 
+  /**
+    * 查询yarn 任务状态
+    * @param appId
+    * @return
+    */
+  def queryYarnState(appId:String):Option[YarnTaskInfo]
+
+
+  /**
+    * 查询spark 任务状态
+    * @param appId
+    * @return
+    */
+  def queryState(appId:String):Option[TaskInfo]
+
+  /**
+    * 移除yarn任务
+    * @param appId
+    */
   def rmYarnTaskInfo(appId:String)
 
+  /**
+    * 移除spark任务
+    * @param appId
+    */
   def rmTaskInfo(appId:String)
+
+
+  def findTaskUser(appId:String):String
+
+  def findyarnTaskUser(appId:String):String
+
+
+
+
 
 
 

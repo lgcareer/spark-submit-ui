@@ -117,3 +117,10 @@ GET   /yarn                            @controllers.TaskManager.yarnInfo
 GET   /kill                            @controllers.TaskManager.kill(appId:String)
 GET   /rerun                           @controllers.TaskManager.rerun(appId:String)
 
+
+#PUSH
+GET  /startpush                         controllers.Application.startpush
+GET   /msglist                          controllers.Application.msglist
+
+
+

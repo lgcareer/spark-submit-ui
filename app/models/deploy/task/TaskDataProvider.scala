@@ -3,7 +3,6 @@ package models
 import com.google.inject.Inject
 import models.TaskDataProvider.{AppDataObject, TaskData, YarnTaskInfoList}
 import play.api.Logger
-import play.api.http.Writeable
 import play.api.libs.ws.WS
 import play.libs.Akka
 

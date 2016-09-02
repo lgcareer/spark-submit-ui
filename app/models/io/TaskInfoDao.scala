@@ -185,4 +185,33 @@ class TaskInfoDao  extends  TaskDao{
           .executeUpdate()
     }
   }
+
+  override def queryState(appId: String): Option[TaskInfo] = {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select * from task_standalone where app_id = {app_id}").on(
+        'app_id -> appId).as(standalone.singleOpt)
+     }
+    }
+
+
+  override def queryYarnState(appId: String): Option[YarnTaskInfo] = {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select * from task_yarn where application_id = {application_id}").on(
+        'application_id -> appId).as(yarn.singleOpt)
+    }
+  }
+
+  override def findTaskUser(appId: String): String = {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select user from task_standalone where app_id = {app_id}").on(
+        'app_id -> appId).as(SqlParser.scalar[String].single)
+    }
+  }
+
+  override def findyarnTaskUser(appId: String): String = {
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL("select user from task_yarn where application_id = {application_id}").on(
+        'application_id -> appId).as(SqlParser.scalar[String].single)
+    }
+  }
 }
