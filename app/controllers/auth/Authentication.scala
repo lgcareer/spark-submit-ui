@@ -1,5 +1,6 @@
 package controllers
 
+import akka.actor.{ActorSelection, Terminated}
 import models._
 import org.apache.commons.lang3.StringUtils
 import play.api.Play.current
@@ -9,12 +10,13 @@ import play.api.data.Forms._
 import play.api.data._
 import play.api.libs.json.{JsObject, JsValue, Json}
 import play.api.mvc._
+import play.libs.Akka
 
 import scala.concurrent.Future
 import scala.language.postfixOps
 import scala.util.matching.Regex
 
-object Authentication  extends Controller {
+object Authentication  extends Controller with  Secured{
 
   val loginForm = Form(
     tuple(
@@ -35,7 +37,10 @@ object Authentication  extends Controller {
   /**
    * Logout and clean the session.
    */
-  def logout = Action {
+  def logout = IsAuthenticated {
+    username => implicit request =>
+    val messagePool: ActorSelection = Akka.system.actorSelection(s"/user/MessagePool$username")
+    messagePool ! Terminated
     Redirect(routes.Authentication.login).withNewSession.flashing(
       "success" -> "成功退出"
     )

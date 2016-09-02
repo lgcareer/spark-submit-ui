@@ -36,7 +36,6 @@ class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputS
     override def run() = {
       val lines:Iterator[String] = Source.fromInputStream(inputStream).getLines()
       val uid: String = UUID.randomUUID().toString
-      var jobId:String =null
 
       val regex: Regex = MatchEngine.matchMode(master.get)
 
@@ -47,8 +46,6 @@ class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputS
           case _ => Logger.info(line)
         }
         try {
-          if(jobId!=null&&line.nonEmpty)
-          Cache.set(jobId+"_"+nextCount,line,1.hours)
           _lines = _lines :+ line
           _condition.signalAll()
         } finally {
@@ -58,7 +55,6 @@ class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputS
       _lock.lock()
       try {
         _finished = true
-        Cache.set(jobId+"_"+nextCount,"finish")
         _condition.signalAll()
       } finally {
         _lock.unlock()

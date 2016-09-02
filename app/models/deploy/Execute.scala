@@ -23,12 +23,13 @@ object Execute {
   var _actorSystem :ActorSystem= _
   var _jobMange:ActorRef= _
   val _dao: JobFileDAO = new JobFileDAO
+  val _task_dao :TaskDao =new TaskInfoDao
 
   makeSystem
 
   def makeSystem: Unit ={
     _actorSystem = ActorSystem("jobSystem")
-    _jobMange=_actorSystem.actorOf(Props(classOf[JobManagerActor],_dao), "JobManger")
+    _jobMange=_actorSystem.actorOf((JobManagerActor.props(_dao,_task_dao)), "JobManger")
     _actorSystem.registerOnTermination(System.exit(0))
   }
 

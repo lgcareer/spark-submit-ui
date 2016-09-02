@@ -149,7 +149,7 @@ object UserGroup {
     play.api.db.DB.withConnection { implicit connection =>
       SQL("select * from user_group where email = {email}").on(
         'email -> email).as(UserGroup.simple.singleOpt)
-    }.get.group.equals("admin")
+    }.get.group.equals("SuperAdmin")
   }
 
 

@@ -1,24 +1,22 @@
-package models.actor
+package models
 
 import akka.actor.Props
+import models.actor.InstrumentedActor
 import play.api.libs.iteratee.Concurrent
-import akka.actor.Actor
 
 case class Send(data:String)
 
 /**
- * Factory for [[snakeyard.actor.WebSocketChannel]] instances. 
- * 
- * 
- * WebSocketChannel actor is created with a string output channel as a parameter, where
- * all send messages are pushed. 
- */
+	* Created by liangkai on 16/8/18.
+	*/
 object WebSocketChannel {
 	def props(channel: Concurrent.Channel[String]):Props = Props(new WebSocketChannel(channel))
 }
 
-class WebSocketChannel(channel: Concurrent.Channel[String]) extends Actor {
-	def receive = {
-	  case Send(data) => channel.push(data)
+class WebSocketChannel(channel: Concurrent.Channel[String]) extends InstrumentedActor {
+
+	override def wrappedReceive: Receive = {
+		case Send(data) => channel.push(data)
+
 	}
 }
