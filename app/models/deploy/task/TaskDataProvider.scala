@@ -2,6 +2,7 @@ package models
 
 import com.google.inject.Inject
 import models.TaskDataProvider.{AppDataObject, TaskData, YarnTaskInfoList}
+import models.utils.Config
 import play.api.Logger
 import play.api.libs.ws.WS
 import play.libs.Akka
@@ -22,7 +23,7 @@ object TaskDataProvider{
   case class YarnTaskInfoList(app: Seq[YarnTaskInfo])
 }
 
-class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataObject]{
+class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskProvider[AppDataObject]{
 
 
   import play.api.libs.functional.syntax._
@@ -160,7 +161,7 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
 
     Akka.system.scheduler.schedule(0.second, 5 second, new Runnable {
       override def run(): Unit = {
-        WS.url("http://localhost:8088/ws/v1/cluster/apps").get() map{
+        WS.url("http://"+config.getString("hadoop.yarn.host")+"/ws/v1/cluster/apps").get() map{
           response => response.status match {
             case  200 => Some{
               response.json .validate[YarnTaskInfoList].fold(
@@ -180,7 +181,8 @@ class TaskDataProvider @Inject()(taskDao: TaskDao)extends TaskProvider[AppDataOb
           }
         }
 
-        WS.url("http://localhost:8080/json").get() map{
+        val url: String = "http://"+config.getString("spark.master.host")+"/json"
+        WS.url(url).get() map{
           response => response.status match {
             case  200 => Some{
               response.json .validate[TaskData].fold(

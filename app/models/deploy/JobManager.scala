@@ -8,6 +8,7 @@ import controllers._
 import models.actor.InstrumentedActor
 import models.deploy.CreateBatchRequest
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
+import models.utils.Config
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkEnv
 import org.joda.time.DateTime
@@ -49,26 +50,24 @@ object  JobManagerActor{
   case class InvalidJar(error:String)
   case class JarStored(uri :String)
 
-  def props(jobDAO: JobDAO,taskDao: TaskDao): Props = Props(classOf[JobManagerActor], jobDAO,taskDao)
+  def props(config:Config,jobDAO: JobDAO,taskDao: TaskDao): Props = Props(classOf[JobManagerActor], config,jobDAO,taskDao)
 }
 
 /**
   * [[models.JobDAO]]
   * @param jobDAO
   */
-private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends InstrumentedActor{
+private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) extends InstrumentedActor{
 
 
   import JobManagerActor._
 
-  val config = mutable.HashMap.empty[String,String]
+  //val config = mutable.HashMap.empty[String,String]
   val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(20))
 
   private val push_akka ="/user/MessagePool"
-  private val master_uri="spark://localhost:7077";
   private val yarn="yarn-cluster"
-  private val nameSpance="usr"
-  private val nameLocal="local"
+  private val uri ="spark"
   private val YARN = 1
   private val STANDALONE = 2
   private val MESOS = 4
@@ -96,21 +95,21 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
   }
 
   def sparkSubmit(): String = {
-    sparkHome().map { _ + "bin" + File.separator + "spark-submit" }.get
+    sparkHome.map { _ + "bin" + File.separator + "spark-submit" }.get
   }
 
-  def sparkHome(): Option[String] = Some(config.get("SPARK_HOME").get)
+  def sparkHome(): Option[String] = Some(config.getString("spark.home"))
 
-  override def preStart()={
-    config+=
-   ("SPARK_HOME"->(File.separator+nameSpance
-      +File.separator+
-      nameLocal+
-      File.separator+
-      "spark"
-      +File.separator)
-      )
+  def masterHost():Option[String] =Some(config.getString("spark.master.url"))
+
+  def sparkMaster():String={
+    masterHost
+      .map{
+         uri +":"+File.separator+
+          File.separator+ _
+      }.get
   }
+
 
   def Sealing:PartialFunction[String,State] ={
     case m if(m.equals("RUNNING")) => RUNNING
@@ -134,7 +133,7 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
 
       val masters: Int = executeModel.master match {
         case m if m.startsWith("yarn") =>   request.master=Some(yarn); YARN
-        case m if m.startsWith("standalone") => request.master=Some(master_uri);STANDALONE
+        case m if m.startsWith("standalone") => request.master=Some(sparkMaster()); STANDALONE
         case m if m.startsWith("mesos") => MESOS
         case m if m.startsWith("local") => request.master=Some(executeModel.master);LOCAL
       }
@@ -169,7 +168,6 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
           info =>
             Message.addMessage(TaskMessage(info.application_id,info.state,user))
             act ! Sealing(info.state) ;
-
             Logger.info(s"任务结束,当前状态==>"+info.state);
         }
       }else {
@@ -205,10 +203,11 @@ private class JobManagerActor(jobDAO: JobDAO,taskDao: TaskDao) extends Instrumen
         request.numExecutors.foreach(builder.numExecutors)
         request.jarLocation.foreach(builder.jarLocation)
         request.master.foreach(builder.master)
-        val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
+        val process: LineBufferedProcess = builder.start(Some(sparkSubmit), request.args)
         val output = process.inputIterator.mkString("\n")
         //val regex = """Shutdown (.*)""".r.unanchored
         //val regex = """Shutdown hook called(.*)""".r.unanchored
+
 
         val regex: Regex = MatchEngine.matchMode(request.master.get)
         output match {

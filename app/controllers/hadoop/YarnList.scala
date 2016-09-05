@@ -11,28 +11,7 @@ object YarnList extends Controller with Secured {
    */
   def yarnInfo = IsAuthenticated { username => implicit request =>
     val indexSource = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/apps").mkString
-    val groupName = UserCountDao.userBygroup(username)
-    val group_queue_all :Map[String,String] = UserCountDao.find_group_queue()
-    val queueName = group_queue_all(groupName)
     val json = Json.parse(indexSource)
-    //用户权限判断
-//    if(queueName == "") {
-//      println("queueName:" + queueName +"超级用户")
-//      Ok(json)
-//    } else {
-//          val jsonNative = json \ "apps" \ "app"
-//          val jobList = jsonNative \\ "queue"
-//          var jobQueueList = ArrayBuffer[Any]()
-//          for(i <- 0 until jobList.size){
-//             val job = jsonNative(i)
-//             val queueNatName = job \ "queue"
-//              if(queueNatName.toString() == ("\""+queueName+"\"")){
-//                jobQueueList += (job.toString())
-//              }
-//          }
-//          val newjson = models.utils.JsonParse.jsonParse(jobQueueList.reverse)
-//          Ok(newjson)
-//        }
      Ok(json)
   }
 

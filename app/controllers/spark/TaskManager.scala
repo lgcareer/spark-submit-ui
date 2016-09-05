@@ -3,6 +3,7 @@ package controllers
 import com.google.inject.Inject
 import models.TaskDataProvider.AppDataObject
 import models._
+import models.utils.Config
 import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
@@ -11,7 +12,7 @@ import play.api.mvc.{Action, Controller}
   * Created by liangkai on 16/8/18.
   * 任务运行时管理相关
   */
-class TaskManager @Inject() (taskProvider:  TaskProvider[AppDataObject],taskDao: TaskDao) extends Controller with Secured{
+class TaskManager @Inject() (taskProvider:TaskProvider[AppDataObject],taskDao: TaskDao) extends Controller with Secured{
 
   import play.api.libs.json._
   import play.api.libs.functional.syntax._

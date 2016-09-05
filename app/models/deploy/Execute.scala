@@ -10,6 +10,7 @@ import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
 import models.deploy.CreateBatchRequest
+import models.utils.{Config, Configuration}
 import play.api.Logger
 
 import scala.concurrent.duration.Duration
@@ -24,12 +25,13 @@ object Execute {
   var _jobMange:ActorRef= _
   val _dao: JobFileDAO = new JobFileDAO
   val _task_dao :TaskDao =new TaskInfoDao
+  val _config:Config =new Configuration
 
   makeSystem
 
   def makeSystem: Unit ={
     _actorSystem = ActorSystem("jobSystem")
-    _jobMange=_actorSystem.actorOf((JobManagerActor.props(_dao,_task_dao)), "JobManger")
+    _jobMange=_actorSystem.actorOf((JobManagerActor.props(_config,_dao,_task_dao)), "JobManger")
     _actorSystem.registerOnTermination(System.exit(0))
   }
 

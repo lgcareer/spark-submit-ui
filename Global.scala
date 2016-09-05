@@ -11,7 +11,7 @@ object Global extends GlobalSettings {
 
   private lazy val injector = {
     Play.isProd match {
-      case _ => Guice.createInjector(new TaskDependDepend)
+      case _ => Guice.createInjector(new Depend);
     }
   }
  
