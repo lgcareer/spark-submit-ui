@@ -124,3 +124,12 @@ GET   /msglist                          controllers.Application.msglist
 
 
 
+#集群管理
+GET   /metadatalist                     controllers.MetaDataManager.metadatas
+GET   /metadata                         controllers.MetaDataManager.metadata
+GET  /update                        controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
+GET  /rm                            controllers.MetaDataManager.rm(id:String)
+
+
+
+
