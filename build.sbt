@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.apache.hive" % "hive-jdbc" % "2.0.0",
   "com.google.inject" % "guice" % "3.0",
   "com.tzavellas" % "sse-guice" % "0.7.1",
-  "com.jolbox" % "bonecp" % "0.8.0-rc1"
+  "com.jolbox" % "bonecp" % "0.8.0.RELEASE"
 )
 
 play.Project.playScalaSettings

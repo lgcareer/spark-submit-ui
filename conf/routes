@@ -121,6 +121,8 @@ GET   /rerun                           @controllers.TaskManager.rerun(appId:Stri
 #PUSH
 GET  /startpush                         controllers.Application.startpush
 GET   /msglist                          controllers.Application.msglist
+GET   /read                             controllers.Application.read(appId:String)
+GET   /readall                          controllers.Application.readall
 
 
 

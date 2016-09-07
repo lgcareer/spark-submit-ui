@@ -42,5 +42,15 @@ object Application extends  Controller with Secured {
     Ok(json)
   }
 
+  def read(appId:String)=Action{
+    Message.deleteMessage(appId)
+    Ok(views.html.tasklist())
+  }
+
+  def readall=IsAuthenticated{ username => implicit request =>
+    Message.deleteAllMessage(username)
+    Ok(views.html.tasklist())
+  }
+
 
 }
