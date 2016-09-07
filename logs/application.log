@@ -580,3 +580,12 @@ Caused by: java.net.ConnectException: Connection refused
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4.jar:na]
 	... 6 common frames omitted
 
+2016-09-07 11:55:45,003 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-07 11:55:45,338 - [INFO] - from play in play-internal-execution-context-4 
+database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+
+2016-09-07 11:55:45,343 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
