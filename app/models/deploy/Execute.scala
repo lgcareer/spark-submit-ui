@@ -9,7 +9,9 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import models.utils.CreateBatchRequest
+import com.google.inject.Inject
+import models.deploy.CreateBatchRequest
+import models.utils.{Config, Configuration}
 import play.api.Logger
 
 import scala.concurrent.duration.Duration
@@ -20,15 +22,18 @@ import scala.concurrent
   * Created by leslie on 16/4/21.
   */
 object Execute {
+
   var _actorSystem :ActorSystem= _
   var _jobMange:ActorRef= _
   val _dao: JobFileDAO = new JobFileDAO
+  val _task_dao :TaskDao =new TaskInfoDao
+  val _config:Config =new Configuration
 
   makeSystem
 
   def makeSystem: Unit ={
     _actorSystem = ActorSystem("jobSystem")
-    _jobMange=_actorSystem.actorOf(Props(classOf[JobManagerActor],_dao), "JobManger")
+    _jobMange=_actorSystem.actorOf((JobManagerActor.props(_config,_dao,_task_dao)), "JobManger")
     _actorSystem.registerOnTermination(System.exit(0))
   }
 
@@ -49,7 +54,7 @@ object Execute {
     * @param executeModel
     */
   def main(executeModel: ExecuteModel)={
-    val timeoutSecs: Long = 200
+    val timeoutSecs: Long = 300
       Await.result(
       (_jobMange ? SubmitJob(getRequest(executeModel)))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),

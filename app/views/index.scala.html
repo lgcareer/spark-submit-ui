@@ -1,425 +1,237 @@
-@main("Neptun Dashboard") {
-<style type='text/css'>
-    #worklist {
-    width:100% ;
-    background-color:rgb(100%,100%,90%) ;
-    }
-    #date {
-    width:50% ;
-    }
-    #sparkinfo {
-    width:50% ;
-    line-height:1.2 ;
-    }
-    .col-md-6 {
-    width: 50% ;
-    height: 20% ;
-    }
+@sidebar = {
+    <div class="sidebar-menu toggle-others fixed">
 
-    .col_1_of_2.span_1_of_2 {
-    padding: 2px ;
-    }
-</style>
-<!----Calender -------->
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/clndr.css")" type="text/css" />
-<script src="@routes.Assets.at("javascripts/underscore-min.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/moment-2.2.1.js")" type="text/javascript"></script>
-<script src="@routes.Assets.at("javascripts/clndr.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/site.js")" type="text/javascript"></script>
-<!----End Calender -------->
-<div class="graphs">
-    <div class="col_3">
-        <div class="col-md-3 widget widget1">
-            <div class="r3_counter_box"><i class="pull-left fa fa-train fa-2x running icon-rounded"></i>
-                <div class="stats">
-                    <h5><strong><font color="#17d9d7" id='run'>0</font></strong></h5>
-                    <span>运行中</span>
+        <div class="sidebar-menu-inner">
+
+            <header class="logo-env">
+
+                    <!-- logo -->
+                <div class="logo">
+                    <a href="@routes.Application.index" class="logo-expanded">
+                        <img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
+                    </a>
+
+                    <a href="@routes.Application.index" class="logo-collapsed">
+                        <img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
+                    </a>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3 widget widget1">
-            <div class="r3_counter_box"><i class="pull-left fa fa-check fa-2x complate icon-rounded"></i>
-                <div class="stats">
-                    <h5><strong><font color="#11ce76" id='succ'>0</font></strong></h5>
-                    <span>成功执行</span>
+
+                    <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                <div class="mobile-menu-toggle visible-xs">
+                    <a href="#" data-toggle="user-info-menu">
+                        <i class="fa-bell-o"></i>
+                        <span class="badge badge-success">7</span>
+                    </a>
+
+                    <a href="#" data-toggle="mobile-menu">
+                        <i class="fa-bars"></i>
+                    </a>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3 widget widget1">
-            <div class="r3_counter_box">
-                <i class="pull-left fa fa-times fa-2x failed icon-rounded"></i>
-                <div class="stats">
-                    <h5><strong><font color="#ec0d11" id='fail'>0</font></strong></h5>
-                    <span>失败</span>
+
+                    <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                <div class="settings-icon">
+                    <a href="#" data-toggle="settings-pane" data-animate="true">
+                        <i class="fa fa-cog fa-4x"></i>
+                    </a>
                 </div>
-            </div>
+
+            </header>
+
+
+
+            <ul id="main-menu" class="main-menu">
+                    <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+                    <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+                <li class="active">
+                    <a href="@routes.Application.index">
+                        <i class="fa fa-dashboard fa-fw"></i>
+                        <span class="title">仪表盘</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-check-square-o"></i>
+                        <span class="title">数据应用面板</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.SparkJar.executejarpage">
+                                <span class="title">SPARK-JAR应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkSql.sqlpage">
+                                <span class="title">SPARK-SQL应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkStream.stream">
+                                <span class="title">SPARK-STREAM基于HDFS的应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkStream.stream">
+                                <span class="title">SPARK-STREAM基于KAFKA的应用</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-table"></i>
+                        <span class="title">APP数据</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.YarnList.yarnlist">
+                                <span class="title">Yarn数据列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.YarnList.sparklist">
+                                <span class="title">Spark数据列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.YarnList.workerInfo">
+                                <span class="title">Spark Worker信息</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-anchor"></i>
+                        <span class="title">任务调度</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Yarn.yarnDispatch">
+                                <span class="title">Oozie任务调度</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Yarn.yarnDispatch">
+                                <span class="title">Spark任务调度</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Yarn.yarnDispatch">
+                                <span class="title">Yarn任务调度</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        <span class="title">App Tracking</span>
+                        <span class="label label-success pull-right">50</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.RunTask.runTask">
+                                <span class="title">Spark Stream 运行任务列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.MonitorController.jobs">
+                                <span class="title">Spark Sql任务列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.RunTask.runTaskLogs">
+                                <span class="title">Spark 运行任务日志</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-wrench"></i>
+                        <span class="title">报警管理</span>
+                        <span class="label label-success pull-right">5</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">磁盘空间报警</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">内存相关报警</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">其他报警</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span class="title">用户管理</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Usertally.usertatol">
+                                <span class="title">用户统计</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.UserManager.userlist">
+                                <span class="title">用户管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Usertally.usertatol">
+                                <span class="title">权限分配</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrows-alt"></i>
+                        <span class="title">节点分布情况</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Serviceplan.servicedao">
+                                <span class="title">服务划分</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Serviceplan.graph">
+                                <span class="title">Graph展示</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Serviceplan.functionplan">
+                                <span class="title">功能划分</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
-        <div class="col-md-3 widget">
-            <div class="r3_counter_box">
-                <i class="pull-left fa fa-plane fa-2x cordinate icon-rounded"></i>
-                <div class="stats">
-                    <h5><strong><font color="#00aced" id='plain'>0</font></strong></h5>
-                    <span>计划任务</span>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
-    <div class="col_1">
-        <div id="date" class="col-md-4 span_7" >
-            <div class="cal1 cal_2"><div class="clndr"><div class="clndr-controls"><div class="clndr-control-button"><p class="clndr-previous-button">
-                previous</p></div><div class="month">
-                July 2015</div><div class="clndr-control-button rightalign"><p class="clndr-next-button">
-                next</p></div></div><table class="clndr-table" border="0" cellspacing="0" cellpadding="0"><thead><tr class="header-days"><td class="header-day">
-                S</td><td class="header-day">M</td><td class="header-day">T</td><td class="header-day">
-                W</td><td class="header-day">T</td><td class="header-day">F</td><td class="header-day">
-                S</td></tr></thead><tbody><tr><td class="day adjacent-month last-month calendar-day-2015-06-28"><div class="day-contents">
-                28</div></td><td class="day adjacent-month last-month calendar-day-2015-06-29"><div class="day-contents">
-                29</div></td><td class="day adjacent-month last-month calendar-day-2015-06-30"><div class="day-contents">
-                30</div></td><td class="day calendar-day-2015-07-01"><div class="day-contents">
-                1</div></td><td class="day calendar-day-2015-07-02"><div class="day-contents">
-                2</div></td><td class="day calendar-day-2015-07-03"><div class="day-contents">
-                3</div></td><td class="day calendar-day-2015-07-04"><div class="day-contents">
-                4</div></td></tr><tr><td class="day calendar-day-2015-07-05"><div class="day-contents">
-                5</div></td><td class="day calendar-day-2015-07-06"><div class="day-contents">
-                6</div></td><td class="day calendar-day-2015-07-07"><div class="day-contents">
-                7</div></td><td class="day calendar-day-2015-07-08"><div class="day-contents">
-                8</div></td><td class="day calendar-day-2015-07-09"><div class="day-contents">
-                9</div></td><td class="day calendar-day-2015-07-10"><div class="day-contents">
-                10</div></td><td class="day calendar-day-2015-07-11"><div class="day-contents">
-                11</div></td></tr><tr><td class="day calendar-day-2015-07-12"><div class="day-contents">
-                12</div></td><td class="day calendar-day-2015-07-13"><div class="day-contents">
-                13</div></td><td class="day calendar-day-2015-07-14"><div class="day-contents">
-                14</div></td><td class="day calendar-day-2015-07-15"><div class="day-contents">
-                15</div></td><td class="day calendar-day-2015-07-16"><div class="day-contents">
-                16</div></td><td class="day calendar-day-2015-07-17"><div class="day-contents">
-                17</div></td><td class="day calendar-day-2015-07-18"><div class="day-contents">
-                18</div></td></tr><tr><td class="day calendar-day-2015-07-19"><div class="day-contents">
-                19</div></td><td class="day calendar-day-2015-07-20"><div class="day-contents">
-                20</div></td><td class="day calendar-day-2015-07-21"><div class="day-contents">
-                21</div></td><td class="day calendar-day-2015-07-22"><div class="day-contents">
-                22</div></td><td class="day calendar-day-2015-07-23"><div class="day-contents">
-                23</div></td><td class="day calendar-day-2015-07-24"><div class="day-contents">
-                24</div></td><td class="day calendar-day-2015-07-25"><div class="day-contents">
-                25</div></td></tr><tr><td class="day calendar-day-2015-07-26"><div class="day-contents">
-                26</div></td><td class="day calendar-day-2015-07-27"><div class="day-contents">
-                27</div></td><td class="day calendar-day-2015-07-28"><div class="day-contents">
-                28</div></td><td class="day calendar-day-2015-07-29"><div class="day-contents">
-                29</div></td><td class="day calendar-day-2015-07-30"><div class="day-contents">
-                30</div></td><td class="day calendar-day-2015-07-31"><div class="day-contents">
-                31</div></td><td class="day adjacent-month next-month calendar-day-2015-08-01"><div class="day-contents">
-                1</div></td></tr></tbody></table></div></div>
-        </div>
-        <div id="sparkinfo" class="col-md-4 span_4">
-            <div class="col_2">
-                <div class="box_1">
-                    <div class="col-md-6 col_1_of_2 span_1_of_2">
-                        <a class="tiles_info">
-                            <div class="tiles-head tw1">
-                                <div class="text-center">Worker节点数</div>
-                            </div>
-                            <div class="tiles-body tw2" >
-                                <h2 id="alive_workers"></h2>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col_1_of_2 span_1_of_2">
-                        <a class="tiles_info">
-                            <div class="tiles-head tw1">
-                                <div class="text-center">Cores使用情况</div>
-                            </div>
-                            <div class="tiles-body tw2" >
-                                <h2 id="cores"></h2>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col_1_of_2 span_1_of_2">
-                        <a class="tiles_info tiles_blue">
-                            <div class="tiles-head tiles_blue1">
-                                <div class="text-center">Spark内存使用情况</div>
-                            </div>
-                            <div class="tiles-body blue1" >
-                                <h3 id="memory"></h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col_1_of_2 span_1_of_2">
-                        <a class="tiles_info tiles_blue">
-                            <div class="tiles-head tiles_blue1">
-                                <div class="text-center">应用程序运行情况</div>
-                            </div>
-                            <div class="tiles-body blue1" >
-                                <h3 id="applications"></h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col_1_of_2 span_1_of_2">
-                        <a class="tiles_info">
-                            <div class="tiles-head fb1">
-                                <div class="text-center">Drivers运行情况</div>
-                            </div>
-                            <div class="tiles-body fb2" >
-                                <h3 id="drivers"></h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col_1_of_2 span_1_of_2">
-                        <a class="tiles_info tiles_blue">
-                            <div class="tiles-head fb1">
-                                <div class="text-center">HA Master状态</div>
-                            </div>
-                            <div class="tiles-body fb1" id="status">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-        <!--m1 -->
-        <div class="col-md-6 col_4">
-            <div class="map_container"><div id="vmap" style="width: 100% ; height: 400px ;"></div></div>
-        </div>
-
-        <!--m1 -->
-        <div class="col-md-6 col_5">
-            <div id="chart_container">
-
-                <script type="text/javascript">
-
-                            var myChart = echarts.init(document.getElementById('vmap'));
-
-
-                            option = {
-                                title: {
-                                    text: ''
-                                },
-                                tooltip: {},
-                                animationDurationUpdate: 1500,
-                                animationEasingUpdate: 'quinticInOut',
-                                series : [
-                                    {
-                                        type: 'graph',
-                                        layout: 'none',
-                                        symbolSize: 80,
-                                        roam: true,
-                                        label: {
-                                            normal: {
-                                                show: true
-                                            }
-                                        },
-                                        edgeSymbol: ['circle', 'arrow'],
-                                        edgeSymbolSize: [4, 10],
-                                        edgeLabel: {
-                                            normal: {
-                                                textStyle: {
-                                                    fontSize: 20
-                                                }
-                                            }
-                                        },
-                                        data: [{
-                                            name: 'GetWay',
-                                            x: 200,
-                                            y: 300
-                                        }, {
-                                            name: 'Master standby',
-                                            x: 350,
-                                            y: 400
-                                        }, {
-                                            name: 'Master alive',
-                                            x: 300,
-                                            y: 400
-                                        }, {
-                                            name: 'Hmaster',
-                                            x: 100,
-                                            y: 400
-                                        }
-                                            , {
-                                                name: 'Worker',
-                                                x: 0,
-                                                y: 500
-                                            }
-                                            , {
-                                                name: 'Datanode',
-                                                x: 150,
-                                                y: 500
-                                            }
-                                            , {
-                                                name: 'ResourceManager',
-                                                x: 200,
-                                                y: 400
-                                            }
-                                            , {
-                                                name: 'Hive',
-                                                x: 250,
-                                                y: 500
-                                            }, {
-                                                name: 'NameNode',
-                                                x: 1,
-                                                y: 400
-                                            }, {
-                                                name: 'DFSZKFC',
-                                                x: 50,
-                                                y: 500
-                                            }, {
-                                                name: 'NodeManager',
-                                                x: 100,
-                                                y: 500
-                                            }, {
-                                                name: 'JournalNode',
-                                                x: 200,
-                                                y: 500
-                                            }, {
-                                                name: 'HRegionServer',
-                                                x: 300,
-                                                y: 500
-                                            }, {
-                                                name: 'Zookeeper',
-                                                x: 100,
-                                                y: 300
-                                            }],
-                                        // links: [],
-                                        links: [{
-                                            label: {
-                                                normal: {
-                                                    show: true
-                                                }
-                                            },
-                                            lineStyle: {
-                                                normal: {
-                                                    width: 5,
-                                                    curveness: 0.3
-                                                }
-                                            }
-                                        }, {
-                                            source: 'GetWay',
-                                            target: 'Master alive'
-                                        }, {
-                                            source: 'GetWay',
-                                            target: 'GetWay'
-                                        }, {
-                                            source: 'Master standby',
-                                            target: 'Master alive'
-                                        }, {
-                                            source: 'Master alive',
-                                            target: 'Worker'
-                                        }, {
-                                            source: 'ResourceManager',
-                                            target: 'Master alive'
-                                        }, {
-                                            source: 'GetWay',
-                                            target: 'ResourceManager'
-                                        }, {
-                                            source: 'GetWay',
-                                            target: 'Hive'
-                                        }, {
-                                            source: 'ResourceManager',
-                                            target: 'NodeManager'
-                                        }, {
-                                            source: 'NameNode',
-                                            target: 'DFSZKFC'
-                                        }, {
-                                            source: 'GetWay',
-                                            target: 'NameNode'
-                                        }, {
-                                            source: 'GetWay',
-                                            target: 'Hmaster'
-                                        }, {
-                                            source: 'NameNode',
-                                            target: 'Datanode'
-                                        }, {
-                                            source: 'NameNode',
-                                            target: 'DFSZKFC'
-                                        }, {
-                                            source: 'NameNode',
-                                            target: 'JournalNode'
-                                        }, {
-                                            source: 'Hmaster',
-                                            target: 'HRegionServer'
-                                        }, {
-                                            source: 'NameNode',
-                                            target: 'JournalNode'
-                                        }, {
-                                            source: 'Master alive',
-                                            target: 'Datanode'
-                                        }, {
-                                            source: 'Zookeeper',
-                                            target: 'Master alive'
-                                        }, {
-                                            source: 'Zookeeper',
-                                            target: 'Master standby'
-                                        }],
-                                        lineStyle: {
-                                            normal: {
-                                                opacity: 0.9,
-                                                width: 2,
-                                                curveness: 0
-                                            }
-                                        }
-                                    }
-                                ]
-                            };
-                            myChart.setOption(option);
-                    </script>
-                <script>
-                            $(function () {
-                                var chart;
-
-                                $(document).ready(function () {
-
-                                    // Build the chart
-                                    $('#chart_container').highcharts({
-                                        chart: {
-                                            plotBackgroundColor: null,
-                                            plotBorderWidth: null,
-                                            plotShadow: false
-                                        },
-                                        title: {
-                                            text: '集群功能划分'
-                                        },
-                                        tooltip: {
-                                            pointFormat: '{series.name}'
-                                        },
-                                        plotOptions: {
-                                            pie: {
-                                                allowPointSelect: true,
-                                                cursor: 'pointer',
-                                                dataLabels: {
-                                                    enabled: true,
-                                                    color: '#000000'
-                                                },
-                                                showInLegend: true
-                                            }
-                                        },
-                                        series: [{
-                                            type: 'pie',
-                                            name: '集群节点数',
-                                            data: [
-                                                ['Spark',6],
-                                                ['Hadoop',5],
-                                                ['Hbase',3],
-                                                ['Hive',1],
-                                                ['Mysql',1]
-                                            ]
-                                        }]
-                                    });
-                                });
-
-                            });
-                    </script>
-            </div> </div>
 
     </div>
-    <div class="span_11">
-        <div class="content_bottom">
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-    @copyright()
-</div>
-<script charset="utf-8">
+}
+
+@main("Neptun Dashboard")(sidebar) {
+
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/google.css")" type="text/css"/>
+
+    <script src="@routes.Assets.at("javascripts/globalize.min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/dx.chartjs.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
+    <script charset="utf-8">
             $(document).ready(function(){
                 $.ajax({
                     type:"GET",
@@ -439,6 +251,7 @@
                     }
                 });
                 show_work();
+                getUserInfo();
                 task_count();
                 cluster_info();
             });
@@ -463,8 +276,28 @@
             }
             //setInterval(show_work,5000);
             //计算任务个数
-            function task_count(){
-                $.ajax({
+
+            //获取用户权限
+           function getUserInfo(){
+            var retVal = '';
+                    $.ajax({
+                        type:"GET",
+                        url:"/whoiam",
+                        dataType:"json",
+                        async:false,
+                        success:function(data){
+                            console.log(data);
+                            retVal=data;
+                        }
+                    });
+                    return retVal;
+                }
+
+             function task_count(){
+                var data = getUserInfo();
+                var userInfo = eval(data);
+                var queueName = userInfo.queueName;
+                  $.ajax({
                     type:"GET",
                     url:"/yarnInfo",
                     dataType:"json",
@@ -475,23 +308,47 @@
                         var run_task = 0;
                         var fail_task = 0;
                         var plain_task =0;
-                        for(var i=0;i<app.length;i++){
-                            var finalStatus = app[i].finalStatus;
-                            var state = app[i].state
-                            //计算完成的
-                            if(finalStatus == 'SUCCEEDED'){
-                                succ_task += 1;
-                            }
-                            if(state == 'RUNNING'){
-                                run_task += 1;
-                            }
-                            if(finalStatus == 'FAILED'){
-                                fail_task += 1;
-                            }
-                            if(state == 'ACCEPTED'){
-                                plain_task += 1;
-                            }
+                        if(queueName == ""){
+                            for(var i=0;i<app.length;i++){
+                                var finalStatus = app[i].finalStatus;
+                                var state = app[i].state
+                                //计算完成的
+                                if(finalStatus == 'SUCCEEDED'){
+                                    succ_task += 1;
+                                }
+                                if(state == 'RUNNING'){
+                                    run_task += 1;
+                                }
+                                if(finalStatus == 'FAILED'){
+                                    fail_task += 1;
+                                }
+                                if(state == 'ACCEPTED'){
+                                    plain_task += 1;
+                                }
+                              }
                         }
+                        if(queueName != ""){
+                            for(var i=0;i<app.length;i++){
+                                var finalStatus = app[i].finalStatus;
+                                var queue = app[i].queue;
+                                var state = app[i].state;
+                                //计算完成的
+                                if(finalStatus == 'SUCCEEDED' && queue == queueName){
+                                    succ_task += 1;
+                                }
+                                if(state == 'RUNNING' && queue == queueName){
+                                    run_task += 1;
+                                }
+                                if(finalStatus == 'FAILED' && queue == queueName){
+                                    fail_task += 1;
+                                }
+                                if(state == 'ACCEPTED' && finalStatus.queue == queueName){
+                                    plain_task += 1;
+                                }
+                              }
+                        }
+
+
                         $('#run').html(run_task);
                         $('#succ').html(succ_task);
                         $('#fail').html(fail_task);
@@ -500,7 +357,134 @@
                 });
 
             }
+
     </script>
+
+        <script type="text/javascript">
+                                <!--已使用内存统计-->
+                               function memory_count(){
+                               var data = group_resource();
+                                var rate = eval(data);
+                                var rateMemory = rate.rateData.rateMemory;
+                                var rateMemory = 0
+                                $("#userdRateMemory").attr("data-to", rateMemory);
+                                };
+                               memory_count();
+                               setInterval('memory_count()',5000);
+
+                                 <!--yarn资源计算   -->
+                                function group_resource(){
+                                        var retVal = '';
+                                        $.ajax({
+                                        type:"GET",
+                                        url:"/userResource",
+                                        dataType:"json",
+                                        async:false,
+                                        success:function(data){
+                                            retVal=data;
+                                        }
+                                    });
+                                    return retVal;
+                                }
+                                var data = group_resource();
+                                var rate = eval(data);
+                                var rateData = rate.rateData.resourceRate;
+
+                            jQuery(document).ready(function($)
+                            {
+                                var gauge = $('#gauge-3').dxCircularGauge({
+                                    scale: {
+                                        startValue: 0,
+                                        endValue: 120,
+                                        majorTick: {
+                                            tickInterval: 10
+                                        },
+                                        label: {
+                                            customizeText: function (arg) {
+                                                return arg.valueText + ' %';
+                                            }
+                                        }
+                                    },
+                                    rangeContainer: {
+                                        ranges: [
+                                            { startValue: 0, endValue: 40, color: '#90ee7e' },
+                                            { startValue: 40, endValue: 80, color: '#FF7F24' },
+                                            { startValue: 80, endValue: 100, color: '#f45b5b' }
+                                        ]
+                                    },
+                                    title: {
+                                        text: '本组使用yarn资源占比',
+                                        font: { size: 20}
+                                    },
+                                    tooltip: {
+                                        enabled: true,
+                                        format: {
+                                            type: 'present',
+                                            precision: 2
+                                        }
+                                    },
+                                    value: rateData
+                                }).dxCircularGauge('instance');
+
+
+
+
+                                //内存占比显示
+                                var doughnut2_data_source = [
+                                    { id: 0, x1: 0 },
+                                    { id: 1, x1: 2 },
+                                    { id: 2, x1: 3 },
+                                    { id: 3, x1: 5 },
+                                    { id: 4, x1: 7 },
+                                    { id: 5, x1: 3 },
+                                    { id: 6, x1: 1 },
+                                    { id: 7, x1: 2 },
+                                    { id: 8, x1: 5 },
+                                    { id: 9, x1: 4 },
+                                ];
+
+                                $("#area-2").dxChart({
+                                    dataSource: doughnut2_data_source,
+                                    commonSeriesSettings: {
+                                        type: "area",
+                                        argumentField: "id"
+                                    },
+                                    series: [
+                                        { valueField: "x1", name: "15-64 years", color: '#7c38bc', opacity: .7 },
+                                    ],
+                                    argumentAxis:{
+                                        valueMarginsEnabled: false
+                                    },
+                                    valueAxis:{
+                                        label: {
+                                            format: "millions"
+                                        }
+                                    },
+                                    legend: {
+                                        verticalAlignment: "bottom",
+                                        horizontalAlignment: "center"
+                                    },
+                                    legend: {
+                                        visible: false
+                                    },
+                                    commonAxisSettings: {
+                                        label: {
+                                            visible: false
+                                        },
+                                        grid: {
+                                            visible: false
+                                        }
+                                    },
+                                    margin: {
+                                        bottom: 0,
+                                        top: 30
+                                    }
+                                });
+
+                            });
+                    </script>
+
+
 <script>
 
             //spark集群运行情况
@@ -515,16 +499,33 @@
                         var alive_workers = alive_worker +" "+"Workers"
                         var cores = sparkinfo.cores;
                         var memory = sparkinfo.memory;
-                        var applications = sparkinfo.applications;
+                        //var applications = sparkinfo.applications;
                         var drivers = sparkinfo.drivers;
-                        var status = sparkinfo.status;
+                        //var status = sparkinfo.status;
 
-                        $('#alive_workers').html(alive_workers);
-                        $('#cores').html(cores);
-                        $('#memory').html(memory);
-                        $('#applications').html(applications);
-                        $('#drivers').html(drivers);
-                        $('#status').html(status);
+                        var total_c = cores.split(",")[0];
+                        var used_c = cores.split(",")[1].replace(" Used","");
+
+                        var total_m = memory.split(",")[0];
+                        var used_m = memory.split(",")[1].replace(" GB Used","");
+
+                        var driver_run = drivers.split(",")[0].replace(" Running","");
+                        var driver_all = drivers.split(",")[1];
+
+                        $('#alive_workers').html(alive_workers.replace(" Workers",""));
+
+                        $('#total_c').html(total_c);
+                        $('#used_c').html(used_c);
+
+                        $('#total_m').html(total_m);
+                        $('#used_m').html(used_m);
+
+                        //$('#applications').html(applications);
+
+                        $('#driver_run').html(driver_run);
+                        $('#driver_all').html(driver_all);
+
+                        //$('#status').html(status);
 
 
                     }
@@ -535,6 +536,363 @@
 
     </script>
 
+    <script type="text/javascript">
+                        //Spark standlone资源计算
+                                function spark_resource(){
+                                        var retVal = '';
+                                        $.ajax({
+                                        type:"GET",
+                                        url:"/userResourceSpark",
+                                        dataType:"json",
+                                        async:false,
+                                        success:function(data){
+                                            retVal=data;
+                                        }
+                                    });
+                                    return retVal;
+                                 }
+
+                                var data = spark_resource();
+                                var rate = eval(data);
+                                var rateDataSpark = rate.rateSpark;
+
+                          jQuery(document).ready(function($)
+                            {
+                                var gauge = $('#sparkStandlone').dxCircularGauge({
+                                    scale: {
+                                        startValue: 0,
+                                        endValue: 100,
+                                        majorTick: {
+                                            tickInterval: 10
+                                        },
+                                        label: {
+                                            customizeText: function (arg) {
+                                                return arg.valueText + ' %';
+                                            }
+                                        }
+                                    },
+                                    rangeContainer: {
+                                        ranges: [
+                                            { startValue: 0, endValue: 40, color: '#4DFFFF' },
+                                            { startValue: 40, endValue: 60, color: '#46A3FF' },
+                                            { startValue: 60, endValue: 80, color: '#FF8040' },
+                                            { startValue: 80, endValue: 100, color: '#BB3D00' }
+                                        ]
+                                    },
+                                    title: {
+                                        text: '本组使用Spark资源占比',
+                                        font: { size: 20}
+                                    },
+                                    tooltip: {
+                                        enabled: true,
+                                        format: {
+                                            type: 'present',
+                                            precision: 2
+                                        }
+                                    },
+                                    value: rateDataSpark
+                                }).dxCircularGauge('instance');
+                            });
+
+
+
+    </script>
+    <div class="row">
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter">
+                <div class="xe-icon">
+                    <i class="fa fa-train fa-2x"></i>
+                </div>
+                <div class="xe-label">
+                    <strong class="num" id="run">0</strong>
+                    <span>运行中</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter xe-counter-blue">
+                <div class="xe-icon">
+                    <i class="fa fa-check fa-2x"></i>
+                </div>
+                <div class="xe-label">
+                    <strong class="num" id="succ">0</strong>
+                    <span>成功执行</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter xe-counter-info">
+                <div class="xe-icon">
+                    <i class="fa-times fa-2x"></i>
+                </div>
+                <div class="xe-label">
+                    <strong class="num" id="fail">0</strong>
+                    <span>失败</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter xe-counter-red">
+                <div class="xe-icon">
+                    <i class="fa fa-plane fa-2x"></i>
+                </div>
+                <div class="xe-label">
+                    <strong class="num" id="plain">0</strong>
+                    <span>计划任务</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter-block" >
+                <div class="xe-upper">
+
+                    <div class="xe-icon">
+                        <i class="fa fa-heartbeat fa-2x"></i>
+                    </div>
+                    <div class="xe-label">
+                        <strong class="num" id="alive_workers"></strong>
+                        <span>Alive Worker</span>
+                    </div>
+
+                </div>
+                <div class="xe-lower">
+                    <div class="border"></div>
+
+                    <span>Total Nodes</span>
+                    <strong>9 Total</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter-block xe-counter-block-purple" >
+                <div class="xe-upper">
+
+                    <div class="xe-icon">
+                        <i class="fa fa-puzzle-piece fa-2x"></i>
+                    </div>
+                    <div class="xe-label">
+                        <strong class="num" id="used_c">0</strong>
+                        <span>Used Cores</span>
+                    </div>
+
+                </div>
+                <div class="xe-lower">
+                    <div class="border"></div>
+
+                    <span>Total Cores</span>
+                    <strong id="total_c">0</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter-block xe-counter-block-red" >
+                <div class="xe-upper">
+
+                    <div class="xe-icon">
+                        <i class="fa fa-building fa-2x"></i>
+                    </div>
+                    <div class="xe-label">
+                        <strong class="num" id="used_m">0</strong>
+                        <span>Spark Mem</span>
+                    </div>
+
+                </div>
+                <div class="xe-lower">
+                    <div class="border"></div>
+
+                    <span>Total Mem</span>
+                    <strong id="total_m">0</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div class="xe-widget xe-counter-block xe-counter-block-pink" >
+                <div class="xe-upper">
+
+                    <div class="xe-icon">
+                        <i class="fa fa-info fa-2x"></i>
+                    </div>
+                    <div class="xe-label">
+                        <strong class="num" id="driver_run">0</strong>
+                        <span>Drivers Info</span>
+                    </div>
+
+                </div>
+                <div class="xe-lower">
+                    <div class="border"></div>
+
+                    <span>Total Mem</span>
+                    <strong id="driver_all">0</strong>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="panel panel-body">
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="gauge-3" style="height: 440px ; margin: 0 30px ;"></div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="sparkStandlone" style="height: 440px ; margin: 0 30px ;"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="chart-item-bg-2">
+                    <div class="chart-item-num num-sm" style="width: 370px ;"
+                         data-count="this" data-from="0"
+                         data-to="20.89"
+                         data-suffix="%" data-duration="3" id ="userdRateMemory">0%</div>
+                    <div class="chart-item-env no-padding">
+                        <div id="area-2" style="height: 150px ; margin: 0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    @* <script>
+
+    $(document).ready(function () {
+    var data=[
+    {role:"Spark",
+    nums:6
+    },
+    {role:"Hadoop",
+    nums:5
+    },
+    {role:"Hbase",
+    nums:3
+    },
+    {role:"Hive",
+    nums:1
+    },
+    {roles:"Mysql",
+    num:1
+    }
+    ];
+
+    $("#chart_container").dxPieChart({
+    dataSource: data,
+    series: [
+    {
+    argumentField: "role",
+    valueField: "nums",
+    label: {
+    visible: true,
+    connector: {
+    visible: true,
+    width: 1,
+    verticalAlignment:"bottom"
+    },
+    }
+    }
+    ],
+    title: "Area of Countries",
+    onPointClick: function (e) {
+    var point = e.target;
+
+    toggleVisibility(point);
+    },
+    onLegendClick: function (e) {
+    var arg = e.target;
+
+    toggleVisibility(this.getAllSeries()[0].getPointsByArg(arg)[0]);
+    }
+    });
+
+    function toggleVisibility(item) {
+    item.isVisible() ? item.hide() : item.show();
+    }
+
+    });
+    </script>*@
+
+@*
+    修订日志:v3.0.2(2016.08.19)
+        修改编辑用户与注册审核对话框
+    添加注册审核发送邮件功能
+    添加个人中心下的任务列表页面
+    提交jar页面新增yarn,standalone，local选择
+    添加查看任务，杀死任务，重试任务功能
+    添加用户组、组员统计功能
+    添加Yarn资源调度参数列表
+    修正服务划分图标
+    本组资源占比计算以及展示*@
+
+@*
+    修订日志:v3.0.3(2016.08.24)
+        添加任务kill,rerun功能
+    添加执行任务交互
+    添加个人任务展示
+    修正表格样式&部分UI调整
+    dashboard页面添加本组资源占比
+    添加本组内存使用占比
+    添加Yarn资源调度参数列表
+    添加组用户组yarn任务列表*@
+
+@*
+    修订日志:v3.0.4(2016.09.02)
+    添加WebSocket任务消息推送
+    调整任务状态标签样式
+    添加超级用户组(SuperAdmin)权限
+    添加根据不同用户组权限显示资源占比
+    修正yarn接口数据传输格式
+    修正表格样式&部分UI调整
+    *@
+
+
+    <script>
+            window.onload=function(){
+                swal({
+                    title: "修订日志:v3.0.4(2016.09.02)",
+                    text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加WebSocket任务消息推送</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>调整任务状态标签样式</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加超级用户组(SuperAdmin)权限</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;添加根据不同用户组权限显示资源占比</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修正yarn接口数据传输格式</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
+                    "</div>",
+                    timer: 8000,
+                    html:true,
+                    showConfirmButton: true
+                });
+            }
+    </script>
+    <div class="clearfix"></div>
+    @copyright()
+
 }
-
-

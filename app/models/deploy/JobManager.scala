@@ -1,35 +1,37 @@
 package models
 
-import java.io.{File, IOException}
-import java.util.UUID
+import java.io.File
 import java.util.concurrent.Executors._
 
-import akka.actor.{ActorRef, Props}
-import com.typesafe.config.Config
+import akka.actor.{ActorRef, Cancellable, Props}
+import controllers._
 import models.actor.InstrumentedActor
+import models.deploy._
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
-import models.utils.CreateBatchRequest
+import models.utils.Config
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkEnv
 import org.joda.time.DateTime
 import play.api.Logger
-import play.api.cache.Cache
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
+import play.libs.Akka
 
-import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
-import ExecutionContext.Implicits.global
-import scala.collection.mutable
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
+import scala.concurrent.{ExecutionContext, Future}
+import scala.util.matching.Regex
 
 /**
   * Created by liangkai1 on 16/7/11.
   */
 case  class ExecuteModel(
+                          master:String,
                           executeClass:String,
                           numExecutors:String,
                           driverMemory:String,
                           executorMemory:String,
-                          executorCores:String,
+                          total_executor_cores:String,
                           jarLocation:String,
                           args1:String)
 
@@ -40,31 +42,42 @@ object  JobManagerActor{
 
   case class Initializ(executeModel: ExecuteModel)
   case class InitError(t: Throwable)
-  case class JobLoading(msg: String)
+  case class JobFinish(msg: String)
+  case class SaveTask(appId:String)
+
 
   case class InvalidJar(error:String)
   case class JarStored(uri :String)
 
-  def props(contextConfig: Config): Props = Props(classOf[JobManagerActor], contextConfig)
+  def props(config:Config,jobDAO: JobDAO,taskDao: TaskDao): Props = Props(classOf[JobManagerActor], config,jobDAO,taskDao)
 }
 
 /**
   * [[models.JobDAO]]
+  *
   * @param jobDAO
   */
-private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
+private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) extends InstrumentedActor{
+
 
   import JobManagerActor._
 
-  val config = mutable.HashMap.empty[String,String]
-  val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(10))
+  //val config = mutable.HashMap.empty[String,String]
+  val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(config.getInt("task.pool.max")))
 
-  private[this] val nameSpance="usr"
-  private[this] val nameLocal="local"
+  private val push_akka ="/user/MessagePool"
+  private val yarn="yarn-cluster"
+  private val uri ="spark"
+  private val YARN = 1
+  private val STANDALONE = 2
+  private val MESOS = 4
+  private val LOCAL = 8
+
 
 
   /**
     * jar 文件验证
+    *
     * @param fileName
     * @return
     */
@@ -75,6 +88,7 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
 
   /**
     * 完整校验
+    *
     * @param jarBytes
     * @return
     */
@@ -83,20 +97,29 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
   }
 
   def sparkSubmit(): String = {
-    sparkHome().map { _ + "bin" + File.separator + "spark-submit" }.get
+    sparkHome.map { _ + "bin" + File.separator + "spark-submit" }.get
   }
 
-  def sparkHome(): Option[String] = Some(config.get("SPARK_HOME").get)
+  def sparkHome(): Option[String] = Some(config.getString("spark.home"))
 
-  override def preStart()={
-    config+=
-   ("SPARK_HOME"->(File.separator+nameSpance
-      +File.separator+
-      nameLocal+
-      File.separator+
-      "spark"
-      +File.separator)
-      )
+  def masterHost():Option[String] =Some(config.getString("spark.master.url"))
+
+  def sparkMaster():String={
+    masterHost
+      .map{
+         uri +":"+File.separator+
+          File.separator+ _
+      }.get
+  }
+
+
+  def Sealing:PartialFunction[String,State] ={
+    case m if(m.equals("RUNNING")) => RUNNING
+    case m if(m.equals("FINISHED")) => FINISHED
+    case m if(m.equals("KILLED")) => KILLED
+    case m if(m.equals("FAILED")) => FAILED
+    case _  => FINISHED
+
   }
 
   def wrappedReceive: Receive = {
@@ -105,14 +128,23 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
       val request: CreateBatchRequest = CreateBatchRequest()
       request.className=Some(executeModel.executeClass)
       request.numExecutors=Some(executeModel.numExecutors)
-      request.executorCores=Some(executeModel.executorCores)
+      request.total_executor_cores=Some(executeModel.total_executor_cores)
       request.driverMemory=Some(executeModel.driverMemory)
       request.executorMemory=Some(executeModel.executorMemory)
       request.jarLocation = Some(executeModel.jarLocation)
+
+      val masters: Int = executeModel.master match {
+        case m if m.startsWith("yarn") =>   request.master=Some(yarn); YARN
+        case m if m.startsWith("standalone") => request.master=Some(sparkMaster()); STANDALONE
+        case m if m.startsWith("mesos") => MESOS
+        case m if m.startsWith("local") => request.master=Some(executeModel.master);LOCAL
+      }
+      Logger.info(s"select mode $masters")
       val args: Array[String] = executeModel.args1.split("\\s+")
       request.args=args.toList
       sender ! request
     }
+
 
     case SubmitJob(request) => {
       runJobFuture(request, sparkEnv =SparkEnv.get,sender)
@@ -130,6 +162,28 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }
+
+    case JobFinish(appId) => {
+      if(appId.startsWith("application")){
+         val user: String = taskDao.findyarnTaskUser(appId)
+         val act = Akka.system.actorSelection(push_akka+user)
+         taskDao.queryYarnState(appId).map{
+          info =>
+            Message.addMessage(TaskMessage(info.application_id,info.state,user))
+            act ! Sealing(info.state) ;
+            Logger.info(s"任务结束,当前状态==>"+info.state);
+        }
+      }else {
+        val user: String = taskDao.findTaskUser(appId)
+        val act = Akka.system.actorSelection(push_akka+user)
+        taskDao.queryState(appId).map{
+          info =>
+            Message.addMessage(TaskMessage(info.app_id,info.state,user));
+            act ! Sealing(info.state);Logger.info(s"任务结束,当前状态==>"+info.state);
+        }
+      }
+      }
+
   }
 
 
@@ -147,15 +201,20 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         request.className.foreach(builder.className)
         request.driverMemory.foreach(builder.driverMemory)
         request.executorMemory.foreach(builder.executorMemory)
-        request.executorCores.foreach(builder.executorCores)
+        request.total_executor_cores.foreach(builder.executorCores)
         request.numExecutors.foreach(builder.numExecutors)
         request.jarLocation.foreach(builder.jarLocation)
-        val process: LineBufferedProcess = builder.start(Some(sparkSubmit()), request.args)
+        request.master.foreach(builder.master)
+        val process: LineBufferedProcess = builder.start(Some(sparkSubmit), request.args)
         val output = process.inputIterator.mkString("\n")
-        val regex = """Shutdown (.*)""".r.unanchored
+        //val regex = """Shutdown (.*)""".r.unanchored
+        //val regex = """Shutdown hook called(.*)""".r.unanchored
+
+
+        val regex: Regex = MatchEngine.matchMode(request.master.get)
         output match {
-          case regex(success) => {
-             JobRunFinish("执行结束!")
+          case regex(appId) => {
+              JobRunFinish(appId)
           }
           case _ =>
             throw new JobRunExecption(output)
@@ -171,8 +230,8 @@ private class JobManagerActor(jobDAO: JobDAO) extends InstrumentedActor{
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) => self ! Logger.info(result.msg); JobLoading(result.msg)
-      case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
+      case scala.util.Success(result:Any) =>  Logger.info("执行结束");  context.system.scheduler.scheduleOnce(7 seconds,self ,JobFinish(result.msg))
+      case scala.util.Failure(error :Throwable) => Logger.info("执行异常");act ! JobRunExecption(error.getMessage)
     }
   }
 

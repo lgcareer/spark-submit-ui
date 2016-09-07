@@ -1,25 +1,45 @@
 package controllers
 
-import play.api.libs.json.Json
+import models.io.UserCountDao
+import play.api.libs.json._
 import play.api.mvc._
 
-object YarnList extends Controller with Secured {
+
+object YarnList  extends Controller  with Secured {
+
+  /**
+   * Yarn数据列表显示
+   */
 
   def yarnInfo = IsAuthenticated { username => implicit request =>
-
     val indexSource = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/apps").mkString
 
     val json = Json.parse(indexSource)
-
-    Ok(json)
+     Ok(json)
   }
 
+  /**
+   * Yarn数据列表
+   * @return
+   */
   def yarnlist = IsAuthenticated { username => implicit request =>
-    Ok(views.html.yarnlist.render())
+    val groupName = UserCountDao.userBygroup(username)
+    val group_queue_all :Map[String,String] = UserCountDao.find_group_queue()
+    val queueName = group_queue_all(groupName)
+    if(queueName == "") {
+      Ok(views.html.yarnlist("SuperAdmin"))
+     }else {
+      Ok(views.html.yarnlist(queueName))
+    }
   }
 
+
+  /**
+   * Spark Worker信息
+   * @return
+   */
   def workerlistdata = IsAuthenticated { username => implicit request =>
-    val workersJson = scala.io.Source.fromURL("http://localhost:8080/json").mkString
+    val workersJson = scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString
     val workerlist = Json.parse(workersJson)
     Ok(workerlist)
   }
@@ -28,14 +48,20 @@ object YarnList extends Controller with Secured {
     Ok(views.html.workerInfo.render())
   }
 
+  /**
+   * Spark 任务列表 Standalon
+   * @return
+   */
   def sparklist = IsAuthenticated { username => implicit request =>
     Ok(views.html.sparklist.render())
   }
 
-  //从数据库获取数据发送到接口
+  /**
+   * Dashboard 页面Spark指标 显示
+   * @return
+   */
   def spark_info = IsAuthenticated { username => implicit request =>
      import models._
-    //   val sparkinfo = SparkTotalinfo.findAll()
      val sparkinfo = Json.parse(SparkTotalinfo.findAll())
     Ok(sparkinfo)
 

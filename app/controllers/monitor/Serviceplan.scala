@@ -11,9 +11,6 @@ object Serviceplan extends Controller with Secured{
   def servicedao = IsAuthenticated { username => implicit request =>
 
     val service =ServicePlan.service()
-//    val serviceJson =Json.toJson(service)
-//    println("serviceJson" + serviceJson)
-    println("调用service方法" + service)
     Ok(views.html.widgets(service))
   }
   def functionplan = IsAuthenticated { username => implicit request =>

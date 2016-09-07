@@ -23,7 +23,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
   private[this] var _executor_memory: Option[String]=None
   private[this] var _num_executors: Option[String] = None
   private[this] var _driver_memory: Option[String] = None
-  private[this] var _executor_cores: Option[String] = None
+  private[this] var _total_executor_cores: Option[String] = None
   private[this] var _name: Option[String] = Some("app")
   private[this] var _jarLocation:Option[String] =None
   private[this] var _queue: Option[String] = None
@@ -62,7 +62,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
   }
 
   def executorCores(executorCores: String): SparkProcessBuilder = {
-    _executor_cores = Some(executorCores)
+    _total_executor_cores = Some(executorCores)
     this
   }
 
@@ -104,6 +104,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
   def start(file: Option[String], args: Traversable[String]): LineBufferedProcess = {
     executable(file.get)
     var arguments = ArrayBuffer[String](_executable)
+
     def addOpt(option: String, value: Option[String]): Unit = {
       value.foreach { v =>
         arguments += option
@@ -125,12 +126,13 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
       }
     }
 
-    addOpt("--master", Some("spark://BJ-M-203554A.local:7077"))
+
+    addOpt("--master", _master)
     addOpt("--class", _className)
     addOpt("--num-executors",_num_executors)
     addOpt("--executor-memory", _executor_memory)
     addOpt("--driver-memory",_driver_memory)
-    addOpt("--executor-cores", _executor_cores)
+    addOpt("--total-executor-cores", _total_executor_cores)
     addArg(_jarLocation)
     addList(args)
     Logger.info(s"args $arguments")
@@ -146,7 +148,7 @@ class SparkProcessBuilder(act:ActorRef) extends Logging {
     _redirectError.foreach(pb.redirectError)
     _redirectErrorStream.foreach(pb.redirectErrorStream)
 
-    val process: LineBufferedProcess = new LineBufferedProcess(act,pb.start())
+    val process: LineBufferedProcess = new LineBufferedProcess(_master,act,pb.start())
     process.waitFor()
     process
   }

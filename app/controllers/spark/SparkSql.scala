@@ -57,7 +57,7 @@ object SparkSql extends Controller with Secured {
           }
 
 
-          val writer = new PrintWriter(new File(s"public/download/spark$n.txt"))
+          val writer = new PrintWriter(new File(s"/tmp/spark$n.txt"))
 
           val resultCSV = Json.toJson(
             Map[String, Any](
@@ -101,7 +101,7 @@ object SparkSql extends Controller with Secured {
   }
 
   def download = IsAuthenticated { username => implicit request =>
-    Ok.sendFile(new File(s"public/download/spark$n.txt"))
+    Ok.sendFile(new File(s"/tmp/spark$n.txt"))
   }
 
 }

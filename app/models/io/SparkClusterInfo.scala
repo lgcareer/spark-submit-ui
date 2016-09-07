@@ -17,7 +17,7 @@ import play.api.db.DB
 
 object SparkTotalinfo {
   def findAll(): String={
-     DB.withConnection("test") { implicit connection =>
+     DB.withConnection { implicit connection =>
       val findall = SQL("select * from spark_total_info order by id desc limit 1")
       val result = findall().map(row =>
         row[String]("alive_workers") -> row[String]("cores")
@@ -30,9 +30,7 @@ object SparkTotalinfo {
        val applications = findall.apply().head[String]("applications")
        val drivers = findall.apply().head[String]("drivers")
        val status = findall.apply().head[String]("status")
-       val spark_info ="{alive_workers:"+alive_workers+","+"cores:"+cores+","+"memory:"+memory+","+"applications:"+applications+","+"drivers:"+drivers+","+"status:"+status+"}"
        val spark_info_json = "{\"alive_workers\":"+"\""+alive_workers+"\""+","+"\"cores\":"+"\""+cores+"\""+","+"\"memory\":"+"\""+memory+"\""+","+"\"applications\":"+"\""+applications+"\""+","+"\"drivers\":"+"\""+drivers+"\""+","+"\"status\":"+"\""+status+"\""+"}"
-//       println(spark_info_json.toString)
        spark_info_json
 
     }

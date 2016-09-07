@@ -1,5 +1,7 @@
 package models
 
+import anorm.SqlParser._
+import anorm.~
 import org.joda.time.DateTime
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
@@ -16,5 +18,6 @@ trait JobDAO {
 
   def getJar(id: String) : JarInfo
 
-
 }
+
+

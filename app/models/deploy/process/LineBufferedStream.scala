@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.locks.ReentrantLock
 
 import akka.actor.ActorRef
-import models.{JobRunExecption, JobSubmitExecption, JobSubmitSuccess}
+import models.{JobSubmitSuccess, MatchEngine}
 import org.apache.spark.Logging
 import play.api.{Logger, cache}
 import play.api.cache.Cache
@@ -16,11 +16,12 @@ import scala.collection.mutable
 import scala.io.Source
 import scala.concurrent.duration._
 import scala.util.control.Breaks
+import scala.util.matching.Regex
 /**
   * Created by liangkai1 on 16/7/12.
   *
   */
-class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging {
+class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputStream) extends Logging {
 
   private[this] var _lines: IndexedSeq[String] = IndexedSeq()
 
@@ -35,33 +36,25 @@ class LineBufferedStream(act:ActorRef, inputStream: InputStream) extends Logging
     override def run() = {
       val lines:Iterator[String] = Source.fromInputStream(inputStream).getLines()
       val uid: String = UUID.randomUUID().toString
-      var jobId:String =null
-      //val regex = """Added (.*)""".r.unanchored
-      val regex_local = """Starting executor ID driver on host localhost(.*)""".r.unanchored
-      val regex_id = """Spark cluster with app ID (.*)""".r.unanchored
+
+      val regex: Regex = MatchEngine.matchMode(master.get)
+
       for (line <- lines) {
         _lock.lock()
         line match {
-          case regex_id(id) => act ! JobSubmitSuccess(id); jobId=id
-          case regex_local(msg) => jobId=uid; act ! JobSubmitSuccess(jobId)
+          case regex(id) => act ! JobSubmitSuccess(id);
           case _ => Logger.info(line)
         }
         try {
-          if(jobId!=null&&line.nonEmpty)
-          Cache.set(jobId+"_"+nextCount,line,1.hours)
           _lines = _lines :+ line
           _condition.signalAll()
         } finally {
           _lock.unlock()
         }
       }
-
-
-
       _lock.lock()
       try {
         _finished = true
-        Cache.set(jobId+"_"+nextCount,"finish")
         _condition.signalAll()
       } finally {
         _lock.unlock()

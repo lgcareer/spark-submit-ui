@@ -1,14 +1,263 @@
-@main("Neptun Dashboard") {
-    <!----End Calender -------->
+@(queueName:String)
+@sidebar = {
+    <div class="sidebar-menu toggle-others fixed">
+
+        <div class="sidebar-menu-inner">
+
+            <header class="logo-env">
+
+                    <!-- logo -->
+                <div class="logo">
+                    <a href="@routes.Application.index" class="logo-expanded">
+                        <img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
+                    </a>
+
+                    <a href="@routes.Application.index" class="logo-collapsed">
+                        <img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
+                    </a>
+                </div>
+
+                    <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                <div class="mobile-menu-toggle visible-xs">
+                    <a href="#" data-toggle="user-info-menu">
+                        <i class="fa-bell-o"></i>
+                        <span class="badge badge-success">7</span>
+                    </a>
+
+                    <a href="#" data-toggle="mobile-menu">
+                        <i class="fa-bars"></i>
+                    </a>
+                </div>
+
+                    <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                <div class="settings-icon">
+                    <a href="#" data-toggle="settings-pane" data-animate="true">
+                        <i class="fa fa-cog fa-4x"></i>
+                    </a>
+                </div>
+
+
+            </header>
+
+
+            <ul id="main-menu" class="main-menu">
+                    <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+                    <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+                <li>
+                    <a href="@routes.Application.index">
+                        <i class="fa fa-dashboard fa-fw"></i>
+                        <span class="title">仪表盘</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-check-square-o"></i>
+                        <span class="title">数据应用面板</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.SparkJar.executejarpage">
+                                <span class="title">SPARK-JAR应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkSql.sqlpage">
+                                <span class="title">SPARK-SQL应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkStream.stream">
+                                <span class="title">SPARK-STREAM基于HDFS的应用</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.SparkStream.stream">
+                                <span class="title">SPARK-STREAM基于KAFKA的应用</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="opened active">
+                    <a href="#">
+                        <i class="fa fa-table"></i>
+                        <span class="title">APP数据</span>
+                    </a>
+                    <ul>
+                        <li class="active">
+                            <a href="@routes.YarnList.yarnlist">
+                                <span class="title">Yarn数据列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.YarnList.sparklist">
+                                <span class="title">Spark数据列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.YarnList.workerInfo">
+                                <span class="title">Spark Worker信息</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-anchor"></i>
+                        <span class="title">任务调度</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Yarn.yarnDispatch">
+                                <span class="title">Oozie任务调度</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Yarn.yarnDispatch">
+                                <span class="title">Spark任务调度</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Yarn.yarnDispatch">
+                                <span class="title">Yarn任务调度</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-bell"></i>
+                        <span class="title">App Tracking</span>
+                        <span class="label label-success pull-right">50</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.RunTask.runTask">
+                                <span class="title">Spark Stream 运行任务列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.MonitorController.jobs">
+                                <span class="title">Spark Sql任务列表</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.RunTask.runTaskLogs">
+                                <span class="title">Spark 运行任务日志</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-wrench"></i>
+                        <span class="title">报警管理</span>
+                        <span class="label label-success pull-right">5</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">磁盘空间报警</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">内存相关报警</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.AlarmDisk.alarmDisk">
+                                <span class="title">其他报警</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i>
+                        <span class="title">用户管理</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Usertally.usertatol">
+                                <span class="title">用户统计</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.UserManager.userlist">
+                                <span class="title">用户管理</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Usertally.usertatol">
+                                <span class="title">权限分配</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrows-alt"></i>
+                        <span class="title">节点分布情况</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="@routes.Serviceplan.servicedao">
+                                <span class="title">服务划分</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Serviceplan.graph">
+                                <span class="title">Graph展示</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@routes.Serviceplan.functionplan">
+                                <span class="title">功能划分</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+}
+@main("Neptun Dashboard")(sidebar) {
+
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">Yarn调度任务信息列表</h1>
+            <p class="description">Yarn调度任务信息列表view面板</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="#">App数据</a>
+                </li>
+                <li class="active">
+
+                    <strong>Yarn数据列表</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
     <div class="graphs">
 
         <div class="col_1">
             <div class="xs" >
-                <h3 style="text-align:center ;">  Yarn调度任务信息列表  </h3>
-                <div class="bs-example4" data-example-id="contextual-table">
-                    <table class="table" id = "yarnInfo">
-
-                    </table>
+                <h3 class="text-center">  Yarn调度任务信息列表  </h3>
+                <div class="col-lg-pull-0" id="yarnInfo" >
                 </div>
             </div>
 
@@ -18,30 +267,80 @@
         <div class="clearfix"> </div>
         @copyright()
     </div>
-    <script charset="utf-8">
+    <!--<script charset="utf-8">-->
+            <!--$(document).ready(function(){-->
+                <!--var aa = @queueName-->
+                <!--alert(aa)-->
+                <!--$.ajax({-->
+                    <!--type:"GET",-->
+                    <!--url:"/yarnInfo",-->
+                    <!--dataType:"json",-->
+                    <!--success:function(data){-->
+                        <!--var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"-->
+                        <!--var myobj = eval(data);-->
+                            <!--var mid = myobj.jobs;-->
+                             <!--var myjobs = eval(mid);-->
+                                <!--for (var i = 0; i < myjobs.length; i++) {-->
+                                        <!--var mid = eval("(" + myjobs[i] + ")")-->
+                                        <!--&lt;!&ndash;console.log(typeof(myjobs[i]));&ndash;&gt;-->
+                                        <!--if(mid.progress !=100){-->
+                                        <!--head += "<tr class= \"warning\"><td onclick=clickaction(this)><a href ='"+mid.trackingUrl+"'>"+mid.id+"</a></td><td>"+mid.user+"</td><td>"+mid.queue+"</td><td>"+mid.state+"</td><td>"+mid.finalStatus+"</td><td>"+mid.progress+"</td><td>"+ new Date(mid.startedTime).toLocaleString()+"</td><td>"+new Date(mid.finishedTime).toLocaleString()+"</td></tr>"-->
+                                        <!--}-->
+                                        <!--head += "<tr class= \"success\"><td><a href ='"+mid.trackingUrl+"'>"+mid.id+"</a></td><td>"+mid.user+"</td><td>"+mid.queue+"</td><td>"+mid.state+"</td><td>"+mid.finalStatus+"</td><td>"+mid.progress+"</td><td>"+ new Date(mid.startedTime).toLocaleString()+"</td><td>"+new Date(mid.finishedTime).toLocaleString()+"</td></tr>"-->
+                                    <!--};-->
+                        <!--head += " </table>";-->
+                        <!--$('#yarnInfo').html(head);-->
+                    <!--}-->
+
+                <!--});-->
+            <!--});-->
+
+            <!--function clickaction(td){-->
+                <!--alert(td.innerText);-->
+            <!--}-->
+
+    <!--</script>-->
+
+<script charset="utf-8">
+            var queue = "@queueName"
             $(document).ready(function(){
                 $.ajax({
                     type:"GET",
                     url:"/yarnInfo",
-                    dataType:"json",
+                    <!--dataType:"text",-->
                     success:function(data){
-                        var head= "<table border='10' width='439'><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
+                        var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>JobID</th><th>User</th><th>Queue</th><th>State</th><th>FinalStatus</th><th>Progress</th><th>startedTime</th><th>finishedTime</th></tr>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = data[p];
                             for(var  x in datamid){
                                 var mid = eval(data[p][x]);
-                                for (var i = 0; i < mid.length; i++) {
+                                if(queue == "SuperAdmin"){
+                                  for (var i = 0; i < mid.length; i++) {
                                     if(mid[i].progress == 100){
                                         head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
-                                    }
+                                         }
                                     if(mid[i].progress != 100){
                                         head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
-                                    }
+                                         }
                                     if(mid[i].FinalStatus == "FAILED"){
+                                        head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                        }
+                                    };
+                                 }
+                                 else {
+                                    for (var i = 0; i < mid.length; i++) {
+                                    if(mid[i].progress == 100 && mid[i].queue == queue){
+                                        head += "<tr class= \"success\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                    }
+                                    if(mid[i].progress != 100 && mid[i].queue == queue){
+                                        head += "<tr class= \"warning\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
+                                    }
+                                    if(mid[i].FinalStatus == "FAILED" && mid[i].queue == queue){
                                         head += "<tr class= \"active\"><td><a href ='"+mid[i].trackingUrl+"'>"+mid[i].id+"</a></td><td>"+mid[i].user+"</td><td>"+mid[i].queue+"</td><td>"+mid[i].state+"</td><td>"+mid[i].finalStatus+"</td><td>"+mid[i].progress+"</td><td>"+ new Date(mid[i].startedTime).toLocaleString()+"</td><td>"+new Date(mid[i].finishedTime).toLocaleString()+"</td></tr>"
                                     }
                                 };
+                             }
                             }
 
                         };

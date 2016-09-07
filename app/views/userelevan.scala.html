@@ -1,48 +1,409 @@
-@(count: Int)
-    @main("Neptun 用户统计") {
+@(aduits:Long)
+@sidebar = {
+        <div class="sidebar-menu toggle-others fixed">
+
+            <div class="sidebar-menu-inner">
+
+                <header class="logo-env">
+
+                        <!-- logo -->
+                    <div class="logo">
+                        <a href="@routes.Application.index" class="logo-expanded">
+                            <img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
+                        </a>
+
+                        <a href="@routes.Application.index" class="logo-collapsed">
+                            <img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
+                        </a>
+                    </div>
+
+                        <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a href="#" data-toggle="user-info-menu">
+                            <i class="fa-bell-o"></i>
+                            <span class="badge badge-success">7</span>
+                        </a>
+
+                        <a href="#" data-toggle="mobile-menu">
+                            <i class="fa-bars"></i>
+                        </a>
+                    </div>
+
+                        <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+                    <div class="settings-icon">
+                        <a href="#" data-toggle="settings-pane" data-animate="true">
+                            <i class="fa fa-cog fa-4x"></i>
+                        </a>
+                    </div>
+
+
+                </header>
+
+
+                <ul id="main-menu" class="main-menu">
+                        <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+                        <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+                    <li>
+                        <a href="@routes.Application.index">
+                            <i class="fa fa-dashboard fa-fw"></i>
+                            <span class="title">仪表盘</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-check-square-o"></i>
+                            <span class="title">数据应用面板</span>
+                        </a>
+                        <ul>
+                            <li class="active">
+                                <a href="@routes.SparkJar.executejarpage">
+                                    <span class="title">SPARK-JAR应用</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.SparkSql.sqlpage">
+                                    <span class="title">SPARK-SQL应用</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.SparkStream.stream">
+                                    <span class="title">SPARK-STREAM基于HDFS的应用</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.SparkStream.stream">
+                                    <span class="title">SPARK-STREAM基于KAFKA的应用</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+                            <span class="title">APP数据</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.YarnList.yarnlist">
+                                    <span class="title">Yarn数据列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.YarnList.sparklist">
+                                    <span class="title">Spark数据列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.YarnList.workerInfo">
+                                    <span class="title">Spark Worker信息</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-anchor"></i>
+                            <span class="title">任务调度</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.Yarn.yarnDispatch">
+                                    <span class="title">Oozie任务调度</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Yarn.yarnDispatch">
+                                    <span class="title">Spark任务调度</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Yarn.yarnDispatch">
+                                    <span class="title">Yarn任务调度</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bell"></i>
+                            <span class="title">App Tracking</span>
+                            <span class="label label-success pull-right">50</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.RunTask.runTask">
+                                    <span class="title">Spark Stream 运行任务列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.MonitorController.jobs">
+                                    <span class="title">Spark Sql任务列表</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.RunTask.runTaskLogs">
+                                    <span class="title">Spark 运行任务日志</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-wrench"></i>
+                            <span class="title">报警管理</span>
+                            <span class="label label-success pull-right">5</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.AlarmDisk.alarmDisk">
+                                    <span class="title">磁盘空间报警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.AlarmDisk.alarmDisk">
+                                    <span class="title">内存相关报警</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.AlarmDisk.alarmDisk">
+                                    <span class="title">其他报警</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="opened active">
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="title">用户管理</span>
+                        </a>
+                        <ul>
+                            <li class="active">
+                                <a href="@routes.Usertally.usertatol">
+                                    <span class="title">用户统计</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.UserManager.userlist">
+                                    <span class="title">用户管理</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Usertally.usertatol">
+                                    <span class="title">权限分配</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-arrows-alt"></i>
+                            <span class="title">节点分布情况</span>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="@routes.Serviceplan.servicedao">
+                                    <span class="title">服务划分</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Serviceplan.graph">
+                                    <span class="title">Graph展示</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@routes.Serviceplan.functionplan">
+                                    <span class="title">功能划分</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    }
+    @main("Neptun 用户统计")(sidebar) {
+
+        <div class="page-title">
+
+            <div class="title-env">
+                <h1 class="title">用户统计</h1>
+                <p class="description">用户统计view面板</p>
+            </div>
+
+            <div class="breadcrumb-env">
+
+                <ol class="breadcrumb bc-1">
+                    <li>
+                        <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                    </li>
+                    <li>
+
+                        <a href="#">用户管理</a>
+                    </li>
+                    <li class="active">
+
+                        <strong>用户统计</strong>
+                    </li>
+                </ol>
+
+            </div>
+
+        </div>
+
         <div class="clearfix"> </div>
         <div class="graphs">
             <div id="container" style="min-width:700px ; height:400px">
-                <script>
-                        $(function () {
-                            <!--var b =$('#a').text()-->
-                            var c = @count
-                                <!--alert(c)-->
-                                    $('#container').highcharts({
-                                        chart: {
-                                            type: 'column'
-                                        },
-                                        title: {
-                                            text: '用户统计'
-                                        },
-                                        xAxis: {
-                                            categories: ['admin', 'userGroup', 'general','other']
-                                        },
-                                        yAxis: {
-                                            title: {
-                                                text: '用户数'
-                                            }
-                                        },
-                                        credits: {
-                                            text: 'DSP-NEPTUNE©️',
-                                            href: 'http://t.cn'
-                                        },
-                                        series: [{
-                                            name: '总数',
-                                            data: [c,3,2,1]
-                                        }, {
-                                            name: 'userGroup',
-                                            data: [1,7,5]
-                                        },{
-                                            name: 'general',
-                                            data: [2,10,4]
-                                        },{
-                                            name: 'other',
-                                            data: [2,7,1]
-                                        }]
-                                    });
-                        });
-                </script>
+    <script>
+
+
+                   function task_count(){
+                      var retVal = '';
+                        $.ajax({
+                            type:"GET",
+                            url:"/usergroup",
+                            dataType:"json",
+                            async:false,
+                            success:function(data){
+                                retVal = data;
+                            }
+                       });
+                       return retVal;
+               }
+
+          $(function () {
+             var data = task_count();
+              var userlist=eval(data);
+                                for(var i=0;i<userlist.length;i++){
+                                    var group = userlist[i].group;
+                                    var tatol = userlist[i].tatol;
+                                    //统计组用户数
+                                    if(group == 'UserGrowth'){
+                                        ad_total = userlist[i].tatol;
+                                    }
+                                    if(group == 'SuperAdmin'){
+                                        admin_total = userlist[i].tatol;
+                                    }
+                                    if(group == 'test'){
+                                        test_total = userlist[i].tatol;
+                                    }
+                                    if(group == 'user'){
+                                        user_total = userlist[i].tatol;
+                                    }
+                                }
+
+            var colors = Highcharts.getOptions().colors,
+                categories = ['超级用户组','普通用户组','测试用户组','待审核用户组'],
+                name = '用户数',
+                data = [{
+                        y: admin_total,
+                        color: colors[0],
+                        drilldown: {
+                            name: '超级用户组',
+                            categories: ['DSP组', '大数据组', '粉丝库'],
+                            data: [3, 1, 1],
+                            color: colors[0]
+                        }
+                    }, {
+                        y: user_total,
+                        color: colors[1],
+                        drilldown: {
+                            name: '普通用户组',
+                            categories: ['对象库', '评论'],
+                            data: [2, 1],
+                            color: colors[1]
+                        }
+                    }, {
+                        y: test_total,
+                        color: colors[2],
+                        drilldown: {
+                            name: '测试用户组',
+                            categories: ['A组', 'B组'],
+                            data: [1, 0],
+                            color: colors[2]
+                        }
+                    },{
+                        y: @aduits,
+                        color: colors[4],
+                        drilldown: {
+                            name: '待审核用户组',
+                            categories: ['待审核用户数'],
+                            data: [@aduits],
+                            color: colors[4]
+                        }
+                    }];
+
+            function setChart(name, categories, data, color) {
+            chart.xAxis[0].setCategories(categories, false);
+            chart.series[0].remove(false);
+            chart.addSeries({
+                name: name,
+                data: data,
+                color: color || 'white'
+            }, false);
+            chart.redraw();
+            }
+
+            var chart = $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '用户统计'
+                },
+                subtitle: {
+                    text: '点击查看组员数'
+                },
+                xAxis: {
+                    categories: categories
+                },
+                yAxis: {
+                    title: {
+                        text: '用户数'
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        cursor: 'pointer',
+                        point: {
+                            events: {
+                                click: function() {
+                                    var drilldown = this.drilldown;
+                                    if (drilldown) { // drill down
+                                        setChart(drilldown.name, drilldown.categories, drilldown.data, drilldown.color);
+                                    } else { // restore
+                                        setChart(name, categories, data);
+                                    }
+                                }
+                            }
+                        },
+                        dataLabels: {
+                            enabled: true,
+                            color: colors[0],
+                            style: {
+                                fontWeight: 'bold'
+                            },
+                            formatter: function() {
+                                return this.y;
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: name,
+                    data: data,
+                    color: 'white'
+                }],
+                exporting: {
+                    enabled: true
+                }
+            })
+            .highcharts();
+        });
+ 	   </script>
+
+
             </div>
             <div class="clearfix"> </div>
 

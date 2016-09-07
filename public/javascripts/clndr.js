@@ -5,6 +5,7 @@
  * ==============================================
  *  created by kyle stetz (github.com/kylestetz)
  *        &available under the MIT license
+
  * http://opensource.org/licenses/mit-license.php
  * ==============================================
  *

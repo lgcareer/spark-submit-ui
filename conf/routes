@@ -30,7 +30,7 @@ GET     /sparklist                  controllers.YarnList.sparklist
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-#TestIndex
+#User
 GET     /registration                controllers.Authentication.registration
 POST    /registration                controllers.Authentication.verifying
 GET     /mail                         controllers.Authentication.mail(user)
@@ -44,14 +44,14 @@ POST   /updatepwd                   controllers.Authentication.updatepwd
 
 
 # Spark Jar
-#GET     /sparkjar                     controllers.SparkJar.uploadpage
-POST     /sparkjar                     controllers.SparkJar.upload
-GET     /executejar                    controllers.SparkJar.executejarpage
-POST     /executejar                   controllers.SparkJar.executejar
-GET     /errorpage                     controllers.SparkJar.errorpage
-GET     /logs                          controllers.SparkJar.logs(id:String)
+#GET     /sparkjar                     @controllers.SparkJar.uploadpage
+POST     /sparkjar                     @controllers.SparkJar.upload
+GET     /executejar                    @controllers.SparkJar.executejarpage
+POST     /executejar                   @controllers.SparkJar.executejar
+GET     /errorpage                     @controllers.SparkJar.errorpage
+GET     /logs                          @controllers.SparkJar.logs(id:String)
 GET    /runtasklogs                    controllers.RunTask.runTaskLogs
-GET    /he                             controllers.SparkJar.he(id:String)
+GET    /he                             @controllers.SparkJar.he(id:String)
 
 
 #Dashboard
@@ -71,10 +71,18 @@ GET    /widgets                       controllers.Serviceplan.servicedao
 GET    /functionplan                  controllers.Serviceplan.functionplan
 #UserCounts
 GET    /usertatol                     controllers.Usertally.usertatol
+GET    /usergroup                     controllers.Usertally.userGroup
+GET    /userResource                   controllers.Usertally.userResource
+GET    /userResourceSpark              controllers.Usertally.userResourceSpark
 
 
 #Dispatch
 GET    /dispatch                     controllers.Oozie.oozie
+GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
+GET    /yarndispatch                 controllers.Yarn.yarnDispatch
+GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
+GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
+
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
@@ -85,6 +93,43 @@ GET    /runTask                     controllers.RunTask.runTask
 
 #Test
 GET    /graph                     controllers.Serviceplan.graph
+
+
+#Authority
+GET    /userlist                  controllers.UserManager.userlist
+GET   /usergrouplist                    controllers.UserManager.usergroup
+GET   /rmgroup                      controllers.UserManager.rmgroup(email:String)
+GET  /addgroup                      controllers.UserManager.addgroup(email:String,name:String,group:String,queue:String)
+GET  /members                        controllers.Member.members
+GET  /pass                           controllers.UserManager.pass(email:String)
+GET  /nopass                         controllers.UserManager.nopass(email:String,body:String)
+
+
+GET  /audit                         controllers.UserManager.auditList
+
+#return User
+
+GET   /whoiam                     controllers.UserName.userName
+
+#Job
+GET   /tasklist                        @controllers.TaskManager.tasklist
+GET   /standalone                      @controllers.TaskManager.standaloneInfo
+GET   /yarn                            @controllers.TaskManager.yarnInfo
+GET   /kill                            @controllers.TaskManager.kill(appId:String)
+GET   /rerun                           @controllers.TaskManager.rerun(appId:String)
+
+
+#PUSH
+GET  /startpush                         controllers.Application.startpush
+GET   /msglist                          controllers.Application.msglist
+
+
+
+#集群管理
+GET   /metadatalist                     controllers.MetaDataManager.metadatas
+GET   /metadata                         controllers.MetaDataManager.metadata
+GET  /update                        controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
+GET  /rm                            controllers.MetaDataManager.rm(id:String)
 
 
 
