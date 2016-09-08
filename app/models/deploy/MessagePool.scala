@@ -1,14 +1,8 @@
-package controllers
+package models
 
-import akka.actor.ActorRef
-import akka.actor.Props
-import akka.actor.PoisonPill
-import akka.actor.AllForOneStrategy
+import akka.actor.{ActorRef, AllForOneStrategy, PoisonPill, Props, Terminated}
 import akka.actor.SupervisorStrategy._
-import akka.actor.Terminated
 import models.actor.InstrumentedActor
-import models._
-
 
 
 

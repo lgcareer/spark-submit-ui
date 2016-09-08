@@ -45,20 +45,20 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
                    )
     */
   implicit val standaloneReads: Reads[TaskInfo] = (
-      (JsPath \ "id").read[String] and
-      (JsPath \ "name").read[String] and
-      (JsPath \ "cores").read[Int] and
-      (JsPath \ "memoryperslave").read[Long] and
-      (JsPath \ "state").read[String] and
-      (JsPath \ "starttime").read[Long] and
-      (JsPath \ "duration").read[Long]
+      (__ \ "id").read[String] and
+      (__ \ "name").read[String] and
+      (__ \ "cores").read[Int] and
+      (__ \ "memoryperslave").read[Long] and
+      (__ \ "state").read[String] and
+      (__ \ "starttime").read[Long] and
+      (__ \ "duration").read[Long]
     )(TaskInfo.apply _)
 
 
 
   implicit val taskListReads: Reads[TaskData] = (
-    (JsPath \ "activeapps").read[Seq[TaskInfo]] and
-      (JsPath \ "completedapps").read[Seq[TaskInfo]]
+    (__ \ "activeapps").read[Seq[TaskInfo]] and
+      (__ \ "completedapps").read[Seq[TaskInfo]]
     )(TaskData.apply _)
 
 
@@ -75,13 +75,13 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
                    )
     */
   implicit val yarnReads: Reads[YarnTaskInfo] = (
-      (JsPath \ "id").read[String] and
-      (JsPath \ "name").read[String] and
-      (JsPath \ "applicationType").read[String] and
-      (JsPath \ "queue").read[String] and
-      (JsPath \ "startedTime").read[Long] and
-      (JsPath \ "state").read[String] and
-      (JsPath \ "finishedTime").read[Long]
+      (__  \ "id").read[String] and
+      (__  \ "name").read[String] and
+      (__  \ "applicationType").read[String] and
+      (__  \ "queue").read[String] and
+      (__  \ "startedTime").read[Long] and
+      (__  \ "state").read[String] and
+      (__  \ "finishedTime").read[Long]
     )(YarnTaskInfo.apply _)
 
 
@@ -159,7 +159,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
 
   def scheduleTaskDate={
 
-    Akka.system.scheduler.schedule(0.second, 5 second, new Runnable {
+    Akka.system.scheduler.schedule(0.second, config.getLong("task.data-update.interval-ms") millis, new Runnable {
       override def run(): Unit = {
         WS.url("http://"+config.getString("hadoop.yarn.host")+"/ws/v1/cluster/apps").get() map{
           response => response.status match {
@@ -218,7 +218,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
             taskDao.rmYarnTaskInfo(appId)
           }
           case m if m.equals("standalone") => {
-            WS.url("http://127.0.0.1:8080/app/kill/").post(Map("id" -> Seq(appId),"terminate"->Seq("true")))
+            WS.url("http://"+config.getString("spark.master.host")+"/app/kill/").post(Map("id" -> Seq(appId),"terminate"->Seq("true")))
             taskDao.rmYarnTaskInfo(appId)
           }
         }

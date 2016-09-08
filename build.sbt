@@ -15,13 +15,8 @@ libraryDependencies ++= Seq(
   "net.minidev" % "json-smart" % "1.3.1",
   "org.apache.hive" % "hive-jdbc" % "2.0.0",
   "com.google.inject" % "guice" % "3.0",
-  "com.tzavellas" % "sse-guice" % "0.7.1"
-
-
-
-
-
-
+  "com.tzavellas" % "sse-guice" % "0.7.1",
+  "com.jolbox" % "bonecp" % "0.8.0-rc1"
 )
 
 play.Project.playScalaSettings
@@ -33,6 +28,8 @@ resolvers ++= Seq(
   "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases",
   Resolver.sonatypeRepo("public")
 )
+
+ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
 
 
 

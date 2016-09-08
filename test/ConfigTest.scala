@@ -1,9 +1,14 @@
 import com.typesafe.config.{Config, ConfigException, ConfigFactory}
+import org.junit.runner.RunWith
+import org.specs2.mutable.Specification
+import org.specs2.runner.JUnitRunner
 
 /**
   * Created by king on 16/9/2.
   */
-object ComplexApp extends App{
+@RunWith(classOf[JUnitRunner])
+class ComplexApp extends Specification{
+
 
   def demoConfigInSimpleLib(config: Config) {
     println(config.getString("spark.home"))

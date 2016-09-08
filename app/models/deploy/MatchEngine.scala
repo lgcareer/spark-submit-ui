@@ -1,5 +1,7 @@
 package models
 
+import models.utils.Configuration
+
 import scala.util.matching.Regex
 
 /**
@@ -7,6 +9,7 @@ import scala.util.matching.Regex
   */
 object MatchEngine {
 
+  val config: Configuration = new Configuration
 
 
   /**
@@ -26,9 +29,9 @@ object MatchEngine {
   val regex_on_standalone = """Spark cluster with app ID (.*)""".r.unanchored
 
 
-  val spark_uri ="http://localhost:8080/json/"
+  val spark_uri ="http://"+config.getString("spark.master.host")+"/json/"
 
-  val yarn_uri="http://localhost:8088/ws/v1/cluster/apps"
+  val yarn_uri="http://"+config.getString("hadoop.yarn.host")+"/ws/v1/cluster/apps"
 
 
 

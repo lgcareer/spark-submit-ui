@@ -3,10 +3,10 @@ package models
 import java.io.File
 import java.util.concurrent.Executors._
 
-import akka.actor.{ActorRef, Props}
+import akka.actor.{ActorRef, Cancellable, Props}
 import controllers._
 import models.actor.InstrumentedActor
-import models.deploy.CreateBatchRequest
+import models.deploy._
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
 import models.utils.Config
 import org.apache.commons.lang.StringUtils
@@ -17,7 +17,6 @@ import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import play.libs.Akka
 
-import scala.collection.mutable
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.{ExecutionContext, Future}
@@ -55,6 +54,7 @@ object  JobManagerActor{
 
 /**
   * [[models.JobDAO]]
+  *
   * @param jobDAO
   */
 private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) extends InstrumentedActor{
@@ -63,7 +63,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
   import JobManagerActor._
 
   //val config = mutable.HashMap.empty[String,String]
-  val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(20))
+  val executionContext = ExecutionContext.fromExecutorService(newFixedThreadPool(config.getInt("task.pool.max")))
 
   private val push_akka ="/user/MessagePool"
   private val yarn="yarn-cluster"
@@ -77,6 +77,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
 
   /**
     * jar 文件验证
+    *
     * @param fileName
     * @return
     */
@@ -87,6 +88,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
 
   /**
     * 完整校验
+    *
     * @param jarBytes
     * @return
     */
@@ -143,6 +145,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
       sender ! request
     }
 
+
     case SubmitJob(request) => {
       runJobFuture(request, sparkEnv =SparkEnv.get,sender)
     }
@@ -179,7 +182,6 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
             act ! Sealing(info.state);Logger.info(s"任务结束,当前状态==>"+info.state);
         }
       }
-
       }
 
   }
@@ -228,8 +230,8 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) =>  context.system.scheduler.scheduleOnce(7 seconds,self,JobFinish(result.msg))
-      case scala.util.Failure(error :Throwable) => act ! JobRunExecption(error.getMessage)
+      case scala.util.Success(result:Any) =>  Logger.info("执行结束");  context.system.scheduler.scheduleOnce(7 seconds,self ,JobFinish(result.msg))
+      case scala.util.Failure(error :Throwable) => Logger.info("执行异常");act ! JobRunExecption(error.getMessage)
     }
   }
 
