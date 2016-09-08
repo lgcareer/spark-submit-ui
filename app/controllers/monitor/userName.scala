@@ -16,7 +16,7 @@ object UserName extends Controller with Secured {
     if (username.contains("@")){
       shortName = username.split("@")(0)
     }
-    //判断用户权限
+    //获取用户权限 SuperAdmin
     val group = UserCountDao.userBygroup(username)
     //用户组和队列映射
     val group_queue = UserCountDao.find_group_queue()
