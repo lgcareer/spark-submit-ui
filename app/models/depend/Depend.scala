@@ -7,7 +7,7 @@ import models.utils.{Config, Configuration}
   * Created by liangkai on 16/8/22.
   */
 class Depend extends ScalaModule{
-  override def configure(): Unit =  {
+  override def configure(): Unit = {
     bind[TaskDao].to[TaskInfoDao]
     bind[TaskProvider[AppDataObject]].to[TaskDataProvider]
     bind[Config].to[Configuration]

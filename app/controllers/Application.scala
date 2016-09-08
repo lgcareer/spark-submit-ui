@@ -9,6 +9,9 @@ import play.libs.Akka
 import scala.collection.mutable
 import scala.concurrent.ExecutionContext.Implicits.global
 
+/**
+ * webSocket 消息推送(个人)
+ */
 object Application extends  Controller with Secured {
 
   val _paths =mutable.Map.empty[String,(Enumerator[String], Channel[String])]
@@ -16,7 +19,6 @@ object Application extends  Controller with Secured {
   def index = IsAuthenticated { username => implicit request =>
     Ok(views.html.index())
   }
-
 
   def startpush =  WebSocket.using[String] { implicit request =>
     val user: String = request.session.get("email").get

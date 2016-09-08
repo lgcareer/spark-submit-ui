@@ -7,6 +7,7 @@ import play.api.mvc.{Action, Controller}
 
 /**
   * Created by king on 16/9/5.
+ *  集群元数据管理
   */
 object MetaDataManager extends Controller{
 

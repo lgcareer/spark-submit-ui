@@ -21,12 +21,9 @@ object MonitorController  extends Controller with Secured{
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  //  def index = Action {
-  //    Ok(views.html.index("Your new application is ready."))
-  //  }
 
   def jobs=Action{
-
+    //4040端口为长任务端口,针对spark-sql
     val url3 ="http://10.77.136.159:4040/jobs/json/"
     val timeFuture= WS.url(url3).get() map{
       response => response.status match {
@@ -45,11 +42,9 @@ object MonitorController  extends Controller with Secured{
     Ok(views.html.jobs(job))
 
   }
-
+   //针对spark-streaming任务
   def streaming (appui:String) =Action {
-    val aa = appui
-//    println("任务监控URL:"+aa)
-    val url3 = s"$aa/streaming/json/"
+    val url3 = s"$appui/streaming/json/"
     val timeFuture = WS.url(url3).get() map {
       response => response.status match {
         case 200 => Some {

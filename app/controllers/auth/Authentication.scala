@@ -1,5 +1,4 @@
 package controllers
-
 import akka.actor.{ActorSelection, Terminated}
 import models._
 import org.apache.commons.lang3.StringUtils
@@ -16,6 +15,9 @@ import scala.concurrent.Future
 import scala.language.postfixOps
 import scala.util.matching.Regex
 
+/**
+ * 用户登录权限验证
+ */
 object Authentication  extends Controller with  Secured{
 
   val loginForm = Form(

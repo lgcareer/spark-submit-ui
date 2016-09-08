@@ -24,9 +24,20 @@ package models
  *
  *
  */
-case class Yarnlist (name:String,jobid:String,status:String)  {
-     val app_name = name
-     val app_id = jobid
-     val job_status = status
+//
+//case class YarnList @Inject() (config:Config){
+//  config.getString("spark.home")
+//}
 
+
+//case class Yarnlist (name:String,jobid:String,status:String) {
+//     val app_name = name
+//     val app_id = jobid
+//     val job_status = status
+//}
+import models.utils.Config
+object Yarnlist {
+     def loadUrl(config:Config){
+          config.getString("spark.master")
+     }
 }

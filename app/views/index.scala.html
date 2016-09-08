@@ -362,16 +362,17 @@
 
         <script type="text/javascript">
                                 <!--已使用内存统计-->
-                               $(function() {
+                               function memory_count(){
                                var data = group_resource();
                                 var rate = eval(data);
                                 var rateMemory = rate.rateData.rateMemory;
-
-                                <!--设置默认值-->
-                                <!--var rateMemory = 66-->
+                                var rateMemory = 0
                                 $("#userdRateMemory").attr("data-to", rateMemory);
-                                });
-                                 <!--本组资源统计   -->
+                                };
+                               memory_count();
+                               setInterval('memory_count()',5000);
+
+                                 <!--yarn资源计算   -->
                                 function group_resource(){
                                         var retVal = '';
                                         $.ajax({
@@ -412,7 +413,7 @@
                                         ]
                                     },
                                     title: {
-                                        text: '本组使用资源占比',
+                                        text: '本组使用yarn资源占比',
                                         font: { size: 20}
                                     },
                                     tooltip: {
@@ -425,43 +426,10 @@
                                     value: rateData
                                 }).dxCircularGauge('instance');
 
-                                $('#chart_container').highcharts({
-                                    chart: {
-                                        plotBackgroundColor: null,
-                                        plotBorderWidth: null,
-                                        plotShadow: false
-                                    },
-                                    title: {
-                                        text: '集群角色划分'
-                                    },
-                                    tooltip: {
-                                        pointFormat: '{series.name}'
-                                    },
-                                    plotOptions: {
-                                        pie: {
-                                            allowPointSelect: true,
-                                             cursor: 'pointer',
-                                            dataLabels: {
-                                                enabled: true,
-                                                color: '#000000'
-                                            },
-                                            showInLegend: true
-                                        }
-                                    },
-                                    series: [{
-                                        type: 'pie',
-                                        name: '集群节点数',
-                                        data: [
-                                        ['Spark',6],
-                                        ['Hadoop',5],
-                                        ['Mysql',1],
-                                        ['Hive',1],
-                                        ['Hbase',3],
 
 
-                                        ]
-                                    }]
-                                });
+
+                                //内存占比显示
                                 var doughnut2_data_source = [
                                     { id: 0, x1: 0 },
                                     { id: 1, x1: 2 },
@@ -564,6 +532,68 @@
                 });
 
             }
+
+
+    </script>
+
+    <script type="text/javascript">
+                        //Spark standlone资源计算
+                                function spark_resource(){
+                                        var retVal = '';
+                                        $.ajax({
+                                        type:"GET",
+                                        url:"/userResourceSpark",
+                                        dataType:"json",
+                                        async:false,
+                                        success:function(data){
+                                            retVal=data;
+                                        }
+                                    });
+                                    return retVal;
+                                 }
+
+                                var data = spark_resource();
+                                var rate = eval(data);
+                                var rateDataSpark = rate.rateSpark;
+
+                          jQuery(document).ready(function($)
+                            {
+                                var gauge = $('#sparkStandlone').dxCircularGauge({
+                                    scale: {
+                                        startValue: 0,
+                                        endValue: 100,
+                                        majorTick: {
+                                            tickInterval: 10
+                                        },
+                                        label: {
+                                            customizeText: function (arg) {
+                                                return arg.valueText + ' %';
+                                            }
+                                        }
+                                    },
+                                    rangeContainer: {
+                                        ranges: [
+                                            { startValue: 0, endValue: 40, color: '#4DFFFF' },
+                                            { startValue: 40, endValue: 60, color: '#46A3FF' },
+                                            { startValue: 60, endValue: 80, color: '#FF8040' },
+                                            { startValue: 80, endValue: 100, color: '#BB3D00' }
+                                        ]
+                                    },
+                                    title: {
+                                        text: '本组使用Spark资源占比',
+                                        font: { size: 20}
+                                    },
+                                    tooltip: {
+                                        enabled: true,
+                                        format: {
+                                            type: 'present',
+                                            precision: 2
+                                        }
+                                    },
+                                    value: rateDataSpark
+                                }).dxCircularGauge('instance');
+                            });
+
 
 
     </script>
@@ -728,17 +758,12 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div id="gauge-3" style="height: 440px ; margin: 0 30px ;"></div>
-
                 </div>
                 <div class="col-sm-6">
-
-                    <div id="chart_container" style="height: 440px ; margin: 0 30px ;"></div>
+                    <div id="sparkStandlone" style="height: 440px ; margin: 0 30px ;"></div>
                 </div>
 
-
             </div>
-
-
         </div>
 
         <div class="row">
@@ -852,7 +877,7 @@
     <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.0.3(2016.08.24)",
+                    title: "修订日志:v3.0.4(2016.09.02)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
                     "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加WebSocket任务消息推送</i></sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>调整任务状态标签样式</i></span><br><br>" +
