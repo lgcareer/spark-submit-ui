@@ -66,13 +66,13 @@ object SparkSql extends Controller with Secured {
             )
           ).toString()
 
-          println("c :" + resultCSV.toString)
-
           header.toArray.toString + "\n" + result.toArray.toString
 
+          /**
+           * 生成文件并导出
+           */
           writer.println(resultCSV.toString)
           writer.close()
-
           Responder.constant("text/plain")
 
           SparkSqlPool.releaseConn(connection)

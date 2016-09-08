@@ -11,13 +11,10 @@ object ServicePlan {
   def service(): Map[String,String] = {
       DB.withConnection { implicit connection =>
       val servicequery = SQL("select ip,service from serviceplan")
-      
       val stream = servicequery().map(row =>
          row[String]("ip") ->
          row[String]("service")
       ).toMap
-//      val serviceJson =Json.toJson(stream)
-        println("返回Json " + stream.toString)
         stream
     }
 
