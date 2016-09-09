@@ -1,10 +1,13 @@
 package models
 import java.io.File
+
 import org.joda.time.DateTime
 import play.api.db.DB
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import anorm._
+import com.google.inject.Inject
+import models.utils.Config
 import play.api.Play.current
 
 import scala.collection.mutable
@@ -12,10 +15,10 @@ import scala.collection.mutable
 /**
   * Created by liangkai1 on 16/7/11.
   */
-class JobFileDAO extends JobDAO {
+class JobFileDAO(config: Config) extends JobDAO {
 
 
-  private val rootDir = "/tmp/file/"
+  private val rootDir = config.getString("job.upload.path");
   private val rootDirFile = new File(rootDir)
   private  val  rootOV = true
   private val apps = mutable.HashMap.empty[String, Seq[DateTime]]
@@ -34,7 +37,7 @@ class JobFileDAO extends JobDAO {
 
   override def saveJar(userName: String, uploadTime: DateTime, filePart: FilePart[TemporaryFile]):String= {
     val jobName:String=filePart.filename
-    val file: File = new File(s"/tmp/file/$jobName")
+    val file: File = new File(s"$rootDir$jobName")
     filePart.ref.moveTo(file,rootOV)
       addJar(jobName,uploadTime)
       insertJarToDb(JarInfo(userName,uploadTime.toDateTimeISO.toString,file.getAbsolutePath))

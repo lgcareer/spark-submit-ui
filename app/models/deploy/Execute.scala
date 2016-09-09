@@ -25,9 +25,9 @@ object Execute {
 
   var _actorSystem :ActorSystem= _
   var _jobMange:ActorRef= _
-  val _dao: JobFileDAO = new JobFileDAO
-  val _task_dao :TaskDao =new TaskInfoDao
   val _config:Config =new Configuration
+  val _task_dao :TaskDao =new TaskInfoDao
+  val _dao: JobFileDAO = new JobFileDAO(_config)
 
   makeSystem
 
@@ -43,7 +43,7 @@ object Execute {
     * @return
     */
   def getRequest(executeModel: ExecuteModel): CreateBatchRequest ={
-    val timeoutSecs: Long = 50
+    val timeoutSecs: Long = _config.getLong("job.request.timeout.seconds")
     Await.result( (_jobMange ? Initializ(executeModel))(Timeout(timeoutSecs,TimeUnit.SECONDS)) ,
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration).asInstanceOf[CreateBatchRequest]
   }
@@ -54,7 +54,7 @@ object Execute {
     * @param executeModel
     */
   def main(executeModel: ExecuteModel)={
-    val timeoutSecs: Long = 300
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
       Await.result(
       (_jobMange ? SubmitJob(getRequest(executeModel)))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
@@ -69,7 +69,7 @@ object Execute {
     * @return
     */
   def storeJar(userName:String,filePart: FilePart[TemporaryFile]):Any = {
-    val timeoutSecs: Long = 100
+    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
     Await.result( (_jobMange ? StoreJar(userName,filePart))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration);

@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 import models.user.Reason
+import models.utils.Configuration
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.mail.{DefaultAuthenticator, HtmlEmail, SimpleEmail}
 import play.api.Logger
@@ -12,6 +13,8 @@ import play.api.Logger
   * Created by liangkai on 16/6/16.
   */
 object Email {
+  val config = new Configuration
+
   val dateFormat: SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd H:m")
     /**
       * 发送纯文本邮件
@@ -40,11 +43,11 @@ object Email {
   def sendHtmlMail[T](user:T):String={
 
       val email = new HtmlEmail()
-      email.setHostName("smtp.sina.com")
-      email.setSmtpPort(25)
-      email.setAuthenticator(new DefaultAuthenticator("server_noreplay@sina.com", "adminadmin"))
+      email.setHostName(config.getString("email.server.host"))
+      email.setSmtpPort(config.getInt("email.default.port"))
+      email.setAuthenticator(new DefaultAuthenticator(config.getString("email.default.username"),config.getString("adminadmin")))
       email.setSSLOnConnect(true)
-      email.setFrom("server_noreplay@sina.com", "DSP&DBA")
+      email.setFrom(config.getString("email.default.username"), "DSP&DBA")
       email.setCharset("UTF-8")
       user match {
         case u : User => {u.asInstanceOf[User];
@@ -78,7 +81,7 @@ object Email {
        val validateCode=MD5Utils.encode2hex(verify.email)
        val email=verify.email
        val username=verify.name
-        val hostname="http://10.209.72.198:9000"
+        val hostname="http://"+config.getString("email.default.host")
        "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
          " <meta charset=\"UTF-8\">\n  " +
          "  <title>注册结果</title>\n</head>\n<body>\n" +
@@ -103,8 +106,8 @@ object Email {
       val time: String = dateFormat.format(new Date(System.currentTimeMillis()))
       val email=user.email
       val username=user.name
-      val adminemail="jiazheng1@staff.weibo.com"
-      val hostname="http://10.209.72.198:9000"
+      val adminemail=config.getString("email.default.admin")
+      val hostname="http://"+config.getString("email.default.host")
 
       "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
         " <meta charset=\"UTF-8\">\n  " +
@@ -131,7 +134,7 @@ object Email {
   def makeReasonEmail(user: Reason): String ={
     val time: String = dateFormat.format(new Date(System.currentTimeMillis()))
     val username=user.name
-    val adminemail="jiazheng1@staff.weibo.com"
+    val adminemail=config.getString("email.default.admin")
     val msg = user.body
 
     "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
