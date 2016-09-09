@@ -133,6 +133,8 @@ GET   /metadata                         controllers.MetaDataManager.metadata
 GET  /update                        controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
 GET  /rm                            controllers.MetaDataManager.rm(id:String)
 
+GET  /nodedata                         controllers.MetaDataManager.getNodaDatas
+
 
 
 

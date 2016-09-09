@@ -1,295 +1,21 @@
-2016-09-08 16:56:44,378 - [INFO] - from play in pool-4-thread-3 
+2016-09-08 22:51:55,974 - [INFO] - from play in pool-4-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-09-08 16:57:09,957 - [INFO] - from play in play-internal-execution-context-1 
+2016-09-08 22:54:06,528 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-09-08 16:57:13,427 - [INFO] - from play in play-internal-execution-context-1 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 16:57:13,522 - [INFO] - from play in play-internal-execution-context-1 
+2016-09-08 22:54:06,770 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-09-08 16:57:14,681 - [INFO] - from play in New I/O worker #7 
+2016-09-08 23:43:25,977 - [INFO] - from play in New I/O worker #1 
 Starting application default Akka system.
 
-2016-09-08 17:03:25,075 - [INFO] - from play in play-internal-execution-context-4 
-Shutdown application default Akka system.
+2016-09-08 23:51:50,053 - [ERROR] - from application in play-akka.actor.default-dispatcher-19 
 
-2016-09-08 17:03:26,526 - [INFO] - from play in play-internal-execution-context-4 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-09-08 17:03:27,273 - [INFO] - from play in play-internal-execution-context-4 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+! @71bapj35p - Internal server error, for (GET) [/msglist] ->
 
-2016-09-08 17:03:27,280 - [INFO] - from play in play-internal-execution-context-4 
-Application started (Dev)
-
-2016-09-08 17:03:27,741 - [INFO] - from play in New I/O worker #13 
-Starting application default Akka system.
-
-2016-09-08 17:04:26,749 - [INFO] - from play in play-internal-execution-context-5 
-Shutdown application default Akka system.
-
-2016-09-08 17:05:03,781 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:05:04,081 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:05:04,088 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-09-08 17:05:04,658 - [INFO] - from play in New I/O worker #11 
-Starting application default Akka system.
-
-2016-09-08 17:05:48,075 - [INFO] - from play in play-internal-execution-context-5 
-Shutdown application default Akka system.
-
-2016-09-08 17:05:49,553 - [INFO] - from play in play-internal-execution-context-5 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:05:49,951 - [INFO] - from play in play-internal-execution-context-5 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:05:49,957 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2016-09-08 17:05:50,202 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 17:19:32,130 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-<<<<<<< Updated upstream
-
-2016-09-08 17:19:33,432 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:19:34,204 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:19:34,210 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:19:34,733 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 17:20:15,254 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:20:16,777 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:20:17,221 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:20:17,227 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:20:17,705 - [INFO] - from play in New I/O worker #13 
-Starting application default Akka system.
-
-2016-09-08 17:22:08,319 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:22:09,566 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:10,828 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:10,834 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:22:11,368 - [INFO] - from play in New I/O worker #4 
-Starting application default Akka system.
-
-2016-09-08 17:22:41,337 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:22:42,782 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:43,270 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:43,277 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:22:43,747 - [INFO] - from play in New I/O worker #6 
-Starting application default Akka system.
-
-2016-09-08 17:22:49,244 - [INFO] - from play in play-internal-execution-context-10 
-Shutdown application default Akka system.
-
-2016-09-08 17:22:51,566 - [INFO] - from play in play-internal-execution-context-10 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:52,039 - [INFO] - from play in play-internal-execution-context-10 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:52,045 - [INFO] - from play in play-internal-execution-context-10 
-Application started (Dev)
-
-2016-09-08 17:22:52,274 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 17:25:47,343 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:25:48,396 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:25:48,736 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:25:48,741 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:25:49,218 - [INFO] - from play in New I/O worker #14 
-Starting application default Akka system.
-
-2016-09-08 17:26:49,647 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:26:51,545 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:26:51,966 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:26:51,972 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:26:52,425 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 17:37:36,488 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:37:37,672 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:37:38,031 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:37:38,039 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:37:47,979 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 17:44:17,793 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:44:19,171 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:44:19,453 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:44:19,458 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:44:19,989 - [INFO] - from play in New I/O worker #13 
-Starting application default Akka system.
-
-2016-09-08 17:46:09,941 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:46:11,946 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:12,801 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:12,806 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:46:13,288 - [INFO] - from play in New I/O worker #4 
-Starting application default Akka system.
-
-2016-09-08 17:46:39,259 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:46:41,834 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:42,333 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:42,338 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:46:42,709 - [INFO] - from play in New I/O worker #5 
-Starting application default Akka system.
-
-2016-09-08 17:47:52,794 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:47:54,503 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:47:54,857 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:47:54,865 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:47:55,354 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 17:48:17,469 - [INFO] - from play in play-internal-execution-context-20 
-Shutdown application default Akka system.
-
-2016-09-08 17:48:18,523 - [INFO] - from play in play-internal-execution-context-20 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:48:18,884 - [INFO] - from play in play-internal-execution-context-20 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:48:18,890 - [INFO] - from play in play-internal-execution-context-20 
-Application started (Dev)
-
-2016-09-08 17:48:19,426 - [INFO] - from play in New I/O worker #1 
-Starting application default Akka system.
-
-2016-09-08 17:50:29,024 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:51:29,747 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:51:49,880 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:51:49,887 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:51:50,849 - [INFO] - from play in New I/O worker #9 
-Starting application default Akka system.
-
-2016-09-08 17:59:38,570 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:59:42,250 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:59:44,053 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:59:44,059 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:59:44,562 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 18:01:15,057 - [ERROR] - from application in play-akka.actor.default-dispatcher-173 
-
-
-! @71b95i8a7 - Internal server error, for (GET) [/metadatalist] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))]]
+play.api.Application$$anon$1: Execution exception[[SQLException: Timed out waiting for a free available connection.]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
@@ -321,32 +47,32 @@ play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedN
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
-Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))
-	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
-	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:28) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:27) ~[classes/:na]
+Caused by: java.sql.SQLException: Timed out waiting for a free available connection.
+	at com.jolbox.bonecp.DefaultConnectionStrategy.getConnectionInternal(DefaultConnectionStrategy.java:88) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.AbstractConnectionStrategy.getConnection(AbstractConnectionStrategy.java:90) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.getConnection(BoneCP.java:553) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:131) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at play.api.db.DBApi$class.getConnection(DB.scala:67) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.BoneCPApi.getConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.DBApi$class.withConnection(DB.scala:80) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at models.Message$$anonfun$getMessages$1.apply(Message.scala:42) ~[classes/:na]
+	at models.Message$$anonfun$getMessages$1.apply(Message.scala:41) ~[classes/:na]
 	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
 	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:27) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:26) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$.findMetaDatas(MetaData.scala:26) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:21) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:18) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
+	at models.Message$.getMessages(Message.scala:41) ~[classes/:na]
+	at controllers.Application$$anonfun$msglist$1$$anonfun$apply$3$$anonfun$apply$4.apply(Application.scala:43) ~[classes/:na]
+	at controllers.Application$$anonfun$msglist$1$$anonfun$apply$3$$anonfun$apply$4.apply(Application.scala:40) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
@@ -369,12 +95,12 @@ Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metada
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
 	... 6 common frames omitted
 
-2016-09-08 18:01:19,560 - [ERROR] - from application in play-akka.actor.default-dispatcher-174 
+2016-09-09 00:00:47,981 - [ERROR] - from application in play-akka.actor.default-dispatcher-38 
 
 
-! @71b95if1i - Internal server error, for (GET) [/metadatalist] ->
+! @71bb0nj08 - Internal server error, for (GET) [/download] ->
 
-play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))]]
+play.api.Application$$anon$1: Execution exception[[FileNotFoundException: /tmp/spark-231378689.txt (No such file or directory)]]
 	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
 	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
@@ -406,32 +132,15 @@ play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedN
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
-Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))
-	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
-	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:28) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:27) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:27) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:26) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$.findMetaDatas(MetaData.scala:26) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:21) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:18) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
+Caused by: java.io.FileNotFoundException: /tmp/spark-231378689.txt (No such file or directory)
+	at java.io.FileInputStream.open(Native Method) ~[na:1.8.0]
+	at java.io.FileInputStream.<init>(FileInputStream.java:131) ~[na:1.8.0]
+	at play.api.libs.iteratee.Enumerator$.fromFile(Enumerator.scala:574) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Results$Status.sendFile(Results.scala:686) ~[play_2.10-2.2.6.jar:2.2.6]
+	at controllers.SparkSql$$anonfun$download$1$$anonfun$apply$9$$anonfun$apply$10.apply(SparkSql.scala:104) ~[classes/:na]
+	at controllers.SparkSql$$anonfun$download$1$$anonfun$apply$9$$anonfun$apply$10.apply(SparkSql.scala:103) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
 	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
@@ -454,715 +163,393 @@ Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metada
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
 	... 6 common frames omitted
 
-2016-09-08 18:01:20,681 - [ERROR] - from application in play-akka.actor.default-dispatcher-176 
+2016-09-09 00:34:40,399 - [INFO] - from play in play-internal-execution-context-5 
+Shutdown application default Akka system.
+
+2016-09-09 00:34:43,098 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:34:43,108 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-09-09 00:34:44,173 - [INFO] - from play in New I/O worker #5 
+Starting application default Akka system.
+
+2016-09-09 00:36:11,842 - [INFO] - from play in play-internal-execution-context-18 
+Shutdown application default Akka system.
+
+2016-09-09 00:36:14,057 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:36:14,063 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2016-09-09 00:36:14,564 - [INFO] - from play in New I/O worker #4 
+Starting application default Akka system.
+
+2016-09-09 00:37:29,346 - [INFO] - from play in play-internal-execution-context-5 
+Shutdown application default Akka system.
+
+2016-09-09 00:37:32,118 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:37:32,124 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2016-09-09 00:37:32,921 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-09-09 00:46:36,123 - [INFO] - from play in play-internal-execution-context-20 
+Shutdown application default Akka system.
+
+2016-09-09 00:46:38,531 - [INFO] - from play in play-internal-execution-context-20 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:46:38,537 - [INFO] - from play in play-internal-execution-context-20 
+Application started (Dev)
+
+2016-09-09 00:46:39,378 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-09-09 00:54:44,238 - [INFO] - from play in play-internal-execution-context-21 
+Shutdown application default Akka system.
+
+2016-09-09 00:54:46,608 - [INFO] - from play in play-internal-execution-context-21 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:54:46,614 - [INFO] - from play in play-internal-execution-context-21 
+Application started (Dev)
+
+2016-09-09 00:54:47,422 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-09-09 00:55:32,036 - [INFO] - from play in play-internal-execution-context-23 
+Shutdown application default Akka system.
+
+2016-09-09 00:55:34,441 - [INFO] - from play in play-internal-execution-context-23 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:55:34,447 - [INFO] - from play in play-internal-execution-context-23 
+Application started (Dev)
+
+2016-09-09 00:55:35,365 - [INFO] - from play in New I/O worker #6 
+Starting application default Akka system.
+
+2016-09-09 00:57:21,616 - [INFO] - from play in play-internal-execution-context-24 
+Shutdown application default Akka system.
+
+2016-09-09 00:57:23,883 - [INFO] - from play in play-internal-execution-context-24 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:57:23,889 - [INFO] - from play in play-internal-execution-context-24 
+Application started (Dev)
+
+2016-09-09 00:57:24,174 - [INFO] - from play in New I/O worker #6 
+Starting application default Akka system.
+
+2016-09-09 00:57:51,200 - [INFO] - from play in play-internal-execution-context-27 
+Shutdown application default Akka system.
+
+2016-09-09 00:57:53,506 - [INFO] - from play in play-internal-execution-context-27 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:57:53,511 - [INFO] - from play in play-internal-execution-context-27 
+Application started (Dev)
+
+2016-09-09 00:57:54,325 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-09-09 00:58:11,819 - [INFO] - from play in play-internal-execution-context-28 
+Shutdown application default Akka system.
+
+2016-09-09 00:58:14,142 - [INFO] - from play in play-internal-execution-context-28 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:58:14,149 - [INFO] - from play in play-internal-execution-context-28 
+Application started (Dev)
+
+2016-09-09 00:58:14,709 - [INFO] - from play in New I/O worker #4 
+Starting application default Akka system.
+
+2016-09-09 00:58:58,549 - [INFO] - from play in play-internal-execution-context-27 
+Shutdown application default Akka system.
+
+2016-09-09 00:59:04,683 - [INFO] - from play in play-internal-execution-context-27 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 00:59:04,688 - [INFO] - from play in play-internal-execution-context-27 
+Application started (Dev)
+
+2016-09-09 00:59:05,501 - [INFO] - from play in New I/O worker #7 
+Starting application default Akka system.
+
+2016-09-09 01:23:06,199 - [ERROR] - from application in New I/O worker #8 
 
 
-! @71b95igik - Internal server error, for (GET) [/metadatalist] ->
+! @71bbbie7l - Internal server error, for (GET) [/rmSession] ->
 
-play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.3.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
-Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))
-	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
-	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:28) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:27) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+play.PlayExceptions$RoutesCompilationException: Compilation error[Whitespace expected]
+	at play.PlaySourceGenerators$$anonfun$2.apply(PlaySourceGenerators.scala:21) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$2.apply(PlaySourceGenerators.scala:9) ~[na:na]
+	at play.Settings$$anonfun$defaultSettings$18.apply(PlaySettings.scala:105) ~[na:na]
+	at play.Settings$$anonfun$defaultSettings$18.apply(PlaySettings.scala:104) ~[na:na]
+	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:35) ~[scala-library-2.10.3.jar:na]
+	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:34) ~[scala-library-2.10.3.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.3.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
+	at sbt.Execute.work(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-09-09 01:23:06,588 - [ERROR] - from application in New I/O worker #1 
+
+
+! @71bbbii2d - Internal server error, for (GET) [/role] ->
+
+play.PlayExceptions$RoutesCompilationException: Compilation error[Whitespace expected]
+	at play.PlaySourceGenerators$$anonfun$2.apply(PlaySourceGenerators.scala:21) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$2.apply(PlaySourceGenerators.scala:9) ~[na:na]
+	at play.Settings$$anonfun$defaultSettings$18.apply(PlaySettings.scala:105) ~[na:na]
+	at play.Settings$$anonfun$defaultSettings$18.apply(PlaySettings.scala:104) ~[na:na]
+	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:35) ~[scala-library-2.10.3.jar:na]
+	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:34) ~[scala-library-2.10.3.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.3.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:63) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17) ~[na:na]
+	at sbt.Execute.work(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0]
+	at java.lang.Thread.run(Thread.java:744) [na:1.8.0]
+
+2016-09-09 01:23:25,093 - [ERROR] - from application in New I/O worker #1 
+
+
+! @71bbbjk09 - Internal server error, for (GET) [/nodedata] ->
+
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:27) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:26) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$.findMetaDatas(MetaData.scala:26) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:21) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:18) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2016-09-09 01:23:31,884 - [ERROR] - from application in New I/O worker #1 
+
+
+! @71bbbk41f - Internal server error, for (GET) [/nodedata] ->
+
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
-	... 6 common frames omitted
-
-2016-09-08 18:25:58,884 - [INFO] - from play in play-internal-execution-context-33 
-Shutdown application default Akka system.
-
-2016-09-08 18:26:00,098 - [INFO] - from play in play-internal-execution-context-33 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:26:00,369 - [INFO] - from play in play-internal-execution-context-33 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:26:00,377 - [INFO] - from play in play-internal-execution-context-33 
-Application started (Dev)
-
-2016-09-08 18:26:00,718 - [INFO] - from play in New I/O worker #5 
-Starting application default Akka system.
-
-2016-09-08 18:27:27,414 - [INFO] - from play in play-internal-execution-context-35 
-Shutdown application default Akka system.
-
-2016-09-08 18:27:32,300 - [INFO] - from play in play-internal-execution-context-35 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:27:33,270 - [INFO] - from play in play-internal-execution-context-35 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:27:33,276 - [INFO] - from play in play-internal-execution-context-35 
-Application started (Dev)
-
-2016-09-08 18:27:33,712 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 18:28:35,046 - [INFO] - from play in play-internal-execution-context-26 
-Shutdown application default Akka system.
-
-2016-09-08 18:28:36,496 - [INFO] - from play in play-internal-execution-context-26 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:28:37,136 - [INFO] - from play in play-internal-execution-context-26 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:28:37,142 - [INFO] - from play in play-internal-execution-context-26 
-Application started (Dev)
-
-2016-09-08 18:28:37,607 - [INFO] - from play in New I/O worker #2 
-Starting application default Akka system.
-
-2016-09-08 18:41:31,518 - [INFO] - from play in play-internal-execution-context-39 
-Shutdown application default Akka system.
-
-2016-09-08 18:41:33,059 - [INFO] - from play in play-internal-execution-context-39 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:41:33,544 - [INFO] - from play in play-internal-execution-context-39 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:41:33,550 - [INFO] - from play in play-internal-execution-context-39 
-Application started (Dev)
-
-2016-09-08 18:41:33,982 - [INFO] - from play in New I/O worker #4 
-Starting application default Akka system.
-
-2016-09-08 18:49:32,314 - [INFO] - from play in play-internal-execution-context-43 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:49:32,317 - [INFO] - from play in play-internal-execution-context-43 
-Application started (Dev)
-
-2016-09-08 18:49:33,479 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 18:53:22,443 - [INFO] - from play in play-internal-execution-context-47 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:53:22,448 - [INFO] - from play in play-internal-execution-context-47 
-Application started (Dev)
-
-2016-09-08 18:53:57,973 - [INFO] - from play in New I/O worker #14 
-=======
-
-2016-09-08 17:19:33,432 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:19:34,204 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:19:34,210 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:19:34,733 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 17:20:15,254 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:20:16,777 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:20:17,221 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:20:17,227 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:20:17,705 - [INFO] - from play in New I/O worker #13 
-Starting application default Akka system.
-
-2016-09-08 17:22:08,319 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:22:09,566 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:10,828 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:10,834 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:22:11,368 - [INFO] - from play in New I/O worker #4 
-Starting application default Akka system.
-
-2016-09-08 17:22:41,337 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:22:42,782 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:43,270 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:43,277 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:22:43,747 - [INFO] - from play in New I/O worker #6 
-Starting application default Akka system.
-
-2016-09-08 17:22:49,244 - [INFO] - from play in play-internal-execution-context-10 
-Shutdown application default Akka system.
-
-2016-09-08 17:22:51,566 - [INFO] - from play in play-internal-execution-context-10 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:52,039 - [INFO] - from play in play-internal-execution-context-10 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:22:52,045 - [INFO] - from play in play-internal-execution-context-10 
-Application started (Dev)
-
-2016-09-08 17:22:52,274 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 17:25:47,343 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-08 17:25:48,396 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:25:48,736 - [INFO] - from play in play-internal-execution-context-6 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:25:48,741 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
-
-2016-09-08 17:25:49,218 - [INFO] - from play in New I/O worker #14 
-Starting application default Akka system.
-
-2016-09-08 17:26:49,647 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:26:51,545 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:26:51,966 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:26:51,972 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:26:52,425 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 17:37:36,488 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:37:37,672 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:37:38,031 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:37:38,039 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:37:47,979 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 17:44:17,793 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:44:19,171 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:44:19,453 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:44:19,458 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:44:19,989 - [INFO] - from play in New I/O worker #13 
-Starting application default Akka system.
-
-2016-09-08 17:46:09,941 - [INFO] - from play in play-internal-execution-context-11 
-Shutdown application default Akka system.
-
-2016-09-08 17:46:11,946 - [INFO] - from play in play-internal-execution-context-11 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:12,801 - [INFO] - from play in play-internal-execution-context-11 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:12,806 - [INFO] - from play in play-internal-execution-context-11 
-Application started (Dev)
-
-2016-09-08 17:46:13,288 - [INFO] - from play in New I/O worker #4 
-Starting application default Akka system.
-
-2016-09-08 17:46:39,259 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:46:41,834 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:42,333 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:46:42,338 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:46:42,709 - [INFO] - from play in New I/O worker #5 
-Starting application default Akka system.
-
-2016-09-08 17:47:52,794 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:47:54,503 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:47:54,857 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:47:54,865 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:47:55,354 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 17:48:17,469 - [INFO] - from play in play-internal-execution-context-20 
-Shutdown application default Akka system.
-
-2016-09-08 17:48:18,523 - [INFO] - from play in play-internal-execution-context-20 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:48:18,884 - [INFO] - from play in play-internal-execution-context-20 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:48:18,890 - [INFO] - from play in play-internal-execution-context-20 
-Application started (Dev)
-
-2016-09-08 17:48:19,426 - [INFO] - from play in New I/O worker #1 
-Starting application default Akka system.
-
-2016-09-08 17:50:29,024 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:51:29,747 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:51:49,880 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:51:49,887 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:51:50,849 - [INFO] - from play in New I/O worker #9 
-Starting application default Akka system.
-
-2016-09-08 17:59:38,570 - [INFO] - from play in play-internal-execution-context-17 
-Shutdown application default Akka system.
-
-2016-09-08 17:59:42,250 - [INFO] - from play in play-internal-execution-context-17 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:59:44,053 - [INFO] - from play in play-internal-execution-context-17 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 17:59:44,059 - [INFO] - from play in play-internal-execution-context-17 
-Application started (Dev)
-
-2016-09-08 17:59:44,562 - [INFO] - from play in New I/O worker #7 
-Starting application default Akka system.
-
-2016-09-08 18:01:15,057 - [ERROR] - from application in play-akka.actor.default-dispatcher-173 
-
-
-! @71b95i8a7 - Internal server error, for (GET) [/metadatalist] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.3.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
-Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))
-	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
-	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:28) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:27) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:27) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:26) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2016-09-09 01:24:01,365 - [ERROR] - from application in New I/O worker #1 
+
+
+! @71bbbllhd - Internal server error, for (GET) [/nodedata] ->
+
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$.findMetaDatas(MetaData.scala:26) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:21) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:18) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
-	... 6 common frames omitted
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
 
-2016-09-08 18:01:19,560 - [ERROR] - from application in play-akka.actor.default-dispatcher-174 
+2016-09-09 01:24:05,782 - [ERROR] - from application in New I/O worker #1 
 
 
-! @71b95if1i - Internal server error, for (GET) [/metadatalist] ->
+! @71bbbm25a - Internal server error, for (GET) [/nodedata] ->
 
-play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.3.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
-Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))
-	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
-	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:28) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:27) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:27) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:26) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$.findMetaDatas(MetaData.scala:26) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:21) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:18) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2016-09-09 01:24:41,907 - [ERROR] - from application in New I/O worker #2 
+
+
+! @71bbbo3gk - Internal server error, for (GET) [/nodedata] ->
+
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
-	... 6 common frames omitted
-
-2016-09-08 18:01:20,681 - [ERROR] - from application in play-akka.actor.default-dispatcher-176 
-
-
-! @71b95igik - Internal server error, for (GET) [/metadatalist] ->
-
-play.api.Application$$anon$1: Execution exception[[RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))]]
-	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
-	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.3.jar:na]
-	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
-	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.3.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
-Caused by: java.lang.RuntimeException: UnexpectedNullableFound(ColumnName(metadata.name,Some(name)))
-	at scala.sys.package$.error(package.scala:27) ~[scala-library-2.10.3.jar:na]
-	at anorm.Sql$.as(Anorm.scala:537) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.Sql$class.as(Anorm.scala:455) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at anorm.SqlQuery.as(Anorm.scala:481) ~[anorm_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:28) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1$$anonfun$apply$1.apply(MetaData.scala:27) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:27) ~[classes/:na]
-	at models.MetaData$$anonfun$findMetaDatas$1.apply(MetaData.scala:26) ~[classes/:na]
-	at play.api.db.DBApi$class.withConnection(DB.scala:82) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.BoneCPApi.withConnection(DB.scala:276) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at play.api.db.DB$$anonfun$withConnection$3.apply(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
+
+2016-09-09 01:24:42,970 - [ERROR] - from application in New I/O worker #1 
+
+
+! @71bbbo55h - Internal server error, for (GET) [/nodedata] ->
+
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.db.DB$.withConnection(DB.scala:162) ~[play-jdbc_2.10-2.2.6.jar:2.2.6]
-	at models.MetaData$.findMetaDatas(MetaData.scala:26) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:21) ~[classes/:na]
-	at controllers.MetaDataManager$$anonfun$metadatas$1.apply(MetaDataManager.scala:18) ~[classes/:na]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$11.apply(Action.scala:255) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.3.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
-	... 6 common frames omitted
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
 
-2016-09-08 18:25:58,884 - [INFO] - from play in play-internal-execution-context-33 
-Shutdown application default Akka system.
+2016-09-09 01:26:15,104 - [ERROR] - from application in New I/O worker #3 
 
-2016-09-08 18:26:00,098 - [INFO] - from play in play-internal-execution-context-33 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-09-08 18:26:00,369 - [INFO] - from play in play-internal-execution-context-33 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
+! @71bbc3bd9 - Internal server error, for (GET) [/nodedata] ->
 
-2016-09-08 18:26:00,377 - [INFO] - from play in play-internal-execution-context-33 
-Application started (Dev)
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
 
-2016-09-08 18:26:00,718 - [INFO] - from play in New I/O worker #5 
-Starting application default Akka system.
+2016-09-09 01:26:19,525 - [ERROR] - from application in New I/O worker #3 
 
-2016-09-08 18:27:27,414 - [INFO] - from play in play-internal-execution-context-35 
-Shutdown application default Akka system.
 
-2016-09-08 18:27:32,300 - [INFO] - from play in play-internal-execution-context-35 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+! @71bbc3i18 - Internal server error, for (GET) [/nodedata] ->
 
-2016-09-08 18:27:33,270 - [INFO] - from play in play-internal-execution-context-35 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:27:33,276 - [INFO] - from play in play-internal-execution-context-35 
-Application started (Dev)
-
-2016-09-08 18:27:33,712 - [INFO] - from play in New I/O worker #15 
-Starting application default Akka system.
-
-2016-09-08 18:28:35,046 - [INFO] - from play in play-internal-execution-context-26 
-Shutdown application default Akka system.
-
-2016-09-08 18:28:36,496 - [INFO] - from play in play-internal-execution-context-26 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:28:37,136 - [INFO] - from play in play-internal-execution-context-26 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:28:37,142 - [INFO] - from play in play-internal-execution-context-26 
-Application started (Dev)
-
-2016-09-08 18:28:37,607 - [INFO] - from play in New I/O worker #2 
-Starting application default Akka system.
-
-2016-09-08 18:41:31,518 - [INFO] - from play in play-internal-execution-context-39 
-Shutdown application default Akka system.
-
-2016-09-08 18:41:33,059 - [INFO] - from play in play-internal-execution-context-39 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:41:33,544 - [INFO] - from play in play-internal-execution-context-39 
-database [test] connected at jdbc:mysql://10.73.33.41/test?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 18:41:33,550 - [INFO] - from play in play-internal-execution-context-39 
-Application started (Dev)
-
-2016-09-08 18:41:33,982 - [INFO] - from play in New I/O worker #4 
->>>>>>> Stashed changes
-Starting application default Akka system.
-
-2016-09-08 19:00:20,047 - [INFO] - from play in play-internal-execution-context-45 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-08 19:00:20,055 - [INFO] - from play in play-internal-execution-context-45 
-Application started (Dev)
-
-2016-09-08 19:00:20,497 - [INFO] - from play in New I/O worker #13 
-Starting application default Akka system.
+play.PlayExceptions$CompilationException: Compilation error[MetaDataManager is already defined as object MetaDataManager]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.3.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.3.jar:na]
 
 2016-09-09 10:33:51,463 - [INFO] - from play in play-internal-execution-context-49 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
