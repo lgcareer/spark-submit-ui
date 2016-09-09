@@ -1233,3 +1233,51 @@ Application started (Dev)
 2016-09-09 11:04:34,934 - [INFO] - from play in New I/O worker #14 
 Starting application default Akka system.
 
+2016-09-09 11:36:56,426 - [INFO] - from play in play-internal-execution-context-66 
+Shutdown application default Akka system.
+
+2016-09-09 11:37:49,483 - [INFO] - from play in play-internal-execution-context-66 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 11:37:49,490 - [INFO] - from play in play-internal-execution-context-66 
+Application started (Dev)
+
+2016-09-09 11:37:50,258 - [INFO] - from play in New I/O worker #9 
+Starting application default Akka system.
+
+2016-09-09 11:42:11,905 - [INFO] - from play in play-internal-execution-context-55 
+Shutdown application default Akka system.
+
+2016-09-09 11:42:18,884 - [INFO] - from play in play-internal-execution-context-55 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 11:42:18,892 - [INFO] - from play in play-internal-execution-context-55 
+Application started (Dev)
+
+2016-09-09 11:42:19,559 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2016-09-09 11:43:24,700 - [INFO] - from play in play-internal-execution-context-55 
+Shutdown application default Akka system.
+
+2016-09-09 11:43:31,739 - [INFO] - from play in play-internal-execution-context-55 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 11:43:31,745 - [INFO] - from play in play-internal-execution-context-55 
+Application started (Dev)
+
+2016-09-09 11:43:32,369 - [INFO] - from play in New I/O worker #8 
+Starting application default Akka system.
+
+2016-09-09 11:56:47,349 - [INFO] - from play in play-internal-execution-context-55 
+Shutdown application default Akka system.
+
+2016-09-09 11:57:00,147 - [INFO] - from play in play-internal-execution-context-55 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-09 11:57:00,152 - [INFO] - from play in play-internal-execution-context-55 
+Application started (Dev)
+
+2016-09-09 11:57:00,568 - [INFO] - from play in New I/O worker #15 
+Starting application default Akka system.
+
