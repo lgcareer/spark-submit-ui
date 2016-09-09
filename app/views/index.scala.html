@@ -845,37 +845,15 @@
     });
     </script>*@
 
-@*
-    修订日志:v3.0.2(2016.08.19)
-        修改编辑用户与注册审核对话框
-    添加注册审核发送邮件功能
-    添加个人中心下的任务列表页面
-    提交jar页面新增yarn,standalone，local选择
-    添加查看任务，杀死任务，重试任务功能
-    添加用户组、组员统计功能
-    添加Yarn资源调度参数列表
-    修正服务划分图标
-    本组资源占比计算以及展示*@
-
-@*
-    修订日志:v3.0.3(2016.08.24)
-        添加任务kill,rerun功能
-    添加执行任务交互
-    添加个人任务展示
-    修正表格样式&部分UI调整
-    dashboard页面添加本组资源占比
-    添加本组内存使用占比
-    添加Yarn资源调度参数列表
-    添加组用户组yarn任务列表*@
-
-@*
-    修订日志:v3.0.4(2016.09.02)
-    添加WebSocket任务消息推送
-    调整任务状态标签样式
-    添加超级用户组(SuperAdmin)权限
-    添加根据不同用户组权限显示资源占比
-    修正yarn接口数据传输格式
-    修正表格样式&部分UI调整
+    @*
+        修订日志:v3.0.5(2016.09.09)
+        添加全局配置文件
+        优化websocket消息推送,增加已读信息功能
+        改造play framework数据库连接池
+        优化页面刷新功能(数据库/js)
+        添加spark master调度资源占比
+        dashboard和后台优化页面调整
+        修正表格样式&部分UI调整
     *@
 
 
@@ -884,11 +862,10 @@
                 swal({
                     title: "修订日志:v3.0.4(2016.09.02)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加WebSocket任务消息推送</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>调整任务状态标签样式</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加超级用户组(SuperAdmin)权限</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加根据不同用户组权限显示资源占比</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修正yarn接口数据传输格式</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>改造play framework数据库连接池</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>优化页面刷新功能(数据库/js)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加spark master调度资源占比</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;dashboard页面调整</sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
                     "</div>",
                     timer: 8000,

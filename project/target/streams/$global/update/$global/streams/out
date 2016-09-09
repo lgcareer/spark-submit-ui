@@ -7212,7 +7212,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1196ms :: artifacts dl 30ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1162ms :: artifacts dl 32ms[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT compile produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT runtime produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT test produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test.xml[0m
@@ -7226,5 +7226,5 @@
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT docs produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT pom produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT scala-tool produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1196ms resolve - 30ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (1162ms resolve - 32ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

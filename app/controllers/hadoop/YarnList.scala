@@ -8,7 +8,6 @@ import models._
 
 
 object YarnList  extends Controller  with Secured {
-
    var config : Configuration = new Configuration()
 
   /**
@@ -16,9 +15,10 @@ object YarnList  extends Controller  with Secured {
    */
 
   def yarnInfo = IsAuthenticated { username => implicit request =>
+//  val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ ":8088/ws/v1/cluster/apps"
     val indexSource = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/apps").mkString
     val json = Json.parse(indexSource)
-     Ok(json)
+    Ok(json)
   }
 
   /**
