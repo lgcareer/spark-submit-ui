@@ -3,6 +3,7 @@ package models
 import anorm.SqlParser._
 import anorm._
 import play.api.db.DB
+import play.api.Play.current
 
 /**
   * Created by liangkai1 on 16/9/8.

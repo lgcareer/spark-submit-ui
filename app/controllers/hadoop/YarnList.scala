@@ -1,12 +1,15 @@
 package controllers
 
 import models.io.UserCountDao
+import models.utils.Configuration
 import play.api.libs.json._
 import play.api.mvc._
 import models._
 
 
 object YarnList  extends Controller  with Secured {
+
+   var config : Configuration = new Configuration()
 
   /**
    * Yarn数据列表显示
