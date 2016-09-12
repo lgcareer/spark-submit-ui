@@ -1,10 +1,10 @@
 package controllers
 
+import models._
 import models.io.UserCountDao
 import models.utils.Configuration
 import play.api.libs.json._
 import play.api.mvc._
-import models._
 
 
 object YarnList  extends Controller  with Secured {
@@ -15,26 +15,37 @@ object YarnList  extends Controller  with Secured {
    */
 
   def yarnInfo = IsAuthenticated { username => implicit request =>
-//  val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ ":8088/ws/v1/cluster/apps"
-    val indexSource = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/apps").mkString
+    val groupName = UserCountDao.userBygroup(username)
+    val group_queue = UserCountDao.find_group_queue()
+    val queue = group_queue(groupName)
+    val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ "/ws/v1/cluster/apps"
+    val indexSource = scala.io.Source.
+      fromURL(yarn_url).mkString
     val json = Json.parse(indexSource)
-    Ok(json)
+    val length = (json \\ "queue").length
+    if (queue == "") {
+      Ok(json)
+    } else {
+      println(queue)
+      var strjson = "{\"apps\":{\"app\":["
+      for (i <- 0 until length) {
+        val app = (json \ "apps" \ "app")(i)
+        if (app.toString().contains(queue)) {
+          strjson += app + ","
+        }
+      }
+      strjson = strjson.substring(0, strjson.length - 1)
+      strjson += "]}}"
+      Ok(strjson)
+    }
   }
-
   /**
    * Yarn数据列表
    * 根据不同权限显示不同yarn任务列表
    * @return
    */
   def yarnlist = IsAuthenticated { username => implicit request =>
-    val groupName = UserCountDao.userBygroup(username)
-    val group_queue_all :Map[String,String] = UserCountDao.find_group_queue()
-    val queueName = group_queue_all(groupName)
-    if(queueName == "") {
-      Ok(views.html.yarnlist("SuperAdmin"))
-     }else {
-      Ok(views.html.yarnlist(queueName))
-    }
+      Ok(views.html.yarnlist())
   }
 
 
@@ -42,13 +53,38 @@ object YarnList  extends Controller  with Secured {
    * Spark Worker信息
    * @return
    */
-  def workerlistdata = IsAuthenticated { username => implicit request =>
-    val workersJson = scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString
-    Ok(Json.parse(workersJson))
+  def workerlist = IsAuthenticated { username => implicit request =>
+    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
+    val json = Json.parse(sparkDashboard)
+    val workerList = json \ "workers"
+    Ok(workerList)
   }
 
+  def runTasklist = IsAuthenticated { username => implicit request =>
+    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
+    val json = Json.parse(sparkDashboard)
+    val runTaskLength = (json \ "activeapps" \\ "id").length
+    val finishTaskLength = (json \ "completedapps" \\ "id").length
+    val runTasklist = json \ "activeapps"
+    val finishTasklist = json \ "completedapps"
+    var apps = "{\"apps\":["
+    for(i <- 0 until runTaskLength){
+         apps += (json \ "activeapps")(i) + ","
+    }
+    for(i <- 0 until finishTaskLength){
+        apps += (json \ "completedapps")(i) + ","
+    }
+    apps = apps.substring(0, apps.length - 1)
+    println(apps)
+    apps += "]}"
+    Ok(apps)
+  }
+
+
   def workerInfo = IsAuthenticated { username => implicit request =>
-    Ok(views.html.workerInfo.render())
+    Ok(views.html.workerInfo())
   }
 
   /**
@@ -56,7 +92,7 @@ object YarnList  extends Controller  with Secured {
    * @return
    */
   def sparklist = IsAuthenticated { username => implicit request =>
-    Ok(views.html.sparklist.render())
+    Ok(views.html.sparklist())
   }
 
   /**

@@ -122,10 +122,6 @@ object UserCountDao {
            runCoresBuffer += (Json.parse(runTask(i).toString()) \ "cores").toString().toLong
          }
        }
-       println("runMemoryBuffer" + runMemoryBuffer.sum/1024)
-       println("runCoresBuffer" + runCoresBuffer.sum)
-       println("tallyMemory" + tallyMemory)
-       println("tallyCore" + tallyCore)
 
        sparkRate = Math.round((runMemoryBuffer.sum/1024 * 1.0 + runCoresBuffer.sum * 1.0)
          / (tallyMemory * 1.0 + tallyCore * 1.0) * 100)
@@ -253,7 +249,7 @@ object UserCountDao {
    * @return
    */
   def find_group_queue(): Map[String,String] = {
-    DB.withConnection("default") { implicit connection =>
+    DB.withConnection { implicit connection =>
       var group_queue:Map[String,String] = Map()
       SQL("select `group`,queue from user_group group by `group`,queue")().foreach { row =>
           group_queue += (row[String]("group") -> row[String]("queue"))
