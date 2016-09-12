@@ -33,28 +33,37 @@
    function onMessage(evt)
    {
      writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data+'</span>');
-                         $.ajax({
-                             type:"GET",
-                             url:"/msglist",
-                             dataType:"json",
-                             success:function(data){
-                             var head= ""
-                             var $count = 0;
-                             var myobj=eval(data);
-                             for (var p in myobj) {
-                                 var datamid = eval(data[p]);
-                                 for (var i = 0; i < datamid.length; i++) {
-                                     $count++;
-                                     head +="<li class=\"notification-warning\"><a href=\"/tasklist\"><i class=\"fa-envelope-o\"></i><span class=\"line\">"+"任务运行结束,当前状态 "+datamid[i].state+"</span><span class=\"line small time\">"+"ID "+datamid[i].id+"</span></a></li>"
+      showmessage();
+   }
 
-                                 };
-                             };
-                             $('#msglist').html(head);
-                             if($count!=0){
-                              $('#count').html($count);
-                               }
-                             }
-                         });
+   function showmessage(){
+                  $.ajax({
+                                     type:"GET",
+                                     url:"/msglist",
+                                     dataType:"json",
+                                     success:function(data){
+                                     var head= ""
+                                     var $count = 0;
+                                     var myobj=eval(data);
+                                     for (var p in myobj) {
+                                         var datamid = eval(data[p]);
+                                         for (var i = 0; i < datamid.length; i++) {
+                                             $count++;
+                                             head +="<li class=\"notification-warning\"><a  href=\"/read?appId="+datamid[i].id+"\"><i class=\"fa-envelope-o\"></i><span class=\"line\">"+"任务运行结束,当前状态 "+datamid[i].state+"</span><span class=\"line small time\">"+"ID "+datamid[i].id+"</span></a></li>"
+
+                                         };
+                                     };
+
+                                     $('#msglist').html(head);
+                                     if($count!=0){
+                                      $('#count').html($count);
+                                       }
+                                      $('#mes').html($count);
+
+
+                                     }
+                                 });
+
    }
 
    function onError(evt)

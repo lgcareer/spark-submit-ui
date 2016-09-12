@@ -10,9 +10,7 @@ import play.api.mvc.Controller
 object Usertally extends Controller with Secured{
 
   def usertatol = IsAuthenticated { username => implicit request =>
-    val users = UserCountDao.userCount()
-    implicit val userstatotal = Json.writes[UserCountDao]
-    val json: JsValue = Json.toJson(UserCountDao.findAll)
+    //待审核用户
     val aduits = UserCountDao.auditUser()
     Ok(views.html.userelevan(aduits))
   }
@@ -24,7 +22,7 @@ object Usertally extends Controller with Secured{
   }
 
   /**
-   * 用户组资源计算
+   * 用户组Yarn资源计算
    */
 
   def userResource = IsAuthenticated { username => implicit request =>
@@ -33,5 +31,10 @@ object Usertally extends Controller with Secured{
      Ok(Json.parse(rateData))
   }
 
+  def userResourceSpark = IsAuthenticated { username => implicit request =>
+    val rateSpark = UserCountDao.userResourceRateSpark(username)
+    val rateJson = "{\"user\":" + "\"" + username + "\",\"rateSpark\":" + "" + rateSpark + "}"
+    Ok(rateJson)
+  }
 
 }

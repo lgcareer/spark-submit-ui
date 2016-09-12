@@ -76,7 +76,7 @@ var EditableTable = function () {
 
             $('#editable-sample_new').click(function (e) {
                 e.preventDefault();
-                var aiNew = oTable.fnAddData(['', '', '', '<a class="edit" href="">编辑</a>',
+                var aiNew = oTable.fnAddData(['', '', '', '',
                         '<a class="edit" href="">编辑</a>', '<a class="cancel" data-mode="new" href="">取消</a>'
                 ]);
                 var nRow = oTable.fnGetNodes(aiNew[0]);

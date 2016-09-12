@@ -214,6 +214,11 @@
                                 <span class="title">功能划分</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="@routes.MetaDataManager.metadata">
+                                <span class="title">集群管理</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -362,16 +367,17 @@
 
         <script type="text/javascript">
                                 <!--已使用内存统计-->
-                               $(function() {
+                               function memory_count(){
                                var data = group_resource();
                                 var rate = eval(data);
                                 var rateMemory = rate.rateData.rateMemory;
-
-                                <!--设置默认值-->
-                                <!--var rateMemory = 66-->
+                                var rateMemory = 0
                                 $("#userdRateMemory").attr("data-to", rateMemory);
-                                });
-                                 <!--本组资源统计   -->
+                                };
+                               memory_count();
+                               setInterval('memory_count()',5000);
+
+                                 <!--yarn资源计算   -->
                                 function group_resource(){
                                         var retVal = '';
                                         $.ajax({
@@ -412,7 +418,7 @@
                                         ]
                                     },
                                     title: {
-                                        text: '本组使用资源占比',
+                                        text: '本组使用yarn资源占比',
                                         font: { size: 20}
                                     },
                                     tooltip: {
@@ -425,43 +431,10 @@
                                     value: rateData
                                 }).dxCircularGauge('instance');
 
-                                $('#chart_container').highcharts({
-                                    chart: {
-                                        plotBackgroundColor: null,
-                                        plotBorderWidth: null,
-                                        plotShadow: false
-                                    },
-                                    title: {
-                                        text: '集群角色划分'
-                                    },
-                                    tooltip: {
-                                        pointFormat: '{series.name}'
-                                    },
-                                    plotOptions: {
-                                        pie: {
-                                            allowPointSelect: true,
-                                             cursor: 'pointer',
-                                            dataLabels: {
-                                                enabled: true,
-                                                color: '#000000'
-                                            },
-                                            showInLegend: true
-                                        }
-                                    },
-                                    series: [{
-                                        type: 'pie',
-                                        name: '集群节点数',
-                                        data: [
-                                        ['Spark',6],
-                                        ['Hadoop',5],
-                                        ['Mysql',1],
-                                        ['Hive',1],
-                                        ['Hbase',3],
 
 
-                                        ]
-                                    }]
-                                });
+
+                                //内存占比显示
                                 var doughnut2_data_source = [
                                     { id: 0, x1: 0 },
                                     { id: 1, x1: 2 },
@@ -564,6 +537,68 @@
                 });
 
             }
+
+
+    </script>
+
+    <script type="text/javascript">
+                        //Spark standlone资源计算
+                                function spark_resource(){
+                                        var retVal = '';
+                                        $.ajax({
+                                        type:"GET",
+                                        url:"/userResourceSpark",
+                                        dataType:"json",
+                                        async:false,
+                                        success:function(data){
+                                            retVal=data;
+                                        }
+                                    });
+                                    return retVal;
+                                 }
+
+                                var data = spark_resource();
+                                var rate = eval(data);
+                                var rateDataSpark = rate.rateSpark;
+
+                          jQuery(document).ready(function($)
+                            {
+                                var gauge = $('#sparkStandlone').dxCircularGauge({
+                                    scale: {
+                                        startValue: 0,
+                                        endValue: 100,
+                                        majorTick: {
+                                            tickInterval: 10
+                                        },
+                                        label: {
+                                            customizeText: function (arg) {
+                                                return arg.valueText + ' %';
+                                            }
+                                        }
+                                    },
+                                    rangeContainer: {
+                                        ranges: [
+                                            { startValue: 0, endValue: 40, color: '#4DFFFF' },
+                                            { startValue: 40, endValue: 60, color: '#46A3FF' },
+                                            { startValue: 60, endValue: 80, color: '#FF8040' },
+                                            { startValue: 80, endValue: 100, color: '#BB3D00' }
+                                        ]
+                                    },
+                                    title: {
+                                        text: '本组使用Spark资源占比',
+                                        font: { size: 20}
+                                    },
+                                    tooltip: {
+                                        enabled: true,
+                                        format: {
+                                            type: 'present',
+                                            precision: 2
+                                        }
+                                    },
+                                    value: rateDataSpark
+                                }).dxCircularGauge('instance');
+                            });
+
 
 
     </script>
@@ -728,17 +763,12 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div id="gauge-3" style="height: 440px ; margin: 0 30px ;"></div>
-
                 </div>
                 <div class="col-sm-6">
-
-                    <div id="chart_container" style="height: 440px ; margin: 0 30px ;"></div>
+                    <div id="sparkStandlone" style="height: 440px ; margin: 0 30px ;"></div>
                 </div>
 
-
             </div>
-
-
         </div>
 
         <div class="row">
@@ -815,50 +845,27 @@
     });
     </script>*@
 
-@*
-    修订日志:v3.0.2(2016.08.19)
-        修改编辑用户与注册审核对话框
-    添加注册审核发送邮件功能
-    添加个人中心下的任务列表页面
-    提交jar页面新增yarn,standalone，local选择
-    添加查看任务，杀死任务，重试任务功能
-    添加用户组、组员统计功能
-    添加Yarn资源调度参数列表
-    修正服务划分图标
-    本组资源占比计算以及展示*@
-
-@*
-    修订日志:v3.0.3(2016.08.24)
-        添加任务kill,rerun功能
-    添加执行任务交互
-    添加个人任务展示
-    修正表格样式&部分UI调整
-    dashboard页面添加本组资源占比
-    添加本组内存使用占比
-    添加Yarn资源调度参数列表
-    添加组用户组yarn任务列表*@
-
-@*
-    修订日志:v3.0.4(2016.09.02)
-    添加WebSocket任务消息推送
-    调整任务状态标签样式
-    添加超级用户组(SuperAdmin)权限
-    添加根据不同用户组权限显示资源占比
-    修正yarn接口数据传输格式
-    修正表格样式&部分UI调整
+    @*
+        修订日志:v3.0.5(2016.09.09)
+        添加全局配置文件
+        优化websocket消息推送,增加已读信息功能
+        改造play framework数据库连接池
+        优化页面刷新功能(数据库/js)
+        添加spark master调度资源占比
+        dashboard和后台优化页面调整
+        修正表格样式&部分UI调整
     *@
 
 
     <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.0.3(2016.08.24)",
+                    title: "修订日志:v3.0.4(2016.09.02)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加WebSocket任务消息推送</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>调整任务状态标签样式</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加超级用户组(SuperAdmin)权限</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加根据不同用户组权限显示资源占比</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修正yarn接口数据传输格式</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>改造play framework数据库连接池</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>优化页面刷新功能(数据库/js)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加spark master调度资源占比</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;dashboard页面调整</sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
                     "</div>",
                     timer: 8000,

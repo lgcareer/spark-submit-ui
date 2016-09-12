@@ -30,7 +30,7 @@ object UserCountDao {
         "from user_group group by `group`").as(UserCountDao.simple *)
     }
   }
-
+9
   /**
    * 根据用户获取用户组
    * @param userEmail
@@ -47,19 +47,105 @@ object UserCountDao {
     }
   }
 
+   def userResourceRateSpark (username:String):String = {
+     /**
+      * 获取登录用户所属组
+      * 获取接口数据
+      * 转成JsValue对象
+      */
+      val group = UserCountDao.userBygroup(username)
+      val sparkJson :JsValue = Json.parse(scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString)
+
+     /**
+      * 获取spark worker整体计算资源
+      * Memory
+      * CPU
+      */
+     var sparkRate :Double = 0.00
+     //整体计算资源
+     val memoryBuffer =ArrayBuffer[Long]()
+     val coreBuffer = ArrayBuffer[Long]()
+     //已使用资源
+     val memoryusedBuffer = ArrayBuffer[Long]()
+     val coresusedBuffer = ArrayBuffer[Long]()
+
+     val MemoryList = sparkJson \ "workers" \\ "memory"
+     val coreList = sparkJson \ "workers" \\ "cores"
+
+     val memoryusedList = sparkJson \ "workers" \\ "memoryused"
+     val coresusedList = sparkJson \ "workers" \\ "coresused"
+
+     var tallyMemory = 0.00
+     var tallyCore = 0.00
+
+       for (i <- 0 until MemoryList.length) {
+         memoryBuffer += MemoryList(i).toString().toLong
+         coreBuffer += coreList(i).toString().toLong
+         memoryusedBuffer += memoryusedList(i).toString().toLong
+         coresusedBuffer += coresusedList(i).toString().toLong
+       }
+        tallyMemory = memoryBuffer.sum / 1024
+        tallyCore = coreBuffer.sum
+
+       val usedMemory = memoryusedBuffer.sum / 1024
+       val usedCore = coresusedBuffer.sum
+       sparkRate = Math.round((
+         (usedMemory * 1.0 + usedCore * 1.0) / (tallyMemory * 1.0 + tallyCore * 1.0))
+         * 100)
+     if(group == "") {
+       /**
+        * 获取运行任务使用资源
+        * Memory
+        * CPU
+        */
+
+       val runCoresBuffer = ArrayBuffer[Long]()
+       val runMemoryBuffer = ArrayBuffer[Long]()
+
+       val runList = sparkJson \ "activeapps" \\ "user"
+       val runTask = sparkJson \ "activeapps"
+
+       /**
+        *
+        * 提取相同用户到同一ArrayBuffer
+         */
+
+       /**
+        * 根据用户权限
+        * 获取Spark整体已使用资源
+        */
+
+       for (i <- 0 until runList.length) {
+         val user = runList(i)
+         if (user.toString() == "\"" + group + "\"") {
+           runMemoryBuffer += (Json.parse(runTask(i).toString()) \ "memoryperslave").toString().toLong
+           runCoresBuffer += (Json.parse(runTask(i).toString()) \ "cores").toString().toLong
+         }
+       }
+       println("runMemoryBuffer" + runMemoryBuffer.sum/1024)
+       println("runCoresBuffer" + runCoresBuffer.sum)
+       println("tallyMemory" + tallyMemory)
+       println("tallyCore" + tallyCore)
+
+       sparkRate = Math.round((runMemoryBuffer.sum/1024 * 1.0 + runCoresBuffer.sum * 1.0)
+         / (tallyMemory * 1.0 + tallyCore * 1.0) * 100)
+       println("==>" + sparkRate)
+
+     }
+     sparkRate.toString
+   }
+
+
   /**
-   * 用户组资源计算
+   * 用户组Yarn资源计算
    * @return
+   *
    */
       def userResourceRate (username:String) :String ={
       //获取登录用户所属组
       val group = UserCountDao.userBygroup(username)
       //用户组与队列映射
       val group_queue = find_group_queue()
-
-    /**
-     * 判断用户权限
-     */
 
 
       /**
@@ -106,7 +192,7 @@ object UserCountDao {
            }
         //资源度量计算
 
-        resourceRate = Math.round((useredMemory.sum * 0.7 + useredMemory.sum * 0.3)
+        resourceRate = Math.round((useredMemory.sum * 0.7 + useredVcore.sum * 0.3)
           /(globalMemory.max * 0.7 + globalVcore.max * 0.3) * 100)
         //内存使用占比
         rateMemoryRate =Math.round((useredMemory.max * 1.0/globalMemory.max * 1.0) * 100)

@@ -11,7 +11,6 @@ object MatchEngine {
 
   val config: Configuration = new Configuration
 
-
   /**
     * on_local 模式匹配
     */

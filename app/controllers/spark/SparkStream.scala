@@ -57,40 +57,6 @@ object SparkStream extends Controller with Secured{
   }
 
   def streamExecute = IsAuthenticated { username => implicit request =>
-//    val format = new java.text.SimpleDateFormat("yyyyMMddHHmmss")
-//    val current = format.format(new java.util.Date()).toString
-//    executeForm.bindFromRequest.fold(
-//      formWithErrors => BadRequest(views.html.error(formWithErrors.toString)),
-//      executeArguments => {
-//        val argss = ExecuteModel(executeArguments.executeClass,executeArguments.numExecutors,executeArguments.driverMemory,executeArguments.executorMemory,executeArguments.executorCores,executeArguments.jarLocation,executeArguments.args1)
-//        val arguments = Array(
-//          "/usr/local/spark/bin/spark-submit",
-//          "--class", argss.executeClass,
-//          "--num-executors", argss.numExecutors,
-//          "--driver-memory", argss.driverMemory,
-//          "--executor-memory", argss.executorMemory,
-//          "--executor-cores", argss.executorCores,
-//          "--master", "yarn-cluster","kafka-topic",
-//          argss.jarLocation,
-//          argss.args1
-//        )
-//        StoreJars.insertJarToDb(JarModel(username,argss.jarLocation))
-//        class ThreadDemo(filename:String) extends Runnable{
-//          override def run(){
-//            println("start execute jar")
-//            //  models.utils.Execute.main(arguments)
-//            println("end execute jar")
-//          }
-//        }
-//        def executeJar():Unit={
-//          try{threadPool.execute(new ThreadDemo("filename"))}
-//          finally{}
-//        }
-//        executeJar()
-//        Ok(views.html.index())
-//      }
-//    )
-
     executeForm.bindFromRequest.fold(
       formWithErrors => {
         formWithErrors.errors.map(x => Logger.info(x.message))

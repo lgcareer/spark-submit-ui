@@ -1,22 +1,29 @@
 package controllers
 
 import models.io.UserCountDao
+import models.utils.Configuration
 import play.api.libs.json._
 import play.api.mvc._
+import models._
 
 
-object YarnList extends Controller with Secured {
+object YarnList  extends Controller  with Secured {
+   var config : Configuration = new Configuration()
+
   /**
    * Yarn数据列表显示
    */
+
   def yarnInfo = IsAuthenticated { username => implicit request =>
+//  val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ ":8088/ws/v1/cluster/apps"
     val indexSource = scala.io.Source.fromURL("http://10.77.136.159:8088/ws/v1/cluster/apps").mkString
     val json = Json.parse(indexSource)
-     Ok(json)
+    Ok(json)
   }
 
   /**
    * Yarn数据列表
+   * 根据不同权限显示不同yarn任务列表
    * @return
    */
   def yarnlist = IsAuthenticated { username => implicit request =>
@@ -37,8 +44,7 @@ object YarnList extends Controller with Secured {
    */
   def workerlistdata = IsAuthenticated { username => implicit request =>
     val workersJson = scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString
-    val workerlist = Json.parse(workersJson)
-    Ok(workerlist)
+    Ok(Json.parse(workersJson))
   }
 
   def workerInfo = IsAuthenticated { username => implicit request =>
@@ -46,7 +52,7 @@ object YarnList extends Controller with Secured {
   }
 
   /**
-   * Spark 任务列表 Standalon
+   * Spark 任务列表 Standalone
    * @return
    */
   def sparklist = IsAuthenticated { username => implicit request =>
@@ -54,11 +60,11 @@ object YarnList extends Controller with Secured {
   }
 
   /**
-   * Dashboard 页面Spark指标 显示
+   * Dashboard 页面Spark指标
+   * 数据库获取(spark_total_info)
    * @return
    */
   def spark_info = IsAuthenticated { username => implicit request =>
-     import models._
      val sparkinfo = Json.parse(SparkTotalinfo.findAll())
     Ok(sparkinfo)
 

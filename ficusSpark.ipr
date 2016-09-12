@@ -20,8 +20,18 @@
     </annotationProcessing>
   </component>
   <component name="CopyrightManager" default="" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf8 -g" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectDictionaryState">
     <dictionary name="manbu" />
@@ -337,9 +347,9 @@
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="SBT: com.jolbox:bonecp:0.8.0.RELEASE:jar">
+    <library name="SBT: com.jolbox:bonecp:0.8.0-rc1:jar">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0-rc1.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -585,6 +595,13 @@
     <library name="SBT: commons-cli:commons-cli:1.2:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/commons-cli/commons-cli/jars/commons-cli-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="SBT: commons-codec:commons-codec:1.5:jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.5.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
@@ -1184,6 +1201,13 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="SBT: org.apache.hadoop:hadoop-yarn-server-nodemanager:2.2.0:jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-nodemanager/jars/hadoop-yarn-server-nodemanager-2.2.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="SBT: org.apache.hadoop:hadoop-yarn-server-resourcemanager:2.6.0:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.hadoop/hadoop-yarn-server-resourcemanager/jars/hadoop-yarn-server-resourcemanager-2.6.0.jar!/" />
@@ -1702,6 +1726,13 @@
       <JAVADOC />
       <SOURCES />
     </library>
+    <library name="SBT: org.ow2.asm:asm-all:5.0.2:jar">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.ow2.asm/asm-all/jars/asm-all-5.0.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="SBT: org.roaringbitmap:RoaringBitmap:0.4.5:jar">
       <CLASSES>
         <root url="jar://$USER_HOME$/.ivy2/cache/org.roaringbitmap/RoaringBitmap/bundles/RoaringBitmap-0.4.5.jar!/" />
@@ -1709,14 +1740,14 @@
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="SBT: org.scala-lang:scala-compiler:2.10.0:jar">
+    <library name="SBT: org.scala-lang:scala-compiler:2.10.3:jar">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.0.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.3.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="SBT: org.scala-lang:scala-library:2.10.4:jar" type="Scala">
+    <library name="SBT: org.scala-lang:scala-library:2.10.3:jar" type="Scala">
       <properties>
         <option name="languageLevel" value="Scala_2_10" />
         <compiler-classpath>
@@ -1726,14 +1757,14 @@
         </compiler-classpath>
       </properties>
       <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.3.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
     </library>
-    <library name="SBT: org.scala-lang:scala-reflect:2.10.4:jar">
+    <library name="SBT: org.scala-lang:scala-reflect:2.10.3:jar">
       <CLASSES>
-        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.4.jar!/" />
+        <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.3.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />

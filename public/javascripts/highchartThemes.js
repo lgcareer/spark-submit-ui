@@ -3,7 +3,7 @@
  */
 
 Highcharts.createElement('link', {
-    href: 'http://fonts.googleapis.com/css?family=Unica+One',
+//  href: 'http://fonts.googleapis.com/css?family=Unica+One',
     rel: 'stylesheet',
     type: 'text/css'
 }, null, document.getElementsByTagName('head')[0]);

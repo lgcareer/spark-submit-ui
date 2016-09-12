@@ -4,6 +4,7 @@ import play.api.mvc.Controller
 
 /**
  * Created by manbu on 16/7/27.
+ * 运行任务log查看
  */
 object RunTask extends Controller with Secured{
 

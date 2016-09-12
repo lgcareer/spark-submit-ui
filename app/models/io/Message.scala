@@ -47,6 +47,28 @@ object Message {
     }
   }
 
+  def deleteMessage(appId:String)={
+    DB.withConnection { implicit connection =>
+      SQL(
+        """
+          delete from task_msg where id={id}
+        """).on(
+        'id -> appId
+      ).executeUpdate()
+    }
+  }
+
+  def deleteAllMessage(user:String)={
+    DB.withConnection { implicit connection =>
+      SQL(
+        """
+          delete from task_msg where user={user}
+        """).on(
+        'user -> user
+      ).executeUpdate()
+    }
+  }
+
 
 
 

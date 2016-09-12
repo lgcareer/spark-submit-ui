@@ -73,6 +73,7 @@ GET    /functionplan                  controllers.Serviceplan.functionplan
 GET    /usertatol                     controllers.Usertally.usertatol
 GET    /usergroup                     controllers.Usertally.userGroup
 GET    /userResource                   controllers.Usertally.userResource
+GET    /userResourceSpark              controllers.Usertally.userResourceSpark
 
 
 #Dispatch
@@ -121,6 +122,8 @@ GET   /rerun                           @controllers.TaskManager.rerun(appId:Stri
 #PUSH
 GET  /startpush                         controllers.Application.startpush
 GET   /msglist                          controllers.Application.msglist
+GET   /read                             controllers.Application.read(appId:String)
+GET   /readall                          controllers.Application.readall
 
 
 
@@ -129,6 +132,8 @@ GET   /metadatalist                     controllers.MetaDataManager.metadatas
 GET   /metadata                         controllers.MetaDataManager.metadata
 GET  /update                        controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
 GET  /rm                            controllers.MetaDataManager.rm(id:String)
+
+GET  /nodedata                         controllers.MetaDataManager.getNodaDatas
 
 
 

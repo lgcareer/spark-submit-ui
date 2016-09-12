@@ -9,7 +9,7 @@ object JDBCUtil {
   def query()={
     val conn_str = "jdbc:mysql://10.73.33.41:3306/test?user=admin&password=admin123!@#"
     val driver = "com.mysql.jdbc.Driver"
-    val url = "jdbc:mysql://10.73.33.41:3306/test"
+    val url = "jdbc:mysql://10.73.33.41:3306/playdb"
     val username = "admin"
     val password = "admin123!@#"
     var connection: Connection = null
