@@ -2,6 +2,7 @@ package models.io
 
 import anorm.SqlParser._
 import anorm._
+import models.utils.Configuration
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.{JsValue, Json}
@@ -13,6 +14,7 @@ import scala.collection.mutable.ArrayBuffer
  */
 case class  UserCountDao(group:String,tatol:Long)
 object UserCountDao {
+  var config : Configuration = new Configuration()
    val simple = {
      get[String]("group") ~
      get[Long]("tatol") map{
@@ -54,7 +56,8 @@ object UserCountDao {
       * 转成JsValue对象
       */
       val group = UserCountDao.userBygroup(username)
-      val sparkJson :JsValue = Json.parse(scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString)
+     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+      val sparkJson :JsValue = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
 
      /**
       * 获取spark worker整体计算资源
@@ -147,8 +150,9 @@ object UserCountDao {
       /**
        * 接口调用数据
        */
+      val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ "/ws/v1/cluster/scheduler"
             val scheduleryarn = scala.io.Source.
-              fromURL("http://10.77.136.159:8088/ws/v1/cluster/scheduler").mkString
+              fromURL(yarn_url).mkString
       //转成JsValue 格式
       val scheduler :JsValue = Json.parse(scheduleryarn)
       //获取childQueues 列表

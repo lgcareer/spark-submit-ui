@@ -19,6 +19,7 @@ GET     /errorpage                  controllers.SparkStream.errorpage
 GET      /sparksql                   controllers.SparkSql.sqlpage
 POST     /executesql                 controllers.SparkSql.executesql
 GET      /download                    controllers.SparkSql.download
+GET      /databaseTable                controllers.SparkSql.databaseTable
 
 #Dashboard
 GET     /yarnInfo                   controllers.YarnList.yarnInfo
