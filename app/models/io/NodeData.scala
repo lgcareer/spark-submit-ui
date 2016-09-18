@@ -23,10 +23,10 @@ object NodeData {
     }
   }
 
-  def findNodeDatas:Seq[NodeData]={
+  def findNodeDatasById(pid:Int):Seq[NodeData]={
     DB.withConnection { implicit connection =>
       play.api.db.DB.withConnection { implicit connection =>
-        SQL("select * from nodedata").as(nodedata *)
+        SQL("select * from nodedata where pid ={pid}").on('pid -> pid).as(nodedata *)
       }
     }
   }

@@ -123,8 +123,13 @@ var EditableTable = function () {
 
             $('#editable-sample a.cancel').live('click', function (e) {
                 e.preventDefault();
-                    var nRow = $(this).parents('tr')[0];
-                    oTable.fnDeleteRow(nRow);
+                if ($(this).attr("data-mode") == "new") {
+                         var nRow = $(this).parents('tr')[0];
+                         oTable.fnDeleteRow(nRow);
+                     } else {
+                         restoreRow(oTable, nEditing);
+                         nEditing = null;
+                     }
             });
 
             $('#editable-sample a.edit').live('click', function (e) {

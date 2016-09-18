@@ -1,6 +1,9 @@
 package controllers
 
+import java.io.FileInputStream
+
 import models.{MetaData, MetaDataList, NodeData, NodeDataList}
+import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -26,7 +29,12 @@ object MetaDataManager extends Controller{
 
 
   def update(id:Int,name:String,unit: String,version:String,url:String)=Action{
-    MetaData.addOrUpdate(MetaData(id,name,unit,version,url))
+    import play.api.libs.json._
+
+    val jsValue: JsValue = Json.parse(version)
+    val versions: String = jsValue.as[List[String]].mkString("\n")
+
+    MetaData.addOrUpdate(MetaData(id,name,unit,versions,url))
     Ok("操作成功")
   }
 
@@ -36,10 +44,10 @@ object MetaDataManager extends Controller{
     Ok("操作成功")
   }
 
-  def getNodaDatas =Action{
+  def getNodaDatas(pid:Int) =Action{
     implicit val residentWrites = Json.writes[NodeData]
     implicit val clusterListWrites = Json.writes[NodeDataList]
-    val data: JsValue = Json.toJson(NodeDataList(NodeData.findNodeDatas))
+    val data: JsValue = Json.toJson(NodeDataList(NodeData.findNodeDatasById(pid)))
     Ok(data)
 
   }

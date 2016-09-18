@@ -9,7 +9,6 @@ import play.api.mvc.Controller
 object AlarmDisk extends Controller with Secured{
 
   def alarmDisk = IsAuthenticated { username => implicit request =>
-
     /**
      * 调用it.sina接口
      */
