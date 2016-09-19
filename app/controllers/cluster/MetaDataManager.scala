@@ -52,5 +52,40 @@ object MetaDataManager extends Controller{
 
   }
 
+  def nodeList =Action{
+    implicit val residentWrites = Json.writes[NodeData]
+    implicit val clusterListWrites = Json.writes[NodeDataList]
+    val data: JsValue = Json.toJson(NodeDataList(NodeData.findNodeDatas))
+    Ok(data)
+  }
+
+
+
+  def updateNode(id:Int,ip:String,host: String,role:String,name:String)=Action{
+    import play.api.libs.json._
+
+    val jsValue: JsValue = Json.parse(role)
+    val roles: String = jsValue.as[List[String]].mkString("\n")
+    val pid: Int = MetaData.findIdByName(name)
+    NodeData.addOrUpdate(NodeData(id,ip,host,roles,name,pid))
+    Ok("操作成功")
+  }
+
+
+  def deleteNode(id:String) =Action{
+    NodeData.deleteNodeData(id)
+    Ok("操作成功")
+  }
+
+  def getNames()=Action{
+    import play.api.libs.json._
+    val names: Seq[String] = MetaData.findNames
+    Ok(Json.toJson(names))
+  }
+
+
+
+
+
 
 }

@@ -130,10 +130,15 @@ GET   /readall                          controllers.Application.readall
 #集群管理
 GET   /metadatalist                     controllers.MetaDataManager.metadatas
 GET   /metadata                         controllers.MetaDataManager.metadata
-GET  /update                        controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
-GET  /rm                            controllers.MetaDataManager.rm(id:String)
+GET  /update                            controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
+GET  /rm                                controllers.MetaDataManager.rm(id: String)
+GET   /names                            controllers.MetaDataManager.getNames
 
+#节点管理
 GET  /nodedata                         controllers.MetaDataManager.getNodaDatas(pid:Int)
+GET  /nodelist                          controllers.MetaDataManager.nodeList
+GET  /addnode                           controllers.MetaDataManager.updateNode(id:Int,ip:String,host: String,role:String,name:String)
+GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:String)
 
 
 

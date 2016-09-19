@@ -23,6 +23,15 @@ object NodeData {
     }
   }
 
+
+  def findNodeDatas:Seq[NodeData]={
+    DB.withConnection { implicit connection =>
+      play.api.db.DB.withConnection { implicit connection =>
+        SQL("select * from nodedata ").as(nodedata *)
+      }
+    }
+  }
+
   def findNodeDatasById(pid:Int):Seq[NodeData]={
     DB.withConnection { implicit connection =>
       play.api.db.DB.withConnection { implicit connection =>
@@ -63,7 +72,8 @@ object NodeData {
         'host -> nodeData.host,
         'role -> nodeData.role,
         'name -> nodeData.name,
-        'pid -> nodeData.pid
+        'pid -> nodeData.pid,
+         'id -> nodeData.id
       ).executeUpdate()
     }
     nodeData

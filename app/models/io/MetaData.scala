@@ -12,6 +12,12 @@ case class MetaData(id:Int,name:String,unit:String,version:String,url:String)
 case class MetaDataList(list:Seq[MetaData])
 object MetaData {
 
+  val names = {
+    get[String]("metadata.name") map {
+      case name => name
+    }
+  }
+
   val metadata = {
     get[Int]("metadata.id") ~
       get[String]("metadata.name") ~
@@ -77,6 +83,26 @@ object MetaData {
         """).on(
         'id -> id
       ).executeUpdate()
+    }
+  }
+
+  def findIdByName(name:String):Int={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+         select id  from metadata where name = {name}
+        """).on(
+        'name -> name
+      ).as(SqlParser.scalar[Int].single)
+    }
+
+  }
+
+  def findNames : Seq[String]={
+    DB.withConnection { implicit connection =>
+      play.api.db.DB.withConnection { implicit connection =>
+        SQL("select * from metadata").as(names *)
+      }
     }
   }
 
