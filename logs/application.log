@@ -22,3 +22,15 @@ Application started (Dev)
 2016-09-19 14:36:56,687 - [INFO] - from play in New I/O worker #1 
 Starting application default Akka system.
 
+2016-09-19 14:45:48,076 - [INFO] - from play in play-internal-execution-context-11 
+Shutdown application default Akka system.
+
+2016-09-19 14:45:48,861 - [INFO] - from play in play-internal-execution-context-11 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-19 14:45:48,867 - [INFO] - from play in play-internal-execution-context-11 
+Application started (Dev)
+
+2016-09-19 14:45:49,639 - [INFO] - from play in New I/O worker #11 
+Starting application default Akka system.
+
