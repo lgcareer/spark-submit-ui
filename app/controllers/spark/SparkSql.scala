@@ -4,7 +4,7 @@ import java.io.{File, PrintWriter}
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import models.io.DataBase
-import models.utils.SparkSqlPool
+import models.utils.{Configuration, SparkSqlPool}
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.mvc.Controller
@@ -14,7 +14,7 @@ import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
 
 object SparkSql extends Controller with Secured {
-
+  var config : Configuration = new Configuration()
   def sqlpage = IsAuthenticated { username => implicit request =>
     Ok(views.html.sparksql())
   }
@@ -56,10 +56,8 @@ object SparkSql extends Controller with Secured {
             }
             result += row.toArray
           }
-
-
-          val writer = new PrintWriter(new File(s"/tmp/spark$n.txt"))
-
+          val filelocal = config.getString("spark.sql.file")
+          val writer = new PrintWriter(new File(filelocal+s"/spark$n.txt"))
           val resultCSV = Json.toJson(
             Map[String, Any](
               "header" -> header.toArray,
