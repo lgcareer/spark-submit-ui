@@ -275,10 +275,7 @@
                     dataType:"json",
                     success:function(data){
                         var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
-                        var myobj=eval(data);
-                        var url = myobj.url;
-                        var status = myobj.status;
-                        var workers=myobj.workers;
+                        var workers=eval(data);
                         for(var i=0;i<workers.length;i++){
                             head += "<tr><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+(workers[i].coresused)/1024+"</td><td>"+workers[i].memory+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
                         }
@@ -288,4 +285,5 @@
                 });
             });
     </script>
+
 }

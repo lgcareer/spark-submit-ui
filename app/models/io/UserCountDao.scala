@@ -2,6 +2,7 @@ package models.io
 
 import anorm.SqlParser._
 import anorm._
+import models.utils.Configuration
 import play.api.Play.current
 import play.api.db.DB
 import play.api.libs.json.{JsValue, Json}
@@ -13,6 +14,7 @@ import scala.collection.mutable.ArrayBuffer
  */
 case class  UserCountDao(group:String,tatol:Long)
 object UserCountDao {
+  var config : Configuration = new Configuration()
    val simple = {
      get[String]("group") ~
      get[Long]("tatol") map{
@@ -30,7 +32,6 @@ object UserCountDao {
         "from user_group group by `group`").as(UserCountDao.simple *)
     }
   }
-9
   /**
    * 根据用户获取用户组
    * @param userEmail
@@ -54,7 +55,8 @@ object UserCountDao {
       * 转成JsValue对象
       */
       val group = UserCountDao.userBygroup(username)
-      val sparkJson :JsValue = Json.parse(scala.io.Source.fromURL("http://10.77.136.159:8080/json").mkString)
+     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+      val sparkJson :JsValue = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
 
      /**
       * 获取spark worker整体计算资源
@@ -122,16 +124,12 @@ object UserCountDao {
            runCoresBuffer += (Json.parse(runTask(i).toString()) \ "cores").toString().toLong
          }
        }
-       println("runMemoryBuffer" + runMemoryBuffer.sum/1024)
-       println("runCoresBuffer" + runCoresBuffer.sum)
-       println("tallyMemory" + tallyMemory)
-       println("tallyCore" + tallyCore)
 
        sparkRate = Math.round((runMemoryBuffer.sum/1024 * 1.0 + runCoresBuffer.sum * 1.0)
          / (tallyMemory * 1.0 + tallyCore * 1.0) * 100)
-       println("==>" + sparkRate)
 
      }
+
      sparkRate.toString
    }
 
@@ -151,8 +149,9 @@ object UserCountDao {
       /**
        * 接口调用数据
        */
+      val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ "/ws/v1/cluster/scheduler"
             val scheduleryarn = scala.io.Source.
-              fromURL("http://10.77.136.159:8088/ws/v1/cluster/scheduler").mkString
+              fromURL(yarn_url).mkString
       //转成JsValue 格式
       val scheduler :JsValue = Json.parse(scheduleryarn)
       //获取childQueues 列表
@@ -220,6 +219,11 @@ object UserCountDao {
           rateMemoryRate =Math.round((usedMemory * 1.0/maxMemory * 1.0) * 100)
            }
         }
+
+    /**
+     * 调用spark 内存计算
+     *
+     */
          val rateJson = "{\"resourceRate\":" + "\"" + resourceRate + "\",\"rateMemory\":" + "\"" + rateMemoryRate + "\"}"
            rateJson.toString
       }
@@ -253,7 +257,7 @@ object UserCountDao {
    * @return
    */
   def find_group_queue(): Map[String,String] = {
-    DB.withConnection("default") { implicit connection =>
+    DB.withConnection { implicit connection =>
       var group_queue:Map[String,String] = Map()
       SQL("select `group`,queue from user_group group by `group`,queue")().foreach { row =>
           group_queue += (row[String]("group") -> row[String]("queue"))

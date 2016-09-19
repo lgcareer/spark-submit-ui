@@ -59,8 +59,8 @@ var EditableTable = function () {
                 "oLanguage": {
                     "sLengthMenu": "_MENU_ 条记录",
                     "oPaginate": {
-                        "sPrevious": "Prev",
-                        "sNext": "Next"
+                        "sPrevious": "上一页",
+                        "sNext": "下一页"
                     }
                 },
                 "aoColumnDefs": [{
