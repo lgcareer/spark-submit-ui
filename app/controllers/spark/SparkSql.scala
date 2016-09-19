@@ -97,6 +97,7 @@ object SparkSql extends Controller with Secured {
     Json.setObjectMapper(mapper)
     val base_tables = Json.toJson(databases)
     Ok(base_tables.toString)
+
   }
 
 }

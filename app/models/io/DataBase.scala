@@ -26,8 +26,6 @@ object DataBase {
      var base_table = Map[String,Any]()
       for (i <- 0 until dataBaseArray.length) {
         val database = dataBaseArray(i)
-        println("i ==>" + i)
-        println("database ==>" + database)
         val foundTable = statement.execute("show tables in " + database)
         if(!foundTable){
           InternalServerError("error")
@@ -36,12 +34,11 @@ object DataBase {
         val rsmd = resultSet.getMetaData()
         val tableArray = new ArrayBuffer[Any]()
         while (resultSet.next) {
-          for(i <- 1 to rsmd.getColumnCount ){
+          for(i <- 1 to 1 ){
             tableArray += resultSet.getObject(i)
           }
         }
         base_table += (database.toString -> tableArray)
-        println("base_table ==>" + base_table)
       }
       SparkSqlPool.releaseConn(connection)
     base_table
