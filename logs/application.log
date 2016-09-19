@@ -1,21 +1,12 @@
-2016-09-19 11:24:55,692 - [INFO] - from play in pool-4-thread-5 
+2016-09-19 14:19:25,479 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2016-09-19 11:27:38,659 - [INFO] - from play in play-internal-execution-context-1 
+2016-09-19 14:19:36,020 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
 
-2016-09-19 11:27:38,763 - [INFO] - from play in play-internal-execution-context-1 
+2016-09-19 14:19:36,111 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2016-09-19 11:27:41,907 - [INFO] - from play in New I/O worker #7 
+2016-09-19 14:19:38,122 - [INFO] - from play in New I/O worker #7 
 Starting application default Akka system.
-
-2016-09-19 11:29:58,195 - [INFO] - from play in play-internal-execution-context-6 
-Shutdown application default Akka system.
-
-2016-09-19 11:30:00,183 - [INFO] - from play in play-internal-execution-context-6 
-database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
-
-2016-09-19 11:30:00,191 - [INFO] - from play in play-internal-execution-context-6 
-Application started (Dev)
 

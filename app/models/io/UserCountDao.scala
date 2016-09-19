@@ -32,7 +32,6 @@ object UserCountDao {
         "from user_group group by `group`").as(UserCountDao.simple *)
     }
   }
-9
   /**
    * 根据用户获取用户组
    * @param userEmail
@@ -128,9 +127,9 @@ object UserCountDao {
 
        sparkRate = Math.round((runMemoryBuffer.sum/1024 * 1.0 + runCoresBuffer.sum * 1.0)
          / (tallyMemory * 1.0 + tallyCore * 1.0) * 100)
-       println("==>" + sparkRate)
 
      }
+
      sparkRate.toString
    }
 
@@ -220,6 +219,11 @@ object UserCountDao {
           rateMemoryRate =Math.round((usedMemory * 1.0/maxMemory * 1.0) * 100)
            }
         }
+
+    /**
+     * 调用spark 内存计算
+     *
+     */
          val rateJson = "{\"resourceRate\":" + "\"" + resourceRate + "\",\"rateMemory\":" + "\"" + rateMemoryRate + "\"}"
            rateJson.toString
       }
