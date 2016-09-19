@@ -26,7 +26,6 @@ object YarnList  extends Controller  with Secured {
     if (queue == "") {
       Ok(json)
     } else {
-      println(queue)
       var strjson = "{\"apps\":{\"app\":["
       for (i <- 0 until length) {
         val app = (json \ "apps" \ "app")(i)
@@ -77,7 +76,6 @@ object YarnList  extends Controller  with Secured {
         apps += (json \ "completedapps")(i) + ","
     }
     apps = apps.substring(0, apps.length - 1)
-    println(apps)
     apps += "]}"
     Ok(apps)
   }

@@ -282,35 +282,6 @@
 
         @copyright()
     </div>
-    <!--<script charset="utf-8">-->
-
-            <!--$(document).ready(function(){-->
-                <!--$.ajax({-->
-                    <!--type:"GET",-->
-                    <!--url:"/workerlist",-->
-                    <!--dataType:"json",-->
-                    <!--success:function(data){-->
-                        <!--var head= "<table class='table table-bordered table-striped table-condensed table-hover'><tr><th>Application ID</th><th>Name</th><th>User</th><th>Memory per Node</th><th>Submitted Time</th><th>State</th><th>Duration</th></tr>"-->
-                        <!--var myobj=eval(data);-->
-                        <!--var completedapps =myobj.completedapps-->
-                        <!--for (var p in completedapps) {-->
-                            <!--var id = completedapps[p].id-->
-                            <!--var name = completedapps[p].name-->
-                            <!--var user = completedapps[p].user-->
-                            <!--var memoryperslave = completedapps[p].memoryperslave-->
-                            <!--var submitdate = completedapps[p].submitdate-->
-                            <!--var state = completedapps[p].state-->
-                            <!--var duration = completedapps[p].duration-->
-                            <!--head += "<tr class= \"success\"><td><a a href='http://h136159.mars.grid.sina.com.cn:8080/app/?appId="+id+"' target='_blank'>"+id+"</td><td>"+name+"</td><td>"+user+"</td><td>"+memoryperslave+"</td><td>"+submitdate+"</td><td>"+state+"</td><td>"+duration+"</td></tr>"-->
-                        <!--};-->
-
-
-                        <!--head += " </table>";-->
-                        <!--$('#sparklist').html(head);-->
-                    <!--}-->
-                <!--});-->
-            <!--});-->
-    <!--</script>-->
     <script>
             $(document).ready(function(){
                 $.ajax({
