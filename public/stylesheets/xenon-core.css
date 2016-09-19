@@ -3314,7 +3314,28 @@ body.chat-open #chat {
 .panel.panel-success .panel-heading > .panel-options a:hover {
   color: #ffffff;
 }
-.panel.panel-success > .panel-disabled {
+
+.panel.panel-psuccess .panel-heading {
+  background-color: #07d996;
+  color: #ffffff;
+}
+.panel.panel-psuccess .panel-heading > .panel-title {
+  color: #ffffff;
+}
+.panel.panel-psuccess .panel-heading > .panel-title > a {
+  color: inherit;
+}
+.panel.panel-psuccess .panel-heading > .panel-options {
+  color: #ffffff;
+}
+.panel.panel-psuccess .panel-heading > .panel-options a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.panel.panel-psuccess .panel-heading > .panel-options a:hover {
+  color: #ffffff;
+}
+
+.panel.panel-psuccess > .panel-disabled {
   background-color: rgba(141, 198, 63, 0.15);
 }
 .panel.panel-psuccess .panel-heading {

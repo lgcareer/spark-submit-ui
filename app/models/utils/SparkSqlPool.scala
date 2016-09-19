@@ -43,7 +43,6 @@ object SparkSqlPool {
 
    //释放连接
    def releaseConn(conn:Connection): Unit ={
-     println("释放连接")
      pool.push(conn)
    }
  }

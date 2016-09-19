@@ -3,6 +3,7 @@ package controllers
 import java.io.{File, PrintWriter}
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import models.io.DataBase
 import models.utils.SparkSqlPool
 import play.api.data.Form
 import play.api.data.Forms._
@@ -42,7 +43,6 @@ object SparkSql extends Controller with Secured {
           val resultSet = statement.getResultSet()
           val result = new ArrayBuffer[Array[Any]]()
           val rsmd = resultSet.getMetaData()
-          println("rsmd:" + rsmd)
           val header = new ArrayBuffer[String]()
           for (i <- 1 to rsmd.getColumnCount()) {
             header += rsmd.getColumnName(i)
@@ -84,24 +84,20 @@ object SparkSql extends Controller with Secured {
           ).toString())
         }
       })
-
-
-    //    def download(file_path:String) = IsAuthenticated { username => implicit request =>
-    //      Ok.sendFile(new java.io.File(s"public/download/$file_path"))
-    //    }
-
-    //    def toDownload = IsAuthenticated { username => implicit request =>
-    //      val path = "public/uploads/"
-    //      val fileNameListBuffer =new ListBuffer[String]
-    //      daosql.getName(path,fileNameListBuffer)
-    //      Ok(views.html.download(fileNameListBuffer.toList))
-    //    }
-
-
   }
 
   def download = IsAuthenticated { username => implicit request =>
     Ok.sendFile(new File(s"/tmp/spark$n.txt"))
+  }
+
+  def databaseTable = IsAuthenticated { username => implicit request =>
+    val databases = DataBase.SparkDataBase()
+    val mapper = new ObjectMapper()
+    mapper.registerModule(com.fasterxml.jackson.module.scala.DefaultScalaModule)
+    Json.setObjectMapper(mapper)
+    val base_tables = Json.toJson(databases)
+    Ok(base_tables.toString)
+
   }
 
 }

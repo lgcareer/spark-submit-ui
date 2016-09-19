@@ -19,11 +19,13 @@ GET     /errorpage                  controllers.SparkStream.errorpage
 GET      /sparksql                   controllers.SparkSql.sqlpage
 POST     /executesql                 controllers.SparkSql.executesql
 GET      /download                    controllers.SparkSql.download
+GET      /databaseTable                controllers.SparkSql.databaseTable
 
 #Dashboard
 GET     /yarnInfo                   controllers.YarnList.yarnInfo
 GET     /yarnlist                   controllers.YarnList.yarnlist
-GET     /workerlist                 controllers.YarnList.workerlistdata
+GET     /workerlist                 controllers.YarnList.workerlist
+GET     /runTasklist                 controllers.YarnList.runTasklist
 GET     /workerInfo                  controllers.YarnList.workerInfo
 GET     /spark_info                 controllers.YarnList.spark_info
 GET     /sparklist                  controllers.YarnList.sparklist
@@ -57,7 +59,7 @@ GET    /he                             @controllers.SparkJar.he(id:String)
 #Dashboard
 GET     /yarnInfo                     controllers.YarnList.yarnInfo
 GET     /yarnlist                     controllers.YarnList.yarnlist
-GET     /workerlist                   controllers.YarnList.workerlistdata
+GET     /workerlist                   controllers.YarnList.workerlist
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 

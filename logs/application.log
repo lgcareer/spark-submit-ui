@@ -1,0 +1,18 @@
+2016-09-19 15:07:46,135 - [INFO] - from play in pool-4-thread-2 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2016-09-19 15:08:27,366 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-19 15:08:27,482 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2016-09-19 15:08:32,131 - [INFO] - from play in New I/O worker #3 
+Starting application default Akka system.
+
+2016-09-19 15:11:06,642 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
+用户名=>jiazheng1@staff.weibo.com
+
+2016-09-19 15:14:18,169 - [INFO] - from play in pool-4-thread-2 
+Shutdown application default Akka system.
+
