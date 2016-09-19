@@ -268,15 +268,13 @@
     </div>
     <div class="graphs">
         <div class="clearfix"> </div>
-        <div class="paneltxt paneltxt-color paneltxt-light-blue">
-            <div class="paneltxt-heading">
+        <div class="panel panel-color panel-psuccess">
+            <div class="panel-heading">
                 <h3 class="panel-title">请输入SQL语句</h3>
 
-                <div class="paneltxt-options">
+                <div class="panel-options">
 
-                    <a href="#">
-                        <i class="linecons-cog"></i>
-                    </a>
+
                     <span>RUN</span>
                     <a href="#" class="toop" title="点此执行SQL">
                         <span class="fa fa-play" id="submit"></span>
@@ -289,14 +287,18 @@
                     <a href="@routes.SparkSql.download" class="toop" title="点此进行数据下载">
                         <span class="fa fa-cloud-download" id="download"></span>
                     </a>
+                    <span>伸缩</span>
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
 
 
                 </div>
             </div>
 
-                <!-- <div class="paneltxt paneltxt-body" id="sql" contenteditable="true"></div> -->
-            <div class="paneltxt paneltxt-body">
-                <textarea class="paneltxt paneltxt-body" id="sql" ></textarea>
+            <div class="panel panel-body">
+                <textarea class="panel panel-body" id="sql" ></textarea>
             </div>
 
             <script>
@@ -343,5 +345,92 @@
         </div>
         <div class="clearfix"> </div>
 
+
+        <div class="panel panel-color panel-black collapsed">
+            <div class="panel-heading">
+                <h3 class="panel-title">数据结构</h3>
+                <div class="panel-options">
+                    <span>伸缩</span>
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="panel panel-body">
+
+                <div class="tree">
+                    <ul>
+                        <li>
+                            <span><i class="fa fa-database"></i> DB1</span>
+                            <ul>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table1</span>
+                                </li>
+                                <li>
+                                <span><i class="fa fa-table"></i> table2</span>
+                            </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table3</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table4</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table5</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table6</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-database"></i> DB2</span>
+                            <ul>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table1</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table2</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table3</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table4</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table5</span>
+                                </li>
+                                <li>
+                                    <span><i class="fa fa-table"></i> table6</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            </div>
+
+
     </div>
+    <script>
+            $(function () {
+                $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
+                $('.tree li.parent_li > span').on('click', function (e) {
+                    var children = $(this).parent('li.parent_li').find(' > ul > li');
+                    if (children.is(":visible")) {
+                        children.hide('fast');
+                        $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                    } else {
+                        children.show('fast');
+                        $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                    }
+                    e.stopPropagation();
+                });
+            });
+    </script>
 }

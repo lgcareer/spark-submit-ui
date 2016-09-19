@@ -277,18 +277,14 @@
 
     </div>
 
-    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style.css")" type="text/css"/>
     <div class="graphs">
         <div class="xs">
           <form action="/executejar" method="POST" id="jarForm">
-            <div class="paneltxt paneltxt-color paneltxt-success">
-                <div class="paneltxt-heading">
+            <div class="panel panel-color panel-psuccess">
+                <div class="panel-heading">
                     <h5 class="panel-title">请上传jar包</h5>
 
-                    <div class="paneltxt-options">
-                        <a href="#" data-toggle="paneltxt">
-                            <i class="linecons-cog"></i>
-                        </a>
+                    <div class="panel-options">
                         <span>RUN</span>
                         <a href="#" class="toop" title="点此执行程序">
                             <span class="fa fa-play" id="submit"></span>
@@ -297,6 +293,11 @@
                         <a href="#" class="toop" title="点此进行设置">
                             <span class="fa fa-wrench" id="setting"></span>
                         </a>
+                        <span>伸缩</span>
+                        <a href="#" data-toggle="panel">
+                            <span class="collapse-icon">&ndash;</span>
+                            <span class="expand-icon">+</span>
+                        </a>
 
                     </div>
                 </div>
@@ -304,7 +305,6 @@
 
                 <div class="panel-body" >
 
-                    <div class="paneltxt-body">
 
                         <script type="text/javascript">
                                 var FILENAME="";
@@ -453,84 +453,84 @@
 
                             </div>
                         </div>
+                    <div class="xs">
+                        <h3>执行参数</h3>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="horizontal-form">
+                                <div class="form-horizontal" >
 
-                    </div>
-                </div>
-
-                <div class="xs">
-                    <h3>执行参数</h3>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="horizontal-form">
-                            <div class="form-horizontal" >
-
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">--Master</label>
-                                    <div class="col-sm-8">
-                                        <select class="form-control meduim" id="masters" name="master">
-                                            <option  option:selected value="yarn-cluster">yarn</option>
-                                            <option value="standalone">standalone</option>
-                                            <option value="local">local</option>
-                                        </select>
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">--Master</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control meduim" id="masters" name="master">
+                                                <option  option:selected value="yarn-cluster">yarn</option>
+                                                <option value="standalone">standalone</option>
+                                                <option value="local">local</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
 
 
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="executeClass" id="executeClass" placeholder="请输入...">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="executeClass" id="executeClass" placeholder="请输入...">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
-                                        --num-executors</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="numExecutors" id="numExecutors" placeholder="请输入...">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                            --num-executors</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="numExecutors" id="numExecutors" placeholder="请输入...">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
-                                        --driver-memory</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="driverMemory" id="driverMemory" placeholder="请输入...">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                            --driver-memory</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="driverMemory" id="driverMemory" placeholder="请输入...">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
-                                        --executor-memory</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="executorMemory" id="executorMemory" placeholder="请输入...">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                            --executor-memory</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="executorMemory" id="executorMemory" placeholder="请输入...">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">
-                                        --total_executor_cores</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="total-executor-cores" id="executorCores" placeholder="请输入...">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">
+                                            --total_executor_cores</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="total-executor-cores" id="executorCores" placeholder="请输入...">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-n">
-                                    <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control large" name="args1" id="args1" placeholder="请输入...">
+                                    <div class="form-group mb-n">
+                                        <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control large" name="args1" id="args1" placeholder="请输入...">
+                                        </div>
                                     </div>
+
                                 </div>
 
                             </div>
-
                         </div>
-                    </div>
 
+
+
+                    </div>
+                    </div>
 
                 </div>
 
-            </div>
+
               </form>
         </div>
     </div>
