@@ -2333,3 +2333,190 @@ Caused by: java.sql.SQLException: org.apache.spark.sql.AnalysisException: no suc
 	... 6 common frames omitted
 >>>>>>> 68e9818615f68767b52870b0f1e56660dc7f4df7
 
+2016-09-20 14:33:47,825 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:33:47,833 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2016-09-20 14:33:48,310 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2016-09-20 14:34:16,126 - [INFO] - from play in play-internal-execution-context-49 
+Shutdown application default Akka system.
+
+2016-09-20 14:34:16,876 - [INFO] - from play in play-internal-execution-context-49 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:34:16,880 - [INFO] - from play in play-internal-execution-context-49 
+Application started (Dev)
+
+2016-09-20 14:34:17,083 - [INFO] - from play in New I/O worker #2 
+Starting application default Akka system.
+
+2016-09-20 14:35:13,491 - [INFO] - from play in play-internal-execution-context-50 
+Shutdown application default Akka system.
+
+2016-09-20 14:35:14,411 - [INFO] - from play in play-internal-execution-context-50 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:35:14,415 - [INFO] - from play in play-internal-execution-context-50 
+Application started (Dev)
+
+2016-09-20 14:35:14,964 - [INFO] - from play in New I/O worker #14 
+Starting application default Akka system.
+
+2016-09-20 14:41:24,176 - [INFO] - from play in play-internal-execution-context-32 
+Shutdown application default Akka system.
+
+2016-09-20 14:41:24,872 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:41:24,877 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2016-09-20 14:41:25,401 - [INFO] - from play in New I/O worker #12 
+Starting application default Akka system.
+
+2016-09-20 14:41:40,146 - [INFO] - from play in play-internal-execution-context-52 
+Shutdown application default Akka system.
+
+2016-09-20 14:41:40,988 - [INFO] - from play in play-internal-execution-context-52 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:41:40,993 - [INFO] - from play in play-internal-execution-context-52 
+Application started (Dev)
+
+2016-09-20 14:41:41,507 - [INFO] - from play in New I/O worker #13 
+Starting application default Akka system.
+
+2016-09-20 14:45:01,423 - [INFO] - from play in play-internal-execution-context-52 
+Shutdown application default Akka system.
+
+2016-09-20 14:45:02,201 - [INFO] - from play in play-internal-execution-context-52 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:45:02,206 - [INFO] - from play in play-internal-execution-context-52 
+Application started (Dev)
+
+2016-09-20 14:45:02,700 - [INFO] - from play in New I/O worker #5 
+Starting application default Akka system.
+
+2016-09-20 14:46:49,809 - [INFO] - from play in play-internal-execution-context-52 
+Shutdown application default Akka system.
+
+2016-09-20 14:46:50,476 - [INFO] - from play in play-internal-execution-context-52 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:46:50,481 - [INFO] - from play in play-internal-execution-context-52 
+Application started (Dev)
+
+2016-09-20 14:46:50,957 - [INFO] - from play in New I/O worker #12 
+Starting application default Akka system.
+
+2016-09-20 14:55:22,466 - [INFO] - from play in play-internal-execution-context-54 
+Shutdown application default Akka system.
+
+2016-09-20 14:55:23,213 - [INFO] - from play in play-internal-execution-context-54 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 14:55:23,220 - [INFO] - from play in play-internal-execution-context-54 
+Application started (Dev)
+
+2016-09-20 15:03:19,933 - [INFO] - from play in New I/O worker #13 
+Starting application default Akka system.
+
+2016-09-20 15:10:40,958 - [INFO] - from play in play-internal-execution-context-60 
+Shutdown application default Akka system.
+
+2016-09-20 15:10:41,965 - [INFO] - from play in play-internal-execution-context-60 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 15:10:41,973 - [INFO] - from play in play-internal-execution-context-60 
+Application started (Dev)
+
+2016-09-20 15:10:42,271 - [INFO] - from play in New I/O worker #9 
+Starting application default Akka system.
+
+2016-09-20 15:12:16,018 - [INFO] - from play in play-internal-execution-context-63 
+Shutdown application default Akka system.
+
+2016-09-20 15:12:16,867 - [INFO] - from play in play-internal-execution-context-63 
+database [default] connected at jdbc:mysql://10.73.33.41/playdb?useUnicode=true&characterEncoding=utf-8
+
+2016-09-20 15:12:16,872 - [INFO] - from play in play-internal-execution-context-63 
+Application started (Dev)
+
+2016-09-20 15:12:17,375 - [INFO] - from play in New I/O worker #1 
+Starting application default Akka system.
+
+2016-09-20 15:20:54,462 - [ERROR] - from application in play-akka.actor.default-dispatcher-486 
+
+
+! @71ehhccei - Internal server error, for (GET) [/databaseTable] ->
+
+play.api.Application$$anon$1: Execution exception[[SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000]]
+	at play.api.Application$class.handleError(Application.scala:293) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.DefaultApplication.handleError(Application.scala:399) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:170) [play_2.10-2.2.6.jar:2.2.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:167) [play_2.10-2.2.6.jar:2.2.6]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.3.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.3.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.3.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:43) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.3.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:70) [play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.3.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386) [akka-actor_2.10-2.2.0.jar:2.2.0]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.3.jar:na]
+Caused by: java.sql.SQLException: No suitable driver found for jdbc:hive2://h136159.mars.grid.sina.com.cn:10000
+	at java.sql.DriverManager.getConnection(DriverManager.java:689) ~[na:1.8.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0]
+	at models.utils.SparkSqlPool$$anonfun$getJdbcConn$1.apply$mcVI$sp(SparkSqlPool.scala:23) ~[classes/:na]
+	at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141) ~[scala-library-2.10.3.jar:na]
+	at models.utils.SparkSqlPool$.getJdbcConn(SparkSqlPool.scala:22) ~[classes/:na]
+	at models.io.DataBase$.SparkDataBase(DataBase.scala:14) ~[classes/:na]
+	at controllers.SparkSql$$anonfun$databaseTable$1$$anonfun$apply$11$$anonfun$apply$12.apply(SparkSql.scala:95) ~[classes/:na]
+	at controllers.SparkSql$$anonfun$databaseTable$1$$anonfun$apply$11$$anonfun$apply$12.apply(SparkSql.scala:94) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at controllers.Secured$$anonfun$IsAuthenticated$3$$anonfun$apply$1.apply(Secured.scala:27) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:221) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$10.apply(Action.scala:220) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:357) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:309) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:109) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:18) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.3.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:107) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:100) ~[play_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.2.6.jar:2.2.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.3.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.3.jar:na]
+	... 6 common frames omitted
+

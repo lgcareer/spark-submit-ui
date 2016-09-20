@@ -15,10 +15,21 @@ function fnFormatDetails ( oTable, nTr )
                 var jqTds = $('>td', nRow);
                 jqTds[1].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[1] + '">';
                 jqTds[2].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[2] + '">';
-                jqTds[3].innerHTML = '<select style="width:100%;" multiple><option>hadoop-0.20.2.cdh3b4</option><option>hadoop-0.20.2.cdh3u1</option><option>hadoop-0.20.2.cdh3u1.su1</option><option>hadoop-0.20.2.cdh3u3</option><option>hadoop-2.0.0</option><option>hadoop-2.2.0</option><option>hadoop-2.4.1</option><option>hadoop-2.6.0</option><option>hadoop-2.7.2</option><option>hbase-0.94.10.su1</option><option>hbase-0.94.6</option><option>hbase-0.96.1.1</option><option>hbase-1.0.3</option><option>hbase-1.2.0</option><option>zookeeper-3.4.3</option>      </select>';
+                jqTds[3].innerHTML = '<select data-placeholder="请选择版本..." class="chosen-select" style="width:100%;" multiple><option>hadoop-0.20.2.cdh3b4</option><option>hadoop-0.20.2.cdh3u1</option><option>hadoop-0.20.2.cdh3u1.su1</option><option>hadoop-0.20.2.cdh3u3</option><option>hadoop-2.0.0</option><option>hadoop-2.2.0</option><option>hadoop-2.4.1</option><option>hadoop-2.6.0</option><option>hadoop-2.7.2</option><option>hbase-0.94.10.su1</option><option>hbase-0.94.6</option><option>hbase-0.96.1.1</option><option>hbase-1.0.3</option><option>hbase-1.2.0</option><option>zookeeper-3.4.3</option>      </select>';
                 jqTds[4].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[4] + '">';
                 jqTds[5].innerHTML = '<a myid='+myid+' class="edit" href="">保存</a>';
                 jqTds[6].innerHTML = '<a class="cancel" href="">取消</a>';
+
+                       var config = {
+                         '.chosen-select'           : {},
+                         '.chosen-select-deselect'  : {allow_single_deselect:true},
+                         '.chosen-select-no-single' : {disable_search_threshold:10},
+                         '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                         '.chosen-select-width'     : {width:"95%"}
+                       }
+                    for (var selector in config) {
+                      $(selector).chosen(config[selector]);
+                    }
             }
 
 
@@ -151,6 +162,7 @@ function initdata() {
 
                                                     var $name = jqInputs[0].value;
                                                     var $unit = jqInputs[1].value;
+                                                    var $url = jqInputs[3].value;
 
                                                         if(jqSelect.val() !=null){
                                                             var _list = arrayToJson(jqSelect.val());
@@ -159,10 +171,12 @@ function initdata() {
                                                             return;
                                                         }
 
+                                                        alert("url is =<"+ $url)
 
 
 
-                                                    var $url = jqInputs[2].value;
+
+
                                                     $(document).ready(function(){
                                                             $.ajax({
                                                                 type:"GET",

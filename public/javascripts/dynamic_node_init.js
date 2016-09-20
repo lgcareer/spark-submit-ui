@@ -4,7 +4,6 @@
             function editRowb(oTable, nRow,myid) {
                      var aData = oTable.fnGetData(nRow);
                      var jqTds = $('>td', nRow);
-
                          $.ajax({
                              type:"GET",
                              url:"/names",
@@ -25,9 +24,20 @@
                 jqTds[0].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[0] + '">';
                 jqTds[1].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[1] + '">';
                 //jqTds[3].innerHTML = '<select><option>Apple</option><option>Apple2</option><option>角色1</option><option>角色2</option></select>'
-                jqTds[2].innerHTML = '<select style="width:100%;" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
+                jqTds[2].innerHTML = '<select data-placeholder="请选择角色..." class="chosen-select" style="width:100%;" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
                 jqTds[4].innerHTML = '<a myid='+myid+' class="edit" href="">保存</a>';
                 jqTds[5].innerHTML = '<a class="cancel" href="">取消</a>';
+
+                                       var config = {
+                                         '.chosen-select'           : {},
+                                         '.chosen-select-deselect'  : {allow_single_deselect:true},
+                                         '.chosen-select-no-single' : {disable_search_threshold:10},
+                                         '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                                         '.chosen-select-width'     : {width:"95%"}
+                                       }
+                                    for (var selector in config) {
+                                      $(selector).chosen(config[selector]);
+                                    }
             }
 
 
