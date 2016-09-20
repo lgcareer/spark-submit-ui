@@ -265,12 +265,12 @@
                     url:"/metadatalist",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>编辑</th><th>删除</th></tr></thead><tbody>"
+                        var head= "<thead><tr><th></th><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>编辑</th><th>删除</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td>" +datamid[i].url+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                                head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td>" +datamid[i].url+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";

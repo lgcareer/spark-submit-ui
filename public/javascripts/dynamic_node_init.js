@@ -25,7 +25,7 @@
                 jqTds[0].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[0] + '">';
                 jqTds[1].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[1] + '">';
                 //jqTds[3].innerHTML = '<select><option>Apple</option><option>Apple2</option><option>角色1</option><option>角色2</option></select>'
-                jqTds[2].innerHTML = '<select style="width:100%;" multiple><option>Apple</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option></select>';
+                jqTds[2].innerHTML = '<select style="width:100%;" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
                 jqTds[4].innerHTML = '<a myid='+myid+' class="edit" href="">保存</a>';
                 jqTds[5].innerHTML = '<a class="cancel" href="">取消</a>';
             }
@@ -103,7 +103,8 @@ function initNodeData() {
                                                         if(jqSelect.val()!=null){
                                                           var _list = arrayToJson(jqSelect.val())
                                                         }else{
-                                                            alert("请选择角色")
+                                                            alert("请选择角色");
+                                                            return;
                                                         }
 
                                                      var $name =jqSelect[1].value;
