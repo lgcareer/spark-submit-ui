@@ -37,7 +37,18 @@ object SparkSql extends Controller with Secured {
         val connection = SparkSqlPool.getJdbcConn()
         val statement = connection.createStatement()
         val founddatabase = statement.execute("use usergrowth")
-        val found = statement.execute(sqlForm)
+        /**
+         * 判断以";"结尾
+         */
+        var sql = ""
+        val boolean = sqlForm.endsWith(";")
+        if(!boolean){
+          sql = sqlForm
+        }else {
+          sql = sqlForm.substring(0,sqlForm.length-1)
+        }
+
+        val found = statement.execute(sql)
         if (!found) {
           InternalServerError("error")
         } else {

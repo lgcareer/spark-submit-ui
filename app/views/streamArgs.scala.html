@@ -88,11 +88,7 @@
                             <span class="title">Spark数据列表</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="@routes.YarnList.workerInfo">
-                            <span class="title">Spark Worker信息</span>
-                        </a>
-                    </li>
+
                 </ul>
             </li>
             <li>
@@ -196,6 +192,11 @@
                 </a>
                 <ul>
                     <li>
+                        <a href="@routes.YarnList.workerInfo">
+                            <span class="title">Spark Worker信息</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="@routes.Serviceplan.servicedao">
                             <span class="title">服务划分</span>
                         </a>
@@ -275,7 +276,7 @@
     <div class="graphs">
         <div class="xs">
           <form action="/executejar" method="POST" id="jarForm">
-            <div class="panel panel-color panel-psuccess">
+            <div class="panel panel-color panel-red">
                 <div class="panel-heading">
                     <h5 class="panel-title">请上传jar包</h5>
 

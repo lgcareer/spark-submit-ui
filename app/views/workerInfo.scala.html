@@ -87,11 +87,6 @@
                                 <span class="title">Spark数据列表</span>
                             </a>
                         </li>
-                        <li class="active">
-                            <a href="@routes.YarnList.workerInfo">
-                                <span class="title">Spark Worker信息</span>
-                            </a>
-                        </li>
                     </ul>
                 </li>
                 <li>
@@ -195,6 +190,11 @@
                     </a>
                     <ul>
                         <li>
+                            <a href="@routes.YarnList.workerInfo">
+                                <span class="title">Spark Worker信息</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="@routes.Serviceplan.servicedao">
                                 <span class="title">服务划分</span>
                             </a>
@@ -272,7 +272,7 @@
                         var head= "<table class=\"table table-bordered table-striped table-condensed table-hover\"><tr><th>ID</th><th>Host</th><th>Cores</th><th>CoresUsed</th><th>Memory</th><th>MemoryUsed</th><th>State</th><th>LastHeartbeat</th></tr>"
                         var workers=eval(data);
                         for(var i=0;i<workers.length;i++){
-                            head += "<tr><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+(workers[i].coresused)/1024+"</td><td>"+workers[i].memory+"</td><td>"+workers[i].memoryused+"</td><td>"+workers[i].state+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
+                            head += "<tr><td><a href ='http://"+workers[i].host+":8081'>" +workers[i].id+"</a></td><td>"+workers[i].host+"</td><td>"+workers[i].cores+"</td><td>"+workers[i].coresused+"</td><td>"+Math.round((workers[i].memory)/1024)+"</td><td>"+Math.round((workers[i].memoryused)/1024)+"</td><td>"+workers[i].state+"</td><td>"+new Date(workers[i].lastheartbeat).toLocaleString()+"</td></tr>"
                         }
                         head += " </table>";
                         $('#workerInfo').html(head);

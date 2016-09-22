@@ -22,6 +22,7 @@ GET     /runTasklist                 controllers.YarnList.runTasklist
 GET     /workerInfo                  controllers.YarnList.workerInfo
 GET     /spark_info                 controllers.YarnList.spark_info
 GET     /sparklist                  controllers.YarnList.sparklist
+GET     /sparkRunTasklist                  controllers.YarnList.sparkRunTasklist
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 

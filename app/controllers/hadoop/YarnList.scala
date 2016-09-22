@@ -60,6 +60,15 @@ object YarnList  extends Controller  with Secured {
     Ok(workerList)
   }
 
+
+  def sparkRunTasklist = IsAuthenticated { username => implicit request =>
+    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
+    val sparkRunTasklist = Json.parse(sparkDashboard)
+    Ok(sparkRunTasklist)
+  }
+
+
   def runTasklist = IsAuthenticated { username => implicit request =>
     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
     val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
@@ -82,6 +91,7 @@ object YarnList  extends Controller  with Secured {
 
 
   def workerInfo = IsAuthenticated { username => implicit request =>
+
     Ok(views.html.workerInfo())
   }
 

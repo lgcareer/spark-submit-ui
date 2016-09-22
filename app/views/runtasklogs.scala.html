@@ -87,11 +87,6 @@
                                     <span class="title">Spark数据列表</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="@routes.YarnList.workerInfo">
-                                    <span class="title">Spark Worker信息</span>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -195,6 +190,11 @@
                         </a>
                         <ul>
                             <li>
+                                <a href="@routes.YarnList.workerInfo">
+                                    <span class="title">Spark Worker信息</span>
+                                </a>
+                            </li>
+                            <li>
                                 <a href="@routes.Serviceplan.servicedao">
                                     <span class="title">服务划分</span>
                                 </a>
@@ -222,14 +222,23 @@
 
         </div>
     }
-@main("Neptun Dashboard")(sidebar) {
+    @main("Neptun Dashboard")(sidebar) {
 
+
+    <script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/jquery.edatatables.js")"></script>
+    <link href="@routes.Assets.at("stylesheets/xenon-forms.css")" rel="stylesheet">
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
+    <link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
+
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
 
     <div class="page-title">
 
         <div class="title-env">
-            <h1 class="title">Spark 运行任务日志</h1>
-            <p class="description">Spark 运行日志监控view面板</p>
+            <h1 class="title">Spark 运行日志查看</h1>
+            <p class="description">Spark 运行任务日志查看列表view面板</p>
         </div>
 
         <div class="breadcrumb-env">
@@ -240,11 +249,10 @@
                 </li>
                 <li>
 
-                    <a href="#">App Tracking</a>
+                    <a href="#">App数据</a>
                 </li>
                 <li class="active">
-
-                    <strong>Spark 运行任务日志</strong>
+                    <strong>Spark数据列表</strong>
                 </li>
             </ol>
 
@@ -253,46 +261,102 @@
     </div>
 
     <div class="graphs">
-        <h3 style="text-align:center ;"> Spark 运行日志查看  </h3>
-        <div class="bs-example4" data-example-id="contextual-table">
-            <div id = "runtask">
+
+        <div class="panel panel-color panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">Spark任务日志查看列表</h3>
+
+                <div class="panel-options">
+                    <span>伸缩</span>
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+
+
+                <table id="example" class="table table-striped table-bordered table-condensed table-hover" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Application ID</th>
+                        <th>App Name</th>
+                        <th>User</th>
+                        <th>Cores</th>
+                        <th>State</th>
+                        <th>MemoryPerNode</th>
+                        <th>Submitted Time</th>
+                        <th>Monitor</th>
+                        <th>hidd</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
             </div>
         </div>
+        @copyright()
+
+        <script>
+                var table =
+                        $('#example').dataTable( {
+                            "ajax": {
+                                "url": "/sparkRunTasklist",
+                                "dataSrc": "activeapps"
+                            },
+                            "columns": [
+                                { "data": "appui"},
+                                { "data": "name"},
+                                { "data": "user"},
+                                { "data": "cores"},
+                                { "data": "state",
+                                  render: function (data, type, row, meta) {
+                                        var node = "<label ";
+                                        if(data == "RUNNING"){
+                                            node += "class='label label-primary'>" + data + "</label>";
+                                        }else if(data =="WAITING"){
+                                            node += "class='label label-danger'>" + data + "</label>";
+                                        }
+                                        return node;}
+                                },
+                                { "data": "memoryperslave",
+                                     render: function (data, type, row, meta){
+                                        date = parseInt(data)/1024 + "G";
+                                    return date;}
+                                },
+                                { "data": "submitdate",
+                                 render: function (data, type, row, meta){
+                                            date = new Date(data).toLocaleString();
+                                        return date;}
+                                },
+                                { "data": "appui"},
+                                { "data": "id"}
+                            ],
+                            columnDefs: [
+                                {
+                                    targets: 8,
+                                    visible: false
+                                },
+
+                                {
+                                targets: 0,
+                                render: function(data, type, row, meta) {
+                                    var s = '<a href="' + data + '" target="_blank">' + row.id + '</a>';
+                                    return s;
+                                }
+                                },
+                                {
+                                targets: 7,
+                                render: function(data, type, row, meta) {
+                                    <!--var s = '<a href="'+data+ '/streaming' + '"  target="_blank">查看logs</a>';-->
+                                    var s = '<a href="http://10.77.136.159:8080/app/?appId='+row.id+'"  target="_blank">查看logs</a>';
+                                    return s;
+                                }
+                            }
+                            ]
+                        } );
+        </script>
     </div>
-
-    @copyright()
-    <script charset="utf-8">
-
-
-            $(document).ready(function(){
-                $.ajax({
-                    type:"GET",
-                    url:"/workerlist",
-                    dataType:"json",
-                    success:function(data){
-                        var head= "<table  class='table table-bordered table-striped table-condensed table-hover'><tr><th>Application ID</th><th>Name</th><th>User</th><th>Submitted Time</th><th>State</th><th>Logs</th></tr>"
-                        var myobj=eval(data);
-                        var activeapps =myobj.activeapps
-                        for (var p in activeapps) {
-                            var id = activeapps[p].id
-                            var name = activeapps[p].name
-                            var user = activeapps[p].user
-                            var memoryperslave = activeapps[p].memoryperslave
-                            var submitdate = activeapps[p].submitdate
-                            var state = activeapps[p].state
-                            var duration = activeapps[p].duration
-                            var appui = activeapps[p].appui
-                            console.log(appui);
-                            head += "<tr class= \"success\"><td><a a href='http://h136159.mars.grid.sina.com.cn:8080/app/?appId="+id+"' target='_blank'>"+id+"</td><td>"+name+"</td><td>"+user+"</td><td>"+submitdate+"</td><td>"+state+"</td><td><a href='/he?id="+id+"'>查看</a></td></tr>"
-                        };
-
-
-                        head += " </table>";
-                        $('#runtask').html(head);
-                    }
-                });
-            });
-    </script>
-}
-
-
+    }
