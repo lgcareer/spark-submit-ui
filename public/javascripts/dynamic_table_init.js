@@ -106,19 +106,16 @@ function initdata() {
                                 dataType:"json",
                                 success:function(data){
                                 sOut= "<table cellpadding=\"5\" cellspacing=\"0\" border=\"0\" style=\"padding-left:50px;\"><thead><tr><th>IP列表</th><th>host列表</th><th>角色</th></thead><tbody>";
-                                    var myobj=eval(data);
-                                    for (var p in myobj) {
-                                        var datamid = eval(data[p]);
-                                        for (var i = 0; i < datamid.length; i++) {
-                                             sOut +="<tr><td><font color=\"#ffffff\">" + datamid[i].ip + "</font></td><td><font color=\"#ffffff\">" + datamid[i].host + "</font></td><td><font color=\"#ffffff\">" + datamid[i].role + "</font></td></tr>";
+                                        for (var i = 0; i < data.list.length; i++) {
+                                             sOut +="<tr><td><font color=\"#ffffff\">" + data.list[i].ip + "</font></td><td><font color=\"#ffffff\">" + data.list[i].host + "</font></td><td><font color=\"#ffffff\">" + data.list[i].role + "</font></td></tr>";
 
                                         };
-                                         //sOut += '<tr><td><font color=\"#ffffff\">Rendering engine:</font></td><td>'+'30台机器'+'</td></tr>';
-                                         //sOut += '<tr><td><font color=\"#ffffff\">Link to source:</font></td><td>Could provide a link here</td></tr>';
-                                         //sOut += '<tr><td><font color=\"#ffffff\">Extra info:</font></td><td>And any further details here (images etc)</td></tr>';
-                                    };
-                                    sOut += "</tbody></table>";
-                                    oTable.fnOpen( nTr, sOut, 'details' );
+                                        for(var j = 0; j < data.details.length; j++){
+                                             sOut += '<tr><td><font color=\"#ffffff\">'+data.details[j].role+'</font></td><td><font color=\"#ffffff\">'+data.details[j].count+'个 </font></td></tr>';
+                                        }
+                                         sOut += "</tbody></table>";
+
+                                       oTable.fnOpen( nTr, sOut, 'details' );
 
                                 }
                             });

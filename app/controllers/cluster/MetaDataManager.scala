@@ -2,7 +2,7 @@ package controllers
 
 import java.io.FileInputStream
 
-import models.{MetaData, MetaDataList, NodeData, NodeDataList}
+import models._
 import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
@@ -46,8 +46,9 @@ object MetaDataManager extends Controller{
 
   def getNodaDatas(pid:Int) =Action{
     implicit val residentWrites = Json.writes[NodeData]
+    implicit val resident = Json.writes[NodeDetail]
     implicit val clusterListWrites = Json.writes[NodeDataList]
-    val data: JsValue = Json.toJson(NodeDataList(NodeData.findNodeDatasById(pid)))
+    val data: JsValue = Json.toJson(NodeData.findNodeDetail(pid))
     Ok(data)
   }
 
@@ -56,8 +57,8 @@ object MetaDataManager extends Controller{
 
   def nodeList =Action{
     implicit val residentWrites = Json.writes[NodeData]
-    implicit val clusterListWrites = Json.writes[NodeDataList]
-    val data: JsValue = Json.toJson(NodeDataList(NodeData.findNodeDatas))
+    implicit val clusterListWrites = Json.writes[NodeList]
+    val data: JsValue = Json.toJson(NodeList(NodeData.findNodeDatas))
     Ok(data)
   }
 

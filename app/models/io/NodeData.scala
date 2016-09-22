@@ -5,11 +5,16 @@ import anorm._
 import play.api.db.DB
 import play.api.Play.current
 
+import scala.collection.immutable.Iterable
+import scala.collection.mutable
+
 /**
   * Created by liangkai1 on 16/9/8.
   */
 case class NodeData(id:Int,ip:String,host:String,role:String,name:String,pid:Int)
-case class NodeDataList(list:Seq[NodeData])
+case class NodeDataList(details:Seq[NodeDetail],list:Seq[NodeData])
+case class  NodeList(list:Seq[NodeData])
+case class NodeDetail(role:String,count:Int)
 object NodeData {
 
   val nodedata = {
@@ -31,6 +36,31 @@ object NodeData {
       }
     }
   }
+
+
+
+  def findNodeDetail(pid:Int):NodeDataList ={
+    var snakes = Map.empty[String, Int]
+    val nodes: Seq[NodeData] = findNodeDatasById(pid)
+
+    nodes.map(x=>{
+        val split: Array[String] = x.role.split("\\s+")
+         split.map{ r =>
+           if (snakes.isDefinedAt(r)) {
+             val value: Int = snakes(r) + 1
+             snakes += (r -> value)
+           } else {
+             snakes += (r -> 1)
+           }
+         }
+
+    })
+    val datas=snakes.map{
+      data => NodeDetail(data._1,data._2)
+    }
+    NodeDataList(datas.toIndexedSeq,nodes)
+  }
+
 
   def findNodeDatasById(pid:Int):Seq[NodeData]={
     DB.withConnection { implicit connection =>
