@@ -49,8 +49,10 @@ object MetaDataManager extends Controller{
     implicit val clusterListWrites = Json.writes[NodeDataList]
     val data: JsValue = Json.toJson(NodeDataList(NodeData.findNodeDatasById(pid)))
     Ok(data)
-
   }
+
+
+
 
   def nodeList =Action{
     implicit val residentWrites = Json.writes[NodeData]

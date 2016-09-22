@@ -53,8 +53,6 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
         Ok(views.html.upload(executeForm))
       }
 
-
-
       def executejar = IsAuthenticated { username => implicit request =>
         executeForm.bindFromRequest.fold(
           formWithErrors => {
