@@ -222,11 +222,18 @@
 @main("Neptune SparkSql")(sidebar) {
 
 <link href="@routes.Assets.at("stylesheets/datapp.css")" rel="stylesheet">
+    <link href="@routes.Assets.at("stylesheets/xenon-forms.css")" rel="stylesheet">
 <link href="@routes.Assets.at("stylesheets/jarcustom.css")" rel="stylesheet">
 <link href="@routes.Assets.at("stylesheets/codemirror.css")" rel="stylesheet" type="text/css" />
 <link href="@routes.Assets.at("stylesheets/neo.css")" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster.bundle.min.css")" type="text/css"/>
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster-sideTip-punk.min.css")" type="text/css"/>
+    <script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
+    <script src="@routes.Assets.at("javascripts/jquery.edatatables.js")"></script>
+    <link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
+
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
 <!--加载动态图表js-->
 <script src="@routes.Assets.at("javascripts/sqlToDisplay.js")"></script>
     <script src="@routes.Assets.at("javascripts/codemirror.js")"></script>
@@ -296,37 +303,68 @@
 
         <div id="todisplay"></div>
         <script type="text/html" id="readtodisplay" style="display:none">
-            <ul id="myTab" class="nav nav-tabs">
-                <li class="active"><a href="#data_tables" data-toggle="tab" onclick='resultToTable()'>
-                    <span class="fa fa-table"></span></a>
-                </li>
-                <li><a href="#data_charts" data-toggle="tab" onclick="resultToCharts()"><span class="fa fa-line-chart"></span></a></li>
-            </ul>
-            <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade in active" id="data_tables">
-                    <p id="tables"></p>
+            <div class="row">
+        <div class="col-md-12">
+
+        <ul class="nav nav-tabs nav-tabs-justified">
+        <li class="active">
+        <a href="#data_tables" data-toggle="tab" onclick='resultToTable()'>
+        <span class="visible-xs"><i class="fa fa-table"></i></span>
+        <span class="hidden-xs">数据表格</span>
+        </a>
+        </li>
+        <li>
+        <a href="#data_charts" data-toggle="tab">
+        <span class="visible-xs"><i class="fa fa-area-chart"></i></span>
+        <span class="hidden-xs">数据图形</span>
+        </a>
+        </li>
+        </ul>
+
+        <div class="tab-content">
+        <div class="tab-pane active" id="data_tables">
+
+        <div id="tables">
+        </div>
+
+        </div>
+        <div class="tab-pane" id="data_charts" onclick="resultToCharts()">
+            <div class="row">
+            <div class="col-xs-2">
+        <select class="form-control small" id="xargs">
+        <option selected = "selected">请选择X坐标:</option>
+        </select>
                 </div>
-                <div class="tab-pane fade" id="data_charts">
-                    <select class="selectpicker" id="xargs">
-                        <option selected = "selected">请选择X坐标:</option>
-                    </select>
-                    <select class="selectpicker" id="yargs">
-                        <option selected = "selected">请选择Y坐标:</option>
-                    </select>
-                    <select class="selectpicker" id="yargs">
-                        <option selected = "selected">柱状图</option>
-                        <option>折线图</option>
-                        <option>饼图</option>
-                        <option>雷达图</option>
-                        <option>散点图</option>
-                        <option>瀑布图</option>
-                    </select>
-                    <button class="btn-success btn" id="generate">生成图表</button>
-                    <p id="charts"></p>
+            <div class="col-xs-2">
+        <select class="form-control  small" id="yargs">
+        <option selected = "selected">请选择Y坐标:</option>
+        </select>
                 </div>
+            <div class="col-xs-2">
+        <select  class="form-control small" id="yargs">
+        <option selected = "selected">柱状图</option>
+        <option>折线图</option>
+        <option>饼图</option>
+        <option>雷达图</option>
+        <option>散点图</option>
+        <option>瀑布图</option>
+        </select>
+                </div>
+            <div class="col-xs-2">
+            <button class="btn-success btn" id="generate">生成图表</button>
             </div>
+                </div>
+                </div>
+
+        <div id="charts"></div>
+        </div>
+        </div>
+        </div>
         </script>
+
         <div class="clearfix"> </div>
+
+
     </div>
     <div class="clearfix"> </div>
 
@@ -356,7 +394,8 @@
         </div>
 
     </div>
-</div>
+
+
     <script charset="utf-8">
             $(document).ready(function(){
                 $.ajax({
@@ -364,7 +403,7 @@
                     url:"/databaseTable",
                     dataType:"json",
                     success:function(data){
-                        var head= ""
+                        var head= "";
                         var metadata=eval(data);
                         for (var p in metadata){
                             var tables = metadata[p];
@@ -374,14 +413,16 @@
                                      }
                                  head += "</li></ul>";
                                  }
-                         $('#database_table').html(head);
+                         $('#database_table').append(head);
                     }
+
                 });
             });
 
 </script>
 
-<script>
+    <script>
+
             $(function () {
                 $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
                 $('.tree li.parent_li > span').on('click', function (e) {
@@ -396,5 +437,9 @@
                     e.stopPropagation();
                 });
             });
+
+
     </script>
+
 }
+</div>
