@@ -15,6 +15,7 @@ import scala.util.Random
 
 object SparkSql extends Controller with Secured {
   var config : Configuration = new Configuration()
+  val filelocal = config.getString("spark.sql.file")
   def sqlpage = IsAuthenticated { username => implicit request =>
     Ok(views.html.sparksql())
   }
@@ -67,7 +68,6 @@ object SparkSql extends Controller with Secured {
             }
             result += row.toArray
           }
-          val filelocal = config.getString("spark.sql.file")
           val writer = new PrintWriter(new File(filelocal+s"/spark$n.txt"))
           val resultCSV = Json.toJson(
             Map[String, Any](
@@ -97,7 +97,7 @@ object SparkSql extends Controller with Secured {
   }
 
   def download = IsAuthenticated { username => implicit request =>
-    Ok.sendFile(new File(s"/tmp/spark$n.txt"))
+    Ok.sendFile(new File(filelocal+s"/spark$n.txt"))
   }
 
   def databaseTable = IsAuthenticated { username => implicit request =>
