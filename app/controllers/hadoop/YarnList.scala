@@ -62,10 +62,30 @@ object YarnList  extends Controller  with Secured {
 
 
   def sparkRunTasklist = IsAuthenticated { username => implicit request =>
+    val groupName = UserCountDao.userBygroup(username)
     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
     val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
-    val sparkRunTasklist = Json.parse(sparkDashboard)
-    Ok(sparkRunTasklist)
+    val json = Json.parse(sparkDashboard)
+
+    val runTaskLength = (json \ "activeapps" \\ "id").length
+    var activeapps = "{\"activeapps\":["
+
+    for(i <- 0 until runTaskLength){
+      val runTaskuser = (json \ "activeapps")(i) \ "user"
+      if(groupName == "SuperAdmin"){
+        activeapps += (json \ "activeapps")(i) + ","
+      }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
+        activeapps += (json \ "activeapps")(i) + ","
+      }
+    }
+    activeapps = activeapps.substring(0, activeapps.length - 1)
+    activeapps += "]}"
+    val boolean =activeapps.contains("[")
+    boolean match {
+      case false => Ok("""{"activeapps":[]}""")
+      case true  => Ok(activeapps)
+
+    }
   }
 
 
@@ -73,20 +93,43 @@ object YarnList  extends Controller  with Secured {
     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
     val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
     val json = Json.parse(sparkDashboard)
+
+    /**
+     * 权限判断
+     */
+    val groupName = UserCountDao.userBygroup(username)
+
     val runTaskLength = (json \ "activeapps" \\ "id").length
     val finishTaskLength = (json \ "completedapps" \\ "id").length
     val runTasklist = json \ "activeapps"
     val finishTasklist = json \ "completedapps"
     var apps = "{\"apps\":["
     for(i <- 0 until runTaskLength){
-         apps += (json \ "activeapps")(i) + ","
+        val runTaskuser = (json \ "activeapps")(i) \ "user"
+        if(groupName == "SuperAdmin"){
+          apps += (json \ "activeapps")(i) + ","
+        }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
+          apps += (json \ "activeapps")(i) + ","
+        }
     }
     for(i <- 0 until finishTaskLength){
+      val completTaskuser = (json \ "completedapps")(i) \ "user"
+      if(groupName == "SuperAdmin"){
         apps += (json \ "completedapps")(i) + ","
+      }else if(completTaskuser.toString() == "\"" + groupName+ "\""){
+        apps += (json \ "completedapps")(i) + ","
+      }
     }
     apps = apps.substring(0, apps.length - 1)
     apps += "]}"
-    Ok(apps)
+    val boolean =apps.contains("[")
+     boolean match {
+       case false => Ok("""{"apps":[]}""")
+       case true  => Ok(apps)
+
+     }
+
+
   }
 
 
