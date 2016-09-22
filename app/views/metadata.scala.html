@@ -261,12 +261,12 @@
                     url:"/metadatalist",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>编辑</th><th>删除</th></tr></thead><tbody>"
+                        var head= "<thead><tr><th></th><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>编辑</th><th>删除</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td>" +datamid[i].url+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                                head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td>" +datamid[i].url+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -411,10 +411,11 @@
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/styles.css")" type="text/css"/>
 
 
-
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/google.css")" type="text/css"/>
 <link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style_dy.css")" type="text/css"/>
+
+<!--alert-->
 <script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
 
 <script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
@@ -422,7 +423,7 @@
 <script src="@routes.Assets.at("javascripts/modernizr.min.js")" type="text/javascript" ></script>
 <script src="@routes.Assets.at("javascripts/jquery.dataTables.js")" type="text/javascript" ></script>
 <script src="@routes.Assets.at("javascripts/DT_bootstrap.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/scripts.js")" type="text/javascript" ></script>
+<!--<script src="@routes.Assets.at("javascripts/scripts.js")" type="text/javascript" ></script>-->
 
 
 <!--tab-->
@@ -437,9 +438,9 @@
 <script src="@routes.Assets.at("javascripts/multi-select-init.js")" type="text/javascript"></script>
 
 
-<!--select -->
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-select.css")" type="text/css"/>
-<script src="@routes.Assets.at("javascripts/bootstrap-select.js")" type="text/javascript"></script>
+<!--select-->
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/chosen.css")" type="text/css"/>
+<script src="@routes.Assets.at("javascripts/chosen.jquery.js")" type="text/javascript"></script>
 
 
 }

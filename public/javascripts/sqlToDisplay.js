@@ -34,10 +34,12 @@ $(document).ready(function () {
 
             }
         });
+
         resultToCharts();
     });
 
-})
+});
+
 
 $(function () {
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -47,20 +49,22 @@ $(function () {
 });
 
 function resultToCharts() {
-    $('#data_charts').find('#generate').click(function () {
+    console.log("i'm here.....");
+    $('#generate').click(function () {
         var header = DATA.header;
         var sql_data = DATA.data;
         var categories = [];
         var value = [];
-        var x_index = header.indexOf($('#data_charts').find("#xargs").val());
-        var y_index = header.indexOf($('#data_charts').find("#yargs").val());
+        var x_index = header.indexOf($("#xargs").val());
+        var y_index = header.indexOf($("#yargs").val());
 
         for (var j = 0; j < sql_data.length; j++) {
             categories.push(sql_data[j][x_index]);
             value.push(sql_data[j][y_index]);
         }
+        console.log("click");
 
-        $('#data_charts').find("#charts").highcharts({
+        $("#charts").highcharts({
             chart: {
                 type: 'column'
             },
@@ -74,7 +78,7 @@ function resultToCharts() {
             yAxis: {
                 min: 0,
                 title: {
-                    text: $('#data_charts').find("#xargs").val()
+                    text: $("#xargs").val()
                 }
             },
             plotOptions: {
@@ -88,7 +92,7 @@ function resultToCharts() {
                 href: 'http://t.cn'
             },
             series: [{
-                name: $('#data_charts').find("#yargs").val(),
+                name: $("#yargs").val(),
                 data: value
             }]
         });
@@ -102,6 +106,7 @@ function resultToTable() {
         toTab();
         var header = DATA.header;
         var sql_data = DATA.data;
+        console.log(DATA);
         var result = "";
         var tr = "";
         var choice = "";
@@ -123,11 +128,18 @@ function resultToTable() {
             }
 
         }
-        var kk = "<table class='table table-striped table-bordered table-hover table-condensed'>" + result + "</table>";
+        var kk = "<table class='table table-striped table-bordered table-hover table-condensed' id='example'>" + result + "</table>";
         $("#tables").html(kk);
         $("#xargs").html(choice + '<option selected = "selected">请选择X坐标:</option>');
         $("#yargs").html(choice + '<option selected = "selected">请选择Y坐标:</option>');
+        $('#example').dataTable( {
+            destroy: true,
+            data: DATA.data
+
+        } );
     }
+
+
 }
 
 function toTab() {

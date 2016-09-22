@@ -1,7 +1,6 @@
 function fnFormatDetails ( oTable, nTr )
 {
-    var aData = oTable.fnGetData( nTr );
-    var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
+         var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
     sOut += '<tr><td>Name Node:</td><td>'+aData[1]+' '+aData[4]+'</td></tr>';
     sOut += '<tr><td>DataNode:</td><td>10台</td></tr>';
     sOut += '<tr><td>Master</td><td>2 台</td></tr>';
@@ -16,10 +15,21 @@ function fnFormatDetails ( oTable, nTr )
                 var jqTds = $('>td', nRow);
                 jqTds[1].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[1] + '">';
                 jqTds[2].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[2] + '">';
-                jqTds[3].innerHTML = '<select style="width:100%;" multiple><option>Apple</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option><option>Apple2</option></select>';
+                jqTds[3].innerHTML = '<select data-placeholder="请选择版本..." class="chosen-select" style="width:100%;" multiple><option>hadoop-0.20.2.cdh3b4</option><option>hadoop-0.20.2.cdh3u1</option><option>hadoop-0.20.2.cdh3u1.su1</option><option>hadoop-0.20.2.cdh3u3</option><option>hadoop-2.0.0</option><option>hadoop-2.2.0</option><option>hadoop-2.4.1</option><option>hadoop-2.6.0</option><option>hadoop-2.7.2</option><option>hbase-0.94.10.su1</option><option>hbase-0.94.6</option><option>hbase-0.96.1.1</option><option>hbase-1.0.3</option><option>hbase-1.2.0</option><option>zookeeper-3.4.3</option>      </select>';
                 jqTds[4].innerHTML = '<input type="text" class="form-control1 small" value="' + aData[4] + '">';
                 jqTds[5].innerHTML = '<a myid='+myid+' class="edit" href="">保存</a>';
                 jqTds[6].innerHTML = '<a class="cancel" href="">取消</a>';
+
+                       var config = {
+                         '.chosen-select'           : {},
+                         '.chosen-select-deselect'  : {allow_single_deselect:true},
+                         '.chosen-select-no-single' : {disable_search_threshold:10},
+                         '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                         '.chosen-select-width'     : {width:"95%"}
+                       }
+                    for (var selector in config) {
+                      $(selector).chosen(config[selector]);
+                    }
             }
 
 
@@ -50,13 +60,13 @@ function initdata() {
     nCloneTd.innerHTML = '<img src="/assets/images/plus.png">';
     nCloneTd.className = "center";
 
-    $('#editable-sample thead tr').each( function () {
-        this.insertBefore( nCloneTh, this.childNodes[0] );
-    } );
-
-    $('#editable-sample tbody tr').each( function () {
-        this.insertBefore(  nCloneTd.cloneNode( true ), this.childNodes[0]);
-    } );
+//    $('#editable-sample thead tr').each( function () {
+//        this.insertBefore( nCloneTh, this.childNodes[0] );
+//    } );
+//
+//    $('#editable-sample tbody tr').each( function () {
+//        this.insertBefore(  nCloneTd.cloneNode( true ), this.childNodes[0]);
+//    } );
 
     /*
      * Initialse DataTables, with no sorting on the 'details' column
@@ -72,7 +82,7 @@ function initdata() {
      * Note that the indicator for showing which row is open is not controlled by DataTables,
      * rather it is done here
      */
-    $(document).on('click','#editable-sample tbody td img',function () {
+    $(document).on('click','#editable-sample tbody td img',function (e) {
         var nTr = $(this).parents('tr')[0];
         if ( oTable.fnIsOpen(nTr) )
         {
@@ -83,15 +93,16 @@ function initdata() {
         else
         {
             /* Open this row */
-            this.src = "/assets/images/minus.png";
+            this.src = "/assets/images/minus.png"
             //oTable.fnOpen( nTr, fnFormatDetails(oTable, nTr), 'details' );
+               var pid = $(e.target).attr('myid');
 
                         /*详情*/
                         $(document).ready(function(){
                             $.ajax({
                                 type:"GET",
                                 url:"/nodedata",
-                                data:{pid:11},
+                                data:{pid:pid},
                                 dataType:"json",
                                 success:function(data){
                                 sOut= "<table cellpadding=\"5\" cellspacing=\"0\" border=\"0\" style=\"padding-left:50px;\"><thead><tr><th>IP列表</th><th>host列表</th><th>角色</th></thead><tbody>";
@@ -102,9 +113,9 @@ function initdata() {
                                              sOut +="<tr><td><font color=\"#ffffff\">" + datamid[i].ip + "</font></td><td><font color=\"#ffffff\">" + datamid[i].host + "</font></td><td><font color=\"#ffffff\">" + datamid[i].role + "</font></td></tr>";
 
                                         };
-                                         sOut += '<tr><td><font color=\"#ffffff\">Rendering engine:</font></td><td>'+'30台机器'+'</td></tr>';
-                                         sOut += '<tr><td><font color=\"#ffffff\">Link to source:</font></td><td>Could provide a link here</td></tr>';
-                                         sOut += '<tr><td><font color=\"#ffffff\">Extra info:</font></td><td>And any further details here (images etc)</td></tr>';
+                                         //sOut += '<tr><td><font color=\"#ffffff\">Rendering engine:</font></td><td>'+'30台机器'+'</td></tr>';
+                                         //sOut += '<tr><td><font color=\"#ffffff\">Link to source:</font></td><td>Could provide a link here</td></tr>';
+                                         //sOut += '<tr><td><font color=\"#ffffff\">Extra info:</font></td><td>And any further details here (images etc)</td></tr>';
                                     };
                                     sOut += "</tbody></table>";
                                     oTable.fnOpen( nTr, sOut, 'details' );
@@ -121,7 +132,7 @@ function initdata() {
                 //新增
                 $('#editable-sample_new').click(function (e) {
                     e.preventDefault();
-                    var aiNew = oTable.fnAddData(['', '', '', '',
+                    var aiNew = oTable.fnAddData(['', '', '', '','',
                             '<a class="edit" href="">编辑</a>', '<a class="cancel" data-mode="new" href="">取消</a>'
                     ]);
                     var nRow = oTable.fnGetNodes(aiNew[0]);
@@ -151,12 +162,21 @@ function initdata() {
 
                                                     var $name = jqInputs[0].value;
                                                     var $unit = jqInputs[1].value;
+                                                    var $url = jqInputs[3].value;
 
-                                                        jqSelect.val()
-                                                    var _list = arrayToJson(jqSelect.val())
+                                                        if(jqSelect.val() !=null){
+                                                            var _list = arrayToJson(jqSelect.val());
+                                                        }else{
+                                                            alert("请选择版本");
+                                                            return;
+                                                        }
+
+                                                        alert("url is =<"+ $url)
 
 
-                                                    var $url = jqInputs[2].value;
+
+
+
                                                     $(document).ready(function(){
                                                             $.ajax({
                                                                 type:"GET",
