@@ -16,7 +16,7 @@ object User {
     * Parse a User from a ResultSet
     */
   val simple = {
-    get[String]("user.email") ~
+      get[String]("user.email") ~
       get[String]("user.name") ~
       get[String]("user.password")~
       get[Int]("user.status")~
@@ -153,12 +153,14 @@ object User {
       SQL(
         """
           insert into user values (
-            {email}, {name}, {password}
+            {email}, {name}, {password},0,0
           )
         """).on(
         'email -> user.email,
         'name -> user.name,
-        'password -> user.password).executeUpdate()
+        'password -> user.password,
+        'status->user.status,
+        'audit->user.audit).executeUpdate()
       user
     }
   }
