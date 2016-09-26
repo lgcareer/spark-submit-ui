@@ -844,27 +844,27 @@
     </script>*@
 
     @*
-        修订日志:v3.0.5(2016.09.09)
-        添加全局配置文件
-        优化websocket消息推送,增加已读信息功能
-        改造play framework数据库连接池
-        优化页面刷新功能(数据库/js)
-        添加spark master调度资源占比
-        dashboard和后台优化页面调整
+        修订日志:v3.0.6(2016.09.23)
+        集群节点元数据增删改查
+        新增节点详情统计与查看
+        spark用户权限列表展示
+        过滤输入sql冗余信息
+        元数据多选框样式修改
+        修改spark-sql table样式
         修正表格样式&部分UI调整
 *@
 
     <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.0.5(2016.09.09)",
+                    title: "修订日志:v3.0.6(2016.09.23)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>优化websocket消息推送,增加已读信息功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>改造play framework数据库连接池</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>优化页面刷新功能(数据库/js)</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加spark master调度资源占比</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;添加全局配置文件</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;dashboard和后台优化页面调整</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>集群节点元数据增删改查</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增节点详情统计与查看</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>spark用户权限列表展示</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>修改spark-sql table样式</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;过滤输入sql冗余信息</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;元数据多选框样式修改</sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
