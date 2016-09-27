@@ -131,14 +131,30 @@ GET   /readall                          controllers.Application.readall
 GET   /metadatalist                     controllers.MetaDataManager.metadatas
 GET   /metadata                         controllers.MetaDataManager.metadata
 GET  /update                            controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
-GET  /rm                                controllers.MetaDataManager.rm(id: String)
+GET  /rm                                controllers.MetaDataManager.rm(id: Int)
 GET   /names                            controllers.MetaDataManager.getNames
 
 #节点管理
 GET  /nodedata                         controllers.MetaDataManager.getNodaDatas(pid:Int)
 GET  /nodelist                          controllers.MetaDataManager.nodeList
 GET  /addnode                           controllers.MetaDataManager.updateNode(id:Int,ip:String,host: String,role:String,name:String)
-GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:String)
+GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:Int)
+
+
+#元数据REST API
+GET  /cluster/list      controllers.MetaRestApi.getClusterList
+GET  /cluster/add       controllers.MetaRestApi.addCluster(id:Int,name:String,unit: String,version:String,url:String)
+GET  /cluster/rm        controllers.MetaRestApi.rmCluster(id:Int)
+GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,unit: String,version:String,url:String)
+GET  /cluster/names     controllers.MetaRestApi.getNames
+GET  /node/list        controllers.MetaRestApi.getNodeList
+GET  /node/add        controllers.MetaRestApi.addNode(id:Int,ip:String,host: String,role:String,name:String)
+GET  /node/update        controllers.MetaRestApi.updateNode(id:Int,ip:String,host: String,role:String,name:String)
+GET  /node/rm          controllers.MetaRestApi.deleteNode(id:Int)
+GET  /node/detiles      controllers.MetaRestApi.getNodaDatas(pid:Int)
+GET  /node/rmbulk      controllers.MetaRestApi.deleteNodeBatch(pid:Int)
+
+
 
 
 

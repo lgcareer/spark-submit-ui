@@ -10,13 +10,13 @@
                              dataType:"json",
                              success:function(data){
                                          var arr=eval(data);
-                                         var head= '<select class="chosen-select">';
+                                         var head= '<select>';
                                          for(var i=0; i < arr.length; i++){
                                                 head += '<option>'+arr[i]+'</option>';
                                          }
 
                                          head+='</select>';
-                                        jqTds[3].innerHTML=head;
+                                         jqTds[3].innerHTML=head;
 
                                                        }
                                                      });

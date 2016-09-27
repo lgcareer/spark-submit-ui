@@ -89,7 +89,6 @@ object NodeData {
         'pid-> nodeData.pid
       ).executeUpdate()
     }
-    nodeData
   }
 
   def updataNodeaData(nodeData: NodeData)= {
@@ -106,10 +105,9 @@ object NodeData {
          'id -> nodeData.id
       ).executeUpdate()
     }
-    nodeData
   }
 
-  def deleteNodeData(id:String)={
+  def deleteNodeData(id:Int)={
     play.api.db.DB.withConnection { implicit connection =>
       SQL(
         """
@@ -117,6 +115,19 @@ object NodeData {
          id = {id}
         """).on(
         'id -> id
+      ).executeUpdate()
+    }
+  }
+
+
+  def deleteNodeBatch(pid:Int) ={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+         delete  from nodedata where
+         pid = {pid}
+        """).on(
+        'pid -> pid
       ).executeUpdate()
     }
   }

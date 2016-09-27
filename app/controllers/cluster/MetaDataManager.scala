@@ -39,7 +39,7 @@ object MetaDataManager extends Controller{
   }
 
 
-  def rm(id:String)=Action{
+  def rm(id:Int)=Action{
     MetaData.deleteMetaData(id)
     Ok("操作成功")
   }
@@ -75,7 +75,7 @@ object MetaDataManager extends Controller{
   }
 
 
-  def deleteNode(id:String) =Action{
+  def deleteNode(id:Int) =Action{
     NodeData.deleteNodeData(id)
     Ok("操作成功")
   }
