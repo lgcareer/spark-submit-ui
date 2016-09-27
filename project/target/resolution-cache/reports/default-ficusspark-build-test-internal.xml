@@ -9,7 +9,15 @@
 		extra-sbtVersion="0.13"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+<<<<<<< HEAD
 		date="20160923123643"/>
+=======
+<<<<<<< HEAD
+		date="20160923113436"/>
+=======
+<<<<<<< HEAD
+		date="20160923105103"/>
+>>>>>>> 967b3cce5bd09c8be608e6f7ff1bb28270209d26
 	<dependencies>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.13.11" status="release" pubdate="20160221190721" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="40">
@@ -18,6 +26,25 @@
 				<artifacts>
 					<artifact name="sbt" type="jar" ext="jar" status="no" details="" size="21683" time="0" location="/Users/king/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.11.jar">
 						<origin-location is-local="false" location="file:/Users/king/Desktop/activator-dist-1.3.10/repository/org.scala-sbt/sbt/0.13.11/jars/sbt.jar"/>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< Updated upstream
+		date="20160923101950"/>
+=======
+		date="20160922103014"/>
+>>>>>>> Stashed changes
+>>>>>>> 6950d2cebd9cd6d10e6b0cca42ed78ff06b942c8
+	<dependencies>
+		<module organisation="org.scala-sbt" name="sbt">
+			<revision name="0.13.11" status="release" pubdate="20160221190721" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="40">
+				<metadata-artifact status="no" details="" size="1455" time="0" location="/Users/jhazheng/.ivy2/cache/org.scala-sbt/sbt/ivy-0.13.11.xml" searched="false" origin-is-local="false" origin-location="file:/Users/jhazheng/Downloads/playEnv/activator-dist-1.3.10/repository/org.scala-sbt/sbt/0.13.11/ivys/ivy.xml"/>
+				<caller organisation="default" name="ficusspark-build" conf="test, compile, provided, test-internal, runtime, optional" rev="0.13.11" rev-constraint-default="0.13.11" rev-constraint-dynamic="0.13.11" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sbt" type="jar" ext="jar" status="no" details="" size="21683" time="0" location="/Users/jhazheng/.ivy2/cache/org.scala-sbt/sbt/jars/sbt-0.13.11.jar">
+						<origin-location is-local="false" location="file:/Users/jhazheng/Downloads/playEnv/activator-dist-1.3.10/repository/org.scala-sbt/sbt/0.13.11/jars/sbt.jar"/>
+>>>>>>> 4c3c9afda3f27c05de846bbef12fd3b5cb1d80ee
+>>>>>>> 967b3cce5bd09c8be608e6f7ff1bb28270209d26
 					</artifact>
 				</artifacts>
 			</revision>

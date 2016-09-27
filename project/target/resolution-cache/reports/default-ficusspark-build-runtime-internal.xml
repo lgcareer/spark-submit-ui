@@ -9,7 +9,15 @@
 		extra-sbtVersion="0.13"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+<<<<<<< HEAD
 		date="20160923123643"/>
+=======
+<<<<<<< HEAD
+		date="20160923113436"/>
+=======
+<<<<<<< HEAD
+		date="20160923105103"/>
+>>>>>>> 967b3cce5bd09c8be608e6f7ff1bb28270209d26
 	<dependencies>
 		<module organisation="org.scala-sbt" name="sbt-core-next">
 			<revision name="0.1.1" status="integration" pubdate="20150209153731" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="34">
@@ -17,6 +25,24 @@
 				<caller organisation="default" name="ficusspark-build" conf="compile, runtime-internal, runtime, optional" rev="0.1.1" rev-constraint-default="0.1.1" rev-constraint-dynamic="0.1.1" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
 					<artifact name="sbt-core-next" type="jar" ext="jar" status="no" details="" size="66174" time="0" location="/Users/king/.ivy2/cache/scala_2.10/sbt_0.13/org.scala-sbt/sbt-core-next/jars/sbt-core-next-0.1.1.jar">
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< Updated upstream
+		date="20160923101950"/>
+=======
+		date="20160922103014"/>
+>>>>>>> Stashed changes
+>>>>>>> 6950d2cebd9cd6d10e6b0cca42ed78ff06b942c8
+	<dependencies>
+		<module organisation="org.scala-sbt" name="sbt-core-next">
+			<revision name="0.1.1" status="integration" pubdate="20150209153731" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="34">
+				<metadata-artifact status="no" details="" size="1710" time="0" location="/Users/jhazheng/.ivy2/cache/scala_2.10/sbt_0.13/org.scala-sbt/sbt-core-next/ivy-0.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-core-next/scala_2.10/sbt_0.13/0.1.1/ivys/ivy.xml"/>
+				<caller organisation="default" name="ficusspark-build" conf="compile, runtime-internal, runtime, optional" rev="0.1.1" rev-constraint-default="0.1.1" rev-constraint-dynamic="0.1.1" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-core-next" type="jar" ext="jar" status="no" details="" size="66174" time="0" location="/Users/jhazheng/.ivy2/cache/scala_2.10/sbt_0.13/org.scala-sbt/sbt-core-next/jars/sbt-core-next-0.1.1.jar">
+>>>>>>> 4c3c9afda3f27c05de846bbef12fd3b5cb1d80ee
+>>>>>>> 967b3cce5bd09c8be608e6f7ff1bb28270209d26
 						<origin-location is-local="false" location="https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-core-next/scala_2.10/sbt_0.13/0.1.1/jars/sbt-core-next.jar"/>
 					</artifact>
 				</artifacts>
