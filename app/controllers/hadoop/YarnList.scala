@@ -56,7 +56,9 @@ object YarnList  extends Controller  with Secured {
     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
     val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
     val json = Json.parse(sparkDashboard)
-    val workerList = json \ "workers"
+    val workers = json \ "workers"
+    val workerList = "{\"workers\":" + workers + "}"
+
     Ok(workerList)
   }
 

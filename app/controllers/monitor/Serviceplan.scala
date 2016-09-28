@@ -19,14 +19,4 @@ object Serviceplan extends Controller with Secured{
   def functionplan = IsAuthenticated { username => implicit request =>
     Ok(views.html.widgetsfun())
   }
-
-  def graph = IsAuthenticated {username => implicit request =>
-    /**
-     * spark graph 处理
-     * 根据元数据
-     */
-    val ip = "10.75.16.239"
-    Ok(views.html.graph(ip))
-  }
-
 }
