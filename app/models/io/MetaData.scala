@@ -8,7 +8,7 @@ import play.api.Play.current
 /**
   * Created by liangkai1 on 16/9/6.
   */
-case class MetaData(id:Int,name:String,unit:String,version:String,url:String)
+case class MetaData(id:Int,name:String,var unit:String,version:String,url:String)
 case class MetaDataList(list:Seq[MetaData])
 object MetaData {
 
@@ -29,12 +29,13 @@ object MetaData {
   }
 
   def findMetaDatas:Seq[MetaData]={
-    DB.withConnection { implicit connection =>
+     DB.withConnection { implicit connection =>
       play.api.db.DB.withConnection { implicit connection =>
         SQL("select * from metadata").as(metadata *)
       }
     }
   }
+
 
 
   def addOrUpdate(metaData: MetaData) ={
