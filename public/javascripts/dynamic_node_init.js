@@ -1,4 +1,3 @@
-
 function initmultinodes(){
 
 
@@ -18,7 +17,7 @@ function initmultinodes(){
             var kk = "$(function () {var config = {'.chosen-select': {},'.chosen-select-deselect': {allow_single_deselect: true},'.chosen-select-no-single': {disable_search_threshold: 10},'.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},'.chosen-select-width': {width: \"95%\"} }for (var selector in config) {$(selector).chosen(config[selector]);} });";
 
             var roles = '<select data-placeholder="请选择角色..." id="s2example-1" class="form-control chosen-select" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
-            console.log("<div class=\"form-group\"> <label class=\"control-label\" for=\"about\">请输入IP列表换行分隔</label> <textarea class=\"form-control autogrow\" name=\"about\" id=\"about\" data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"ip.......\"></textarea> <label class=\"control-label\" for=\"about\">请输入hostname列表换行分隔</label> <textarea class=\"form-control autogrow\" name=\"about\" id=\"about\" data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"hostname.......\"></textarea>"+ "<label class=\"control-label\" for=\"about\">请选择集群名称</label>" +  head + "<label class=\"control-label\" for=\"about\">请选择节点角色</label>" + roles + "<script>" + kk + "</script>" + "</div>");
+            console.log("<div class=\"form-group\"><label class=\"control-label\" for=\"about\">请输入IP列表换行分隔</label> <textarea class=\"form-control autogrow\" name=\"about\" id=\"about\" data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"ip.......\"></textarea> <label class=\"control-label\" for=\"about\">请输入hostname列表换行分隔</label> <textarea class=\"form-control autogrow\" name=\"about\" id=\"about\" data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"hostname.......\"></textarea>"+ "<label class=\"control-label\" for=\"about\">请选择集群名称</label>" +  head + "<label class=\"control-label\" for=\"about\">请选择节点角色</label>" + roles + "<script>" + kk + "</script>" + "</div>");
             $('#editable-sample_new3').click(function(e){
                 swal({   title: "多节点数据",
                         text: "<div class=\"form-group\"> <label class=\"control-label\" for=\"about\">请输入IP列表换行分隔</label> <textarea class=\"form-control autogrow\" name=\"about\" id=\"about\" data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"ip.......\"></textarea> <label class=\"control-label\" for=\"about\">请输入hostname列表换行分隔</label> <textarea class=\"form-control autogrow\" name=\"about\" id=\"about\" data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"hostname.......\"></textarea>"+ "<label class=\"control-label\" for=\"about\">请选择集群名称</label>" +  head + "<label class=\"control-label\" for=\"about\">请选择节点角色</label>" + roles + "<script>" + kk + "</script>" + "</div>",
@@ -50,28 +49,28 @@ function editRowb(oTable, nRow, myid) {
             }
 
             head += '</select>';
-            jqTds[3].innerHTML = head;
+
+                jqTds[0].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入IP列表换行分隔\" style=\"width:100%;\">'+aData[0]+'</textarea>'
+                jqTds[1].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入hostname列表换行分隔\" style=\"width:100%;\">'+aData[1]+'</textarea>';
+                jqTds[2].innerHTML = '<select data-placeholder="请选择角色..." class="form-control chosen-select" style="width:100%;" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
+                jqTds[3].innerHTML = head;
+                jqTds[4].innerHTML = '<a myid=' + myid + ' class="edit" href="">保存</a>';
+                jqTds[5].innerHTML = '<a class="cancel" href="">取消</a>';
+
+                var config = {
+                    '.chosen-select': {},
+                    '.chosen-select-deselect': {allow_single_deselect: true},
+                    '.chosen-select-no-single': {disable_search_threshold: 10},
+                    '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
+                    '.chosen-select-width': {width: "95%"}
+                }
+                for (var selector in config) {
+                    $(selector).chosen(config[selector]);
+                }
 
         }
     });
 
-
-    jqTds[0].innerHTML = '<input type="text" class="form-control small" value="' + aData[0] + '">';
-    jqTds[1].innerHTML = '<input type="text" class="form-control small" value="' + aData[1] + '">';
-    jqTds[2].innerHTML = '<select data-placeholder="请选择角色..." class="form-control chosen-select" style="width:100%;" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
-    jqTds[4].innerHTML = '<a myid=' + myid + ' class="edit" href="">保存</a>';
-    jqTds[5].innerHTML = '<a class="cancel" href="">取消</a>';
-
-    var config = {
-        '.chosen-select': {},
-        '.chosen-select-deselect': {allow_single_deselect: true},
-        '.chosen-select-no-single': {disable_search_threshold: 10},
-        '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
-        '.chosen-select-width': {width: "95%"}
-    }
-    for (var selector in config) {
-        $(selector).chosen(config[selector]);
-    }
 }
 
 

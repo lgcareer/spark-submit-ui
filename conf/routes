@@ -140,6 +140,11 @@ GET  /nodelist                          controllers.MetaDataManager.nodeList
 GET  /addnode                           controllers.MetaDataManager.updateNode(id:Int,ip:String,host: String,role:String,name:String)
 GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:Int)
 
+#产品单元
+GET  /productlist                       controllers.MetaDataManager.getProducts
+GET  /rmproduct                        controllers.MetaDataManager.deleteProduct(id:Int)
+GET  /addproduct                       controllers.MetaDataManager.updataProduct(id:Int,unit:String,desc:String,contact:String,cluster:String)
+
 
 #元数据REST API
 GET  /cluster/list      controllers.MetaRestApi.getClusterList
