@@ -38,7 +38,6 @@
             </header>
 
 
-
             <ul id="main-menu" class="main-menu">
                     <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                     <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
@@ -278,26 +277,26 @@
             //计算任务个数
 
             //获取用户权限
-           function getUserInfo(){
-            var retVal = '';
-                    $.ajax({
-                        type:"GET",
-                        url:"/whoiam",
-                        dataType:"json",
-                        async:false,
-                        success:function(data){
-                            console.log(data);
-                            retVal=data;
-                        }
-                    });
-                    return retVal;
-                }
+            function getUserInfo(){
+                var retVal = '';
+                $.ajax({
+                    type:"GET",
+                    url:"/whoiam",
+                    dataType:"json",
+                    async:false,
+                    success:function(data){
+                        console.log(data);
+                        retVal=data;
+                    }
+                });
+                return retVal;
+            }
 
-             function task_count(){
+            function task_count(){
                 var data = getUserInfo();
                 var userInfo = eval(data);
                 var queueName = userInfo.queueName;
-                  $.ajax({
+                $.ajax({
                     type:"GET",
                     url:"/yarnInfo",
                     dataType:"json",
@@ -325,7 +324,7 @@
                                 if(state == 'ACCEPTED'){
                                     plain_task += 1;
                                 }
-                              }
+                            }
                         }
                         if(queueName != ""){
                             for(var i=0;i<app.length;i++){
@@ -345,7 +344,7 @@
                                 if(state == 'ACCEPTED' && finalStatus.queue == queueName){
                                     plain_task += 1;
                                 }
-                              }
+                            }
                         }
 
 
@@ -360,103 +359,103 @@
 
     </script>
 
-        <script type="text/javascript">
+    <script type="text/javascript">
 
-                            jQuery(document).ready(function($)
-                            {
-                                var gauge = $('#gauge-3').dxCircularGauge({
-                                    scale: {
-                                        startValue: 0,
-                                        endValue: 120,
-                                        majorTick: {
-                                            tickInterval: 10
-                                        },
-                                        label: {
-                                            customizeText: function (arg) {
-                                                return arg.valueText + ' %';
-                                            }
-                                        }
-                                    },
-                                    rangeContainer: {
-                                        ranges: [
-                                            { startValue: 0, endValue: 40, color: '#90ee7e' },
-                                            { startValue: 40, endValue: 80, color: '#FF7F24' },
-                                            { startValue: 80, endValue: 100, color: '#f45b5b' }
-                                        ]
-                                    },
-                                    title: {
-                                        text: '本组使用yarn资源占比',
-                                        font: { size: 20}
-                                    },
-                                    tooltip: {
-                                        enabled: true,
-                                        format: {
-                                            type: 'present',
-                                            precision: 2
-                                        }
-                                    },
-                                    value: rateData
-                                }).dxCircularGauge('instance');
-
-
+            jQuery(document).ready(function($)
+            {
+                var gauge = $('#gauge-3').dxCircularGauge({
+                    scale: {
+                        startValue: 0,
+                        endValue: 120,
+                        majorTick: {
+                            tickInterval: 10
+                        },
+                        label: {
+                            customizeText: function (arg) {
+                                return arg.valueText + ' %';
+                            }
+                        }
+                    },
+                    rangeContainer: {
+                        ranges: [
+                            { startValue: 0, endValue: 40, color: '#90ee7e' },
+                            { startValue: 40, endValue: 80, color: '#FF7F24' },
+                            { startValue: 80, endValue: 100, color: '#f45b5b' }
+                        ]
+                    },
+                    title: {
+                        text: '本组使用yarn资源占比',
+                        font: { size: 20}
+                    },
+                    tooltip: {
+                        enabled: true,
+                        format: {
+                            type: 'present',
+                            precision: 2
+                        }
+                    },
+                    value: rateData
+                }).dxCircularGauge('instance');
 
 
-                                //内存占比显示
-                                var doughnut2_data_source = [
-                                    { id: 0, x1: 0 },
-                                    { id: 1, x1: 2 },
-                                    { id: 2, x1: 3 },
-                                    { id: 3, x1: 5 },
-                                    { id: 4, x1: 7 },
-                                    { id: 5, x1: 3 },
-                                    { id: 6, x1: 1 },
-                                    { id: 7, x1: 2 },
-                                    { id: 8, x1: 5 },
-                                    { id: 9, x1: 4 },
-                                ];
 
-                                $("#area-2").dxChart({
-                                    dataSource: doughnut2_data_source,
-                                    commonSeriesSettings: {
-                                        type: "area",
-                                        argumentField: "id"
-                                    },
-                                    series: [
-                                        { valueField: "x1", name: "15-64 years", color: '#7c38bc', opacity: .7 },
-                                    ],
-                                    argumentAxis:{
-                                        valueMarginsEnabled: false
-                                    },
-                                    valueAxis:{
-                                        label: {
-                                            format: "millions"
-                                        }
-                                    },
-                                    legend: {
-                                        verticalAlignment: "bottom",
-                                        horizontalAlignment: "center"
-                                    },
-                                    legend: {
-                                        visible: false
-                                    },
-                                    commonAxisSettings: {
-                                        label: {
-                                            visible: false
-                                        },
-                                        grid: {
-                                            visible: false
-                                        }
-                                    },
-                                    margin: {
-                                        bottom: 0,
-                                        top: 30
-                                    }
-                                });
 
-                            });
-                    </script>
+                //内存占比显示
+                var doughnut2_data_source = [
+                    { id: 0, x1: 0 },
+                    { id: 1, x1: 2 },
+                    { id: 2, x1: 3 },
+                    { id: 3, x1: 5 },
+                    { id: 4, x1: 7 },
+                    { id: 5, x1: 3 },
+                    { id: 6, x1: 1 },
+                    { id: 7, x1: 2 },
+                    { id: 8, x1: 5 },
+                    { id: 9, x1: 4 },
+                ];
 
-<script>
+                $("#area-2").dxChart({
+                    dataSource: doughnut2_data_source,
+                    commonSeriesSettings: {
+                        type: "area",
+                        argumentField: "id"
+                    },
+                    series: [
+                        { valueField: "x1", name: "15-64 years", color: '#7c38bc', opacity: .7 },
+                    ],
+                    argumentAxis:{
+                        valueMarginsEnabled: false
+                    },
+                    valueAxis:{
+                        label: {
+                            format: "millions"
+                        }
+                    },
+                    legend: {
+                        verticalAlignment: "bottom",
+                        horizontalAlignment: "center"
+                    },
+                    legend: {
+                        visible: false
+                    },
+                    commonAxisSettings: {
+                        label: {
+                            visible: false
+                        },
+                        grid: {
+                            visible: false
+                        }
+                    },
+                    margin: {
+                        bottom: 0,
+                        top: 30
+                    }
+                });
+
+            });
+    </script>
+
+    <script>
             //spark集群运行情况
             function cluster_info(){
                 $.ajax({
@@ -506,66 +505,208 @@
     </script>
 
     <script type="text/javascript">
-                        //Spark standlone资源计算
-                                function spark_resource(){
-                                        var retVal = '';
-                                        $.ajax({
-                                        type:"GET",
-                                        url:"/userResourceSpark",
-                                        dataType:"json",
-                                        async:false,
-                                        success:function(data){
-                                            retVal=data;
-                                        }
-                                    });
-                                    return retVal;
-                                 }
+            //Spark standlone资源计算
+            function spark_resource(){
+                var retVal = '';
+                $.ajax({
+                    type:"GET",
+                    url:"/userResourceSpark",
+                    dataType:"json",
+                    async:false,
+                    success:function(data){
+                        retVal=data;
+                    }
+                });
+                return retVal;
+            }
 
-                                var data = spark_resource();
-                                var rate = eval(data);
-                                var rateDataSpark = rate.rateSpark;
+            var data = spark_resource();
+            var rate = eval(data);
+            var rateDataSpark = rate.rateSpark;
 
-                          jQuery(document).ready(function($)
-                            {
-                                var gauge = $('#sparkStandlone').dxCircularGauge({
-                                    scale: {
-                                        startValue: 0,
-                                        endValue: 100,
-                                        majorTick: {
-                                            tickInterval: 10
-                                        },
-                                        label: {
-                                            customizeText: function (arg) {
-                                                return arg.valueText + ' %';
-                                            }
-                                        }
-                                    },
-                                    rangeContainer: {
-                                        ranges: [
-                                            { startValue: 0, endValue: 40, color: '#4DFFFF' },
-                                            { startValue: 40, endValue: 60, color: '#46A3FF' },
-                                            { startValue: 60, endValue: 80, color: '#FF8040' },
-                                            { startValue: 80, endValue: 100, color: '#BB3D00' }
-                                        ]
-                                    },
-                                    title: {
-                                        text: '本组使用Spark资源占比',
-                                        font: { size: 20}
-                                    },
-                                    tooltip: {
-                                        enabled: true,
-                                        format: {
-                                            type: 'present',
-                                            precision: 2
-                                        }
-                                    },
-                                    value: rateDataSpark
-                                }).dxCircularGauge('instance');
-                            });
-
-
+            jQuery(document).ready(function($)
+            {
+                var gauge = $('#sparkStandlone').dxCircularGauge({
+                    scale: {
+                        startValue: 0,
+                        endValue: 100,
+                        majorTick: {
+                            tickInterval: 10
+                        },
+                        label: {
+                            customizeText: function (arg) {
+                                return arg.valueText + ' %';
+                            }
+                        }
+                    },
+                    rangeContainer: {
+                        ranges: [
+                            { startValue: 0, endValue: 40, color: '#4DFFFF' },
+                            { startValue: 40, endValue: 60, color: '#46A3FF' },
+                            { startValue: 60, endValue: 80, color: '#FF8040' },
+                            { startValue: 80, endValue: 100, color: '#BB3D00' }
+                        ]
+                    },
+                    title: {
+                        text: '本组使用Spark资源占比',
+                        font: { size: 20}
+                    },
+                    tooltip: {
+                        enabled: true,
+                        format: {
+                            type: 'present',
+                            precision: 2
+                        }
+                    },
+                    value: rateDataSpark
+                }).dxCircularGauge('instance');
+            });
 
     </script>
+<script>
+        jQuery(document).ready(function($)
+        {
+
+            // Realtime Network Stats
+            var i = 0,
+            rns_values = [130,150],
+            rns2_values = [39,50],
+            realtime_network_stats = [];
+
+            for(i=0; i<=100; i++)
+            {
+                realtime_network_stats.push({ id: i,
+                    x1: between(rns_values[0], rns_values[1]),
+                    x2: between(rns2_values[0], rns2_values[1])});
+            }
+
+            $("#realtime-network-stats").dxChart({
+                dataSource: realtime_network_stats,
+                commonSeriesSettings: {
+                    type: "area",
+                    argumentField: "id"
+                },
+                series: [
+                    { valueField: "x1", name: "Packets Sent", color: '#7c38bc', opacity: .4 },
+                    { valueField: "x2", name: "Packets Received", color: '#000', opacity: .5},
+                ],
+                legend: {
+                    verticalAlignment: "bottom",
+                    horizontalAlignment: "center"
+                },
+                commonAxisSettings: {
+                    label: {
+                        visible: false
+                    },
+                    grid: {
+                        visible: true,
+                        color: '#f5f5f5'
+                    }
+                },
+                legend: {
+                    visible: false
+                },
+                argumentAxis: {
+                    valueMarginsEnabled: false
+                },
+                valueAxis: {
+                    max: 500
+                },
+                animation: {
+                    enabled: false
+                }
+            }).data('iCount', i);
+
+            $('#network-realtime-gauge').dxCircularGauge({
+                scale: {
+                    startValue: 0,
+                    endValue: 200,
+                    majorTick: {
+                        tickInterval: 50
+                    }
+                },
+                rangeContainer: {
+                    palette: 'pastel',
+                    width: 3,
+                    ranges: [
+                        { startValue: 0, endValue: 50, color: "#7c38bc" },
+                        { startValue: 50, endValue: 100, color: "#7c38bc" },
+                        { startValue: 100, endValue: 150, color: "#7c38bc" },
+                        { startValue: 150, endValue: 200, color: "#7c38bc" },
+                    ],
+                },
+                value: 140,
+                valueIndicator: {
+                    offset: 10,
+                    color: '#7c38bc',
+                    type: 'triangleNeedle',
+                    spindleSize: 12
+                }
+            });
+
+            setInterval(function(){  networkRealtimeChartTick(rns_values, rns2_values); }, 1000);
+            setInterval(function(){ networkRealtimeGaugeTick(); }, 2000);
+            setInterval(function(){ networkRealtimeMBupdate(); }, 3000);
+
+
+
+            // Resize charts
+            $(window).on('xenon.resize', function()
+            {
+                $("#realtime-network-stats").data("dxChart").render();
+            });
+
+        });
+
+        function networkRealtimeChartTick(min_max, min_max2)
+        {
+            var $ = jQuery,
+                    i = 0;
+
+            var chart_data = $('#realtime-network-stats').dxChart('instance').option('dataSource');
+
+            var count = $('#realtime-network-stats').data('iCount');
+
+            $('#realtime-network-stats').data('iCount', count + 1);
+
+            chart_data.shift();
+            chart_data.push({id: count + 1, x1: between(min_max[0],min_max[1]), x2: between(min_max2[0],min_max2[1])});
+
+            $('#realtime-network-stats').dxChart('instance').option('dataSource', chart_data);
+        }
+
+        function networkRealtimeGaugeTick()
+        {
+            var nr_gauge = jQuery('#network-realtime-gauge').dxCircularGauge('instance');
+
+            nr_gauge.value( between(50,200) );
+        }
+
+        function networkRealtimeMBupdate()
+        {
+            var $el = jQuery("#network-mbs-packets"),
+                    options = {
+                        useEasing : true,
+                        useGrouping : true,
+                        separator : ',',
+                        decimal : '.',
+                        prefix : '' ,
+                        suffix : 'mb/s'
+                    },
+                    cntr = new countUp($el[0], parseFloat($el.text().replace('mb/s')), parseFloat(between(10,25) + 1/between(15,30)), 2, 1.5, options);
+
+            cntr.start();
+        }
+
+        function between(randNumMin, randNumMax)
+        {
+            var randInt = Math.floor((Math.random() * ((randNumMax + 1) - randNumMin)) + randNumMin);
+
+            return randInt;
+        }
+    </script>
+
+
     <div class="row">
 
         <div class="col-sm-3">
@@ -737,14 +878,24 @@
         <div class="row">
             <div class="col-sm-12">
 
-                <div class="chart-item-bg-2">
+                @*<div class="chart-item-bg-2">
                     <div class="chart-item-num num-sm" style="width: 370px ;"
-                         data-count="this" data-from="0"
-                         data-to="20.89"
-                         data-suffix="%" data-duration="3" id ="userdRateMemory">%</div>
+                data-count="this" data-from="0"
+                data-to="20.89"
+                data-suffix="%" data-duration="3" id ="userdRateMemory">%</div>
                     <div class="chart-item-env no-padding">
                         <div id="area-2" style="height: 150px ; margin: 0"></div>
                     </div>
+                </div>*@
+                <div class="chart-item-bg">
+                    <div class="chart-label">
+                        <div id="network-mbs-packets" class="h1 text-purple text-bold" data-count="this" data-from="0.00" data-to="21.05" data-suffix="mb/s" data-duration="1">0.00mb/s</div>
+                        <span class="text-small text-muted text-upper">Download Speed</span>
+                    </div>
+                    <div class="chart-right-legend">
+                        <div id="network-realtime-gauge" style="width: 170px; height: 140px"></div>
+                    </div>
+                    <div id="realtime-network-stats" style="height: 180px"></div>
                 </div>
             </div>
         </div>
@@ -754,38 +905,37 @@
 
     <script>
 
-                                        <!--yarn资源计算   -->
-                                function group_resource(){
-                                        var retVal = '';
-                                        $.ajax({
-                                        type:"GET",
-                                        url:"/userResource",
-                                        dataType:"json",
-                                        async:false,
-                                        success:function(data){
-                                            retVal=data;
-                                        }
-                                    });
-                                    return retVal;
-                                }
-                                var data = group_resource();
-                                var rate = eval(data);
-                                var rateData = rate.rateData.resourceRate;
-                                memory_count();
-                                <!--已使用内存统计-->
-                               function memory_count(){
-                                        var data = group_resource();
-                                        var rate = eval(data);
-                                        var rateMemory = rate.rateData.rateMemory;
-                                        $("#userdRateMemory").attr("data-to", rateMemory);
-                                        <!--$("#userdRateMemory").prop("data-to", rateMemory);-->
-                                };
-                               <!--setInterval('memory_count()',5000);-->
-                               setInterval(memory_count,5000);
+            <!--yarn资源计算   -->
+            function group_resource(){
+                var retVal = '';
+                $.ajax({
+                    type:"GET",
+                    url:"/userResource",
+                    dataType:"json",
+                    async:false,
+                    success:function(data){
+                        retVal=data;
+                    }
+                });
+                return retVal;
+            }
+            var data = group_resource();
+            var rate = eval(data);
+            var rateData = rate.rateData.resourceRate;
+            memory_count();
+            <!--已使用内存统计-->
+            function memory_count(){
+                var data = group_resource();
+                var rate = eval(data);
+                var rateMemory = rate.rateData.rateMemory;
+                $("#userdRateMemory").attr("data-to", rateMemory);
+                <!--$("#userdRateMemory").prop("data-to", rateMemory);-->
+            };
+            <!--setInterval('memory_count()',5000);-->
+            setInterval(memory_count,5000);
 
 
     </script>
-
     @* <script>
 
     $(document).ready(function () {
@@ -844,16 +994,15 @@
     </script>*@
 
     @*
-        修订日志:v3.0.6(2016.09.23)
-        集群节点元数据增删改查
-        新增节点详情统计与查看
-        spark用户权限列表展示
-        过滤输入sql冗余信息
-        元数据多选框样式修改
-        修改spark-sql table样式
-        修正表格样式&部分UI调整
-*@
-
+    修订日志:v3.0.6(2016.09.23)
+    集群节点元数据增删改查
+    新增节点详情统计与查看
+    spark用户权限列表展示
+    过滤输入sql冗余信息
+    元数据多选框样式修改
+    修改spark-sql table样式
+    修正表格样式&部分UI调整
+    *@
     <script>
             window.onload=function(){
                 swal({
