@@ -12,12 +12,6 @@ case class ProductData(id:Int,unit:String,desc:String,contact:String,cluster:Str
 case class ProductDataList(list:Seq[ProductData])
 object ProductData {
 
-  val names = {
-    get[String]("productdata.unit") map {
-      case unit => unit
-    }
-  }
-
 
   val product = {
       get[Int]("productdata.id") ~
@@ -39,7 +33,20 @@ object ProductData {
 
 
   def addOrUpdate(productData: ProductData) ={
-    if(productData.id != 0) updataProductData(productData) else addProductDat(productData)
+    if(productData.id != 0) updataProductData(productData) else addProductDat(productData) ;updateProducWithCluster(productData)
+  }
+
+  def updateProducWithCluster(productData: ProductData)={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+          update  metadata set unit=
+            {unit}  where name={cluster}
+        """).on(
+        'unit -> productData.unit,
+        'cluster -> productData.cluster
+      ).executeUpdate()
+    }
   }
 
 
@@ -86,13 +93,7 @@ object ProductData {
   }
 
 
-  def getProductNames : Seq[String]={
-    DB.withConnection { implicit connection =>
-      play.api.db.DB.withConnection { implicit connection =>
-        SQL("select * from productdata").as(names *)
-      }
-    }
-  }
+
 
 
 
