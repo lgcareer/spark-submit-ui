@@ -256,7 +256,7 @@
 //集群信息
 
 $(document).ready(function(){
-    initmultinodes();
+    //initmultinodes();
     $.ajax({
         type:"GET",
         url:"/metadatalist",
@@ -298,7 +298,21 @@ $(document).ready(function(){
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].ip + "</td><td>" + datamid[i].host + "</td><td>" + datamid[i].role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                             var ips=null;
+                             if(datamid[i].ip!=null){
+                              ips=datamid[i].ip.replace(/\n/g,"<br/>");
+                             }
+                             var host = null;
+                             if(datamid[i].host!=null){
+                                host=datamid[i].host.replace(/\n/g,"<br/>")
+                             }
+                               var role = null;
+                             if(datamid[i].role!=null){
+                                role=datamid[i].role.replace(/\n/g,"<br/>")
+                             }
+
+
+                                head += "<tr><td>" + ips + "</td><td>" + host + "</td><td>" + role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -330,7 +344,6 @@ $(document).ready(function(){
                         };
                         head += "</tbody>";
                         $('#editable-sample3').html(head);
-                        //initNodeData();
 
 
                     }
@@ -394,9 +407,9 @@ $(document).ready(function(){
                     <button id="editable-sample_new2" class="btn btn-pink">
                         单节点添加 <i class="fa fa-plus"></i>
                     </button>
-                        <button id="editable-sample_new3" class="btn btn-black">
-                            多节点添加 <i class="fa fa-plus"></i>
-                        </button>
+                        <!--<button id="editable-sample_new3" class="btn btn-black">-->
+                            <!--多节点添加 <i class="fa fa-plus"></i>-->
+                        <!--</button>-->
                     </div>
                         <table class="display table table-bordered" id="editable-sample2">
                         </table>

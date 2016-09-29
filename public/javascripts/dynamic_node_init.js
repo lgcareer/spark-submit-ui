@@ -34,9 +34,10 @@ function initmultinodes(){
 
 }
 
-function editRowb(oTable, nRow, myid) {
+function editRowb(oTable, nRow, myid,isNew) {
     var aData = oTable.fnGetData(nRow);
     var jqTds = $('>td', nRow);
+
     $.ajax({
         type: "GET",
         url: "/names",
@@ -49,9 +50,25 @@ function editRowb(oTable, nRow, myid) {
             }
 
             head += '</select>';
+            var ips =null;
+            var host=null;
 
-                jqTds[0].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入IP列表换行分隔\" style=\"width:100%;\">'+aData[0]+'</textarea>'
-                jqTds[1].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入hostname列表换行分隔\" style=\"width:100%;\">'+aData[1]+'</textarea>';
+                     if(!isNew){
+                             if(aData[0]!=null){
+                                 var reg=new RegExp("<br>","g");
+                                   ips=aData[0].replace(reg,"\n");
+                                      }
+                                 if(aData[1]!=null){
+                                           var reg=new RegExp("<br>","g");
+                                            host=aData[1].replace(reg,"\n");
+                                   }
+                     }else{
+                        ips='';
+                        host='';
+                     }
+
+                jqTds[0].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入IP列表换行分隔\" style=\"width:100%;\">'+ips+'</textarea>'
+                jqTds[1].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入hostname列表换行分隔\" style=\"width:100%;\">'+host+'</textarea>';
                 jqTds[2].innerHTML = '<select data-placeholder="请选择角色..." class="form-control chosen-select" style="width:100%;" multiple><option>namenode</option><option>secondarynamenode</option><option>datanode</option><option>jobtracker</option><option>tasktracker</option><option>resourcemanager</option><option>nodemanager</option><option>journalnode</option><option>dfszkfailovercontroller</option><option>client</option><option>zookeeper</option><option>master</option><option>regionserve</option></select>';
                 jqTds[3].innerHTML = head;
                 jqTds[4].innerHTML = '<a myid=' + myid + ' class="edit" href="">保存</a>';
@@ -74,7 +91,7 @@ function editRowb(oTable, nRow, myid) {
 }
 
 
-function restoreRow(oTable, nRow) {
+function restoreRowb(oTable, nRow) {
     var aData = oTable.fnGetData(nRow);
     var jqTds = $('>td', nRow);
 
@@ -112,7 +129,7 @@ function initNodeData() {
             '<a class="edit" href="">编辑</a>', '<a class="cancel" data-mode="new" href="">取消</a>'
         ]);
         var nRow = oTable.fnGetNodes(aiNew[0]);
-        editRowb(oTable, nRow, 0);
+        editRowb(oTable, nRow, 0,true);
         nEditing = nRow;
     });
 
@@ -125,14 +142,14 @@ function initNodeData() {
 
         if (nEditing !== null && nEditing != nRow) {
             /* Currently editing - but not this row - restore the old before continuing to edit mode */
-            restoreRow(oTable, nEditing);
-            editRowb(oTable, nRow, 0);
+            restoreRowb(oTable, nEditing);
+            editRowb(oTable, nRow, 0,false);
             nEditing = nRow;
         } else if (nEditing == nRow && this.innerHTML == "保存") {
             /* Editing this row and want to save it */
             var v_id = $(e.target).attr('myid');
 
-            var jqInputs = $('input', nEditing);
+            var jqInputs = $('textarea', nEditing);
 
             var jqSelect = $('select', nEditing);
             var $ip = jqInputs[0].value;
@@ -178,10 +195,22 @@ function initNodeData() {
         } else {
             /* No edit in progress - let's start one */
             var v_id = $(e.target).attr('myid');
-            editRowb(oTable, nRow, v_id);
+            editRowb(oTable, nRow, v_id,false);
             nEditing = nRow;
         }
     });
+
+
+                    $('#editable-sample2 a.cancel').live('click', function (e) {
+                        e.preventDefault();
+                        if ($(this).attr("data-mode") == "new") {
+                            var nRow = $(this).parents('tr')[0];
+                            oTable.fnDeleteRow(nRow);
+                        } else {
+                            restoreRowb(oTable, nEditing);
+                            nEditing = null;
+                        }
+                    });
 
 
     //删除

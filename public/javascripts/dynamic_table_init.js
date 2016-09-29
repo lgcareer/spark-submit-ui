@@ -9,22 +9,29 @@ function fnFormatDetails(oTable, nTr) {
 }
 
 
-function editRow(oTable, nRow, myid) {
+function editRow(oTable, nRow, myid,isNew) {
     var aData = oTable.fnGetData(nRow);
     var jqTds = $('>td', nRow);
 
      var jqAS = $("td > a");
      var url=null;
-     if(jqAS[0].innerHTML!=null){
-         var reg=new RegExp("<br>","g");
-           url=jqAS[0].innerHTML.replace(reg,"\n");
-                          }
-    jqTds[1].innerHTML = '<input type="text" value="' + aData[1] + '">';
-    jqTds[2].innerHTML = '<input type="text"  value="' + aData[2] + '">';
+
+     if(!isNew){
+             if(jqAS[0].innerHTML!=null){
+                 var reg=new RegExp("<br>","g");
+                   url=jqAS[0].innerHTML.replace(reg,"\n");
+                                  }
+     }else{
+        url=''
+     }
+    jqTds[1].innerHTML = '<input type="text" placeholder=\"请输入名称\" value="' + aData[1] + '">';
+    //jqTds[2].innerHTML = '<input type="text"  placeholder=\"请输入产品单元\" value="' + aData[2] + '">';
     jqTds[3].innerHTML = '<select data-placeholder="请选择版本..." class="form-control chosen-select" style="width:100%;" multiple><option>hadoop-0.20.2.cdh3b4</option><option>hadoop-0.20.2.cdh3u1</option><option>hadoop-0.20.2.cdh3u1.su1</option><option>hadoop-0.20.2.cdh3u3</option><option>hadoop-2.0.0</option><option>hadoop-2.2.0</option><option>hadoop-2.4.1</option><option>hadoop-2.6.0</option><option>hadoop-2.7.2</option><option>hbase-0.94.10.su1</option><option>hbase-0.94.6</option><option>hbase-0.96.1.1</option><option>hbase-1.0.3</option><option>hbase-1.2.0</option><option>zookeeper-3.4.3</option>      </select>';
     jqTds[4].innerHTML = '<textarea class=\"form-control autogrow\"   data-validate=\"minlength[10]\" rows=\"5\" placeholder=\"请输入URL换行分隔\" style=\"width:100%;\">'+url+'</textarea>'
     jqTds[5].innerHTML = '<a myid=' + myid + ' class="edit" href="">保存</a>';
-    jqTds[6].innerHTML = '<a class="cancel" href="">取消</a>';
+
+        jqTds[6].innerHTML = '<a class="cancel" href="">取消</a>';
+
 
     var config = {
         '.chosen-select': {},
@@ -138,7 +145,7 @@ function initdata() {
             '<a class="edit" href="">编辑</a>', '<a class="cancel" data-mode="new" href="">取消</a>'
         ]);
         var nRow = oTable.fnGetNodes(aiNew[0]);
-        editRow(oTable, nRow, 0);
+        editRow(oTable, nRow, 0,true);
         nEditing = nRow;
     });
 
@@ -153,7 +160,7 @@ function initdata() {
         if (nEditing !== null && nEditing != nRow) {
             /* Currently editing - but not this row - restore the old before continuing to edit mode */
             restoreRow(oTable, nEditing);
-            editRow(oTable, nRow, 0);
+            editRow(oTable, nRow, 0,false);
             nEditing = nRow;
         } else if (nEditing == nRow && this.innerHTML == "保存") {
             /* Editing this row and want to save it */
@@ -205,10 +212,22 @@ function initdata() {
         } else {
             /* No edit in progress - let's start one */
             var v_id = $(e.target).attr('myid');
-            editRow(oTable, nRow, v_id);
+            editRow(oTable, nRow, v_id,false);
             nEditing = nRow;
         }
     });
+
+
+                $('#editable-sample a.cancel').live('click', function (e) {
+                    e.preventDefault();
+                    if ($(this).attr("data-mode") == "new") {
+                        var nRow = $(this).parents('tr')[0];
+                        oTable.fnDeleteRow(nRow);
+                    } else {
+                        restoreRow(oTable, nEditing);
+                        nEditing = null;
+                    }
+                });
 
 
     //删除
@@ -230,7 +249,6 @@ function initdata() {
             },
             function (isConfirm) {
                 if (isConfirm) {
-
                     $(document).ready(function () {
                         $.ajax({
                             type: "GET",
