@@ -45,7 +45,7 @@ object Email {
       val email = new HtmlEmail()
       email.setHostName(config.getString("email.server.host"))
       email.setSmtpPort(config.getInt("email.default.port"))
-      email.setAuthenticator(new DefaultAuthenticator(config.getString("email.default.username"),config.getString("adminadmin")))
+      email.setAuthenticator(new DefaultAuthenticator(config.getString("email.default.username"),config.getString("email.default.password")))
       email.setSSLOnConnect(true)
       email.setFrom(config.getString("email.default.username"), "DSP&DBA")
       email.setCharset("UTF-8")
@@ -67,7 +67,7 @@ object Email {
         }
       }
       email.send()
-      "发送邮件成功,请检查邮件"
+      "发送激活邮件成功,请到邮箱检查该邮件"
     }
 
 

@@ -1,9 +1,6 @@
 package controllers
 
-import java.io.FileInputStream
-
 import models._
-import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -39,7 +36,7 @@ object MetaDataManager extends Controller{
   }
 
 
-  def rm(id:String)=Action{
+  def rm(id:Int)=Action{
     MetaData.deleteMetaData(id)
     Ok("操作成功")
   }
@@ -51,8 +48,6 @@ object MetaDataManager extends Controller{
     val data: JsValue = Json.toJson(NodeData.findNodeDetail(pid))
     Ok(data)
   }
-
-
 
 
   def nodeList =Action{
@@ -75,7 +70,7 @@ object MetaDataManager extends Controller{
   }
 
 
-  def deleteNode(id:String) =Action{
+  def deleteNode(id:Int) =Action{
     NodeData.deleteNodeData(id)
     Ok("操作成功")
   }
@@ -84,6 +79,24 @@ object MetaDataManager extends Controller{
     import play.api.libs.json._
     val names: Seq[String] = MetaData.findNames
     Ok(Json.toJson(names))
+  }
+
+
+  def getProducts =Action{
+    implicit val residentWrites = Json.writes[ProductData]
+    implicit val clusterListWrites = Json.writes[ProductDataList]
+    val data: JsValue = Json.toJson(ProductDataList(ProductData.findProductDatas))
+    Ok(data)
+  }
+
+  def updataProduct(id:Int,unit:String,desc:String,contact:String,cluster:String)=Action{
+    ProductData.addOrUpdate(ProductData(id,unit,desc,contact,cluster))
+    Ok("操作成功")
+  }
+
+  def deleteProduct(id:Int)=Action {
+    ProductData.deleteProductData(id)
+    Ok("操作成功")
   }
 
 

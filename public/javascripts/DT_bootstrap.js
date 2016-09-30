@@ -1,16 +1,21 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
-	"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+	"sDom":
+	"<'row'<'col-xs-6'l><'col-xs-6'f>r>"+
+	"t"+
+	"<'row'<'col-xs-6'i><'col-xs-6'p>>",
 	"sPaginationType": "bootstrap",
 	"oLanguage": {
-		"sLengthMenu": "_MENU_ records per page"
+		"sLengthMenu": "_MENU_ 记录/每页"
 	}
 } );
 
 
 /* Default class modification */
 $.extend( $.fn.dataTableExt.oStdClasses, {
-	"sWrapper": "dataTables_wrapper form-inline"
+	"sWrapper": "dataTables_wrapper form-inline",
+	"sFilterInput": "form-control input-sm",
+	"sLengthSelect": "form-control input-sm"
 } );
 
 

@@ -171,7 +171,7 @@
                             <span class="title">用户统计</span>
                         </a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="@routes.UserManager.userlist">
                             <span class="title">用户管理</span>
                         </a>
@@ -214,7 +214,6 @@
 }
 @main("集群管理")(sidebar) {
 
-
 <div class="page-title">
 
     <div class="title-env">
@@ -245,40 +244,36 @@
 
 <script>
 //集群信息
-            $(document).ready(function(){
-                $.ajax({
-                    type:"GET",
-                    url:"/metadatalist",
-                    dataType:"json",
-                    success:function(data){
-                        var head= "<thead><tr><th></th><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>编辑</th><th>删除</th></tr></thead><tbody>"
-                        var myobj=eval(data);
-                        for (var p in myobj) {
-                            var datamid = eval(data[p]);
-                            for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td>" +datamid[i].url+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
-                            };
-                        };
-                        head += "</tbody>";
-                        $('#editable-sample').html(head);
 
-                           initdata();
+$(document).ready(function(){
+    //initmultinodes();
+    $.ajax({
+        type:"GET",
+        url:"/metadatalist",
+        dataType:"json",
+        success:function(data){
+            var head= "<thead><tr><th></th><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>EDIT</th><th>DELETE</th></tr></thead><tbody>"
+            var myobj=eval(data);
+            for (var p in myobj) {
+                var datamid = eval(data[p]);
+                for (var i = 0; i < datamid.length; i++) {
+                     var url=null;
+                     if(datamid[i].url!=null){
+                         url=datamid[i].url.replace(/\n/g,"<br/>");
+                     }
+                    head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td><a href='" + datamid[i].url + "' target='_blank'>" +url+ "</a></td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                };
+            };
+            head += "</tbody>";
+            $('#editable-sample').html(head);
 
+            initdata();
 
-                             jQuery(document).ready(function ($) {
-                             $('.tabset2').pwstabs({
-                                effect: 'slideleft',
-                                defaultTab: 1,
-                                containerWidth: '100%'
-                             });
-                           });
-
-
-                    }
-                });
-            });
-
-
+        }
+    });
+});
+</script>
+    <script>
 //节点信息
 
             $(document).ready(function(){
@@ -287,12 +282,27 @@
                     url:"/nodelist",
                     dataType:"json",
                     success:function(data){
-                        var head= "<thead><tr><th>IP地址</th><th>主机名称</th><th>角色</th><th>集群名称</th><th>编辑</th><th>删除</th></tr></thead><tbody>"
+                        console.log(data);
+                        var head= "<thead><tr><th>IP地址</th><th>主机名称</th><th>角色</th><th>集群名称</th><th>EDIT</th><th>DELETE</th></tr></thead><tbody>"
                         var myobj=eval(data);
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                                head += "<tr><td>" + datamid[i].ip + "</td><td>" + datamid[i].host + "</td><td>" + datamid[i].role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                             var ips=null;
+                             if(datamid[i].ip!=null){
+                              ips=datamid[i].ip.replace(/\n/g,"<br/>");
+                             }
+                             var host = null;
+                             if(datamid[i].host!=null){
+                                host=datamid[i].host.replace(/\n/g,"<br/>")
+                             }
+                               var role = null;
+                             if(datamid[i].role!=null){
+                                role=datamid[i].role.replace(/\n/g,"<br/>")
+                             }
+
+
+                                head += "<tr><td>" + ips + "</td><td>" + host + "</td><td>" + role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -300,133 +310,145 @@
                         initNodeData();
 
 
+                    }
+                });
+            });
+    </script>
 
+<script>
+    //产品单元
+                $(document).ready(function(){
+                $.ajax({
+                    type:"GET",
+                    url:"/productlist",
+                    dataType:"json",
+                    success:function(data){
+                        console.log(data);
+                        var head= "<thead><tr><th>产品单元</th><th>描述</th><th>联系人</th><th>集群信息</th><th>EDIT</th><th>DELETE</th></tr></thead><tbody>"
+                        var myobj=eval(data);
+                        for (var p in myobj) {
+                            var datamid = eval(data[p]);
+                            for (var i = 0; i < datamid.length; i++) {
+                                head += "<tr><td>" + datamid[i].unit + "</td><td>" + datamid[i].desc + "</td><td>" + datamid[i].contact + "</td><td>" +datamid[i].cluster+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                            };
+                        };
+                        head += "</tbody>";
+                        $('#editable-sample3').html(head);
+                         initProductData();
 
                     }
                 });
             });
 
 
-
-    </script>
-
+</script>
 
 
 
 
+    <div class="panel panel-color panel-blue">
+        <div class="panel-heading">
+            <h3 class="panel-title">集群管理</h3>
 
+            <div class="panel-options">
+                <span>伸缩</span>
+                <a href="#" data-toggle="panel">
+                    <span class="collapse-icon">&ndash;</span>
+                    <span class="expand-icon">+</span>
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <ul class="nav nav-tabs nav-tabs-justified">
+                <li class="active">
+                    <a href="#data_tables" data-toggle="tab">
+                        <span class="visible-xs"><i class="fa fa-table"></i></span>
+                        <span class="hidden-xs">集群信息</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#data_charts" data-toggle="tab">
+                        <span class="visible-xs"><i class="fa fa-area-chart"></i></span>
+                        <span class="hidden-xs">节点信息</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#data_infos" data-toggle="tab">
+                        <span class="visible-xs"><i class="fa fa-area-chart"></i></span>
+                        <span class="hidden-xs">产品单元信息</span>
+                    </a>
+                </li>
+            </ul>
 
-
-
-
-
-
-
-
-
-<div class="row">
-
-    <!--tab-->
-    <div class="tabset2">
-        <!--tab 1-->
-        <div data-pws-tab="tab11" data-pws-tab-name="集群管理">
-            <div class="panel panel-body">
-                <div class="adv-table editable-table ">
+            <div class="tab-content">
+                <div class="tab-pane active" id="data_tables">
+                    <div class="adv-table editable-table ">
                     <div class="btn-group">
-                        <button id="editable-sample_new" class="btn btn-pink">
-                            集群添加 <i class="fa fa-plus"></i>
+                    <button id="editable-sample_new" class="btn btn-success">
+                        集群添加 <i class="fa fa-plus"></i>
+                    </button>
+                        </div>
+                        <table class="display table table-bordered" id="editable-sample">
+                        </table>
+                </div>
+                </div>
+                <div class="tab-pane" id="data_charts">
+                    <div class="btn-group">
+                    <button id="editable-sample_new2" class="btn btn-pink">
+                        单节点添加 <i class="fa fa-plus"></i>
+                    </button>
+                        <!--<button id="editable-sample_new3" class="btn btn-black">-->
+                            <!--多节点添加 <i class="fa fa-plus"></i>-->
+                        <!--</button>-->
+                    </div>
+                        <table class="display table table-bordered" id="editable-sample2">
+                        </table>
+                </div>
+                <div class="tab-pane" id="data_infos">
+                    <div class="btn-group">
+                        <button id="editable-sample_new4" class="btn btn-blue">
+                            产品单元添加 <i class="fa fa-plus"></i>
                         </button>
                     </div>
-                </div>
-                <div class="space15"></div>
-
-                <div class="adv-table">
-                    <table class="display table table-bordered" id="editable-sample">
+                    <table class="display table table-bordered" id="editable-sample3">
                     </table>
                 </div>
             </div>
-
-
-        </div>
-
-
-
-        <!--tab 2-->
-        <div data-pws-tab="tab22" data-pws-tab-name="节点管理">
-            <div class="panel panel-body">
-                <div class="adv-table editable-table ">
-                    <div class="btn-group">
-                        <button id="editable-sample_new2" class="btn btn-pink">
-                            节点添加 <i class="fa fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="space15"></div>
-
-                <div class="adv-table">
-                    <table class="display table table-bordered" id="editable-sample2">
-                    </table>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div><!-- tabset2 -->
+    </div>
 </div>
 
 
 
+        <!--table style-->
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/demo_page.css")" type="text/css"/>
+
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
+
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
+        <!--tab-->
 
 
+        <!--alert-->
+    <script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
 
+    <script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
 
+    <script src="@routes.Assets.at("javascripts/DT_bootstrap.js")"></script>
+    <script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/modernizr.min.js")" type="text/javascript" ></script>
+        <!--tab-->
 
+    <script src="@routes.Assets.at("javascripts/dynamic_table_init.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/dynamic_node_init.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/dynamic_product_init.js")" type="text/javascript" ></script>
 
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
 
-
-
-
-<!--table style-->
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/demo_page.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/demo_table.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
-
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
-<!--tab-->
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.pwstabs.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/jquery.pwstabs.min.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/styles.css")" type="text/css"/>
-
-
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/google.css")" type="text/css"/>
-<link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style_dy.css")" type="text/css"/>
-
-<!--alert-->
-<script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
-
-<script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/modernizr.min.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/jquery.dataTables.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/DT_bootstrap.js")" type="text/javascript" ></script>
-<!--<script src="@routes.Assets.at("javascripts/scripts.js")" type="text/javascript" ></script>-->
-
-
-<!--tab-->
-<script src="@routes.Assets.at("javascripts/jquery.pwstabs-1.1.3.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/jquery.pwstabs-1.1.3.min.js")" type="text/javascript" ></script>
-
-<script src="@routes.Assets.at("javascripts/dynamic_table_init.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/dynamic_node_init.js")" type="text/javascript" ></script>
-
-
-
-<!--select-->
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/chosen.css")" type="text/css"/>
-<script src="@routes.Assets.at("javascripts/chosen.jquery.js")" type="text/javascript"></script>
-
-
+        <!--select-->
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/chosen.css")" type="text/css"/>
+    <script src="@routes.Assets.at("javascripts/chosen.jquery.js")" type="text/javascript"></script>
 }
+
+
