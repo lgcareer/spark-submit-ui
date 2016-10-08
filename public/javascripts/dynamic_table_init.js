@@ -45,6 +45,17 @@ function editRow(oTable, nRow, myid,isNew) {
     }
 }
 
+function paserole(datas){
+           var role = '';
+           if(datas!=''){
+               var arr=eval(datas)
+                  for (var j = 0; j < arr.length; j++) {
+                      role +=  arr[j] + '\t';
+                           }
+                        }
+                      return role
+}
+
 
 function restoreRow(oTable, nRow) {
     var aData = oTable.fnGetData(nRow);
@@ -117,12 +128,14 @@ function initdata() {
                     success: function (data) {
                         sOut = "<table cellpadding=\"5\" cellspacing=\"0\" border=\"0\" style=\"padding-left:50px;\"><thead><tr><th>IP列表</th><th>host列表</th><th>角色</th></thead><tbody>";
                         for (var i = 0; i < data.list.length; i++) {
-                            sOut += "<tr><td><font color=\"#ffffff\">" + data.list[i].ip + "</font></td><td><font color=\"#ffffff\">" + data.list[i].host + "</font></td><td><font color=\"#ffffff\">" + data.list[i].role + "</font></td></tr>";
+
+                            sOut += "<tr><td><font color=\"#ffffff\">" + data.list[i].ip + "</font></td><td><font color=\"#ffffff\">" + data.list[i].host + "</font></td><td><font color=\"#ffffff\">" + paserole(data.list[i].role) + "</font></td></tr>";
 
                         }
                         ;
                         for (var j = 0; j < data.details.length; j++) {
-                            sOut += '<tr><td><font color=\"#ffffff\">' + data.details[j].role + '</font></td><td><font color=\"#ffffff\">' + data.details[j].count + '个 </font></td></tr>';
+
+                            sOut += '<tr><td><font color=\"#ffffff\">' + paserole(data.details[j].role) + '</font></td><td><font color=\"#ffffff\">' + data.details[j].count + '个 </font></td></tr>';
                         }
                         sOut += "</tbody></table>";
 
