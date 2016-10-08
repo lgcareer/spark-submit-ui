@@ -261,7 +261,14 @@ $(document).ready(function(){
                      if(datamid[i].url!=null){
                          url=datamid[i].url.replace(/\n/g,"<br/>");
                      }
-                    head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + datamid[i].version + "</td><td><a href='" + datamid[i].url + "' target='_blank'>" +url+ "</a></td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                                 var version = '';
+                                if(datamid[i].version!=''){
+                                     var arr=eval(datamid[i].version)
+                                          for (var j = 0; j < arr.length; j++) {
+                                            version +=  arr[j] + '<br/>';
+                                          }
+                                     }
+                    head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + version + "</td><td><a href='" + datamid[i].url + "' target='_blank'>" +url+ "</a></td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
                 };
             };
             head += "</tbody>";
@@ -288,21 +295,16 @@ $(document).ready(function(){
                         for (var p in myobj) {
                             var datamid = eval(data[p]);
                             for (var i = 0; i < datamid.length; i++) {
-                             var ips=null;
-                             if(datamid[i].ip!=null){
-                              ips=datamid[i].ip.replace(/\n/g,"<br/>");
-                             }
-                             var host = null;
-                             if(datamid[i].host!=null){
-                                host=datamid[i].host.replace(/\n/g,"<br/>")
-                             }
-                               var role = null;
-                             if(datamid[i].role!=null){
-                                role=datamid[i].role.replace(/\n/g,"<br/>")
-                             }
 
+                               var role = '';
+                                if(datamid[i].role!=''){
+                                     var arr=eval(datamid[i].role)
+                                          for (var j = 0; j < arr.length; j++) {
+                                            role +=  arr[j] + '<br/>';
+                                          }
+                                     }
 
-                                head += "<tr><td>" + ips + "</td><td>" + host + "</td><td>" + role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
+                                head += "<tr><td>" + datamid[i].ip + "</td><td>" + datamid[i].host + "</td><td>" + role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";
                             };
                         };
                         head += "</tbody>";
@@ -395,7 +397,7 @@ $(document).ready(function(){
                 <div class="tab-pane" id="data_charts">
                     <div class="btn-group">
                     <button id="editable-sample_new2" class="btn btn-pink">
-                        单节点添加 <i class="fa fa-plus"></i>
+                        单节添加 <i class="fa fa-plus"></i>
                     </button>
                         <!--<button id="editable-sample_new3" class="btn btn-black">-->
                             <!--多节点添加 <i class="fa fa-plus"></i>-->

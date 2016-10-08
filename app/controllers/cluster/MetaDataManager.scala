@@ -1,6 +1,7 @@
 package controllers
 
 import models._
+import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -26,12 +27,12 @@ object MetaDataManager extends Controller{
 
 
   def update(id:Int,name:String,unit: String,version:String,url:String)=Action{
-    import play.api.libs.json._
+//    import play.api.libs.json._
+//
+//    val jsValue: JsValue = Json.parse(version)
+//    val versions: String = jsValue.as[List[String]].mkString("\n")
 
-    val jsValue: JsValue = Json.parse(version)
-    val versions: String = jsValue.as[List[String]].mkString("\n")
-
-    MetaData.addOrUpdate(MetaData(id,name,unit,versions,url))
+    MetaData.addOrUpdate(MetaData(id,name,unit,version,url))
     Ok("操作成功")
   }
 
@@ -60,12 +61,11 @@ object MetaDataManager extends Controller{
 
 
   def updateNode(id:Int,ip:String,host: String,role:String,name:String)=Action{
-    import play.api.libs.json._
-
-    val jsValue: JsValue = Json.parse(role)
-    val roles: String = jsValue.as[List[String]].mkString("\n")
+    //import play.api.libs.json._
+    //val jsValue: JsValue = Json.parse(role)
+   //val roles: String = jsValue.as[List[String]].mkString("\n")
     val pid: Int = MetaData.findIdByName(name)
-    NodeData.addOrUpdate(NodeData(id,ip,host,roles,name,pid))
+    NodeData.addOrUpdate(NodeData(id,ip,host,role,name,pid))
     Ok("操作成功")
   }
 

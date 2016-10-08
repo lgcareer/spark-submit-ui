@@ -159,10 +159,11 @@ object MetaRestApi extends Controller{
   def addNode(id:Int,ip:String,host: String,role:String,name:String)=Action{
     import play.api.libs.json._
     val jsValue: JsValue = Json.parse(role)
-    val roles: String = jsValue.as[List[String]].mkString("\n")
-    val pid: Int = MetaData.findIdByName(name)
-    val updataNodeaData: Int = NodeData.addNodeData(NodeData(id,ip,host,roles,name,pid))
-    Ok(Json.toJson(State.fromProps(updataNodeaData)))
+    //val roles: String = jsValue.as[List[String]].mkString("\n")
+    //val pid: Int = MetaData.findIdByName(name)
+    //val updataNodeaData: Int = NodeData.addNodeData(NodeData(id,ip,host,roles,name,pid))
+    //Ok(Json.toJson(State.fromProps(updataNodeaData)))
+    Ok("test")
   }
 
 
