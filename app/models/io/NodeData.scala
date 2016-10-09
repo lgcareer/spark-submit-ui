@@ -4,6 +4,7 @@ import anorm.SqlParser._
 import anorm._
 import play.api.db.DB
 import play.api.Play.current
+import play.api.libs.json.Json
 
 
 /**
@@ -54,11 +55,12 @@ object NodeData {
 
 
   def findNodeDetail(pid:Int):NodeDataList ={
+    import play.api.libs.json._
     var snakes = Map.empty[String, Int]
     val nodes: Seq[NodeData] = findNodeDatasById(pid)
 
     nodes.map(x=>{
-        val split: Array[String] = x.role.split("\\s+")
+        val split: Seq[String] = Json.parse(x.role).as[Seq[String]]
          split.map{ r =>
            if (snakes.isDefinedAt(r)) {
              val value: Int = snakes(r) + 1
@@ -134,6 +136,29 @@ object NodeData {
     }
   }
 
+  def diffRole(ip:String) ={
+    play.api.db.DB.withConnection { implicit connection =>
+          SQL(
+            """
+          select  role from `playdb`.`nodedata` where ip={ip}
+            """).on(
+            'ip -> ip
+          ).as(SqlParser.scalar[String].single)
+    }
+  }
+
+  def  parseRole(ip:String,newRole:String):String={
+    import play.api.libs.json._
+    //只将原来的角色取出,添加差异的角色
+    val role  = diffRole(ip)
+    val parse = Json.parse(newRole).as[Seq[String]]
+    val roles = Json.parse(role).as[Seq[String]]
+    val union: Seq[String] = parse.union(roles).distinct
+    val toJson: JsValue = Json.toJson(union)
+    toJson.toString()
+
+  }
+
 
 
   def batchAddNodeData(nodes:Seq[Node])={
@@ -158,13 +183,14 @@ object NodeData {
     play.api.db.DB.withConnection { implicit connection =>
       nodes.map{
         nodeData=>
+          val role: String = parseRole(nodeData.ip,nodeData.role)
           SQL(
             """
           update  nodedata set  host={host}, `role`={role}, name={name},pid={pid} where ip={ip}
             """).on(
             'ip -> nodeData.ip,
             'host -> nodeData.host,
-            'role -> nodeData.role,
+            'role -> role,
             'name -> nodeData.name,
             'pid -> nodeData.pid
           ).executeUpdate()
@@ -172,6 +198,8 @@ object NodeData {
 
     }
   }
+
+
 
 
 

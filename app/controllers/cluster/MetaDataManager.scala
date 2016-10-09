@@ -27,11 +27,6 @@ object MetaDataManager extends Controller{
 
 
   def update(id:Int,name:String,unit: String,version:String,url:String)=Action{
-//    import play.api.libs.json._
-//
-//    val jsValue: JsValue = Json.parse(version)
-//    val versions: String = jsValue.as[List[String]].mkString("\n")
-
     MetaData.addOrUpdate(MetaData(id,name,unit,version,url))
     Ok("操作成功")
   }
