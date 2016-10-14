@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [0m[[0minfo[0m] [0mUpdating {file:/Users/king/IdeaProject/ficusspark/project/}ficusspark-build...[0m
+=======
+[0m[[0minfo[0m] [0mUpdating {file:/Users/manbu/IdeaProjects/ficusspark/project/}ficusspark-build...[0m
+>>>>>>> 423ad8ba0dca1d7212d1ada1630dd1a689ef9d59
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#ficusspark-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7212,6 +7216,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0m:: resolution report :: resolve 1350ms :: artifacts dl 35ms[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT compile produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT runtime produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml[0m
@@ -7227,4 +7232,21 @@
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT pom produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT scala-tool produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	resolve done (1350ms resolve - 35ms download)[0m
+=======
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2032ms :: artifacts dl 58ms[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT compile produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT runtime produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT test produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT provided produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT optional produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT compile-internal produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT runtime-internal produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT test-internal produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT plugin produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT sources produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT docs produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT pom produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT scala-tool produced in /Users/manbu/IdeaProjects/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (2032ms resolve - 58ms download)[0m
+>>>>>>> 423ad8ba0dca1d7212d1ada1630dd1a689ef9d59
 [0m[[0minfo[0m] [0mDone updating.[0m

@@ -6,6 +6,8 @@ import models.utils.Configuration
 import play.api.libs.json._
 import play.api.mvc._
 
+import scala.collection.mutable.ArrayBuffer
+
 
 object YarnList  extends Controller  with Secured {
    var config : Configuration = new Configuration()
@@ -159,6 +161,35 @@ object YarnList  extends Controller  with Secured {
 
   }
 
+  /**
+   * netWork 变化
+   *
+   */
+  def system_network = IsAuthenticated { username => implicit request =>
+    val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
+    val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
+    val network = spark_args \ "data" \ "sysifstat" \ "data" \ "eth2" \config.getString("spark.host.ha1")
+    Ok(network)
+  }
+
+  /**
+   * active_memory
+   * @return
+   */
+
+  def active_memory = IsAuthenticated {username => implicit request =>
+    val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
+    val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
+    val active_memory = (spark_args \ "data" \ "sysmeminfo" \"data" \ "active").toString()
+    val cpu_load_avg = (spark_args \ "data" \ "syscpuidle" \"data" \\ "cpuidle").toList
+   val cpuBuffer = ArrayBuffer[Double]()
+    for(i <- 0 until cpu_load_avg.length){
+      cpuBuffer += cpu_load_avg(i).toString().toDouble
+    }
+    val cpuRate = cpuBuffer.sum/cpu_load_avg.length
+    val memory_cpu = "{\"cpuRate\":" + "\"" + cpuRate + "\",\"active_memory\":" + "" + active_memory + "}"
+    Ok(memory_cpu)
+  }
 
 }
 
