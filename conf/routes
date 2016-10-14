@@ -58,6 +58,9 @@ GET    /he                             @controllers.SparkJar.he(id:String)
 GET     /yarnInfo                     controllers.YarnList.yarnInfo
 GET     /yarnlist                     controllers.YarnList.yarnlist
 GET     /workerlist                   controllers.YarnList.workerlist
+GET     /system_network               controllers.YarnList.system_network
+GET     /active_memory                controllers.YarnList.active_memory
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
