@@ -10,11 +10,13 @@ import play.api.mvc.{Action, Controller}
   * Created by king on 16/9/5.
  *  集群元数据管理
   */
-object MetaDataManager extends Controller{
+object MetaDataManager extends Controller with Secured{
 
 
-  def metadata=Action{
-    Ok(views.html.metadata())
+  def metadata=IsAuthenticated{
+    username => implicit request =>
+      if(UserGroup.hasAdminGroup(username)) Ok(views.html.metadata())  else
+        Ok(views.html.readmetadata())
   }
 
   def metadatas=Action{
@@ -26,12 +28,8 @@ object MetaDataManager extends Controller{
 
 
 
-  def update(id:Int,name:String,unit: String,version:String,url:String)=Action{
-//    import play.api.libs.json._
-//
-//    val jsValue: JsValue = Json.parse(version)
-//    val versions: String = jsValue.as[List[String]].mkString("\n")
 
+  def update(id:Int,name:String,unit: String,version:String,url:String)=Action{
     MetaData.addOrUpdate(MetaData(id,name,unit,version,url))
     Ok("操作成功")
   }

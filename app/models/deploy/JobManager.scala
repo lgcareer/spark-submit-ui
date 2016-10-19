@@ -209,8 +209,6 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
         val output = process.inputIterator.mkString("\n")
         //val regex = """Shutdown (.*)""".r.unanchored
         //val regex = """Shutdown hook called(.*)""".r.unanchored
-
-
         val regex: Regex = MatchEngine.matchMode(request.master.get)
         output match {
           case regex(appId) => {

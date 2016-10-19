@@ -13,7 +13,7 @@ function editRow(oTable, nRow, myid,isNew) {
     var aData = oTable.fnGetData(nRow);
     var jqTds = $('>td', nRow);
 
-     var jqAS = $("td > a");
+     var jqAS = $("td > a",nRow);
      var url=null;
 
      if(!isNew){
@@ -135,7 +135,7 @@ function initdata() {
                         ;
                         for (var j = 0; j < data.details.length; j++) {
 
-                            sOut += '<tr><td><font color=\"#ffffff\">' + paserole(data.details[j].role) + '</font></td><td><font color=\"#ffffff\">' + data.details[j].count + '个 </font></td></tr>';
+                            sOut += '<tr><td><font color=\"#ffffff\">' + data.details[j].role + '</font></td><td><font color=\"#ffffff\">' + data.details[j].count + '个 </font></td></tr>';
                         }
                         sOut += "</tbody></table>";
 

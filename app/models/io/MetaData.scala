@@ -31,7 +31,7 @@ object MetaData {
   def findMetaDatas:Seq[MetaData]={
      DB.withConnection { implicit connection =>
       play.api.db.DB.withConnection { implicit connection =>
-        SQL("select * from metadata").as(metadata *)
+        SQL("select * from metadata order by id asc").as(metadata *)
       }
     }
   }
@@ -47,10 +47,9 @@ object MetaData {
     play.api.db.DB.withConnection { implicit connection =>
       SQL(
         """
-          INSERT INTO `playdb`.`metadata` (`name`, `unit`, `version`,`url`) VALUES ({name}, {unit}, {version},{url})
+          INSERT INTO `playdb`.`metadata` (`name`, `unit`, `version`,`url`) VALUES ({name},'',{version},{url})
         """).on(
         'name -> metaData.name,
-        'unit -> metaData.unit,
         'version -> metaData.version,
         'url -> metaData.url
       ).executeUpdate()

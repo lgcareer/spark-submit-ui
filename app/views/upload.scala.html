@@ -370,13 +370,24 @@
                                             showLoaderOnConfirm: true,
                                              }, function(){
                                               setTimeout(function(){
-
                                                  $('#jarForm').ajaxSubmit(
-
                                                   function(data){
-                                                          swal({
-                                                          title: "操作完成!",
-                                                          text: data+" /个人中心/任务列表  查看任务详情",
+                                                     if(data!="任务提交成功!"){
+                                                            swal({
+                                                          title: "操作完成",
+                                                          text: "提交失败",
+                                                          type: "error",
+                                                          showCancelButton: false,
+                                                          confirmButtonText: "确定",
+                                                          closeOnConfirm: true,
+                                                          closeOnCancel: false },
+                                                          function(isConfirm){
+                                                                    //window.location="@routes.SparkJar.errorpage("")";
+                                                                });
+                                                     }else{
+                                                                         swal({
+                                                          title: "操作完成",
+                                                          text: data+" /个人中心/用户任务管理  查看任务详情",
                                                           type: "success",
                                                           showCancelButton: false,
                                                           confirmButtonText: "确定",
@@ -386,7 +397,13 @@
                                                                     window.location="/tasklist";
                                                                 });
 
-                                                    });
+                                                     }
+
+
+
+
+                                                    }
+                                                    );
 
 
                                                 }, 5000);

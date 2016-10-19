@@ -56,6 +56,8 @@ object MonitorController  extends Controller with Secured{
     }
 
     val job = Await.result(timeFuture, 50 seconds).get
+
+
     Ok(views.html.streaming(job))
   }
 

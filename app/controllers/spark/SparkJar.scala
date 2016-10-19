@@ -45,7 +45,7 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
           Unauthorized("用户不存在,请重新登录!")
         }
         }.getOrElse {
-          Redirect(routes.SparkJar.errorpage())
+          Redirect(routes.SparkJar.errorpage("上传失败"))
         }
       }
 
@@ -69,7 +69,7 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
                 taskProvider.loadTaskInfo(AppDataObject(id,username))
                 Ok("任务提交成功!")
               }
-              case JobRunExecption(error) => Ok("任务提交失败!")
+              case JobRunExecption(error) => Ok(error)
               case _ => NotFound
             }
        }
@@ -77,8 +77,8 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
 }
 
 
-    def errorpage = IsAuthenticated {username => implicit request =>
-      Ok(views.html.index())
+    def errorpage(error:String) =Action {
+      Ok(views.html.error(error))
     }
 
     def logs(id:String) =Action{
