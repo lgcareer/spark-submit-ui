@@ -20,7 +20,8 @@ object SparkSqlPool {
          //加载驱动
          preGetConn()
          for(i <- 1 to connectionNum){
-           val conn = DriverManager.getConnection("jdbc:hive2://h136159.mars.grid.sina.com.cn:10000","FicusSpark","d03fd7fc96bb5e6")
+           val conn = DriverManager
+             .getConnection("jdbc:hive2://h136159.mars.grid.sina.com.cn:10000","FicusSpark","d03fd7fc96bb5e6")
            pool.push(conn)
            conNum +=  1
          }

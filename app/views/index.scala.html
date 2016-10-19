@@ -549,7 +549,6 @@
 
     </script>
 <script>
-
           <!-- Master 网络变化情况-->
           function network(){
                 var ret = '';
@@ -570,8 +569,13 @@
             var inpps = netdata.inpps;
             var intraffic = netdata.intraffic;
             var outtraffic = netdata.outtraffic;
-            var ppsarr = [inpps,outpps];
-            var trafficArr = [intraffic,(outpps+inpps)/2];
+
+            var change1 = inpps/2 + (outpps%inpps)*0.2;
+            var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.3);
+            <!--上-->
+            var ppsarr = [inpps/2,change1];
+            <!--下-->
+            var trafficArr = [intraffic/2,change2];
 
             <!-- Master 内存和cpu变化-->
            function memory_cpu(){
@@ -608,7 +612,6 @@
                     x1: between(ppsarr[0],ppsarr[1]),
                     x2: between(trafficArr[0], trafficArr[1])});
             }
-
             $("#realtime-network-stats").dxChart({
                 dataSource: realtime_network_stats,
                 commonSeriesSettings: {
@@ -616,8 +619,8 @@
                     argumentField: "id"
                 },
                 series: [
-                    { valueField: "x1", name: "Packets Sent", color: '#7c38bc', opacity: .4 },
-                    { valueField: "x2", name: "Packets Received", color: '#000', opacity: .5},
+                    { valueField: "x1", name: "Packets Sent", color: '#694d9f'},
+                    { valueField: "x2", name: "Packets Received", color: '#2b6447'},
                 ],
                 legend: {
                     verticalAlignment: "bottom",
@@ -645,7 +648,6 @@
                     enabled: false
                 }
             }).data('iCount', i);
-
             $('#network-realtime-gauge').dxCircularGauge({
                 scale: {
                     startValue: 0,
