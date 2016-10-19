@@ -48,7 +48,7 @@ GET     /errorpage                  @controllers.SparkStream.errorpage
 POST     /sparkjar                     @controllers.SparkJar.upload
 GET     /executejar                    @controllers.SparkJar.executejarpage
 POST     /executejar                   @controllers.SparkJar.executejar
-GET     /errorpage                     @controllers.SparkJar.errorpage
+GET     /errorlog                      @controllers.SparkJar.errorpage(error:String)
 GET     /logs                          @controllers.SparkJar.logs(id:String)
 GET    /runtasklogs                    controllers.RunTask.runTaskLogs
 GET    /he                             @controllers.SparkJar.he(id:String)
