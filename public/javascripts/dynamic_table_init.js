@@ -57,9 +57,11 @@ function paserole(datas){
 }
 
 
+
 function restoreRow(oTable, nRow) {
     var aData = oTable.fnGetData(nRow);
     var jqTds = $('>td', nRow);
+
 
     for (var i = 0, iLen = jqTds.length; i < iLen; i++) {
         oTable.fnUpdate(aData[i], nRow, i, false);
@@ -161,6 +163,7 @@ function initdata() {
         editRow(oTable, nRow, 0,true);
         nEditing = nRow;
     });
+
 
     //保存
     $('#editable-sample a.edit').live('click', function (e) {

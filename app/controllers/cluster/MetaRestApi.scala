@@ -44,11 +44,11 @@ object MetaRestApi extends Controller{
     * @param url
     * @return
     */
-  def updateCluster(id:Int,name:String,unit: String,version:String,url:String)=Action{
+  def updateCluster(id:Int,name:String,version:String,url:String)=Action{
     import play.api.libs.json._
     val jsValue: JsValue = Json.parse(version)
     val versions: String = jsValue.as[List[String]].mkString("\n")
-    val updataMetaData: Int = MetaData.updataMetaData(MetaData(id,name,unit,versions,url))
+    val updataMetaData: Int = MetaData.updataMetaData(MetaData(id,name,null,versions,url))
     val state: State = State.fromProps(updataMetaData)
     Ok(Json.toJson(state))
   }

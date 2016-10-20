@@ -61,10 +61,9 @@ object MetaData {
       SQL(
         """
           update  metadata set name=
-            {name}, unit={unit}, `version`={version}, url={url} where id={id}
+            {name},  `version`={version}, url={url} where id={id}
         """).on(
         'name -> metaData.name,
-        'unit -> metaData.unit,
         'version -> metaData.version,
         'url -> metaData.url,
         'id -> metaData.id
