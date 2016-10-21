@@ -604,7 +604,7 @@
             rns2_values = [39,50],
             realtime_network_stats = [];
 
-            setInterval(memory_cpu,1000);
+            <!--setInterval(memory_cpu,1000);-->
 
             for(i=0; i<=100; i++)
             {
@@ -674,8 +674,7 @@
                     spindleSize: 15
                 }
             });
-
-            setInterval(function(){ networkRealtimeChartTick(ppsarr, trafficArr); }, 1000);
+            setInterval(function(){ networkRealtimeChartTick(ppsarr, trafficArr); }, 2000);
             setInterval(function(){ networkRealtimeGaugeTick(); }, 2000);
             setInterval(function(){ networkRealtimeMBupdate(); }, 3000);
 
