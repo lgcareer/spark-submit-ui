@@ -9,13 +9,8 @@ import akka.actor.ActorRef
 import models.{JobSubmitSuccess, MatchEngine}
 import org.apache.spark.Logging
 import play.api.{Logger, cache}
-import play.api.cache.Cache
-import play.api.Play.current
 
-import scala.collection.mutable
 import scala.io.Source
-import scala.concurrent.duration._
-import scala.util.control.Breaks
 import scala.util.matching.Regex
 /**
   * Created by liangkai1 on 16/7/12.
@@ -36,7 +31,6 @@ class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputS
     override def run() = {
       val lines:Iterator[String] = Source.fromInputStream(inputStream).getLines()
       val uid: String = UUID.randomUUID().toString
-
       val regex: Regex = MatchEngine.matchMode(master.get)
 
       for (line <- lines) {

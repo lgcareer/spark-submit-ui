@@ -49,9 +49,7 @@ POST     /sparkjar                     @controllers.SparkJar.upload
 GET     /executejar                    @controllers.SparkJar.executejarpage
 POST     /executejar                   @controllers.SparkJar.executejar
 GET     /errorlog                      @controllers.SparkJar.errorpage(error:String)
-GET     /logs                          @controllers.SparkJar.logs(id:String)
 GET    /runtasklogs                    controllers.RunTask.runTaskLogs
-GET    /he                             @controllers.SparkJar.he(id:String)
 
 
 #Dashboard
@@ -149,7 +147,7 @@ GET  /addproduct                       controllers.MetaDataManager.updataProduct
 GET  /cluster/list      controllers.MetaRestApi.getClusterList
 GET  /cluster/add       controllers.MetaRestApi.addCluster(id:Int,name:String,unit: String,version:String,url:String)
 GET  /cluster/rm        controllers.MetaRestApi.rmCluster(id:Int)
-GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,unit: String,version:String,url:String)
+GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,version:String,url:String)
 GET  /cluster/names     controllers.MetaRestApi.getNames
 GET  /node/list        controllers.MetaRestApi.getNodeList
 GET  /node/add        controllers.MetaRestApi.addNode(id:Int,ip:String,host: String,role:String,name:String)

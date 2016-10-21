@@ -1,10 +1,13 @@
 package controllers
 
 
+import java.util.UUID
+
 import com.google.inject.Inject
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models.TaskDataProvider.AppDataObject
 import models._
+import org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.UUID
 import play.api.Logger
 import play.api.Play.current
 import play.api.cache.Cache
@@ -69,7 +72,7 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
                 taskProvider.loadTaskInfo(AppDataObject(id,username))
                 Ok("任务提交成功!")
               }
-              case JobRunExecption(error) => Ok(error)
+              case JobRunExecption(error) => Ok(error);
               case _ => NotFound
             }
        }
@@ -81,13 +84,6 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
       Ok(views.html.error(error))
     }
 
-    def logs(id:String) =Action{
-      Ok(Cache.getAs[String](id).getOrElse("none"))
-    }
-
-    def he(jobId:String)=Action{
-      Ok(views.html.he(jobId))
-    }
 
  }
 

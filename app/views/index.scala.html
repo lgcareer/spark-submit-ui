@@ -570,12 +570,12 @@
             var intraffic = netdata.intraffic;
             var outtraffic = netdata.outtraffic;
 
-            var change1 = inpps/2 + (outpps%inpps)*0.2;
-            var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.3);
+            var change1 = inpps + (outpps%inpps)*0.2;
+            var change2 = intraffic+(outtraffic%(intraffic/2)*0.2);
             <!--上-->
-            var ppsarr = [inpps/2,change1];
+            var ppsarr = [inpps+200,change1];
             <!--下-->
-            var trafficArr = [intraffic/2,change2];
+            var trafficArr = [intraffic+200,change2];
 
             <!-- Master 内存和cpu变化-->
            function memory_cpu(){
@@ -1024,20 +1024,24 @@
     </script>*@
 
 @*
-修订日志:v3.0.8(2016.10.14)
-添加Master 实时活跃内存变化展示
-添加Master 网络实时变化曲线
-添加Master CPU空闲负载百分比
+修订日志:v3.0.9(2016.10.21)
+部分功能测试
+添加任务提交失败参数列表提示
+完善元数据管理模块(重复IP,不同角色的合并)
+完善元数据管理模块(添加组长编辑权限)
+优化dashboard页面展示
 修正表格样式&部分UI调整
 *@
 <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.0.8(2016.10.14)",
+                    title: "修订日志:v3.0.9(2016.10.21)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加Master 实时活跃内存变化展示</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加Master 网络实时变化曲线</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加Master CPU空闲负载百分比</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>部分功能测试</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加任务提交失败参数列表提示</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善元数据管理模块(重复IP,不同角色的合并)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善元数据管理模块(添加组长编辑权限)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;优化dashboard页面展示</sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
