@@ -21,8 +21,13 @@ object UserName extends Controller with Secured {
     //用户组和队列映射
     val group_queue = UserCountDao.find_group_queue()
     val queue = group_queue(group)
-    val data = "{\"user\":" + "\"" + username + "\",\"shortName\":" + "\"" + shortName + "\",\"queueName\":" + "\"" + queue +"\"}"
+
+    //App Tracking 统计
+    val trackingSum = UserCountDao.trackingTask(username)
+
+    val data = "{\"user\":" + "\"" + username + "\",\"shortName\":" + "\"" + shortName + "\",\"queueName\":" + "\"" + queue +"\",\"trackingSum\":" + "\"" + trackingSum + "\"}"
     Ok(Json.parse(data))
 
   }
+
 }
