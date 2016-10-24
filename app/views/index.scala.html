@@ -110,7 +110,7 @@
                 <a href="#">
                     <i class="fa fa-bell"></i>
                     <span class="title">App Tracking</span>
-                    <span class="label label-success pull-right">50</span>
+                    <span class="label label-success pull-right" id ="tracking">50</span>
                 </a>
                 <ul>
                     <li>
@@ -270,7 +270,6 @@
                     dataType:"json",
                     async:false,
                     success:function(data){
-                        console.log(data);
                         retVal=data;
                     }
                 });
@@ -571,7 +570,7 @@
             var outtraffic = netdata.outtraffic;
 
             var change1 = inpps/2 + (outpps%inpps)*0.2;
-            var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.3);
+            var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.8);
             <!--上-->
             var ppsarr = [inpps/2,change1];
             <!--下-->
@@ -604,7 +603,7 @@
             rns2_values = [39,50],
             realtime_network_stats = [];
 
-            setInterval(memory_cpu,1000);
+            <!--setInterval(memory_cpu,1000);-->
 
             for(i=0; i<=100; i++)
             {
@@ -674,8 +673,7 @@
                     spindleSize: 15
                 }
             });
-
-            setInterval(function(){ networkRealtimeChartTick(ppsarr, trafficArr); }, 1000);
+            setInterval(function(){ networkRealtimeChartTick(ppsarr, trafficArr); }, 2000);
             setInterval(function(){ networkRealtimeGaugeTick(); }, 2000);
             setInterval(function(){ networkRealtimeMBupdate(); }, 3000);
 
@@ -968,6 +966,22 @@
 
     </script>
 
+    <script>
+                $(document).ready(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"/whoiam",
+                        dataType:"json",
+                        success:function(data){
+                            var myobj=eval(data);
+                            var trackingSum=myobj.trackingSum;
+                            $('#tracking').html(trackingSum);
+                        }
+                    });
+                });
+     </script>
+
+
 @* <script>
     $(document).ready(function () {
     var data=[
@@ -1025,20 +1039,24 @@
     </script>*@
 
 @*
-修订日志:v3.0.8(2016.10.14)
-添加Master 实时活跃内存变化展示
-添加Master 网络实时变化曲线
-添加Master CPU空闲负载百分比
+修订日志:v3.0.9(2016.10.21)
+部分功能测试
+添加任务提交失败参数列表提示
+完善元数据管理模块(重复IP,不同角色的合并)
+完善元数据管理模块(添加组长编辑权限)
+优化dashboard页面展示
 修正表格样式&部分UI调整
 *@
 <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.0.8(2016.10.14)",
+                    title: "修订日志:v3.0.9(2016.10.21)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加Master 实时活跃内存变化展示</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加Master 网络实时变化曲线</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加Master CPU空闲负载百分比</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>部分功能测试</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加任务提交失败参数列表提示</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善元数据管理模块(重复IP,不同角色的合并)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善元数据管理模块(添加组长编辑权限)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;优化dashboard页面展示</sapn><br><br>" +
                     "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
@@ -1051,3 +1069,4 @@
 @copyright()
 
 }
+

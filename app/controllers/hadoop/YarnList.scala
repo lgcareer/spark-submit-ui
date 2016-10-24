@@ -102,7 +102,6 @@ object YarnList  extends Controller  with Secured {
      * 权限判断
      */
     val groupName = UserCountDao.userBygroup(username)
-
     val runTaskLength = (json \ "activeapps" \\ "id").length
     val finishTaskLength = (json \ "completedapps" \\ "id").length
     val runTasklist = json \ "activeapps"
@@ -124,18 +123,15 @@ object YarnList  extends Controller  with Secured {
         apps += (json \ "completedapps")(i) + ","
       }
     }
+
     apps = apps.substring(0, apps.length - 1)
     apps += "]}"
     val boolean =apps.contains("[")
      boolean match {
        case false => Ok("""{"apps":[]}""")
        case true  => Ok(apps)
-
      }
-
-
   }
-
 
   def workerInfo = IsAuthenticated { username => implicit request =>
 
