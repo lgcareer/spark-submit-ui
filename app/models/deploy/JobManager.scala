@@ -68,6 +68,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
   private val push_akka ="/user/MessagePool"
   private val yarn="yarn-cluster"
   private val uri ="spark"
+  private val port ="7077"
   private val YARN = 1
   private val STANDALONE = 2
   private val MESOS = 4
@@ -108,7 +109,8 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
     masterHost
       .map{
          uri +":"+File.separator+
-          File.separator+ _
+          File.separator+ _ +
+           ":"+port
       }.get
   }
 
