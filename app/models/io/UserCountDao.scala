@@ -267,4 +267,35 @@ object UserCountDao {
   }
   case class group_queue_Info(group: String, queue: String)
 
+  /**
+   * 统计用户组运行中任务 Tracking
+   * @return
+   */
+
+  def trackingTask (username:String):Int = {
+    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+    val runtask = scala.io.Source.fromURL(spark_url).mkString
+    val json = Json.parse(runtask)
+
+    //用户组
+    val groupName = UserCountDao.userBygroup(username)
+
+    val runTaskLength = (json \ "activeapps" \\ "id").length
+    val runTasklist = json \ "activeapps"
+    var trackingTaskSum = 0
+
+    for(i <- 0 until runTaskLength){
+      val runTaskuser = (json \ "activeapps")(i) \ "user"
+      if(groupName == "SuperAdmin"){
+        trackingTaskSum += 1
+      }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
+        trackingTaskSum += 1
+      }
+    }
+    trackingTaskSum
+  }
 }
+
+
+
+

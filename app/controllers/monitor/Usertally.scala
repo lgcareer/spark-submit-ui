@@ -37,4 +37,5 @@ object Usertally extends Controller with Secured{
     Ok(rateJson)
   }
 
+
 }

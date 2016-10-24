@@ -110,7 +110,7 @@
                 <a href="#">
                     <i class="fa fa-bell"></i>
                     <span class="title">App Tracking</span>
-                    <span class="label label-success pull-right">50</span>
+                    <span class="label label-success pull-right" id ="tracking">50</span>
                 </a>
                 <ul>
                     <li>
@@ -270,7 +270,6 @@
                     dataType:"json",
                     async:false,
                     success:function(data){
-                        console.log(data);
                         retVal=data;
                     }
                 });
@@ -570,12 +569,12 @@
             var intraffic = netdata.intraffic;
             var outtraffic = netdata.outtraffic;
 
-            var change1 = inpps + (outpps%inpps)*0.2;
-            var change2 = intraffic+(outtraffic%(intraffic/2)*0.2);
+            var change1 = inpps/2 + (outpps%inpps)*0.2;
+            var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.8);
             <!--上-->
-            var ppsarr = [inpps+200,change1];
+            var ppsarr = [inpps/2,change1];
             <!--下-->
-            var trafficArr = [intraffic+200,change2];
+            var trafficArr = [intraffic/2,change2];
 
             <!-- Master 内存和cpu变化-->
            function memory_cpu(){
@@ -967,6 +966,22 @@
 
     </script>
 
+    <script>
+                $(document).ready(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"/whoiam",
+                        dataType:"json",
+                        success:function(data){
+                            var myobj=eval(data);
+                            var trackingSum=myobj.trackingSum;
+                            $('#tracking').html(trackingSum);
+                        }
+                    });
+                });
+     </script>
+
+
 @* <script>
     $(document).ready(function () {
     var data=[
@@ -1054,3 +1069,4 @@
 @copyright()
 
 }
+
