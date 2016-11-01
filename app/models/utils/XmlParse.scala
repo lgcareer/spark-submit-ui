@@ -32,7 +32,8 @@ object XmlParse {
       load xml file
        */
       // s"public/download/fair-scheduler.xml"
-       val fairXml = XML.loadFile(s"tmp/fair-scheduler.xml")
+//       val fairXml = XML.loadFile(s"tmp/fair-scheduler.xml")
+       val fairXml = XML.loadFile(s"public/download/fair-scheduler.xml")
       //fetch nodes insert into Map
         val queueMap =
          (Map[String,String]() /:(fairXml \ "queue" \ "queue")){
@@ -51,6 +52,9 @@ object XmlParse {
        val default = (fairXml\\"queue").filter(x=>((x\"@name").text)==queueList(0))
        val pt_UserGrowth = (fairXml\\"queue").filter(x=>((x\"@name").text)==queueList(1))
 
+       println("==>"+pt_UserGrowth)
+       println("**********")
+
       /**
        * 提取队列参数
        * 可用于展示
@@ -64,7 +68,12 @@ object XmlParse {
 //             val map =Map[String,String]()
 //             map += ("memory" -> memory,"vcpu" -> vcpu)
 
-       //更加队列名称修改对应参数
+       //跟新队列名称修改对应参数
+        println("队列"+ queueName)
+        println("memory"+ memory)
+        println("vcpu"+ vcpu)
+        println("maxRunningApps"+ maxRunningApps)
+
        if(queueName == queueList(0)){
          //修改文件
          val defaultFile =
@@ -85,7 +94,8 @@ object XmlParse {
              </queue>
            </allocations>
          //保存文件路径
-         XML.save(s"tmp/fair-scheduler.xml", defaultFile)
+//         XML.save(s"tmp/fair-scheduler.xml", defaultFile)
+         XML.save(s"public/download/fair-scheduler.xml", defaultFile)
        }
        if(queueName == queueList(1)) {
           val pt_UserGrowth =
@@ -106,10 +116,11 @@ object XmlParse {
               </queue>
             </allocations>
          //保存文件路径
-         XML.save(s"/tmp/newXmlFile.xml", pt_UserGrowth)
+//         XML.save(s"/tmp/newXmlFile.xml", pt_UserGrowth)
+         XML.save(s"public/download/fair-scheduler.xml", pt_UserGrowth)
         }
 
-       println(XML.load(s"tmp/fair-scheduler.xml"))
+       println(XML.load(s"public/download/fair-scheduler.xml"))
        println("-------分隔符---------")
        fairXml.toString()
    }

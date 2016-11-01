@@ -1,49 +1,24 @@
-<?xml version="1.0"?>
 <allocations>
-
-<queue name="root">
-
-  <aclSubmitApps> </aclSubmitApps>
-  <aclAdministerApps> </aclAdministerApps>
-
-  <queue name="default">
-     <minResources>13653 mb,5 vcores</minResources>
-     <maxResources>13653 mb,10 vcores</maxResources>
-     <maxRunningApps>2</maxRunningApps>
-     <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
-     <aclSubmitApps>*</aclSubmitApps>
-     <aclAdministerApps>*</aclAdministerApps>
-     <weight>1</weight>
-  </queue>
-
-  <queue name="pt_UserGrowth">
-     <minResources>109227 mb,24 vcores</minResources>
-     <maxResources>109227 mb,120 vcores</maxResources>
-     <maxRunningApps>6</maxRunningApps>
-     <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
-     <aclSubmitApps>UserGrowth,root</aclSubmitApps>
-     <aclAdministerApps>UserGrowth,root,hadoop</aclAdministerApps>
-     <weight>9</weight>
-  </queue>
-
-
-
-</queue>
-
-<!-- how many can a user run apps -->
-<!--
-  <user name="userName">
-     <maxRunningApps>2</maxRunningApps>
-  </user>
--->
-
-<!-- how many can default user run apps -->
-<!--
-   <userMaxAppsDefault>3</userMaxAppsDefault>
--->
-
-<!--
-  <fairSharePreemptionTimeout>6000</fairSharePreemptionTimeout>
--->
-
-</allocations>
+             <queue name="root">
+               <aclSubmitApps> </aclSubmitApps>
+               <aclAdministerApps> </aclAdministerApps>
+               <queue name="default">
+                 <minResources>13653 mb,5 vcores</minResources>
+                 <maxResources>58470 mb,100 vcores</maxResources>
+                 <maxRunningApps>12</maxRunningApps>
+                 <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+                 <aclSubmitApps>*</aclSubmitApps>
+                 <aclAdministerApps>*</aclAdministerApps>
+                 <weight>1</weight>
+               </queue>
+               <queue name="pt_UserGrowth">
+                <minResources>109227 mb,24 vcores</minResources>
+                <maxResources>83926 mb,61 vcores</maxResources>
+                <maxRunningApps>22</maxRunningApps>
+                <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+                <aclSubmitApps>UserGrowth,root</aclSubmitApps>
+                <aclAdministerApps>UserGrowth,root,hadoop</aclAdministerApps>
+                <weight>9</weight>
+              </queue>
+             </queue>
+           </allocations>

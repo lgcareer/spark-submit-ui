@@ -17,7 +17,6 @@
                     <i class="fa-bell-o"></i>
                     <span class="badge badge-success">7</span>
                 </a>
-
                 <a href="#" data-toggle="mobile-menu">
                     <i class="fa-bars"></i>
                 </a>
@@ -572,9 +571,9 @@
             var change1 = inpps/2 + (outpps%inpps)*0.2;
             var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.8);
             <!--上-->
-            var ppsarr = [inpps/2,change1];
+            var ppsarr = [inpps+100,change1];
             <!--下-->
-            var trafficArr = [intraffic/2,change2];
+            var trafficArr = [intraffic+100,change2];
 
             <!-- Master 内存和cpu变化-->
            function memory_cpu(){
