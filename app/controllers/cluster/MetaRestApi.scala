@@ -39,7 +39,6 @@ object MetaRestApi extends Controller{
     * 更新集群信息
     * @param id
     * @param name
-    * @param unit
     * @param version
     * @param url
     * @return

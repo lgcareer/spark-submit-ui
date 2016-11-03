@@ -9,31 +9,31 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import com.google.inject.Inject
+import models.ScheduleManager.SHOW
 import models.deploy.CreateBatchRequest
 import models.utils.{Config, Configuration}
-import play.api.Logger
 
 import scala.concurrent.duration.Duration
 import scala.concurrent._
-import ExecutionContext.Implicits.global
-import scala.concurrent
 /**
   * Created by leslie on 16/4/21.
   */
 object Execute {
 
-  var _actorSystem :ActorSystem= _
-  var _jobMange:ActorRef= _
-  val _config:Config =new Configuration
-  val _task_dao :TaskDao =new TaskInfoDao
-  val _dao: JobFileDAO = new JobFileDAO(_config)
+  private[this] var _actorSystem :ActorSystem= _
+  private[this] var _jobMange:ActorRef= _
+  private[this] var _scheduleManager: ActorRef = _
+  private[this] val _config:Config =new Configuration
+  private[this] val _task_dao :TaskDao =new TaskInfoDao
+  private[this] val _dao: JobFileDAO = new JobFileDAO(_config)
+  private[this] val _scheduleProvider: ScheduleProvider = new ScheduleProvider(config = _config)
 
   makeSystem
 
-  def makeSystem: Unit ={
+  private  def makeSystem: Unit ={
     _actorSystem = ActorSystem("jobSystem")
     _jobMange=_actorSystem.actorOf((JobManagerActor.props(_config,_dao,_task_dao)), "JobManger")
+    _scheduleManager =_actorSystem.actorOf(ScheduleManager.props(_config,_scheduleProvider),"ScheduleManager")
     _actorSystem.registerOnTermination(System.exit(0))
   }
 
@@ -42,7 +42,7 @@ object Execute {
     * @param executeModel
     * @return
     */
-  def getRequest(executeModel: ExecuteModel): CreateBatchRequest ={
+  private def getRequest(executeModel: ExecuteModel): CreateBatchRequest ={
     val timeoutSecs: Long = _config.getLong("job.request.timeout.seconds")
     Await.result( (_jobMange ? Initializ(executeModel))(Timeout(timeoutSecs,TimeUnit.SECONDS)) ,
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration).asInstanceOf[CreateBatchRequest]
@@ -53,7 +53,7 @@ object Execute {
     * 任务提交&&任务超时
     * @param executeModel
     */
-  def main(executeModel: ExecuteModel)={
+   def main(executeModel: ExecuteModel)={
     val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
       Await.result(
       (_jobMange ? SubmitJob(getRequest(executeModel)))
@@ -73,6 +73,19 @@ object Execute {
     Await.result( (_jobMange ? StoreJar(userName,filePart))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration);
+  }
+
+
+  /**
+    * 根据类型获取任务调度列表
+    * @param jobtype
+    * @return
+    */
+  def jobList(jobtype:String) :String= {
+    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
+    Await.result( (_scheduleManager ? SHOW(jobtype))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
   }
 
 

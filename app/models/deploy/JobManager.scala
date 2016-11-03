@@ -3,7 +3,7 @@ package models
 import java.io.File
 import java.util.concurrent.Executors._
 
-import akka.actor.{ActorRef, Cancellable, Props}
+import akka.actor.{ActorRef, Cancellable, PoisonPill, Props, Terminated}
 import controllers._
 import models.actor.InstrumentedActor
 import models.deploy._
@@ -185,6 +185,8 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
         }
       }
       }
+
+    case t: Terminated => self ! PoisonPill
 
   }
 
