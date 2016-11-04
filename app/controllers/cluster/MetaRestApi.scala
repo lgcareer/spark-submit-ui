@@ -131,16 +131,15 @@ object MetaRestApi extends Controller{
     * 添加集群信息
     * @param id
     * @param name
-    * @param unit
     * @param version
     * @param url
     * @return
     */
-  def addCluster(id:Int,name:String,unit: String,version:String,url:String)=Action{
+  def addCluster(name:String,version:String,url:String)=Action{
     import play.api.libs.json._
     val jsValue: JsValue = Json.parse(version)
     val versions: String = jsValue.as[List[String]].mkString("\n")
-    val updataMetaData: Int = MetaData.addMetaData(MetaData(id,name,unit,versions,url))
+    val updataMetaData: Int = MetaData.addMetaData(MetaData(id=0,name,null,versions,url))
     Ok(Json.toJson(State.fromProps(updataMetaData)))
   }
 
@@ -148,21 +147,18 @@ object MetaRestApi extends Controller{
 
   /**
     * 添加节点信息
-    * @param id
     * @param ip
     * @param host
     * @param role
     * @param name
     * @return
     */
-  def addNode(id:Int,ip:String,host: String,role:String,name:String)=Action{
+  def addNode(ip:String,host: String,role:String,name:String)=Action{
     import play.api.libs.json._
-    val jsValue: JsValue = Json.parse(role)
-    //val roles: String = jsValue.as[List[String]].mkString("\n")
-    //val pid: Int = MetaData.findIdByName(name)
-    //val updataNodeaData: Int = NodeData.addNodeData(NodeData(id,ip,host,roles,name,pid))
-    //Ok(Json.toJson(State.fromProps(updataNodeaData)))
-    Ok("test")
+    val pid: Int = MetaData.findIdByName(name)
+    val addNodeData: Seq[Int] = NodeData.addNodeData(NodeData(id=0,ip,host,role,name,pid))
+    val reduce: Int = addNodeData.reduce(_+_)
+    Ok(Json.toJson(State.fromProps(reduce)))
   }
 
 
@@ -174,6 +170,45 @@ object MetaRestApi extends Controller{
   def deleteNodeBatch(pid:Int) =Action{
     val deleteNodeData: Int = NodeData.deleteNodeBatch(pid)
     Ok(Json.toJson(State.fromProps(deleteNodeData)))
+  }
+
+
+  /**
+    * 查询产品单元
+    * @return
+    */
+   def getProductList=Action{
+     implicit val residentWrites = Json.writes[ProductData]
+     implicit val clusterListWrites = Json.writes[ProductDataList]
+     Ok(Json.toJson(ProductDataList(ProductData.findProductDatas)))
+   }
+
+
+  /**
+    * 添加产品单元
+    * @return
+    */
+  def addProductData(unit:String,desc:String,contact:String,cluster:String)=Action{
+    val productData: Int = ProductData.addProductData(ProductData(id=0,unit,desc,contact,cluster))
+    Ok(Json.toJson(State.fromProps(productData)))
+  }
+
+  /**
+    * 删除产品单元
+    * @return
+    */
+  def deleteProductData(id:Int)=Action{
+    val productData: Int = ProductData.deleteProductData(id)
+    Ok(Json.toJson(State.fromProps(productData)))
+  }
+
+  /**
+    * 更新产品单元
+    * @return
+    */
+  def updataProductData(id:Int,unit:String,desc:String,contact:String,cluster:String)=Action{
+    val productData: Int = ProductData.updataProductData(ProductData(id,unit,desc,contact,cluster))
+    Ok(Json.toJson(State.fromProps(productData)))
   }
 
 

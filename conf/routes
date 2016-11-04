@@ -138,16 +138,23 @@ GET  /addproduct                       controllers.MetaDataManager.updataProduct
 
 #元数据REST API
 GET  /cluster/list      controllers.MetaRestApi.getClusterList
-GET  /cluster/add       controllers.MetaRestApi.addCluster(id:Int,name:String,unit: String,version:String,url:String)
+GET  /cluster/add       controllers.MetaRestApi.addCluster(name:String,version:String,url:String)
 GET  /cluster/rm        controllers.MetaRestApi.rmCluster(id:Int)
 GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,version:String,url:String)
 GET  /cluster/names     controllers.MetaRestApi.getNames
 GET  /node/list        controllers.MetaRestApi.getNodeList
-GET  /node/add        controllers.MetaRestApi.addNode(id:Int,ip:String,host: String,role:String,name:String)
+GET  /node/add        controllers.MetaRestApi.addNode(ip:String,host: String,role:String,name:String)
 GET  /node/update        controllers.MetaRestApi.updateNode(id:Int,ip:String,host: String,role:String,name:String)
 GET  /node/rm          controllers.MetaRestApi.deleteNode(id:Int)
 GET  /node/detiles      controllers.MetaRestApi.getNodaDatas(pid:Int)
 GET  /node/rmbulk      controllers.MetaRestApi.deleteNodeBatch(pid:Int)
+GET  /product/list      controllers.MetaRestApi.getProductList
+GET  /product/add     controllers.MetaRestApi.addProductData(unit:String,desc:String,contact:String,cluster:String)
+GET  /product/delete     controllers.MetaRestApi.deleteProductData(id:Int)
+GET  /product/updata     controllers.MetaRestApi.updataProductData(id:Int,unit:String,desc:String,contact:String,cluster:String)
+
+
+
 
 
 
@@ -159,6 +166,7 @@ GET    /yarndispatch                 controllers.Yarn.yarnDispatch
 GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
 GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
 GET   /oozie                            controllers.Oozie.oozielist
+
 
 
 
