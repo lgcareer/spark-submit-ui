@@ -12,7 +12,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 /**
  * webSocket 消息推送(个人)
  */
-object Application extends  Controller with Secured {
+object Application extends Controller with Secured {
 
   val _paths =mutable.Map.empty[String,(Enumerator[String], Channel[String])]
 
@@ -35,7 +35,6 @@ object Application extends  Controller with Secured {
 
     (in,_paths(user)._1)
   }
-
 
   def msglist =IsAuthenticated { username => implicit request =>
     implicit val residentWrites = Json.writes[TaskMessage]
