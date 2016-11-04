@@ -1,0 +1,1354 @@
+@sidebar = {
+<div class="sidebar-menu toggle-others collapsed">
+
+    <div class="sidebar-menu-inner">
+
+        <header class="logo-env">
+
+            <!-- logo -->
+            <div class="logo">
+                <a href="@routes.Application.index" class="logo-expanded">
+                    <img src="@routes.Assets.at("images/neptune.png")" width="90" alt="" />
+                </a>
+
+                <a href="@routes.Application.index" class="logo-collapsed">
+                    <img src="@routes.Assets.at("images/favicon.png")" width="40" alt="" />
+                </a>
+            </div>
+
+            <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+            <div class="mobile-menu-toggle visible-xs">
+                <a href="#" data-toggle="user-info-menu">
+                    <i class="fa-bell-o"></i>
+                    <span class="badge badge-success">7</span>
+                </a>
+
+                <a href="#" data-toggle="mobile-menu">
+                    <i class="fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- This will open the popup with user profile settings, you can use for any purpose, just be creative -->
+            <div class="settings-icon">
+                <a href="#" data-toggle="settings-pane" data-animate="true">
+                    <i class="fa fa-cog fa-4x"></i>
+                </a>
+            </div>
+
+
+        </header>
+
+
+        <ul id="main-menu" class="main-menu">
+            <!-- add class "multiple-expanded" to allow multiple submenus to open -->
+            <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
+            <li>
+                <a href="@routes.Application.index">
+                    <i class="fa fa-dashboard fa-fw"></i>
+                    <span class="title">仪表盘</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-check-square-o"></i>
+                    <span class="title">数据应用面板</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="@routes.SparkJar.executejarpage">
+                            <span class="title">SPARK-JAR应用</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.SparkSql.sqlpage">
+                            <span class="title">SPARK-SQL应用</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.SparkStream.stream">
+                            <span class="title">SPARK-STREAM应用</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-table"></i>
+                    <span class="title">APP数据</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="@routes.YarnList.yarnlist">
+                            <span class="title">Yarn数据列表</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.YarnList.sparklist">
+                            <span class="title">Spark数据列表</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="opened active">
+                <a href="#">
+                    <i class="fa fa-anchor"></i>
+                    <span class="title">任务调度</span>
+                </a>
+                <ul>
+                    <li class="active">
+                        <a href="@routes.Yarn.yarnDispatch">
+                            <span class="title">Oozie任务调度</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.Yarn.yarnDispatch">
+                            <span class="title">Spark任务调度</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.Yarn.yarnDispatch">
+                            <span class="title">Yarn任务调度</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-bell"></i>
+                    <span class="title">App Tracking</span>
+                    <span class="label label-success pull-right" id="tracking">50</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="@routes.RunTask.runTask">
+                            <span class="title">Spark Stream 运行任务列表</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.MonitorController.jobs">
+                            <span class="title">Spark Sql任务列表</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.RunTask.runTaskLogs">
+                            <span class="title">Spark 运行任务日志</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-wrench"></i>
+                    <span class="title">报警管理</span>
+                    <span class="label label-success pull-right">5</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="@routes.AlarmDisk.alarmDisk">
+                            <span class="title">磁盘空间报警</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.AlarmDisk.alarmDisk">
+                            <span class="title">内存相关报警</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.AlarmDisk.alarmDisk">
+                            <span class="title">其他报警</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    <span class="title">用户管理</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="@routes.Usertally.usertatol">
+                            <span class="title">用户统计</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.UserManager.userlist">
+                            <span class="title">用户管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.Usertally.usertatol">
+                            <span class="title">权限分配</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-arrows-alt"></i>
+                    <span class="title">节点分布情况</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="@routes.YarnList.workerInfo">
+                            <span class="title">Spark Worker信息</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.Serviceplan.functionplan">
+                            <span class="title">功能划分</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@routes.MetaDataManager.metadata">
+                            <span class="title">集群管理</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+}
+@main("Neptun Dashboard")(sidebar) {
+
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/google.css")" type="text/css"/>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster.bundle.min.css")" type="text/css"/>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster-sideTip-punk.min.css")" type="text/css"/>
+
+<link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
+<script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("javascripts/tooltipster.bundle.min.js")" type="text/javascript"></script>
+
+<!--Table js-->
+<script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/jquery.edatatables.js")"></script>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
+<script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript" ></script>
+<script src="@routes.Assets.at("javascripts/modernizr.min.js")" type="text/javascript" ></script>
+
+
+    <script src="@routes.Assets.at("javascripts/jquery.dataTables.js")" type="text/javascript" ></script>
+<script src="@routes.Assets.at("javascripts/DT_bootstrap.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/scripts.js")" type="text/javascript" ></script>
+
+
+
+
+
+
+    <div class="page-title">
+
+        <div class="title-env">
+            <h1 class="title">任务调度管理</h1>
+            <p class="description">任务调度管理面板</p>
+        </div>
+
+        <div class="breadcrumb-env">
+
+            <ol class="breadcrumb bc-1">
+                <li>
+                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="#">任务调度</a>
+                </li>
+                <li class="active">
+                    <strong>Oozie任务调度</strong>
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+    <div class="graphs">
+
+        <div class="panel panel-color panel-blue">
+            <div class="panel-heading">
+                <h3 class="panel-title">OOZIE任务列表</h3>
+
+                <div class="panel-options">
+                    <span>伸缩</span>
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">&ndash;</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+
+           <!--oozie tables-->
+
+                 <link href="/assets/stylesheets/roboto.css" rel="stylesheet">
+    <link href="/assets/stylesheets/bootplus.css" rel="stylesheet">
+    <link href="/assets/stylesheets/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/stylesheets/hue3.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" charset="utf-8">
+
+    var LOGGED_USERNAME = 'hue';
+    var IS_S3_ENABLED = '{}' === 'True';
+
+    // jHue plugins global configuration
+    jHueFileChooserGlobals = {
+      labels: {
+        BACK: "Back",
+        SELECT_FOLDER: "Select this folder",
+        CREATE_FOLDER: "Create folder",
+        FOLDER_NAME: "Folder name",
+        CANCEL: "Cancel",
+        FILE_NOT_FOUND: "The file has not been found",
+        UPLOAD_FILE: "Upload a file",
+        FAILED: "Failed"
+      },
+      user: "hue"
+    };
+
+    jHueHdfsTreeGlobals = {
+      labels: {
+        CREATE_FOLDER: "Create folder",
+        FOLDER_NAME: "Folder name",
+        CANCEL: "Cancel"
+      }
+    };
+
+    jHueTableExtenderGlobals = {
+      labels: {
+        GO_TO_COLUMN: "Go to column:",
+        PLACEHOLDER: "column name...",
+        LOCK: "Click to lock this row",
+        UNLOCK: "Click to unlock this row"
+      }
+    };
+
+    jHueTourGlobals = {
+      labels: {
+        AVAILABLE_TOURS: "Available tours",
+        NO_AVAILABLE_TOURS: "None for this page.",
+        MORE_INFO: "Read more about it...",
+        TOOLTIP_TITLE: "Demo tutorials"
+      }
+    };
+
+    LeafletGlobals = {
+      layer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    };
+
+    ApiHelperGlobals = {
+      i18n: {
+        errorLoadingDatabases: 'There was a problem loading the databases',
+        errorLoadingTablePreview: 'There was a problem loading the preview'
+      },
+      user: 'hue'
+    }
+  </script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript">
+    if (document.documentMode && document.documentMode < 9){
+      location.href = "/boohoo";
+    }
+  </script>
+<![endif]-->
+
+<script type="text/javascript">
+    // check if it's a Firefox < 7
+    var _UA = navigator.userAgent.toLowerCase();
+    for (var i = 1; i < 7; i++) {
+      if (_UA.indexOf("firefox/" + i + ".") > -1) {
+        location.href = "/boohoo";
+      }
+    }
+
+    // check for IE document modes
+    if (document.documentMode && document.documentMode < 9){
+      location.href = "/boohoo";
+    }
+  </script>
+
+<script src="/assets/javascripts/oozie/hue.utils.js"></script>
+<script src="/assets/javascripts/oozie/jquery-2.1.1.min.js"></script>
+<script src="/assets/javascripts/oozie/jquery.migration.js"></script>
+<script src="/assets/javascripts/oozie/jquery.hdfsautocomplete.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/javascripts/oozie/jquery.filechooser.js"></script>
+<script src="/assets/javascripts/oozie/jquery.selector.js"></script>
+<script src="/assets/javascripts/oozie/jquery.delayedinput.js"></script>
+<script src="/assets/javascripts/oozie/jquery.rowselector.js"></script>
+<script src="/assets/javascripts/oozie/jquery.notify.js"></script>
+<script src="/assets/javascripts/oozie/jquery.titleupdater.js"></script>
+<script src="/assets/javascripts/oozie/jquery.horizontalscrollbar.js"></script>
+<script src="/assets/javascripts/oozie/jquery.tablescroller.js"></script>
+<script src="/assets/javascripts/oozie/jquery.tableextender.js"></script>
+<script src="/assets/javascripts/oozie/jquery.tableextender2.js"></script>
+<script src="/assets/javascripts/oozie/jquery.scrollup.js"></script>
+<script src="/assets/javascripts/oozie/jquery.tour.js"></script>
+<script src="/assets/javascripts/oozie/jquery.cookie.js"></script>
+<script src="/assets/javascripts/oozie/jquery.total-storage.min.js"></script>
+<script src="/assets/javascripts/oozie/jquery.placeholder.min.js"></script>
+<script src="/assets/javascripts/oozie/jquery.dataTables.1.8.2.min.js"></script>
+<script src="/assets/javascripts/oozie/jquery.nicescroll.js"></script>
+<script src="/assets/javascripts/oozie/jquery.datatables.sorting.js"></script>
+<script src="/assets/javascripts/oozie/bootstrap.min.js"></script>
+<script src="/assets/javascripts/oozie/bootstrap-better-typeahead.min.js"></script>
+<script src="/assets/javascripts/oozie/fileuploader.js"></script>
+<script src="/assets/javascripts/oozie/filesize.min.js"></script>
+<script src="/assets/javascripts/oozie//popover-extra-placements.js"></script>
+<script src="/assets/javascripts/oozie/moment-with-locales.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+
+    moment.locale(window.navigator.userLanguage || window.navigator.language);
+    localeFormat = function (time) {
+      var mTime = time;
+      if (typeof ko !== 'undefined' && ko.isObservable(time)) {
+        mTime = time();
+      }
+      if (moment(mTime).isValid()) {
+        return moment.utc(mTime).format("L LT");
+      }
+      return mTime;
+    }
+
+    //Add CSRF Token to all XHR Requests
+    var xrhsend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.send = function (data) {
+      this.setRequestHeader('X-CSRFToken', "zOsUcsGDiItHmvODp5ikzexixS2eYl8k");
+
+      return xrhsend.apply(this, arguments);
+    }
+
+    $.fn.dataTableExt.sErrMode = "throw";
+
+    // sets global apiHelper TTL
+    $.totalStorage('hue.cacheable.ttl', 86400000);
+
+    var IDLE_SESSION_TIMEOUT = -1;
+
+    $(document).ready(function () {
+      // forces IE's ajax calls not to cache
+      if ($.browser.msie) {
+        $.ajaxSetup({ cache: false });
+      }
+
+      // prevents framebusting and clickjacking
+      if (self == top){
+        $("body").css({
+          'display': 'inherit',
+          'visibility': 'visible'
+        });
+      }
+      else {
+        top.location = self.location;
+      }
+
+
+      $("input, textarea").placeholder();
+      $(".submitter").keydown(function (e) {
+        if (e.keyCode == 13) {
+          $(this).closest("form").submit();
+        }
+      }).change(function () {
+          $(this).closest("form").submit();
+      });
+
+      $(".navbar .nav-tooltip").tooltip({
+        delay: 0,
+        placement: "bottom"
+      });
+
+      $("[rel='tooltip']").tooltip({
+        delay: 0,
+        placement: "bottom"
+      });
+
+      $("[rel='navigator-tooltip']").tooltip({
+        delay: 0,
+        placement: "bottom"
+      });
+
+      var JB_CHECK_INTERVAL_IN_MILLIS = 30000;
+      var checkJobBrowserStatusIdx = window.setTimeout(checkJobBrowserStatus, 10);
+
+      function checkJobBrowserStatus(){
+        $.post("/jobbrowser/jobs/", {
+            "format": "json",
+            "state": "running",
+            "user": "hue"
+          },
+          function(data) {
+            if (data != null && data.jobs != null) {
+              huePubSub.publish('jobbrowser.data', data.jobs);
+              if (data.jobs.length > 0){
+                $("#jobBrowserCount").removeClass("hide").text(data.jobs.length);
+              }
+              else {
+                $("#jobBrowserCount").addClass("hide");
+              }
+            }
+          checkJobBrowserStatusIdx = window.setTimeout(checkJobBrowserStatus, JB_CHECK_INTERVAL_IN_MILLIS);
+        }).fail(function () {
+          window.clearTimeout(checkJobBrowserStatusIdx);
+        });
+      }
+      huePubSub.subscribe('check.job.browser', checkJobBrowserStatus);
+
+      function openDropdown(which, timeout){
+        var _this = which;
+        var _timeout = timeout!=null?timeout:800;
+        if ($(".navigator").find("ul.dropdown-menu:visible").length > 0) {
+          _timeout = 10;
+        }
+        window.clearTimeout(closeTimeout);
+        openTimeout = window.setTimeout(function () {
+          $(".navigator li.open").removeClass("open");
+          $(".navigator .nav-pills li.dropdown > ul.dropdown-menu").hide();
+          $("[rel='navigator-tooltip']").tooltip("hide");
+          _this.find("ul.dropdown-menu:eq(0)").show();
+        }, _timeout);
+      }
+
+      var openTimeout, closeTimeout;
+      $(".navigator ul.nav li.dropdown").on("click", function(){
+        openDropdown($(this), 10);
+      });
+      $(".navigator ul.nav li.dropdown").hover(function () {
+        openDropdown($(this));
+      },
+      function () {
+        window.clearTimeout(openTimeout);
+        closeTimeout = window.setTimeout(function () {
+          $(".navigator li.open").removeClass("open");
+          $(".navigator li a:focus").blur();
+          $(".navigator").find("ul.dropdown-menu").hide();
+        }, 1000);
+      });
+
+      function showSubmenu(menuElement) {
+        $(".tooltip").remove();
+        menuElement.data("lastShown", (new Date()).getTime())
+        menuElement.show();
+      }
+
+      $(".navigator ul.nav li.dropdown-submenu a").on("mouseenter", function () {
+        showSubmenu($(this).siblings(".dropdown-menu"));
+      });
+
+      $(".navigator ul.nav li.dropdown-submenu a img").on("mouseenter", function () {
+        showSubmenu($(this).parent().siblings(".dropdown-menu"));
+      });
+
+      $(".navigator ul.nav li.dropdown-submenu").on("mouseenter", function () {
+        $(this).siblings().find(".dropdown-menu").hide();
+        showSubmenu($(this).find(".dropdown-menu"));
+      });
+
+      $(".navigator ul.nav li.dropdown-submenu").on("mouseleave", function () {
+        var _lastShown = $(this).find(".dropdown-menu").data("lastShown");
+        if (_lastShown == null || (new Date()).getTime() - _lastShown > 300) {
+          var _el = $(this);
+          _el.hideTimeout = window.setTimeout(function () {
+            window.clearTimeout(_el.hideTimeout);
+            _el.find(".dropdown-menu").hide();
+          }, 50);
+        }
+      });
+
+      var _skew = -1;
+      $("[data-hover]").on("mouseover", function(){
+        var _this = $(this);
+        _skew = window.setTimeout(function(){
+          _this.attr("src", _this.data("hover"));
+        }, 3000);
+      });
+
+      $("[data-hover]").on("mouseout", function(){
+        $(this).attr("src", $(this).data("orig"));
+        window.clearTimeout(_skew);
+      });
+
+      window.hueDebug = {
+        viewModel: function () {
+          return ko.dataFor(document.body);
+        }
+      }
+    });
+  </script>
+
+
+
+<div class="container-fluid">
+    <div class="card card-small">
+        <div class="card-body" style="padding-bottom: 10px">
+            <p>
+            <form>
+                <input type="text" id="filterInput" class="input-xlarge search-query" placeholder="Search for username, name, etc...">
+
+
+                <span class="pull-right">
+      <span style="padding-right:10px;float:left;margin-top:3px" class="hide-smaller">
+
+                    <span class="loader hide"><i class="fa fa-2x fa-spinner fa-spin muted"></i></span>
+                    <button class="btn bulkToolbarBtn bulk-resume" data-operation="resume" title="Resume selected" disabled="disabled" type="button"><i class="fa fa-play"></i><span class="hide-small"> Resume</span></button>
+                    <button class="btn bulkToolbarBtn bulk-suspend" data-operation="suspend" title="Suspend selected" disabled="disabled" type="button"><i class="fa fa-pause"></i><span class="hide-small"> Suspend</span></button>
+                    <button class="btn bulkToolbarBtn btn-danger bulk-kill disable-feedback" data-operation="kill" title="Kill selected" disabled="disabled" type="button"><i class="fa fa-times"></i><span class="hide-small"> Kill</span></button>
+
+      </span>
+
+
+
+      <span style="float:left;padding-left:10px;padding-right:10px;margin-top:3px" class="hide-smaller">状态切换</span>
+      <span class="btn-group" style="float:left;">
+        <a class="btn btn-status btn-success" data-value='SUCCEEDED'>Succeeded</a>
+        <a class="btn btn-status btn-warning" data-value='RUNNING'>Running</a>
+        <a class="btn btn-status btn-danger disable-feedback" data-value='ERROR'>Error</a>
+      </span>
+      <span style="float:left;padding-left:10px;padding-right:10px;margin-top:3px" class="hide-smaller">submitted</span>
+      <span class="btn-group" style="float:left;">
+        <a class="btn btn-submitted btn-info" data-value='MANUALLY'>Manually</a>
+        <a class="btn btn-submitted btn-info" data-value='COORDINATOR'>Coordinator</a>
+      </span>
+    </span>
+            </form>
+
+            <div style="min-height:200px">
+                <h1 class="card-heading simple">正在运行</h1>
+                <table class="table table-condensed" id="running-table">
+                    <thead>
+                    <tr>
+                        <th width="1%"><div class="select-all hueCheckbox fa"></div></th>
+                        <th width="14%">Submission</th>
+                        <th width="5%">Status</th>
+                        <th width="31%">Name</th>
+                        <th width="7%">Progress</th>
+                        <th width="7%">Submitter</th>
+                        <th width="7%">Last Modified</th>
+                        <th width="23%">Id</th>
+                        <th width="5%">Parent</th>
+                        <th width="0%">Submitted Manually</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><i class="fa fa-2x fa-spinner fa-spin muted"></i></td>
+
+                    </tr>
+                    </tbody>
+                </table>
+
+                <span class="running-info" style="padding-left: 4px"></span>
+
+                <div class="pagination dataTables_paginate">
+                    <ul>
+                        <li class="prev"><a href="javascript:void(0)" class="btn-pagination" data-value="prev" data-table="running"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
+                        <li class="next"><a href="javascript:void(0)" class="btn-pagination" data-value="next" data-table="running">Next <i class="fa fa-long-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div>
+                <h1 class="card-heading simple">已结束</h1>
+                <table class="table table-condensed" id="completed-table" data-tablescroller-disable="true">
+                    <!--<thead>-->
+                    <!--<tr>-->
+                        <!--<th width="15%">Completion</th>-->
+                        <!--<th width="7%">Status</th>-->
+                        <!--<th width="31%">Name</th>-->
+                        <!--<th width="7%">Duration</th>-->
+                        <!--<th width="10%">Submitter</th>-->
+                        <!--<th width="25%">Id</th>-->
+                        <!--<th width="5%">Parent</th>-->
+                        <!--<th width="0%">Submitted Manually</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody>-->
+                    <!--<tr>-->
+                        <!--<td><i class="fa fa-2x fa-spinner fa-spin muted"></i></td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                </table>
+
+                <span class="completed-info" style="padding-left: 4px"></span>
+
+                <div class="pagination dataTables_paginate">
+                    <ul>
+                        <li class="prev"><a href="javascript:void(0)" class="btn-pagination" data-value="prev" data-table="completed"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
+                        <li class="next"><a href="javascript:void(0)" class="btn-pagination" data-value="next" data-table="completed">Next <i class="fa fa-long-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="confirmation" class="modal hide">
+    <div class="modal-header">
+        <a href="#" class="close" data-dismiss="modal">&times;</a>
+        <h3 class="message"></h3>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">No</a>
+        <a class="btn btn-danger disable-feedback" href="javascript:void(0);">Yes</a>
+    </div>
+</div>
+
+
+<script src="/assets/javascripts/oozie/knockout.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/javascripts/oozie/knockout-mapping.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/javascripts/oozie/ko.hue-bindings.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/javascripts/oozie/dashboard-utils.js" type="text/javascript" charset="utf-8"></script>
+<script src="/assets/javascripts/oozie/datatables-paging-0.1.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+  var Workflow = function (wf) {
+    return {
+      id: wf.id,
+      lastModTimeFormatted: wf.lastModTimeFormatted,
+      lastModTimeInMillis: wf.lastModTimeInMillis,
+      endTime: wf.endTime,
+      endTimeInMillis: wf.endTimeInMillis,
+      status: wf.status,
+      statusClass: "label " + getStatusClass(wf.status),
+      isRunning: wf.isRunning,
+      duration: wf.duration,
+      durationInMillis: wf.durationInMillis,
+      appName: wf.appName,
+      progress: wf.progress,
+      progressClass: "bar " + getStatusClass(wf.status, "bar-"),
+      user: wf.user,
+      absoluteUrl: wf.absoluteUrl,
+      canEdit: wf.canEdit,
+      killUrl: wf.killUrl,
+      suspendUrl: wf.suspendUrl,
+      resumeUrl: wf.resumeUrl,
+      created: wf.created,
+      createdInMillis: wf.createdInMillis,
+      run: wf.run,
+      parentUrl: wf.parentUrl,
+      submittedManually: wf.submittedManually,
+    }
+  }
+
+  var refreshRunning, runningTimeout, progressTimeout, jobProgressMap = {};
+  var runningTableOffset = 1, completedTableOffset = 1;
+  var totalRunningJobs = 0, totalCompletedJobs = 0;
+  var PAGE_SIZE = 50;
+
+  $(document).ready(function () {
+
+    function showTableInfo(oSettings, table, tableOffset, totalJobs) {
+      var _disp = oSettings.fnRecordsDisplay();
+      var _tot = oSettings.fnRecordsTotal();
+      var _text = "";
+      if (_disp == 0) {
+        _text = 'Showing 0 to 0 of ' + totalJobs + ' entries';
+      }
+      else {
+        _text = ' Showing ' + tableOffset + ' to ' + (tableOffset + oSettings.fnDisplayEnd() - 1) + ' of ' + totalJobs;
+      }
+      if (_disp != _tot) { // when filter button is selected
+          _text += ' (filtered from ' + _tot + ' entries)';
+      }
+      $(table).text(_text);
+    }
+
+    var runningTable = $("#running-table").dataTable({
+      "bPaginate": false,
+      "iDisplayLength":PAGE_SIZE,
+      "bLengthChange":false,
+      "sDom":"<'row'r>t<'row'<'span6'><''p>>",
+      "bAutoWidth": false,
+      "aoColumns":[
+        { "bSortable":false },
+        { "sSortDataType":"dom-sort-value", "sType":"numeric" },
+        null,
+        null,
+        null,
+        null,
+        { "sSortDataType":"dom-sort-value", "sType":"numeric" },
+        null,
+        null,
+        { "bVisible": false }
+      ],
+      "aaSorting":[
+        [ 0, "desc" ]
+      ],
+      "oLanguage":{
+        "sZeroRecords":"No matching records"
+      },
+      "fnDrawCallback":function (oSettings) {
+        showTableInfo(oSettings, ".running-info", runningTableOffset, totalRunningJobs);
+        $("a[data-row-selector='true']").jHueRowSelector();
+      }
+    });
+
+    var completedTable = $("#completed-table").dataTable({
+      "bPaginate": false,
+      "iDisplayLength":PAGE_SIZE,
+      "bLengthChange":false,
+      "sDom":"<'row'r>t<'row'<'span6'><''p>>",
+      "bAutoWidth": false,
+      "aoColumns":[
+        { "sSortDataType":"dom-sort-value", "sType":"numeric" },
+        null,
+        null,
+        { "sSortDataType":"dom-sort-value", "sType":"numeric" },
+        null,
+        null,
+        null,
+        { "bVisible": false }
+      ],
+      "aaSorting":[
+        [ 0, "desc" ]
+      ],
+      "oLanguage":{
+        "sZeroRecords":"No matching records"
+      },
+      "fnDrawCallback":function (oSettings) {
+        showTableInfo(oSettings, ".completed-info", completedTableOffset, totalCompletedJobs);
+        $("a[data-row-selector='true']").jHueRowSelector();
+      }
+    });
+
+    $("#filterInput").keydown(function (e) {
+      if (e.which == 13) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    $("#filterInput").keyup(function () {
+      runningTable.fnFilter($(this).val());
+      completedTable.fnFilter($(this).val());
+      drawTable();
+    });
+
+
+    $("a.btn-pagination").on("click", function () {
+      if (!$(this).parent().hasClass("disabled")) {
+        var _additionalOffset = 0;
+        if ($(this).data("value") == "prev") {
+          _additionalOffset = -PAGE_SIZE;
+        }
+        else {
+          _additionalOffset = PAGE_SIZE;
+        }
+        if ($(this).data("table") == "running") {
+          runningTableOffset += _additionalOffset;
+          refreshRunning();
+          refreshProgress();
+        }
+        else {
+          completedTableOffset += _additionalOffset;
+          refreshCompleted();
+        }
+      }
+    });
+
+    $("a.btn-status").click(function () {
+      refreshPagination();
+      $(this).toggleClass("active");
+      refreshRunning();
+      refreshCompleted();
+      refreshProgress();
+    });
+
+    $("a.btn-submitted").click(function () {
+      $("a.btn-submitted").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      drawTable();
+    });
+
+    $("a.btn-date").click(function () {
+      refreshPagination();
+      $("a.btn-date").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      refreshRunning();
+      refreshCompleted();
+      refreshProgress();
+    });
+
+    var hash = window.location.hash.replace(/(<([^>]+)>)/ig, "");
+    if (hash != "" && hash.indexOf("=") > -1) {
+      $("a.btn-date[data-value='" + hash.split("=")[1] + "']").click();
+    }
+
+    function refreshPagination() {
+      runningTableOffset = 1;
+      completedTableOffset = 1;
+
+      // Clear select-all
+      $(".hueCheckbox").removeClass("fa-check");
+    }
+
+    function drawTable() {
+      runningTable.fnDraw();
+      completedTable.fnDraw();
+
+      var hash = "#";
+      if ($("a.btn-date.active").length > 0) {
+        hash += "date=" + $("a.btn-date.active").text();
+      }
+      window.location.hash = hash;
+    }
+
+    function getStatuses(type) {
+      var selectedStatuses = (type == 'running') ? ['RUNNING', 'PREP', 'SUSPENDED'] : ['SUCCEEDED', 'KILLED', 'FAILED'];
+      var btnStatuses = [];
+
+      var statusBtns = $("a.btn-status.active");
+      $.each(statusBtns, function () {
+        val = $(this).data('value');
+        if (val == 'SUCCEEDED') {
+          btnStatuses = btnStatuses.concat(['SUCCEEDED']);
+        } else if (val == 'RUNNING') {
+          btnStatuses = btnStatuses.concat(['RUNNING', 'PREP', 'SUSPENDED']);
+        } else if (val == 'ERROR') {
+          btnStatuses = btnStatuses.concat(['KILLED', 'FAILED']);
+        }
+      });
+
+      if (btnStatuses.length > 0) {
+        selectedStatuses = $.makeArray($(selectedStatuses).filter(btnStatuses));
+      }
+      return selectedStatuses.length > 0 ? ('&status=' + selectedStatuses.join('&status=')) : '';
+    }
+
+    function getDaysFilter() {
+      var dateBtn = $("a.btn-date.active");
+      var daysFilter = ''
+      if (dateBtn.length > 0) {
+        daysFilter = '&startcreatedtime=-' + dateBtn.attr("data-value") + 'd';
+      }
+      return daysFilter;
+    }
+
+    $.fn.dataTableExt.sErrMode = "throw";
+
+    $.fn.dataTableExt.afnFiltering.push(PersistedButtonsFilters); // from dashboard-utils.js
+
+    $(document).on("click", ".confirmationModal", function () {
+      var _this = $(this);
+      _this.bind("confirmation", function () {
+        var _this = this;
+        $.post($(this).attr("data-url"),
+          { "notification":$(this).attr("data-message") },
+          function (response) {
+            if (response["status"] != 0) {
+              $(document).trigger("error", "Problem: " + response["data"]);
+              $("#confirmation a.btn-danger").button("reset");
+            } else {
+              window.location.reload();
+            }
+          }
+        );
+        return false;
+      });
+      $("#confirmation .message").text(_this.attr("data-confirmation-message"));
+      $("#confirmation").modal("show");
+      $("#confirmation a.btn-danger").on("click", function () {
+        _this.trigger("confirmation");
+        $(this).attr("data-loading-text", $(this).text() + " ...");
+        $(this).button("loading");
+      });
+    });
+
+    var numRunning = 0;
+
+    refreshRunning = function () {
+      window.clearTimeout(runningTimeout);
+      $.getJSON(window.location.pathname + "?format=json&offset=" + runningTableOffset + getStatuses('running') + getDaysFilter(), function (data) {
+        if (data.jobs.length > 0) {
+          totalRunningJobs = data.total_jobs;
+          refreshPaginationButtons("running", totalRunningJobs);
+
+          var nNodes = runningTable.fnGetNodes();
+
+          // Find previously selected jobs
+          var _ids = [];
+          $(".hueCheckbox.fa-check:not(.select-all)").each(function(){
+            _ids.push($(this).parents("tr").find("a[data-row-selector='true']").text());
+          });
+          runningTable.fnClearTable();
+
+          $(data.jobs).each(function (iWf, item) {
+            var wf = new Workflow(item);
+
+            // Restore previously selected jobs
+            var foundRow = _ids.indexOf(wf.id) != -1;
+
+            var checkboxSelected = "";
+            if (foundRow) {
+              checkboxSelected = "fa-check";
+            }
+            var progressColumn = '<div class="progress"><div class="bar bar-warning" style="width: 1%"></div></div>';
+            if (wf.id in jobProgressMap) {
+              progressColumn = '<div class="progress"><div class="' + jobProgressMap[wf.id]["progressClass"] + '" style="width:' + jobProgressMap[wf.id]["progress"] + '%">' + jobProgressMap[wf.id]["progress"] + '%</div></div>';
+            }
+
+            if (['RUNNING', 'PREP', 'WAITING', 'SUSPENDED', 'PREPSUSPENDED', 'PREPPAUSED', 'PAUSED', 'STARTED', 'FINISHING'].indexOf(wf.status) > -1) {
+              try {
+                runningTable.fnAddData([
+                  wf.canEdit ? '<div class="hueCheckbox fa ' + checkboxSelected + '" data-row-selector-exclude="true"></div>':'',
+                  '<span data-sort-value="'+ wf.createdInMillis +'" data-type="date">' + emptyStringIfNull(wf.created) + '</span>',
+                  '<span class="' + wf.statusClass + '" data-type="status">' + wf.status + '</span>',
+                  wf.appName,
+                  progressColumn,
+                  wf.user,
+                  '<span data-sort-value="'+ wf.lastModTimeInMillis +'">' + emptyStringIfNull(wf.lastModTimeFormatted) + '</span>',
+                  '<a href="' + wf.absoluteUrl + '" data-row-selector="true">' + wf.id + '</a>',
+                  wf.parentUrl == '' ? '' : '<div style="text-align:center"><a href="' + wf.parentUrl + '" style="text-align:center"><img src="' + getParentImage(wf.parentUrl) + '" class="app-icon"/></a></div>',
+                  wf.submittedManually
+                ]);
+              }
+              catch (error) {
+                $(document).trigger("error", error);
+              }
+            }
+          });
+        }
+        if (data.jobs.length == 0) {
+          runningTable.fnClearTable();
+        }
+        if (data.jobs.length != numRunning) {
+          refreshCompleted();
+        }
+        numRunning = data.jobs.length;
+
+        runningTable.fnDraw();
+        runningTimeout = window.setTimeout(refreshRunning, 5000);
+        ko.bindingHandlers.multiCheck.init(runningTable[0], function() { return '#' + runningTable[0].id})
+      }).fail(function (xhr, textStatus, errorThrown) {
+        $(document).trigger("error", xhr.responseJSON['detail']);
+      });
+    }
+
+    function refreshPaginationButtons(tableName, totalJobs) {
+      var prevBtn = $("a.btn-pagination[data-table='"+ tableName + "'][data-value='prev']");
+      var nextBtn = $("a.btn-pagination[data-table='"+ tableName + "'][data-value='next']");
+
+      var offset = runningTableOffset;
+      if (tableName == 'completed') {
+        offset = completedTableOffset;
+      }
+
+      if (offset == 1 || !totalJobs) {
+        prevBtn.parent().addClass("disabled");
+      }
+      else {
+        prevBtn.parent().removeClass("disabled");
+      }
+      if (totalJobs < (offset + PAGE_SIZE) || !totalJobs) {
+        nextBtn.parent().addClass("disabled");
+      }
+      else if (totalJobs >= offset + PAGE_SIZE) {
+        nextBtn.parent().removeClass("disabled");
+      }
+    }
+
+    function getParentImage(parentUrl) {
+      var _sub = parentUrl[parentUrl.length - 2];
+      switch (_sub) {
+        case "W":
+          return "/assets/javascripts/oozie/icon_oozie_workflow_48.png"
+          break;
+        case "C":
+          return "/assets/javascripts/oozie/icon_oozie_coordinator_48.png"
+          break;
+        case "B":
+          return "/assets/javascripts/oozie/icon_oozie_bundle_48.png"
+          break;
+        default:
+          return "/assets/javascripts/oozie/icon_oozie_48.png";
+          break;
+      }
+    }
+
+    function refreshCompleted() {
+      $.getJSON(window.location.pathname + "?format=json&offset=" + completedTableOffset + getStatuses('completed') + getDaysFilter(), function (data) {
+        if(data.jobs.length > 0) {
+          totalCompletedJobs = data.total_jobs;
+          refreshPaginationButtons("completed", totalCompletedJobs);
+        }
+        completedTable.fnClearTable();
+        $(data.jobs).each(function (iWf, item) {
+          var wf = new Workflow(item);
+          try {
+            completedTable.fnAddData([
+                  '<span data-sort-value="' + wf.endTimeInMillis + '" data-type="date">' + emptyStringIfNull(wf.endTime) + '</span>',
+                  '<span class="' + wf.statusClass + '" data-type="status">' + wf.status + '</span>', decodeURIComponent(wf.appName),
+                  '<span data-sort-value="' + wf.durationInMillis + '">' + emptyStringIfNull(wf.duration) + '</span>',
+              wf.user,
+                  '<a href="' + wf.absoluteUrl + '" data-row-selector="true">' + wf.id + '</a>',
+                  wf.parentUrl == '' ? '' : '<div style="text-align:center"><a href="' + wf.parentUrl + '" style="text-align:center"><img src="' + getParentImage(wf.parentUrl) + '" class="app-icon"/></a></div>',
+              wf.submittedManually
+            ], false);
+          }
+          catch (error) {
+            $(document).trigger("error", error);
+          }
+        });
+        completedTable.fnDraw();
+      });
+    }
+
+    function refreshProgress() {
+      window.clearTimeout(progressTimeout);
+      $.getJSON(window.location.pathname + "?format=json&type=progress&offset=" + runningTableOffset + getStatuses('running') + getDaysFilter(), function (data) {
+        var nNodes = runningTable.fnGetNodes();
+        $(data.jobs).each(function (iWf, item) {
+            var wf = new Workflow(item);
+            var foundRow = null;
+
+            // Remember job progress info
+            jobProgressMap[wf.id] = {"progressClass": wf.progressClass, "progress": wf.progress};
+            $(nNodes).each(function (iNode, node) {
+              if ($(node).children("td").eq(7).text() == wf.id) {
+                foundRow = node;
+              }
+            });
+            if (foundRow != null) {
+              runningTable.fnUpdate('<span class="' + wf.statusClass + '" data-type="status">' + wf.status + '</span>', foundRow, 2, false);
+              if (wf.progress == 0){
+                runningTable.fnUpdate('<div class="progress"><div class="bar bar-warning" style="width: 1%"></div></div>', foundRow, 4, false);
+              }
+              else {
+                runningTable.fnUpdate('<div class="progress"><div class="' + wf.progressClass + '" style="width:' + wf.progress + '%">' + wf.progress + '%</div></div>', foundRow, 4, false);
+              }
+            }
+          });
+        progressTimeout = window.setTimeout(refreshProgress, 20000);
+      });
+    }
+
+    refreshRunning();
+    refreshCompleted();
+    refreshProgress();
+
+  });
+
+</script>
+
+
+
+<div id="bulkConfirmation" class="modal hide">
+    <div class="modal-header">
+        <a href="#" class="close" data-dismiss="modal">&times;</a>
+        <h3>Do you really want to kill the selected jobs?</h3>
+    </div>
+    <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">No</a>
+        <a class="btn btn-danger disable-feedback" href="javascript:void(0);">Yes</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(".bulkToolbarBtn").on("click", function(){
+      if ($(this).data("operation") == "kill"){
+        bulkOperationConfirmation($(this).data("operation"));
+      }
+      else {
+        bulkOperation($(this).data("operation"));
+        $(".btn-toolbar").find(".loader").removeClass("hide");
+        $(".bulkToolbarBtn").hide();
+      }
+    });
+
+    function toggleBulkButtons() {
+      if ($(".hueCheckbox.fa-check:not(.select-all)").length > 0){
+        var _allResume = true;
+        var _allSuspended = true;
+        $(".hueCheckbox.fa-check:not(.select-all)").each(function(){
+          if (['RUNNING', 'PREP', 'WAITING'].indexOf($(this).parents("tr").find(".label").text()) > -1){
+            _allResume = false;
+          }
+          else {
+            _allSuspended = false;
+          }
+        });
+        if (! _allResume) {
+          $(".bulk-suspend").removeAttr("disabled");
+        }
+        if (! _allSuspended) {
+          $(".bulk-resume").removeAttr("disabled");
+        }
+        $(".bulk-kill").removeAttr("disabled");
+      }
+      else {
+        $(".bulkToolbarBtn").attr("disabled", "disabled");
+      }
+    }
+
+    $("#bulkConfirmation").modal({
+      show: false
+    });
+
+    function bulkOperationConfirmation(what){
+      $("#bulkConfirmation").modal("show");
+      $("#bulkConfirmation a.btn-danger").off("click");
+      $("#bulkConfirmation a.btn-danger").on("click", function(){
+        $(".btn-toolbar").find(".loader").removeClass("hide");
+        $(".bulkToolbarBtn").hide();
+        bulkOperation(what);
+        $("#bulkConfirmation").modal("hide");
+      });
+    }
+
+    function bulkOperation(what) {
+      var _ids = [];
+      $(".hueCheckbox.fa-check:not(.select-all)").each(function(){
+        _ids.push($(this).parents("tr").find("a[data-row-selector='true']").text());
+      });
+
+      $.post("/oozie/bulk_manage_oozie_jobs/",
+        {
+          "job_ids": _ids.join(" "),
+          "action": what
+        },
+        function (response) {
+          refreshRunning();
+          var _messages = {
+            suspend: "The selected jobs have been suspended correctly.",
+            suspendErrors: "Some of the selected jobs may not have been suspended correctly:",
+            resume: "The selected jobs have been resumed correctly.",
+            resumeErrors: "Some of the selected jobs may not have been resumed correctly:",
+            kill: "The selected jobs have been killed correctly.",
+            killErrors: "Some of the selected jobs may not have been killed correctly:"
+          }
+          if (response.totalErrors > 0){
+            $.jHueNotify.warn(_messages[what + "Errors"] + " " + response.messages);
+          }
+          else {
+            $.jHueNotify.info(_messages[what]);
+          }
+          $(".hueCheckbox").removeClass("fa-check");
+          toggleBulkButtons();
+          $(".btn-toolbar").find(".loader").addClass("hide");
+          $(".bulkToolbarBtn").show();
+      });
+    }
+
+    $(document).on("click", ".hueCheckbox", function(){
+      var _check = $(this);
+      if (_check.hasClass("select-all")){
+        if (_check.hasClass("fa-check")){
+          $(".hueCheckbox").removeClass("fa-check");
+        }
+        else {
+          $(".hueCheckbox").addClass("fa-check");
+        }
+      }
+      else {
+        if (_check.hasClass("fa-check")){
+          _check.removeClass("fa-check");
+        }
+        else {
+          _check.addClass("fa-check");
+        }
+      }
+      toggleBulkButtons();
+    });
+
+    toggleBulkButtons();
+  });
+
+</script>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+        @copyright()
+
+
+        <script>
+              function switchState(state) {
+        if(state=='ACCEPTED'){
+                return "<span class=\"label label-default\">ACCEPTED</span>";
+        }else if(state=='RUNNING'){
+                 return "<span class=\"label label-primary\">RUNNING</span>";
+        }else if(state=='SUCCEEDED' || state == 'FINISHED'){
+                 return "<span class=\"label label-success\">FINISHED</span>";
+        }else if(state=='KILLED'){
+                     return "<span class=\"label label-warning\">KILLED</span>";
+        }else if(state=='FAILED'){
+                     return "<span class=\"label label-danger\">FAILED</span>";
+        }
+         return state
+
+    }
+
+
+            $(document).ready(function(){
+                $.ajax({
+                    type:"GET",
+                    url:"/joblist",
+                    dataType:"json",
+                    data:{jobtype:'wf'},
+                    success:function(data){
+                        var head= "<thead><tr><th>Submission</th><th>Status</th><th>Name</th><th>Progess</th><th>Submitter</th><th>Last Modified</th><th>Id</th></tr></thead><tbody>"
+                            var datamid = eval(data);
+                            for (var i = 0; i < datamid.length; i++) {
+                                head += "<tr><td>" + new Date(datamid[i].createdTime).toLocaleString() + "</td><td>" + switchState(datamid[i].status) + "</td><td>" + datamid[i].appName + "</td><td>"+1000+"</td><td>"+datamid[i].user +"</td><td>"+new Date(datamid[i].lastModTime).toLocaleString()+"</td><td>"+datamid[i].id+"</td></tr>";
+                            };
+
+                        head += "</tbody>";
+                        $('#completed-table').html(head);
+
+                        //jQuery(document).ready(function() {
+                        //    EditableTable.init();
+                        //});
+                    }
+                });
+            });
+
+    </script>
+
+
+
+
+
+
+
+
+</div>
+}
+<script>
+                $(document).ready(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"/whoiam",
+                        dataType:"json",
+                        success:function(data){
+                            var myobj=eval(data);
+                            var trackingSum=myobj.trackingSum;
+                            $('#tracking').html(trackingSum);
+                        }
+                    });
+                });
+     </script>
+
+
+
+
+

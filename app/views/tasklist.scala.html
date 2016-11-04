@@ -1,5 +1,5 @@
 @sidebar = {
-<div class="sidebar-menu toggle-others fixed">
+<div class="sidebar-menu toggle-others collapsed">
 
     <div class="sidebar-menu-inner">
 
@@ -97,7 +97,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="@routes.Yarn.yarnDispatch">
+                        <a href="@routes.Oozie.oozie">
                             <span class="title">Oozie任务调度</span>
                         </a>
                     </li>
@@ -469,7 +469,7 @@ function MillisecondToDate(msd) {
                                             $(document).ready(function(){
                                                 $.ajax({
                                                     type:"POST",
-                                                    url:'http://127.0.0.1:8080/app/kill/',
+                                                    url:'http://10.75.16.220:8080/app/kill/',
                                                     data:{id:$id,terminate: true},
                                                     complete:function(data){
                                                               swal({
@@ -576,7 +576,7 @@ function MillisecondToDate(msd) {
                     </a>
                 </h4>
             </div>
-            <div id="collapseOne2" class="panel-collapse collapse in">
+            <div id="collapseOne2" class="panel-collapse collapse">
                 <div class="panel-body">
                     <div class="adv-table editable-table ">
                         <div class="clearfix">
@@ -597,7 +597,7 @@ function MillisecondToDate(msd) {
                     </a>
                 </h4>
             </div>
-            <div id="collapseTwo2" class="panel-collapse collapse">
+            <div id="collapseTwo2" class="panel-collapse in">
                 <div class="panel-body">
                     <div class="adv-table editable-table ">
                         <div class="clearfix">
