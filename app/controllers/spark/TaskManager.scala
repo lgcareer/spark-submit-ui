@@ -79,7 +79,7 @@ class TaskManager @Inject() (taskProvider:TaskProvider[AppDataObject],taskDao: T
           taskProvider.loadTaskInfo(AppDataObject(id,username));
           Ok(id)
         }
-        case JobRunExecption(error) => Ok("提交失败")
+        case JobRunExecption(error) => Ok(error)
         case _ => NotFound
       }
   }

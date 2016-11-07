@@ -223,6 +223,7 @@
 
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
+<script src="@routes.Assets.at("javascripts/progress.js")" type="text/javascript" ></script>
 
 
 <div class="page-title">
@@ -338,7 +339,29 @@
                                         }
                                         return node;}
                                 },
-                                { "data": "progress"},
+                                { "data": "progress",
+                                    render: function (data, type, row, meta){
+
+                                        var pro = new progress({
+                                        width : 100,//进度条宽度
+                                        height: 20,//进度条高度
+                                        bgColor : "#3E4E5E",//背景颜色
+                                        proColor : "#009988",//前景颜色
+                                        fontColor : "#FFFFFF",//显示字体颜色
+                                        val : data,//默认值
+                                        text:"#*val*#%",//显示文字信息
+                                        showPresent : true,
+                                        completeCallback:function(val){
+                                            console.log('已完成');
+                                        },
+                                        changeCallback:function(val){
+                                            console.log('当前进度为'+val+'%');
+                                        }
+                                    });
+                                        var pr="<div class=\"pro\">"+pro.getBody().outerHTML+"</div>"
+
+                                        return pr;}
+                                },
                                 { "data": "startedTime",
                                   render: function (data, type, row, meta){
                                       date = new Date(data).toLocaleString();
