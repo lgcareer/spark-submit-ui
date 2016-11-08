@@ -1,13 +1,17 @@
 package models
 
 import java.text.SimpleDateFormat
+import java.util
 import java.util.Date
+import javax.mail.internet.InternetAddress
 
 import models.user.Reason
 import models.utils.Configuration
 import org.apache.commons.lang3.StringUtils
 import org.apache.commons.mail.{DefaultAuthenticator, HtmlEmail, SimpleEmail}
 import play.api.Logger
+
+import scala.collection.mutable.ArrayBuffer
 
 /**
   * Created by liangkai on 16/6/16.
@@ -64,6 +68,22 @@ object Email {
           email.setSubject("注册审核结果")
           email.addTo(r.email)
           email.setHtmlMsg(makeReasonEmail(r))
+        }
+        case n : String=>{
+          email.setSubject("新用户注册审核")
+          email.addTo(config.getString("email.default.admin"))
+
+          import scala.collection.JavaConverters._
+          var args: IndexedSeq[InternetAddress] = IndexedSeq()
+          val address1: InternetAddress = new InternetAddress(config.getString("email.admin1"))
+          val address2: InternetAddress = new InternetAddress(config.getString("email.admin2"))
+          val address3: InternetAddress = new InternetAddress(config.getString("email.admin3"))
+          args= args :+ address1
+          args= args :+ address2
+          args= args :+ address3
+          //CC to admins
+          email.setCc(args.asJava)
+          email.setHtmlMsg(makeNewUserEmail(n))
         }
       }
       email.send()
@@ -152,6 +172,30 @@ object Email {
   }
 
 
+  /**
+    * 新用户激活成功告知邮件
+    * @return
+    */
+  def makeNewUserEmail(newUser:String): String ={
+    val time: String = dateFormat.format(new Date(System.currentTimeMillis()))
+    val adminemail=config.getString("email.default.admin")
+    val username: String = User.findNameByEmail(adminemail)
+
+    "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n   " +
+      " <meta charset=\"UTF-8\">\n  " +
+      "  <title>注册结果</title>\n</head>\n<body>\n" +
+      "<div style=\"background-color:#ECECEC; padding: 35px;\">\n" +
+      "<table cellpadding=\"0\" align=\"center\" style=\"width: 600px; margin: 0px auto; " +
+      "text-align: left; position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; font-size: 14px; font-family:微软雅黑, 黑体; line-height: 1.5; box-shadow: rgb(153, 153, 153) 0px 0px 5px; border-collapse: collapse;" +
+      " background-position: initial initial; background-repeat: initial initial;background:#fff;\">\n<tbody>\n<tr>\n<th valign=\"middle\" style=\"height: 25px; line-height: 25px; padding: 15px 35px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #C46200; background-color: #FEA138; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;\">\n<font face=\"微软雅黑\" size=\"5\" style=\"color: rgb(255, 255, 255); \">NEPTUNE（新浪微博大数据平台）</font>\n</th>\n</tr>\n<tr>\n<td>\n" +
+      "<div style=\"padding:25px 35px 40px; background-color:#fff;\">\n" +
+      "<h2 style=\"margin: 5px 0px; \"><font color=\"#333333\" style=\"line-height: 20px; \"><font style=\"line-height: 22px; \" size=\"4\">亲爱的:"+username+"</font></font></h2>\n<p>\n您收到这封邮件，是由于有新用户 "+newUser+" 在NEPTUNE（新浪微博大数据平台）进行了新用户注册并已验证邮箱，用户审核还未通过，请进行相应的审核操作<br/><br/>" +
+      "<p>\n如果您有什么疑问可以联系管理员，Email: "+adminemail+"。</p>\n<p align=\"right\"> 某官方团队</p>" +
+      "\n<p align=\"right\">"+time+"</p>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n\n\n</body>\n</html>"
+
+  }
+
+
 
   /**
     * 验证用户激活信息
@@ -164,7 +208,11 @@ object Email {
       case user if (StringUtils.equals(MD5Utils.encode2hex(User.findByEmail(user._1).get.email),user._2))
         =>{
             Logger.info(user._1+"####"+user._2)
-          if(User.updateStatus(user._1)>0)  Success("激活成功") else  Failure("激活失败")
+          if(User.updateStatus(user._1)>0){
+            //发送邮件等待管理员审核
+            sendHtmlMail(user._1)
+            Success("激活成功")
+          }else  Failure("激活失败")
         }
       case _ => Failure("激活失败,请检查注册信息")
     }
