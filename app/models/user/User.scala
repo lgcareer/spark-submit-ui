@@ -161,9 +161,13 @@ object User {
         'password -> user.password,
         'status->user.status,
         'audit->user.audit).executeUpdate()
+      UserGroup.addOrUpdate(UserGroup(user.email,user.name,"user","root.default"))
       user
     }
   }
+
+
+
 
 
 
