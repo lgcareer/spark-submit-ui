@@ -1,6 +1,8 @@
 package controllers
 
 import models.{NodeList, _}
+import play.api.data.Form
+import play.api.data.Forms._
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -144,17 +146,14 @@ object MetaRestApi extends Controller{
   }
 
 
-
   /**
     * 添加节点信息
-    * @param ip
-    * @param host
-    * @param role
-    * @param name
     * @return
     */
-  def addNode(ip:String,host: String,role:String,name:String)=Action{
-    import play.api.libs.json._
+  def addNode=Action{
+    implicit request =>
+      import play.api.libs.json._
+    val (ip, host, role, name) = addnode.bindFromRequest.get
     val pid: Int = MetaData.findIdByName(name)
     val addNodeData: Seq[Int] = NodeData.addNodeData(NodeData(id=0,ip,host,role,name,pid))
     val reduce: Int = addNodeData.reduce(_+_)
@@ -213,6 +212,15 @@ object MetaRestApi extends Controller{
 
 
 
+
+  val addnode = Form(
+    tuple(
+      "ip" -> text,
+      "host" -> text,
+      "role" -> text,
+      "name" -> text
+    )
+  )
 
 
 

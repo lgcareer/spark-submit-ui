@@ -2,6 +2,8 @@ package controllers
 
 import models._
 import play.api.Logger
+import play.api.data.Form
+import play.api.data.Forms._
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.{Action, Controller}
 
@@ -58,12 +60,16 @@ object MetaDataManager extends Controller with Secured{
 
 
 
-  def updateNode(id:Int,ip:String,host: String,role:String,name:String)=Action{
+  def updateNode =Action{
     //import play.api.libs.json._
     //val jsValue: JsValue = Json.parse(role)
    //val roles: String = jsValue.as[List[String]].mkString("\n")
-    val pid: Int = MetaData.findIdByName(name)
-    NodeData.addOrUpdate(NodeData(id,ip,host,role,name,pid))
+
+    implicit request =>
+      val (id, ip, host, role, name) = addnode.bindFromRequest.get
+      val pid: Int = MetaData.findIdByName(name)
+      NodeData.addOrUpdate(NodeData(id,ip,host,role,name,pid))
+
     Ok("操作成功")
   }
 
@@ -96,6 +102,16 @@ object MetaDataManager extends Controller with Secured{
     ProductData.deleteProductData(id)
     Ok("操作成功")
   }
+
+  val addnode = Form(
+    tuple(
+      "id" -> number,
+      "ip" -> text,
+      "host" -> text,
+      "role" -> text,
+      "name" -> text
+    )
+  )
 
 
 

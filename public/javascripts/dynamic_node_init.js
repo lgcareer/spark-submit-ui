@@ -167,7 +167,7 @@ function initNodeData() {
             //id:Int,ip:String,host: String,role:String,name:String
             $(document).ready(function () {
                 $.ajax({
-                    type: "GET",
+                    type: "POST",
                     url: "/addnode",
                     data: {id: v_id, ip: $ip, host: $host, role: _list, name: $name},
                     dataType: "text",

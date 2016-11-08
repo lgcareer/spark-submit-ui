@@ -127,7 +127,7 @@ GET   /names                            controllers.MetaDataManager.getNames
 #节点管理
 GET  /nodedata                         controllers.MetaDataManager.getNodaDatas(pid:Int)
 GET  /nodelist                          controllers.MetaDataManager.nodeList
-GET  /addnode                           controllers.MetaDataManager.updateNode(id:Int,ip:String,host: String,role:String,name:String)
+POST  /addnode                           controllers.MetaDataManager.updateNode
 GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:Int)
 
 #产品单元
@@ -143,7 +143,7 @@ GET  /cluster/rm        controllers.MetaRestApi.rmCluster(id:Int)
 GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,version:String,url:String)
 GET  /cluster/names     controllers.MetaRestApi.getNames
 GET  /node/list        controllers.MetaRestApi.getNodeList
-GET  /node/add        controllers.MetaRestApi.addNode(ip:String,host: String,role:String,name:String)
+POST  /node/add        controllers.MetaRestApi.addNode
 GET  /node/update        controllers.MetaRestApi.updateNode(id:Int,ip:String,host: String,role:String,name:String)
 GET  /node/rm          controllers.MetaRestApi.deleteNode(id:Int)
 GET  /node/detiles      controllers.MetaRestApi.getNodaDatas(pid:Int)
