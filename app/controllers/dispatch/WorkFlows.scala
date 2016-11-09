@@ -7,9 +7,9 @@ import play.api.mvc.{Action, Controller}
 /**
  * Created by liangkai on 16/7/25.
  */
-object Oozie extends Controller with Secured{
+object WorkFlows extends Controller with Secured{
 
-  def oozie = IsAuthenticated { username => implicit request =>
+  def workflows = IsAuthenticated { username => implicit request =>
 
     /**
      * 接入oozie 调度，调用API
@@ -22,7 +22,4 @@ object Oozie extends Controller with Secured{
     Ok(Execute.jobList(jobtype))
   }
 
-  def oozielist =Action{
-    Ok(views.html.oozie())
-  }
 }

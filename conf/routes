@@ -64,7 +64,6 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
 GET   /jobs                          controllers.MonitorController.jobs
-GET   /streaming                     controllers.MonitorController.streaming(appui:String)
 
 #ServicePlan
 GET    /widgets                       controllers.Serviceplan.servicedao
@@ -159,13 +158,10 @@ GET  /product/updata     controllers.MetaRestApi.updataProductData(id:Int,unit:S
 
 
 #Dispatch 任务调度
-GET    /dispatch                     controllers.Oozie.oozie
-GET    /joblist                      controllers.Oozie.getJobList(jobtype:String)
-GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
-GET    /yarndispatch                 controllers.Yarn.yarnDispatch
-GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
-GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
-GET   /oozie                            controllers.Oozie.oozielist
+GET    /dispatch                     controllers.WorkFlows.workflows
+GET    /joblist                      controllers.WorkFlows.getJobList(jobtype:String)
+GET   /workflows/editors            controllers.WorkFlowsEditors.editorsList
+GET   /workflows/list               controllers.WorkFlowsEditors.editors
 
 
 

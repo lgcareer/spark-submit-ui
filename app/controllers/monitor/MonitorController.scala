@@ -43,23 +43,23 @@ object MonitorController  extends Controller with Secured{
 
   }
    //针对spark-streaming任务
-  def streaming (appui:String) =Action {
-    val url3 = s"$appui/streaming/json/"
-    val timeFuture = WS.url(url3).get() map {
-      response => response.status match {
-        case 200 => Some {
-          val statTable: String = (response.json \ "statTable").as[String]
-          new StreamingUi(statTable)
-        }
-        case _ => None
-      }
-    }
-
-    val job = Await.result(timeFuture, 50 seconds).get
-
-
-    Ok(views.html.streaming(job))
-  }
+//  def streaming (appui:String) =Action {
+//    val url3 = s"$appui/streaming/json/"
+//    val timeFuture = WS.url(url3).get() map {
+//      response => response.status match {
+//        case 200 => Some {
+//          val statTable: String = (response.json \ "statTable").as[String]
+//          new StreamingUi(statTable)
+//        }
+//        case _ => None
+//      }
+//    }
+//
+//    val job = Await.result(timeFuture, 50 seconds).get
+//
+//
+//    Ok(views.html.streaming(job))
+//  }
 
 
 
