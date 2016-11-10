@@ -15,12 +15,6 @@ import scala.language.postfixOps
  */
 object MonitorController  extends Controller with Secured{
 
-  /**
-   * Create an Action to render an HTML page with a welcome message.
-   * The configuration in the `routes` file means that this method
-   * will be called when the application receives a `GET` request with
-   * a path of `/`.
-   */
 
   def jobs=Action{
     //4040端口为长任务端口,针对spark-sql
