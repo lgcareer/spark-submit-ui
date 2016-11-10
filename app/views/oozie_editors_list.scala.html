@@ -1,4 +1,3 @@
-
 @sidebar = {
 <div class="sidebar-menu toggle-others collapsed">
 
@@ -36,7 +35,6 @@
                 </a>
             </div>
 
-
         </header>
 
 
@@ -55,7 +53,7 @@
                     <span class="title">数据应用面板</span>
                 </a>
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="@routes.SparkJar.executejarpage">
                             <span class="title">SPARK-JAR应用</span>
                         </a>
@@ -209,179 +207,247 @@
 
 </div>
 }
-@main("Neptun Dashboard")(sidebar) {
+@main("工作流编辑器")(sidebar) {
 
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster.bundle.min.css")" type="text/css"/>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster-sideTip-punk.min.css")" type="text/css"/>
+<div class="page-title">
 
-<link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
-<script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
-    <script src="@routes.Assets.at("javascripts/tooltipster.bundle.min.js")" type="text/javascript"></script>
+    <div class="title-env">
+        <h1 class="title">任务调度编辑器</h1>
+        <p class="description">任务调度编辑面板</p>
+    </div>
 
-<!--Table js-->
-<script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
-<script src="@routes.Assets.at("javascripts/jquery.edatatables.js")"></script>
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
-<script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
-    <script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/modernizr.min.js")" type="text/javascript" ></script>
+    <div class="breadcrumb-env">
 
+        <ol class="breadcrumb bc-1">
+            <li>
+                <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
+            </li>
+            <li>
 
-    <script src="@routes.Assets.at("javascripts/jquery.dataTables.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/DT_bootstrap.js")" type="text/javascript" ></script>
-    <script src="@routes.Assets.at("javascripts/oozie-table.js")" type="text/javascript" ></script>
-<script src="@routes.Assets.at("javascripts/progress.js")" type="text/javascript" ></script>
+                <a href="#">任务调度</a>
+            </li>
+            <li class="active">
 
-
-
-
-    <div class="page-title">
-
-        <div class="title-env">
-            <h1 class="title">任务调度管理</h1>
-            <p class="description">任务调度管理面板</p>
-        </div>
-
-        <div class="breadcrumb-env">
-
-            <ol class="breadcrumb bc-1">
-                <li>
-                    <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
-                </li>
-                <li>
-                    <a href="#">任务调度</a>
-                </li>
-                <li class="active">
-                    <strong>工作流调度列表</strong>
-                </li>
-            </ol>
-
-        </div>
+                <strong>工作流编辑器</strong>
+            </li>
+        </ol>
 
     </div>
 
-    <div class="graphs">
+</div>
 
-        <div class="panel panel-color panel-blue">
-            <div class="panel-heading">
-                <h3 class="panel-title">OOZIE任务列表</h3>
 
-                <div class="panel-options">
-                    <span>伸缩</span>
-                    <a href="#" data-toggle="panel">
-                        <span class="collapse-icon">&ndash;</span>
-                        <span class="expand-icon">+</span>
-                    </a>
+<!--<script>-->
+<!--//集群信息-->
+<!--$(document).ready(function(){-->
+    <!--$.ajax({-->
+        <!--type:"GET",-->
+        <!--url:"/metadatalist",-->
+        <!--dataType:"json",-->
+        <!--success:function(data){-->
+            <!--var head= "<thead><tr><th></th><th>集群名称</th><th>产品单元</th><th>集群版本</th><th>URL</th><th>EDIT</th><th>DELETE</th></tr></thead><tbody>"-->
+            <!--var myobj=eval(data);-->
+            <!--for (var p in myobj) {-->
+                <!--var datamid = eval(data[p]);-->
+                <!--for (var i = 0; i < datamid.length; i++) {-->
+                     <!--var url=null;-->
+                     <!--if(datamid[i].url!=null){-->
+                         <!--url=datamid[i].url.replace(/\n/g,"<br/>");-->
+                     <!--}-->
+                                 <!--var version = '';-->
+                                <!--if(datamid[i].version!=''){-->
+                                     <!--var arr=eval(datamid[i].version)-->
+                                          <!--for (var j = 0; j < arr.length; j++) {-->
+                                            <!--version +=  arr[j] + '<br/>';-->
+                                          <!--}-->
+                                     <!--}-->
+                    <!--head += "<tr><td class=\"center\" ><img myid="+datamid[i].id+" src=\"/assets/images/plus.png\"></td><td>" + datamid[i].name + "</td><td>" + datamid[i].unit + "</td><td>" + version + "</td><td><a href='" + datamid[i].url + "' target='_blank'>" +url+ "</a></td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";-->
+                <!--};-->
+            <!--};-->
+            <!--head += "</tbody>";-->
+            <!--$('#editable-sample').html(head);-->
+
+            <!--initdata();-->
+
+        <!--}-->
+    <!--});-->
+<!--});-->
+<!--</script>-->
+<!--<script>-->
+
+            <!--$(document).ready(function(){-->
+                <!--$.ajax({-->
+                    <!--type:"GET",-->
+                    <!--url:"/nodelist",-->
+                    <!--dataType:"json",-->
+                    <!--success:function(data){-->
+                        <!--console.log(data);-->
+                        <!--var head= "<thead><tr><th>IP地址</th><th>主机名称</th><th>角色</th><th>集群名称</th><th>EDIT</th><th>DELETE</th></tr></thead><tbody>"-->
+                        <!--var myobj=eval(data);-->
+                        <!--for (var p in myobj) {-->
+                            <!--var datamid = eval(data[p]);-->
+                            <!--for (var i = 0; i < datamid.length; i++) {-->
+
+                               <!--var role = '';-->
+                                <!--if(datamid[i].role!=''){-->
+                                     <!--var arr=eval(datamid[i].role)-->
+                                          <!--for (var j = 0; j < arr.length; j++) {-->
+                                            <!--role +=  arr[j] + '<br/>';-->
+                                          <!--}-->
+                                     <!--}-->
+
+                                <!--head += "<tr><td>" + datamid[i].ip + "</td><td>" + datamid[i].host + "</td><td>" + role + "</td><td>" +datamid[i].name+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";-->
+                            <!--};-->
+                        <!--};-->
+                        <!--head += "</tbody>";-->
+                        <!--$('#editable-sample2').html(head);-->
+                        <!--initNodeData();-->
+
+
+                    <!--}-->
+                <!--});-->
+            <!--});-->
+    <!--</script>-->
+
+<!--<script>-->
+    <!--//产品单元-->
+                <!--$(document).ready(function(){-->
+                <!--$.ajax({-->
+                    <!--type:"GET",-->
+                    <!--url:"/productlist",-->
+                    <!--dataType:"json",-->
+                    <!--success:function(data){-->
+                        <!--console.log(data);-->
+                        <!--var head= "<thead><tr><th>产品单元</th><th>描述</th><th>联系人</th><th>集群信息</th><th>EDIT</th><th>DELETE</th></tr></thead><tbody>"-->
+                        <!--var myobj=eval(data);-->
+                        <!--for (var p in myobj) {-->
+                            <!--var datamid = eval(data[p]);-->
+                            <!--for (var i = 0; i < datamid.length; i++) {-->
+                                <!--head += "<tr><td>" + datamid[i].unit + "</td><td>" + datamid[i].desc + "</td><td>" + datamid[i].contact + "</td><td>" +datamid[i].cluster+ "</td><td><a myid="+datamid[i].id+" class=\"edit\" href=\"javascript:;\">" + '编辑' + "</a></td><td><a myid= "+datamid[i].id+" class=\"delete\" href=\"javascript:;\">" + '删除' + "</a></td></tr>";-->
+                            <!--};-->
+                        <!--};-->
+                        <!--head += "</tbody>";-->
+                        <!--$('#editable-sample3').html(head);-->
+                         <!--initProductData();-->
+
+                    <!--}-->
+                <!--});-->
+            <!--});-->
+
+
+<!--</script>-->
+
+
+
+
+<div class="panel panel-color panel-danger">
+    <div class="panel-heading">
+        <h3 class="panel-title">OOZIE任务编辑管理</h3>
+
+        <div class="panel-options">
+            <span>伸缩</span>
+            <a href="#" data-toggle="panel">
+                <span class="collapse-icon">&ndash;</span>
+                <span class="expand-icon">+</span>
+            </a>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs nav-tabs-justified">
+            <li class="active">
+                <a href="#data_tables" data-toggle="tab">
+                    <span class="visible-xs"><i class="fa fa-table"></i></span>
+                    <span class="hidden-xs">Workflows</span>
+                </a>
+            </li>
+            <li>
+                <a href="#data_charts" data-toggle="tab">
+                    <span class="visible-xs"><i class="fa fa-area-chart"></i></span>
+                    <span class="hidden-xs">Coordinators</span>
+                </a>
+            </li>
+            <li>
+                <a href="#data_infos" data-toggle="tab">
+                    <span class="visible-xs"><i class="fa fa-area-chart"></i></span>
+                    <span class="hidden-xs">Bundles</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="data_tables">
+                <div class="adv-table editable-table ">
+                    <div class="btn-group">
+                        <button id="editable-wf_new" class="btn btn-success">
+                            创建任务 <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                    <table class="display table table-bordered" id="editable-wf">
+                    </table>
                 </div>
             </div>
-            <div class="panel-body">
-
-                                    <span class="pull-left">
-      <span style="padding-right:10px;float:left;margin-top:3px" class="hide-smaller">
-
-                    <span class="loader hide"><i class="fa fa-2x fa-spinner fa-spin muted"></i></span>
-                    <button class="btn bulkToolbarBtn bulk-resume" data-operation="resume" title="Resume selected" disabled="disabled" type="button"><i class="fa fa-play"></i><span class="hide-small"> Resume</span></button>
-                    <button class="btn bulkToolbarBtn bulk-suspend" data-operation="suspend" title="Suspend selected" disabled="disabled" type="button"><i class="fa fa-pause"></i><span class="hide-small"> Suspend</span></button>
-                    <button class="btn bulkToolbarBtn btn-danger bulk-kill disable-feedback" data-operation="kill" title="Kill selected" disabled="disabled" type="button"><i class="fa fa-times"></i><span class="hide-small"> Kill</span></button>
-
-      </span>
-
-
-              <span style="float:left;padding-left:10px;padding-right:10px;margin-top:3px" class="hide-smaller">状态切换</span>
-              <span class="btn-group" style="float:left;">
-                <a class="btn btn-status btn-success" data-value='SUCCEEDED'>Succeeded</a>
-                <a class="btn btn-status btn-warning" data-value='RUNNING'>Running</a>
-                <a class="btn btn-status btn-danger disable-feedback" data-value='ERROR'>Error</a>
-              </span>
-              <span style="float:left;padding-left:10px;padding-right:10px;margin-top:3px" class="hide-smaller">提交类型</span>
-              <span class="btn-group" style="float:left;">
-                <a class="btn btn-submitted btn-info" data-value='MANUALLY'>Manually</a>
-                <a class="btn btn-submitted btn-info" data-value='COORDINATOR'>Coordinator</a>
-              </span>
-            </span>
-
-
-                <table id="editable-sample" class="table table-striped table-bordered table-condensed table-hover" cellspacing="0">
+            <div class="tab-pane" id="data_charts">
+                <div class="btn-group">
+                    <button id="editable-sample_new2" class="btn btn-pink">
+                        创建任务 <i class="fa fa-plus"></i>
+                    </button>
+                    <!--<button id="editable-sample_new3" class="btn btn-black">-->
+                    <!--多节点添加 <i class="fa fa-plus"></i>-->
+                    <!--</button>-->
+                </div>
+                <table class="display table table-bordered" id="editable-sample2">
+                </table>
+            </div>
+            <div class="tab-pane" id="data_infos">
+                <div class="btn-group">
+                    <button id="editable-sample_new4" class="btn btn-blue">
+                        创建任务 <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <table class="display table table-bordered" id="editable-sample3">
                 </table>
             </div>
         </div>
-        @copyright()
-
-
-        <script>
-              function switchState(state) {
-        if(state=='ACCEPTED'){
-                return "<span class=\"label label-default\">ACCEPTED</span>";
-        }else if(state=='RUNNING'){
-                 return "<span class=\"label label-primary\">RUNNING</span>";
-        }else if(state=='SUCCEEDED' || state == 'FINISHED'){
-                 return "<span class=\"label label-success\">FINISHED</span>";
-        }else if(state=='KILLED'){
-                     return "<span class=\"label label-warning\">KILLED</span>";
-        }else if(state=='FAILED'){
-                     return "<span class=\"label label-danger\">FAILED</span>";
-        }
-         return state
-
-    }
-
-
-            $(document).ready(function(){
-                $.ajax({
-                    type:"GET",
-                    url:"/joblist",
-                    dataType:"json",
-                    data:{jobtype:'wf'},
-                    success:function(data){
-                        var head= "<thead><tr><th></th><th>Submission</th><th>Status</th><th>Name</th><th>Progess</th><th>Submitter</th><th>Last Modified</th><th>Id</th></tr></thead><tbody>"
-                            var datamid = eval(data);
-                            for (var i = 0; i < datamid.length; i++) {
-                                        var pro = new progress({
-                                        width : 100,//进度条宽度
-                                        height: 20,//进度条高度
-                                        bgColor : "#3E4E5E",//背景颜色
-                                        proColor : "#009988",//前景颜色
-                                        fontColor : "#FFFFFF",//显示字体颜色
-                                        val : 100,//默认值
-                                        text:"#*val*#%",//显示文字信息
-                                        showPresent : true,
-                                        completeCallback:function(val){
-                                            console.log('已完成');
-                                        },
-                                        changeCallback:function(val){
-                                            console.log('当前进度为'+val+'%');
-                                        }
-                                    });
-
-                                head += "<tr><td style=\"text-align:center\"><input type=\"checkbox\" ></td><td>" + new Date(datamid[i].createdTime).toLocaleString() + "</td><td>" + switchState(datamid[i].status) + "</td><td>" + datamid[i].appName + "</td><td><div class=\"pro\">"+pro.getBody().outerHTML+"</div></td><td>"+datamid[i].user +"</td><td>"+new Date(datamid[i].lastModTime).toLocaleString()+"</td><td><a href=\"#\">"+datamid[i].id+"</a></td></tr>";
-                            };
-
-
-                        head += "</tbody>";
-                        $('#editable-sample').html(head);
-
-                        jQuery(document).ready(function() {
-                            EditableTable.init();
-                        });
-                    }
-                });
-            });
-
-    </script>
-
-
-
-
-
-
-
-
+    </div>
 </div>
+
+
+
+<!--table style-->
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/demo_page.css")" type="text/css"/>
+
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/DT_bootstrap.css")" type="text/css"/>
+
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/style-responsive.css")" type="text/css"/>
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/sweetalert.css")" type="text/css"/>
+<!--tab-->
+
+
+<!--alert-->
+<script src="@routes.Assets.at("javascripts/sweetalert.min.js")" type="text/javascript"></script>
+
+    <script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
+
+<script src="@routes.Assets.at("javascripts/DT_bootstrap.js")"></script>
+    <script src="@routes.Assets.at("javascripts/jquery-ui-1.9.2.custom.min.js")" type="text/javascript" ></script>
+<script src="@routes.Assets.at("javascripts/jquery-migrate-1.2.1.min.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/modernizr.min.js")" type="text/javascript" ></script>
+<!--tab-->
+
+<script src="@routes.Assets.at("javascripts/dynamic_table_init.js")" type="text/javascript" ></script>
+    <script src="@routes.Assets.at("javascripts/dynamic_node_init.js")" type="text/javascript" ></script>
+<script src="@routes.Assets.at("javascripts/dynamic_product_init.js")" type="text/javascript" ></script>
+
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
+
+        <!--select-->
+    <link rel="stylesheet" href="@routes.Assets.at("stylesheets/chosen.css")" type="text/css"/>
+    <script src="@routes.Assets.at("javascripts/chosen.jquery.js")" type="text/javascript"></script>
+
+<script src="@routes.Assets.at("javascripts/oozie-editors.js")" type="text/javascript"></script>
 }
+
+
 <script>
                 $(document).ready(function(){
                     $.ajax({

@@ -524,9 +524,9 @@ function MillisecondToDate(msd) {
 
                                             $(document).ready(function(){
                                                 $.ajax({
-                                                    type:"POST",
-                                                    url:'http://10.75.16.220:8080/app/kill/',
-                                                    data:{id:$id,terminate: true},
+                                                    type:"GET",
+                                                    url:'/kill',
+                                                    data:{appId:$id},
                                                     complete:function(data){
                                                               swal({
                                                           title: "操作完成!",

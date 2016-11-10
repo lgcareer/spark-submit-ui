@@ -8,11 +8,11 @@ import play.api.mvc.{Action, Controller}
 object WorkFlowsEditors extends Controller{
 
   def editorsList=Action{
-    Ok("worklist")
+    Ok(views.html.oozie_editors_list())
   }
 
   def editors=Action{
-    Ok("worklist")
+    Ok(views.html.oozie_edit())
   }
 
 
