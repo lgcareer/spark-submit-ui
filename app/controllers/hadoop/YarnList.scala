@@ -1,5 +1,7 @@
 package controllers
 
+import java.net.URL
+
 import models._
 import models.io.UserCountDao
 import models.utils.Configuration
@@ -7,6 +9,7 @@ import play.api.libs.json._
 import play.api.mvc._
 
 import scala.collection.mutable.ArrayBuffer
+import scala.io.Source
 
 
 object YarnList  extends Controller  with Secured {
@@ -152,20 +155,42 @@ object YarnList  extends Controller  with Secured {
    * @return
    */
   def spark_info = IsAuthenticated { username => implicit request =>
+    var spark_total:Map[Any,Any] = Map()
+//    val spark_total = ArrayBuffer[Any]()
      val sparkinfo = Json.parse(SparkTotalinfo.findAll())
+    println("==>"+sparkinfo)
+//    {"alive_workers":" 3","cores":" 36 Total, 33 Used"
+//      ,"memory":" 138.3 GB Total, 108.0 GB Used","applications":" 4 Running, 188 Completed "
+//      ,"drivers":" 0 Running, 0 Completed ","status":" ALIVE"}
+    val source = Source.fromURL(new URL("http://10.77.25.43:8080")).mkString
+    val regex_key =
+      """(?<=<strong>).*?(?=:</strong>)""".r
+    val regex_value =
+        """(?s)(?<=</strong>).*?(?=</li>)""".r
+
+    val alive_key = regex_key.findAllIn(source)
+    val alive_value = regex_value.findAllIn(source)
+      val keyList = alive_key.toList
+      val valueList = alive_value.toList
+    for(i <- 0 until keyList.length){
+      val arg_key = keyList(i)
+      val arg_value = valueList(i)
+      spark_total += (arg_key -> arg_value)
+    }
+    println(spark_total)
     Ok(sparkinfo)
-
   }
-
   /**
    * netWork 变化
    *
    */
   def system_network = IsAuthenticated { username => implicit request =>
     val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
+    println(config.getString("spark.host.ha1"))
     val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
     val network = spark_args \ "data" \ "sysifstat" \ "data" \ "eth2" \config.getString("spark.host.ha1")
     Ok(network)
+
   }
 
   /**
@@ -175,6 +200,7 @@ object YarnList  extends Controller  with Secured {
 
   def active_memory = IsAuthenticated {username => implicit request =>
     val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
+    println(config.getString("spark.host.ha1"))
     val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
     val active_memory = (spark_args \ "data" \ "sysmeminfo" \"data" \ "active").toString()
     val cpu_load_avg = (spark_args \ "data" \ "syscpuidle" \"data" \\ "cpuidle").toList
