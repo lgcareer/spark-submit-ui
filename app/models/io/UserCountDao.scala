@@ -150,8 +150,7 @@ object UserCountDao {
        * 接口调用数据
        */
       val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ "/ws/v1/cluster/scheduler"
-            val scheduleryarn = scala.io.Source.
-              fromURL(yarn_url).mkString
+    val scheduleryarn = scala.io.Source.fromURL(yarn_url).mkString
       //转成JsValue 格式
       val scheduler :JsValue = Json.parse(scheduleryarn)
       //获取childQueues 列表
@@ -166,14 +165,15 @@ object UserCountDao {
       var rateMemoryRate = 0.00
 
       //全局memory
-      val globalMemory =ArrayBuffer[Long]()
+      val globalMemory =ArrayBuffer[Long](0,0)
       //全局cpu
-      val globalVcore =ArrayBuffer[Long]()
+      val globalVcore =ArrayBuffer[Long](0,0)
        //已使用memory
-       val useredMemory =ArrayBuffer[Long]()
+       val useredMemory =ArrayBuffer[Long](0,0)
       //已使用cpu
-       val useredVcore =ArrayBuffer[Long]()
+       val useredVcore =ArrayBuffer[Long](0,0)
 
+      println(group_queue(group))
       if(group_queue(group) == "") {
         for(i <- 0 until queueNameListSize) {
           //全局最大内存
@@ -190,11 +190,10 @@ object UserCountDao {
             .toString()) \ "vCores").toString().toLong
            }
         //资源度量计算
-
-        resourceRate = Math.round((useredMemory.sum * 0.7 + useredVcore.sum * 0.3)
-          /(globalMemory.max * 0.7 + globalVcore.max * 0.3) * 100)
+        resourceRate = Math.round((useredMemory.sum * 0.7 + useredVcore.sum * 0.3) /(globalMemory.max * 0.7 + globalVcore.max * 0.3) * 100)
         //内存使用占比
         rateMemoryRate =Math.round((useredMemory.max * 1.0/globalMemory.max * 1.0) * 100)
+
       }
       //遍历数据，获取相关计算指标
       for(i <- 0 until queueNameListSize){
@@ -225,7 +224,7 @@ object UserCountDao {
      *
      */
          val rateJson = "{\"resourceRate\":" + "\"" + resourceRate + "\",\"rateMemory\":" + "\"" + rateMemoryRate + "\"}"
-           rateJson.toString
+      rateJson.toString
       }
 
 

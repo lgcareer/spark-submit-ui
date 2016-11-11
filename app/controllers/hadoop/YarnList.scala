@@ -185,9 +185,7 @@ object YarnList  extends Controller  with Secured {
   def system_network = IsAuthenticated { username => implicit request =>
     val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
     val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
-    println(spark_args)
     val network = spark_args \ "data" \ "sysifstat" \ "data" \ "eth0" \config.getString("spark.host.ha1")
-    println(network)
     Ok(network)
   }
 
@@ -198,7 +196,6 @@ object YarnList  extends Controller  with Secured {
 
   def active_memory = IsAuthenticated {username => implicit request =>
     val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
-    println(config.getString("spark.host.ha1"))
     val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
     val active_memory = (spark_args \ "data" \ "sysmeminfo" \"data" \ "active").toString()
     val cpu_load_avg = (spark_args \ "data" \ "syscpuidle" \"data" \\ "cpuidle").toList
@@ -208,7 +205,6 @@ object YarnList  extends Controller  with Secured {
     }
     val cpuRate = cpuBuffer.sum/cpu_load_avg.length
     val memory_cpu = "{\"cpuRate\":" + "\"" + cpuRate + "\",\"active_memory\":" + "" + active_memory + "}"
-    println(memory_cpu)
     Ok(memory_cpu)
   }
 
