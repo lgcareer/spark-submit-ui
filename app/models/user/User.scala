@@ -88,6 +88,19 @@ object User {
     }
   }
 
+  def isAudit(email: String): Option[User] ={
+    play.api.db.DB.withConnection { implicit connection =>
+      SQL(
+        """
+         select * from user where
+         email = {email} and audit = 1
+        """).on(
+        'email -> email
+      ).
+        as(User.simple.singleOpt)
+    }
+  }
+
 
   def verifying(registration : Registration): User={
       val newUser = User(registration.email, registration.name,registration.password)
@@ -161,9 +174,13 @@ object User {
         'password -> user.password,
         'status->user.status,
         'audit->user.audit).executeUpdate()
+      UserGroup.addOrUpdate(UserGroup(user.email,user.name,"user","root.default"))
       user
     }
   }
+
+
+
 
 
 

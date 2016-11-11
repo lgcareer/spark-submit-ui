@@ -33,7 +33,7 @@ object ProductData {
 
 
   def addOrUpdate(productData: ProductData) ={
-    if(productData.id != 0) updataProductData(productData) else addProductDat(productData) ;updateProducWithCluster(productData)
+    if(productData.id != 0) updataProductData(productData) else addProductData(productData) ;updateProducWithCluster(productData)
   }
 
   def updateProducWithCluster(productData: ProductData)={
@@ -50,7 +50,7 @@ object ProductData {
   }
 
 
-  def addProductDat(productData: ProductData)={
+  def addProductData(productData: ProductData)={
     play.api.db.DB.withConnection { implicit connection =>
       SQL(
         """

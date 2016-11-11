@@ -6,13 +6,20 @@ import models._
 import models.utils.Config
 import play.api.Logger
 import play.api.libs.json.{JsValue, Json}
-import play.api.mvc.{Action, Controller}
+import play.api.libs.ws.WS
+import play.api.mvc.{Action, Controller, Results}
+
+import scala.concurrent.Await
+import scala.concurrent.Await
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
+import scala.language.postfixOps
 
 /**
   * Created by liangkai on 16/8/18.
   * 任务运行时管理相关
   */
-class TaskManager @Inject() (taskProvider:TaskProvider[AppDataObject],taskDao: TaskDao) extends Controller with Secured{
+class TaskManager @Inject() (config: Config,taskProvider:TaskProvider[AppDataObject],taskDao: TaskDao) extends Controller with Secured{
 
   import play.api.libs.json._
   import play.api.libs.functional.syntax._
@@ -53,13 +60,26 @@ class TaskManager @Inject() (taskProvider:TaskProvider[AppDataObject],taskDao: T
   }
 
   def killTask(appId:String): Unit ={
-    Runtime.getRuntime.exec(s"app/models/shell/kill_job.sh $appId")
+    Runtime.getRuntime.exec(s"yarn application -kill $appId")
   }
 
 
   def kill(appId:String) =IsAuthenticated{
     username => implicit request =>
-      killTask(appId)
+
+      if(appId.startsWith("application")){Map("id"->Seq(appId),"terminate"->Seq("true"))
+        killTask(appId)
+      }else{
+        val spark_master = config.getString("spark.master.host")
+           WS.url("http://"+spark_master+"/app/kill/").withQueryString(("terminate","true")).withQueryString(("id",appId)).post("content") map{
+          response => response.status match {
+            case  200 => Some{
+
+            }
+            case _ => None
+          }
+        }
+      }
       Ok("KILLED")
   }
 
@@ -79,7 +99,7 @@ class TaskManager @Inject() (taskProvider:TaskProvider[AppDataObject],taskDao: T
           taskProvider.loadTaskInfo(AppDataObject(id,username));
           Ok(id)
         }
-        case JobRunExecption(error) => Ok("提交失败")
+        case JobRunExecption(error) => Ok(error)
         case _ => NotFound
       }
   }

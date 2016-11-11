@@ -5,7 +5,7 @@ import models.utils.Configuration
 import scala.util.matching.Regex
 
 /**
-  * Created by king on 16/8/18.
+  * Created by liangkai1 on 16/8/18.
   */
 object MatchEngine {
 

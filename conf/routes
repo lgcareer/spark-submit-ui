@@ -64,7 +64,6 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 
 GET   /jobs                          controllers.MonitorController.jobs
-GET   /streaming                     controllers.MonitorController.streaming(appui:String)
 
 #ServicePlan
 GET    /widgets                       controllers.Serviceplan.servicedao
@@ -127,7 +126,7 @@ GET   /names                            controllers.MetaDataManager.getNames
 #节点管理
 GET  /nodedata                         controllers.MetaDataManager.getNodaDatas(pid:Int)
 GET  /nodelist                          controllers.MetaDataManager.nodeList
-GET  /addnode                           controllers.MetaDataManager.updateNode(id:Int,ip:String,host: String,role:String,name:String)
+POST  /addnode                           controllers.MetaDataManager.updateNode
 GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:Int)
 
 #产品单元
@@ -138,27 +137,32 @@ GET  /addproduct                       controllers.MetaDataManager.updataProduct
 
 #元数据REST API
 GET  /cluster/list      controllers.MetaRestApi.getClusterList
-GET  /cluster/add       controllers.MetaRestApi.addCluster(id:Int,name:String,unit: String,version:String,url:String)
+GET  /cluster/add       controllers.MetaRestApi.addCluster(name:String,version:String,url:String)
 GET  /cluster/rm        controllers.MetaRestApi.rmCluster(id:Int)
 GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,version:String,url:String)
 GET  /cluster/names     controllers.MetaRestApi.getNames
 GET  /node/list        controllers.MetaRestApi.getNodeList
-GET  /node/add        controllers.MetaRestApi.addNode(id:Int,ip:String,host: String,role:String,name:String)
+POST  /node/add        controllers.MetaRestApi.addNode
 GET  /node/update        controllers.MetaRestApi.updateNode(id:Int,ip:String,host: String,role:String,name:String)
 GET  /node/rm          controllers.MetaRestApi.deleteNode(id:Int)
 GET  /node/detiles      controllers.MetaRestApi.getNodaDatas(pid:Int)
 GET  /node/rmbulk      controllers.MetaRestApi.deleteNodeBatch(pid:Int)
+GET  /product/list      controllers.MetaRestApi.getProductList
+GET  /product/add     controllers.MetaRestApi.addProductData(unit:String,desc:String,contact:String,cluster:String)
+GET  /product/delete     controllers.MetaRestApi.deleteProductData(id:Int)
+GET  /product/updata     controllers.MetaRestApi.updataProductData(id:Int,unit:String,desc:String,contact:String,cluster:String)
+
+
+
 
 
 
 #Dispatch 任务调度
-GET    /dispatch                     controllers.Oozie.oozie
-GET    /joblist                      controllers.Oozie.getJobList(jobtype:String)
-GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
-GET    /yarndispatch                 controllers.Yarn.yarnDispatch
-GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
-GET    /yarnfairXML                 controllers.fairXML.yarnfairXML
-GET   /oozie                            controllers.Oozie.oozielist
+GET    /dispatch                     controllers.WorkFlows.workflows
+GET    /joblist                      controllers.WorkFlows.getJobList(jobtype:String)
+GET   /workflows/editors            controllers.WorkFlowsEditors.editors
+GET   /workflows/list               controllers.WorkFlowsEditors.editorsList
+
 
 
 

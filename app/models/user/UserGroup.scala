@@ -121,7 +121,7 @@ object UserGroup {
       SQL(
         """
           insert into user_group values (
-            {email}, {name}, {group}, {queue},0
+            {email}, {name}, {group}, {queue}
           )
         """).on(
         'email -> userGroup.email,
