@@ -28,6 +28,7 @@ object Usertally extends Controller with Secured{
   def userResource = IsAuthenticated { username => implicit request =>
       val rate = UserCountDao.userResourceRate(username)
       val rateData = "{\"user\":" + "\"" + username + "\",\"rateData\":" + "" + rate + "}"
+      println(rateData)
     Ok(Json.parse(rateData))
   }
 

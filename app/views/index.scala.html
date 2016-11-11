@@ -563,12 +563,14 @@
             var intraffic = netdata.intraffic;
             var outtraffic = netdata.outtraffic;
 
-            var change1 = inpps/2 + (outpps%inpps)*0.2;
-            var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.8);
+            <!--var change1 = inpps/2 + (outpps%inpps)*0.2;-->
+            var change1 = inpps*0.05+10;
+            var change2 = outpps*0.05+10;
+            <!--var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.8);-->
             <!--上-->
-            var ppsarr = [inpps+100,change1];
+            var ppsarr = [inpps*0.02,change1];
             <!--下-->
-            var trafficArr = [intraffic+100,change2];
+            var trafficArr = [intraffic*0.02,change2];
 
             <!-- Master 内存和cpu变化-->
            function memory_cpu(){
@@ -1033,25 +1035,21 @@
     </script>*@
 
 @*
-修订日志:v3.1.0(2016.11.04)
-部分功能测试
-新增oozie 任务调度ui
-完善集群元数据管理rest api
-新增App Tracking 实时任务消息提示
-修改全局侧边菜单栏样式
-修正表格样式&部分UI调整
+修订日志:v3.1.1(2016.11.11)
+平台部署粉丝库并测试中
+修改监控数据源(剔除脚本获取机制)
+修复已知bug
 *@
 <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.1.0(2016.11.04)",
+                    title: "修订日志:v3.1.1(2016.11.11)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>部分功能测试</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增oozie 任务调度ui</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善集群元数据管理rest api</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增App Tracking 实时任务消息提示</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修改全局侧边菜单栏样式</sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修正表格样式&部分UI调整</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>平台部署粉丝库并测试</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>修改监控数据源(剔除脚本获取机制)</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修复已知bug</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
                     html:true,
