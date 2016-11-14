@@ -1,6 +1,7 @@
 package models
 
 import anorm._
+import models.utils.Configuration
 import play.api.Play.current
 import play.api.db.DB
 
@@ -14,12 +15,13 @@ import play.api.db.DB
     status 主节点状态
  *
  */
-
 object SparkTotalinfo {
   def findAll(): String={
      DB.withConnection { implicit connection =>
-      val findall = SQL("select * from spark_total_info order by id desc limit 1")
-      val result = findall().map(row =>
+       val config : Configuration = new Configuration()
+       val ip = config.getString("spark.host.ha1")
+      val findall = SQL(s"select * from spark_total_info where ip='$ip' order by id desc  limit 1;")
+       val result = findall().map(row =>
         row[String]("alive_workers") -> row[String]("cores")
          -> row[String]("memory") -> row[String]("applications")
          -> row[String]("drivers") -> row[String]("status")

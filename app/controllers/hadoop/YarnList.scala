@@ -2,7 +2,7 @@ package controllers
 
 import java.net.URL
 
-import models._
+import models.SparkTotalinfo
 import models.io.UserCountDao
 import models.utils.Configuration
 import play.api.libs.json._
@@ -63,7 +63,6 @@ object YarnList  extends Controller  with Secured {
     val json = Json.parse(sparkDashboard)
     val workers = json \ "workers"
     val workerList = "{\"workers\":" + workers + "}"
-
     Ok(workerList)
   }
 
@@ -155,6 +154,11 @@ object YarnList  extends Controller  with Secured {
    * @return
    */
   def spark_info = IsAuthenticated { username => implicit request =>
+//    import play.libs.Json
+//    val mapper = new ObjectMapper()
+//    mapper.registerModule(com.fasterxml.jackson.module.scala.DefaultScalaModule)
+//    Json.setObjectMapper(mapper)
+
     var spark_total:Map[Any,Any] = Map()
 //    val spark_total = ArrayBuffer[Any]()
      val sparkinfo = Json.parse(SparkTotalinfo.findAll())

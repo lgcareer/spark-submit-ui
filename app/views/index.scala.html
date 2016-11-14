@@ -830,7 +830,6 @@
             </div>
             <div class="xe-lower">
                 <div class="border"></div>
-
                 <span>Total Cores</span>
                 <strong id="total_c">0</strong>
             </div>
@@ -854,7 +853,6 @@
             </div>
             <div class="xe-lower">
                 <div class="border"></div>
-
                 <span>Total Mem</span>
                 <strong id="total_m">0</strong>
             </div>
@@ -1036,7 +1034,10 @@
 
 @*
 修订日志:v3.1.1(2016.11.11)
+新增oozie任务编辑页面
+新增编辑列表页面
 平台部署粉丝库并测试中
+完善调度功能逻辑
 修改监控数据源(剔除脚本获取机制)
 修复已知bug
 *@
@@ -1045,11 +1046,11 @@
                 swal({
                     title: "修订日志:v3.1.1(2016.11.11)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>平台部署粉丝库并测试</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>修改监控数据源(剔除脚本获取机制)</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修复已知bug</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增oozie任务编辑页面</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增编辑列表页面</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>完善调度功能逻辑</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>修改监控数据源(剔除脚本获取机制)</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;修复已知bug</sapn><br>平台部署粉丝库并测试<br>" +
                     "</div>",
                     timer: 8000,
                     html:true,
