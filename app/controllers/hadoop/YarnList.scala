@@ -189,7 +189,7 @@ object YarnList  extends Controller  with Secured {
   def system_network = IsAuthenticated { username => implicit request =>
     val spark_url = "http://iconnect.monitor.sina.com.cn/v1/host/last?ip="+config.getString("spark.host.ha1")
     val spark_args = Json.parse(scala.io.Source.fromURL(spark_url).mkString)
-    val network = spark_args \ "data" \ "sysifstat" \ "data" \ "eth0" \config.getString("spark.host.ha1")
+    val network = spark_args \ "data" \ "sysifstat" \ "data" \ "eth2" \config.getString("spark.host.ha1")
     Ok(network)
   }
 

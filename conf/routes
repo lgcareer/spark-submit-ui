@@ -163,6 +163,9 @@ GET    /joblist                      controllers.WorkFlows.getJobList(jobtype:St
 GET   /workflows/list            controllers.WorkFlowsEditors.editorsList
 GET   /workflows/editors               controllers.WorkFlowsEditors.editors
 
+#GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
+GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
+
 
 
 

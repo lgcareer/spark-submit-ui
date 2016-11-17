@@ -1,7 +1,5 @@
 package models.utils
 
-import play.api.libs.functional.~
-
 import scala.collection.mutable._
 import scala.xml._
 /**
@@ -34,6 +32,7 @@ object XmlParse {
       // s"public/download/fair-scheduler.xml"
 //       val fairXml = XML.loadFile(s"tmp/fair-scheduler.xml")
        val fairXml = XML.loadFile(s"public/download/fair-scheduler.xml")
+      println("读取配置文件" + fairXml)
       //fetch nodes insert into Map
         val queueMap =
          (Map[String,String]() /:(fairXml \ "queue" \ "queue")){
@@ -68,7 +67,7 @@ object XmlParse {
 //             val map =Map[String,String]()
 //             map += ("memory" -> memory,"vcpu" -> vcpu)
 
-       //跟新队列名称修改对应参数
+       //更新队列名称修改对应参数
         println("队列"+ queueName)
         println("memory"+ memory)
         println("vcpu"+ vcpu)
