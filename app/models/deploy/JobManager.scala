@@ -87,6 +87,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
     StringUtils.equals(prefix,"jar")
   }
 
+
   /**
     * 完整校验
     *
