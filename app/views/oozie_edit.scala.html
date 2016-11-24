@@ -396,31 +396,6 @@
                                                     success:function(data){
                                                             <!--result process begin-->
 
-                                                     if(data.length>100){
-                                                      var $adata=data
-                                                            swal({
-                                                          title: "操作完成",
-                                                          text: "提交失败",
-                                                          type: "error",
-                                                          showCancelButton: false,
-                                                          confirmButtonText: "确定",
-                                                          closeOnConfirm: true,
-                                                          closeOnCancel: false },
-                                                          function(isConfirm){
-                                                                 if($adata!=null){
-                                                                     $adata=$adata.replace(/\n/g,"<br/>");
-                                                                 }
-                                                                        zeroModal.show({
-                                                                              title: 'Spark submited error logs,please check your parameters',
-                                                                              content: $adata,
-                                                                              width: '50%',
-                                                                              height: '80%',
-                                                                              overlay: true
-                                                                        });
-
-                                                                });
-                                                     }else{
-
                                                                       swal({
                                                           title: "操作完成!",
                                                           text: "任务已提交,任务id "+data,
@@ -434,13 +409,23 @@
                                                                 });
 
 
-                                                     }
-
                                                     <!--result process end-->
 
 
 
+                                                    },
+                                                       "error": function(response) {
+                                                              swal({
+                                                          title: "操作完成",
+                                                          text: "提交失败,不允许的参数/参数列表为空",
+                                                          type: "error",
+                                                          showCancelButton: false,
+                                                          confirmButtonText: "确定",
+                                                          closeOnConfirm: true,
+                                                          });
                                                     }
+
+
                                                 });
 
 

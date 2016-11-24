@@ -5,8 +5,8 @@
            <job-tracker>$jobTracker</job-tracker>
            <name-node>$nameNode</name-node>
            <configuration><property>
-                 <name>iio</name>
-                 <value>ki</value>
+                 <name>afafa</name>
+                 <value>adasd</value>
                </property></configuration>
          </map-reduce>
          <ok to="end"/>
