@@ -1,6 +1,7 @@
 package models
 
 import models.utils.Config
+import org.apache.oozie.client.OozieClient
 import play.api.Logger
 import play.api.libs.json.Json
 
@@ -8,6 +9,7 @@ import play.api.libs.json.Json
   * Created by king on 2016/11/2.
   */
 class ScheduleProvider(config: Config) {
+  private [this] var client :OozieClient = _
 
 
   def  jobList(jobtype:String): String ={
@@ -24,7 +26,11 @@ class ScheduleProvider(config: Config) {
     }
 
 
+  }
 
+
+  def setClient(client:OozieClient): Unit ={
+    this.client=client
   }
 
 

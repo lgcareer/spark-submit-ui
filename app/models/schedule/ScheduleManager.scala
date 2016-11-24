@@ -35,6 +35,7 @@ object  ScheduleManager{
 
 class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: JobDAO) extends InstrumentedActor {
   private[this] var hdfs :FileSystem = _
+  private[this] val wc = new OozieClient("http://10.211.55.8:11000/oozie")
   private[this] var apps = Map.empty[String,mutable.Stack[String]];
 
 
@@ -43,7 +44,7 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
     case anyException => Stop
   }
   override def preStart()={
-
+    scheduleProvider.setClient(wc)
   }
 
 
@@ -56,7 +57,7 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
           copyFromLocalFile(prop,dest1).get
       }.get
 
-    val wc = new OozieClient("http://10.211.55.8:11000/oozie")
+
     val conf: Properties = wc.createConfiguration
     //conf.setProperty(OozieClient.APP_PATH,"hdfs://192.168.1.133:9000"  + appPath);
     conf.setProperty("nameNode", "hdfs://10.211.55.8:9000")
