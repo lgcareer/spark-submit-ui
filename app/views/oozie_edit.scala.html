@@ -229,7 +229,6 @@
 <script src="@routes.Assets.at("javascripts/DT_bootstrap.js")" type="text/javascript" ></script>
 
 
-    <script src="@routes.Assets.at("javascripts/scripts.js")" type="text/javascript" ></script>
 
 
 
@@ -247,6 +246,7 @@
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster.bundle.min.css")" type="text/css"/>
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/tooltipster-sideTip-punk.min.css")" type="text/css"/>
 <script src="@routes.Assets.at("javascripts/tooltipster.bundle.min.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/dynamic_node_init.js")" type="text/javascript"></script>
 
     <div class="page-title" >
 
@@ -286,10 +286,7 @@
                         <a href="#" class="toop" title="点此执行程序">
                             <span class="fa fa-play" id="submit"></span>
                         </a>
-                        <span>设置</span>
-                        <a href="#" class="toop" title="点此进行设置">
-                            <span class="fa fa-wrench" id="setting"></span>
-                        </a>
+
                         <span>伸缩</span>
                         <a href="#" data-toggle="panel">
                             <span class="collapse-icon">&ndash;</span>
@@ -310,7 +307,7 @@
                                     var i = 1,
                                             $example_dropzone_filetable = $("#example-dropzone-filetable"),
                                             example_dropzone = $("#advancedDropzone").dropzone({
-                                                url: '/sparkjar',
+                                                url: '/workflows/upload',
 
                                                 // Events
                                                 addedfile: function(file)
@@ -368,12 +365,9 @@
 
 
                                     $("#submit").click(function(){
-                                        var $adata=null;
-                                        //$("#jarForm").submit();
-                                             var $mode = $("#masters").find("option:selected").val();
                                             swal({
                                             title: "是否提交任务?",
-                                            text: "当前提交模式 "+$mode,
+                                            text: "当前提交类型 mapreduce",
                                             type: "info",
                                             confirmButtonText: "确认",
                                             cancelButtonText: "取消",
@@ -382,10 +376,28 @@
                                             showLoaderOnConfirm: true,
                                              }, function(){
                                               setTimeout(function(){
-                                                 $('#jarForm').ajaxSubmit(
-                                                  function(data){
-                                                     if(data!="任务提交成功!"){
-                                                      $adata=data
+
+                                                  var jqInputs = $("#editable-sample").find("input")
+                                                  var r =[];
+                                                  var $para=null;
+
+                                                         for (var i=0; i< jqInputs.length;i++){
+                                                               r.push(jqInputs[i].value);
+                                                         }
+
+                                                     if(r.length > 0){
+                                                          $para = arrayToJson(r);
+                                                     }
+
+                                                   $.ajax({
+                                                    type:"POST",
+                                                    url:'/workflows/submit',
+                                                    data:{para:$para,kio:'king'},
+                                                    success:function(data){
+                                                            <!--result process begin-->
+
+                                                     if(data.length>100){
+                                                      var $adata=data
                                                             swal({
                                                           title: "操作完成",
                                                           text: "提交失败",
@@ -406,28 +418,38 @@
                                                                               overlay: true
                                                                         });
 
-
                                                                 });
                                                      }else{
-                                                                         swal({
-                                                          title: "操作完成",
-                                                          text: data+" /个人中心/用户任务管理  查看任务详情",
+
+                                                                      swal({
+                                                          title: "操作完成!",
+                                                          text: "任务已提交,任务id "+data,
                                                           type: "success",
                                                           showCancelButton: false,
                                                           confirmButtonText: "确定",
                                                           closeOnConfirm: true,
                                                           closeOnCancel: false },
                                                           function(isConfirm){
-                                                                    window.location="/tasklist";
+                                                                    window.location="/dispatch";
                                                                 });
+
 
                                                      }
 
+                                                    <!--result process end-->
 
 
 
                                                     }
-                                                    );
+                                                });
+
+
+
+
+
+
+
+
 
 
                                                 }, 5000);

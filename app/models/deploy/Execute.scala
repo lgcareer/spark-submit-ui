@@ -9,7 +9,7 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import models.ScheduleManager.SHOW
+import models.ScheduleManager.{SHOW, StoreFile, Submited}
 import models.deploy.CreateBatchRequest
 import models.utils.{Config, Configuration}
 
@@ -33,7 +33,7 @@ object Execute {
   private  def makeSystem: Unit ={
     _actorSystem = ActorSystem("jobSystem")
     _jobMange=_actorSystem.actorOf((JobManagerActor.props(_config,_dao,_task_dao)), "JobManger")
-    _scheduleManager =_actorSystem.actorOf(ScheduleManager.props(_config,_scheduleProvider),"ScheduleManager")
+    _scheduleManager =_actorSystem.actorOf(ScheduleManager.props(_config,_scheduleProvider,_dao),"ScheduleManager")
     _actorSystem.registerOnTermination(System.exit(0))
   }
 
@@ -63,7 +63,7 @@ object Execute {
 
 
   /**
-    * 上传jar文件&&任务超时
+    * 上传jar文件 && 任务超时
     * @param userName
     * @param filePart
     * @return
@@ -82,10 +82,35 @@ object Execute {
     * @return
     */
   def jobList(jobtype:String) :String= {
-    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
     Await.result( (_scheduleManager ? SHOW(jobtype))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
+  }
+
+  /**
+    * 调度任务提交 && 任务超时
+    * @param parameters
+    * @return
+    */
+  def handleJob(user:String,parameters:Seq[String]) = {
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
+    Await.result( (_scheduleManager ? Submited(user,parameters))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
+  }
+
+  /**
+    * save on hdfs
+    * @param user
+    * @param filePart
+    * @return
+    */
+  def storeJarOnHdfs(user:String,filePart: FilePart[TemporaryFile]) ={
+    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
+    Await.result( (_scheduleManager ? StoreFile(user,filePart))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
   }
 
 
