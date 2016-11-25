@@ -171,5 +171,8 @@ GET    /UserResource                 controllers.Yarn.UserResource(queueName:Str
 
 
 
+#hbase 热点region
+GET   /hbase                     controllers.HbaseOptions.findhot
+POST  /findhotregion             controllers.HbaseOptions.findHotRegion
 
 
