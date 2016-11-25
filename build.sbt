@@ -19,13 +19,9 @@ libraryDependencies ++= Seq(
   "com.jolbox" % "bonecp" % "0.8.0.RELEASE",
   "org.apache.oozie" % "oozie-client" % "4.2.0",
   "org.apache.hadoop" % "hadoop-client" % "2.6.4"
-
-
-
 )
 
 play.Project.playScalaSettings
-
 
 //resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
 resolvers ++= Seq(
