@@ -162,6 +162,9 @@ GET    /dispatch                     controllers.WorkFlows.workflows
 GET    /joblist                      controllers.WorkFlows.getJobList(jobtype:String)
 GET   /workflows/list            controllers.WorkFlowsEditors.editorsList
 GET   /workflows/editors               controllers.WorkFlowsEditors.editors
+POST  /workflows/submit               controllers.WorkFlowsEditors.submit
+POST  /workflows/upload               controllers.WorkFlowsEditors.upload
+
 
 #GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
 GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)

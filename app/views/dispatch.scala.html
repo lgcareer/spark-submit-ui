@@ -314,12 +314,12 @@
 
         <script>
               function switchState(state) {
-        if(state=='ACCEPTED'){
-                return "<span class=\"label label-default\">ACCEPTED</span>";
+        if(state=='SUSPENDED'){
+                return "<span class=\"label label-default\">SUSPENDED</span>";
         }else if(state=='RUNNING'){
                  return "<span class=\"label label-primary\">RUNNING</span>";
         }else if(state=='SUCCEEDED' || state == 'FINISHED'){
-                 return "<span class=\"label label-success\">FINISHED</span>";
+                 return "<span class=\"label label-success\">SUCCEEDED</span>";
         }else if(state=='KILLED'){
                      return "<span class=\"label label-warning\">KILLED</span>";
         }else if(state=='FAILED'){
