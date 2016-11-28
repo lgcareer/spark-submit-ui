@@ -2,7 +2,6 @@ package models
 
 import java.util.concurrent.TimeUnit
 
-import akka.actor._
 import akka.actor.{ActorRef, ActorSystem, Props}
 import akka.util.Timeout
 import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
