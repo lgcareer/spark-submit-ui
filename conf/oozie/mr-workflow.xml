@@ -5,8 +5,8 @@
            <job-tracker>$jobTracker</job-tracker>
            <name-node>$nameNode</name-node>
            <configuration><property>
-                 <name>afafa</name>
-                 <value>adasd</value>
+                 <name></name>
+                 <value></value>
                </property></configuration>
          </map-reduce>
          <ok to="end"/>
