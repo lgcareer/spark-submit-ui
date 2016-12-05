@@ -28,6 +28,14 @@ object  ScheduleManager{
   case class SHOW(jobtype:String)
   case class InvalidJar(error:String)
   case class JarStored(msg :String)
+  case class KillJobs(ids:Seq[String])
+  case class ResumeJobs(ids:Seq[String])
+  case class Suspend(ids:Seq[String])
+
+
+
+
+
 
   def props(config:Config,scheduleProvider: ScheduleProvider,jobDao: JobDAO): Props = Props(classOf[ScheduleManager], config,scheduleProvider,jobDao)
 
@@ -98,6 +106,11 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
   }
 
 
+  /**
+    * 最后上传的文件先执行
+    * @param user
+    * @param path
+    */
   def addPathStcak(user:String,path:String): Unit ={
     if(apps.get(user).isDefined){
       val stacks: mutable.Stack[String] = apps.get(user).getOrElse(new mutable.Stack[String]())
@@ -142,11 +155,13 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
       }else{
         sender ! InvalidJar("上传失败！")
       }
-
-
-
     }
 
+
+    case KillJobs(ids) => {
+      Logger.info(s"kill jobs ids ===>$ids")
+      sender ! scheduleProvider.killJobs(ids)
+    }
 
 
   }

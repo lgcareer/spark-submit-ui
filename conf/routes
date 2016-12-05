@@ -160,10 +160,15 @@ GET  /product/updata     controllers.MetaRestApi.updataProductData(id:Int,unit:S
 #Dispatch 任务调度
 GET    /dispatch                     controllers.WorkFlows.workflows
 GET    /joblist                      controllers.WorkFlows.getJobList(jobtype:String)
-GET   /workflows/list            controllers.WorkFlowsEditors.editorsList
+GET   /workflows/list                controllers.WorkFlowsEditors.editorsList
 GET   /workflows/editors               controllers.WorkFlowsEditors.editors
 POST  /workflows/submit               controllers.WorkFlowsEditors.submit
 POST  /workflows/upload               controllers.WorkFlowsEditors.upload
+POST  /workflows/kill                 controllers.WorkFlows.killJobs
+#POST  /workflows/resume                controllers.WorkFlows.resumeJob
+#POST  /workflows/suspend              controllers.WorkFlows.suspendJob
+
+
 
 
 #GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson

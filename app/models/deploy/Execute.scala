@@ -8,7 +8,7 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import models.ScheduleManager.{SHOW, StoreFile, Submited}
+import models.ScheduleManager.{KillJobs, SHOW, StoreFile, Submited}
 import models.deploy.CreateBatchRequest
 import models.utils.{Config, Configuration}
 
@@ -108,6 +108,19 @@ object Execute {
   def storeJarOnHdfs(user:String,filePart: FilePart[TemporaryFile]) ={
     val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
     Await.result( (_scheduleManager ? StoreFile(user,filePart))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
+  }
+
+
+  /**
+    * kill jobs
+    * @param ids
+    * @return
+    */
+  def killJobs(ids:Seq[String]) ={
+    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
+    Await.result( (_scheduleManager ? KillJobs(ids))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
   }

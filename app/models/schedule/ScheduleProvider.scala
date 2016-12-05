@@ -1,7 +1,7 @@
 package models
 
 import models.utils.Config
-import org.apache.oozie.client.OozieClient
+import org.apache.oozie.client.{OozieClient, WorkflowJob}
 import play.api.Logger
 import play.api.libs.json.Json
 
@@ -31,6 +31,14 @@ class ScheduleProvider(config: Config) {
 
   def setClient(client:OozieClient): Unit ={
     this.client=client
+  }
+
+  def killJobs(ids:Seq[String]): Unit ={
+    ids.map{
+      id=> client.kill(id)
+    }
+
+
   }
 
 

@@ -5,8 +5,11 @@
            <job-tracker>$jobTracker</job-tracker>
            <name-node>$nameNode</name-node>
            <configuration><property>
-                 <name></name>
-                 <value></value>
+                 <name>mapred.mapper.class</name>
+                 <value>org.apache.oozie.example.SampleReducer</value>
+               </property><property>
+                 <name>mapred.map.tasks</name>
+                 <value>1</value>
                </property></configuration>
          </map-reduce>
          <ok to="end"/>
