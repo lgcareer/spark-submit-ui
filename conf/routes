@@ -165,8 +165,8 @@ GET   /workflows/editors               controllers.WorkFlowsEditors.editors
 POST  /workflows/submit               controllers.WorkFlowsEditors.submit
 POST  /workflows/upload               controllers.WorkFlowsEditors.upload
 POST  /workflows/kill                 controllers.WorkFlows.killJobs
-#POST  /workflows/resume                controllers.WorkFlows.resumeJob
-#POST  /workflows/suspend              controllers.WorkFlows.suspendJob
+POST  /workflows/resume                controllers.WorkFlows.resumeJobs
+POST  /workflows/suspend              controllers.WorkFlows.suspendJobs
 
 
 

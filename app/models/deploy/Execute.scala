@@ -8,7 +8,7 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import models.ScheduleManager.{KillJobs, SHOW, StoreFile, Submited}
+import models.ScheduleManager._
 import models.deploy.CreateBatchRequest
 import models.utils.{Config, Configuration}
 
@@ -119,11 +119,36 @@ object Execute {
     * @return
     */
   def killJobs(ids:Seq[String]) ={
-    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
     Await.result( (_scheduleManager ? KillJobs(ids))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
   }
+
+  /**
+    * resume jobs
+    * @param ids
+    */
+  def resumeJobs(ids:Seq[String]) ={
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
+    Await.result( (_scheduleManager ? ResumeJobs(ids))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
+
+  }
+
+  /**
+    * suspend jobs
+    * @param ids
+    */
+  def suspendJobs(ids:Seq[String]) ={
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
+    Await.result( (_scheduleManager ? Suspend(ids))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
+
+  }
+
 
 
 

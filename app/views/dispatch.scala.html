@@ -293,7 +293,6 @@
                     <button class="btn bulkToolbarBtn btn-danger bulk-kill disable-feedback" data-operation="kill" title="Kill selected" type="button"><i class="fa fa-times"></i><span class="hide-small"> Kill</span></button>
       </span>
 
-
               <span style="float:left;padding-left:10px;padding-right:10px;margin-top:3px" class="hide-smaller">状态切换</span>
               <span class="btn-group" style="float:left;">
                 <a class="btn btn-status btn-success" data-value='SUCCEEDED'>Succeeded</a>
@@ -305,7 +304,10 @@
                 <a class="btn btn-submitted btn-info" data-value='MANUALLY'>Manually</a>
                 <a class="btn btn-submitted btn-info" data-value='COORDINATOR'>Coordinator</a>
               </span>
+
+              <span style="float:left;padding-right:10px;margin-top:3px" class="hide-smaller">Tips:仅suspend状态任务支持resume, 仅running状态支持suspend，已kill任务不支持改变</span>
             </span>
+
 
 
                 <table id="editable-sample" class="table table-striped table-bordered table-condensed table-hover" cellspacing="0">

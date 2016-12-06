@@ -37,11 +37,20 @@ class ScheduleProvider(config: Config) {
     ids.map{
       id=> client.kill(id)
     }
-
-
   }
 
+  def resumeJobs(ids:Seq[String]): Unit ={
+    ids.map{
+      id =>
+      client.resume(id)
+    }
+  }
 
+  def suspendJobs(ids:Seq[String])={
+    ids.map{
+      id=> client.suspend(id)
+    }
+  }
 
 
 

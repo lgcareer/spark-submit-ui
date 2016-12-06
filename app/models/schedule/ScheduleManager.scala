@@ -163,6 +163,9 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
       sender ! scheduleProvider.killJobs(ids)
     }
 
+    case ResumeJobs(ids) => sender ! scheduleProvider.resumeJobs(ids)
+
+    case Suspend(ids) => sender ! scheduleProvider.suspendJobs(ids)
 
   }
 

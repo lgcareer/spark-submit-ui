@@ -40,4 +40,21 @@ object WorkFlows extends Controller with Secured{
       Ok("kill success")
   }
 
+  def resumeJobs = Action{
+    implicit request =>
+      val (ids,action)= jobs.bindFromRequest().get
+      val _ids: Seq[String] = Json.parse(ids).as[Seq[String]]
+      Execute.resumeJobs(_ids)
+      Ok("resume success")
+  }
+
+
+  def suspendJobs =Action{
+    implicit request =>
+      val (ids,action)= jobs.bindFromRequest().get
+      val _ids: Seq[String] = Json.parse(ids).as[Seq[String]]
+      Execute.suspendJobs(_ids)
+      Ok("suspend success")
+  }
+
 }
