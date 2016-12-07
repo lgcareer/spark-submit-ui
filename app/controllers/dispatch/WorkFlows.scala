@@ -1,7 +1,7 @@
 package controllers
 
 
-import models.Execute
+import models.{Execute, JobInfo}
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.libs.json.Json
@@ -55,6 +55,12 @@ object WorkFlows extends Controller with Secured{
       val _ids: Seq[String] = Json.parse(ids).as[Seq[String]]
       Execute.suspendJobs(_ids)
       Ok("suspend success")
+  }
+
+  def detailJobs(id:String) =Action{
+    implicit request =>
+      val jobInfo: JobInfo = Execute.getJobInfo(id)
+      Ok(views.html.jobdetails(jobInfo))
   }
 
 }

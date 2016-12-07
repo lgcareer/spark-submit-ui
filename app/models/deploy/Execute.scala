@@ -146,9 +146,15 @@ object Execute {
     Await.result( (_scheduleManager ? Suspend(ids))
       (Timeout(timeoutSecs,TimeUnit.SECONDS)),
       new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
-
   }
 
+
+  def getJobInfo(id:String):JobInfo={
+    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
+    Await.result( (_scheduleManager ? JobInfos(id))
+      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+      new Timeout(Duration.create(timeoutSecs,"seconds")).duration).asInstanceOf[JobInfo]
+  }
 
 
 

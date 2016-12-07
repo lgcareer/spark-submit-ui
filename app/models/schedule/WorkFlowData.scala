@@ -43,3 +43,12 @@ case class WorkFlowData(
                        status:String,
                        group:String
                        )
+case class JobInfo(
+                  id:String,
+                  joblog:String,
+                  jobAuditlog:String,
+                  joberrlog:String,
+                  jobDAG:String,
+                  jobDefinition:String,
+                  jobConf:String
+                  )

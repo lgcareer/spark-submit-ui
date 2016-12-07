@@ -167,6 +167,7 @@ POST  /workflows/upload               controllers.WorkFlowsEditors.upload
 POST  /workflows/kill                 controllers.WorkFlows.killJobs
 POST  /workflows/resume                controllers.WorkFlows.resumeJobs
 POST  /workflows/suspend              controllers.WorkFlows.suspendJobs
+GET   /workflows/details               controllers.WorkFlows.detailJobs(id:String)
 
 
 

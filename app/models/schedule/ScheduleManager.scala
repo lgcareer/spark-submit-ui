@@ -31,6 +31,7 @@ object  ScheduleManager{
   case class KillJobs(ids:Seq[String])
   case class ResumeJobs(ids:Seq[String])
   case class Suspend(ids:Seq[String])
+  case class JobInfos(id:String)
 
 
 
@@ -166,6 +167,8 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
     case ResumeJobs(ids) => sender ! scheduleProvider.resumeJobs(ids)
 
     case Suspend(ids) => sender ! scheduleProvider.suspendJobs(ids)
+
+    case JobInfos(id) => sender ! scheduleProvider.getJobInfosById(id)
 
   }
 
