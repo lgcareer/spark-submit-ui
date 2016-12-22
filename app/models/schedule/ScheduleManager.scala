@@ -3,8 +3,8 @@ package models
 import java.net.URI
 import java.util.{Properties, UUID}
 
-import akka.actor.{ActorRef, AllForOneStrategy, PoisonPill, Props, Terminated}
 import akka.actor.SupervisorStrategy.Stop
+import akka.actor.{AllForOneStrategy, PoisonPill, Props, Terminated}
 import models.ScheduleManager._
 import models.actor.InstrumentedActor
 import models.utils.Config

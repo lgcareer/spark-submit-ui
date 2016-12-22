@@ -1,10 +1,10 @@
 package models
 
-import java.io.{FileOutputStream, PrintStream}
+import java.io.PrintStream
 
 import models.utils.Config
 import org.apache.activemq.util.ByteArrayOutputStream
-import org.apache.oozie.client.{OozieClient, OozieClientException, WorkflowJob}
+import org.apache.oozie.client.OozieClient
 import play.api.Logger
 import play.api.libs.json.Json
 
