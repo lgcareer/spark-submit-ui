@@ -12,6 +12,7 @@ object AlarmDisk extends Controller with Secured{
     /**
      * 调用it.sina接口
      */
+
     Ok(views.html.alarm())
   }
 }

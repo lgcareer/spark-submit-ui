@@ -9,10 +9,7 @@ import play.api.libs.json.{JsValue, Json}
 import play.api.libs.ws.WS
 import play.api.mvc.{Action, Controller, Results}
 
-import scala.concurrent.Await
-import scala.concurrent.Await
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.duration._
 import scala.language.postfixOps
 
 /**
@@ -43,13 +40,13 @@ class TaskManager @Inject() (config: Config,taskProvider:TaskProvider[AppDataObj
     username => implicit request =>
 
       implicit val yarnWrites: Writes[YarnTaskInfo] = (
-        (JsPath \ "application_id").write[String] and
-          (JsPath \ "name").write[String] and
-          (JsPath \ "apptype").write[String] and
-          (JsPath \ "queue").write[String] and
-          (JsPath \ "starttime").write[Long] and
-          (JsPath \ "state").write[String] and
-          (JsPath \ "finishtime").write[Long]
+        (__ \ "application_id").write[String] and
+          (__ \ "name").write[String] and
+          (__ \ "apptype").write[String] and
+          (__ \ "queue").write[String] and
+          (__ \ "starttime").write[Long] and
+          (__ \ "state").write[String] and
+          (__ \ "finishtime").write[Long]
         )(unlift(YarnTaskInfo.unapply))
 
 

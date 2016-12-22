@@ -23,7 +23,6 @@ object MetaDataManager extends Controller with Secured{
   }
 
   def metadatas=Action{
-    val context: SparkContext = new SparkContext(new SparkConf())
     implicit val residentWrites = Json.writes[MetaData]
     implicit val clusterListWrites = Json.writes[MetaDataList]
     val data: JsValue = Json.toJson(MetaDataList(MetaData.findMetaDatas))
