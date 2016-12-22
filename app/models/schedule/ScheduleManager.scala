@@ -3,8 +3,8 @@ package models
 import java.net.URI
 import java.util.{Properties, UUID}
 
-import akka.actor.{ActorRef, AllForOneStrategy, PoisonPill, Props, Terminated}
 import akka.actor.SupervisorStrategy.Stop
+import akka.actor.{AllForOneStrategy, PoisonPill, Props, Terminated}
 import models.ScheduleManager._
 import models.actor.InstrumentedActor
 import models.utils.Config
@@ -44,7 +44,7 @@ object  ScheduleManager{
 
 class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: JobDAO) extends InstrumentedActor {
   private[this] var hdfs :FileSystem = _
-  private[this] val wc = new OozieClient("http://10.211.55.8:11000/oozie")
+  private[this] val wc = new OozieClient("http://10.75.16.220/:11000/oozie")
   private[this] var apps = Map.empty[String,mutable.Stack[String]];
 
 
