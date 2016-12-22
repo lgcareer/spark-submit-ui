@@ -262,6 +262,18 @@
     </div>
     <div class="panel-body">
 
+        <script src="/assets/javascript/vendor.js"></script>
+        <script src="/assets/javascript/app.js"></script>
+
+
+
+
+
+
+
+
+
+
 
 
         <!--tab-->
@@ -297,14 +309,318 @@
                     <span class="hidden-xs">SPARK</span>
                 </a>
             </li>
-
         </ul>
 
 
         <!--content-->
         <div class="tab-content">
             <div class="tab-pane active" id="data_def">
-               <pre>1</pre>
+
+                <!--collapse start-->
+                <div class="panel-group " id="accordion2">
+                    <div class="panel panel-color panel-gray">
+                        <div class="panel-heading dark">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                                    NameNode
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne2" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div style="padding: 10px 10px 10px;">
+                                    <form class="form-horizontal" role="form">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >NameNode hosts</label>
+                                            <label class="col-sm-2 control-label" >neptunespark.mars.grid.sina.com.cn</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >NameNode directories</label>
+                                            <div class="col-lg-10">
+                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/namenode"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >NameNode Java heap size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text" value="1024">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >NameNode new generation size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="256">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">NameNode maximum new generation size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="256">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">NameNode permanent generation size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="128">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >NameNode maximum permanent generation size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="256">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </form>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-color panel-gray">
+                        <div class="panel-heading dark">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2">
+                                    Secondary NameNode
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo2" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div style="padding: 10px 10px 10px;">
+                                    <form class="form-horizontal" role="form">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >SNameNode host</label>
+                                            <label class="col-sm-2 control-label" >neptunespark.mars.grid.sina.com.cn</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >SecondaryNameNode Checkpoint directories</label>
+                                            <div class="col-lg-10">
+                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/namesecondary"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-color panel-gray">
+                        <div class="panel-heading dark">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo3">
+                                    DataNode
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo3" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div style="padding: 10px 10px 10px;">
+                                    <form class="form-horizontal" role="form">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">DataNode directories</label>
+                                            <div class="col-lg-10">
+                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/data"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >DataNode maximum Java heap size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="1024">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >DataNode volumes failure toleration</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-6">
+                                                    <input class="form-control" type="text"  value="0">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >File that stores mount point for each data dir</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-6">
+                                                    <input class="form-control" type="text"  value="/etc/hadoop/conf/dfs_data_dir_mount.hist">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >DataNode directories permission</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-6">
+                                                    <input class="form-control" type="text"  value="750">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="panel panel-color panel-gray">
+                        <div class="panel-heading dark">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne4">
+                                    General
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne4" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div style="padding: 10px 10px 10px;">
+                                    <form class="form-horizontal" role="form">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label" >WebHDFS enabled</label>
+                                            <div class="col-lg-10">
+                                                <input class="form-control" type="checkbox"/>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >Hadoop maximum Java heap size</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text" value="1024">
+                                                    <span class="input-group-addon">MB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label" >Reserved space for HDFS</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-4">
+                                                    <input class="form-control" type="text"  value="1073741824">
+                                                    <span class="input-group-addon">Bytes</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">HDFS Maximum Checkpoint Delay</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-5">
+                                                    <input class="form-control" type="text"  value="21600">
+                                                    <span class="input-group-addon">seconds</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">Block replication</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="3">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </form>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <!--collapse end-->
+
+
+
+
+
+
+
+
+
             </div>
 
             <div class="tab-pane" id="data_conf">
@@ -322,8 +638,50 @@
             <div class="tab-pane" id="data_audit">
                 <pre>5</pre>
             </div>
-
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
