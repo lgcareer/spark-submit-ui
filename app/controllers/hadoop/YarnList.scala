@@ -66,7 +66,6 @@ object YarnList  extends Controller  with Secured {
     Ok(workerList)
   }
 
-
   def sparkRunTasklist = IsAuthenticated { username => implicit request =>
     val groupName = UserCountDao.userBygroup(username)
     val spark_url = "http://"+config.getString("spark.master.host")+ "/json"

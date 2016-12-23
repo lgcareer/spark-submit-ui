@@ -3,8 +3,8 @@ package models
 import java.net.URI
 import java.util.{Properties, UUID}
 
-import akka.actor.{ActorRef, AllForOneStrategy, PoisonPill, Props, Terminated}
 import akka.actor.SupervisorStrategy.Stop
+import akka.actor.{AllForOneStrategy, PoisonPill, Props, Terminated}
 import models.ScheduleManager._
 import models.actor.InstrumentedActor
 import models.utils.Config
@@ -44,8 +44,9 @@ object  ScheduleManager{
 
 class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: JobDAO) extends InstrumentedActor {
   private[this] var hdfs :FileSystem = _
-  private[this] val wc = new OozieClient("http://10.211.55.8:11000/oozie")
+  private[this] val wc = new OozieClient("http://"+config.getString("hadoop.oozie.host")+"/oozie")
   private[this] var apps = Map.empty[String,mutable.Stack[String]];
+  private[this] val NAMENODE=config.getString("hadoop.nameode.host")
 
 
 
@@ -69,10 +70,10 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
 
     val conf: Properties = wc.createConfiguration
     //conf.setProperty(OozieClient.APP_PATH,"hdfs://192.168.1.133:9000"  + appPath);
-    conf.setProperty("nameNode", "hdfs://10.211.55.8:9000")
+    conf.setProperty("nameNode", s"hdfs://$NAMENODE")
     conf.setProperty("queueName", "default")
     conf.setProperty("oozie.wf.application.path", "${nameNode}/user/hadoop/"+dest+"mr-workflow.xml")
-    conf.setProperty("jobTracker", "http://10.211.55.8:8032")
+    conf.setProperty("jobTracker", "http://"+config.getString("hadoop.jobTracker.host"))
     val jobId: String = wc.run(conf)
     Logger.info(jobId)
     jobId
@@ -81,8 +82,8 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
   def copyFromLocalFile(src:String,dest:String):Option[String] = {
         try {
           val config = new Configuration
-          config.set("fs.default.name", "hdfs://hadoop01:9000")
-          hdfs = FileSystem.get(new URI("hdfs://hadoop01:9000"), config, "hadoop")
+          config.set("fs.default.name", s"hdfs://$NAMENODE")
+          hdfs = FileSystem.get(new URI(s"hdfs://$NAMENODE"), config, "hadoop")
           val srcPath = new Path(src)
           val destPath = new Path(dest)
           if(!hdfs.exists(destPath)){
@@ -137,6 +138,7 @@ class ScheduleManager(config: Config,scheduleProvider: ScheduleProvider,jobDao: 
 
   override def wrappedReceive: Receive = {
     case SHOW(jobtype) =>  sender ! scheduleProvider.jobList(jobtype=jobtype)
+
     case t: Terminated => self ! PoisonPill
 
     case Submited(user,pa) =>  sender ! runJonb(user,pa)

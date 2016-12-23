@@ -182,3 +182,7 @@ GET   /hbase                     controllers.HbaseOptions.findhot
 POST  /findhotregion             controllers.HbaseOptions.findHotRegion
 
 
+#服务管理
+GET  /ambari                 controllers.ServiceManager.summary
+
+
