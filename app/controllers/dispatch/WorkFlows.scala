@@ -21,7 +21,6 @@ object WorkFlows extends Controller with Secured{
     Ok(views.html.dispatch())
   }
 
-
   def getJobList(jobtype:String)=Action{
     println("2")
     Ok(Execute.jobList(jobtype))

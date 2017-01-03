@@ -79,6 +79,7 @@ GET    /userResourceSpark              controllers.Usertally.userResourceSpark
 
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
+GET    /alarmDiskInterface        controllers.AlarmDisk.alarmDiskInterface
 
 #RunTask
 GET    /runTask                     controllers.RunTask.runTask
