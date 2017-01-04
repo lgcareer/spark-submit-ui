@@ -10,7 +10,7 @@ import play.api.mvc.{Action, Controller}
 object ServiceManager extends Controller with Secured{
 
   def summary =Action{
-    Ok(views.html.ambari())
+    Ok(views.html.services())
   }
 
 }

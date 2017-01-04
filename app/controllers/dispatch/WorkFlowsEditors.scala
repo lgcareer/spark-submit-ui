@@ -40,7 +40,6 @@ object WorkFlowsEditors extends Controller with  Secured{
           Ok(job)
 
         }
-
     )
   }
 
