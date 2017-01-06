@@ -197,6 +197,11 @@
                             <span class="title">热点region</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="@routes.ServiceManager.summary">
+                            <span class="title">服务管理</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -1038,25 +1043,25 @@
     </script>*@
 
 @*
-修订日志:v3.1.3(2016.12.09)
-更新工作流任务列表的样式
-添加工作流任务kill,resume,suspend功能
-添加调度任务详情界面
-添加调度任务日志查看、DAG图像查看、配置、错误日志等查看选项
-添加资源调整分发功能
+修订日志:v3.1.4(2016.12.23)
+Ambari环境部署功能与功能调试
+Oozie任务调度环境部署与功能验证
+新增服务配置管理页面与功能
+初始化管理服务配置界面ui与code设计
+新用户注册成功邮件抄送管理员功能
 修复已知bug
 *@
 <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.1.3(2016.12.09)",
+                    title: "修订日志:v3.1.4(2016.12.23)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>更新工作流任务列表的样式</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加工作流任务kill,resume,suspend功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>添加调度任务详情界面</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>添加调度任务日志查看、DAG图像查看、配置、错误日志等查看选项</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>添加资源调整分发功能</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;修复已知bug</sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>初始化管理服务配置界面ui与code设计</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增服务配置管理页面与功能</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>Oozie任务调度环境部署与功能验证</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>Ambari环境部署功能与功能调试</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增新用户注册成功邮件抄送管理员功能</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>修复已知BUG</span><br><br>"+
                     "</div>",
                     timer: 8000,
                     html:true,

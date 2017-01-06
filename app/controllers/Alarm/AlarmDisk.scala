@@ -73,11 +73,21 @@ object AlarmDisk extends Controller with Secured{
 
 
 
-
     Ok(data)
   }
+
+
   def alarmDisk = IsAuthenticated { username => implicit request =>
     Ok(views.html.alarm())
   }
+
+
+
+
+
+
+
+
+
 
 }

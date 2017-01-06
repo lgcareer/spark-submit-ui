@@ -205,6 +205,11 @@
                                 <span class="title">热点region</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="@routes.ServiceManager.summary">
+                                <span class="title">服务管理</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -213,7 +218,7 @@
 
     </div>
 }
-@main("Neputune Spark-jar-uploadJar")(sidebar) {
+@main("磁盘空间告警")(sidebar) {
     <div class="page-title">
         <div class="title-env">
             <h1 class="title">磁盘空间告警</h1>
@@ -227,24 +232,75 @@
                     <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
                 </li>
                 <li>
-
                     <a href="#">报警管理</a>
                 </li>
                 <li class="active">
-
                     <strong>磁盘空间报警</strong>
                 </li>
             </ol>
-
         </div>
-
     </div>
 
-    <div>
-        <div id="container"></div>
-    </div>
-    @copyright()
+
+
+
+ <div id="container1" style="margin:12px;
+    display:-moz-inline-box;
+    display:inline-block;
+    width:31%;  height:300px;
+     "></div>
+
+ <div id="container2" style="margin:12px;
+    display:-moz-inline-box;
+    display:inline-block;
+    width:31%;  height:300px;"
+     ></div>
+
+<div id="container3" style="margin:12px;
+    display:-moz-inline-box;
+    display:inline-block;
+    width:31%;  height:300px;"></div>
+
+<div id="container4" style="margin:12px;
+display:-moz-inline-box;
+display:inline-block;
+width:31%;  height:300px;"></div>
+
+<div id="container5" style="margin:12px;
+    display:-moz-inline-box;
+    display:inline-block;
+    width:31%;  height:300px;"></div>
+
+
+<div id="container6" style="margin:12px;
+display:-moz-inline-box;
+display:inline-block;
+width:31%;  height:300px;"></div>
+
+<div id="container7" style="margin:12px;
+display:-moz-inline-box;
+display:inline-block;
+width:31%;  height:300px;"></div>
+
+
+<div id="container8" style="margin:12px;
+display:-moz-inline-box;
+display:inline-block;
+width:31%;  height:300px;"></div>
+
+
+
+
+
+
+
+
+
+<div class="clearfix"> </div>
+@copyright()
+
 }
+
     <script>
                 $(document).ready(function(){
                     $.ajax({
@@ -275,16 +331,17 @@
                        });
                        return retVal;
                }
+
          var data = diskInfo();
      $(function () {
-        Highcharts.chart('container',{
+        Highcharts.chart('container1',{
           title: {
-            text: 'Neptun Spark 平台监控',
-            x: -20 //center
+            text: '集群磁盘IO',
+            x: -15 //center
         },
         subtitle: {
             text: 'Source: WorldClimate.com',
-            x: -20
+            x: -10
         },
         xAxis: {
             categories: ['data1', 'data2', 'data3', 'data4', 'data5', 'data6',
@@ -326,5 +383,499 @@
 });
 
     </script>
+
+<script>
+
+    $(function () {
+    $('#container2').highcharts({
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: 'HDFS容量'
+        },
+        subtitle: {
+            text: '使用的HDFS容量与非HDFS容量以及配置的容量'
+        },
+        xAxis: {
+            allowDecimals: false,
+            labels: {
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Nuclear weapon states'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000 + 'k';
+                }
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+        },
+        plotOptions: {
+            area: {
+                pointStart: 1940,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            name: '使用的HDFS',
+            data: [
+                   1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+                   27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+                   26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+                   24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+                   22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+                   10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+        }, {
+            name: '使用的非HDFS',
+            data: [
+                   5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                   4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+                   15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+                   33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+                   35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+                   21000, 20000, 19000, 18000, 18000, 17000, 16000]
+        }]
+    });
+});
+
+</script>
+
+<script>
+    $(function () {
+    $('#container3').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode读写字节'
+        },
+        subtitle: {
+            text: '各DataNode中的总的读写的字节'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'byte / s'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: '读取的字节 b/s',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }, {
+            name: '写入的字节 b/s',
+            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+                   0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                   0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+                   3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+<script>
+    $(function () {
+    $('#container4').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode读写块'
+        },
+        subtitle: {
+            text: '各DataNode总的读写的块'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }, {
+            name: 'Voll',
+            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+                   0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                   0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+                   3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+</script>
+
+<script>
+    $(function () {
+    $('#container5').highcharts({
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: '运行状况'
+        },
+        subtitle: {
+            text: '该实体花在各种运行状态上的时间百分比的视觉表示'
+        },
+        xAxis: {
+            allowDecimals: false,
+            labels: {
+                formatter: function () {
+                    return this.value; // clean, unformatted number for year
+                }
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Nuclear weapon states'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value / 1000 + 'k';
+                }
+            }
+        },
+        tooltip: {
+            pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+        },
+        plotOptions: {
+            area: {
+                pointStart: 1940,
+                marker: {
+                    enabled: false,
+                    symbol: 'circle',
+                    radius: 2,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'USA',
+            data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+                   1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
+                   27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
+                   26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
+                   24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
+                   22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
+                   10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+        }, {
+            name: 'USSR/Russia',
+            data: [null, null, null, null, null, null, null, null, null, null,
+                   5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
+                   4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
+                   15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
+                   33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
+                   35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
+                   21000, 20000, 19000, 18000, 18000, 17000, 16000]
+        }]
+    });
+});
+</script>
+
+<script>
+    $(function () {
+    $('#container6').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode 磁盘刷新'
+        },
+        subtitle: {
+            text: '整个DataNode 磁盘中的磁盘刷新'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }, {
+            name: 'Voll',
+            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+                   0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                   0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+                   3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+
+<script>
+    $(function () {
+    $('#container7').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode 写入块'
+        },
+        subtitle: {
+            text: '整个DataNode中的已写入块'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }, {
+            name: 'Voll',
+            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+                   0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                   0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+                   3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+
+
+<script>
+        $(function () {
+    $('#container8').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode 读取块'
+        },
+        subtitle: {
+            text: '整个DataNode中的已读取块'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+
+</script>
+
+
+
+
+
+
+
+
 
 

@@ -17,12 +17,10 @@ object WorkFlows extends Controller with Secured{
     /**
      * 接入oozie 调度，调用API
      */
-    println("1")
     Ok(views.html.dispatch())
   }
 
   def getJobList(jobtype:String)=Action{
-    println("2")
     Ok(Execute.jobList(jobtype))
   }
 

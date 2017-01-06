@@ -53,7 +53,7 @@
                     <span class="title">数据应用面板</span>
                 </a>
                 <ul>
-                    <li class="active">
+                    <li>
                         <a href="@routes.SparkJar.executejarpage">
                             <span class="title">SPARK-JAR应用</span>
                         </a>
@@ -266,16 +266,6 @@
         <script src="/assets/javascript/app.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
         <!--tab-->
         <ul class="nav nav-tabs nav-tabs-justified">
             <li class="active">
@@ -312,6 +302,7 @@
         </ul>
 
 
+
         <!--content-->
         <div class="tab-content">
             <div class="tab-pane active" id="data_def">
@@ -340,7 +331,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label" >NameNode directories</label>
                                             <div class="col-lg-10">
-                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/namenode"></textarea>
+                                                <textarea  id="text1" class="form-control" rows="4"  style="max-width: 600px;" >/hadoop/hdfs/namenode</textarea>
                                             </div>
                                         </div>
 
@@ -427,7 +418,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label" >SecondaryNameNode Checkpoint directories</label>
                                             <div class="col-lg-10">
-                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/namesecondary"></textarea>
+                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/namesecondary">/hadoop/hdfs/namesecondary</textarea>
                                             </div>
                                         </div>
 
@@ -457,7 +448,7 @@
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">DataNode directories</label>
                                             <div class="col-lg-10">
-                                                <textarea  class="form-control" rows="4"  style="max-width: 600px;" value="/hadoop/hdfs/data"></textarea>
+                                                <textarea id="t1"   class="form-control" rows="4"  style="max-width: 600px;" >/hadoop/hdfs/data</textarea>
                                             </div>
                                         </div>
 
@@ -582,6 +573,177 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="panel panel-color panel-gray">
+                        <div class="panel-heading dark">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne5">
+                                    Advanced core-site
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne5" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div style="padding: 10px 10px 10px;">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">hadoop.security.auth_to_local</label>
+                                            <div class="col-lg-10">
+                                                <textarea   class="form-control" rows="4"  style="max-width: 600px;" >DEFAULT</textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">hadoop.security.authentication</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="simple">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">fs.defaultFS</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="hdfs://hadoop03:8020">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">fs.trash.interval</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="360">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">ha.failover-controller.active-standby-elector.zk.op.retries</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="120">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">hadoop.http.authentication.simple.anonymous.allowed</label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="true">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">hadoop.security.authorization
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="false">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">io.compression.codecs
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.SnappyCodec">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">io.file.buffer.size
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="131072">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">io.serializations
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="org.apache.hadoop.io.serializer.WritableSerialization">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">ipc.client.connect.max.retries
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="50">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">ipc.client.connection.maxidletime
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="30000">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">ipc.client.idlethreshold
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="8000">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">ipc.server.tcpnodelay
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="true">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group form-group-sm">
+                                            <label class="col-sm-2 control-label">mapreduce.jobtracker.webinterface.trusted
+                                            </label>
+                                            <div class="col-sm-10">
+                                                <div class="input-group col-xs-3">
+                                                    <input class="form-control" type="text"  value="false">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </form>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
 
 
 
@@ -727,6 +889,7 @@
 
 <script src="@routes.Assets.at("javascripts/oozie-editors-list.js")" type="text/javascript"></script>
 }
+
 
 
 <script>

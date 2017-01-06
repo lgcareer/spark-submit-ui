@@ -10,6 +10,7 @@ import org.specs2.runner.JUnitRunner
 class ComplexApp extends Specification{
 
 
+
   def demoConfigInSimpleLib(config: Config) {
     println(config.getString("spark.home"))
 
