@@ -27,7 +27,12 @@ object Email {
       */
     val sendTextMail =textMail _
 
-      def textMail(): String ={
+
+   /**
+    * 测试文本 to
+    * @return
+    */
+  def textMail(): String ={
           val email = new SimpleEmail()
           email.setHostName("smtp.sina.com")
           email.setSmtpPort(25)

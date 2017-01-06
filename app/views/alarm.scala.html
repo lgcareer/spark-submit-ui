@@ -218,7 +218,7 @@
 
     </div>
 }
-@main("Neputune Spark-jar-uploadJar")(sidebar) {
+@main("磁盘空间告警")(sidebar) {
     <div class="page-title">
         <div class="title-env">
             <h1 class="title">磁盘空间告警</h1>
@@ -249,11 +249,13 @@
     display:inline-block;
     width:31%;  height:300px;
      "></div>
+
  <div id="container2" style="margin:12px;
     display:-moz-inline-box;
     display:inline-block;
     width:31%;  height:300px;"
      ></div>
+
 <div id="container3" style="margin:12px;
     display:-moz-inline-box;
     display:inline-block;
@@ -263,17 +265,28 @@
 display:-moz-inline-box;
 display:inline-block;
 width:31%;  height:300px;"></div>
+
 <div id="container5" style="margin:12px;
     display:-moz-inline-box;
     display:inline-block;
     width:31%;  height:300px;"></div>
+
+
 <div id="container6" style="margin:12px;
 display:-moz-inline-box;
 display:inline-block;
 width:31%;  height:300px;"></div>
 
+<div id="container7" style="margin:12px;
+display:-moz-inline-box;
+display:inline-block;
+width:31%;  height:300px;"></div>
 
 
+<div id="container8" style="margin:12px;
+display:-moz-inline-box;
+display:inline-block;
+width:31%;  height:300px;"></div>
 
 
 
@@ -379,11 +392,10 @@ width:31%;  height:300px;"></div>
             type: 'area'
         },
         title: {
-            text: 'US and USSR nuclear stockpiles'
+            text: 'HDFS容量'
         },
         subtitle: {
-            text: 'Source: <a href="http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf">' +
-            'thebulletin.metapress.com</a>'
+            text: '使用的HDFS容量与非HDFS容量以及配置的容量'
         },
         xAxis: {
             allowDecimals: false,
@@ -422,8 +434,8 @@ width:31%;  height:300px;"></div>
             }
         },
         series: [{
-            name: 'USA',
-            data: [null, null, null, null, null, 6, 11, 32, 110, 235, 369, 640,
+            name: '使用的HDFS',
+            data: [
                    1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
                    27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
                    26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
@@ -431,8 +443,8 @@ width:31%;  height:300px;"></div>
                    22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
                    10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
         }, {
-            name: 'USSR/Russia',
-            data: [null, null, null, null, null, null, null, null, null, null,
+            name: '使用的非HDFS',
+            data: [
                    5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
                    4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
                    15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
@@ -452,10 +464,10 @@ width:31%;  height:300px;"></div>
             type: 'spline'
         },
         title: {
-            text: 'Wind speed during two days'
+            text: 'DataNode读写字节'
         },
         subtitle: {
-            text: 'October 6th and 7th 2009 at two locations in Vik i Sogn, Norway'
+            text: '各DataNode中的总的读写的字节'
         },
         xAxis: {
             type: 'datetime',
@@ -465,7 +477,7 @@ width:31%;  height:300px;"></div>
         },
         yAxis: {
             title: {
-                text: 'Wind speed (m/s)'
+                text: 'byte / s'
             },
             min: 0,
             minorGridLineWidth: 0,
@@ -491,14 +503,14 @@ width:31%;  height:300px;"></div>
             }
         },
         series: [{
-            name: 'Hestavollane',
+            name: '读取的字节 b/s',
             data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
                    7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
                    8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
                    7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
                    3.0, 3.0]
         }, {
-            name: 'Voll',
+            name: '写入的字节 b/s',
             data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
                    0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
                    0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
@@ -521,10 +533,10 @@ width:31%;  height:300px;"></div>
             type: 'spline'
         },
         title: {
-            text: 'Wind speed during two days'
+            text: 'DataNode读写块'
         },
         subtitle: {
-            text: 'October 6th and 7th 2009 at two locations in Vik i Sogn, Norway'
+            text: '各DataNode总的读写的块'
         },
         xAxis: {
             type: 'datetime',
@@ -589,11 +601,10 @@ width:31%;  height:300px;"></div>
             type: 'area'
         },
         title: {
-            text: 'US and USSR nuclear stockpiles'
+            text: '运行状况'
         },
         subtitle: {
-            text: 'Source: <a href="http://thebulletin.metapress.com/content/c4120650912x74k7/fulltext.pdf">' +
-            'thebulletin.metapress.com</a>'
+            text: '该实体花在各种运行状态上的时间百分比的视觉表示'
         },
         xAxis: {
             allowDecimals: false,
@@ -661,10 +672,10 @@ width:31%;  height:300px;"></div>
             type: 'spline'
         },
         title: {
-            text: 'Wind speed during two days'
+            text: 'DataNode 磁盘刷新'
         },
         subtitle: {
-            text: 'October 6th and 7th 2009 at two locations in Vik i Sogn, Norway'
+            text: '整个DataNode 磁盘中的磁盘刷新'
         },
         xAxis: {
             type: 'datetime',
@@ -722,6 +733,145 @@ width:31%;  height:300px;"></div>
 });
 
 </script>
+
+
+<script>
+    $(function () {
+    $('#container7').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode 写入块'
+        },
+        subtitle: {
+            text: '整个DataNode中的已写入块'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }, {
+            name: 'Voll',
+            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
+                   0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                   0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
+                   3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+
+
+<script>
+        $(function () {
+    $('#container8').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'DataNode 读取块'
+        },
+        subtitle: {
+            text: '整个DataNode中的已读取块'
+        },
+        xAxis: {
+            type: 'datetime',
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        yAxis: {
+            title: {
+                text: 'Wind speed (m/s)'
+            },
+            min: 0,
+            minorGridLineWidth: 0,
+            gridLineWidth: 0,
+            alternateGridColor: null
+        },
+        tooltip: {
+            valueSuffix: ' m/s'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 4,
+                states: {
+                    hover: {
+                        lineWidth: 5
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 3600000, // one hour
+                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+            }
+        },
+        series: [{
+            name: 'Hestavollane',
+            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
+                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
+                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
+                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
+                   3.0, 3.0]
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+
+</script>
+
+
+
 
 
 
