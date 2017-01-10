@@ -49,7 +49,6 @@ $(function () {
 });
 
 function resultToCharts() {
-    console.log("i'm here.....");
     $('#generate').click(function () {
         var header = DATA.header;
         var sql_data = DATA.data;
@@ -128,7 +127,7 @@ function resultToTable() {
             }
 
         }
-        var kk = "<table class='table table-striped table-bordered table-hover table-condensed' id='example'>" + result + "</table>";
+        var kk = "<table class='table table-striped table-bordered table-hover table-condensed' id='example' width='100%'>" + result + "</table>";
         $("#tables").html(kk);
         $("#xargs").html(choice + '<option selected = "selected">请选择X坐标:</option>');
         $("#yargs").html(choice + '<option selected = "selected">请选择Y坐标:</option>');
