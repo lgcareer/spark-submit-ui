@@ -153,23 +153,17 @@ object YarnList  extends Controller  with Secured {
    * @return
    */
   def spark_info = IsAuthenticated { username => implicit request =>
-//    import play.libs.Json
-//    val mapper = new ObjectMapper()
-//    mapper.registerModule(com.fasterxml.jackson.module.scala.DefaultScalaModule)
-//    Json.setObjectMapper(mapper)
 
     var spark_total:Map[Any,Any] = Map()
-//    val spark_total = ArrayBuffer[Any]()
+
      val sparkinfo = Json.parse(SparkTotalinfo.findAll())
-//    {"alive_workers":" 3","cores":" 36 Total, 33 Used"
-//      ,"memory":" 138.3 GB Total, 108.0 GB Used","applications":" 4 Running, 188 Completed "
-//      ,"drivers":" 0 Running, 0 Completed ","status":" ALIVE"}
-    val source = Source.fromURL(new URL("http://10.77.25.43:8080")).mkString
+
+    val sparkURL= "http://"+config.getString("spark.master.host")+""
+    val source = Source.fromURL(new URL(sparkURL)).mkString
     val regex_key =
       """(?<=<strong>).*?(?=:</strong>)""".r
     val regex_value =
         """(?s)(?<=</strong>).*?(?=</li>)""".r
-
     val alive_key = regex_key.findAllIn(source)
     val alive_value = regex_value.findAllIn(source)
       val keyList = alive_key.toList
@@ -179,7 +173,19 @@ object YarnList  extends Controller  with Secured {
       val arg_value = valueList(i)
       spark_total += (arg_key -> arg_value)
     }
-    Ok(sparkinfo)
+
+      val alive_workers = spark_total("Alive Workers")
+      val cores = spark_total("Cores in use").toString.split(",")(0)+","+spark_total("Cores in use").toString.split(",")(1).trim
+      val memory = spark_total("Memory in use").toString.split(",")(0).trim+","+spark_total("Memory in use").toString.split(",")(1).trim
+      val applications = spark_total("Applications").toString.split(",")(0).trim+","+spark_total("Applications").toString.split(",")(1).trim
+      val drivers = spark_total("Drivers").toString.split(",")(0).trim+","+spark_total("Drivers").toString.split(",")(0).trim
+      val status = spark_total("Status")
+
+    val spark_info_json = "{\"alive_workers\":"+"\""+alive_workers+"\""+","+"\"cores\":"+"\""+cores+"\""+","+"\"memory\":"+"\""+memory+"\""+","+"\"applications\":"+"\""+applications+"\""+","+"\"drivers\":"+"\""+drivers+"\""+","+"\"status\":"+"\""+status+"\""+"}"
+
+    println(spark_info_json)
+//    Ok(sparkinfo)
+    Ok(spark_info_json)
   }
   /**
    * netWork 变化

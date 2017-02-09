@@ -12,7 +12,7 @@ GET     /logout                     controllers.Authentication.logout
 GET      /sparksql                   controllers.SparkSql.sqlpage
 POST     /executesql                 controllers.SparkSql.executesql
 GET      /download                    controllers.SparkSql.download
-GET      /databaseTable                controllers.SparkSql.databaseTable
+GET      /databaseTable               controllers.SparkSql.databaseTable
 
 #Dashboard
 GET     /yarnInfo                   controllers.YarnList.yarnInfo
@@ -181,6 +181,7 @@ GET    /UserResource                 controllers.Yarn.UserResource(queueName:Str
 #hbase 热点region
 GET   /hbase                     controllers.HbaseOptions.findhot
 POST  /findhotregion             controllers.HbaseOptions.findHotRegion
+POST  /findzookeeper             controllers.HbaseOptions.findZoo
 
 
 #服务管理

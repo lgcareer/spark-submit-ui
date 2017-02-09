@@ -324,7 +324,7 @@
         </div>
 
         </div>
-        <div class="tab-pane" id="data_charts" onclick="resultToCharts()">
+        <div class="tab-pane" id="data_charts" onclick="resultToCharts()" >
             <div class="row">
             <div class="col-xs-2">
         <select class="form-control small" id="xargs">
@@ -431,20 +431,6 @@
 
 }
 </div>    <script>
-                $(document).ready(function(){
-                    $.ajax({
-                        type:"GET",
-                        url:"/whoiam",
-                        dataType:"json",
-                        success:function(data){
-                            var myobj=eval(data);
-                            var trackingSum=myobj.trackingSum;
-                            $('#tracking').html(trackingSum);
-                        }
-                    });
-                });
-     </script>
-    <script>
                 $(document).ready(function(){
                     $.ajax({
                         type:"GET",

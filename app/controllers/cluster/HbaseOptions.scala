@@ -5,51 +5,69 @@ import models._
 import play.api.data.Form
 import play.api.data.Forms._
 
+import collection.JavaConversions._
+import org.json4s._
+import org.json4s.native.Json
 
-import scala.collection.JavaConversions._
 import scala.io.Source
 import scala.collection.mutable.HashMap
 import scala.collection.immutable.ListMap
 import scala.util.matching.Regex
 import java.util.LinkedHashMap
-import play.api.libs.json.{JsValue, Json}
+
 import play.api.mvc.{Action, Controller}
+
+import scala.collection.mutable
+
+
 /**
   * Created by leslie on 16/11/22.
   * hbase 集群相关操作
   */
-object HbaseOptions extends Controller with  Secured{
+object HbaseOptions extends Controller with Secured {
 
-  def region=IsAuthenticated{
-    username => implicit request =>
-      if(UserGroup.hasAdminGroup(username)) Ok(views.html.metadata())  else
-        Ok(views.html.readmetadata())
+  def region = IsAuthenticated {
+    username =>
+      implicit request =>
+        if (UserGroup.hasAdminGroup(username)) Ok(views.html.metadata())
+        else
+          Ok(views.html.readmetadata())
   }
 
-  def findhot=Action{
-    val output=""
-    Ok(views.html.hbase(output))
+  def findhot = Action {
+    val output = ""
+    Ok(views.html.hbase())
   }
-  def findHotRegion=Action{ implicit request =>
-    val (ip,host) = hosts.bindFromRequest.get
-    val read_request: Regex = "tbl.*.region.([0-9a-f]+).readrequestcount\" : ([0-9]+)".r
-    val write_request: Regex = "tbl.*.region.([0-9a-f]+).writerequestcount\" : ([0-9]+)".r
-    val map = findHotRegions(host, read_request, write_request)
-    val zkinfo = getZookeeperInfo(host)
-    val string = new StringBuffer()
-    for(m <- map){
-      string.append(m._1+" : "+m._2+"$")
-    }
-    val output = string.append(zkinfo).toString
-    Ok(views.html.hbase(output))
-//    val maps = new LinkedHashMap[String,String]()
-//    for(m <- map){
-//      maps.put(m._1,String.valueOf(m._2))
-//    }
-//    val strings = zkinfo.split("::")
-//    maps.put(strings(0),strings(1))
-//    Ok(views.html.hbase(maps))
+
+  val host = Form(
+    single("host" -> text)
+  )
+
+
+  def findHotRegion = Action { implicit request =>
+    host.bindFromRequest().fold(
+      formWithErrors => BadRequest(views.html.error(formWithErrors.toString)),
+      host => {
+        val read_request: Regex = "tbl.*.region.([0-9a-f]+).readrequestcount\" : ([0-9]+)".r
+        val write_request: Regex = "tbl.*.region.([0-9a-f]+).writerequestcount\" : ([0-9]+)".r
+        val map = findHotRegions(host, read_request, write_request)
+        val kkk = toJson(map)
+        //val mapper = new ObjectMapper()
+        //val res = mapper.writeValueAsString(kkk)
+        val res = Json(DefaultFormats).write(kkk)
+        Ok(res)
+      })
+
   }
+
+  def findZoo = Action { implicit request =>
+    host.bindFromRequest().fold(
+      formWithErrors => BadRequest(views.html.error(formWithErrors.toString)),
+      host => {
+        Ok(Json(DefaultFormats).write(getZookeeperInfo(host)))
+      })
+  }
+
 
   def getStatics(host: String): String = {
 
@@ -64,6 +82,7 @@ object HbaseOptions extends Controller with  Secured{
       statics96
     }
   }
+
   def getStaticss(host: String, pattern: Regex): HashMap[String, Int] = {
 
     val statics = getStatics(host)
@@ -73,11 +92,12 @@ object HbaseOptions extends Controller with  Secured{
       //      println(matchRead(0)+":"+matchRead(1))
       map.put(matchRead(0).trim(), Integer.valueOf(matchRead(1).trim()))
     }
-//    println(pattern.findAllIn(statics))
+    //    println(pattern.findAllIn(statics))
     map
 
   }
-  def getZookeeperInfo(host: String): String = {
+
+  def getZookeeperInfo(host: String): Map[String, List[Map[String, String]]] = {
     var zks = ""
     var zkParent = "NULL"
     val result = getStatics(host)
@@ -92,8 +112,8 @@ object HbaseOptions extends Controller with  Secured{
       } else {
         zkParent = "NULL"
       }
-      zks + " : " + zkParent
-    }else{
+      toJson(Map(zks -> zkParent))
+    } else {
       val info = Source.fromURL("http://" + host + ":60030/conf", "UTF-8").mkString
       val zkss = info.substring(info.indexOf("hbase.zookeeper.quorum"), info.length())
       //println(zkss)
@@ -104,18 +124,18 @@ object HbaseOptions extends Controller with  Secured{
       } else {
         zkParent = "NULL"
       }
-      zks.replace("</value><source>hbase-site.xml", "") + " : " + zkParent.replace("</value><source>hbase-site.xml", "")
+      toJson(Map(zks.replace("</value><source>hbase-site.xml", "") -> zkParent.replace("</value><source>hbase-site.xml", "")))
     }
-
   }
-//  def moveRegion(zks: String, zkParent: String, regionName: String, destHost: String) = {
-//    val conf: Configuration = HBaseConfiguration.create
-//    conf.set("hbase.zookeeper.quorum", zks);
-//    conf.set("zookeeper.znode.parent", zkParent)
-//    val admin = new HBaseAdmin(conf)
-//
-//    admin.move(Bytes.toBytes(regionName), Bytes.toBytes(destHost));
-//  }
+
+  //  def moveRegion(zks: String, zkParent: String, regionName: String, destHost: String) = {
+  //    val conf: Configuration = HBaseConfiguration.create
+  //    conf.set("hbase.zookeeper.quorum", zks);
+  //    conf.set("zookeeper.znode.parent", zkParent)
+  //    val admin = new HBaseAdmin(conf)
+  //
+  //    admin.move(Bytes.toBytes(regionName), Bytes.toBytes(destHost));
+  //  }
   def getStaticss(host: String, patternRead: Regex, patternWrite: Regex): HashMap[String, Int] = {
 
     val statics = getStatics(host)
@@ -160,13 +180,12 @@ object HbaseOptions extends Controller with  Secured{
     }
 
   }
-  def findHotRegions(host: String, patternRead: Regex, patternWrite: Regex): LinkedHashMap[String, Int] = {
-    println("start to collect....")
+
+  def findHotRegions(host: String, patternRead: Regex, patternWrite: Regex): LinkedHashMap[String, String] = {
     val map = new HashMap[String, Int]
-    val maps = new LinkedHashMap[String, Int]
+    val maps = new LinkedHashMap[String, String]
     val map_former = getStaticss(host, patternRead, patternWrite)
     //    println(map_former)
-    println("sleep 10s...")
     Thread.sleep(10000)
     val map_later = getStaticss(host, patternRead, patternWrite)
     //    println(map_later)
@@ -175,7 +194,8 @@ object HbaseOptions extends Controller with  Secured{
         map.put(k, v - map_former.get(k).get)
       }
 
-      map_former.clear(); map_later.clear()
+      map_former.clear()
+      map_later.clear()
       for (entry <- map.entrySet()) {
         if (entry.getKey.contains("readrequestcount")) {
           map_former.put(entry.getKey.trim(), entry.getValue)
@@ -188,22 +208,28 @@ object HbaseOptions extends Controller with  Secured{
 
       for (i <- 0 until 10) {
         val s = result_read.next()
-        maps.put(s.getKey, Integer.valueOf(s.getValue))
+        maps.put(s.getKey, String.valueOf(s.getValue))
       }
       for (i <- 0 until 10) {
         val s = result_write.next()
-        maps.put(s.getKey, Integer.valueOf(s.getValue))
+        maps.put(s.getKey, String.valueOf(s.getValue))
       }
+
 
     } else {
 
     }
     maps
   }
-  val hosts = Form(
-    tuple(
-      "ip" -> text,
-      "host" -> text
-    )
-  )
+
+  def toJson(data: java.util.Map[String, String]): Map[String, List[Map[String, String]]] = {
+    val k = new mutable.ListBuffer[Map[String, String]]
+    for (m <- data) {
+      k.append(Map("name" -> m._1, "value" -> m._2))
+    }
+
+    Map("data" -> k.toList)
+
+  }
+
 }

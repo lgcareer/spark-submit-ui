@@ -20,8 +20,9 @@ object HadoopMetricsProvider {
     val usednondfs: String = Json.stringify(json \ "CapacityUsedNonDFS")
 
     (used,usednondfs)
-
   }
+
+
 
 
 }

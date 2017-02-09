@@ -9,6 +9,8 @@ import scala.io.Source
 
 /**
  * Created by manbu on 16/7/25.
+ * http://10.77.25.43:50070/jmx?qry=Hadoop:service=NameNode,name=JvmMetrics
+http://hadoop.apache.org/docs/r2.5.2/hadoop-project-dist/hadoop-common/Metrics.html#rpc
  * 报警管理
  */
 object AlarmDisk extends Controller with Secured{
@@ -64,20 +66,18 @@ object AlarmDisk extends Controller with Secured{
       val jvmTotalUsed = jvmUserTuple.split(",")(1)
       jvmTotalArray += (jvmTotalUsed.toFloat/1024/1024).toString + "mb"
     }
-
-    println(timeArray)
-    println(masterAppArray)
-    println(workFreeMbArray)
-    println(jvmPoolsArray)
-    println(jvmTotalArray)
-
-
-
     Ok(data)
   }
 
 
   def alarmDisk = IsAuthenticated { username => implicit request =>
+    //hadoop jvmMetrics
+    val metricsURL= "http://10.75.16.220:50070/jmx?qry=Hadoop:service=NameNode,name=JvmMetrics"
+    val jvmMetrics = scala.io.Source.fromURL(metricsURL).mkString
+    val jvmMetricsJson = Json.parse(jvmMetrics)
+    val MemHeapMaxM = jvmMetricsJson \ "beans".mkString
+    val json = Json.parse(MemHeapMaxM.toString())
+    println(MemHeapMaxM)
     Ok(views.html.alarm())
   }
 
