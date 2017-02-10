@@ -52,6 +52,7 @@ object Email {
   def sendHtmlMail[T](user:T):String={
 
       val email = new HtmlEmail()
+     email.setSSLOnConnect(true)
       email.setHostName(config.getString("email.server.host"))
       email.setSmtpPort(config.getInt("email.default.port"))
       email.setAuthenticator(new DefaultAuthenticator(config.getString("email.default.username"),config.getString("email.default.password")))
