@@ -2,6 +2,7 @@ package models
 
 /**
   * Created by liangkai1 on 16/7/11.
+  *
   */
 sealed trait CommonMessages
 

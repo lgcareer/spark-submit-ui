@@ -34,10 +34,6 @@ object  ScheduleManager{
   case class JobInfos(id:String)
 
 
-
-
-
-
   def props(config:Config,scheduleProvider: ScheduleProvider,jobDao: JobDAO): Props = Props(classOf[ScheduleManager], config,scheduleProvider,jobDao)
 
 }

@@ -22,6 +22,36 @@ object HadoopMetricsProvider {
     (used,usednondfs)
   }
 
+  def getCapacityInfo={
+    val url="http://"+_config.getString("hadoop.metrics.host")+":50070/jmx?qry=Hadoop:service=NameNode,name=FSNamesystem"
+    val json = Json.parse(Source.fromURL(url).mkString)
+
+    val used: String = Json.stringify(json \ "CapacityUsed")
+    val usednondfs: String = Json.stringify(json \ "CapacityUsedNonDFS")
+
+    (used,usednondfs)
+  }
+
+  def getQueuedInfo={
+    val url="http://"+_config.getString("hadoop.metrics.host")+":50070/jmx?qry=Hadoop:service=NameNode,name=FSNamesystem"
+    val json = Json.parse(Source.fromURL(url).mkString)
+
+    val used: String = Json.stringify(json \ "QueuedEditsSize")
+    val usednondfs: String = Json.stringify(json \ "LagTimeMillis")
+
+    (used,usednondfs)
+  }
+
+  def getDFMOTEN={
+    val url="http://"+_config.getString("hadoop.metrics.host")+":50070/jmx?qry=Hadoop:service=NameNode,name=FSNamesystem"
+    val json = Json.parse(Source.fromURL(url).mkString)
+
+    val used: String = Json.stringify(json \ "ImplementationName")
+    val usednondfs: String = Json.stringify(json \ "ImplementationVersion")
+
+    (used,usednondfs)
+  }
+
 
 
 

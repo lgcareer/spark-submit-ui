@@ -53,7 +53,6 @@ class SparkStream @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppData
     }
   }
 
-
   def streamArgs = Action { implicit request =>
     Ok(views.html.streamArgs(executeForm))
   }

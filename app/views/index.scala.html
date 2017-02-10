@@ -818,7 +818,7 @@
             <div class="xe-lower">
                 <div class="border"></div>
                 <span>Total Nodes</span>
-                <strong>9 Total</strong>
+                <strong >0</strong>
             </div>
         </div>
 
@@ -1043,25 +1043,27 @@
     </script>*@
 
 @*
-修订日志:v3.1.4(2016.12.23)
-Ambari环境部署功能与功能调试
-Oozie任务调度环境部署与功能验证
-新增服务配置管理页面与功能
-初始化管理服务配置界面ui与code设计
-新用户注册成功邮件抄送管理员功能
-修复已知bug
+修订日志:v3.2.0(2017.01.6)
+新增hdfs，spark磁盘相关监控页面
+设计spark集群监控模块逻辑
+设计监控指标相关表
+调研并测试metric、jvm相关可用REST for Api
+Ambari编译和编译文档整理
+完善Oozie调度功能和测试
+其它功能测试
 *@
 <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.1.4(2016.12.23)",
+                    title: "修订日志:v3.2.0(2017.01.6)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>初始化管理服务配置界面ui与code设计</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增服务配置管理页面与功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>Oozie任务调度环境部署与功能验证</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>Ambari环境部署功能与功能调试</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增新用户注册成功邮件抄送管理员功能</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>修复已知BUG</span><br><br>"+
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增hdfs，spark磁盘相关监控页面</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>设计spark集群监控模块逻辑</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>Ambari编译和编译文档整理</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>调研并测试metric、jvm相关可用REST for Api</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>设计监控指标相关表</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>完善Oozie调度功能和测试</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;其它功能测试</sapn><br><br>" +
                     "</div>",
                     timer: 8000,
                     html:true,

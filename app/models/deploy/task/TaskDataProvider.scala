@@ -12,7 +12,7 @@ import scala.language.postfixOps
 
 /**
   * Created by liangkai on 16/8/18.
-  * 数据内容提供者
+  * Task数据内容提供者
   */
 object TaskDataProvider{
 
