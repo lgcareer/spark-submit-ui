@@ -7,6 +7,21 @@
            <configuration><property>
                  <name></name>
                  <value></value>
+               </property><property>
+                 <name></name>
+                 <value></value>
+               </property><property>
+                 <name></name>
+                 <value></value>
+               </property><property>
+                 <name></name>
+                 <value></value>
+               </property><property>
+                 <name></name>
+                 <value></value>
+               </property><property>
+                 <name></name>
+                 <value></value>
                </property></configuration>
          </map-reduce>
          <ok to="end"/>

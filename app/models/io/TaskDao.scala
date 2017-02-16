@@ -10,7 +10,7 @@ import anorm.~
 case class TaskInfo(
                      app_id:String,
                      name:String,
-                     cores: Int,
+                     cores: Option[Int],
                      memoryperslave:Long,
                      state:String,
                      starttime:Long,
@@ -52,7 +52,7 @@ trait TaskDao{
       get[String]("task_standalone.state") ~
       get[Long]("task_standalone.starttime")~
       get[Long]("task_standalone.duration") map {
-      case app_id ~ name ~ cores ~ memoryperslave ~ state ~ starttime ~ duration  => TaskInfo(app_id,name,cores,memoryperslave,state,starttime,duration)
+      case app_id ~ name ~ cores ~ memoryperslave ~ state ~ starttime ~ duration  => TaskInfo(app_id,name,Some(cores),memoryperslave,state,starttime,duration)
     }
   }
 

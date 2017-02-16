@@ -47,7 +47,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
   implicit val standaloneReads: Reads[TaskInfo] = (
       (__ \ "id").read[String] and
       (__ \ "name").read[String] and
-      (__ \ "cores").read[Int] and
+      (__ \ "cores").readNullable[Int] and
       (__ \ "memoryperslave").read[Long] and
       (__ \ "state").read[String] and
       (__ \ "starttime").read[Long] and
