@@ -153,4 +153,4 @@ project/plugins/project/
 .worksheet
 
 
-/conf/neptun.conf
+#/conf/neptun.conf

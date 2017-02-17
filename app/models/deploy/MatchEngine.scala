@@ -29,7 +29,7 @@ object MatchEngine {
   val regex_on_standalone = """Spark cluster with app ID (.*)""".r.unanchored
 
 
-  val spark_uri ="http://"+config.getString("spark.master.url")+":8080/json/"
+  val spark_uri ="http://"+config.getString("spark.master.host")+"/json/"
 
   val yarn_uri="http://"+config.getString("hadoop.yarn.host")+"/ws/v1/cluster/apps"
 

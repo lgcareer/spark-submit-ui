@@ -181,7 +181,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
           }
         }
 
-        val url: String = "http://"+config.getString("spark.master.url")+":8080/json"
+        val url: String = "http://"+config.getString("spark.master.host")+"/json"
         WS.url(url).get() map{
           response => response.status match {
             case  200 => Some{
