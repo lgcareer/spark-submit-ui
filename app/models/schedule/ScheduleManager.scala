@@ -19,7 +19,7 @@ import play.api.mvc.MultipartFormData.FilePart
 import scala.collection.mutable
 
 /**
-  * Created by king on 2016/11/2.
+  * Created by liangkai1 on 2016/11/2.
   */
 object  ScheduleManager{
 

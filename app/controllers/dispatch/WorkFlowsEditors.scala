@@ -38,7 +38,6 @@ object WorkFlowsEditors extends Controller with  Secured{
           val kvs = jsValue.as[Seq[String]]
            val job = Execute.handleJob(username,kvs)
           Ok(job)
-
         }
     )
   }

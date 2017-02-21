@@ -106,7 +106,9 @@ object NodeData {
       val pid =nodeData.pid
       nodes=nodes :+ Node(id,ip,host,role,cluster,pid)
     }
-
+    /**
+      * 过滤出已存在IP，则覆盖角色信息
+      */
     diffIP(ips,nodes)
 
   }

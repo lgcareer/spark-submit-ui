@@ -7,6 +7,7 @@ public class Romdow {
 
     public static void main(String ... args) {
         System.out.println(randomString(-229985452)+' '+randomString(-147909649));
+
     }
 
     public static String randomString(int seed) {

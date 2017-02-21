@@ -1,7 +1,12 @@
 package controllers
 
+import java.text.{ParsePosition, SimpleDateFormat}
+import java.util.Date
+
+import models.metrics.HadoopMetricsProvider
+import models.{MetricsData, RPCInfo}
 import models.utils.TimeParseUtils
-import play.api.libs.json.Json
+import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.Controller
 
 import scala.collection.mutable.ArrayBuffer
@@ -14,6 +19,9 @@ http://hadoop.apache.org/docs/r2.5.2/hadoop-project-dist/hadoop-common/Metrics.h
  * 报警管理
  */
 object AlarmDisk extends Controller with Secured{
+
+  HadoopMetricsProvider.startMetrics
+
 
   def alarmDiskInterface = IsAuthenticated { username => implicit request =>
     /**
@@ -69,17 +77,35 @@ object AlarmDisk extends Controller with Secured{
     Ok(data)
   }
 
+  def getNowDate():String ={
+    val before = 3*60*60*1000
+    val currentTime = new Date(System.currentTimeMillis()-before);
+    //将当前时间设置成整点
+    currentTime.setMinutes(0)
+    val formatter = new SimpleDateFormat("yyyy,MM,dd,HH,mm,ss");
+    val dateString = formatter.format(currentTime);
+    return dateString;
+  }
+
 
   def alarmDisk = IsAuthenticated { username => implicit request =>
     //hadoop jvmMetrics
-    val metricsURL= "http://10.75.16.220:50070/jmx?qry=Hadoop:service=NameNode,name=JvmMetrics"
-    val jvmMetrics = scala.io.Source.fromURL(metricsURL).mkString
-    val jvmMetricsJson = Json.parse(jvmMetrics)
-    val MemHeapMaxM = jvmMetricsJson \ "beans".mkString
-    val json = Json.parse(MemHeapMaxM.toString())
-    println(MemHeapMaxM)
-    Ok(views.html.alarm())
+//    val metricsURL= "http://10.75.16.220:50070/jmx?qry=Hadoop:service=NameNode,name=JvmMetrics"
+//    val jvmMetrics = scala.io.Source.fromURL(metricsURL).mkString
+//    val jvmMetricsJson = Json.parse(jvmMetrics)
+//    val MemHeapMaxM = jvmMetricsJson \ "beans".mkString
+//    val json = Json.parse(MemHeapMaxM.toString())
+//    //println(MemHeapMaxM)
+//    Ok(views.html.alarm())
+
+    val rec_rpc=Json.toJson(HadoopMetricsProvider.calcReceivedInterval())
+    val sent_rpc=Json.toJson(HadoopMetricsProvider.calcSentInterval())
+
+    Ok(views.html.alarm(RPCInfo(rec_rpc,sent_rpc,getNowDate())))
+
   }
+
+  
 
 
 

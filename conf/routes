@@ -80,6 +80,13 @@ GET    /userResourceSpark              controllers.Usertally.userResourceSpark
 #Alarm
 GET    /alarm                     controllers.AlarmDisk.alarmDisk
 GET    /alarmDiskInterface        controllers.AlarmDisk.alarmDiskInterface
+GET    /sentByte                  controllers.HadoopMetrics.getRPCSentInfo
+GET    /recByte                   controllers.HadoopMetrics.getRPCReceivedInfo
+
+
+
+
+
 
 #RunTask
 GET    /runTask                     controllers.RunTask.runTask
