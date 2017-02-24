@@ -3,8 +3,8 @@ package controllers
 import java.text.{ParsePosition, SimpleDateFormat}
 import java.util.Date
 
-import models.metrics.HadoopMetricsProvider
-import models.{MetricsData, RPCInfo}
+import models.metrics.{HadoopMetricsProvider, MetricsFactory}
+import models._
 import models.utils.TimeParseUtils
 import play.api.libs.json.{JsValue, Json}
 import play.api.mvc.Controller
@@ -77,15 +77,7 @@ object AlarmDisk extends Controller with Secured{
     Ok(data)
   }
 
-  def getNowDate():String ={
-    val before = 3*60*60*1000
-    val currentTime = new Date(System.currentTimeMillis()-before);
-    //将当前时间设置成整点
-    currentTime.setMinutes(0)
-    val formatter = new SimpleDateFormat("yyyy,MM,dd,HH,mm,ss");
-    val dateString = formatter.format(currentTime);
-    return dateString;
-  }
+
 
 
   def alarmDisk = IsAuthenticated { username => implicit request =>
@@ -98,11 +90,15 @@ object AlarmDisk extends Controller with Secured{
 //    //println(MemHeapMaxM)
 //    Ok(views.html.alarm())
 
-    val rec_rpc=Json.toJson(HadoopMetricsProvider.calcReceivedInterval())
-    val sent_rpc=Json.toJson(HadoopMetricsProvider.calcSentInterval())
 
-    Ok(views.html.alarm(RPCInfo(rec_rpc,sent_rpc,getNowDate())))
+       val rpcInfo: RPCInfo = HadoopMetricsProvider.getMetricMouled[RPCInfo](RPCInfo.getClass)
+       val dfsInfo: DFSInfo = HadoopMetricsProvider.getMetricMouled[DFSInfo](DFSInfo.getClass)
+       val memInfo: MEMInfo = HadoopMetricsProvider.getMetricMouled[MEMInfo](MEMInfo.getClass)
 
+
+
+
+    Ok(views.html.alarm(rpcInfo,dfsInfo,memInfo))
   }
 
   

@@ -1,4 +1,7 @@
-@(rpc: RPCInfo)
+@(rpcInfo: RPCInfo,
+  dfsInfo:DFSInfo,
+  memInfo: MEMInfo
+)
 
 
 
@@ -144,7 +147,7 @@
                     <ul>
                         <li class="active">
                             <a href="@routes.AlarmDisk.alarmDisk">
-                                <span class="title">磁盘空间报警</span>
+                                <span class="title">Hadoop集群监控</span>
                             </a>
                         </li>
                         <li>
@@ -222,11 +225,11 @@
 
     </div>
 }
-@main("磁盘空间告警")(sidebar) {
+@main("Hadoop 集群运行概览")(sidebar) {
     <div class="page-title">
         <div class="title-env">
-            <h1 class="title">磁盘空间告警</h1>
-            <p class="description">告警配置管理面板</p>
+            <h1 class="title">Hadoop集群运行概览</h1>
+            <p class="description">集群监控面板</p>
         </div>
 
         <div class="breadcrumb-env">
@@ -239,7 +242,7 @@
                     <a href="#">报警管理</a>
                 </li>
                 <li class="active">
-                    <strong>磁盘空间报警</strong>
+                    <strong>Hadoop集群监控</strong>
                 </li>
             </ol>
         </div>
@@ -291,9 +294,6 @@ width:31%;  height:300px;"></div>
 display:-moz-inline-box;
 display:inline-block;
 width:31%;  height:300px;"></div>
-
-
-
 
 
 
@@ -387,75 +387,66 @@ width:31%;  height:300px;"></div>
     </script>
 
 <script>
-
-    $(function () {
+$(function () {
     $('#container2').highcharts({
+        global:{
+                useUTC:false
+            },
         chart: {
             type: 'area'
         },
         title: {
-            text: 'HDFS容量'
+            text: 'HDFS Summary'
         },
         subtitle: {
-            text: '使用的HDFS容量与非HDFS容量以及配置的容量'
+            text: 'data capacity used  summary'
         },
         xAxis: {
-            allowDecimals: false,
-            labels: {
-                formatter: function () {
-                    return this.value; // clean, unformatted number for year
+                 type: 'datetime',
+                   dateTimeLabelFormats: {
+                   //hour: '%H:%M'
+                   day: '%H:%M'
                 }
-            }
         },
         yAxis: {
             title: {
-                text: 'Nuclear weapon states'
+                text: 'use percent(%)'
             },
-            labels: {
-                formatter: function () {
-                    return this.value / 1000 + 'k';
-                }
-            }
+            min: 0,
+            minorGridLineWidth: 1,
+            gridLineWidth: 1,
+            alternateGridColor: null
         },
         tooltip: {
-            pointFormat: '{series.name} produced <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} GB)<br/>',
+            shared: true,
+            valueSuffix: 'GB'
         },
         plotOptions: {
             area: {
-                pointStart: 1940,
+                stacking: 'percent',
+                lineColor: '#ffffff',
+                lineWidth: 1,
                 marker: {
-                    enabled: false,
-                    symbol: 'circle',
-                    radius: 2,
-                    states: {
-                        hover: {
-                            enabled: true
-                        }
-                    }
-                }
+                    enabled: false
+                },
+                pointInterval: 360000, // one hour
+                pointStart: Date.UTC(@dfsInfo.time) //年月日时分秒
             }
         },
         series: [{
-            name: '使用的HDFS',
-            data: [
-                   1005, 1436, 2063, 3057, 4618, 6444, 9822, 15468, 20434, 24126,
-                   27387, 29459, 31056, 31982, 32040, 31233, 29224, 27342, 26662,
-                   26956, 27912, 28999, 28965, 27826, 25579, 25722, 24826, 24605,
-                   24304, 23464, 23708, 24099, 24357, 24237, 24401, 24344, 23586,
-                   22380, 21004, 17287, 14747, 13076, 12555, 12144, 11009, 10950,
-                   10871, 10824, 10577, 10527, 10475, 10421, 10358, 10295, 10104]
+            name: 'CapacityUsed',
+            data: @dfsInfo.capacityUsed
         }, {
-            name: '使用的非HDFS',
-            data: [
-                   5, 25, 50, 120, 150, 200, 426, 660, 869, 1060, 1605, 2471, 3322,
-                   4238, 5221, 6129, 7089, 8339, 9399, 10538, 11643, 13092, 14478,
-                   15915, 17385, 19055, 21205, 23044, 25393, 27935, 30062, 32049,
-                   33952, 35804, 37431, 39197, 45000, 43000, 41000, 39000, 37000,
-                   35000, 33000, 31000, 29000, 27000, 25000, 24000, 23000, 22000,
-                   21000, 20000, 19000, 18000, 18000, 17000, 16000]
+            name: 'CapacityRemaining',
+            data: @dfsInfo.capacityRemaining
+        }, {
+            name: 'CapacityUsedNonDFS',
+            data: @dfsInfo.capacityUsedNonDFS
         }]
     });
 });
+
 
 </script>
 
@@ -486,12 +477,11 @@ width:31%;  height:300px;"></div>
         },
         yAxis: {
             title: {
-                text: 'byte / s'
-            },
-            gridLineColor:'#C0D0E0'
+                text: 'rpc speed (KB)'
+            }
         },
         tooltip: {
-            valueSuffix: ' b/s'
+            valueSuffix: 'kb'
         },
         plotOptions: {
             spline: {
@@ -505,16 +495,16 @@ width:31%;  height:300px;"></div>
                     enabled: false
                 },
                 pointInterval: 360000, // one hour
-                pointStart: Date.UTC(@rpc.time) //年月日时分秒
+                pointStart: Date.UTC(@rpcInfo.time) //年月日时分秒
                 //pointEnd:Date.UTC(2017,2,20, 6, 0, 0)
             }
         },
         series: [{
-            name: 'received b/s',
-            data: @rpc.rec_rpc //length=16
+            name: 'received kb',
+            data: @rpcInfo.rec_rpc //length=16
         }, {
-            name: 'sent  b/s',
-            data: @rpc.sent_rpc
+            name: 'sent kb',
+            data: @rpcInfo.sent_rpc
 
         }],
         navigation: {
@@ -530,61 +520,57 @@ width:31%;  height:300px;"></div>
 <script>
     $(function () {
     $('#container4').highcharts({
+        global:{
+                useUTC:false
+            },
+        credits:{
+                enabled:false
+            },
         chart: {
             type: 'spline'
         },
         title: {
-            text: 'DataNode读写块'
+            text: 'HADOOP NameNode MEM USE'
         },
         subtitle: {
-            text: '各DataNode总的读写的块'
+            text: 'Number of Namenode MemNonHeapUsedM and MemHeapUsedM'
         },
         xAxis: {
-            type: 'datetime',
-            labels: {
-                overflow: 'justify'
-            }
+               type: 'datetime',
+                   dateTimeLabelFormats: {
+                   //hour: '%H:%M'
+                   day: '%H:%M'
+                }
         },
         yAxis: {
             title: {
-                text: 'Wind speed (m/s)'
-            },
-            min: 0,
-            minorGridLineWidth: 0,
-            gridLineWidth: 0,
-            alternateGridColor: null
+                text: 'mem speed (MB)'
+            }
         },
         tooltip: {
-            valueSuffix: ' m/s'
+            valueSuffix: 'mb'
         },
         plotOptions: {
             spline: {
                 lineWidth: 4,
                 states: {
                     hover: {
-                        lineWidth: 5
+                        lineWidth: 2
                     }
                 },
                 marker: {
                     enabled: false
                 },
                 pointInterval: 3600000, // one hour
-                pointStart: Date.UTC(2009, 9, 6, 0, 0, 0)
+                pointStart: Date.UTC(@memInfo.time)
             }
         },
         series: [{
             name: 'Hestavollane',
-            data: [4.3, 5.1, 4.3, 5.2, 5.4, 4.7, 3.5, 4.1, 5.6, 7.4, 6.9, 7.1,
-                   7.9, 7.9, 7.5, 6.7, 7.7, 7.7, 7.4, 7.0, 7.1, 5.8, 5.9, 7.4,
-                   8.2, 8.5, 9.4, 8.1, 10.9, 10.4, 10.9, 12.4, 12.1, 9.5, 7.5,
-                   7.1, 7.5, 8.1, 6.8, 3.4, 2.1, 1.9, 2.8, 2.9, 1.3, 4.4, 4.2,
-                   3.0, 3.0]
+            data:  @memInfo.memNonHeapUsedM
         }, {
             name: 'Voll',
-            data: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.3, 0.0,
-                   0.0, 0.4, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
-                   0.0, 0.6, 1.2, 1.7, 0.7, 2.9, 4.1, 2.6, 3.7, 3.9, 1.7, 2.3,
-                   3.0, 3.3, 4.8, 5.0, 4.8, 5.0, 3.2, 2.0, 0.9, 0.4, 0.3, 0.5, 0.4]
+            data: @memInfo.memHeapUsedM
         }],
         navigation: {
             menuItemStyle: {
