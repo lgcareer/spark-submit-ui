@@ -435,13 +435,13 @@ $(function () {
             }
         },
         series: [{
-            name: 'CapacityUsed',
+            name: 'CapacityUsed (GB)',
             data: @dfsInfo.capacityUsed
         }, {
-            name: 'CapacityRemaining',
+            name: 'CapacityRemaining (GB)',
             data: @dfsInfo.capacityRemaining
         }, {
-            name: 'CapacityUsedNonDFS',
+            name: 'CapacityUsedNonDFS (GB)',
             data: @dfsInfo.capacityUsedNonDFS
         }]
     });
@@ -500,10 +500,10 @@ $(function () {
             }
         },
         series: [{
-            name: 'received kb',
+            name: 'received (kb)',
             data: @rpcInfo.rec_rpc //length=16
         }, {
-            name: 'sent kb',
+            name: 'sent (kb)',
             data: @rpcInfo.sent_rpc
 
         }],
@@ -523,20 +523,20 @@ $(function () {
         global:{
                 useUTC:false
             },
-        credits:{
-                enabled:false
-            },
         chart: {
             type: 'spline'
         },
+        credits:{
+                enabled:false
+            },
         title: {
-            text: 'HADOOP NameNode MEM USE'
+            text: 'hadoop mem use'
         },
         subtitle: {
-            text: 'Number of Namenode MemNonHeapUsedM and MemHeapUsedM'
+            text: 'number of mb MemNonHeapUsedM and MemHeapUsedM'
         },
         xAxis: {
-               type: 'datetime',
+            type: 'datetime',
                    dateTimeLabelFormats: {
                    //hour: '%H:%M'
                    day: '%H:%M'
@@ -544,7 +544,7 @@ $(function () {
         },
         yAxis: {
             title: {
-                text: 'mem speed (MB)'
+                text: 'mem use speed (MB)'
             }
         },
         tooltip: {
@@ -552,25 +552,27 @@ $(function () {
         },
         plotOptions: {
             spline: {
-                lineWidth: 4,
+                lineWidth: 2,
                 states: {
                     hover: {
-                        lineWidth: 2
+                        lineWidth: 4
                     }
                 },
                 marker: {
                     enabled: false
                 },
-                pointInterval: 3600000, // one hour
-                pointStart: Date.UTC(@memInfo.time)
+                pointInterval: 360000, // one hour
+                pointStart: Date.UTC(@memInfo.time) //年月日时分秒
+                //pointEnd:Date.UTC(2017,2,20, 6, 0, 0)
             }
         },
         series: [{
-            name: 'Hestavollane',
-            data:  @memInfo.memNonHeapUsedM
+            name: 'memNonHeapUsedM (MB)',
+            data: @memInfo.memNonHeapUsedM //length=16
         }, {
-            name: 'Voll',
+            name: 'memHeapUsedM (MB)',
             data: @memInfo.memHeapUsedM
+
         }],
         navigation: {
             menuItemStyle: {
