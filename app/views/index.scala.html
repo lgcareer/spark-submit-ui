@@ -1043,26 +1043,25 @@
     </script>*@
 
 @*
-修订日志:v3.2.0(2017.01.6)
-新增hdfs，spark磁盘相关监控页面
-设计spark集群监控模块逻辑
-设计监控指标相关表
-调研并测试metric、jvm相关可用REST for Api
-Ambari编译和编译文档整理
-完善Oozie调度功能和测试
-其它功能测试
+修订日志:v3.2.0(2017.02.24)
+Neptun阿里云平台功能兼容测试与修改
+完善Hadoop RPC监控图表可用
+完善Hadoop 内存监控图表可用
+完善HDFS 磁盘容量监控图表可用
+设计与新增监控数据相关表结构
+新增Spark 监控数据接口
 *@
 <script>
             window.onload=function(){
                 swal({
-                    title: "修订日志:v3.2.0(2017.01.6)",
+                    title: "修订日志:v3.2.5(2017.02.24)",
                     text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>新增hdfs，spark磁盘相关监控页面</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>设计spark集群监控模块逻辑</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>Ambari编译和编译文档整理</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>调研并测试metric、jvm相关可用REST for Api</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>设计监控指标相关表</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>完善Oozie调度功能和测试</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>Neptun阿里云平台功能兼容测试与修改</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善Hadoop RPC监控图表可用</i></sapn><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善Hadoop 内存监控图表可用</i></span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>完善HDFS 磁盘容量监控图表可用</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>设计与新增监控数据相关表结构</span><br><br>" +
+                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>新增Spark 监控数据接口</span><br><br>" +
                     "<span class='fa-circle'>&nbsp;其它功能测试</sapn><br><br>" +
                     "</div>",
                     timer: 8000,

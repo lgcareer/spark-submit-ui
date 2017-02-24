@@ -113,8 +113,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
     masterHost
       .map{
          uri +":"+File.separator+
-          File.separator+ _ +
-           ":"+port
+          File.separator+ _
       }.get
   }
 
