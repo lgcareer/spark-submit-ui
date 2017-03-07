@@ -25,6 +25,7 @@ target/
 .idea/jsLibraryMappings.xml
 .idea
 
+
 # Sensitive or high-churn files:
 .idea/dataSources.ids
 .idea/dataSources.xml
@@ -64,9 +65,9 @@ fabric.properties
 # Simple Build Tool
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
 
-.idea
-.settings
-.sbtserver
+/.idea
+/.settings
+/.sbtserver
 target/
 /app-2.10
 lib_managed/
@@ -122,10 +123,8 @@ fabric.properties
 ### PlayFramework template
 # Ignore Play! working directory #
 bin/
-/db
 .eclipse
 /lib/
-/logs/
 /modules
 /project/target
 /target
@@ -156,3 +155,4 @@ project/plugins/project/
 
 
 #/conf/web-site.conf
+project/project/
