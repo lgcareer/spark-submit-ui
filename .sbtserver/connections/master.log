@@ -1,7 +1,0 @@
-New log file opened at Mon Mar 06 17:15:49 HKT 2017 by 59130@MacBook-Pro-103.local
-Taking next connection to: 49360
-New client attempting to connect on port: 49361-49360
-  Address = /10.237.63.184:49360
-This client on port 49361 has uuid 8928628e-c284-469d-aea9-49e86fbc7c2a configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-8928628e-c284-469d-aea9-49e86fbc7c2a
-Taking next connection to: 49360
