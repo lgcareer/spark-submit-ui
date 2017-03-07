@@ -8,6 +8,7 @@ import controllers._
 import models.actor.InstrumentedActor
 import models.deploy._
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
+import models.io.{Message, TaskMessage}
 import models.utils.Config
 import org.apache.commons.lang.StringUtils
 import org.apache.spark.SparkEnv

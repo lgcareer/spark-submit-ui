@@ -1,11 +1,11 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/king/IdeaProject/ficusspark/project/}ficusspark-build...[0m
-[0m[[0mdebug[0m] [0m:: resolving dependencies :: default#ficusspark-build;0.1-SNAPSHOT[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/king/IdeaProject/spark-submit-ui/project/}spark-submit-ui-build...[0m
+[0m[[0mdebug[0m] [0m:: resolving dependencies :: default#spark-submit-ui-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
 [0m[[0mdebug[0m] [0m	refresh = false[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.typesafe.play#sbt-plugin;2.2.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.2.6 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.typesafe.play#sbt-plugin;2.2.6[0m
@@ -692,7 +692,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#sbt-core-next;0.1.1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#sbt-core-next;0.1.1 {compile=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#sbt-core-next;0.1.1[0m
@@ -1054,9 +1054,9 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.2.6->com.typesafe.play#sbt-link;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
@@ -1571,7 +1571,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt-core-next;0.1.1->org.scala-sbt#core-next_2.10;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -1885,10 +1885,10 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.2.6->com.typesafe.play#sbt-link;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
@@ -2403,7 +2403,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt-core-next;0.1.1->org.scala-sbt#core-next_2.10;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -2717,12 +2717,12 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [provided][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.11 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.11 [provided->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-sbt#sbt;0.13.11 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.11 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.11[0m
@@ -3519,11 +3519,11 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.11->org.scala-sbt#interface;0.13.11 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.2.6->com.typesafe.play#sbt-link;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
@@ -4038,7 +4038,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt-core-next;0.1.1->org.scala-sbt#core-next_2.10;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -4351,13 +4351,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#serialization_2.10;0.1.0->org.spire-math#json4s-support_2.10;0.6.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [provided][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.11 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.11 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->compile][0m
@@ -4887,10 +4887,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.11->org.scala-sbt#interface;0.13.11 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [runtime-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [runtime-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.2.6->com.typesafe.play#sbt-link;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
@@ -5405,7 +5405,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt-core-next;0.1.1->org.scala-sbt#core-next_2.10;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -5718,13 +5718,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#serialization_2.10;0.1.0->org.spire-math#json4s-support_2.10;0.6.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [optional][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [test-internal][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [test][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [test-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.2.6->com.typesafe.play#sbt-link;2.2.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.3 {provided=[default(compile)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {provided=[default(compile)]}[0m
@@ -6239,7 +6239,7 @@
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.6 {optional=[compile(*), master(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-reflect;2.10.6 {optional=[compile(*), master(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt-core-next;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt-core-next;0.1.1->org.scala-sbt#core-next_2.10;0.1.1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.6 {provided=[default(compile)]}[0m
@@ -6552,13 +6552,13 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#serialization_2.10;0.1.0->org.spire-math#json4s-support_2.10;0.6.0 [compile->master][0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0mdependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.6 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [optional][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [provided][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->default(compile)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.11 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [provided][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [provided->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.11 [provided->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#sbt;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->compile][0m
@@ -7071,18 +7071,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.11->org.scala-lang#scala-library;2.10.6 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt#compiler-interface;0.13.11->org.scala-sbt#interface;0.13.11 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [plugin][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [plugin][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [sources][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [sources][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [docs][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [docs][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [pom][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [pom][0m
 [0m[[0mdebug[0m] [0mresolving dependencies for configuration 'scala-tool'[0m
-[0m[[0mdebug[0m] [0m== resolving dependencies for default#ficusspark-build;0.1-SNAPSHOT [scala-tool][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->default][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for default#spark-submit-ui-build;0.1-SNAPSHOT [scala-tool][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-library;2.10.6 [compile->default][0m
@@ -7100,8 +7100,8 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#scala-reflect;2.10.6 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.6->org.scala-lang#scala-library;2.10.6 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.10.6->org.scala-lang#scala-library;2.10.6 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.6 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.10.6->org.scala-lang#jline;2.10.6 [optional->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#jline;2.10.6 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.6 {optional=[compile(*), master(compile)]}[0m
@@ -7114,11 +7114,11 @@
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4[0m
 [0m[[0mdebug[0m] [0m	found org.fusesource.jansi#jansi;1.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#jline;2.10.6->org.fusesource.jansi#jansi;1.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->default][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->runtime][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->master][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies default#ficusspark-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->optional(default)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->default][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies default#spark-submit-ui-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.6 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0mall callers are evicted for org.scala-lang.modules#scala-pickling_2.10;0.10.0: evicting too[0m
 [0m[[0mdebug[0m] [0mall callers are evicted for org.scala-lang.modules#scala-pickling_2.10;0.10.0: evicting too[0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
@@ -7212,19 +7212,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1656ms :: artifacts dl 40ms[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT compile produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT runtime produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT test produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT provided produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT optional produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT compile-internal produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT runtime-internal produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT test-internal produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT plugin produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT sources produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT docs produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT pom produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#ficusspark-build;0.1-SNAPSHOT scala-tool produced in /Users/king/IdeaProject/ficusspark/project/target/resolution-cache/reports/default-ficusspark-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1656ms resolve - 40ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1338ms :: artifacts dl 33ms[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT compile produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT runtime produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT test produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT provided produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT optional produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT compile-internal produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT runtime-internal produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT test-internal produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT plugin produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT sources produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT docs produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT pom produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#spark-submit-ui-build;0.1-SNAPSHOT scala-tool produced in /Users/king/IdeaProject/spark-submit-ui/project/target/resolution-cache/reports/default-spark-submit-ui-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1338ms resolve - 33ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

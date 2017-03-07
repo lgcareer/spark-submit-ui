@@ -1,16 +1,12 @@
 package controllers
 
 
-import java.util.UUID
 
 import com.google.inject.Inject
 import models.JobManagerActor.{InvalidJar, JarStored}
 import models.TaskDataProvider.AppDataObject
 import models._
-import org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.UUID
 import play.api.Logger
-import play.api.Play.current
-import play.api.cache.Cache
 import play.api.data.Forms._
 import play.api.data._
 import play.api.mvc._

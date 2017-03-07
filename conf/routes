@@ -3,26 +3,18 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           @controllers.Application.index
 GET     /login                      controllers.Authentication.login
 POST    /login                      controllers.Authentication.authenticate
 GET     /logout                     controllers.Authentication.logout
 
-# Saprk Sql
-GET      /sparksql                   controllers.SparkSql.sqlpage
-POST     /executesql                 controllers.SparkSql.executesql
-GET      /download                    controllers.SparkSql.download
-GET      /databaseTable               controllers.SparkSql.databaseTable
+
 
 #Dashboard
-GET     /yarnInfo                   controllers.YarnList.yarnInfo
 GET     /yarnlist                   controllers.YarnList.yarnlist
-GET     /workerlist                 controllers.YarnList.workerlist
-GET     /runTasklist                 controllers.YarnList.runTasklist
-GET     /workerInfo                  controllers.YarnList.workerInfo
-GET     /spark_info                 controllers.YarnList.spark_info
 GET     /sparklist                  controllers.YarnList.sparklist
-GET     /sparkRunTasklist                  controllers.YarnList.sparkRunTasklist
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
@@ -37,70 +29,17 @@ POST    /findpwd                  controllers.Authentication.resetpwd
 GET     /mail/setpwd              controllers.Authentication.setpwd(email,pwdToken)
 POST   /updatepwd                 controllers.Authentication.updatepwd
 
-# Spark Stream
-GET     /stream                     @controllers.SparkStream.stream
-POST     /stremupload               @controllers.SparkStream.stremupload
-GET     /streamArgs                 @controllers.SparkStream.streamArgs
-POST     /streamExecute             @controllers.SparkStream.streamExecute
-GET     /errorpage                  @controllers.SparkStream.errorpage
+
 
 # Spark Jar
 POST     /sparkjar                     @controllers.SparkJar.upload
 GET     /executejar                    @controllers.SparkJar.executejarpage
 POST     /executejar                   @controllers.SparkJar.executejar
 GET     /errorlog                      @controllers.SparkJar.errorpage(error:String)
-GET    /runtasklogs                    controllers.RunTask.runTaskLogs
-
-
-#Dashboard
-GET     /yarnInfo                     controllers.YarnList.yarnInfo
-GET     /yarnlist                     controllers.YarnList.yarnlist
-GET     /workerlist                   controllers.YarnList.workerlist
-GET     /system_network               controllers.YarnList.system_network
-GET     /active_memory                controllers.YarnList.active_memory
-
-# Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
-
-
-GET   /jobs                          controllers.MonitorController.jobs
-
-#ServicePlan
-GET    /widgets                       controllers.Serviceplan.servicedao
-#GET    /serviceplan                   controllers.Serviceplan.servicedao
-GET    /functionplan                  controllers.Serviceplan.functionplan
-#UserCounts
-GET    /usertatol                     controllers.Usertally.usertatol
-GET    /usergroup                     controllers.Usertally.userGroup
-GET    /userResource                   controllers.Usertally.userResource
-GET    /userResourceSpark              controllers.Usertally.userResourceSpark
-
-
-
-#Alarm
-GET    /alarm                     controllers.AlarmDisk.alarmDisk
-GET    /alarmDiskInterface        controllers.AlarmDisk.alarmDiskInterface
 
 
 
 
-
-
-#RunTask
-GET    /runTask                     controllers.RunTask.runTask
-
-
-#Authority
-GET    /userlist                  controllers.UserManager.userlist
-GET   /usergrouplist                    controllers.UserManager.usergroup
-GET   /rmgroup                      controllers.UserManager.rmgroup(email:String)
-GET  /addgroup                      controllers.UserManager.addgroup(email:String,name:String,group:String,queue:String)
-GET  /members                        controllers.Member.members
-GET  /pass                           controllers.UserManager.pass(email:String)
-GET  /nopass                         controllers.UserManager.nopass(email:String,body:String)
-
-
-GET  /audit                         controllers.UserManager.auditList
 
 #return User
 
@@ -115,81 +54,12 @@ GET   /rerun                           @controllers.TaskManager.rerun(appId:Stri
 
 
 #PUSH
-GET  /startpush                         controllers.Application.startpush
-GET   /msglist                          controllers.Application.msglist
-GET   /read                             controllers.Application.read(appId:String)
-GET   /readall                          controllers.Application.readall
+GET  /startpush                         @controllers.Application.startpush
+GET   /msglist                          @controllers.Application.msglist
+GET   /read                             @controllers.Application.read(appId:String)
+GET   /readall                          @controllers.Application.readall
 
 
 
-#集群管理
-GET   /metadatalist                     controllers.MetaDataManager.metadatas
-GET   /metadata                         controllers.MetaDataManager.metadata
-GET  /update                            controllers.MetaDataManager.update(id:Int,name:String,unit: String,version:String,url:String)
-GET  /rm                                controllers.MetaDataManager.rm(id: Int)
-GET   /names                            controllers.MetaDataManager.getNames
-
-#节点管理
-GET  /nodedata                         controllers.MetaDataManager.getNodaDatas(pid:Int)
-GET  /nodelist                          controllers.MetaDataManager.nodeList
-POST  /addnode                           controllers.MetaDataManager.updateNode
-GET  /rmnode                                controllers.MetaDataManager.deleteNode(id:Int)
-
-#产品单元
-GET  /productlist                       controllers.MetaDataManager.getProducts
-GET  /rmproduct                        controllers.MetaDataManager.deleteProduct(id:Int)
-GET  /addproduct                       controllers.MetaDataManager.updataProduct(id:Int,unit:String,desc:String,contact:String,cluster:String)
-
-
-#元数据REST API
-GET  /cluster/list      controllers.MetaRestApi.getClusterList
-GET  /cluster/add       controllers.MetaRestApi.addCluster(name:String,version:String,url:String)
-GET  /cluster/rm        controllers.MetaRestApi.rmCluster(id:Int)
-GET  /cluster/update      controllers.MetaRestApi.updateCluster(id:Int,name:String,version:String,url:String)
-GET  /cluster/names     controllers.MetaRestApi.getNames
-GET  /node/list        controllers.MetaRestApi.getNodeList
-POST  /node/add        controllers.MetaRestApi.addNode
-GET  /node/update        controllers.MetaRestApi.updateNode(id:Int,ip:String,host: String,role:String,name:String)
-GET  /node/rm          controllers.MetaRestApi.deleteNode(id:Int)
-GET  /node/detiles      controllers.MetaRestApi.getNodaDatas(pid:Int)
-GET  /node/rmbulk      controllers.MetaRestApi.deleteNodeBatch(pid:Int)
-GET  /product/list      controllers.MetaRestApi.getProductList
-GET  /product/add     controllers.MetaRestApi.addProductData(unit:String,desc:String,contact:String,cluster:String)
-GET  /product/delete     controllers.MetaRestApi.deleteProductData(id:Int)
-GET  /product/updata     controllers.MetaRestApi.updataProductData(id:Int,unit:String,desc:String,contact:String,cluster:String)
-
-
-
-
-
-
-#Dispatch 任务调度
-GET    /dispatch                     controllers.WorkFlows.workflows
-GET    /joblist                      controllers.WorkFlows.getJobList(jobtype:String)
-GET   /workflows/list                controllers.WorkFlowsEditors.editorsList
-GET   /workflows/editors               controllers.WorkFlowsEditors.editors
-POST  /workflows/submit               controllers.WorkFlowsEditors.submit
-POST  /workflows/upload               controllers.WorkFlowsEditors.upload
-POST  /workflows/kill                 controllers.WorkFlows.killJobs
-POST  /workflows/resume                controllers.WorkFlows.resumeJobs
-POST  /workflows/suspend              controllers.WorkFlows.suspendJobs
-GET   /workflows/details               controllers.WorkFlows.detailJobs(id:String)
-
-
-
-
-#GET    /yarnSchedulerJson            controllers.Yarn.yarnSchedulerJson
-GET    /UserResource                 controllers.Yarn.UserResource(queueName:String,mem:String,cpu:String,apps:String)
-
-
-
-#hbase 热点region
-GET   /hbase                     controllers.HbaseOptions.findhot
-POST  /findhotregion             controllers.HbaseOptions.findHotRegion
-POST  /findzookeeper             controllers.HbaseOptions.findZoo
-
-
-#服务管理
-GET  /ambari                 controllers.ServiceManager.summary
 
 

@@ -1,3 +1,10 @@
+@(rpcInfo: RPCInfo,
+dfsInfo:DFSInfo,
+memInfo: MEMInfo,
+time:String
+)
+
+
 @sidebar = {
 <div class="sidebar-menu toggle-others collapsed">
     <div class="sidebar-menu-inner">
@@ -41,29 +48,13 @@
                     <span class="title">仪表盘</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-graduation-cap"></i>
-                    <span class="title">数据应用面板</span>
-                </a>
-                <ul>
                     <li>
                         <a href="@routes.SparkJar.executejarpage">
+                            <i class="fa fa-graduation-cap"></i>
                             <span class="title">SPARK-JAR应用</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="@routes.SparkSql.sqlpage">
-                            <span class="title">SPARK-SQL应用</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.SparkStream.stream">
-                            <span class="title">SPARK-STREAM应用</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+
             <li>
                 <a href="#">
                     <i class="fa fa-table"></i>
@@ -78,128 +69,6 @@
                     <li>
                         <a href="@routes.YarnList.sparklist">
                             <span class="title">Spark数据列表</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-anchor"></i>
-                    <span class="title">任务调度</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="@routes.WorkFlows.workflows">
-                            <span class="title">工作流调度列表</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.WorkFlowsEditors.editorsList">
-                            <span class="title">工作流编辑器</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-tasks"></i>
-                    <span class="title">App Tracking</span>
-                    <span class="label label-success pull-right" id ="tracking">50</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="@routes.RunTask.runTask">
-                            <span class="title">Spark Stream 运行任务列表</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.MonitorController.jobs">
-                            <span class="title">Spark Sql任务列表</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.RunTask.runTaskLogs">
-                            <span class="title">Spark 运行任务日志</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-wrench"></i>
-                    <span class="title">报警管理</span>
-                    <span class="label label-success pull-right">5</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="@routes.AlarmDisk.alarmDisk">
-                            <span class="title">Hadoop集群监控</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.AlarmDisk.alarmDisk">
-                            <span class="title">内存相关报警</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.AlarmDisk.alarmDisk">
-                            <span class="title">其他报警</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-users"></i>
-                    <span class="title">用户管理</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="@routes.Usertally.usertatol">
-                            <span class="title">用户统计</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.UserManager.userlist">
-                            <span class="title">用户管理</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.Usertally.usertatol">
-                            <span class="title">权限分配</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-arrows-alt"></i>
-                    <span class="title">节点分布情况</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="@routes.YarnList.workerInfo">
-                            <span class="title">Spark Worker信息</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.Serviceplan.functionplan">
-                            <span class="title">功能划分</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.MetaDataManager.metadata">
-                            <span class="title">集群管理</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.HbaseOptions.findhot">
-                            <span class="title">HotRegion™</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@routes.ServiceManager.summary">
-                            <span class="title">服务管理</span>
                         </a>
                     </li>
                 </ul>
@@ -347,101 +216,6 @@
 
     </script>
 
-<script type="text/javascript">
-
-            jQuery(document).ready(function($)
-            {
-                var gauge = $('#gauge-3').dxCircularGauge({
-                    scale: {
-                        startValue: 0,
-                        endValue: 120,
-                        majorTick: {
-                            tickInterval: 10
-                        },
-                        label: {
-                            customizeText: function (arg) {
-                                return arg.valueText + ' %';
-                            }
-                        }
-                    },
-                    rangeContainer: {
-                        ranges: [
-                            { startValue: 0, endValue: 40, color: '#90ee7e' },
-                            { startValue: 40, endValue: 80, color: '#FF7F24' },
-                            { startValue: 80, endValue: 100, color: '#f45b5b' }
-                        ]
-                    },
-                    title: {
-                        text: '本组使用yarn资源占比',
-                        font: { size: 20}
-                    },
-                    tooltip: {
-                        enabled: true,
-                        format: {
-                            type: 'present',
-                            precision: 2
-                        }
-                    },
-                    value: rateData
-                }).dxCircularGauge('instance');
-
-
-
-
-                //内存占比显示
-                var doughnut2_data_source = [
-                    { id: 0, x1: 0 },
-                    { id: 1, x1: 2 },
-                    { id: 2, x1: 3 },
-                    { id: 3, x1: 5 },
-                    { id: 4, x1: 7 },
-                    { id: 5, x1: 3 },
-                    { id: 6, x1: 1 },
-                    { id: 7, x1: 2 },
-                    { id: 8, x1: 5 },
-                    { id: 9, x1: 4 },
-                ];
-
-                $("#area-2").dxChart({
-                    dataSource: doughnut2_data_source,
-                    commonSeriesSettings: {
-                        type: "area",
-                        argumentField: "id"
-                    },
-                    series: [
-                        { valueField: "x1", name: "15-64 years", color: '#7c38bc', opacity: .7 },
-                    ],
-                    argumentAxis:{
-                        valueMarginsEnabled: false
-                    },
-                    valueAxis:{
-                        label: {
-                            format: "millions"
-                        }
-                    },
-                    legend: {
-                        verticalAlignment: "bottom",
-                        horizontalAlignment: "center"
-                    },
-                    legend: {
-                        visible: false
-                    },
-                    commonAxisSettings: {
-                        label: {
-                            visible: false
-                        },
-                        grid: {
-                            visible: false
-                        }
-                    },
-                    margin: {
-                        bottom: 0,
-                        top: 30
-                    }
-                });
-
-            });
-    </script>
 
 <script>
             //spark集群运行情况
@@ -492,255 +266,7 @@
 
     </script>
 
-<script type="text/javascript">
-            //Spark standlone资源计算
-            function spark_resource(){
-                var retVal = '';
-                $.ajax({
-                    type:"GET",
-                    url:"/userResourceSpark",
-                    dataType:"json",
-                    async:false,
-                    success:function(data){
-                        retVal=data;
-                    }
-                });
-                return retVal;
-            }
 
-            var data = spark_resource();
-            var rate = eval(data);
-            var rateDataSpark = rate.rateSpark;
-
-            jQuery(document).ready(function($)
-            {
-                var gauge = $('#sparkStandlone').dxCircularGauge({
-                    scale: {
-                        startValue: 0,
-                        endValue: 100,
-                        majorTick: {
-                            tickInterval: 10
-                        },
-                        label: {
-                            customizeText: function (arg) {
-                                return arg.valueText + ' %';
-                            }
-                        }
-                    },
-                    rangeContainer: {
-                        ranges: [
-                            { startValue: 0, endValue: 40, color: '#4DFFFF' },
-                            { startValue: 40, endValue: 60, color: '#46A3FF' },
-                            { startValue: 60, endValue: 80, color: '#FF8040' },
-                            { startValue: 80, endValue: 100, color: '#BB3D00' }
-                        ]
-                    },
-                    title: {
-                        text: '本组使用Spark资源占比',
-                        font: { size: 20}
-                    },
-                    tooltip: {
-                        enabled: true,
-                        format: {
-                            type: 'present',
-                            precision: 2
-                        }
-                    },
-                    value: rateDataSpark
-                }).dxCircularGauge('instance');
-            });
-
-    </script>
-<script>
-          <!-- Master 网络变化情况-->
-          function network(){
-                var ret = '';
-                $.ajax({
-                    type:"GET",
-                    url:"/system_network",
-                    dataType:"json",
-                    async:false,
-                    success:function(data){
-                        ret=data;
-                    }
-                });
-                return ret;
-            }
-            var data = network();
-            var netdata = eval(data);
-            var outpps = netdata.outpps;
-            var inpps = netdata.inpps;
-            var intraffic = netdata.intraffic;
-            var outtraffic = netdata.outtraffic;
-
-            <!--var change1 = inpps/2 + (outpps%inpps)*0.2;-->
-            var change1 = inpps*0.05+10;
-            var change2 = outpps*0.05+10;
-            <!--var change2 = intraffic/2+(outtraffic%(intraffic/2)*0.8);-->
-            <!--上-->
-            var ppsarr = [inpps,change1];
-            <!--下-->
-            var trafficArr = [intraffic,change2];
-
-            <!-- Master 内存和cpu变化-->
-           function memory_cpu(){
-                var memory_cpu_arg = '';
-                $.ajax({
-                    type:"GET",
-                    url:"/active_memory",
-                    dataType:"json",
-                    async:false,
-                    success:function(data){
-                        memory_cpu_arg=data;
-                    }
-                });
-                return memory_cpu_arg;
-            }
-            var data = memory_cpu();
-            var memoryCpu = eval(data);
-            var cpuRate = memoryCpu.cpuRate;
-            var active_memory = (memoryCpu.active_memory)/1024/1024;
-
-        jQuery(document).ready(function($)
-        {
-            // Realtime Network Stats
-            var i = 0,
-            rns_values = [130,150],
-            rns2_values = [39,50],
-            realtime_network_stats = [];
-
-            <!--setInterval(memory_cpu,1000);-->
-
-            for(i=0; i<=100; i++)
-            {
-                realtime_network_stats.push({ id: i,
-                    x1: between(ppsarr[0],ppsarr[1]),
-                    x2: between(trafficArr[0], trafficArr[1])});
-            }
-            $("#realtime-network-stats").dxChart({
-                dataSource: realtime_network_stats,
-                commonSeriesSettings: {
-                    type: "area",
-                    argumentField: "id"
-                },
-                series: [
-                    { valueField: "x1", name: "Packets Sent", color: '#694d9f'},
-                    { valueField: "x2", name: "Packets Received", color: '#2b6447'},
-                ],
-                legend: {
-                    verticalAlignment: "bottom",
-                    horizontalAlignment: "center"
-                },
-                commonAxisSettings: {
-                    label: {
-                        visible: false
-                    },
-                    grid: {
-                        visible: true,
-                        color: '#f5f5f5'
-                    }
-                },
-                legend: {
-                    visible: false
-                },
-                argumentAxis: {
-                    valueMarginsEnabled: false
-                },
-                valueAxis: {
-                    max: 500
-                },
-                animation: {
-                    enabled: false
-                }
-            }).data('iCount', i);
-            $('#network-realtime-gauge').dxCircularGauge({
-                scale: {
-                    startValue: 0,
-                    endValue: 200,
-                    majorTick: {
-                        tickInterval: 50
-                    }
-                },
-                rangeContainer: {
-                    palette: 'pastel',
-                    width: 3,
-                    ranges: [
-                        { startValue: 0, endValue: 50, color: "#FF0000" },
-                        { startValue: 50, endValue: 100, color: "#FF0000" },
-                        { startValue: 100, endValue: 150, color: "#FF0000" },
-                        { startValue: 150, endValue: 200, color: "#FF0000" },
-                    ],
-                },
-                value: 140,
-                valueIndicator: {
-                    offset: 20,
-                    color: '#228B22',
-                    type: 'triangleNeedle',
-                    spindleSize: 15
-                }
-            });
-            setInterval(function(){ networkRealtimeChartTick(ppsarr, trafficArr); }, 2000);
-            setInterval(function(){ networkRealtimeGaugeTick(); }, 2000);
-            setInterval(function(){ networkRealtimeMBupdate(); }, 3000);
-
-
-
-            // Resize charts
-            $(window).on('xenon.resize', function()
-            {
-                $("#realtime-network-stats").data("dxChart").render();
-            });
-
-        });
-
-        function networkRealtimeChartTick(min_max, min_max2)
-        {
-            var $ = jQuery,
-                    i = 0;
-
-            var chart_data = $('#realtime-network-stats').dxChart('instance').option('dataSource');
-
-            var count = $('#realtime-network-stats').data('iCount');
-
-            $('#realtime-network-stats').data('iCount', count + 1);
-
-            chart_data.shift();
-            chart_data.push({id: count + 1, x1: between(min_max[0],min_max[1]), x2: between(min_max2[0],min_max2[1])});
-
-            $('#realtime-network-stats').dxChart('instance').option('dataSource', chart_data);
-        }
-
-        function networkRealtimeGaugeTick()
-        {
-            var nr_gauge = jQuery('#network-realtime-gauge').dxCircularGauge('instance');
-
-            nr_gauge.value(between(0,cpuRate));
-        }
-
-        function networkRealtimeMBupdate()
-        {
-            var $el = jQuery("#network-mbs-packets"),
-                    options = {
-                        useEasing : true,
-                        useGrouping : true,
-                        separator : ',',
-
-                        decimal : '.',
-                        prefix : '' ,
-                        suffix : 'GB'
-                    },
-                    cntr = new countUp($el[0],parseFloat($el.text().replace('mb/s')),parseFloat(between(active_memory,active_memory+1)), 2, 5, options);
-
-            cntr.start();
-        }
-
-        function between(randNumMin, randNumMax)
-        {
-            var randInt = Math.floor((Math.random() * ((randNumMax + 1) - randNumMin)) + randNumMin);
-            <!--var randInt = Math.floor(((randNumMax) - randNumMin)) + randNumMin);-->
-            return randInt;
-        }
-    </script>
 
 
 <div class="row">
@@ -895,45 +421,40 @@
 
     <div class="clearfix"></div>
 
+
     <div class="panel panel-body">
 
         <div class="row">
-            <div class="col-sm-6">
-                <div id="gauge-3" style="height: 440px ; margin: 0 30px ;"></div>
-            </div>
-            <div class="col-sm-6">
-                <div id="sparkStandlone" style="height: 440px ; margin: 0 30px ;"></div>
+
+
+            <div class="col-sm-20">
+                <div style="height: 440px ; margin: 0;">
+
+                    <div id="container1" style="margin:12px;
+                        display:-moz-inline-box;
+                        display:inline-block;
+                        width:31%;  height:350px;"
+                                        ></div>
+
+                    <div id="container2" style="margin:12px;
+                    display:-moz-inline-box;
+                    display:inline-block;
+                    width:31%;  height:350px;"></div>
+
+                    <div id="container3" style="margin:12px;
+                        display:-moz-inline-box;
+                        display:inline-block;
+                        width:31%;  height:350px;"></div>
+
+
+                </div>
             </div>
 
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            @*<div class="chart-item-bg-2">
-            <div class="chart-item-num num-sm" style="width: 370px ;"
-                 data-count="this" data-from="0"
-                 data-to="20.89"
-                 data-suffix="%" data-duration="3" id ="userdRateMemory">%</div>
-            <div class="chart-item-env no-padding">
-                <div id="area-2" style="height: 150px ; margin: 0"></div>
-            </div>
-        </div>*@
-            <div class="chart-item-bg">
-                <div class="chart-label">
-                    <!--<div id="network-mbs-packets" class="h1 text-purple text-bold"-->
-                    <div id="network-mbs-packets" class="h1 text-purple text-bold"
-                         data-count="this" data-from="0.00" data-to="0"
-                         data-suffix="GB" data-duration="1"></div>
-                    <span class="text-small text-muted text-upper">Master内存变化</span>
-                </div>
-                <div class="chart-right-legend">
-                    <div id="network-realtime-gauge" style="width: 170px; height: 140px"></div>
-                </div>
-                <div id="realtime-network-stats" style="height: 180px">
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
 
 </div>
 
@@ -1042,36 +563,211 @@
     });
     </script>*@
 
-@*
-修订日志:v3.2.5(2017.02.24)
-Neptun阿里云平台功能兼容测试与修改
-完善Hadoop RPC监控图表可用
-完善Hadoop 内存监控图表可用
-完善HDFS 磁盘容量监控图表可用
-设计与新增监控数据相关表结构
-新增Spark 监控数据接口
-*@
+
 <script>
-            window.onload=function(){
-                swal({
-                    title: "修订日志:v3.2.5(2017.02.24)",
-                    text: "<div style='text-align:left;font-size:15px;line-height:40px'>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>Neptun阿里云平台功能兼容测试与修改</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善Hadoop RPC监控图表可用</i></sapn><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'>完善Hadoop 内存监控图表可用</i></span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>完善HDFS 磁盘容量监控图表可用</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>设计与新增监控数据相关表结构</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;<i style='color:#ff3333'></i>新增Spark 监控数据接口</span><br><br>" +
-                    "<span class='fa-circle'>&nbsp;其它功能测试</sapn><br><br>" +
-                    "</div>",
-                    timer: 8000,
-                    html:true,
-                    showConfirmButton: true
-                });
+$(function () {
+    $('#container1').highcharts({
+        global:{
+                useUTC:false
+            },
+            credits:{
+                enabled:false
+            },
+        chart: {
+            type: 'area'
+        },
+        title: {
+            text: 'HDFS Summary'
+        },
+        subtitle: {
+            text: 'data capacity used  summary'
+        },
+        xAxis: {
+                 type: 'datetime',
+                   dateTimeLabelFormats: {
+                   //hour: '%H:%M'
+                   day: '%H:%M'
+                }
+        },
+        yAxis: {
+            title: {
+                text: 'use percent(%)'
+            },
+            min: 0,
+            minorGridLineWidth: 1,
+            gridLineWidth: 1,
+            alternateGridColor: null
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.percentage:.1f}%</b> ({point.y:,.0f} GB)<br/>',
+            shared: true,
+            valueSuffix: 'GB'
+        },
+        plotOptions: {
+            area: {
+                stacking: 'percent',
+                lineColor: '#ffffff',
+                lineWidth: 1,
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 360000, // one hour
+                pointStart: Date.UTC(@time) //年月日时分秒
             }
-    </script>
+        },
+        series: [{
+            name: 'CapacityUsed (GB)',
+            data: @dfsInfo.capacityUsed
+        }, {
+            name: 'CapacityRemaining (GB)',
+            data: @dfsInfo.capacityRemaining
+        }, {
+            name: 'CapacityUsedNonDFS (GB)',
+            data: @dfsInfo.capacityUsedNonDFS
+        }]
+    });
+});
+
+
+</script>
+
+<script>
+    $(function () {
+    $('#container2').highcharts({
+        global:{
+                useUTC:false
+            },
+        chart: {
+            type: 'spline'
+        },
+        credits:{
+                enabled:false
+            },
+        title: {
+            text: 'hadoop RPC'
+        },
+        subtitle: {
+            text: 'number of bytes rpc read and send'
+        },
+        xAxis: {
+            type: 'datetime',
+                   dateTimeLabelFormats: {
+                   //hour: '%H:%M'
+                   day: '%H:%M'
+                }
+        },
+        yAxis: {
+            title: {
+                text: 'rpc speed (KB)'
+            }
+        },
+        tooltip: {
+            valueSuffix: 'kb'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 2,
+                states: {
+                    hover: {
+                        lineWidth: 4
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 360000, // one hour
+                pointStart: Date.UTC(@time) //年月日时分秒
+                //pointEnd:Date.UTC(2017,2,20, 6, 0, 0)
+            }
+        },
+        series: [{
+            name: 'received (kb)',
+            data: @rpcInfo.rec_rpc //length=16
+        }, {
+            name: 'sent (kb)',
+            data: @rpcInfo.sent_rpc
+
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+
+</script>
+
+<script>
+    $(function () {
+    $('#container3').highcharts({
+        global:{
+                useUTC:false
+            },
+        chart: {
+            type: 'spline'
+        },
+        credits:{
+                enabled:false
+            },
+        title: {
+            text: 'hadoop mem use'
+        },
+        subtitle: {
+            text: 'number of mb MemNonHeapUsedM and MemHeapUsedM'
+        },
+        xAxis: {
+            type: 'datetime',
+                   dateTimeLabelFormats: {
+                   //hour: '%H:%M'
+                   day: '%H:%M'
+                }
+        },
+        yAxis: {
+            title: {
+                text: 'mem use speed (MB)'
+            }
+        },
+        tooltip: {
+            valueSuffix: 'mb'
+        },
+        plotOptions: {
+            spline: {
+                lineWidth: 2,
+                states: {
+                    hover: {
+                        lineWidth: 4
+                    }
+                },
+                marker: {
+                    enabled: false
+                },
+                pointInterval: 360000, // one hour
+                pointStart: Date.UTC(@time) //年月日时分秒
+            }
+        },
+        series: [{
+            name: 'memNonHeapUsedM (MB)',
+            data: @memInfo.memNonHeapUsedM //length=16
+        }, {
+            name: 'memHeapUsedM (MB)',
+            data: @memInfo.memHeapUsedM
+
+        }],
+        navigation: {
+            menuItemStyle: {
+                fontSize: '10px'
+            }
+        }
+    });
+});
+</script>
+
+
+
 <div class="clearfix"></div>
 @copyright()
+
 
 }
 

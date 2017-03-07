@@ -1,36 +1,51 @@
 package models.metrics
 
-import java.text.SimpleDateFormat
-import java.util.Date
-
 import models._
 import play.api.Logger
-import play.api.libs.json.{Json}
+import play.api.libs.json.{JsValue, Json}
 
 /**
   * Created by laingkai1 on 2017/2/23.
   * <p>metric 数据计算相关 @host:port/jmx<p>
   *
   */
-private[metrics] class MetricsFactory {
+private [metrics] abstract  class  Factory {
+  var metrics: Seq[MetricsData] =_
 
 
-  def queryMetricsModels:PartialFunction[Class[_],BaseInfo]={
+  def queryMetrics[T](clz:Class[_]) :T={
+    metrics = MetricsData.getMetrics()
+    clz.getClass match  {
+      case _=> queryMetricsModels(clz).asInstanceOf[T]
+    }
+  }
+
+   def queryMetricsModels:PartialFunction[Class[_],BaseInfo] = ???
+
+}
+
+private[metrics] class MetricsFactory extends  Factory{
+
+  private[this] val BYTE_NUMBER=1024
+
+
+  override def queryMetricsModels:PartialFunction[Class[_],BaseInfo]={
     case x if  x == RPCInfo.getClass =>
-      RPCInfo(ReceivedInterval, SentInterval, getNowDate)
+      RPCInfo(ReceivedInterval, SentInterval)
 
     case x if  x == DFSInfo.getClass =>
-      DFSInfo(CapacityUsed,CapacityRemaining,CapacityUsedNonDFS,getNowDate)
+      DFSInfo(CapacityUsed,CapacityRemaining,CapacityUsedNonDFS)
 
     case x if x==MEMInfo.getClass =>
-      MEMInfo(MemHeapUsedM,MemNonHeapUsedM,getNowDate)
+      MEMInfo(MemHeapUsedM,MemNonHeapUsedM)
+
     case _ => BadInfo("error")
   }
 
 
 
+
   private [this] def MemNonHeapUsedM={
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Double]={
       for(me<- metrics) yield (me.MemNonHeapUsedM)
     }
@@ -40,7 +55,6 @@ private[metrics] class MetricsFactory {
 
 
   private [this] def MemHeapUsedM ={
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Double]={
       for(me<- metrics) yield (me.MemHeapUsedM)
     }
@@ -50,27 +64,24 @@ private[metrics] class MetricsFactory {
 
 
   private [this] def CapacityUsed = {
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Long]={
-      for(me<- metrics) yield (me.CapacityUsed / (1024*1024*1024))
+      for(me<- metrics) yield (me.CapacityUsed / (BYTE_NUMBER*BYTE_NUMBER*BYTE_NUMBER))
     }
     Logger.debug("=>使用容量"+result.toString())
     Json.toJson(result.reverse)
   }
 
   private [this] def CapacityRemaining ={
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Long]={
-      for(me<- metrics) yield (me.CapacityRemaining  / (1024*1024*1024))
+      for(me<- metrics) yield (me.CapacityRemaining  / (BYTE_NUMBER*BYTE_NUMBER*BYTE_NUMBER))
     }
     Logger.debug("=> 剩余容量"+result.toString())
     Json.toJson(result.reverse)
   }
 
   private [this] def CapacityUsedNonDFS  ={
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Long]={
-      for(me<- metrics) yield (me.CapacityUsedNonDFS / (1024*1024*1024))
+      for(me<- metrics) yield (me.CapacityUsedNonDFS / (BYTE_NUMBER*BYTE_NUMBER*BYTE_NUMBER))
     }
     Logger.debug("=> 使用的非DFS容量"+result.toString())
     Json.toJson(result.reverse)
@@ -82,13 +93,12 @@ private[metrics] class MetricsFactory {
 
 
   private[this] def SentInterval  ={
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Long]={
       for(i<- 0 until metrics.length)
         yield if(i==metrics.length-1){
           0
         }else{
-          (metrics(i).sentBytes-metrics(i+1).sentBytes)
+          (metrics(i).sentBytes-metrics(i+1).sentBytes)/BYTE_NUMBER
         }
     }.dropRight(1)
     Logger.debug("=> RPC发送"+result.toString())
@@ -97,13 +107,12 @@ private[metrics] class MetricsFactory {
 
 
   private[this] def ReceivedInterval ={
-    val metrics: Seq[MetricsData] = MetricsData.getMetrics()
     val result:Seq[Long]={
       for(i<- 0 until metrics.length)
         yield if(i==metrics.length-1){
           0
         }else{
-          (metrics(i).receivedBytes-metrics(i+1).receivedBytes)
+          (metrics(i).receivedBytes-metrics(i+1).receivedBytes)/BYTE_NUMBER
         }
     }.dropRight(1)
     Logger.debug("=> RPC接收"+result.toString())
@@ -113,14 +122,12 @@ private[metrics] class MetricsFactory {
 
 
 
-  private[this] def getNowDate:String ={
-    val before = 3*60*60*1000
-    val currentTime = new Date(System.currentTimeMillis()-before);
-    //将当前时间设置成整点
-    currentTime.setMinutes(0)
-    val formatter = new SimpleDateFormat("yyyy,MM,dd,HH,mm,ss");
-    val dateString = formatter.format(currentTime);
-    return dateString;
-  }
+
+
+
+
+
+
+
 
 }

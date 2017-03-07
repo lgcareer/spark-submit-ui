@@ -91,7 +91,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
 
   def loadTaskInfo(app:AppDataObject): Unit ={
     val appId: String = app.appId
-    Logger.info(s"用户任务Id====>$appId")
+    Logger.info(s"user app Id====>$appId")
     MatchEngine.matchURI(appId).map(
       data=>
       data._1 match {

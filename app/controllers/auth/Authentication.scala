@@ -16,13 +16,14 @@ import scala.language.postfixOps
 import scala.util.matching.Regex
 
 /**
+  * kinge
  * 用户登录权限验证
  */
 object Authentication  extends Controller with  Secured{
 
   val loginForm = Form(
     tuple(
-      "email" -> text.verifying("用户不存在,请先注册",User.hasUser(_)).verifying("用户还未激活",User.isActivate(_).isDefined).verifying("用户待审核中",User.isAudit(_).isDefined),
+      "email" -> text.verifying("用户不存在,请先注册",User.hasUser(_)).verifying("用户还未激活",User.isActivate(_).isDefined),
       "password" -> text
     ) verifying ("Invalid email or password", result => result match {
         case (email, password) => User.authenticate(email, password).isDefined
@@ -171,7 +172,7 @@ object Authentication  extends Controller with  Secured{
       case  e : EmailExecption =>  BadRequest(views.html.registed(e.unapply(e)))
       case  v : VerifyException => BadRequest(views.html.registed(v.unapply(v)))
       case  f : Failure => BadRequest(views.html.registed(f.unapply(f)))
-      case  s : Success => Ok(email+" 激活成功,请等待管理员审核通过 ~ ")
+      case  s : Success => Ok(email+" 注册成功 ~ ")
     }
   }
 

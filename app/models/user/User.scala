@@ -19,9 +19,8 @@ object User {
       get[String]("user.email") ~
       get[String]("user.name") ~
       get[String]("user.password")~
-      get[Int]("user.status")~
-      get[Int]("user.audit") map {
-      case email ~ name ~ password ~ status ~ audit => User(email, name, password,status,audit)
+      get[Int]("user.status") map {
+      case email ~ name ~ password ~ status  => User(email, name, password,status)
     }
   }
 
@@ -88,18 +87,6 @@ object User {
     }
   }
 
-  def isAudit(email: String): Option[User] ={
-    play.api.db.DB.withConnection { implicit connection =>
-      SQL(
-        """
-         select * from user where
-         email = {email} and audit = 1
-        """).on(
-        'email -> email
-      ).
-        as(User.simple.singleOpt)
-    }
-  }
 
 
   def verifying(registration : Registration): User={
@@ -166,15 +153,14 @@ object User {
       SQL(
         """
           insert into user values (
-            {email}, {name}, {password},0,0
+            {email}, {name}, {password},{status}
           )
         """).on(
         'email -> user.email,
         'name -> user.name,
         'password -> user.password,
-        'status->user.status,
-        'audit->user.audit).executeUpdate()
-      UserGroup.addOrUpdate(UserGroup(user.email,user.name,"user","root.default"))
+        'status->user.status
+        ).executeUpdate()
       user
     }
   }

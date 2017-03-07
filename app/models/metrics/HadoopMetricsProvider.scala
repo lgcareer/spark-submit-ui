@@ -1,7 +1,7 @@
 package models.metrics
 
 import akka.actor.Cancellable
-import models.{BaseInfo, MetricsData, NodeData, RPCInfo}
+import models.{BaseInfo, MetricsData, RPCInfo}
 import models.TaskDataProvider.{AppDataObject, TaskData, YarnTaskInfoList}
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -16,13 +16,14 @@ import scala.io.{BufferedSource, Source}
 /**
   * Created by king on 2017/2/7.
   */
-object HadoopMetricsProvider {
+
+
+class HadoopMetricsProvider extends MetricsProvider{
 
   private[this] val _config:Config =new Configuration
-  private[this] val _factory: MetricsFactory = new MetricsFactory
+  private[this] val _factory: Factory = new MetricsFactory
 
    val startMetrics: Cancellable = scheduleMetricsDate
-
 
 
 
@@ -54,9 +55,9 @@ object HadoopMetricsProvider {
     * @tparam T
     * @return
     */
-   def getMetricMouled[T](clz:Class[_])={
+   def getMetricMouled[T](clz:Class[_]):T={
     clz.getClass match  {
-      case _=> _factory.queryMetricsModels(clz).asInstanceOf[T]
+      case _=> _factory.queryMetrics(clz)
     }
 
   }
@@ -72,24 +73,9 @@ object HadoopMetricsProvider {
     (receivedBytes,sentBytes)
   }
 
-  private def getQueuedInfo={
-    val url="http://"+_config.getString("hadoop.metrics.host")+":50070/jmx?qry=Hadoop:service=NameNode,name=FSNamesystem"
-    val json = Json.parse(Source.fromURL(url).mkString)
 
-    val used: String = Json.stringify(json \ "QueuedEditsSize")
-    val usednondfs: String = Json.stringify(json \ "LagTimeMillis")
 
-    (used,usednondfs)
-  }
 
-  private def getDFMOTEN={
-    val url="http://"+_config.getString("hadoop.metrics.host")+":50070/jmx?qry=Hadoop:service=NameNode,name=FSNamesystem"
-    val json = Json.parse(Source.fromURL(url).mkString)
-
-    val used: String = Json.stringify(json \ "ImplementationName")
-    val usednondfs: String = Json.stringify(json \ "ImplementationVersion")
-    (used,usednondfs)
-  }
 
   import scala.concurrent.duration._
 

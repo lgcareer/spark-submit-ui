@@ -2,6 +2,7 @@ package models
 
 import com.tzavellas.sse.guice.ScalaModule
 import TaskDataProvider.AppDataObject
+import models.metrics.{HadoopMetricsProvider, MetricsProvider}
 import models.utils.{Config, Configuration}
 /**
   * Created by liangkai on 16/8/22.
@@ -11,6 +12,7 @@ class Depend extends ScalaModule{
     bind[TaskDao].to[TaskInfoDao]
     bind[TaskProvider[AppDataObject]].to[TaskDataProvider]
     bind[Config].to[Configuration]
+    bind[MetricsProvider].to[HadoopMetricsProvider]
   }
 
 }

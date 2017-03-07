@@ -3,7 +3,6 @@ package controllers
 import java.net.URL
 
 import models.SparkTotalinfo
-import models.io.UserCountDao
 import models.utils.Configuration
 import play.api.libs.json._
 import play.api.mvc._
@@ -15,34 +14,6 @@ import scala.io.Source
 object YarnList  extends Controller  with Secured {
    var config : Configuration = new Configuration()
 
-  /**
-   * Yarn数据列表显示
-   */
-
-  def yarnInfo = IsAuthenticated { username => implicit request =>
-    val groupName = UserCountDao.userBygroup(username)
-    val group_queue = UserCountDao.find_group_queue()
-    val queue = group_queue(groupName)
-    val yarn_url = "http://"+config.getString("hadoop.yarn.host")+ "/ws/v1/cluster/apps"
-    val indexSource = scala.io.Source.
-      fromURL(yarn_url).mkString
-    val json = Json.parse(indexSource)
-    val length = (json \\ "queue").length
-    if (queue == "") {
-      Ok(json)
-    } else {
-      var strjson = "{\"apps\":{\"app\":["
-      for (i <- 0 until length) {
-        val app = (json \ "apps" \ "app")(i)
-        if (app.toString().contains(queue)) {
-          strjson += app + ","
-        }
-      }
-      strjson = strjson.substring(0, strjson.length - 1)
-      strjson += "]}}"
-      Ok(strjson)
-    }
-  }
   /**
    * Yarn数据列表
    * 根据不同权限显示不同yarn任务列表
@@ -66,78 +37,74 @@ object YarnList  extends Controller  with Secured {
     Ok(workerList)
   }
 
-  def sparkRunTasklist = IsAuthenticated { username => implicit request =>
-    val groupName = UserCountDao.userBygroup(username)
-    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
-    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
-    val json = Json.parse(sparkDashboard)
+//  def sparkRunTasklist = IsAuthenticated { username => implicit request =>
+//    val groupName = UserCountDao.userBygroup(username)
+//    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+//    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
+//    val json = Json.parse(sparkDashboard)
+//
+//    val runTaskLength = (json \ "activeapps" \\ "id").length
+//    var activeapps = "{\"activeapps\":["
+//
+//    for(i <- 0 until runTaskLength){
+//      val runTaskuser = (json \ "activeapps")(i) \ "user"
+//      if(groupName == "SuperAdmin"){
+//        activeapps += (json \ "activeapps")(i) + ","
+//      }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
+//        activeapps += (json \ "activeapps")(i) + ","
+//      }
+//    }
+//    activeapps = activeapps.substring(0, activeapps.length - 1)
+//    activeapps += "]}"
+//    val boolean =activeapps.contains("[")
+//    boolean match {
+//      case false => Ok("""{"activeapps":[]}""")
+//      case true  => Ok(activeapps)
+//
+//    }
+//  }
 
-    val runTaskLength = (json \ "activeapps" \\ "id").length
-    var activeapps = "{\"activeapps\":["
 
-    for(i <- 0 until runTaskLength){
-      val runTaskuser = (json \ "activeapps")(i) \ "user"
-      if(groupName == "SuperAdmin"){
-        activeapps += (json \ "activeapps")(i) + ","
-      }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
-        activeapps += (json \ "activeapps")(i) + ","
-      }
-    }
-    activeapps = activeapps.substring(0, activeapps.length - 1)
-    activeapps += "]}"
-    val boolean =activeapps.contains("[")
-    boolean match {
-      case false => Ok("""{"activeapps":[]}""")
-      case true  => Ok(activeapps)
+//  def runTasklist = IsAuthenticated { username => implicit request =>
+//    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
+//    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
+//    val json = Json.parse(sparkDashboard)
+//
+//    /**
+//     * 权限判断
+//     */
+//    val groupName = UserCountDao.userBygroup(username)
+//    val runTaskLength = (json \ "activeapps" \\ "id").length
+//    val finishTaskLength = (json \ "completedapps" \\ "id").length
+//    val runTasklist = json \ "activeapps"
+//    val finishTasklist = json \ "completedapps"
+//    var apps = "{\"apps\":["
+//    for(i <- 0 until runTaskLength){
+//        val runTaskuser = (json \ "activeapps")(i) \ "user"
+//        if(groupName == "SuperAdmin"){
+//          apps += (json \ "activeapps")(i) + ","
+//        }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
+//          apps += (json \ "activeapps")(i) + ","
+//        }
+//    }
+//    for(i <- 0 until finishTaskLength){
+//      val completTaskuser = (json \ "completedapps")(i) \ "user"
+//      if(groupName == "SuperAdmin"){
+//        apps += (json \ "completedapps")(i) + ","
+//      }else if(completTaskuser.toString() == "\"" + groupName+ "\""){
+//        apps += (json \ "completedapps")(i) + ","
+//      }
+//    }
+//
+//    apps = apps.substring(0, apps.length - 1)
+//    apps += "]}"
+//    val boolean =apps.contains("[")
+//     boolean match {
+//       case false => Ok("""{"apps":[]}""")
+//       case true  => Ok(apps)
+//     }
+//  }
 
-    }
-  }
-
-
-  def runTasklist = IsAuthenticated { username => implicit request =>
-    val spark_url = "http://"+config.getString("spark.master.host")+ "/json"
-    val sparkDashboard = scala.io.Source.fromURL(spark_url).mkString
-    val json = Json.parse(sparkDashboard)
-
-    /**
-     * 权限判断
-     */
-    val groupName = UserCountDao.userBygroup(username)
-    val runTaskLength = (json \ "activeapps" \\ "id").length
-    val finishTaskLength = (json \ "completedapps" \\ "id").length
-    val runTasklist = json \ "activeapps"
-    val finishTasklist = json \ "completedapps"
-    var apps = "{\"apps\":["
-    for(i <- 0 until runTaskLength){
-        val runTaskuser = (json \ "activeapps")(i) \ "user"
-        if(groupName == "SuperAdmin"){
-          apps += (json \ "activeapps")(i) + ","
-        }else if(runTaskuser.toString() == "\"" + groupName+ "\""){
-          apps += (json \ "activeapps")(i) + ","
-        }
-    }
-    for(i <- 0 until finishTaskLength){
-      val completTaskuser = (json \ "completedapps")(i) \ "user"
-      if(groupName == "SuperAdmin"){
-        apps += (json \ "completedapps")(i) + ","
-      }else if(completTaskuser.toString() == "\"" + groupName+ "\""){
-        apps += (json \ "completedapps")(i) + ","
-      }
-    }
-
-    apps = apps.substring(0, apps.length - 1)
-    apps += "]}"
-    val boolean =apps.contains("[")
-     boolean match {
-       case false => Ok("""{"apps":[]}""")
-       case true  => Ok(apps)
-     }
-  }
-
-  def workerInfo = IsAuthenticated { username => implicit request =>
-
-    Ok(views.html.workerInfo())
-  }
 
   /**
    * Spark 任务列表 Standalone

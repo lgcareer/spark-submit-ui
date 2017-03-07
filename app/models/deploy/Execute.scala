@@ -8,7 +8,6 @@ import models.JobManagerActor.{Initializ, StoreJar, SubmitJob}
 import play.api.libs.Files.TemporaryFile
 import play.api.mvc.MultipartFormData.FilePart
 import akka.pattern.ask
-import models.ScheduleManager._
 import models.deploy.CreateBatchRequest
 import models.utils.{Config, Configuration}
 
@@ -21,18 +20,15 @@ object Execute {
 
   private[this] var _actorSystem :ActorSystem= _
   private[this] var _jobMange:ActorRef= _
-  private[this] var _scheduleManager: ActorRef = _
   private[this] val _config:Config =new Configuration
   private[this] val _task_dao :TaskDao =new TaskInfoDao
   private[this] val _dao: JobFileDAO = new JobFileDAO(_config)
-  private[this] val _scheduleProvider: ScheduleProvider = new ScheduleProvider(config = _config)
 
   makeSystem
 
   private  def makeSystem: Unit ={
     _actorSystem = ActorSystem("jobSystem")
     _jobMange=_actorSystem.actorOf((JobManagerActor.props(_config,_dao,_task_dao)), "JobManger")
-    _scheduleManager =_actorSystem.actorOf(ScheduleManager.props(_config,_scheduleProvider,_dao),"ScheduleManager")
     _actorSystem.registerOnTermination(System.exit(0))
   }
 
@@ -80,24 +76,24 @@ object Execute {
     * @param jobtype
     * @return
     */
-  def jobList(jobtype:String) :String= {
-    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
-    Await.result( (_scheduleManager ? SHOW(jobtype))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
-  }
+//  def jobList(jobtype:String) :String= {
+//    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
+//    Await.result( (_scheduleManager ? SHOW(jobtype))
+//      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+//      new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
+//  }
 
   /**
     * 调度任务提交 && 任务超时
     * @param parameters
     * @return
     */
-  def handleJob(user:String,parameters:Seq[String]) = {
-    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
-    Await.result( (_scheduleManager ? Submited(user,parameters))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
-  }
+//  def handleJob(user:String,parameters:Seq[String]) = {
+//    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
+//    Await.result( (_scheduleManager ? Submited(user,parameters))
+//      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+//      new Timeout(Duration.create(timeoutSecs,"seconds")).duration) toString
+//  }
 
   /**
     * save on hdfs
@@ -105,56 +101,15 @@ object Execute {
     * @param filePart
     * @return
     */
-  def storeJarOnHdfs(user:String,filePart: FilePart[TemporaryFile]) ={
-    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
-    Await.result( (_scheduleManager ? StoreFile(user,filePart))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
-  }
+//  def storeJarOnHdfs(user:String,filePart: FilePart[TemporaryFile]) ={
+//    val timeoutSecs: Long = _config.getLong("job.upload.timeout.seconds")
+//    Await.result( (_scheduleManager ? StoreFile(user,filePart))
+//      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
+//      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
+//  }
 
 
-  /**
-    * kill jobs
-    * @param ids
-    * @return
-    */
-  def killJobs(ids:Seq[String]) ={
-    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
-    Await.result( (_scheduleManager ? KillJobs(ids))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
-  }
 
-  /**
-    * resume jobs
-    * @param ids
-    */
-  def resumeJobs(ids:Seq[String]) ={
-    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
-    Await.result( (_scheduleManager ? ResumeJobs(ids))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
-
-  }
-
-  /**
-    * suspend jobs
-    * @param ids
-    */
-  def suspendJobs(ids:Seq[String]) ={
-    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
-    Await.result( (_scheduleManager ? Suspend(ids))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration)
-  }
-
-
-  def getJobInfo(id:String):JobInfo={
-    val timeoutSecs: Long = _config.getLong("job.submit.timeout.seconds")
-    Await.result( (_scheduleManager ? JobInfos(id))
-      (Timeout(timeoutSecs,TimeUnit.SECONDS)),
-      new Timeout(Duration.create(timeoutSecs,"seconds")).duration).asInstanceOf[JobInfo]
-  }
 
 
 

@@ -1,5 +1,11 @@
 package controllers
+import java.text.SimpleDateFormat
+import java.util.Date
+
+import com.google.inject.Inject
 import models._
+import models.io.{Message, MessageList, TaskMessage}
+import models.metrics.{MetricsProvider}
 import play.api.libs.iteratee.Concurrent.Channel
 import play.api.libs.iteratee.{Concurrent, Enumerator, Iteratee}
 import play.api.libs.json.{JsValue, Json}
@@ -12,13 +18,18 @@ import scala.concurrent.ExecutionContext.Implicits.global
 /**
  * webSocket 消息推送(个人)
  */
-object Application extends Controller with Secured {
+class Application @Inject()(metricsProvider: MetricsProvider) extends Controller with Secured {
 
   val _paths =mutable.Map.empty[String,(Enumerator[String], Channel[String])]
 
   def index = IsAuthenticated { username => implicit request =>
-    Ok(views.html.index())
+    val rpcInfo: RPCInfo = metricsProvider.getMetricMouled[RPCInfo](RPCInfo.getClass)
+    val dfsInfo: DFSInfo = metricsProvider.getMetricMouled[DFSInfo](DFSInfo.getClass)
+    val memInfo: MEMInfo = metricsProvider.getMetricMouled[MEMInfo](MEMInfo.getClass)
+    Ok(views.html.index(rpcInfo,dfsInfo,memInfo,getNowDate))
   }
+
+
 
   def startpush =  WebSocket.using[String] { implicit request =>
     val user: String = request.session.get("email").get
@@ -52,6 +63,18 @@ object Application extends Controller with Secured {
     Message.deleteAllMessage(username)
     Ok(views.html.tasklist())
   }
+
+  private[this] def getNowDate:String ={
+    val before = 3*60*60*1000
+    val currentTime = new Date(System.currentTimeMillis()-before)
+    //将当前时间设置成整点
+    currentTime.setMinutes(0)
+    val formatter = new SimpleDateFormat("yyyy,MM,dd,HH,mm,ss")
+    formatter.format(currentTime)
+  }
+
+
+
 
 
 }

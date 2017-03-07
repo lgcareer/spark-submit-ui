@@ -3,11 +3,11 @@ package models.utils
 import com.typesafe.config.ConfigFactory
 
 /**
-  * Created by liangkai on 16/9/2.
+  * Created by kinge on 16/9/2.
   */
 class Configuration extends Config{
 
-  val configName = "neptun"
+  val configName = "web-site"
 
   val config = ConfigFactory.load(configName)
 
