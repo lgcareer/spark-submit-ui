@@ -46,29 +46,29 @@
                 <li>
                     <a href="@routes.Application.index">
                         <i class="fa fa-dashboard fa-fw"></i>
-                        <span class="title">仪表盘</span>
+                        <span class="title">dashboard</span>
                     </a>
                 </li>
                         <li class="active">
                             <a href="@routes.SparkJar.executejarpage">
                                 <i class="fa fa-graduation-cap"></i>
-                                <span class="title">SPARK-JAR应用</span>
+                                <span class="title">spark-jar</span>
                             </a>
                         </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-table"></i>
-                        <span class="title">APP数据</span>
+                        <span class="title">apps</span>
                     </a>
                     <ul>
                         <li>
                             <a href="@routes.YarnList.yarnlist">
-                                <span class="title">Yarn数据列表</span>
+                                <span class="title">yarn-apps</span>
                             </a>
                         </li>
                         <li>
                             <a href="@routes.SparkList.sparklist">
-                                <span class="title">Spark数据列表</span>
+                                <span class="title">spark-apps</span>
                             </a>
                         </li>
 
@@ -110,7 +110,7 @@
 
         <div class="title-env">
             <h1 class="title">Spark Jar</h1>
-            <p class="description">Spark Jar 交互方式</p>
+            <p class="description">spark jar interact</p>
         </div>
 
         <div class="breadcrumb-env">
@@ -119,13 +119,9 @@
                 <li>
                     <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
                 </li>
-                <li>
-
-                    <a href="#">数据应用面板</a>
-                </li>
                 <li class="active">
 
-                    <strong>SPARK-JAR应用</strong>
+                    <strong>spark-jar</strong>
                 </li>
             </ol>
 
@@ -138,18 +134,17 @@
           <form action="/executejar" method="POST" id="jarForm">
             <div class="panel panel-color panel-psuccess">
                 <div class="panel-heading">
-                    <h5 class="panel-title">请上传jar包</h5>
+                    <h5 class="panel-title">Please upload the jar</h5>
 
                     <div class="panel-options">
                         <span>RUN</span>
-                        <a href="#" class="toop" title="点此执行程序">
+                        <a href="#" class="toop" title="Click here to execute a program">
                             <span class="fa fa-play" id="submit"></span>
                         </a>
-                        <span>设置</span>
-                        <a href="#" class="toop" title="点此进行设置">
+                        <span>Setting</span>
+                        <a href="#" class="toop" title="Click here to set">
                             <span class="fa fa-wrench" id="setting"></span>
                         </a>
-                        <span>伸缩</span>
                         <a href="#" data-toggle="panel">
                             <span class="collapse-icon">&ndash;</span>
                             <span class="expand-icon">+</span>
@@ -208,15 +203,15 @@
 
                                                 success: function(file)
                                                 {
-                                                    file.fileEntryTd.find('td:last').html('<span class="alert-success">上传成功!</span>');
+                                                    file.fileEntryTd.find('td:last').html('<span class="alert-success">Uploaded successfully!</span>');
                                                     file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-success');
                                                 },
 
                                                 error: function(file)
                                                 {
-                                                    file.fileEntryTd.find('td:last').html('<span class="alert-danger">上传失败!</span>');
+                                                    file.fileEntryTd.find('td:last').html('<span class="alert-danger">Upload failed!</span>');
                                                     file.progressBar.removeClass('progress-bar-warning').addClass('progress-bar-red');
-                                                    $("#jarlocation").val("无效文件!上传失败!!");
+                                                    $("#jarlocation").val("Invalid file!Upload failed!!");
                                                     $("#jarlocation").addClass("alert-danger");
                                                 }
                                             });
@@ -231,11 +226,11 @@
                                         //$("#jarForm").submit();
                                              var $mode = $("#masters").find("option:selected").val();
                                             swal({
-                                            title: "是否提交任务?",
-                                            text: "当前提交模式 "+$mode,
+                                            title: "Whether to submit the task?",
+                                            text: "The current commit mode "+$mode,
                                             type: "info",
-                                            confirmButtonText: "确认",
-                                            cancelButtonText: "取消",
+                                            confirmButtonText: "confirm",
+                                            cancelButtonText: "cancel",
                                             showCancelButton: true,
                                             closeOnConfirm: false,
                                             showLoaderOnConfirm: true,
@@ -243,14 +238,14 @@
                                               setTimeout(function(){
                                                  $('#jarForm').ajaxSubmit(
                                                   function(data){
-                                                     if(data!="任务提交成功!"){
+                                                     if(data!="Task submitted successfully!"){
                                                       $adata=data
                                                             swal({
-                                                          title: "操作完成",
-                                                          text: "提交失败",
+                                                          title: "Operation is completed",
+                                                          text: "failure",
                                                           type: "error",
                                                           showCancelButton: false,
-                                                          confirmButtonText: "确定",
+                                                          confirmButtonText: "confirm",
                                                           closeOnConfirm: true,
                                                           closeOnCancel: false },
                                                           function(isConfirm){
@@ -269,11 +264,11 @@
                                                                 });
                                                      }else{
                                                                          swal({
-                                                          title: "操作完成",
-                                                          text: data+" /个人中心/用户任务管理  查看任务详情",
+                                                          title: "Operation is completed",
+                                                          text: data+" /Task Management  See the task details",
                                                           type: "success",
                                                           showCancelButton: false,
-                                                          confirmButtonText: "确定",
+                                                          confirmButtonText: "confirm",
                                                           closeOnConfirm: true,
                                                           closeOnCancel: false },
                                                           function(isConfirm){
@@ -303,8 +298,8 @@
                         <div class="row">
                             <div class="col-sm-3 text-centers">
 
-                                <div id="advancedDropzone" class="droppable-area" title="拖拽文件至此处或者点击选择文件上传">
-                                    拖拽或点击上传文件
+                                <div id="advancedDropzone" class="droppable-area" title="Drag and drop files here or click select files to upload">
+                                    Drag and drop files
                                 </div>
                                 <script>
                                         $(document).ready(function() {
@@ -324,10 +319,10 @@
                                     <thead>
                                         <tr>
                                             <th width="1%" class="text-centers">#</th>
-                                            <th width="50%">Jar包名称</th>
+                                            <th width="50%">Jar Name</th>
                                             <th width="20%">Upload progress</th>
-                                            <th>文件大小</th>
-                                            <th>上传状态</th>
+                                            <th>File size</th>
+                                            <th>Upload status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -360,47 +355,47 @@
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">--class</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="executeClass" id="executeClass" placeholder="请输入...">
+                                            <input type="text" class="form-control large" name="executeClass" id="executeClass" placeholder="Please enter the...">
                                         </div>
                                     </div>
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                             --num-executors</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="numExecutors" id="numExecutors" placeholder="请输入...">
+                                            <input type="text" class="form-control large" name="numExecutors" id="numExecutors" placeholder="Please enter the...">
                                         </div>
                                     </div>
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                             --driver-memory</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="driverMemory" id="driverMemory" placeholder="请输入...">
+                                            <input type="text" class="form-control large" name="driverMemory" id="driverMemory" placeholder="Please enter the...">
                                         </div>
                                     </div>
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                             --executor-memory</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="executorMemory" id="executorMemory" placeholder="请输入...">
+                                            <input type="text" class="form-control large" name="executorMemory" id="executorMemory" placeholder="Please enter the...">
                                         </div>
                                     </div>
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">
                                             --total_executor_cores</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="total-executor-cores" id="executorCores" placeholder="请输入...">
+                                            <input type="text" class="form-control large" name="total-executor-cores" id="executorCores" placeholder="Please enter the...">
                                         </div>
                                     </div>
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">jar location</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="待文件上传成功自动填写.">
+                                            <input type="text" class="form-control large" name="jarLocation" id="jarlocation" value="" id="largeinput" placeholder="To automatically fill in the file upload success.">
                                         </div>
                                     </div>
                                     <div class="form-group mb-n">
                                         <label for="largeinput" class="col-sm-2 control-label label-input-lg">args</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control large" name="args1" id="args1" placeholder="请输入...">
+                                            <input type="text" class="form-control large" name="args1" id="args1" placeholder="Please enter the...">
                                         </div>
                                     </div>
 
@@ -421,17 +416,3 @@
         </div>
     </div>
 }
-    <script>
-                $(document).ready(function(){
-                    $.ajax({
-                        type:"GET",
-                        url:"/whoiam",
-                        dataType:"json",
-                        success:function(data){
-                            var myobj=eval(data);
-                            var trackingSum=myobj.trackingSum;
-                            $('#tracking').html(trackingSum);
-                        }
-                    });
-                });
-     </script>
