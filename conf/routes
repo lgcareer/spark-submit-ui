@@ -8,11 +8,12 @@ GET     /login                      controllers.Authentication.login
 POST    /login                      controllers.Authentication.authenticate
 GET     /logout                     controllers.Authentication.logout
 
-
-
 #Dashboard
-GET     /yarnlist                   controllers.YarnList.yarnlist
-GET     /sparklist                  controllers.YarnList.sparklist
+
+GET     /spark_info                   @controllers.SparkList.getSparkInfo
+GET     /yarn_info                    @controllers.YarnList.getYarnInfo
+GET     /yarnlist                     @controllers.YarnList.yarnlist
+GET     /sparklist                     @controllers.YarnList.sparklist
 
 
 # Map static resources from the /public folder to the /assets URL path
@@ -40,9 +41,7 @@ GET     /errorlog                      @controllers.SparkJar.errorpage(error:Str
 
 
 
-
 #return User
-
 GET   /whoiam                     controllers.UserName.userName
 
 #Job
@@ -58,6 +57,8 @@ GET  /startpush                         @controllers.Application.startpush
 GET   /msglist                          @controllers.Application.msglist
 GET   /read                             @controllers.Application.read(appId:String)
 GET   /readall                          @controllers.Application.readall
+
+
 
 
 

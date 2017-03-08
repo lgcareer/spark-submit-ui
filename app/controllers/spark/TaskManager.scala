@@ -49,7 +49,6 @@ class TaskManager @Inject() (config: Config,taskProvider:TaskProvider[AppDataObj
           (__ \ "finishtime").write[Long]
         )(unlift(YarnTaskInfo.unapply))
 
-
       implicit val clusterWrites = Json.writes[YarnTaskList]
       val json: JsValue = Json.toJson(YarnTaskList(taskDao.getYarnTaskList(username)))
       Ok(json)
