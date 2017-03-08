@@ -6,7 +6,7 @@ import play.libs.Json
 import scala.collection.mutable.ArrayBuffer
 
 /**
- * Created by manbu on 16/8/24.
+ * Created by kinge on 16/8/24.
  */
 object JsonParse {
 

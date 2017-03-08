@@ -7,7 +7,9 @@ import play.api.mvc._
 
 import scala.io.Source
 
-
+/**
+  * Created by kinge
+  */
 class YarnList @Inject()(conf:Config) extends Controller {
 
   def getYarnInfo=Action{
@@ -15,7 +17,7 @@ class YarnList @Inject()(conf:Config) extends Controller {
   }
 
   def yarnlist=Action{
-    Ok("")
+    Ok(views.html.yarnlist())
   }
 
   def sparklist=Action{

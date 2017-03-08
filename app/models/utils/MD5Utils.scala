@@ -3,17 +3,8 @@ package models
 import java.io.UnsupportedEncodingException
 import java.security.{MessageDigest, NoSuchAlgorithmException}
 
-/**
-  * Created by liangkai1 on 16/6/17.
-  */
 object MD5Utils {
 
-  /**
-    * 将字符串使用MD5加密为字节数组
-    *
-    * @param source
-    * @return
-    */
   private[this] def encode2bytes(source: String): Array[Byte] = {
     var result: Array[Byte] = null
     try {
@@ -28,12 +19,6 @@ object MD5Utils {
      result;
   }
 
-  /**
-    * 将字符串使用MD5加密为32位16进制数
-    *
-    * @param source
-    * @return
-    */
   def encode2hex(source: String): String = {
     val data = encode2bytes(source);
     val hexString = new StringBuffer();

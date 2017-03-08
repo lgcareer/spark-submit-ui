@@ -4,7 +4,6 @@ import java.io.File
 import java.util.concurrent.Executors._
 
 import akka.actor.{ActorRef, Cancellable, PoisonPill, Props, Terminated}
-import controllers._
 import models.actor.InstrumentedActor
 import models.deploy._
 import models.deploy.process.{LineBufferedProcess, SparkProcessBuilder}
@@ -24,11 +23,8 @@ import scala.concurrent.{ExecutionContext, Future}
 import scala.util.matching.Regex
 
 /**
+  * Created by kinge on 16/7/11.
   *
-  * Created by liangkai1 on 16/7/11.
-  *
-  * When I wrote this, only God and I understood what I was doing
-  * Now, God only knows
   */
 case  class ExecuteModel(
                           master:String,
@@ -73,31 +69,16 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
   private val push_akka ="/user/MessagePool"
   private val yarn="yarn-cluster"
   private val uri ="spark"
-  private val port ="7077"
   private val YARN = 1
   private val STANDALONE = 2
-  private val MESOS = 4
-  private val LOCAL = 8
 
 
 
-  /**
-    * jar 文件验证
-    *
-    * @param fileName
-    * @return
-    */
   def validateJar(fileName:String): Boolean ={
     val prefix=fileName.substring(fileName.lastIndexOf(".")+1);
     StringUtils.equals(prefix,"jar")
   }
 
-  /**
-    * 完整校验
-    *
-    * @param jarBytes
-    * @return
-    */
   def validateJarBytes(jarBytes: Array[Byte]): Boolean = {
     jarBytes.size > 4 && jarBytes(0) == 0x50 && jarBytes(1) == 0x4b && jarBytes(2) == 0x03 && jarBytes(3) == 0x04
   }
@@ -142,8 +123,6 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
       val masters: Int = executeModel.master match {
         case m if m.startsWith("yarn") =>   request.master=Some(yarn); YARN
         case m if m.startsWith("standalone") => request.master=Some(sparkMaster()); STANDALONE
-        case m if m.startsWith("mesos") => MESOS
-        case m if m.startsWith("local") => request.master=Some(executeModel.master);LOCAL
       }
       Logger.info(s"select mode $masters")
       val args: Array[String] = executeModel.args1.split("\\s+")
@@ -158,13 +137,13 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
 
     case StoreJar(userName,filePart) => {
       if(!validateJar(filePart.filename)){
-        sender ! InvalidJar("文件类型不正确!")
+        sender ! InvalidJar("The file type is not correct!")
       }else{
         val jar = jobDAO.saveJar(userName,DateTime.now(),filePart)
         if(jar.nonEmpty){
           sender ! JarStored(jar)
         }else{
-          sender ! InvalidJar("文件路径保存失败!")
+          sender ! InvalidJar("The path to the file save failed!")
         }
       }
     }
@@ -196,8 +175,7 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
 
 
   /**
-    * 任务部署
-    *
+    * Jar deployment
     * @param request
     */
   def runJobFuture(request:CreateBatchRequest, sparkEnv: SparkEnv,act :ActorRef): Future[Any] = {
@@ -236,8 +214,8 @@ private class JobManagerActor(config:Config,jobDAO:JobDAO,taskDao: TaskDao) exte
         }
       }
     }(executionContext).andThen {
-      case scala.util.Success(result:Any) =>  Logger.info("执行结束");  context.system.scheduler.scheduleOnce(7 seconds,self ,JobFinish(result.msg))
-      case scala.util.Failure(error :Throwable) => Logger.info("执行异常");act ! JobRunExecption(error.getMessage)
+      case scala.util.Success(result:Any) =>  Logger.info("Perform the end");  context.system.scheduler.scheduleOnce(7 seconds,self ,JobFinish(result.msg))
+      case scala.util.Failure(error :Throwable) => Logger.info("Perform abnormal");act ! JobRunExecption(error.getMessage)
     }
   }
 

@@ -333,9 +333,6 @@
 
 
 
-                        <!--消息列表-->
-
-
                         <li class="dropdown hover-line">
                             <a href="#" data-toggle="dropdown">
                                 <i class="fa-bell-o"></i>
@@ -346,8 +343,8 @@
 
                                 <li class="top">
                                     <p class="small" id="small-title">
-                                        <a href="/readall" class="pull-right">全部标记为已读</a>
-                                       你有 <strong id="mes"></strong> 条新的消息
+                                        <a href="/readall" class="pull-right">mark all read</a>
+                                       you have <strong id="mes"></strong> new message
                                     </p>
                                 </li>
 
@@ -355,43 +352,15 @@
                                     <ul id="msglist" class="dropdown-menu-list list-unstyled ps-scrollbar">
 
 
-
-                                        <!--<li class="notification-warning">-->
-                                            <!--<a href="#">-->
-                                                <!--<i class="fa-envelope-o"></i>-->
-
-                                                <!--<span class="line">-->
-                          <!--New comments waiting approval-->
-                                                <!--</span>-->
-
-                                                <!--<span class="line small time">-->
-                          <!--last week-->
-                                                <!--</span>-->
-                                            <!--</a>-->
-                                        <!--</li>-->
-
-
-
-
-
-
                                     </ul>
                                 </li>
 
-                                <li class="external">
-                                    <a href="#">
-                                        <span>消息通知面板</span>
-                                        <i class="fa-link-ext"></i>
-                                    </a>
-                                </li>
                             </ul>
                         </li>
 
                     </ul>
 
 
-
-                    <!--消息列表-->
 
 
 
@@ -403,7 +372,7 @@
                         <li>
                             <a href="@routes.TaskManager.tasklist">
                                 <i class="fa-dot-circle-o"></i>
-                                用户任务管理
+                                Task Management
                             </a>
                         </li>
 
@@ -419,34 +388,10 @@
                             </a>
 
                             <ul class="dropdown-menu user-profile-menu list-unstyled">
-                                <li>
-                                    <a href="#edit-profile">
-                                        <i class="fa-male"></i>
-                                        任务消息
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#settings">
-                                        <i class="fa-wrench"></i>
-                                        设置
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#profile">
-                                        <i class="fa-user"></i>
-                                        个性设置
-                                    </a>
-                                </li>
-                                <!--<li>-->
-                                    <!--<a href="@routes.TaskManager.tasklist">-->
-                                        <!--<i class="fa-dot-circle-o"></i>-->
-                                        <!--任务列表-->
-                                    <!--</a>-->
-                                <!--</li>-->
                                 <li class="last">
                                     <a href="@routes.Authentication.logout">
                                         <i class="fa-lock"></i>
-                                        登出
+                                        logout
                                     </a>
                                 </li>
                             </ul>

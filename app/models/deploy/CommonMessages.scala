@@ -6,16 +6,16 @@ package models
   */
 sealed trait CommonMessages
 
-/** 任务提交异常 */
+/** Task submitted abnormal */
 case class JobSubmitExecption(msg:String) extends  RuntimeException(msg) with CommonMessages
 
-/** 任务运行结束 */
+/** End of the task to run */
 case class JobRunFinish(msg:String) extends  RuntimeException(msg) with CommonMessages
 
-/** 任务运行异常 */
+/** Task to run abnormal */
 case class JobRunExecption(msg:String) extends  RuntimeException(msg) with CommonMessages
 
-/** 任务提交成功 */
+/** Task submitted successfully */
 case class JobSubmitSuccess(msg:String) extends  RuntimeException(msg) with CommonMessages
 
 

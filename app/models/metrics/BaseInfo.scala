@@ -3,22 +3,22 @@ package models
 import play.api.libs.json.JsValue
 
 /**
-  * Created by liangkai on 2017/2/21.
+  * Created by kinge on 2017/2/21.
   */
 
 
 sealed class  BaseInfo;
 /**
-  *
-  * @param rec_rpc 接收字节
-  * @param sent_rpc 发送字节
+  * RPC INFO
+  * @param rec_rpc
+  * @param sent_rpc
   */
 case class RPCInfo(rec_rpc:JsValue,
                    sent_rpc :JsValue
                    ) extends  BaseInfo
 
 /**
-  * HDFS 磁盘详情
+  * HDFS
   * @param capacityUsed
   * @param capacityRemaining
   * @param capacityUsedNonDFS
@@ -29,7 +29,7 @@ case  class DFSInfo(capacityUsed:JsValue,
                     ) extends  BaseInfo
 
 /**
-  * 内存与非堆内存
+  * MEM
   * @param memHeapUsedM
   * @param memNonHeapUsedM
   */

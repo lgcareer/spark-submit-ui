@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="@routes.YarnList.sparklist">
+                        <a href="@routes.SparkList.sparklist">
                             <span class="title">Spark数据列表</span>
                         </a>
                     </li>
@@ -426,7 +426,6 @@ function MillisecondToDate(msd) {
                             var nRow = $(this).parents('tr')[0];
                               var $id = $(this).parents('tr').find("td:eq(0)").text();
 
-
                                         swal({
                                          title: "确定重新运行任务?",
                                           text: "重新运行 "+$id+" \n可能结束正在运行状态,是否继续",
@@ -499,11 +498,6 @@ function MillisecondToDate(msd) {
 
                                             },
                                            2000); });
-
-
-
-
-
 
 
                    });
@@ -589,17 +583,3 @@ function MillisecondToDate(msd) {
 
 
 }
-    <script>
-                $(document).ready(function(){
-                    $.ajax({
-                        type:"GET",
-                        url:"/whoiam",
-                        dataType:"json",
-                        success:function(data){
-                            var myobj=eval(data);
-                            var trackingSum=myobj.trackingSum;
-                            $('#tracking').html(trackingSum);
-                        }
-                    });
-                });
-     </script>

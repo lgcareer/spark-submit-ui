@@ -17,7 +17,6 @@ import scala.util.matching.Regex
 
 /**
   * kinge
- * 用户登录权限验证
  */
 object Authentication  extends Controller with  Secured{
 

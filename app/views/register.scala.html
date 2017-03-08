@@ -1,32 +1,32 @@
 @(form: Form[Registration])
 
-@plain("注册"){
+@plain("register"){
 <div class="login-logo"><img src="@routes.Assets.at("images/favicon.png")" alt=""/></div>
-<h2 class="form-heading"><font color="#FBFBFB">欢迎注册 Neptune Data Platform</font></h2>
+<h2 class="form-heading"><font color="#FBFBFB">Welcome to register</font></h2>
 <div class="app-cam">
 
     @helper.form(routes.Authentication.verifying){
-    <input type="text" name="email" class="text" value="@form("email").value" placeholder="请输入邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入邮箱';}">
+    <input type="text" name="email" class="text" value="@form("email").value" placeholder="Please enter the email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Please enter the email address';}">
     @if(form.hasErrors && !form.error("email").isEmpty){
         @if(form.error("email").get.message.equals("error.required")){
-        <font color="red">邮箱不能为空</font>
+        <font color="red">Email cannot be empty</font>
         }else{
     <p class="error"><font color="red">@form.error("email").get.message</font></p>
         }
     }
-    <input type="text" name="name" class="text" value="@form("name").value" placeholder="请输入姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '请输入姓名';}">
+    <input type="text" name="name" class="text" value="@form("name").value" placeholder="Please enter your name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Please enter your name';}">
     @if(!form.error("name").isEmpty){
         @if(form.error("name").get.message.equals("error.required")){
-            <font color="red">姓名不能为空</font>
+            <font color="red">The name cannot be empty</font>
     }else{
     <p class="error"><font color="red">@form.error("name").get.message</font></p>
         }
     }
-    <input type="password" name="password"  placeholder="请输入密码" onfocus="this.value = '' onblur="if (this.value == '') {this.value = '请输入密码';}">
-    <input type="password" name="repassword"  placeholder="请再次确认密码" onfocus="this.value = '' onblur="if (this.value == '') {this.value = '请再次输入密码';}">
+    <input type="password" name="password"  placeholder="Please enter the password" onfocus="this.value = '' onblur="if (this.value == '') {this.value = 'Please enter the password';}">
+    <input type="password" name="repassword"  placeholder="Please confirm password again" onfocus="this.value = '' onblur="if (this.value == '') {this.value = 'Please enter the password again';}">
     @if(form.hasErrors && !form.error("repassword").isEmpty){
     @if(form.error("repassword").get.message.equals("error.required")){
-        <font color="red">密码不能为空</font>
+        <font color="red">Password cannot be empty</font>
     }else{
      <p class="error"><font color="red">@form.error("repassword").get.message</font></p>
      }
@@ -40,19 +40,18 @@
     }
     }
     <div class="submit">
-        <input type="submit" id="loginbutton" value="注册">
+        <input type="submit" id="loginbutton" value="Register">
     </div>
 
     <ul class="new">
         <li class="new_left">
-            <p class="sign"><a href="/login"><font color="#FBFBFB"> 已有账号? 登录</font></a></p>
+            <p class="sign"><a href="/login"><font color="#FBFBFB"> Login</font></a></p>
         </li>
         <div class="clearfix"></div>
     </ul>
 
     }
-</div class="app-cam">
-<div class="copy_layout login">
-    <p><font color="#FBFBFB">Copyright &copy; 2016.Sina DSP All rights reserved.More Infomation 新浪微博 </font></p>
-</div>
+
+<div class="clearfix"></div>
+@copyright()
 }

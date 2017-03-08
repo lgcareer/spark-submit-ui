@@ -41,10 +41,10 @@ class SparkJar @Inject() (taskDao: TaskDao,taskProvider: TaskProvider[AppDataObj
             case _ => NotFound
           }
         }.getOrElse {
-          Unauthorized("用户不存在,请重新登录!")
+          Unauthorized("The user does not exist, please login again!")
         }
         }.getOrElse {
-          Redirect(routes.SparkJar.errorpage("上传失败"))
+          Redirect(routes.SparkJar.errorpage("Upload failed"))
         }
       }
 

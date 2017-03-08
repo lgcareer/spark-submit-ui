@@ -5,14 +5,13 @@ import play.api.Play.current
 import play.api.db.DB
 
 /**
-  * Created by liangkai on 16/8/18.
+  * Created by kinge on 16/8/18.
   *
   *
-  * 运行时任务数据
   * "starttime" : 1471494218651,
   * "id" : "app-20160818122338-0000",
   * "name" : "HFDSWordCount",
-  * "user" : "king",
+  * "user" : "kinge",
   * "memoryperslave" : 1024,
   * "starttime" : "Thu Aug 18 12:23:38 HKT 2016",
   * "state" : "RUNNING",
@@ -87,11 +86,6 @@ class TaskInfoDao  extends  TaskDao{
         }
     }
 
-//  ArrayBuffer(YarnTaskInfo(application_1472438450103_0001,com.weibo.spark.stream.HDFSWordCount,
-//    SPARK,default,1472438549402,KILLED,1472438768238),
-//
-//    YarnTaskInfo(application_1472438450103_0002,
-//    com.weibo.spark.stream.HDFSWordCount,SPARK,default,1472463641679,KILLED,1472463980804))
 
   override def updateYarnTaskList(tasks: Seq[YarnTaskInfo]): Unit = {
     play.api.db.DB.withConnection { implicit connection =>

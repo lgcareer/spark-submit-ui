@@ -6,7 +6,7 @@ import play.api.Play.current
 import play.api.db.DB
 
 /**
-  * Created by king on 16/9/1.
+  * Created by kinge on 16/9/1.
   */
 
 case class  TaskMessage(id:String,state:String,user:String)

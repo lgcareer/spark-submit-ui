@@ -6,7 +6,7 @@ import play.api.libs.json.{JsValue, Json}
 
 /**
   * Created by laingkai1 on 2017/2/23.
-  * <p>metric 数据计算相关 @host:port/jmx<p>
+  * <p>metric data computing related @host:port/jmx<p>
   *
   */
 private [metrics] abstract  class  Factory {
@@ -44,12 +44,10 @@ private[metrics] class MetricsFactory extends  Factory{
 
 
 
-
   private [this] def MemNonHeapUsedM={
     val result:Seq[Double]={
       for(me<- metrics) yield (me.MemNonHeapUsedM)
     }
-    Logger.debug("=>非堆内存使用量"+result.toString())
     Json.toJson(result.reverse)
   }
 
@@ -58,7 +56,6 @@ private[metrics] class MetricsFactory extends  Factory{
     val result:Seq[Double]={
       for(me<- metrics) yield (me.MemHeapUsedM)
     }
-    Logger.debug("=>堆内存使用量"+result.toString())
     Json.toJson(result.reverse)
   }
 
@@ -67,7 +64,6 @@ private[metrics] class MetricsFactory extends  Factory{
     val result:Seq[Long]={
       for(me<- metrics) yield (me.CapacityUsed / (BYTE_NUMBER*BYTE_NUMBER*BYTE_NUMBER))
     }
-    Logger.debug("=>使用容量"+result.toString())
     Json.toJson(result.reverse)
   }
 
@@ -75,7 +71,6 @@ private[metrics] class MetricsFactory extends  Factory{
     val result:Seq[Long]={
       for(me<- metrics) yield (me.CapacityRemaining  / (BYTE_NUMBER*BYTE_NUMBER*BYTE_NUMBER))
     }
-    Logger.debug("=> 剩余容量"+result.toString())
     Json.toJson(result.reverse)
   }
 
@@ -83,12 +78,8 @@ private[metrics] class MetricsFactory extends  Factory{
     val result:Seq[Long]={
       for(me<- metrics) yield (me.CapacityUsedNonDFS / (BYTE_NUMBER*BYTE_NUMBER*BYTE_NUMBER))
     }
-    Logger.debug("=> 使用的非DFS容量"+result.toString())
     Json.toJson(result.reverse)
   }
-
-
-
 
 
 
@@ -101,7 +92,6 @@ private[metrics] class MetricsFactory extends  Factory{
           (metrics(i).sentBytes-metrics(i+1).sentBytes)/BYTE_NUMBER
         }
     }.dropRight(1)
-    Logger.debug("=> RPC发送"+result.toString())
     Json.toJson(result.reverse)
   }
 
@@ -115,7 +105,6 @@ private[metrics] class MetricsFactory extends  Factory{
           (metrics(i).receivedBytes-metrics(i+1).receivedBytes)/BYTE_NUMBER
         }
     }.dropRight(1)
-    Logger.debug("=> RPC接收"+result.toString())
     Json.toJson(result.reverse)
   }
 

@@ -1,7 +1,7 @@
 package models.utils
 
 /**
-  * Created by king on 16/9/2.
+  * Created by kinge on 16/5/2.
   */
 trait Config {
 

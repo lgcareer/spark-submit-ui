@@ -169,7 +169,6 @@ object User {
 
 
 
-
-  }
+}
 
 

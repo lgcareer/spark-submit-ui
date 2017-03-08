@@ -7,7 +7,7 @@ import play.api.db.DB
 import play.api.Play.current
 
 /**
-  * Created by laingkai1 on 2017/2/17.
+  * Created by kinge on 2017/2/17.
   */
 case class MetricsData(
  receivedBytes:Long,

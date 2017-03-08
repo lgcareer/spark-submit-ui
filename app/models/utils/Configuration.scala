@@ -3,7 +3,7 @@ package models.utils
 import com.typesafe.config.ConfigFactory
 
 /**
-  * Created by kinge on 16/9/2.
+  * Created by kinge on 16/5/2.
   */
 class Configuration extends Config{
 

@@ -1,9 +1,9 @@
 @(form: Form[(String, String)])
 
 
-@plain("密码找回") {
+@plain("Password back") {
     <div class="login-logo"><img src="@routes.Assets.at("images/favicon.png")" alt=""/></div>
-    <h2 class="form-heading"><font color="#FBFBFB" >密码找回 Neptune Data Platform</font></h2>
+    <h2 class="form-heading"><font color="#FBFBFB" >Password back</font></h2>
     <div class="app-cam">
 
         <script type="text/javascript">
@@ -13,13 +13,13 @@
         </script>
 
         @helper.form(routes.Authentication.resetpwd) {
-            <input type="text" name="email" id="email" class="text" value="@form("email").value" placeholder="注册邮箱" onblur="if (this.value == '') {this.value = '注册邮箱';}">
+            <input type="text" name="email" id="email" class="text" value="@form("email").value" placeholder="Registered mail" onblur="if (this.value == '') {this.value = 'Registered mail';}">
             @if(form.hasErrors && !form.error("email").isEmpty) {
                 <p class="error"><font color="red">@form.error("email").get.message</font></p>
             }
 
             <div>
-                <input type="text" name="captcha" class="text" placeholder="验证码" onblur="if (this.value == '') {this.value = '验证码';}">
+                <input type="text" name="captcha" class="text" placeholder="Verification code" onblur="if (this.value == '') {this.value = 'Verification code';}">
                 <img src="/captcha" id="captcha" onclick="refresh(this)"></div >
 
 
@@ -27,17 +27,18 @@
                 @if(form.hasErrors && !form.error("captcha").isEmpty) {
                     <p class="error"><font color="red">@form.error("captcha").get.message</font></p>
                 }
-                <input type="submit" id="loginbutton" value="发送重置密码邮件">
+                <input type="submit" id="loginbutton" value="Send a reset password email">
             </div>
             <ul class="new">
                 <li class="new_left">
-                    <p class="sign"><a href="/login"><font color="#FBFBFB"> 返回登录</font></a></p>
+                    <p class="sign"><a href="/login"><font color="#FBFBFB"> go to login</font></a></p>
                 </li>
                 <div class="clearfix"></div>
             </ul>
         }
     </div>
-    <div class="copy_layout login">
-        <p><font color="#FBFBFB">Copyright &copy; 2016.Sina DSP All rights reserved.More Infomation 新浪微博 </font></p>
-    </div>
+
+<div class="clearfix"></div>
+@copyright()
+
 }

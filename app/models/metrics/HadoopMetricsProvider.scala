@@ -14,10 +14,8 @@ import play.libs.Akka
 import scala.io.{BufferedSource, Source}
 
 /**
-  * Created by king on 2017/2/7.
+  * Created by kinge on 2016/6/7.
   */
-
-
 class HadoopMetricsProvider extends MetricsProvider{
 
   private[this] val _config:Config =new Configuration
@@ -34,13 +32,6 @@ class HadoopMetricsProvider extends MetricsProvider{
   }
 
 
-  /**
-    * 使用的HDFS
-    * 剩余的HDFS
-    * 使用的非HDFS
-    * @param json
-    * @return
-    */
   private def getDFSInfo(json:JsValue)={
     val CapacityUsed = (json \\ "CapacityUsed")(0).as[Long]
     val CapacityRemaining = (json \\ "CapacityRemaining")(0).as[Long]
@@ -49,12 +40,6 @@ class HadoopMetricsProvider extends MetricsProvider{
   }
 
 
-  /**
-    *
-    * @param clz
-    * @tparam T
-    * @return
-    */
    def getMetricMouled[T](clz:Class[_]):T={
     clz.getClass match  {
       case _=> _factory.queryMetrics(clz)
@@ -62,18 +47,11 @@ class HadoopMetricsProvider extends MetricsProvider{
 
   }
 
-  /**
-    * RPC SENT AND RECIVED BYTE
-    * @param json
-    * @return
-    */
   private def getRpcInfo(json:JsValue)={
     val receivedBytes = (json \\ "ReceivedBytes")(0).as[Long]
     val sentBytes = (json \\ "SentBytes")(0).as[Long]
     (receivedBytes,sentBytes)
   }
-
-
 
 
 
@@ -90,9 +68,6 @@ class HadoopMetricsProvider extends MetricsProvider{
              val (receivedBytes,sentBytes) = getRpcInfo(response.json)
              val (capacityUsed,capacityRemaining,capacityUsedNonDFS)=getDFSInfo(response.json)
              val  (memNonHeapUsedM,memHeapUsedM)=getMENInfo(response.json)
-              /**
-                * 每次更新增量数据
-                */
               MetricsData.updateMetrics(MetricsData(
                 receivedBytes,
                 sentBytes,
@@ -103,12 +78,10 @@ class HadoopMetricsProvider extends MetricsProvider{
                 capacityUsedNonDFS,
                 memNonHeapUsedM,
                 memHeapUsedM))
-
             }
             case _ => None
           }
         }
-
 
       }
     })

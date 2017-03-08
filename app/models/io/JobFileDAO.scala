@@ -13,7 +13,7 @@ import play.api.Play.current
 import scala.collection.mutable
 
 /**
-  * Created by liangkai1 on 16/7/11.
+  * Created by kinge on 16/7/11.
   */
 class JobFileDAO(config: Config) extends JobDAO {
 
@@ -40,7 +40,6 @@ class JobFileDAO(config: Config) extends JobDAO {
     val file: File = new File(s"$rootDir$jobName")
     filePart.ref.moveTo(file,rootOV)
       addJar(jobName,uploadTime)
-      insertJarToDb(JarInfo(userName,uploadTime.toDateTimeISO.toString,file.getAbsolutePath))
     file.getAbsoluteFile.getAbsolutePath
   }
 
@@ -52,15 +51,6 @@ class JobFileDAO(config: Config) extends JobDAO {
     }
   }
 
-  override def getJar(id: String): JarInfo = ???
 
-   def insertJarToDb(jarInfo: JarInfo): Unit = {
-    DB.withConnection { implicit connection =>
-      play.api.db.DB.withConnection { implicit connection =>
-        SQL("""insert into applocation (user,applocation) values ({user},{applocation})""").on(
-          'user -> jarInfo.userName,
-          'applocation -> jarInfo.location).executeUpdate()
-      }
-    }
-  }
+
 }

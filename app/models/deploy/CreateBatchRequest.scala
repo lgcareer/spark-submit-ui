@@ -1,7 +1,7 @@
 package models.deploy
 
 /**
-  * Created by liangkai1 on 16/7/13.
+  * Created by kinge on 16/7/13.
   */
 class CreateBatchRequest {
 

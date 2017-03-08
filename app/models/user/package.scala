@@ -1,8 +1,8 @@
 package models
 
 /**
-  * Created by liangkai1 on 16/7/22.
-  * 用户相关操作
+  * Created by kinge on 16/7/22.
+  * The user related operations
   */
 package object user {
 

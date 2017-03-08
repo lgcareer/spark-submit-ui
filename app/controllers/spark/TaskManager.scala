@@ -14,7 +14,7 @@ import scala.language.postfixOps
 
 /**
   * Created by liangkai on 16/8/18.
-  * 任务运行时管理相关
+  * Management related tasks run time
   */
 class TaskManager @Inject() (config: Config,taskProvider:TaskProvider[AppDataObject],taskDao: TaskDao) extends Controller with Secured{
 
@@ -85,10 +85,9 @@ class TaskManager @Inject() (config: Config,taskProvider:TaskProvider[AppDataObj
       val executeModel: ExecuteModel = taskDao.getTaskArgs(appId)
       Execute.main(executeModel) match {
         case JobSubmitSuccess(id) =>  {
-          Logger.info(s"旧任务Id====> $appId,新任务id====> $id")
+          Logger.info(s"old Id====> $appId,new id====> $id")
           /**
-            *保存新的任务参数
-            *将旧的任务删除,重新添加到队列
+            *Save the new task parameters  add to the List
             */
           taskDao.saveTaskArgs(executeModel)(id)
           taskProvider.coverTask(appId)

@@ -10,7 +10,7 @@ import javax.imageio.ImageIO
 import scala.util.Random
 
 /**
-  * Created by liangkai1 on 16/6/17.
+  * Created by kinge on 16/6/17.
   */
 class CaptchaUtils(width:Int=160 ,height:Int=40 ,codeCount:Int=5 ,lineCount:Int=150)
 object CaptchaUtils{
@@ -19,20 +19,9 @@ object CaptchaUtils{
     val random = new Random();
 
 
-  /**
-    * 使用系统默认字符源生成验证码
-    * @param verifySize	验证码长度
-    * @return
-    */
   def  generateVerifyCode(verifySize:Int):String={
      generateVerifyCode(verifySize, VERIFY_CODES);
   }
-  /**
-    * 使用指定源生成验证码
-    * @param verifySize	验证码长度
-    * @param sources	验证码字符源
-    * @return
-    */
   def generateVerifyCode(verifySize:Int, sources:String):String={
     val codesLen = sources.length();
     val rand = new Random(System.currentTimeMillis());
@@ -44,14 +33,6 @@ object CaptchaUtils{
   }
 
 
-  /**
-    * 输出指定验证码图片流
-    * @param w
-    * @param h
-    * @param os
-    * @param code
-    * @throws IOException
-    */
   def outputImage(w:Int, h:Int,code:String)={
     val verifySize = code.length()
     val image = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB)
@@ -69,16 +50,16 @@ object CaptchaUtils{
     }
     util.Arrays.sort(fractions);
 
-    g2.setColor(Color.GRAY);// 设置边框色
+    g2.setColor(Color.GRAY);
     g2.fillRect(0, 0, w, h);
 
     val c = getRandColor(200, 250);
-    g2.setColor(c);// 设置背景色
+    g2.setColor(c);
     g2.fillRect(0, 2, w, h-4);
 
-    //绘制干扰线
+
     val random = new Random();
-    g2.setColor(getRandColor(160, 200));// 设置线条的颜色
+    g2.setColor(getRandColor(160, 200));
     for (i <- 0 until  20) {
       val x = random.nextInt(w - 1);
       val y = random.nextInt(h - 1);
@@ -87,8 +68,8 @@ object CaptchaUtils{
       g2.drawLine(x, y, x + xl + 40, y + yl + 20);
     }
 
-    // 添加噪点
-    val yawpRate = 0.05f;// 噪声率
+
+    val yawpRate = 0.05f;
     val area = (yawpRate * w * h).asInstanceOf[Int];
     for (j <- 0 until  area) {
       val x = random.nextInt(w);
@@ -97,7 +78,7 @@ object CaptchaUtils{
       image.setRGB(x, y, rgb);
     }
 
-    shear(g2, w, h, c);// 使图片扭曲
+    shear(g2, w, h, c);
 
     g2.setColor(getRandColor(100, 160));
     val fontSize = h-4;

@@ -13,7 +13,8 @@ GET     /logout                     controllers.Authentication.logout
 GET     /spark_info                   @controllers.SparkList.getSparkInfo
 GET     /yarn_info                    @controllers.YarnList.getYarnInfo
 GET     /yarnlist                     @controllers.YarnList.yarnlist
-GET     /sparklist                     @controllers.YarnList.sparklist
+GET     /sparklist                     @controllers.SparkList.sparklist
+GET     /spark_apps                   @controllers.SparkList.getSaprkApps
 
 
 # Map static resources from the /public folder to the /assets URL path

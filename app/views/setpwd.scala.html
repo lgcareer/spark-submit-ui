@@ -1,8 +1,8 @@
 @(form: Form[(String,String)])
 
-@plain("设置密码"){
+@plain("Set the password"){
 <div class="login-logo"><img src="@routes.Assets.at("images/favicon.png")" alt=""/></div>
-<h2 class="form-heading"><font color="#FBFBFB">设置密码 Neptune Data Platform</font></h2>
+<h2 class="form-heading"><font color="#FBFBFB">Set the password</font></h2>
 <div class="app-cam">
 
     @if(form.hasErrors){
@@ -14,24 +14,23 @@
     }
 
     @helper.form(routes.Authentication.updatepwd){
-    <input type="password" name="password"  placeholder="请输入密码" onfocus="this.value = '' onblur="if (this.value == '') {this.value = '请输入密码';}">
-    <input type="password" name="repassword"  placeholder="请再次确认密码" onfocus="this.value = '' onblur="if (this.value == '') {this.value = '请再次输入密码';}">
+    <input type="password" name="password"  placeholder="Please enter the password" onfocus="this.value = '' onblur="if (this.value == '') {this.value = 'Please enter the password';}">
+    <input type="password" name="repassword"  placeholder="Please enter the password again" onfocus="this.value = '' onblur="if (this.value == '') {this.value = 'Please enter the password again';}">
 
 
     <div class="submit">
-        <input type="submit" id="loginbutton" value="设置密码">
+        <input type="submit" id="loginbutton" value="Set the password">
     </div>
 
     <ul class="new">
         <li class="new_left">
-            <p class="sign"><a href="/login"><font color="#FBFBFB"> 已有账号? 登录</font></a></p>
+            <p class="sign"><a href="/login"><font color="#FBFBFB"> Login</font></a></p>
         </li>
         <div class="clearfix"></div>
     </ul>
 
     }
 </div class="app-cam">
-<div class="copy_layout login">
-    <p><font color="#FBFBFB">Copyright &copy; 2016.Sina DSP All rights reserved.More Infomation 新浪微博 </font></p>
-</div>
+<div class="clearfix"></div>
+@copyright()
 }

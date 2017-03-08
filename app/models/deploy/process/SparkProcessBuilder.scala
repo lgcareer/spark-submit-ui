@@ -12,7 +12,7 @@ import scala.collection.mutable.ArrayBuffer
 
 
 /**
-  * Created by liangkai1 on 16/7/12.
+  * Created by kinge on 16/7/12.
   */
 class SparkProcessBuilder(act:ActorRef) extends Logging {
 

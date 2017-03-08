@@ -13,7 +13,7 @@ import play.api.{Logger, cache}
 import scala.io.Source
 import scala.util.matching.Regex
 /**
-  * Created by liangkai1 on 16/7/12.
+  * Created by kinge on 16/7/12.
   *
   */
 class LineBufferedStream(master:Option[String],act:ActorRef, inputStream: InputStream) extends Logging {

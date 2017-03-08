@@ -1,7 +1,7 @@
 package models.metrics
 
 /**
-  * Created by king on 2017/3/2.
+  * Created by kinge on 2016/6/2.
   */
 trait MetricsProvider {
 

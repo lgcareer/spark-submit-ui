@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="@routes.YarnList.sparklist">
+                        <a href="@routes.SparkList.sparklist">
                             <span class="title">Spark数据列表</span>
                         </a>
                     </li>
@@ -85,7 +85,7 @@
 
 
 <script src="@routes.Assets.at("javascripts/jquery.dataTables.min.js")"></script>
-    <script src="@routes.Assets.at("javascripts/jquery.edatatables.js")"></script>
+<script src="@routes.Assets.at("javascripts/jquery.edatatables.js")"></script>
 <link href="@routes.Assets.at("stylesheets/xenon-forms.css")" rel="stylesheet">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/xenon-forms.css")" type="text/css"/>
 <link href="@routes.Assets.at("stylesheets/jquery-ui.min.css")" rel="stylesheet">
@@ -95,11 +95,12 @@
 <script src="@routes.Assets.at("javascripts/progress.js")" type="text/javascript" ></script>
 
 
+
 <div class="page-title">
 
     <div class="title-env">
-        <h1 class="title">Yarn调度任务信息列表</h1>
-        <p class="description">Yarn调度任务信息列表view面板</p>
+        <h1 class="title">Yarn-Apps</h1>
+        <p class="description">yarn apps for all users</p>
     </div>
 
     <div class="breadcrumb-env">
@@ -109,11 +110,11 @@
                 <a href="@routes.Application.index"><i class="fa-home"></i>Home</a>
             </li>
             <li>
-                <a href="#">App数据</a>
+                <a href="#">App-Data</a>
             </li>
             <li class="active">
 
-                <strong>Yarn数据列表</strong>
+                <strong>Yarn-Apps</strong>
             </li>
         </ol>
 
@@ -126,10 +127,9 @@
 
     <div class="panel panel-color panel-purple">
         <div class="panel-heading">
-            <h3 class="panel-title">Yarn数据列表</h3>
+            <h3 class="panel-title">Yarn-Apps</h3>
 
             <div class="panel-options">
-                <span>伸缩</span>
                 <a href="#" data-toggle="panel">
                     <span class="collapse-icon">&ndash;</span>
                     <span class="expand-icon">+</span>
@@ -150,7 +150,6 @@
                     <th>Progress</th>
                     <th>StartedTime</th>
                     <th>FinishedTime</th>
-                    <th>hidd</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -161,120 +160,11 @@
     </div>
     @copyright()
 
-    <script>
-                var table =
-                        $('#example').dataTable( {
-                            "ajax": {
-                                "url": "/yarnInfo",
-                                "dataSrc": "apps.app"
-                            },
 
-                            "columns": [
-                                { "data": "trackingUrl"},
-                                { "data": "user"},
-                                { "data": "queue"},
-                                { "data": "state",
-                                    render: function (data, type, row, meta) {
-                                        console.log(row.user);
-                                        var node = "<label ";
-                                        if (data == "FINISHED") {
-                                            node += "class='label label-success'>" + data + "</label>";
-                                        }
-                                        else if(data == "KILLED"){
-                                            node += "class='label label-warning'>" + data + "</label>";
-                                        }
-                                        else if(data == "RUNNING"){
-                                            node += "class='label label-primary'>" + data + "</label>";
-                                        } else if(data =="FAILED"){
-                                            node += "class='label label-danger'>" + data + "</label>";
-                                        }
-                                        else{
-                                            node = data;
-                                        }
-                                        return node;}
-                                },
-                                { "data": "finalStatus",
-                                    render: function (data, type, row, meta) {
-                                        var node = "<label ";
-                                        if (data == "SUCCEEDED") {
-                                            node += "class='label label-success'>" + data + "</label>";
-                                        }
-                                        else if(data == "KILLED"){
-                                            node += "class='label label-warning'>" + data + "</label>";
-                                        } else if(data == "FAILED"){
-                                            node += "class='label label-danger'>" + data + "</label>";
-                                        } else {
-                                            node += "class='label label-white'>" + data + "</label>";
-                                        }
-                                        return node;}
-                                },
-                                { "data": "progress",
-                                    render: function (data, type, row, meta){
+    <script src="@routes.Assets.at("javascripts/data-yarn-list.js")"></script>
 
-                                        var pro = new progress({
-                                        width : 100,//进度条宽度
-                                        height: 20,//进度条高度
-                                        bgColor : "#3E4E5E",//背景颜色
-                                        proColor : "#009988",//前景颜色
-                                        fontColor : "#FFFFFF",//显示字体颜色
-                                        val : data,//默认值
-                                        text:"#*val*#%",//显示文字信息
-                                        showPresent : true,
-                                        completeCallback:function(val){
-                                            console.log('已完成');
-                                        },
-                                        changeCallback:function(val){
-                                            console.log('当前进度为'+val+'%');
-                                        }
-                                    });
-                                        var pr="<div class=\"pro\">"+pro.getBody().outerHTML+"</div>"
-
-                                        return pr;}
-                                },
-                                { "data": "startedTime",
-                                  render: function (data, type, row, meta){
-                                      date = new Date(data).toLocaleString();
-                                      return date;}
-                                },
-                                { "data": "finishedTime",
-                                    render: function (data, type, row, meta){
-                                        if(data=="0"){
-                                            date = ""
-                                        }else{
-                                            date = new Date(data).toLocaleString();
-                                        }
-                                        return date;}
-                                },
-                                { "data": "id"}
-                            ],
-                            columnDefs: [
-                                {
-                                    targets: 8,
-                                    visible: false
-                                },
-
-                                {
-                                targets: 0,
-                                render: function(data, type, row, meta) {
-                                    var s = '<a href="' + data + '" target="_blank">' + row.id + '</a>';
-                                    return s;
-                                }
-                            }
-                            ]
-                        } );
-        </script>
 </div>
-}    <script>
-                $(document).ready(function(){
-                    $.ajax({
-                        type:"GET",
-                        url:"/whoiam",
-                        dataType:"json",
-                        success:function(data){
-                            var myobj=eval(data);
-                            var trackingSum=myobj.trackingSum;
-                            $('#tracking').html(trackingSum);
-                        }
-                    });
-                });
-     </script>
+
+
+
+}

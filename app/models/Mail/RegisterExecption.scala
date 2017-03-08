@@ -1,7 +1,7 @@
 package models
 
 /**
-  * Created by liangkai1 on 16/6/17.
+  * Created by kinge on 16/6/17.
   */
 abstract  class EmailStatus(val ex:String) extends Exception(ex){
   def unapply(arg: EmailStatus): Option[String] ={ Some(ex) }

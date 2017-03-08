@@ -16,7 +16,7 @@ import scala.collection.mutable
 import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
- * webSocket 消息推送(个人)
+ * WebSocket and Index
  */
 class Application @Inject()(metricsProvider: MetricsProvider) extends Controller with Secured {
 
@@ -67,7 +67,6 @@ class Application @Inject()(metricsProvider: MetricsProvider) extends Controller
   private[this] def getNowDate:String ={
     val before = 3*60*60*1000
     val currentTime = new Date(System.currentTimeMillis()-before)
-    //将当前时间设置成整点
     currentTime.setMinutes(0)
     val formatter = new SimpleDateFormat("yyyy,MM,dd,HH,mm,ss")
     formatter.format(currentTime)

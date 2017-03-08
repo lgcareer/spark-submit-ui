@@ -5,7 +5,7 @@ import org.apache.spark.Logging
 
 
 /**
-  * Created by liangkai1 on 16/7/12.
+  * Created by kinge on 16/7/12.
   */
 class LineBufferedProcess(master: Option[String],act:ActorRef,process: Process) extends Logging {
 

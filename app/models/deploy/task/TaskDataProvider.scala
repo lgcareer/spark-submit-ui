@@ -11,30 +11,17 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.postfixOps
 
 /**
-  * Created by liangkai on 16/8/18.
-  * Task数据内容提供者
+  * Created by kinge on 16/8/18.
   */
 object TaskDataProvider{
-
-  case class  TaskData(activeapps:Seq[TaskInfo],completedapps:Seq[TaskInfo])
-
-  case class AppDataObject(var appId:String,var user:String,var url:String = "yarn")
-
-  case class YarnTaskInfoList(app: Seq[YarnTaskInfo])
-}
-
-class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskProvider[AppDataObject]{
-
 
   import play.api.libs.functional.syntax._
   import play.api.libs.json.Reads._
   import play.api.libs.json._
 
-  scheduleTaskDate
-
 
   /**
-         TaskInfo(
+  TaskInfo(
                      app_id:String,
                      name:String,
                      cores: Int,
@@ -45,7 +32,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
                    )
     */
   implicit val standaloneReads: Reads[TaskInfo] = (
-      (__ \ "id").read[String] and
+    (__ \ "id").read[String] and
       (__ \ "name").read[String] and
       (__ \ "cores").readNullable[Int] and
       (__ \ "memoryperslave").read[Long] and
@@ -75,7 +62,7 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
                    )
     */
   implicit val yarnReads: Reads[YarnTaskInfo] = (
-      (__  \ "id").read[String] and
+    (__  \ "id").read[String] and
       (__  \ "name").read[String] and
       (__  \ "applicationType").read[String] and
       (__  \ "queue").read[String] and
@@ -87,6 +74,26 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
 
 
   implicit  val areads = (__ \ 'apps \ 'app).read[Seq[YarnTaskInfo]].map{ l => YarnTaskInfoList(l) }
+
+  case class SparkTaskList(apps:Seq[TaskInfo])
+
+  case class  TaskData(activeapps:Seq[TaskInfo],completedapps:Seq[TaskInfo])
+
+  case class AppDataObject(var appId:String,var user:String,var url:String = "yarn")
+
+  case class YarnTaskInfoList(app: Seq[YarnTaskInfo])
+}
+
+class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskProvider[AppDataObject]{
+
+
+  scheduleTaskDate
+
+  import TaskDataProvider.standaloneReads
+  import TaskDataProvider.taskListReads
+  import TaskDataProvider.yarnReads
+  import TaskDataProvider.areads
+
 
 
   def loadTaskInfo(app:AppDataObject): Unit ={
@@ -117,9 +124,6 @@ class TaskDataProvider @Inject()(config: Config,taskDao: TaskDao)extends TaskPro
             },
             valid = {
               tasks => {
-                /**
-                  * 将正在运行列表与id匹配,取出第一个任务信息保存
-                  */
                   val runingTask=tasks.activeapps.filter(_.app_id.equals(app.appId))(0)
                   taskDao.saveTask(runingTask)(app.user)
               }
